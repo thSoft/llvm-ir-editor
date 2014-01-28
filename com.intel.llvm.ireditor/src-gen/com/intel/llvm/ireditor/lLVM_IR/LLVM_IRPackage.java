@@ -707,13 +707,31 @@ public interface LLVM_IRPackage extends EPackage
   int GLOBAL_VARIABLE__TLS_MODEL = GLOBAL_VALUE_FEATURE_COUNT + 3;
 
   /**
+   * The feature id for the '<em><b>Unsignificant Address</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VARIABLE__UNSIGNIFICANT_ADDRESS = GLOBAL_VALUE_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Constant</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GLOBAL_VARIABLE__CONSTANT = GLOBAL_VALUE_FEATURE_COUNT + 5;
+
+  /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GLOBAL_VARIABLE__TYPE = GLOBAL_VALUE_FEATURE_COUNT + 4;
+  int GLOBAL_VARIABLE__TYPE = GLOBAL_VALUE_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Initial Value</b></em>' containment reference.
@@ -722,7 +740,7 @@ public interface LLVM_IRPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GLOBAL_VARIABLE__INITIAL_VALUE = GLOBAL_VALUE_FEATURE_COUNT + 5;
+  int GLOBAL_VARIABLE__INITIAL_VALUE = GLOBAL_VALUE_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Section</b></em>' attribute.
@@ -731,7 +749,7 @@ public interface LLVM_IRPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GLOBAL_VARIABLE__SECTION = GLOBAL_VALUE_FEATURE_COUNT + 6;
+  int GLOBAL_VARIABLE__SECTION = GLOBAL_VALUE_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Align</b></em>' attribute.
@@ -740,7 +758,7 @@ public interface LLVM_IRPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GLOBAL_VARIABLE__ALIGN = GLOBAL_VALUE_FEATURE_COUNT + 7;
+  int GLOBAL_VARIABLE__ALIGN = GLOBAL_VALUE_FEATURE_COUNT + 9;
 
   /**
    * The number of structural features of the '<em>Global Variable</em>' class.
@@ -749,7 +767,7 @@ public interface LLVM_IRPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GLOBAL_VARIABLE_FEATURE_COUNT = GLOBAL_VALUE_FEATURE_COUNT + 8;
+  int GLOBAL_VARIABLE_FEATURE_COUNT = GLOBAL_VALUE_FEATURE_COUNT + 10;
 
   /**
    * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.ConstantImpl <em>Constant</em>}' class.
@@ -6954,6 +6972,28 @@ public interface LLVM_IRPackage extends EPackage
    * @generated
    */
   EAttribute getGlobalVariable_TlsModel();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isUnsignificantAddress <em>Unsignificant Address</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Unsignificant Address</em>'.
+   * @see com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isUnsignificantAddress()
+   * @see #getGlobalVariable()
+   * @generated
+   */
+  EAttribute getGlobalVariable_UnsignificantAddress();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isConstant <em>Constant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Constant</em>'.
+   * @see com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isConstant()
+   * @see #getGlobalVariable()
+   * @generated
+   */
+  EAttribute getGlobalVariable_Constant();
 
   /**
    * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getType <em>Type</em>}'.

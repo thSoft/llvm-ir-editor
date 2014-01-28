@@ -27,6 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#getLinkage <em>Linkage</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#getAddrspace <em>Addrspace</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#getTlsModel <em>Tls Model</em>}</li>
+ *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#isUnsignificantAddress <em>Unsignificant Address</em>}</li>
+ *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#isConstant <em>Constant</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalVariableImpl#getSection <em>Section</em>}</li>
@@ -107,6 +109,46 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
    * @ordered
    */
   protected String tlsModel = TLS_MODEL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isUnsignificantAddress() <em>Unsignificant Address</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isUnsignificantAddress()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean UNSIGNIFICANT_ADDRESS_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isUnsignificantAddress() <em>Unsignificant Address</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isUnsignificantAddress()
+   * @generated
+   * @ordered
+   */
+  protected boolean unsignificantAddress = UNSIGNIFICANT_ADDRESS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isConstant() <em>Constant</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isConstant()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean CONSTANT_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isConstant() <em>Constant</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isConstant()
+   * @generated
+   * @ordered
+   */
+  protected boolean constant = CONSTANT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
@@ -311,6 +353,52 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isUnsignificantAddress()
+  {
+    return unsignificantAddress;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUnsignificantAddress(boolean newUnsignificantAddress)
+  {
+    boolean oldUnsignificantAddress = unsignificantAddress;
+    unsignificantAddress = newUnsignificantAddress;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VARIABLE__UNSIGNIFICANT_ADDRESS, oldUnsignificantAddress, unsignificantAddress));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isConstant()
+  {
+    return constant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setConstant(boolean newConstant)
+  {
+    boolean oldConstant = constant;
+    constant = newConstant;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VARIABLE__CONSTANT, oldConstant, constant));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Type getType()
   {
     return type;
@@ -486,6 +574,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
         return getAddrspace();
       case LLVM_IRPackage.GLOBAL_VARIABLE__TLS_MODEL:
         return getTlsModel();
+      case LLVM_IRPackage.GLOBAL_VARIABLE__UNSIGNIFICANT_ADDRESS:
+        return isUnsignificantAddress();
+      case LLVM_IRPackage.GLOBAL_VARIABLE__CONSTANT:
+        return isConstant();
       case LLVM_IRPackage.GLOBAL_VARIABLE__TYPE:
         return getType();
       case LLVM_IRPackage.GLOBAL_VARIABLE__INITIAL_VALUE:
@@ -519,6 +611,12 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
         return;
       case LLVM_IRPackage.GLOBAL_VARIABLE__TLS_MODEL:
         setTlsModel((String)newValue);
+        return;
+      case LLVM_IRPackage.GLOBAL_VARIABLE__UNSIGNIFICANT_ADDRESS:
+        setUnsignificantAddress((Boolean)newValue);
+        return;
+      case LLVM_IRPackage.GLOBAL_VARIABLE__CONSTANT:
+        setConstant((Boolean)newValue);
         return;
       case LLVM_IRPackage.GLOBAL_VARIABLE__TYPE:
         setType((Type)newValue);
@@ -558,6 +656,12 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
       case LLVM_IRPackage.GLOBAL_VARIABLE__TLS_MODEL:
         setTlsModel(TLS_MODEL_EDEFAULT);
         return;
+      case LLVM_IRPackage.GLOBAL_VARIABLE__UNSIGNIFICANT_ADDRESS:
+        setUnsignificantAddress(UNSIGNIFICANT_ADDRESS_EDEFAULT);
+        return;
+      case LLVM_IRPackage.GLOBAL_VARIABLE__CONSTANT:
+        setConstant(CONSTANT_EDEFAULT);
+        return;
       case LLVM_IRPackage.GLOBAL_VARIABLE__TYPE:
         setType((Type)null);
         return;
@@ -592,6 +696,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
         return addrspace != null;
       case LLVM_IRPackage.GLOBAL_VARIABLE__TLS_MODEL:
         return TLS_MODEL_EDEFAULT == null ? tlsModel != null : !TLS_MODEL_EDEFAULT.equals(tlsModel);
+      case LLVM_IRPackage.GLOBAL_VARIABLE__UNSIGNIFICANT_ADDRESS:
+        return unsignificantAddress != UNSIGNIFICANT_ADDRESS_EDEFAULT;
+      case LLVM_IRPackage.GLOBAL_VARIABLE__CONSTANT:
+        return constant != CONSTANT_EDEFAULT;
       case LLVM_IRPackage.GLOBAL_VARIABLE__TYPE:
         return type != null;
       case LLVM_IRPackage.GLOBAL_VARIABLE__INITIAL_VALUE:
@@ -621,6 +729,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
     result.append(linkage);
     result.append(", tlsModel: ");
     result.append(tlsModel);
+    result.append(", unsignificantAddress: ");
+    result.append(unsignificantAddress);
+    result.append(", constant: ");
+    result.append(constant);
     result.append(", section: ");
     result.append(section);
     result.append(", align: ");

@@ -4697,11 +4697,9 @@ rule__GlobalVariable__Alternatives_5
     }
 :
 (
-{ before(grammarAccess.getGlobalVariableAccess().getConstantKeyword_5_0()); }
-
-	'constant' 
-
-{ after(grammarAccess.getGlobalVariableAccess().getConstantKeyword_5_0()); }
+{ before(grammarAccess.getGlobalVariableAccess().getConstantAssignment_5_0()); }
+(rule__GlobalVariable__ConstantAssignment_5_0)
+{ after(grammarAccess.getGlobalVariableAccess().getConstantAssignment_5_0()); }
 )
 
     |(
@@ -8548,11 +8546,9 @@ rule__GlobalVariable__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getGlobalVariableAccess().getUnnamed_addrKeyword_4()); }
-(
-	'unnamed_addr' 
-)?
-{ after(grammarAccess.getGlobalVariableAccess().getUnnamed_addrKeyword_4()); }
+{ before(grammarAccess.getGlobalVariableAccess().getUnsignificantAddressAssignment_4()); }
+(rule__GlobalVariable__UnsignificantAddressAssignment_4)?
+{ after(grammarAccess.getGlobalVariableAccess().getUnsignificantAddressAssignment_4()); }
 )
 
 ;
@@ -30260,6 +30256,52 @@ rule__GlobalVariable__TlsModelAssignment_3
 (
 { before(grammarAccess.getGlobalVariableAccess().getTlsModelTLSmodelParserRuleCall_3_0()); }
 	ruleTLSmodel{ after(grammarAccess.getGlobalVariableAccess().getTlsModelTLSmodelParserRuleCall_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GlobalVariable__UnsignificantAddressAssignment_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getGlobalVariableAccess().getUnsignificantAddressUnnamed_addrKeyword_4_0()); }
+(
+{ before(grammarAccess.getGlobalVariableAccess().getUnsignificantAddressUnnamed_addrKeyword_4_0()); }
+
+	'unnamed_addr' 
+
+{ after(grammarAccess.getGlobalVariableAccess().getUnsignificantAddressUnnamed_addrKeyword_4_0()); }
+)
+
+{ after(grammarAccess.getGlobalVariableAccess().getUnsignificantAddressUnnamed_addrKeyword_4_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__GlobalVariable__ConstantAssignment_5_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getGlobalVariableAccess().getConstantConstantKeyword_5_0_0()); }
+(
+{ before(grammarAccess.getGlobalVariableAccess().getConstantConstantKeyword_5_0_0()); }
+
+	'constant' 
+
+{ after(grammarAccess.getGlobalVariableAccess().getConstantConstantKeyword_5_0_0()); }
+)
+
+{ after(grammarAccess.getGlobalVariableAccess().getConstantConstantKeyword_5_0_0()); }
 )
 
 ;

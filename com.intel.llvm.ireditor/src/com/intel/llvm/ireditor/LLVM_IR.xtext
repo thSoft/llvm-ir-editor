@@ -132,8 +132,8 @@ GlobalVariable:
 	linkage=Linkage?
 	addrspace=AddressSpace?
 	tlsModel=TLSmodel?
-	'unnamed_addr'?
-	('constant' | 'global')
+	unsignificantAddress?='unnamed_addr'?
+	(constant?='constant' | 'global')
 	type=Type
 	(initialValue=Constant)?
 	(',' section=Section)?
@@ -760,7 +760,7 @@ Instruction_load:
 			(',' alignment=Align)?
 			(',' '!nontemporal' nontemporalIndex=MetadataRef)?
 			(',' '!invariant.load' invariantLoadIndex=MetadataRef)?
-		) | 
+		) |
 		(
 			'atomic' 'volatile'? pointer=TypedValue
 			'singlethread'?
@@ -773,7 +773,7 @@ Instruction_load:
 // store [volatile] <ty> <value>, <ty>* <pointer>[, align <alignment>][, !nontemporal !<index>]        ; yields {void}
 // store atomic [volatile] <ty> <value>, <ty>* <pointer> [singlethread] <ordering>, align <alignment>  ; yields {void}
 Instruction_store:
-	opcode='store' 
+	opcode='store'
 	(
 		(
 			'volatile'?
@@ -781,7 +781,7 @@ Instruction_store:
 			',' pointer=TypedValue
 			(',' alignment=Align)?
 			(',' '!nontemporal' nontemporalIndex=MetadataRef)?
-		) | 
+		) |
 		(
 			'atomic' 'volatile'?
 			value=TypedValue
@@ -821,7 +821,7 @@ Atomicrmw_operation:
 
 // <result> = getelementptr <pty>* <ptrval>{, <ty> <idx>}*
 // <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
-// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx 
+// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
 Instruction_getelementptr:
 	opcode='getelementptr' 'inbounds'?
 	base=TypedValue
@@ -1007,7 +1007,7 @@ Type:
 ;
 
 // A suffix of a function type or a pointer to a function type - basically
-// the entire function type, not including the return type.  
+// the entire function type, not including the return type.
 TypeSuffix:
 	{TypeSuffix}
 	'(' (
@@ -1203,7 +1203,7 @@ terminal CSTRING:
 	'c' STRING
 ;
 
-terminal STRING: 
+terminal STRING:
 	'"' ( '\\' ( '\\' | (('a'..'f' | 'A'..'F' | '0'..'9') ('a'..'f' | 'A'..'F' | '0'..'9'))) | !('\\'|'"') )* '"'
 ;
 

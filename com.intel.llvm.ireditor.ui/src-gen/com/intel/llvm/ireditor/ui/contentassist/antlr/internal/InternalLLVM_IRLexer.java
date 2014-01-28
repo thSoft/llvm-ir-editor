@@ -336,10 +336,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:13:7: ( 'constant' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:13:9: 'constant'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:13:7: ( 'global' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:13:9: 'global'
             {
-            match("constant"); 
+            match("global"); 
 
 
             }
@@ -357,10 +357,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:14:7: ( 'global' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:14:9: 'global'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:14:7: ( 'add' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:14:9: 'add'
             {
-            match("global"); 
+            match("add"); 
 
 
             }
@@ -378,10 +378,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:15:7: ( 'add' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:15:9: 'add'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:15:7: ( 'sub' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:15:9: 'sub'
             {
-            match("add"); 
+            match("sub"); 
 
 
             }
@@ -399,10 +399,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:16:7: ( 'sub' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:16:9: 'sub'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:16:7: ( 'mul' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:16:9: 'mul'
             {
-            match("sub"); 
+            match("mul"); 
 
 
             }
@@ -420,10 +420,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:17:7: ( 'mul' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:17:9: 'mul'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:17:7: ( 'shl' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:17:9: 'shl'
             {
-            match("mul"); 
+            match("shl"); 
 
 
             }
@@ -441,10 +441,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:18:7: ( 'shl' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:18:9: 'shl'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:18:7: ( 'sdiv' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:18:9: 'sdiv'
             {
-            match("shl"); 
+            match("sdiv"); 
 
 
             }
@@ -462,10 +462,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:19:7: ( 'sdiv' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:19:9: 'sdiv'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:19:7: ( 'udiv' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:19:9: 'udiv'
             {
-            match("sdiv"); 
+            match("udiv"); 
 
 
             }
@@ -483,10 +483,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:20:7: ( 'udiv' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:20:9: 'udiv'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:20:7: ( 'lshr' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:20:9: 'lshr'
             {
-            match("udiv"); 
+            match("lshr"); 
 
 
             }
@@ -504,10 +504,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:21:7: ( 'lshr' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:21:9: 'lshr'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:21:7: ( 'ashr' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:21:9: 'ashr'
             {
-            match("lshr"); 
+            match("ashr"); 
 
 
             }
@@ -525,10 +525,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:22:7: ( 'ashr' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:22:9: 'ashr'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:22:7: ( 'fadd' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:22:9: 'fadd'
             {
-            match("ashr"); 
+            match("fadd"); 
 
 
             }
@@ -546,10 +546,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:23:7: ( 'fadd' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:23:9: 'fadd'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:23:7: ( 'fsub' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:23:9: 'fsub'
             {
-            match("fadd"); 
+            match("fsub"); 
 
 
             }
@@ -567,10 +567,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:24:7: ( 'fsub' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:24:9: 'fsub'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:24:7: ( 'fmul' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:24:9: 'fmul'
             {
-            match("fsub"); 
+            match("fmul"); 
 
 
             }
@@ -588,10 +588,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:25:7: ( 'fmul' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:25:9: 'fmul'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:25:7: ( 'fdiv' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:25:9: 'fdiv'
             {
-            match("fmul"); 
+            match("fdiv"); 
 
 
             }
@@ -609,10 +609,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:26:7: ( 'fdiv' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:26:9: 'fdiv'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:26:7: ( 'urem' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:26:9: 'urem'
             {
-            match("fdiv"); 
+            match("urem"); 
 
 
             }
@@ -630,10 +630,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:27:7: ( 'urem' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:27:9: 'urem'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:27:7: ( 'srem' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:27:9: 'srem'
             {
-            match("urem"); 
+            match("srem"); 
 
 
             }
@@ -651,10 +651,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:28:7: ( 'srem' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:28:9: 'srem'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:28:7: ( 'frem' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:28:9: 'frem'
             {
-            match("srem"); 
+            match("frem"); 
 
 
             }
@@ -672,10 +672,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:29:7: ( 'frem' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:29:9: 'frem'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:29:7: ( 'and' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:29:9: 'and'
             {
-            match("frem"); 
+            match("and"); 
 
 
             }
@@ -693,10 +693,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:30:7: ( 'and' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:30:9: 'and'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:30:7: ( 'or' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:30:9: 'or'
             {
-            match("and"); 
+            match("or"); 
 
 
             }
@@ -714,10 +714,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:31:7: ( 'or' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:31:9: 'or'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:31:7: ( 'xor' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:31:9: 'xor'
             {
-            match("or"); 
+            match("xor"); 
 
 
             }
@@ -735,10 +735,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:32:7: ( 'xor' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:32:9: 'xor'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:32:7: ( 'localdynamic' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:32:9: 'localdynamic'
             {
-            match("xor"); 
+            match("localdynamic"); 
 
 
             }
@@ -756,10 +756,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:33:7: ( 'localdynamic' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:33:9: 'localdynamic'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:33:7: ( 'initialexec' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:33:9: 'initialexec'
             {
-            match("localdynamic"); 
+            match("initialexec"); 
 
 
             }
@@ -777,10 +777,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:34:7: ( 'initialexec' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:34:9: 'initialexec'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:34:7: ( 'localexec' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:34:9: 'localexec'
             {
-            match("initialexec"); 
+            match("localexec"); 
 
 
             }
@@ -798,10 +798,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:35:7: ( 'localexec' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:35:9: 'localexec'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:35:7: ( 'alwaysinline' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:35:9: 'alwaysinline'
             {
-            match("localexec"); 
+            match("alwaysinline"); 
 
 
             }
@@ -819,10 +819,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36:7: ( 'alwaysinline' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36:9: 'alwaysinline'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36:7: ( 'builtin' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36:9: 'builtin'
             {
-            match("alwaysinline"); 
+            match("builtin"); 
 
 
             }
@@ -840,10 +840,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37:7: ( 'builtin' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37:9: 'builtin'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37:7: ( 'cold' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37:9: 'cold'
             {
-            match("builtin"); 
+            match("cold"); 
 
 
             }
@@ -861,10 +861,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:38:7: ( 'cold' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:38:9: 'cold'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:38:7: ( 'inlinehint' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:38:9: 'inlinehint'
             {
-            match("cold"); 
+            match("inlinehint"); 
 
 
             }
@@ -882,10 +882,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:39:7: ( 'inlinehint' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:39:9: 'inlinehint'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:39:7: ( 'naked' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:39:9: 'naked'
             {
-            match("inlinehint"); 
+            match("naked"); 
 
 
             }
@@ -903,10 +903,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:40:7: ( 'naked' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:40:9: 'naked'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:40:7: ( 'nobuiltin' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:40:9: 'nobuiltin'
             {
-            match("naked"); 
+            match("nobuiltin"); 
 
 
             }
@@ -924,10 +924,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:41:7: ( 'nobuiltin' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:41:9: 'nobuiltin'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:41:7: ( 'noduplicate' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:41:9: 'noduplicate'
             {
-            match("nobuiltin"); 
+            match("noduplicate"); 
 
 
             }
@@ -945,10 +945,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:42:7: ( 'noduplicate' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:42:9: 'noduplicate'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:42:7: ( 'noimplicitfloat' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:42:9: 'noimplicitfloat'
             {
-            match("noduplicate"); 
+            match("noimplicitfloat"); 
 
 
             }
@@ -966,10 +966,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:43:7: ( 'noimplicitfloat' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:43:9: 'noimplicitfloat'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:43:7: ( 'noinline' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:43:9: 'noinline'
             {
-            match("noimplicitfloat"); 
+            match("noinline"); 
 
 
             }
@@ -987,10 +987,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:44:7: ( 'noinline' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:44:9: 'noinline'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:44:7: ( 'nonlazybind' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:44:9: 'nonlazybind'
             {
-            match("noinline"); 
+            match("nonlazybind"); 
 
 
             }
@@ -1008,10 +1008,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:45:7: ( 'nonlazybind' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:45:9: 'nonlazybind'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:45:7: ( 'noredzone' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:45:9: 'noredzone'
             {
-            match("nonlazybind"); 
+            match("noredzone"); 
 
 
             }
@@ -1029,10 +1029,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:46:7: ( 'noredzone' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:46:9: 'noredzone'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:46:7: ( 'noreturn' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:46:9: 'noreturn'
             {
-            match("noredzone"); 
+            match("noreturn"); 
 
 
             }
@@ -1050,10 +1050,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:47:7: ( 'noreturn' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:47:9: 'noreturn'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:47:7: ( 'nounwind' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:47:9: 'nounwind'
             {
-            match("noreturn"); 
+            match("nounwind"); 
 
 
             }
@@ -1071,10 +1071,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:48:7: ( 'nounwind' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:48:9: 'nounwind'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:48:7: ( 'optnone' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:48:9: 'optnone'
             {
-            match("nounwind"); 
+            match("optnone"); 
 
 
             }
@@ -1092,10 +1092,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:49:7: ( 'optnone' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:49:9: 'optnone'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:49:7: ( 'optsize' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:49:9: 'optsize'
             {
-            match("optnone"); 
+            match("optsize"); 
 
 
             }
@@ -1113,10 +1113,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:50:7: ( 'optsize' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:50:9: 'optsize'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:50:7: ( 'readnone' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:50:9: 'readnone'
             {
-            match("optsize"); 
+            match("readnone"); 
 
 
             }
@@ -1134,10 +1134,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:51:7: ( 'readnone' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:51:9: 'readnone'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:51:7: ( 'readonly' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:51:9: 'readonly'
             {
-            match("readnone"); 
+            match("readonly"); 
 
 
             }
@@ -1155,10 +1155,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:52:7: ( 'readonly' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:52:9: 'readonly'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:52:7: ( 'returns_twice' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:52:9: 'returns_twice'
             {
-            match("readonly"); 
+            match("returns_twice"); 
 
 
             }
@@ -1176,10 +1176,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:53:7: ( 'returns_twice' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:53:9: 'returns_twice'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:53:7: ( 'sanitize_address' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:53:9: 'sanitize_address'
             {
-            match("returns_twice"); 
+            match("sanitize_address"); 
 
 
             }
@@ -1197,10 +1197,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:54:7: ( 'sanitize_address' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:54:9: 'sanitize_address'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:54:7: ( 'sanitize_memory' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:54:9: 'sanitize_memory'
             {
-            match("sanitize_address"); 
+            match("sanitize_memory"); 
 
 
             }
@@ -1218,10 +1218,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:55:7: ( 'sanitize_memory' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:55:9: 'sanitize_memory'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:55:7: ( 'sanitize_thread' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:55:9: 'sanitize_thread'
             {
-            match("sanitize_memory"); 
+            match("sanitize_thread"); 
 
 
             }
@@ -1239,10 +1239,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:56:7: ( 'sanitize_thread' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:56:9: 'sanitize_thread'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:56:7: ( 'ssp' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:56:9: 'ssp'
             {
-            match("sanitize_thread"); 
+            match("ssp"); 
 
 
             }
@@ -1260,10 +1260,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:57:7: ( 'ssp' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:57:9: 'ssp'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:57:7: ( 'sspreq' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:57:9: 'sspreq'
             {
-            match("ssp"); 
+            match("sspreq"); 
 
 
             }
@@ -1281,10 +1281,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:58:7: ( 'sspreq' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:58:9: 'sspreq'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:58:7: ( 'sspstrong' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:58:9: 'sspstrong'
             {
-            match("sspreq"); 
+            match("sspstrong"); 
 
 
             }
@@ -1302,10 +1302,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:59:7: ( 'sspstrong' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:59:9: 'sspstrong'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:59:7: ( 'uwtable' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:59:9: 'uwtable'
             {
-            match("sspstrong"); 
+            match("uwtable"); 
 
 
             }
@@ -1323,10 +1323,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:60:7: ( 'uwtable' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:60:9: 'uwtable'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:60:7: ( 'address_safety' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:60:9: 'address_safety'
             {
-            match("uwtable"); 
+            match("address_safety"); 
 
 
             }
@@ -1344,10 +1344,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:61:7: ( 'address_safety' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:61:9: 'address_safety'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:61:7: ( 'thread_safety' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:61:9: 'thread_safety'
             {
-            match("address_safety"); 
+            match("thread_safety"); 
 
 
             }
@@ -1365,10 +1365,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:62:7: ( 'thread_safety' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:62:9: 'thread_safety'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:62:7: ( 'uninitialized_checks' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:62:9: 'uninitialized_checks'
             {
-            match("thread_safety"); 
+            match("uninitialized_checks"); 
 
 
             }
@@ -1386,10 +1386,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:63:7: ( 'uninitialized_checks' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:63:9: 'uninitialized_checks'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:63:7: ( 'void' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:63:9: 'void'
             {
-            match("uninitialized_checks"); 
+            match("void"); 
 
 
             }
@@ -1407,10 +1407,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:64:7: ( 'void' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:64:9: 'void'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:64:7: ( 'nnan' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:64:9: 'nnan'
             {
-            match("void"); 
+            match("nnan"); 
 
 
             }
@@ -1428,10 +1428,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:65:7: ( 'nnan' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:65:9: 'nnan'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:65:7: ( 'ninf' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:65:9: 'ninf'
             {
-            match("nnan"); 
+            match("ninf"); 
 
 
             }
@@ -1449,10 +1449,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:66:7: ( 'ninf' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:66:9: 'ninf'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:66:7: ( 'nsz' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:66:9: 'nsz'
             {
-            match("ninf"); 
+            match("nsz"); 
 
 
             }
@@ -1470,10 +1470,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:67:7: ( 'nsz' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:67:9: 'nsz'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:67:7: ( 'arcp' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:67:9: 'arcp'
             {
-            match("nsz"); 
+            match("arcp"); 
 
 
             }
@@ -1491,10 +1491,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:68:7: ( 'arcp' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:68:9: 'arcp'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:68:7: ( 'fast' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:68:9: 'fast'
             {
-            match("arcp"); 
+            match("fast"); 
 
 
             }
@@ -1512,10 +1512,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:69:7: ( 'fast' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:69:9: 'fast'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:69:7: ( 'xchg' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:69:9: 'xchg'
             {
-            match("fast"); 
+            match("xchg"); 
 
 
             }
@@ -1533,10 +1533,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:70:7: ( 'xchg' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:70:9: 'xchg'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:70:7: ( 'nand' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:70:9: 'nand'
             {
-            match("xchg"); 
+            match("nand"); 
 
 
             }
@@ -1554,10 +1554,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:71:7: ( 'nand' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:71:9: 'nand'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:71:7: ( 'max' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:71:9: 'max'
             {
-            match("nand"); 
+            match("max"); 
 
 
             }
@@ -1575,10 +1575,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:72:7: ( 'max' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:72:9: 'max'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:72:7: ( 'min' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:72:9: 'min'
             {
-            match("max"); 
+            match("min"); 
 
 
             }
@@ -1596,10 +1596,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:73:7: ( 'min' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:73:9: 'min'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:73:7: ( 'umax' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:73:9: 'umax'
             {
-            match("min"); 
+            match("umax"); 
 
 
             }
@@ -1617,10 +1617,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:74:7: ( 'umax' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:74:9: 'umax'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:74:7: ( 'umin' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:74:9: 'umin'
             {
-            match("umax"); 
+            match("umin"); 
 
 
             }
@@ -1638,10 +1638,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:75:7: ( 'umin' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:75:9: 'umin'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:75:7: ( 'trunc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:75:9: 'trunc'
             {
-            match("umin"); 
+            match("trunc"); 
 
 
             }
@@ -1659,10 +1659,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:76:7: ( 'trunc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:76:9: 'trunc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:76:7: ( 'zext' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:76:9: 'zext'
             {
-            match("trunc"); 
+            match("zext"); 
 
 
             }
@@ -1680,10 +1680,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:77:7: ( 'zext' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:77:9: 'zext'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:77:7: ( 'sext' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:77:9: 'sext'
             {
-            match("zext"); 
+            match("sext"); 
 
 
             }
@@ -1701,10 +1701,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:78:7: ( 'sext' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:78:9: 'sext'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:78:7: ( 'fptrunc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:78:9: 'fptrunc'
             {
-            match("sext"); 
+            match("fptrunc"); 
 
 
             }
@@ -1722,10 +1722,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:79:7: ( 'fptrunc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:79:9: 'fptrunc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:79:7: ( 'fpext' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:79:9: 'fpext'
             {
-            match("fptrunc"); 
+            match("fpext"); 
 
 
             }
@@ -1743,10 +1743,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:80:7: ( 'fpext' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:80:9: 'fpext'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:80:7: ( 'fptoui' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:80:9: 'fptoui'
             {
-            match("fpext"); 
+            match("fptoui"); 
 
 
             }
@@ -1764,10 +1764,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:81:7: ( 'fptoui' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:81:9: 'fptoui'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:81:7: ( 'fptosi' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:81:9: 'fptosi'
             {
-            match("fptoui"); 
+            match("fptosi"); 
 
 
             }
@@ -1785,10 +1785,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:82:7: ( 'fptosi' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:82:9: 'fptosi'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:82:7: ( 'uitofp' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:82:9: 'uitofp'
             {
-            match("fptosi"); 
+            match("uitofp"); 
 
 
             }
@@ -1806,10 +1806,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:83:7: ( 'uitofp' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:83:9: 'uitofp'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:83:7: ( 'sitofp' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:83:9: 'sitofp'
             {
-            match("uitofp"); 
+            match("sitofp"); 
 
 
             }
@@ -1827,10 +1827,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:84:7: ( 'sitofp' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:84:9: 'sitofp'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:84:7: ( 'ptrtoint' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:84:9: 'ptrtoint'
             {
-            match("sitofp"); 
+            match("ptrtoint"); 
 
 
             }
@@ -1848,10 +1848,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:85:7: ( 'ptrtoint' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:85:9: 'ptrtoint'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:85:7: ( 'inttoptr' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:85:9: 'inttoptr'
             {
-            match("ptrtoint"); 
+            match("inttoptr"); 
 
 
             }
@@ -1869,10 +1869,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:86:7: ( 'inttoptr' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:86:9: 'inttoptr'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:86:7: ( 'bitcast' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:86:9: 'bitcast'
             {
-            match("inttoptr"); 
+            match("bitcast"); 
 
 
             }
@@ -1890,10 +1890,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:87:8: ( 'bitcast' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:87:10: 'bitcast'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:87:8: ( 'addrspacecast' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:87:10: 'addrspacecast'
             {
-            match("bitcast"); 
+            match("addrspacecast"); 
 
 
             }
@@ -1911,10 +1911,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:88:8: ( 'addrspacecast' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:88:10: 'addrspacecast'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:88:8: ( 'eq' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:88:10: 'eq'
             {
-            match("addrspacecast"); 
+            match("eq"); 
 
 
             }
@@ -1932,10 +1932,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__102;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:89:8: ( 'eq' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:89:10: 'eq'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:89:8: ( 'ne' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:89:10: 'ne'
             {
-            match("eq"); 
+            match("ne"); 
 
 
             }
@@ -1953,10 +1953,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__103;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:90:8: ( 'ne' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:90:10: 'ne'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:90:8: ( 'ugt' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:90:10: 'ugt'
             {
-            match("ne"); 
+            match("ugt"); 
 
 
             }
@@ -1974,10 +1974,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__104;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:91:8: ( 'ugt' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:91:10: 'ugt'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:91:8: ( 'uge' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:91:10: 'uge'
             {
-            match("ugt"); 
+            match("uge"); 
 
 
             }
@@ -1995,10 +1995,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__105;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:92:8: ( 'uge' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:92:10: 'uge'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:92:8: ( 'ult' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:92:10: 'ult'
             {
-            match("uge"); 
+            match("ult"); 
 
 
             }
@@ -2016,10 +2016,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__106;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:93:8: ( 'ult' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:93:10: 'ult'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:93:8: ( 'ule' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:93:10: 'ule'
             {
-            match("ult"); 
+            match("ule"); 
 
 
             }
@@ -2037,10 +2037,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__107;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:94:8: ( 'ule' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:94:10: 'ule'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:94:8: ( 'sgt' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:94:10: 'sgt'
             {
-            match("ule"); 
+            match("sgt"); 
 
 
             }
@@ -2058,10 +2058,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__108;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:95:8: ( 'sgt' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:95:10: 'sgt'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:95:8: ( 'sge' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:95:10: 'sge'
             {
-            match("sgt"); 
+            match("sge"); 
 
 
             }
@@ -2079,10 +2079,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__109;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:96:8: ( 'sge' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:96:10: 'sge'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:96:8: ( 'slt' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:96:10: 'slt'
             {
-            match("sge"); 
+            match("slt"); 
 
 
             }
@@ -2100,10 +2100,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__110;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:97:8: ( 'slt' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:97:10: 'slt'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:97:8: ( 'sle' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:97:10: 'sle'
             {
-            match("slt"); 
+            match("sle"); 
 
 
             }
@@ -2121,10 +2121,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__111;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:98:8: ( 'sle' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:98:10: 'sle'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:98:8: ( 'oeq' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:98:10: 'oeq'
             {
-            match("sle"); 
+            match("oeq"); 
 
 
             }
@@ -2142,10 +2142,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__112;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:99:8: ( 'oeq' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:99:10: 'oeq'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:99:8: ( 'ogt' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:99:10: 'ogt'
             {
-            match("oeq"); 
+            match("ogt"); 
 
 
             }
@@ -2163,10 +2163,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__113;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:100:8: ( 'ogt' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:100:10: 'ogt'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:100:8: ( 'oge' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:100:10: 'oge'
             {
-            match("ogt"); 
+            match("oge"); 
 
 
             }
@@ -2184,10 +2184,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__114;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:101:8: ( 'oge' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:101:10: 'oge'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:101:8: ( 'olt' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:101:10: 'olt'
             {
-            match("oge"); 
+            match("olt"); 
 
 
             }
@@ -2205,10 +2205,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__115;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:102:8: ( 'olt' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:102:10: 'olt'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:102:8: ( 'ole' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:102:10: 'ole'
             {
-            match("olt"); 
+            match("ole"); 
 
 
             }
@@ -2226,10 +2226,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__116;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:103:8: ( 'ole' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:103:10: 'ole'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:103:8: ( 'one' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:103:10: 'one'
             {
-            match("ole"); 
+            match("one"); 
 
 
             }
@@ -2247,10 +2247,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__117;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:104:8: ( 'one' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:104:10: 'one'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:104:8: ( 'ord' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:104:10: 'ord'
             {
-            match("one"); 
+            match("ord"); 
 
 
             }
@@ -2268,10 +2268,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__118;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:105:8: ( 'ord' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:105:10: 'ord'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:105:8: ( 'ueq' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:105:10: 'ueq'
             {
-            match("ord"); 
+            match("ueq"); 
 
 
             }
@@ -2289,10 +2289,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__119;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:106:8: ( 'ueq' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:106:10: 'ueq'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:106:8: ( 'une' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:106:10: 'une'
             {
-            match("ueq"); 
+            match("une"); 
 
 
             }
@@ -2310,10 +2310,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__120;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:107:8: ( 'une' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:107:10: 'une'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:107:8: ( 'uno' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:107:10: 'uno'
             {
-            match("une"); 
+            match("uno"); 
 
 
             }
@@ -2331,10 +2331,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__121;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:108:8: ( 'uno' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:108:10: 'uno'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:108:8: ( 'cleanup' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:108:10: 'cleanup'
             {
-            match("uno"); 
+            match("cleanup"); 
 
 
             }
@@ -2352,10 +2352,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__122;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:109:8: ( 'cleanup' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:109:10: 'cleanup'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:109:8: ( 'unordered' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:109:10: 'unordered'
             {
-            match("cleanup"); 
+            match("unordered"); 
 
 
             }
@@ -2373,10 +2373,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__123;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:110:8: ( 'unordered' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:110:10: 'unordered'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:110:8: ( 'monotonic' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:110:10: 'monotonic'
             {
-            match("unordered"); 
+            match("monotonic"); 
 
 
             }
@@ -2394,10 +2394,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__124;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:111:8: ( 'monotonic' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:111:10: 'monotonic'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:111:8: ( 'acquire' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:111:10: 'acquire'
             {
-            match("monotonic"); 
+            match("acquire"); 
 
 
             }
@@ -2415,10 +2415,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__125;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:112:8: ( 'acquire' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:112:10: 'acquire'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:112:8: ( 'release' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:112:10: 'release'
             {
-            match("acquire"); 
+            match("release"); 
 
 
             }
@@ -2436,10 +2436,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__126;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:113:8: ( 'release' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:113:10: 'release'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:113:8: ( 'acq_rel' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:113:10: 'acq_rel'
             {
-            match("release"); 
+            match("acq_rel"); 
 
 
             }
@@ -2457,10 +2457,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__127;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:114:8: ( 'acq_rel' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:114:10: 'acq_rel'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:114:8: ( 'seq_cst' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:114:10: 'seq_cst'
             {
-            match("acq_rel"); 
+            match("seq_cst"); 
 
 
             }
@@ -2478,10 +2478,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__128;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:115:8: ( 'seq_cst' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:115:10: 'seq_cst'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:115:8: ( 'zeroext' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:115:10: 'zeroext'
             {
-            match("seq_cst"); 
+            match("zeroext"); 
 
 
             }
@@ -2499,10 +2499,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__129;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:116:8: ( 'zeroext' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:116:10: 'zeroext'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:116:8: ( 'signext' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:116:10: 'signext'
             {
-            match("zeroext"); 
+            match("signext"); 
 
 
             }
@@ -2520,10 +2520,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__130;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:117:8: ( 'signext' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:117:10: 'signext'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:117:8: ( 'inreg' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:117:10: 'inreg'
             {
-            match("signext"); 
+            match("inreg"); 
 
 
             }
@@ -2541,10 +2541,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__131;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:118:8: ( 'inreg' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:118:10: 'inreg'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:118:8: ( 'sret' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:118:10: 'sret'
             {
-            match("inreg"); 
+            match("sret"); 
 
 
             }
@@ -2562,10 +2562,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__132;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:119:8: ( 'sret' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:119:10: 'sret'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:119:8: ( 'noalias' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:119:10: 'noalias'
             {
-            match("sret"); 
+            match("noalias"); 
 
 
             }
@@ -2583,10 +2583,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__133;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:120:8: ( 'noalias' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:120:10: 'noalias'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:120:8: ( 'nocapture' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:120:10: 'nocapture'
             {
-            match("noalias"); 
+            match("nocapture"); 
 
 
             }
@@ -2604,10 +2604,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__134;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:121:8: ( 'nocapture' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:121:10: 'nocapture'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:121:8: ( 'nest' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:121:10: 'nest'
             {
-            match("nocapture"); 
+            match("nest"); 
 
 
             }
@@ -2625,10 +2625,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__135;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:122:8: ( 'nest' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:122:10: 'nest'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:122:8: ( 'returned' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:122:10: 'returned'
             {
-            match("nest"); 
+            match("returned"); 
 
 
             }
@@ -2646,10 +2646,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__136;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:123:8: ( 'returned' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:123:10: 'returned'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:123:8: ( 'inalloca' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:123:10: 'inalloca'
             {
-            match("returned"); 
+            match("inalloca"); 
 
 
             }
@@ -2667,10 +2667,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__137;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:124:8: ( 'inalloca' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:124:10: 'inalloca'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:124:8: ( 'half' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:124:10: 'half'
             {
-            match("inalloca"); 
+            match("half"); 
 
 
             }
@@ -2688,10 +2688,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__138;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:125:8: ( 'half' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:125:10: 'half'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:125:8: ( 'float' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:125:10: 'float'
             {
-            match("half"); 
+            match("float"); 
 
 
             }
@@ -2709,10 +2709,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__139;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:126:8: ( 'float' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:126:10: 'float'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:126:8: ( 'double' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:126:10: 'double'
             {
-            match("float"); 
+            match("double"); 
 
 
             }
@@ -2730,10 +2730,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__140;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:127:8: ( 'double' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:127:10: 'double'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:127:8: ( 'fp128' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:127:10: 'fp128'
             {
-            match("double"); 
+            match("fp128"); 
 
 
             }
@@ -2751,10 +2751,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__141;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:128:8: ( 'fp128' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:128:10: 'fp128'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:128:8: ( 'x86_fp80' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:128:10: 'x86_fp80'
             {
-            match("fp128"); 
+            match("x86_fp80"); 
 
 
             }
@@ -2772,10 +2772,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__142;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:129:8: ( 'x86_fp80' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:129:10: 'x86_fp80'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:129:8: ( 'ppc_fp128' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:129:10: 'ppc_fp128'
             {
-            match("x86_fp80"); 
+            match("ppc_fp128"); 
 
 
             }
@@ -2793,10 +2793,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__143;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:130:8: ( 'ppc_fp128' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:130:10: 'ppc_fp128'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:130:8: ( 'private' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:130:10: 'private'
             {
-            match("ppc_fp128"); 
+            match("private"); 
 
 
             }
@@ -2814,10 +2814,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__144;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:131:8: ( 'private' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:131:10: 'private'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:131:8: ( 'linker_private' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:131:10: 'linker_private'
             {
-            match("private"); 
+            match("linker_private"); 
 
 
             }
@@ -2835,10 +2835,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__145;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:132:8: ( 'linker_private' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:132:10: 'linker_private'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:132:8: ( 'linker_private_weak' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:132:10: 'linker_private_weak'
             {
-            match("linker_private"); 
+            match("linker_private_weak"); 
 
 
             }
@@ -2856,10 +2856,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__146;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:133:8: ( 'linker_private_weak' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:133:10: 'linker_private_weak'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:133:8: ( 'linker_private_weak_def_auto' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:133:10: 'linker_private_weak_def_auto'
             {
-            match("linker_private_weak"); 
+            match("linker_private_weak_def_auto"); 
 
 
             }
@@ -2877,10 +2877,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__147;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:134:8: ( 'linker_private_weak_def_auto' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:134:10: 'linker_private_weak_def_auto'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:134:8: ( 'internal' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:134:10: 'internal'
             {
-            match("linker_private_weak_def_auto"); 
+            match("internal"); 
 
 
             }
@@ -2898,10 +2898,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__148;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:135:8: ( 'internal' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:135:10: 'internal'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:135:8: ( 'available_externally' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:135:10: 'available_externally'
             {
-            match("internal"); 
+            match("available_externally"); 
 
 
             }
@@ -2919,10 +2919,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__149;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:136:8: ( 'available_externally' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:136:10: 'available_externally'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:136:8: ( 'linkonce' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:136:10: 'linkonce'
             {
-            match("available_externally"); 
+            match("linkonce"); 
 
 
             }
@@ -2940,10 +2940,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__150;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:137:8: ( 'linkonce' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:137:10: 'linkonce'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:137:8: ( 'weak' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:137:10: 'weak'
             {
-            match("linkonce"); 
+            match("weak"); 
 
 
             }
@@ -2961,10 +2961,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__151;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:138:8: ( 'weak' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:138:10: 'weak'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:138:8: ( 'common' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:138:10: 'common'
             {
-            match("weak"); 
+            match("common"); 
 
 
             }
@@ -2982,10 +2982,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__152;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:139:8: ( 'common' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:139:10: 'common'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:139:8: ( 'appending' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:139:10: 'appending'
             {
-            match("common"); 
+            match("appending"); 
 
 
             }
@@ -3003,10 +3003,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__153;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:140:8: ( 'appending' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:140:10: 'appending'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:140:8: ( 'extern_weak' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:140:10: 'extern_weak'
             {
-            match("appending"); 
+            match("extern_weak"); 
 
 
             }
@@ -3024,10 +3024,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__154;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:141:8: ( 'extern_weak' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:141:10: 'extern_weak'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:141:8: ( 'linkonce_odr' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:141:10: 'linkonce_odr'
             {
-            match("extern_weak"); 
+            match("linkonce_odr"); 
 
 
             }
@@ -3045,10 +3045,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__155;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:142:8: ( 'linkonce_odr' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:142:10: 'linkonce_odr'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:142:8: ( 'weak_odr' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:142:10: 'weak_odr'
             {
-            match("linkonce_odr"); 
+            match("weak_odr"); 
 
 
             }
@@ -3066,10 +3066,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__156;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:143:8: ( 'weak_odr' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:143:10: 'weak_odr'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:143:8: ( 'external' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:143:10: 'external'
             {
-            match("weak_odr"); 
+            match("external"); 
 
 
             }
@@ -3087,10 +3087,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__157;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:144:8: ( 'external' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:144:10: 'external'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:144:8: ( 'dllimport' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:144:10: 'dllimport'
             {
-            match("external"); 
+            match("dllimport"); 
 
 
             }
@@ -3108,10 +3108,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__158;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:145:8: ( 'dllimport' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:145:10: 'dllimport'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:145:8: ( 'dllexport' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:145:10: 'dllexport'
             {
-            match("dllimport"); 
+            match("dllexport"); 
 
 
             }
@@ -3129,10 +3129,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__159;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:146:8: ( 'dllexport' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:146:10: 'dllexport'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:146:8: ( 'ccc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:146:10: 'ccc'
             {
-            match("dllexport"); 
+            match("ccc"); 
 
 
             }
@@ -3150,10 +3150,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__160;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:147:8: ( 'ccc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:147:10: 'ccc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:147:8: ( 'fastcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:147:10: 'fastcc'
             {
-            match("ccc"); 
+            match("fastcc"); 
 
 
             }
@@ -3171,10 +3171,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__161;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:148:8: ( 'fastcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:148:10: 'fastcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:148:8: ( 'coldcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:148:10: 'coldcc'
             {
-            match("fastcc"); 
+            match("coldcc"); 
 
 
             }
@@ -3192,10 +3192,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__162;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:149:8: ( 'coldcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:149:10: 'coldcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:149:8: ( 'webkit_jscc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:149:10: 'webkit_jscc'
             {
-            match("coldcc"); 
+            match("webkit_jscc"); 
 
 
             }
@@ -3213,10 +3213,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__163;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:150:8: ( 'webkit_jscc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:150:10: 'webkit_jscc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:150:8: ( 'anyregcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:150:10: 'anyregcc'
             {
-            match("webkit_jscc"); 
+            match("anyregcc"); 
 
 
             }
@@ -3234,10 +3234,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__164;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:151:8: ( 'anyregcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:151:10: 'anyregcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:151:8: ( 'preserve_mostcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:151:10: 'preserve_mostcc'
             {
-            match("anyregcc"); 
+            match("preserve_mostcc"); 
 
 
             }
@@ -3255,10 +3255,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__165;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:152:8: ( 'preserve_mostcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:152:10: 'preserve_mostcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:152:8: ( 'preserve_allcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:152:10: 'preserve_allcc'
             {
-            match("preserve_mostcc"); 
+            match("preserve_allcc"); 
 
 
             }
@@ -3276,10 +3276,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__166;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:153:8: ( 'preserve_allcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:153:10: 'preserve_allcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:153:8: ( 'intel_ocl_bicc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:153:10: 'intel_ocl_bicc'
             {
-            match("preserve_allcc"); 
+            match("intel_ocl_bicc"); 
 
 
             }
@@ -3297,10 +3297,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__167;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:154:8: ( 'intel_ocl_bicc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:154:10: 'intel_ocl_bicc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:154:8: ( 'x86_stdcallcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:154:10: 'x86_stdcallcc'
             {
-            match("intel_ocl_bicc"); 
+            match("x86_stdcallcc"); 
 
 
             }
@@ -3318,10 +3318,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__168;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:155:8: ( 'x86_stdcallcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:155:10: 'x86_stdcallcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:155:8: ( 'x86_fastcallcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:155:10: 'x86_fastcallcc'
             {
-            match("x86_stdcallcc"); 
+            match("x86_fastcallcc"); 
 
 
             }
@@ -3339,10 +3339,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__169;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:156:8: ( 'x86_fastcallcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:156:10: 'x86_fastcallcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:156:8: ( 'x86_thiscallcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:156:10: 'x86_thiscallcc'
             {
-            match("x86_fastcallcc"); 
+            match("x86_thiscallcc"); 
 
 
             }
@@ -3360,10 +3360,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__170;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:157:8: ( 'x86_thiscallcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:157:10: 'x86_thiscallcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:157:8: ( 'arm_apcscc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:157:10: 'arm_apcscc'
             {
-            match("x86_thiscallcc"); 
+            match("arm_apcscc"); 
 
 
             }
@@ -3381,10 +3381,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__171;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:158:8: ( 'arm_apcscc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:158:10: 'arm_apcscc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:158:8: ( 'arm_aapcscc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:158:10: 'arm_aapcscc'
             {
-            match("arm_apcscc"); 
+            match("arm_aapcscc"); 
 
 
             }
@@ -3402,10 +3402,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__172;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:159:8: ( 'arm_aapcscc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:159:10: 'arm_aapcscc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:159:8: ( 'arm_aapcs_vfpcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:159:10: 'arm_aapcs_vfpcc'
             {
-            match("arm_aapcscc"); 
+            match("arm_aapcs_vfpcc"); 
 
 
             }
@@ -3423,10 +3423,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__173;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:160:8: ( 'arm_aapcs_vfpcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:160:10: 'arm_aapcs_vfpcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:160:8: ( 'msp430_intrcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:160:10: 'msp430_intrcc'
             {
-            match("arm_aapcs_vfpcc"); 
+            match("msp430_intrcc"); 
 
 
             }
@@ -3444,10 +3444,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__174;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:161:8: ( 'msp430_intrcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:161:10: 'msp430_intrcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:161:8: ( 'ptx_kernel' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:161:10: 'ptx_kernel'
             {
-            match("msp430_intrcc"); 
+            match("ptx_kernel"); 
 
 
             }
@@ -3465,10 +3465,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__175;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:162:8: ( 'ptx_kernel' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:162:10: 'ptx_kernel'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:162:8: ( 'ptx_device' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:162:10: 'ptx_device'
             {
-            match("ptx_kernel"); 
+            match("ptx_device"); 
 
 
             }
@@ -3486,10 +3486,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__176;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:163:8: ( 'ptx_device' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:163:10: 'ptx_device'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:163:8: ( 'spir_kernel' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:163:10: 'spir_kernel'
             {
-            match("ptx_device"); 
+            match("spir_kernel"); 
 
 
             }
@@ -3507,10 +3507,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__177;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:164:8: ( 'spir_kernel' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:164:10: 'spir_kernel'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:164:8: ( 'spir_func' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:164:10: 'spir_func'
             {
-            match("spir_kernel"); 
+            match("spir_func"); 
 
 
             }
@@ -3528,10 +3528,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__178;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:165:8: ( 'spir_func' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:165:10: 'spir_func'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:165:8: ( 'x86_64_sysvcc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:165:10: 'x86_64_sysvcc'
             {
-            match("spir_func"); 
+            match("x86_64_sysvcc"); 
 
 
             }
@@ -3549,10 +3549,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__179;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:166:8: ( 'x86_64_sysvcc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:166:10: 'x86_64_sysvcc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:166:8: ( 'x86_64_win64cc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:166:10: 'x86_64_win64cc'
             {
-            match("x86_64_sysvcc"); 
+            match("x86_64_win64cc"); 
 
 
             }
@@ -3570,10 +3570,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__180;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:167:8: ( 'x86_64_win64cc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:167:10: 'x86_64_win64cc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:167:8: ( 'default' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:167:10: 'default'
             {
-            match("x86_64_win64cc"); 
+            match("default"); 
 
 
             }
@@ -3591,10 +3591,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__181;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:168:8: ( 'default' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:168:10: 'default'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:168:8: ( 'hidden' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:168:10: 'hidden'
             {
-            match("default"); 
+            match("hidden"); 
 
 
             }
@@ -3612,10 +3612,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__182;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:169:8: ( 'hidden' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:169:10: 'hidden'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:169:8: ( 'protected' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:169:10: 'protected'
             {
-            match("hidden"); 
+            match("protected"); 
 
 
             }
@@ -3633,10 +3633,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__183;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:170:8: ( 'protected' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:170:10: 'protected'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:170:8: ( 'attributes' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:170:10: 'attributes'
             {
-            match("protected"); 
+            match("attributes"); 
 
 
             }
@@ -3654,11 +3654,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__184;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:171:8: ( 'attributes' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:171:10: 'attributes'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:171:8: ( '=' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:171:10: '='
             {
-            match("attributes"); 
-
+            match('='); 
 
             }
 
@@ -3675,10 +3674,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__185;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:172:8: ( '=' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:172:10: '='
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:172:8: ( '{' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:172:10: '{'
             {
-            match('='); 
+            match('{'); 
 
             }
 
@@ -3695,10 +3694,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__186;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:173:8: ( '{' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:173:10: '{'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:173:8: ( '}' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:173:10: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -3715,10 +3714,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__187;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:174:8: ( '}' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:174:10: '}'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:174:8: ( 'metadata' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:174:10: 'metadata'
             {
-            match('}'); 
+            match("metadata"); 
+
 
             }
 
@@ -3735,10 +3735,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__188;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:175:8: ( 'metadata' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:175:10: 'metadata'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:175:8: ( 'alias' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:175:10: 'alias'
             {
-            match("metadata"); 
+            match("alias"); 
 
 
             }
@@ -3756,10 +3756,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__189;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:176:8: ( 'alias' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:176:10: 'alias'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:176:8: ( 'target' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:176:10: 'target'
             {
-            match("alias"); 
+            match("target"); 
 
 
             }
@@ -3777,10 +3777,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__190;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:177:8: ( 'target' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:177:10: 'target'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:177:8: ( 'module' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:177:10: 'module'
             {
-            match("target"); 
+            match("module"); 
 
 
             }
@@ -3798,10 +3798,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__191;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:178:8: ( 'module' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:178:10: 'module'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:178:8: ( 'asm' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:178:10: 'asm'
             {
-            match("module"); 
+            match("asm"); 
 
 
             }
@@ -3819,11 +3819,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__192;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:179:8: ( 'asm' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:179:10: 'asm'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:179:8: ( ',' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:179:10: ','
             {
-            match("asm"); 
-
+            match(','); 
 
             }
 
@@ -3840,11 +3839,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__193;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:180:8: ( 'unnamed_addr' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:180:10: 'unnamed_addr'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:180:8: ( '(' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:180:10: '('
             {
-            match("unnamed_addr"); 
-
+            match('('); 
 
             }
 
@@ -3861,10 +3859,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__194;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:181:8: ( ',' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:181:10: ','
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:181:8: ( 'to' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:181:10: 'to'
             {
-            match(','); 
+            match("to"); 
+
 
             }
 
@@ -3881,10 +3880,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__195;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:182:8: ( '(' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:182:10: '('
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:182:8: ( ')' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:182:10: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -3901,10 +3900,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__196;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:183:8: ( 'to' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:183:10: 'to'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:183:8: ( 'inbounds' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:183:10: 'inbounds'
             {
-            match("to"); 
+            match("inbounds"); 
 
 
             }
@@ -3922,10 +3921,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__197;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:184:8: ( ')' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:184:10: ')'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:184:8: ( 'exact' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:184:10: 'exact'
             {
-            match(')'); 
+            match("exact"); 
+
 
             }
 
@@ -3942,10 +3942,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__198;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:185:8: ( 'inbounds' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:185:10: 'inbounds'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:185:8: ( 'undef' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:185:10: 'undef'
             {
-            match("inbounds"); 
+            match("undef"); 
 
 
             }
@@ -3963,10 +3963,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__199;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:186:8: ( 'exact' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:186:10: 'exact'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:186:8: ( 'blockaddress' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:186:10: 'blockaddress'
             {
-            match("exact"); 
+            match("blockaddress"); 
 
 
             }
@@ -3984,10 +3984,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__200;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:187:8: ( 'undef' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:187:10: 'undef'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:187:8: ( 'zeroinitializer' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:187:10: 'zeroinitializer'
             {
-            match("undef"); 
+            match("zeroinitializer"); 
 
 
             }
@@ -4005,11 +4005,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__201;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:188:8: ( 'blockaddress' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:188:10: 'blockaddress'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:188:8: ( '>' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:188:10: '>'
             {
-            match("blockaddress"); 
-
+            match('>'); 
 
             }
 
@@ -4026,11 +4025,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__202;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:189:8: ( 'zeroinitializer' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:189:10: 'zeroinitializer'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:189:8: ( '[' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:189:10: '['
             {
-            match("zeroinitializer"); 
-
+            match('['); 
 
             }
 
@@ -4047,10 +4045,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__203;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:190:8: ( '>' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:190:10: '>'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:190:8: ( ']' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:190:10: ']'
             {
-            match('>'); 
+            match(']'); 
 
             }
 
@@ -4067,10 +4065,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__204;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:191:8: ( '[' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:191:10: '['
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:191:8: ( '<' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:191:10: '<'
             {
-            match('['); 
+            match('<'); 
 
             }
 
@@ -4087,10 +4085,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__205;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:192:8: ( ']' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:192:10: ']'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:192:8: ( '!' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:192:10: '!'
             {
-            match(']'); 
+            match('!'); 
 
             }
 
@@ -4107,10 +4105,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__206;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:193:8: ( '<' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:193:10: '<'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:193:8: ( 'thread_local' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:193:10: 'thread_local'
             {
-            match('<'); 
+            match("thread_local"); 
+
 
             }
 
@@ -4127,10 +4126,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__207;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:194:8: ( '!' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:194:10: '!'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:194:8: ( 'addrspace' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:194:10: 'addrspace'
             {
-            match('!'); 
+            match("addrspace"); 
+
 
             }
 
@@ -4147,10 +4147,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__208;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:195:8: ( 'thread_local' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:195:10: 'thread_local'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:195:8: ( 'section' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:195:10: 'section'
             {
-            match("thread_local"); 
+            match("section"); 
 
 
             }
@@ -4168,10 +4168,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__209;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:196:8: ( 'addrspace' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:196:10: 'addrspace'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:196:8: ( 'align' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:196:10: 'align'
             {
-            match("addrspace"); 
+            match("align"); 
 
 
             }
@@ -4189,10 +4189,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__210;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:197:8: ( 'section' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:197:10: 'section'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:197:8: ( 'gc' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:197:10: 'gc'
             {
-            match("section"); 
+            match("gc"); 
 
 
             }
@@ -4210,10 +4210,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__211;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:198:8: ( 'align' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:198:10: 'align'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:198:8: ( 'define' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:198:10: 'define'
             {
-            match("align"); 
+            match("define"); 
 
 
             }
@@ -4231,10 +4231,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__212;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:199:8: ( 'gc' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:199:10: 'gc'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:199:8: ( 'declare' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:199:10: 'declare'
             {
-            match("gc"); 
+            match("declare"); 
 
 
             }
@@ -4252,10 +4252,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__213;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:200:8: ( 'define' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:200:10: 'define'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:200:8: ( 'unnamed_addr' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:200:10: 'unnamed_addr'
             {
-            match("define"); 
+            match("unnamed_addr"); 
 
 
             }
@@ -4273,10 +4273,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__214;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:201:8: ( 'declare' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:201:10: 'declare'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:201:8: ( 'prefix' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:201:10: 'prefix'
             {
-            match("declare"); 
+            match("prefix"); 
 
 
             }
@@ -4294,10 +4294,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__215;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:202:8: ( 'prefix' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:202:10: 'prefix'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:202:8: ( 'alignstack' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:202:10: 'alignstack'
             {
-            match("prefix"); 
+            match("alignstack"); 
 
 
             }
@@ -4315,10 +4315,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__216;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:203:8: ( 'alignstack' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:203:10: 'alignstack'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:203:8: ( 'label' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:203:10: 'label'
             {
-            match("alignstack"); 
+            match("label"); 
 
 
             }
@@ -4336,10 +4336,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__217;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:204:8: ( 'label' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:204:10: 'label'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:204:8: ( 'unwind' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:204:10: 'unwind'
             {
-            match("label"); 
+            match("unwind"); 
 
 
             }
@@ -4357,10 +4357,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__218;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:205:8: ( 'unwind' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:205:10: 'unwind'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:205:8: ( 'volatile' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:205:10: 'volatile'
             {
-            match("unwind"); 
+            match("volatile"); 
 
 
             }
@@ -4378,10 +4378,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__219;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:206:8: ( 'volatile' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:206:10: 'volatile'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:206:8: ( '!nontemporal' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:206:10: '!nontemporal'
             {
-            match("volatile"); 
+            match("!nontemporal"); 
 
 
             }
@@ -4399,10 +4399,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__220;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:207:8: ( '!nontemporal' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:207:10: '!nontemporal'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:207:8: ( '!invariant.load' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:207:10: '!invariant.load'
             {
-            match("!nontemporal"); 
+            match("!invariant.load"); 
 
 
             }
@@ -4420,10 +4420,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__221;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:208:8: ( '!invariant.load' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:208:10: '!invariant.load'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:208:8: ( 'atomic' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:208:10: 'atomic'
             {
-            match("!invariant.load"); 
+            match("atomic"); 
 
 
             }
@@ -4441,10 +4441,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__222;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:209:8: ( 'atomic' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:209:10: 'atomic'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:209:8: ( 'singlethread' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:209:10: 'singlethread'
             {
-            match("atomic"); 
+            match("singlethread"); 
 
 
             }
@@ -4462,10 +4462,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__223;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:210:8: ( 'singlethread' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:210:10: 'singlethread'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:210:8: ( 'sideeffect' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:210:10: 'sideeffect'
             {
-            match("singlethread"); 
+            match("sideeffect"); 
 
 
             }
@@ -4483,10 +4483,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__224;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:211:8: ( 'sideeffect' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:211:10: 'sideeffect'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:211:8: ( 'inteldialect' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:211:10: 'inteldialect'
             {
-            match("sideeffect"); 
+            match("inteldialect"); 
 
 
             }
@@ -4504,10 +4504,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__225;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:212:8: ( 'inteldialect' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:212:10: 'inteldialect'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:212:8: ( 'personality' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:212:10: 'personality'
             {
-            match("inteldialect"); 
+            match("personality"); 
 
 
             }
@@ -4525,10 +4525,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__226;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:213:8: ( 'personality' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:213:10: 'personality'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:213:8: ( 'byval' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:213:10: 'byval'
             {
-            match("personality"); 
+            match("byval"); 
 
 
             }
@@ -4546,11 +4546,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__227;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:214:8: ( 'byval' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:214:10: 'byval'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:214:8: ( '*' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:214:10: '*'
             {
-            match("byval"); 
-
+            match('*'); 
 
             }
 
@@ -4567,10 +4566,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__228;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:215:8: ( '*' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:215:10: '*'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:215:8: ( 'type' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:215:10: 'type'
             {
-            match('*'); 
+            match("type"); 
+
 
             }
 
@@ -4587,10 +4587,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__229;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:216:8: ( 'type' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:216:10: 'type'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:216:8: ( 'opaque' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:216:10: 'opaque'
             {
-            match("type"); 
+            match("opaque"); 
 
 
             }
@@ -4608,11 +4608,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__230;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:217:8: ( 'opaque' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:217:10: 'opaque'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:217:8: ( 'x' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:217:10: 'x'
             {
-            match("opaque"); 
-
+            match('x'); 
 
             }
 
@@ -4629,10 +4628,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__231;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:218:8: ( 'x' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:218:10: 'x'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:218:8: ( 'x86_mmx' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:218:10: 'x86_mmx'
             {
-            match('x'); 
+            match("x86_mmx"); 
+
 
             }
 
@@ -4649,10 +4649,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__232;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:219:8: ( 'x86_mmx' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:219:10: 'x86_mmx'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:219:8: ( 'nuw' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:219:10: 'nuw'
             {
-            match("x86_mmx"); 
+            match("nuw"); 
 
 
             }
@@ -4670,10 +4670,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__233;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:220:8: ( 'nuw' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:220:10: 'nuw'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:220:8: ( 'nsw' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:220:10: 'nsw'
             {
-            match("nuw"); 
+            match("nsw"); 
 
 
             }
@@ -4691,10 +4691,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = T__234;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:221:8: ( 'nsw' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:221:10: 'nsw'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:221:8: ( 'constant' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:221:10: 'constant'
             {
-            match("nsw"); 
+            match("constant"); 
 
 
             }
@@ -5363,10 +5363,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36441:14: ( ( 'true' | 'false' ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36441:16: ( 'true' | 'false' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:14: ( ( 'true' | 'false' ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:16: ( 'true' | 'false' )
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36441:16: ( 'true' | 'false' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:16: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -5384,7 +5384,7 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36441:17: 'true'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:17: 'true'
                     {
                     match("true"); 
 
@@ -5392,7 +5392,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36441:24: 'false'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:24: 'false'
                     {
                     match("false"); 
 
@@ -5418,8 +5418,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36443:11: ( 'null' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36443:13: 'null'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36485:11: ( 'null' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36485:13: 'null'
             {
             match("null"); 
 
@@ -5439,8 +5439,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_INT_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36445:15: ( 'i' RULE_INTEGER )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36445:17: 'i' RULE_INTEGER
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36487:15: ( 'i' RULE_INTEGER )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36487:17: 'i' RULE_INTEGER
             {
             match('i'); 
             mRULE_INTEGER(); 
@@ -5460,11 +5460,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_GLOBAL_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36447:16: ( '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36447:18: '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:16: ( '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:18: '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             {
             match('@'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36447:22: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:22: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             int alt2=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -5555,21 +5555,21 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36447:23: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:23: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36447:36: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:36: RULE_NAME
                     {
                     mRULE_NAME(); 
 
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36447:46: RULE_STRING
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:46: RULE_STRING
                     {
                     mRULE_STRING(); 
 
@@ -5594,11 +5594,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_LOCAL_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36449:15: ( '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36449:17: '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:15: ( '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:17: '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             {
             match('%'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36449:21: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:21: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             int alt3=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -5689,21 +5689,21 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36449:22: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:22: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36449:35: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:35: RULE_NAME
                     {
                     mRULE_NAME(); 
 
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36449:45: RULE_STRING
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:45: RULE_STRING
                     {
                     mRULE_STRING(); 
 
@@ -5728,10 +5728,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_BASIC_BLOCK_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36451:21: ( ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36451:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:21: ( ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':'
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36451:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             int alt4=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -5822,21 +5822,21 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             switch (alt4) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36451:24: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:24: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36451:37: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:37: RULE_NAME
                     {
                     mRULE_NAME(); 
 
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36451:47: RULE_STRING
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:47: RULE_STRING
                     {
                     mRULE_STRING(); 
 
@@ -5862,8 +5862,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_META_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36453:15: ( '!' RULE_INTEGER )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36453:17: '!' RULE_INTEGER
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36495:15: ( '!' RULE_INTEGER )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36495:17: '!' RULE_INTEGER
             {
             match('!'); 
             mRULE_INTEGER(); 
@@ -5883,8 +5883,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_META_NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36455:16: ( '!' RULE_NAME )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36455:18: '!' RULE_NAME
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36497:16: ( '!' RULE_NAME )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36497:18: '!' RULE_NAME
             {
             match('!'); 
             mRULE_NAME(); 
@@ -5904,11 +5904,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_ATTRIBUTE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36457:19: ( '#' ( RULE_INTEGER | RULE_NAME ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36457:21: '#' ( RULE_INTEGER | RULE_NAME )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:19: ( '#' ( RULE_INTEGER | RULE_NAME ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:21: '#' ( RULE_INTEGER | RULE_NAME )
             {
             match('#'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36457:25: ( RULE_INTEGER | RULE_NAME )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:25: ( RULE_INTEGER | RULE_NAME )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -5926,14 +5926,14 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36457:26: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:26: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36457:39: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:39: RULE_NAME
                     {
                     mRULE_NAME(); 
 
@@ -5958,10 +5958,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36459:14: ( ( '0' .. '9' )+ )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36459:16: ( '0' .. '9' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:14: ( ( '0' .. '9' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:16: ( '0' .. '9' )+
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36459:16: ( '0' .. '9' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:16: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -5975,7 +5975,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36459:17: '0' .. '9'
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:17: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -6007,8 +6007,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_SIGNED_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36461:17: ( ( '+' | '-' ) RULE_INTEGER )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36461:19: ( '+' | '-' ) RULE_INTEGER
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36503:17: ( ( '+' | '-' ) RULE_INTEGER )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36503:19: ( '+' | '-' ) RULE_INTEGER
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -6034,8 +6034,8 @@ public class InternalLLVM_IRLexer extends Lexer {
     // $ANTLR start "RULE_NAME"
     public final void mRULE_NAME() throws RecognitionException {
         try {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36463:20: ( ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )* )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36463:22: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36505:20: ( ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )* )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36505:22: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
             {
             if ( input.LA(1)=='$'||(input.LA(1)>='-' && input.LA(1)<='.')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -6046,7 +6046,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36463:58: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36505:58: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
             loop7:
             do {
                 int alt7=2;
@@ -6093,8 +6093,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_CSTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36465:14: ( 'c' RULE_STRING )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36465:16: 'c' RULE_STRING
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36507:14: ( 'c' RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36507:16: 'c' RULE_STRING
             {
             match('c'); 
             mRULE_STRING(); 
@@ -6114,11 +6114,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:13: ( '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:15: '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:13: ( '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:15: '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:19: ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:19: ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )*
             loop9:
             do {
                 int alt9=3;
@@ -6134,10 +6134,10 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:20: '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:20: '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
             	    {
             	    match('\\'); 
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:25: ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:25: ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
             	    int alt8=2;
             	    int LA8_0 = input.LA(1);
 
@@ -6155,14 +6155,14 @@ public class InternalLLVM_IRLexer extends Lexer {
             	    }
             	    switch (alt8) {
             	        case 1 :
-            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:26: '\\\\'
+            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:26: '\\\\'
             	            {
             	            match('\\'); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:31: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )
+            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:31: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )
             	            {
             	            if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
             	                input.consume();
@@ -6192,7 +6192,7 @@ public class InternalLLVM_IRLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36467:90: ~ ( ( '\\\\' | '\"' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:90: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -6229,8 +6229,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_METADATA_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36469:22: ( '!' RULE_STRING )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36469:24: '!' RULE_STRING
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36511:22: ( '!' RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36511:24: '!' RULE_STRING
             {
             match('!'); 
             mRULE_STRING(); 
@@ -6250,10 +6250,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:12: ( ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:12: ( ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -6284,9 +6284,9 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:15: ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:15: ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
                     {
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:15: ( RULE_SIGNED_INT | RULE_INTEGER )
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:15: ( RULE_SIGNED_INT | RULE_INTEGER )
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -6304,14 +6304,14 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:16: RULE_SIGNED_INT
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:16: RULE_SIGNED_INT
                             {
                             mRULE_SIGNED_INT(); 
 
                             }
                             break;
                         case 2 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:32: RULE_INTEGER
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:32: RULE_INTEGER
                             {
                             mRULE_INTEGER(); 
 
@@ -6322,7 +6322,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                     match('.'); 
                     mRULE_INTEGER(); 
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:63: ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:63: ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -6331,10 +6331,10 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:64: 'e' ( RULE_SIGNED_INT | RULE_INTEGER )
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:64: 'e' ( RULE_SIGNED_INT | RULE_INTEGER )
                             {
                             match('e'); 
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:68: ( RULE_SIGNED_INT | RULE_INTEGER )
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:68: ( RULE_SIGNED_INT | RULE_INTEGER )
                             int alt11=2;
                             int LA11_0 = input.LA(1);
 
@@ -6352,14 +6352,14 @@ public class InternalLLVM_IRLexer extends Lexer {
                             }
                             switch (alt11) {
                                 case 1 :
-                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:69: RULE_SIGNED_INT
+                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:69: RULE_SIGNED_INT
                                     {
                                     mRULE_SIGNED_INT(); 
 
                                     }
                                     break;
                                 case 2 :
-                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:85: RULE_INTEGER
+                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:85: RULE_INTEGER
                                     {
                                     mRULE_INTEGER(); 
 
@@ -6378,11 +6378,11 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:101: '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:101: '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
                     {
                     match("0x"); 
 
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:106: ( 'K' | 'L' | 'M' | 'H' )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:106: ( 'K' | 'L' | 'M' | 'H' )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -6408,7 +6408,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                     }
 
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36471:125: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:125: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
                     int cnt14=0;
                     loop14:
                     do {
@@ -6468,12 +6468,12 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_FILECHECK_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:24: ( '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:26: '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:24: ( '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:26: '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("; "); 
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:31: ( 'A' .. 'Z' | '_' | '-' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:31: ( 'A' .. 'Z' | '_' | '-' )+
             int cnt16=0;
             loop16:
             do {
@@ -6513,7 +6513,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             match(": "); 
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:56: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:56: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -6526,7 +6526,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:56: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:56: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -6546,7 +6546,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:72: ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:72: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -6555,9 +6555,9 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:73: ( '\\r' )? '\\n'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:73: ( '\\r' )? '\\n'
                     {
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:73: ( '\\r' )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:73: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -6566,7 +6566,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36473:73: '\\r'
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:73: '\\r'
                             {
                             match('\r'); 
 
@@ -6598,11 +6598,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:17: ( ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:19: ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:17: ( ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:19: ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match(';'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:23: (~ ( ( '\\n' | '\\r' ) ) )*
             loop20:
             do {
                 int alt20=2;
@@ -6615,7 +6615,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -6635,7 +6635,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:39: ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:39: ( ( '\\r' )? '\\n' )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -6644,9 +6644,9 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:40: ( '\\r' )? '\\n'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:40: ( '\\r' )? '\\n'
                     {
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:40: ( '\\r' )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:40: ( '\\r' )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
@@ -6655,7 +6655,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt21) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36475:40: '\\r'
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:40: '\\r'
                             {
                             match('\r'); 
 
@@ -6687,10 +6687,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36477:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36477:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36519:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36519:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36477:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36519:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt23=0;
             loop23:
             do {
@@ -6744,8 +6744,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36479:16: ( . )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36479:18: .
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36521:16: ( . )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36521:18: .
             {
             matchAny(); 
 
@@ -8599,253 +8599,252 @@ public class InternalLLVM_IRLexer extends Lexer {
 
     protected DFA24 dfa24 = new DFA24(this);
     static final String DFA24_eotS =
-        "\1\uffff\13\57\1\177\12\57\12\uffff\1\u00a9\1\uffff\3\57\1\u00b2"+
-        "\5\57\1\u00b2\1\u00bb\12\uffff\1\u00c7\3\uffff\1\u00ce\4\uffff\1"+
-        "\u00d3\64\uffff\1\u0128\13\uffff\1\u013e\4\uffff\1\u0143\5\uffff"+
+        "\1\uffff\12\57\1\171\13\57\12\uffff\1\u00a9\1\uffff\3\57\1\u00b2"+
+        "\5\57\1\u00b2\1\u00bb\12\uffff\1\u00c7\2\uffff\1\u00ca\64\uffff"+
+        "\1\u011f\13\uffff\1\u0135\4\uffff\1\u013a\2\uffff\1\u0140\10\uffff"+
         "\1\u0153\12\uffff\1\u0167\16\uffff\2\u00aa\12\uffff\1\u00b2\1\u0171"+
-        "\2\uffff\1\u0175\1\uffff\1\u0171\1\u00bb\22\uffff\1\u0189\7\uffff"+
-        "\1\u0190\1\uffff\1\u0192\1\u0193\13\uffff\1\u01a1\1\u01a2\4\uffff"+
-        "\1\u01aa\10\uffff\1\u01b3\1\u01b4\1\u01b5\1\u01b6\3\uffff\1\u01ba"+
-        "\1\u01bb\1\u01bc\10\uffff\1\u01c5\1\u01c7\7\uffff\1\u01cf\1\u01d0"+
-        "\1\u01d1\1\u01d2\1\u01d3\24\uffff\1\u01e9\3\uffff\1\u01ed\1\u01ee"+
-        "\1\u01ef\1\u01f0\1\u01f1\1\u01f2\1\u01f3\36\uffff\1\u0212\1\u0213"+
+        "\2\uffff\1\u0175\1\uffff\1\u0171\1\u00bb\21\uffff\1\u0188\1\uffff"+
+        "\1\u018a\1\u018b\13\uffff\1\u0199\1\u019a\4\uffff\1\u01a2\10\uffff"+
+        "\1\u01ab\1\u01ac\1\u01ad\1\u01ae\3\uffff\1\u01b2\1\u01b3\1\u01b4"+
+        "\10\uffff\1\u01bd\1\u01bf\7\uffff\1\u01c7\1\u01c8\1\u01c9\1\u01ca"+
+        "\1\u01cb\24\uffff\1\u01e1\3\uffff\1\u01e5\1\u01e6\1\u01e7\1\u01e8"+
+        "\1\u01e9\1\u01ea\1\u01eb\26\uffff\1\u0201\20\uffff\1\u0212\1\u0213"+
         "\2\uffff\1\u0215\2\uffff\1\u0219\16\uffff\1\u0229\7\uffff\2\u00aa"+
         "\1\u0233\5\uffff\1\u00bb\11\uffff\1\u0240\2\uffff\1\u0243\1\u0244"+
-        "\1\uffff\1\u0247\4\uffff\1\u024b\5\uffff\1\u0251\7\uffff\1\u0257"+
-        "\12\uffff\1\u0260\1\u0261\1\u0262\4\uffff\1\u0266\25\uffff\1\u0275"+
-        "\1\u0276\11\uffff\1\u027e\1\u027f\6\uffff\1\u0281\1\uffff\1\u0283"+
-        "\3\uffff\1\u0288\1\u028a\1\uffff\1\u028c\1\u028d\1\u028e\1\u028f"+
-        "\5\uffff\1\u0296\15\uffff\1\u029c\13\uffff\1\u02ad\5\uffff\1\u02b3"+
+        "\4\uffff\1\u0249\7\uffff\1\u024f\12\uffff\1\u0258\1\u0259\1\u025a"+
+        "\4\uffff\1\u025e\25\uffff\1\u026d\1\u026e\11\uffff\1\u0276\1\u0277"+
+        "\6\uffff\1\u0279\1\uffff\1\u027b\3\uffff\1\u0280\1\u0282\1\uffff"+
+        "\1\u0284\1\u0285\1\u0286\1\u0287\5\uffff\1\u028e\15\uffff\1\u0294"+
+        "\13\uffff\1\u02a5\4\uffff\1\u02ab\5\uffff\1\u02b0\2\uffff\1\u02b3"+
         "\11\uffff\1\u02be\1\u02bf\2\uffff\1\u02c0\1\uffff\1\u02c1\5\uffff"+
         "\1\u02c7\2\uffff\1\u02ca\15\uffff\1\u02d9\1\uffff\1\u02dc\1\uffff"+
         "\2\u00aa\1\uffff\1\u00b1\1\uffff\1\u00bb\10\uffff\1\u02ea\14\uffff"+
-        "\1\u02f2\7\uffff\1\u02f9\1\u02fb\32\uffff\1\u0313\12\uffff\1\u031c"+
-        "\12\uffff\1\u0324\4\uffff\1\u0240\7\uffff\1\u032a\1\u032b\1\u032c"+
-        "\1\uffff\1\u032d\17\uffff\1\u033e\11\uffff\1\u0347\1\u0348\45\uffff"+
+        "\1\u02f3\1\u02f5\32\uffff\1\u030d\11\uffff\1\u0315\13\uffff\1\u031e"+
+        "\4\uffff\1\u0240\7\uffff\1\u0324\1\u0325\1\u0326\1\uffff\1\u0327"+
+        "\17\uffff\1\u0338\11\uffff\1\u0341\7\uffff\1\u0347\1\u0348\45\uffff"+
         "\1\u0367\5\uffff\2\u00aa\1\uffff\1\u0372\1\uffff\1\u0374\3\uffff"+
-        "\1\u0378\1\uffff\1\u037a\2\uffff\1\u037c\1\uffff\1\u037e\1\u037f"+
-        "\3\uffff\1\u0382\10\uffff\1\u0389\7\uffff\1\u0392\2\uffff\1\u0395"+
-        "\3\uffff\1\u0399\1\u039a\5\uffff\1\u03a0\2\uffff\1\u03a2\7\uffff"+
-        "\1\u03a9\1\uffff\1\u03ab\6\uffff\1\u03b1\1\uffff\1\u03b3\1\u03b4"+
-        "\4\uffff\1\u03b5\2\uffff\1\u03b8\21\uffff\1\u03ca\23\uffff\1\u03dd"+
-        "\1\uffff\1\u03df\10\uffff\1\u03e8\5\uffff\1\u03ee\2\uffff\2\u00aa"+
-        "\1\uffff\1\u00b1\1\u0372\7\uffff\1\u03f7\1\uffff\1\u03f8\6\uffff"+
-        "\1\u03fc\1\u03fd\12\uffff\1\u0406\1\u0407\11\uffff\1\u040f\1\u0410"+
-        "\2\uffff\1\u0411\11\uffff\1\u0419\14\uffff\1\u0423\3\uffff\1\u0424"+
-        "\1\u0425\6\uffff\1\u042c\14\uffff\1\u0438\1\u0439\11\uffff\1\u0443"+
-        "\5\uffff\1\u0449\3\uffff\1\u044b\5\uffff\1\u0451\12\uffff\2\u00aa"+
-        "\1\u00b1\7\uffff\1\u0462\5\uffff\1\u0466\26\uffff\1\u0478\10\uffff"+
-        "\1\u0481\4\uffff\1\u0483\10\uffff\1\u048b\1\u048c\2\uffff\1\u048f"+
-        "\1\u0490\11\uffff\1\u0498\2\uffff\1\u049b\1\u049c\2\uffff\1\u049e"+
-        "\1\u049f\1\uffff\1\u04a1\1\uffff\1\u04a2\2\uffff\1\u04a4\10\uffff"+
-        "\1\u04ac\2\uffff\1\u04af\1\uffff\2\u00aa\1\uffff\1\u04b4\1\u04b5"+
-        "\5\uffff\1\u04bb\6\uffff\1\u04c2\1\uffff\1\u04c4\2\uffff\1\u04c9"+
-        "\3\uffff\1\u04cd\1\u04ce\3\uffff\1\u04d1\3\uffff\1\u04d5\26\uffff"+
-        "\1\u04e6\4\uffff\1\u04ea\2\uffff\1\u04eb\11\uffff\1\u04f0\1\uffff"+
-        "\1\u04f3\7\uffff\2\u00aa\1\u04fb\11\uffff\1\u0502\1\u0503\4\uffff"+
-        "\1\u0507\7\uffff\1\u050d\14\uffff\1\u0516\6\uffff\1\u051d\4\uffff"+
-        "\1\u0522\11\uffff\1\u0529\1\u052a\11\uffff\2\u00aa\11\uffff\1\u053a"+
-        "\11\uffff\1\u0542\3\uffff\1\u0546\11\uffff\1\u054f\4\uffff\1\u0553"+
-        "\2\uffff\1\u0555\1\uffff\1\u0557\6\uffff\1\u055c\1\u055d\2\uffff"+
-        "\1\u0560\2\u00aa\1\uffff\1\u0564\3\uffff\1\u0568\7\uffff\1\u056f"+
-        "\3\uffff\1\u0572\1\uffff\1\u0573\1\uffff\1\u0575\7\uffff\1\u057c"+
-        "\2\uffff\1\u057e\12\uffff\1\u0585\1\uffff\1\u0586\1\u00aa\1\u0588"+
-        "\1\uffff\1\u0589\1\uffff\1\u058b\3\uffff\1\u058e\4\uffff\1\u0592"+
-        "\6\uffff\1\u0596\1\uffff\1\u0598\3\uffff\1\u059b\2\uffff\1\u059d"+
-        "\6\uffff\1\u00aa\2\uffff\1\u05a3\11\uffff\1\u05ab\1\u05ac\1\uffff"+
-        "\1\u05ad\1\uffff\1\u05ae\1\u05af\5\uffff\1\u05b3\1\u05b4\1\u00aa"+
-        "\1\uffff\1\u05b6\2\uffff\1\u05b9\1\u05ba\7\uffff\1\u05bd\1\u05be"+
-        "\1\u05bf\2\uffff\1\u05c0\2\uffff\1\u05c2\21\uffff\1\u05ce\1\u05cf"+
-        "\1\u05d0\13\uffff\1\u05d9\1\uffff";
+        "\1\u0378\1\uffff\1\u037a\2\uffff\1\u037c\1\u037d\10\uffff\1\u0384"+
+        "\7\uffff\1\u038d\2\uffff\1\u0390\3\uffff\1\u0394\1\u0395\5\uffff"+
+        "\1\u039b\2\uffff\1\u039d\7\uffff\1\u03a4\1\uffff\1\u03a6\6\uffff"+
+        "\1\u03ac\1\uffff\1\u03ae\1\u03af\4\uffff\1\u03b0\2\uffff\1\u03b3"+
+        "\21\uffff\1\u03c5\4\uffff\1\u03c9\1\u03ca\23\uffff\1\u03dd\1\uffff"+
+        "\1\u03df\10\uffff\1\u03e8\5\uffff\1\u03ee\2\uffff\2\u00aa\1\uffff"+
+        "\1\u00b1\1\u0372\7\uffff\1\u03f7\1\uffff\1\u03f8\15\uffff\1\u0403"+
+        "\1\u0404\11\uffff\1\u040c\1\u040d\2\uffff\1\u040e\11\uffff\1\u0416"+
+        "\14\uffff\1\u0420\3\uffff\1\u0421\1\u0422\6\uffff\1\u0429\14\uffff"+
+        "\1\u0435\1\u0436\4\uffff\1\u0439\1\u043a\10\uffff\1\u0443\5\uffff"+
+        "\1\u0449\3\uffff\1\u044b\5\uffff\1\u0451\12\uffff\2\u00aa\1\u00b1"+
+        "\12\uffff\1\u0465\26\uffff\1\u0477\10\uffff\1\u0480\4\uffff\1\u0482"+
+        "\10\uffff\1\u048a\1\u048b\2\uffff\1\u048e\1\u048f\6\uffff\1\u0494"+
+        "\5\uffff\1\u0498\2\uffff\1\u049b\1\u049c\2\uffff\1\u049e\1\u049f"+
+        "\1\uffff\1\u04a1\1\uffff\1\u04a2\2\uffff\1\u04a4\10\uffff\1\u04ac"+
+        "\2\uffff\1\u04af\1\uffff\2\u00aa\1\uffff\1\u04b4\1\u04b5\4\uffff"+
+        "\1\u04bb\6\uffff\1\u04c2\1\uffff\1\u04c4\2\uffff\1\u04c9\3\uffff"+
+        "\1\u04cd\1\u04ce\3\uffff\1\u04d1\3\uffff\1\u04d5\27\uffff\1\u04e6"+
+        "\4\uffff\1\u04ea\2\uffff\1\u04eb\11\uffff\1\u04f0\1\uffff\1\u04f3"+
+        "\7\uffff\2\u00aa\1\u04fb\11\uffff\1\u0502\1\u0503\4\uffff\1\u0507"+
+        "\7\uffff\1\u050d\14\uffff\1\u0516\6\uffff\1\u051d\4\uffff\1\u0522"+
+        "\11\uffff\1\u0529\1\u052a\11\uffff\2\u00aa\11\uffff\1\u053a\11\uffff"+
+        "\1\u0542\3\uffff\1\u0546\11\uffff\1\u054f\4\uffff\1\u0553\2\uffff"+
+        "\1\u0555\1\uffff\1\u0557\6\uffff\1\u055c\1\u055d\2\uffff\1\u0560"+
+        "\2\u00aa\1\uffff\1\u0564\3\uffff\1\u0568\7\uffff\1\u056f\3\uffff"+
+        "\1\u0572\1\uffff\1\u0573\1\uffff\1\u0575\7\uffff\1\u057c\2\uffff"+
+        "\1\u057e\12\uffff\1\u0585\1\uffff\1\u0586\1\u00aa\1\u0588\1\uffff"+
+        "\1\u0589\1\uffff\1\u058b\3\uffff\1\u058e\4\uffff\1\u0592\6\uffff"+
+        "\1\u0596\1\uffff\1\u0598\3\uffff\1\u059b\2\uffff\1\u059d\6\uffff"+
+        "\1\u00aa\2\uffff\1\u05a3\11\uffff\1\u05ab\1\u05ac\1\uffff\1\u05ad"+
+        "\1\uffff\1\u05ae\1\u05af\5\uffff\1\u05b3\1\u05b4\1\u00aa\1\uffff"+
+        "\1\u05b6\2\uffff\1\u05b9\1\u05ba\7\uffff\1\u05bd\1\u05be\1\u05bf"+
+        "\2\uffff\1\u05c0\2\uffff\1\u05c2\21\uffff\1\u05ce\1\u05cf\1\u05d0"+
+        "\13\uffff\1\u05d9\1\uffff";
     static final String DFA24_eofS =
         "\u05da\uffff";
     static final String DFA24_minS =
-        "\1\0\2\44\1\42\23\44\12\uffff\1\42\1\uffff\1\44\2\42\1\56\1\44\1"+
-        "\0\2\44\1\60\1\56\1\40\2\uffff\4\44\1\uffff\12\44\1\uffff\77\44"+
-        "\1\uffff\35\44\12\uffff\1\157\1\156\5\uffff\1\44\4\uffff\1\56\1"+
-        "\44\1\60\1\0\1\72\1\uffff\1\56\1\55\2\uffff\12\44\1\uffff\6\44\1"+
-        "\uffff\4\44\1\uffff\124\44\1\uffff\25\44\1\uffff\4\44\1\uffff\17"+
-        "\44\1\uffff\23\44\1\uffff\6\44\1\156\1\166\1\44\1\uffff\1\44\1\0"+
-        "\1\60\1\uffff\1\55\22\44\1\uffff\6\44\1\uffff\1\44\2\uffff\15\44"+
-        "\2\uffff\7\44\1\uffff\10\44\4\uffff\3\44\3\uffff\10\44\1\uffff\1"+
-        "\44\1\uffff\7\44\5\uffff\25\44\1\uffff\3\44\7\uffff\36\44\2\uffff"+
+        "\1\0\15\44\1\42\10\44\12\uffff\1\42\1\uffff\1\44\2\42\1\56\1\44"+
+        "\1\0\2\44\1\60\1\56\1\40\2\uffff\4\44\1\uffff\104\44\1\uffff\15"+
+        "\44\1\uffff\25\44\12\uffff\1\157\1\156\5\uffff\1\44\4\uffff\1\56"+
+        "\1\44\1\60\1\0\1\72\1\uffff\1\56\1\55\2\uffff\12\44\1\uffff\2\44"+
+        "\1\uffff\124\44\1\uffff\25\44\1\uffff\4\44\1\uffff\5\44\1\uffff"+
+        "\22\44\1\uffff\23\44\1\uffff\6\44\1\156\1\166\1\44\1\uffff\1\44"+
+        "\1\0\1\60\1\uffff\1\55\21\44\1\uffff\1\44\2\uffff\15\44\2\uffff"+
+        "\7\44\1\uffff\10\44\4\uffff\3\44\3\uffff\10\44\1\uffff\1\44\1\uffff"+
+        "\7\44\5\uffff\25\44\1\uffff\3\44\7\uffff\25\44\1\uffff\20\44\2\uffff"+
         "\1\44\1\uffff\3\44\1\uffff\17\44\1\uffff\7\44\1\164\1\141\1\uffff"+
-        "\1\44\1\0\1\40\11\44\1\uffff\2\44\2\uffff\2\44\1\uffff\3\44\1\uffff"+
-        "\5\44\1\uffff\5\44\1\uffff\10\44\3\uffff\3\44\1\uffff\16\44\2\uffff"+
-        "\7\44\2\uffff\1\44\1\uffff\1\44\1\uffff\4\44\1\uffff\1\44\1\uffff"+
-        "\1\44\4\uffff\6\44\1\uffff\5\44\1\uffff\20\44\1\uffff\5\44\1\uffff"+
+        "\1\44\1\0\1\40\11\44\1\uffff\2\44\2\uffff\4\44\1\uffff\5\44\1\uffff"+
+        "\10\44\3\uffff\3\44\1\uffff\16\44\2\uffff\7\44\2\uffff\1\44\1\uffff"+
+        "\1\44\1\uffff\4\44\1\uffff\1\44\1\uffff\1\44\4\uffff\6\44\1\uffff"+
+        "\5\44\1\uffff\20\44\1\uffff\5\44\1\uffff\4\44\1\uffff\2\44\1\uffff"+
         "\12\44\4\uffff\5\44\1\uffff\2\44\1\uffff\16\44\1\uffff\2\44\1\uffff"+
-        "\1\44\1\145\1\162\1\44\1\0\10\44\1\uffff\7\44\1\uffff\6\44\1\uffff"+
-        "\1\44\1\uffff\27\44\1\uffff\10\44\1\uffff\7\44\1\uffff\5\44\4\uffff"+
-        "\20\44\1\uffff\10\44\2\uffff\36\44\1\uffff\3\44\1\155\1\151\2\44"+
-        "\1\0\1\12\2\uffff\1\44\1\uffff\3\44\1\uffff\1\44\1\uffff\1\44\1"+
-        "\uffff\1\44\2\uffff\2\44\1\uffff\6\44\1\uffff\10\44\1\uffff\2\44"+
-        "\1\uffff\3\44\2\uffff\5\44\1\uffff\1\44\1\uffff\6\44\1\uffff\1\44"+
-        "\1\uffff\5\44\1\uffff\1\44\3\uffff\2\44\1\uffff\21\44\1\uffff\22"+
-        "\44\1\uffff\1\44\1\uffff\10\44\1\uffff\5\44\1\uffff\2\44\1\160\1"+
-        "\141\4\44\2\uffff\3\44\2\uffff\10\44\2\uffff\7\44\3\uffff\7\44\1"+
-        "\uffff\11\44\3\uffff\6\44\1\uffff\13\44\2\uffff\11\44\1\uffff\5"+
-        "\44\1\uffff\1\44\1\uffff\5\44\1\uffff\11\44\1\157\1\156\5\44\1\uffff"+
-        "\3\44\1\uffff\21\44\1\uffff\10\44\1\uffff\1\44\1\uffff\7\44\2\uffff"+
-        "\2\44\2\uffff\7\44\1\uffff\2\44\2\uffff\1\44\2\uffff\1\44\2\uffff"+
-        "\1\44\1\uffff\7\44\1\uffff\2\44\1\uffff\1\44\1\162\1\164\1\44\2"+
-        "\uffff\5\44\1\uffff\6\44\1\uffff\1\44\1\uffff\4\44\1\uffff\3\44"+
-        "\2\uffff\2\44\1\uffff\3\44\1\uffff\20\44\1\uffff\3\44\2\uffff\4"+
-        "\44\1\uffff\2\44\1\uffff\5\44\1\141\1\56\1\uffff\6\44\2\uffff\3"+
-        "\44\1\uffff\5\44\1\uffff\10\44\1\uffff\6\44\1\uffff\4\44\1\uffff"+
-        "\6\44\2\uffff\7\44\2\154\6\44\1\uffff\7\44\1\uffff\3\44\1\uffff"+
-        "\10\44\1\uffff\3\44\1\uffff\1\44\1\uffff\1\44\1\uffff\4\44\2\uffff"+
-        "\2\44\1\uffff\1\44\1\157\1\44\1\uffff\3\44\1\uffff\6\44\1\uffff"+
-        "\2\44\2\uffff\1\44\1\uffff\6\44\1\uffff\1\44\1\uffff\6\44\2\uffff"+
-        "\1\141\2\uffff\1\44\1\uffff\2\44\1\uffff\3\44\1\uffff\3\44\1\uffff"+
-        "\1\44\1\uffff\2\44\1\uffff\1\44\1\uffff\4\44\1\144\1\uffff\7\44"+
-        "\5\uffff\3\44\2\uffff\1\44\1\uffff\2\44\2\uffff\2\44\4\uffff\1\44"+
-        "\1\uffff\13\44\3\uffff\10\44\1\uffff";
+        "\1\44\1\145\1\162\1\44\1\0\10\44\1\uffff\10\44\1\uffff\1\44\1\uffff"+
+        "\27\44\1\uffff\7\44\1\uffff\10\44\1\uffff\5\44\4\uffff\20\44\1\uffff"+
+        "\10\44\1\uffff\5\44\2\uffff\36\44\1\uffff\3\44\1\155\1\151\2\44"+
+        "\1\0\1\12\2\uffff\1\44\1\uffff\3\44\1\uffff\1\44\1\uffff\1\44\2"+
+        "\uffff\6\44\1\uffff\10\44\1\uffff\2\44\1\uffff\3\44\2\uffff\5\44"+
+        "\1\uffff\1\44\1\uffff\6\44\1\uffff\1\44\1\uffff\5\44\1\uffff\1\44"+
+        "\3\uffff\2\44\1\uffff\21\44\1\uffff\3\44\2\uffff\22\44\1\uffff\1"+
+        "\44\1\uffff\10\44\1\uffff\5\44\1\uffff\2\44\1\160\1\141\4\44\2\uffff"+
+        "\12\44\2\uffff\7\44\3\uffff\7\44\1\uffff\11\44\3\uffff\6\44\1\uffff"+
+        "\13\44\2\uffff\2\44\2\uffff\10\44\1\uffff\5\44\1\uffff\1\44\1\uffff"+
+        "\5\44\1\uffff\11\44\1\157\1\156\10\44\1\uffff\21\44\1\uffff\10\44"+
+        "\1\uffff\1\44\1\uffff\7\44\2\uffff\2\44\2\uffff\4\44\1\uffff\3\44"+
+        "\1\uffff\2\44\2\uffff\1\44\2\uffff\1\44\2\uffff\1\44\1\uffff\7\44"+
+        "\1\uffff\2\44\1\uffff\1\44\1\162\1\164\1\44\2\uffff\5\44\1\uffff"+
+        "\6\44\1\uffff\1\44\1\uffff\4\44\1\uffff\3\44\2\uffff\2\44\1\uffff"+
+        "\3\44\1\uffff\20\44\1\uffff\3\44\2\uffff\4\44\1\uffff\2\44\1\uffff"+
+        "\5\44\1\141\1\56\1\uffff\6\44\2\uffff\3\44\1\uffff\5\44\1\uffff"+
+        "\10\44\1\uffff\6\44\1\uffff\4\44\1\uffff\6\44\2\uffff\7\44\2\154"+
+        "\6\44\1\uffff\7\44\1\uffff\3\44\1\uffff\10\44\1\uffff\3\44\1\uffff"+
+        "\1\44\1\uffff\1\44\1\uffff\4\44\2\uffff\2\44\1\uffff\1\44\1\157"+
+        "\1\44\1\uffff\3\44\1\uffff\6\44\1\uffff\2\44\2\uffff\1\44\1\uffff"+
+        "\6\44\1\uffff\1\44\1\uffff\6\44\2\uffff\1\141\2\uffff\1\44\1\uffff"+
+        "\2\44\1\uffff\3\44\1\uffff\3\44\1\uffff\1\44\1\uffff\2\44\1\uffff"+
+        "\1\44\1\uffff\4\44\1\144\1\uffff\7\44\5\uffff\3\44\2\uffff\1\44"+
+        "\1\uffff\2\44\2\uffff\2\44\4\uffff\1\44\1\uffff\13\44\3\uffff\10"+
+        "\44\1\uffff";
     static final String DFA24_maxS =
         "\1\uffff\26\172\12\uffff\1\172\1\uffff\3\172\1\170\1\172\1\uffff"+
-        "\2\172\1\71\1\72\1\40\2\uffff\4\172\1\uffff\12\172\1\uffff\77\172"+
-        "\1\uffff\35\172\12\uffff\1\157\1\156\5\uffff\1\172\4\uffff\1\72"+
+        "\2\172\1\71\1\72\1\40\2\uffff\4\172\1\uffff\104\172\1\uffff\15\172"+
+        "\1\uffff\25\172\12\uffff\1\157\1\156\5\uffff\1\172\4\uffff\1\72"+
         "\1\172\1\146\1\uffff\1\72\1\uffff\1\71\1\137\2\uffff\12\172\1\uffff"+
-        "\6\172\1\uffff\4\172\1\uffff\124\172\1\uffff\25\172\1\uffff\4\172"+
-        "\1\uffff\17\172\1\uffff\23\172\1\uffff\6\172\1\156\1\166\1\172\1"+
-        "\uffff\1\172\1\uffff\1\146\1\uffff\1\137\22\172\1\uffff\6\172\1"+
-        "\uffff\1\172\2\uffff\15\172\2\uffff\7\172\1\uffff\10\172\4\uffff"+
-        "\3\172\3\uffff\10\172\1\uffff\1\172\1\uffff\7\172\5\uffff\25\172"+
-        "\1\uffff\3\172\7\uffff\36\172\2\uffff\1\172\1\uffff\3\172\1\uffff"+
+        "\2\172\1\uffff\124\172\1\uffff\25\172\1\uffff\4\172\1\uffff\5\172"+
+        "\1\uffff\22\172\1\uffff\23\172\1\uffff\6\172\1\156\1\166\1\172\1"+
+        "\uffff\1\172\1\uffff\1\146\1\uffff\1\137\21\172\1\uffff\1\172\2"+
+        "\uffff\15\172\2\uffff\7\172\1\uffff\10\172\4\uffff\3\172\3\uffff"+
+        "\10\172\1\uffff\1\172\1\uffff\7\172\5\uffff\25\172\1\uffff\3\172"+
+        "\7\uffff\25\172\1\uffff\20\172\2\uffff\1\172\1\uffff\3\172\1\uffff"+
         "\17\172\1\uffff\7\172\1\164\1\141\1\uffff\1\172\1\uffff\1\40\11"+
-        "\172\1\uffff\2\172\2\uffff\2\172\1\uffff\3\172\1\uffff\5\172\1\uffff"+
-        "\5\172\1\uffff\10\172\3\uffff\3\172\1\uffff\16\172\2\uffff\7\172"+
-        "\2\uffff\1\172\1\uffff\1\172\1\uffff\4\172\1\uffff\1\172\1\uffff"+
-        "\1\172\4\uffff\6\172\1\uffff\5\172\1\uffff\20\172\1\uffff\5\172"+
-        "\1\uffff\12\172\4\uffff\5\172\1\uffff\2\172\1\uffff\16\172\1\uffff"+
-        "\2\172\1\uffff\1\172\1\145\1\162\1\172\1\uffff\10\172\1\uffff\7"+
-        "\172\1\uffff\6\172\1\uffff\1\172\1\uffff\27\172\1\uffff\10\172\1"+
-        "\uffff\7\172\1\uffff\5\172\4\uffff\20\172\1\uffff\10\172\2\uffff"+
-        "\36\172\1\uffff\3\172\1\155\1\151\2\172\1\uffff\1\12\2\uffff\1\172"+
-        "\1\uffff\3\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\172\2\uffff"+
-        "\2\172\1\uffff\6\172\1\uffff\10\172\1\uffff\2\172\1\uffff\3\172"+
-        "\2\uffff\5\172\1\uffff\1\172\1\uffff\6\172\1\uffff\1\172\1\uffff"+
-        "\5\172\1\uffff\1\172\3\uffff\2\172\1\uffff\21\172\1\uffff\22\172"+
-        "\1\uffff\1\172\1\uffff\10\172\1\uffff\5\172\1\uffff\2\172\1\160"+
-        "\1\141\4\172\2\uffff\3\172\2\uffff\10\172\2\uffff\7\172\3\uffff"+
-        "\7\172\1\uffff\11\172\3\uffff\6\172\1\uffff\13\172\2\uffff\11\172"+
-        "\1\uffff\5\172\1\uffff\1\172\1\uffff\5\172\1\uffff\11\172\1\157"+
-        "\1\156\5\172\1\uffff\3\172\1\uffff\21\172\1\uffff\10\172\1\uffff"+
-        "\1\172\1\uffff\7\172\2\uffff\2\172\2\uffff\7\172\1\uffff\2\172\2"+
-        "\uffff\1\172\2\uffff\1\172\2\uffff\1\172\1\uffff\7\172\1\uffff\2"+
-        "\172\1\uffff\1\172\1\162\1\164\1\172\2\uffff\5\172\1\uffff\6\172"+
-        "\1\uffff\1\172\1\uffff\4\172\1\uffff\3\172\2\uffff\2\172\1\uffff"+
-        "\3\172\1\uffff\20\172\1\uffff\3\172\2\uffff\4\172\1\uffff\2\172"+
-        "\1\uffff\5\172\1\141\1\56\1\uffff\6\172\2\uffff\3\172\1\uffff\5"+
-        "\172\1\uffff\10\172\1\uffff\6\172\1\uffff\4\172\1\uffff\6\172\2"+
-        "\uffff\7\172\2\154\6\172\1\uffff\7\172\1\uffff\3\172\1\uffff\10"+
-        "\172\1\uffff\3\172\1\uffff\1\172\1\uffff\1\172\1\uffff\4\172\2\uffff"+
-        "\2\172\1\uffff\1\172\1\157\1\172\1\uffff\3\172\1\uffff\6\172\1\uffff"+
-        "\2\172\2\uffff\1\172\1\uffff\6\172\1\uffff\1\172\1\uffff\6\172\2"+
-        "\uffff\1\141\2\uffff\1\172\1\uffff\2\172\1\uffff\3\172\1\uffff\3"+
-        "\172\1\uffff\1\172\1\uffff\2\172\1\uffff\1\172\1\uffff\4\172\1\144"+
-        "\1\uffff\7\172\5\uffff\3\172\2\uffff\1\172\1\uffff\2\172\2\uffff"+
-        "\2\172\4\uffff\1\172\1\uffff\13\172\3\uffff\10\172\1\uffff";
+        "\172\1\uffff\2\172\2\uffff\4\172\1\uffff\5\172\1\uffff\10\172\3"+
+        "\uffff\3\172\1\uffff\16\172\2\uffff\7\172\2\uffff\1\172\1\uffff"+
+        "\1\172\1\uffff\4\172\1\uffff\1\172\1\uffff\1\172\4\uffff\6\172\1"+
+        "\uffff\5\172\1\uffff\20\172\1\uffff\5\172\1\uffff\4\172\1\uffff"+
+        "\2\172\1\uffff\12\172\4\uffff\5\172\1\uffff\2\172\1\uffff\16\172"+
+        "\1\uffff\2\172\1\uffff\1\172\1\145\1\162\1\172\1\uffff\10\172\1"+
+        "\uffff\10\172\1\uffff\1\172\1\uffff\27\172\1\uffff\7\172\1\uffff"+
+        "\10\172\1\uffff\5\172\4\uffff\20\172\1\uffff\10\172\1\uffff\5\172"+
+        "\2\uffff\36\172\1\uffff\3\172\1\155\1\151\2\172\1\uffff\1\12\2\uffff"+
+        "\1\172\1\uffff\3\172\1\uffff\1\172\1\uffff\1\172\2\uffff\6\172\1"+
+        "\uffff\10\172\1\uffff\2\172\1\uffff\3\172\2\uffff\5\172\1\uffff"+
+        "\1\172\1\uffff\6\172\1\uffff\1\172\1\uffff\5\172\1\uffff\1\172\3"+
+        "\uffff\2\172\1\uffff\21\172\1\uffff\3\172\2\uffff\22\172\1\uffff"+
+        "\1\172\1\uffff\10\172\1\uffff\5\172\1\uffff\2\172\1\160\1\141\4"+
+        "\172\2\uffff\12\172\2\uffff\7\172\3\uffff\7\172\1\uffff\11\172\3"+
+        "\uffff\6\172\1\uffff\13\172\2\uffff\2\172\2\uffff\10\172\1\uffff"+
+        "\5\172\1\uffff\1\172\1\uffff\5\172\1\uffff\11\172\1\157\1\156\10"+
+        "\172\1\uffff\21\172\1\uffff\10\172\1\uffff\1\172\1\uffff\7\172\2"+
+        "\uffff\2\172\2\uffff\4\172\1\uffff\3\172\1\uffff\2\172\2\uffff\1"+
+        "\172\2\uffff\1\172\2\uffff\1\172\1\uffff\7\172\1\uffff\2\172\1\uffff"+
+        "\1\172\1\162\1\164\1\172\2\uffff\5\172\1\uffff\6\172\1\uffff\1\172"+
+        "\1\uffff\4\172\1\uffff\3\172\2\uffff\2\172\1\uffff\3\172\1\uffff"+
+        "\20\172\1\uffff\3\172\2\uffff\4\172\1\uffff\2\172\1\uffff\5\172"+
+        "\1\141\1\56\1\uffff\6\172\2\uffff\3\172\1\uffff\5\172\1\uffff\10"+
+        "\172\1\uffff\6\172\1\uffff\4\172\1\uffff\6\172\2\uffff\7\172\2\154"+
+        "\6\172\1\uffff\7\172\1\uffff\3\172\1\uffff\10\172\1\uffff\3\172"+
+        "\1\uffff\1\172\1\uffff\1\172\1\uffff\4\172\2\uffff\2\172\1\uffff"+
+        "\1\172\1\157\1\172\1\uffff\3\172\1\uffff\6\172\1\uffff\2\172\2\uffff"+
+        "\1\172\1\uffff\6\172\1\uffff\1\172\1\uffff\6\172\2\uffff\1\141\2"+
+        "\uffff\1\172\1\uffff\2\172\1\uffff\3\172\1\uffff\3\172\1\uffff\1"+
+        "\172\1\uffff\2\172\1\uffff\1\172\1\uffff\4\172\1\144\1\uffff\7\172"+
+        "\5\uffff\3\172\2\uffff\1\172\1\uffff\2\172\2\uffff\2\172\4\uffff"+
+        "\1\172\1\uffff\13\172\3\uffff\10\172\1\uffff";
     static final String DFA24_acceptS =
-        "\27\uffff\1\u00a2\1\u00a3\1\u00a4\1\u00ab\1\u00ac\1\u00ae\1\u00b4"+
-        "\1\u00b5\1\u00b6\1\u00b7\1\uffff\1\u00cd\13\uffff\1\u0104\1\u0105"+
-        "\4\uffff\1\u00f8\12\uffff\1\u00fe\77\uffff\1\u00d0\35\uffff\1\u00a2"+
-        "\1\u00a3\1\u00a4\1\u00ab\1\u00ac\1\u00ae\1\u00b4\1\u00b5\1\u00b6"+
-        "\1\u00b7\2\uffff\1\u00b8\1\u00fa\1\u00f9\1\u0100\1\u00cd\1\uffff"+
+        "\27\uffff\1\u00a1\1\u00a2\1\u00a3\1\u00a9\1\u00aa\1\u00ac\1\u00b2"+
+        "\1\u00b3\1\u00b4\1\u00b5\1\uffff\1\u00cc\13\uffff\1\u0104\1\u0105"+
+        "\4\uffff\1\u00f8\104\uffff\1\u00cf\15\uffff\1\u00fe\25\uffff\1\u00a1"+
+        "\1\u00a2\1\u00a3\1\u00a9\1\u00aa\1\u00ac\1\u00b2\1\u00b3\1\u00b4"+
+        "\1\u00b5\2\uffff\1\u00b6\1\u00fa\1\u00f9\1\u0100\1\u00cc\1\uffff"+
         "\1\u00f6\1\u00f7\1\u0101\1\u00fc\5\uffff\1\u00fb\2\uffff\1\u0103"+
-        "\1\u0104\12\uffff\1\u00ad\6\uffff\1\u00f2\4\uffff\1\u00bd\124\uffff"+
-        "\1\25\25\uffff\1\u00f5\4\uffff\1\u00df\17\uffff\1\120\23\uffff\1"+
-        "\117\11\uffff\1\u00fd\3\uffff\1\u00ff\23\uffff\1\u0089\6\uffff\1"+
-        "\5\1\uffff\1\u00a9\1\24\15\uffff\1\6\1\10\7\uffff\1\57\10\uffff"+
-        "\1\125\1\126\1\127\1\130\3\uffff\1\7\1\76\1\77\10\uffff\1\141\1"+
-        "\uffff\1\142\7\uffff\1\121\1\122\1\123\1\124\1\140\25\uffff\1\137"+
-        "\3\uffff\1\131\1\132\1\133\1\134\1\135\1\136\1\26\36\uffff\1\71"+
-        "\1\u00d3\1\uffff\1\u00d2\3\uffff\1\u00de\17\uffff\1\u00eb\11\uffff"+
-        "\1\u00dd\14\uffff\1\u00f3\2\uffff\1\u00ec\1\u00ce\2\uffff\1\34\3"+
-        "\uffff\1\u00ed\5\uffff\1\14\5\uffff\1\72\10\uffff\1\11\1\22\1\155"+
-        "\3\uffff\1\104\16\uffff\1\12\1\21\7\uffff\1\100\1\101\1\uffff\1"+
-        "\13\1\uffff\1\u00e6\4\uffff\1\15\1\uffff\1\73\1\uffff\1\16\1\17"+
-        "\1\20\1\23\6\uffff\1\u00d7\5\uffff\1\74\20\uffff\1\u00d6\5\uffff"+
-        "\1\75\12\uffff\1\67\1\70\1\160\1\u00f4\5\uffff\1\66\2\uffff\1\103"+
-        "\16\uffff\1\163\2\uffff\1\u0080\15\uffff\1\102\7\uffff\1\u00f0\6"+
-        "\uffff\1\u00a6\1\uffff\1\u00bc\27\uffff\1\u00e7\10\uffff\1\u00b1"+
-        "\7\uffff\1\u00c2\5\uffff\1\106\1\166\1\164\1\u00e8\20\uffff\1\154"+
-        "\10\uffff\1\u00cc\1\36\36\uffff\1\u00b0\11\uffff\2\u0102\1\uffff"+
-        "\1\165\3\uffff\1\u00be\1\uffff\1\2\1\uffff\1\u00a7\1\uffff\1\u008b"+
-        "\1\u0081\2\uffff\1\4\6\uffff\1\u00e5\10\uffff\1\u00c7\2\uffff\1"+
-        "\60\3\uffff\1\u00d5\1\112\5\uffff\1\u00e0\1\uffff\1\u00a8\6\uffff"+
-        "\1\u00c3\1\uffff\1\111\5\uffff\1\u008a\1\uffff\1\107\1\110\1\u00f1"+
-        "\2\uffff\1\u00cf\21\uffff\1\u00e2\22\uffff\1\u00e3\1\uffff\1\u00ee"+
-        "\10\uffff\1\u00c0\5\uffff\1\u009f\10\uffff\1\u009e\1\u00bf\3\uffff"+
-        "\1\143\1\u00e9\10\uffff\1\146\1\150\7\uffff\1\151\1\u00bb\1\153"+
-        "\7\uffff\1\62\11\uffff\1\105\1\47\1\50\6\uffff\1\u00d1\13\uffff"+
-        "\1\33\1\115\11\uffff\1\156\5\uffff\1\147\1\uffff\1\152\5\uffff\1"+
-        "\171\20\uffff\1\3\3\uffff\1\u008d\21\uffff\1\u00a5\10\uffff\1\177"+
-        "\1\uffff\1\167\7\uffff\1\114\1\175\2\uffff\1\162\1\u00af\7\uffff"+
-        "\1\42\2\uffff\1\45\1\46\1\uffff\1\51\1\52\1\uffff\1\161\1\u00c4"+
-        "\1\uffff\1\113\7\uffff\1\u0086\2\uffff\1\u0085\4\uffff\1\u0087\1"+
-        "\u0088\5\uffff\1\u00ba\6\uffff\1\u0082\1\uffff\1\u00ea\4\uffff\1"+
-        "\61\3\uffff\1\u009b\1\145\2\uffff\1\144\3\uffff\1\31\20\uffff\1"+
-        "\37\3\uffff\1\44\1\157\4\uffff\1\170\2\uffff\1\u00a0\7\uffff\1\1"+
-        "\6\uffff\1\u00c1\1\u0094\3\uffff\1\u00a1\5\uffff\1\u00c9\10\uffff"+
-        "\1\u00ef\6\uffff\1\35\4\uffff\1\u00e1\6\uffff\1\u0098\1\u0099\17"+
-        "\uffff\1\u0095\7\uffff\1\u009a\3\uffff\1\u00e4\10\uffff\1\30\3\uffff"+
-        "\1\u00dc\1\uffff\1\40\1\uffff\1\43\4\uffff\1\u00cb\1\u0083\2\uffff"+
-        "\1\u008c\3\uffff\1\u00b9\3\uffff\1\32\6\uffff\1\u00c8\2\uffff\1"+
-        "\u00aa\1\27\1\uffff\1\u0084\6\uffff\1\u00ca\1\uffff\1\u00b2\6\uffff"+
-        "\1\u00db\1\u00c5\1\uffff\1\64\1\u00d4\1\uffff\1\116\2\uffff\1\u00da"+
-        "\3\uffff\1\u0097\3\uffff\1\u0091\1\uffff\1\u009c\2\uffff\1\u00d9"+
-        "\1\uffff\1\53\5\uffff\1\63\7\uffff\1\172\1\u0092\1\u0093\1\u009d"+
-        "\1\u0090\3\uffff\1\u008f\1\u00d8\1\uffff\1\u0096\2\uffff\1\55\1"+
-        "\56\2\uffff\1\41\1\u00b3\1\u008e\1\u00c6\1\uffff\1\54\13\uffff\1"+
-        "\173\1\176\1\65\10\uffff\1\174";
+        "\1\u0104\12\uffff\1\u00ab\2\uffff\1\u00bb\124\uffff\1\24\25\uffff"+
+        "\1\u00f5\4\uffff\1\u00df\5\uffff\1\u00f2\22\uffff\1\117\23\uffff"+
+        "\1\116\11\uffff\1\u00fd\3\uffff\1\u00ff\22\uffff\1\4\1\uffff\1\u00a8"+
+        "\1\23\15\uffff\1\5\1\7\7\uffff\1\56\10\uffff\1\124\1\125\1\126\1"+
+        "\127\3\uffff\1\6\1\75\1\76\10\uffff\1\140\1\uffff\1\141\7\uffff"+
+        "\1\120\1\121\1\122\1\123\1\137\25\uffff\1\136\3\uffff\1\130\1\131"+
+        "\1\132\1\133\1\134\1\135\1\25\25\uffff\1\u0088\20\uffff\1\70\1\u00d2"+
+        "\1\uffff\1\u00d1\3\uffff\1\u00de\17\uffff\1\u00eb\11\uffff\1\u00dd"+
+        "\14\uffff\1\u00f3\2\uffff\1\u00ec\1\u00cd\4\uffff\1\13\5\uffff\1"+
+        "\71\10\uffff\1\10\1\21\1\154\3\uffff\1\103\16\uffff\1\11\1\20\7"+
+        "\uffff\1\77\1\100\1\uffff\1\12\1\uffff\1\u00e6\4\uffff\1\14\1\uffff"+
+        "\1\72\1\uffff\1\15\1\16\1\17\1\22\6\uffff\1\u00d7\5\uffff\1\73\20"+
+        "\uffff\1\u00d6\5\uffff\1\33\4\uffff\1\u00ed\2\uffff\1\74\12\uffff"+
+        "\1\66\1\67\1\157\1\u00f4\5\uffff\1\65\2\uffff\1\102\16\uffff\1\162"+
+        "\2\uffff\1\177\15\uffff\1\101\10\uffff\1\u00a5\1\uffff\1\u00ba\27"+
+        "\uffff\1\u00e7\7\uffff\1\u00af\10\uffff\1\u00c1\5\uffff\1\105\1"+
+        "\165\1\163\1\u00e8\20\uffff\1\153\10\uffff\1\u00cb\5\uffff\1\u00f0"+
+        "\1\35\36\uffff\1\u00ae\11\uffff\2\u0102\1\uffff\1\164\3\uffff\1"+
+        "\u00bc\1\uffff\1\2\1\uffff\1\u00a6\1\3\6\uffff\1\u00e5\10\uffff"+
+        "\1\u00c6\2\uffff\1\57\3\uffff\1\u00d5\1\111\5\uffff\1\u00e0\1\uffff"+
+        "\1\u00a7\6\uffff\1\u00c2\1\uffff\1\110\5\uffff\1\u0089\1\uffff\1"+
+        "\106\1\107\1\u00f1\2\uffff\1\u00ce\21\uffff\1\u00e2\3\uffff\1\u008a"+
+        "\1\u0080\22\uffff\1\u00e3\1\uffff\1\u00ee\10\uffff\1\u00bf\5\uffff"+
+        "\1\u009e\10\uffff\1\u009d\1\u00bd\12\uffff\1\145\1\147\7\uffff\1"+
+        "\150\1\u00b9\1\152\7\uffff\1\61\11\uffff\1\104\1\46\1\47\6\uffff"+
+        "\1\u00d0\13\uffff\1\32\1\114\2\uffff\1\142\1\u00e9\10\uffff\1\155"+
+        "\5\uffff\1\146\1\uffff\1\151\5\uffff\1\170\23\uffff\1\u008c\21\uffff"+
+        "\1\u00a4\10\uffff\1\176\1\uffff\1\166\7\uffff\1\113\1\174\2\uffff"+
+        "\1\161\1\u00ad\4\uffff\1\u00d3\3\uffff\1\41\2\uffff\1\44\1\45\1"+
+        "\uffff\1\50\1\51\1\uffff\1\160\1\u00c3\1\uffff\1\112\7\uffff\1\u0085"+
+        "\2\uffff\1\u0084\4\uffff\1\u0086\1\u0087\5\uffff\1\u00b8\6\uffff"+
+        "\1\u0081\1\uffff\1\u00ea\4\uffff\1\60\3\uffff\1\u009a\1\144\2\uffff"+
+        "\1\143\3\uffff\1\30\20\uffff\1\36\3\uffff\1\43\1\156\4\uffff\1\167"+
+        "\2\uffff\1\u009f\7\uffff\1\1\6\uffff\1\u00c0\1\u0093\3\uffff\1\u00a0"+
+        "\5\uffff\1\u00c8\10\uffff\1\u00ef\6\uffff\1\34\4\uffff\1\u00e1\6"+
+        "\uffff\1\u0097\1\u0098\17\uffff\1\u0094\7\uffff\1\u0099\3\uffff"+
+        "\1\u00e4\10\uffff\1\27\3\uffff\1\u00dc\1\uffff\1\37\1\uffff\1\42"+
+        "\4\uffff\1\u00ca\1\u0082\2\uffff\1\u008b\3\uffff\1\u00b7\3\uffff"+
+        "\1\31\6\uffff\1\u00c7\2\uffff\1\u00be\1\26\1\uffff\1\u0083\6\uffff"+
+        "\1\u00c9\1\uffff\1\u00b0\6\uffff\1\u00db\1\u00c4\1\uffff\1\63\1"+
+        "\u00d4\1\uffff\1\115\2\uffff\1\u00da\3\uffff\1\u0096\3\uffff\1\u0090"+
+        "\1\uffff\1\u009b\2\uffff\1\u00d9\1\uffff\1\52\5\uffff\1\62\7\uffff"+
+        "\1\171\1\u0091\1\u0092\1\u009c\1\u008f\3\uffff\1\u008e\1\u00d8\1"+
+        "\uffff\1\u0095\2\uffff\1\54\1\55\2\uffff\1\40\1\u00b1\1\u008d\1"+
+        "\u00c5\1\uffff\1\53\13\uffff\1\172\1\175\1\64\10\uffff\1\173";
     static final String DFA24_specialS =
-        "\1\5\47\uffff\1\6\u008d\uffff\1\1\u00bc\uffff\1\4\u00c1\uffff\1"+
-        "\3\u00ab\uffff\1\2\u008d\uffff\1\0\u026a\uffff}>";
+        "\1\3\47\uffff\1\6\u008d\uffff\1\1\u00bc\uffff\1\5\u00c1\uffff\1"+
+        "\4\u00ab\uffff\1\2\u008d\uffff\1\0\u026a\uffff}>";
     static final String[] DFA24_transitionS = {
             "\11\57\2\56\2\57\1\56\22\57\1\56\1\41\1\50\1\51\1\52\1\45\2"+
             "\57\1\33\1\34\1\42\1\53\1\32\1\47\1\43\1\57\1\46\11\54\1\57"+
             "\1\55\1\40\1\27\1\35\1\57\1\44\32\52\1\36\1\57\1\37\1\57\1\52"+
-            "\1\57\1\5\1\16\1\3\1\1\1\24\1\12\1\4\1\25\1\15\2\52\1\11\1\7"+
-            "\1\17\1\13\1\23\1\52\1\20\1\6\1\2\1\10\1\21\1\26\1\14\1\52\1"+
-            "\22\1\30\1\57\1\31\uff82\57",
+            "\1\57\1\4\1\15\1\16\1\1\1\24\1\11\1\3\1\25\1\14\2\52\1\10\1"+
+            "\6\1\17\1\12\1\23\1\52\1\20\1\5\1\2\1\7\1\21\1\26\1\13\1\52"+
+            "\1\22\1\30\1\57\1\31\uff82\57",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\1\60\3\64\1\63\6\64\1\62\2\64\1\61\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\1\67\6\64\1\66\6\64\1\70\2\64\1\65\6\64\1\71\1\64",
-            "\1\77\1\uffff\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64"+
-            "\4\uffff\1\64\1\uffff\1\76\1\64\1\74\10\64\1\73\1\75\1\64\1"+
-            "\72\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\101\1\64\1\102\6\64\1\100\16\64",
+            "\1\uffff\2\64\1\73\1\64\1\74\6\64\1\72\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\110\1\103\7\64\1\106\1\64\1\105\1\64\1\112\1"+
-            "\64\1\107\1\104\1\113\1\64\1\111\4\64",
+            "\1\uffff\2\64\1\102\1\75\7\64\1\100\1\64\1\77\1\64\1\104\1\64"+
+            "\1\101\1\76\1\105\1\64\1\103\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\120\2\64\1\116\1\122\1\64\1\124\1\115\1\123\2\64"+
-            "\1\125\3\64\1\126\1\64\1\117\1\121\1\130\1\114\1\64\1\127\3"+
+            "\1\uffff\1\112\2\64\1\110\1\114\1\64\1\116\1\107\1\115\2\64"+
+            "\1\117\3\64\1\120\1\64\1\111\1\113\1\122\1\106\1\64\1\121\3"+
             "\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\132\3\64\1\136\3\64\1\133\5\64\1\134\3\64\1\135\1"+
-            "\64\1\131\5\64",
+            "\1\uffff\1\124\3\64\1\130\3\64\1\125\5\64\1\126\3\64\1\127\1"+
+            "\64\1\123\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\137\1\147\1\64\1\145\1\64\1\144\2\64\1\146\1"+
-            "\143\1\142\3\64\1\140\4\64\1\141\3\64",
+            "\1\uffff\3\64\1\131\1\141\1\64\1\137\1\64\1\136\2\64\1\140\1"+
+            "\135\1\134\3\64\1\132\4\64\1\133\3\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\153\7\64\1\152\5\64\1\151\3\64\1\150\7\64",
+            "\1\uffff\1\145\7\64\1\144\5\64\1\143\3\64\1\142\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\154\1\64\1\163\1\157\1\164\3\64\1\165\2\64\1\162"+
-            "\1\156\2\64\1\161\1\64\1\160\1\155\7\64",
+            "\1\uffff\1\146\1\64\1\155\1\151\1\156\3\64\1\157\2\64\1\154"+
+            "\1\150\2\64\1\153\1\64\1\152\1\147\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\170\1\64\1\171\4\64\1\172\1\64\1\173\1\64\1"+
-            "\167\1\64\1\166\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\10\64\1\176\2\64\6\uffff\32\64"+
-            "\4\uffff\1\64\1\uffff\2\64\1\175\13\64\1\174\13\64",
-            "\1\64\10\uffff\2\64\1\uffff\12\u0082\1\64\6\uffff\32\64\4\uffff"+
-            "\1\64\1\uffff\2\64\1\u0081\12\64\1\u0080\14\64",
+            "\1\uffff\4\64\1\162\1\64\1\163\4\64\1\164\1\64\1\165\1\64\1"+
+            "\161\1\64\1\160\10\64",
+            "\1\64\10\uffff\2\64\1\uffff\10\64\1\170\2\64\6\uffff\32\64"+
+            "\4\uffff\1\64\1\uffff\2\64\1\167\13\64\1\166\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\12\174\1\64\6\uffff\32\64\4\uffff"+
+            "\1\64\1\uffff\2\64\1\173\12\64\1\172\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0084\2\64\1\u0085\5\64\1\u0087\2\64\1\u0083"+
-            "\3\64\1\u0086\1\64",
+            "\1\uffff\10\64\1\176\2\64\1\177\5\64\1\u0081\2\64\1\175\3\64"+
+            "\1\u0080\1\64",
+            "\1\u0087\1\uffff\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32"+
+            "\64\4\uffff\1\64\1\uffff\1\u0086\1\64\1\u0084\10\64\1\u0083"+
+            "\1\u0085\1\64\1\u0082\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\1\u0088\3\64\1\u008d\3\64\1\u008b\4\64\1\u008a\1\u0089"+
             "\3\64\1\u008c\1\64\1\u008e\5\64",
@@ -8917,163 +8916,163 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\17\64\1\u00c8\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u00ca\1\u00cb\1\u00c9\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u00cc\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u00cd\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u00cf\12\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u00d0\7\64\1\u00d1\6\64",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u00d2\13\64",
+            "\1\uffff\16\64\1\u00c9\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u00d4\6\64",
+            "\1\uffff\23\64\1\u00cb\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u00d5\26\64",
+            "\1\uffff\3\64\1\u00cc\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u00d6\4\64\1\u00d7\15\64",
+            "\1\uffff\7\64\1\u00cd\4\64\1\u00ce\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u00d8\24\64\1\u00d9\1\64",
+            "\1\uffff\3\64\1\u00cf\24\64\1\u00d0\1\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u00db\2\64\1\u00dc\12\64\1\u00da\3\64",
+            "\1\uffff\10\64\1\u00d2\2\64\1\u00d3\12\64\1\u00d1\3\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u00dd\11\64\1\u00de\15\64",
+            "\1\uffff\2\64\1\u00d4\11\64\1\u00d5\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\20\64\1\u00df\11\64",
+            "\1\uffff\20\64\1\u00d6\11\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u00e0\31\64",
+            "\1\uffff\1\u00d7\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\17\64\1\u00d8\12\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u00da\4\64\1\u00d9\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\64\1\u00db\30\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u00dc\10\64\1\u00dd\5\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u00de\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u00df\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u00e0\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\17\64\1\u00e1\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u00e3\4\64\1\u00e2\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u00e4\30\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u00e5\10\64\1\u00e6\5\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u00e7\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u00e8\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u00e9\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u00ea\12\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u00ed\10\64\1\u00ee\4\64\1\u00ec\6\64\1\u00eb"+
+            "\1\uffff\2\64\1\u00e4\10\64\1\u00e5\4\64\1\u00e3\6\64\1\u00e2"+
             "\2\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u00f2\2\64\1\u00f0\6\64\1\u00f1\5\64\1\u00ef"+
+            "\1\uffff\3\64\1\u00e9\2\64\1\u00e7\6\64\1\u00e8\5\64\1\u00e6"+
             "\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u00f4\16\64\1\u00f3\6\64",
+            "\1\uffff\4\64\1\u00eb\16\64\1\u00ea\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u00f6\16\64\1\u00f5\6\64",
+            "\1\uffff\4\64\1\u00ed\16\64\1\u00ec\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u00f7\21\64",
+            "\1\uffff\10\64\1\u00ee\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u00ef\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u00f0\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u00f1\16\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\27\64\1\u00f2\2\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u00f3\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\3\64\1\u00f5\11\64\1\u00f4\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\17\64\1\u00f6\12\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u00f7\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\10\64\1\u00f8\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u00f9\13\64",
+            "\1\uffff\4\64\1\u00f9\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u00fa\16\64",
+            "\1\uffff\23\64\1\u00fa\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u00fb\2\64",
+            "\1\uffff\3\64\1\u00fe\1\u00fc\3\64\1\u00fb\4\64\1\u00ff\1\u00fd"+
+            "\2\64\1\u0101\4\64\1\u0100\3\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u00fc\14\64",
+            "\1\uffff\1\u0102\7\64\1\u0103\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u00fe\11\64\1\u00fd\14\64",
+            "\1\uffff\23\64\1\u0104\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u00ff\12\64",
+            "\1\uffff\4\64\1\u0106\16\64\1\u0105\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0100\6\64",
+            "\1\uffff\4\64\1\u0108\16\64\1\u0107\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0101\21\64",
+            "\1\uffff\20\64\1\u0109\11\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0102\25\64",
+            "\1\uffff\7\64\1\u010a\22\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0103\6\64",
+            "\1\uffff\1\u010c\1\64\1\u010b\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0108\1\u0105\3\64\1\u0104\4\64\1\u0107\1\u0106"+
-            "\2\64\1\u010a\4\64\1\u0109\3\64",
+            "\1\uffff\15\64\1\u010d\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u010b\7\64\1\u010c\21\64",
+            "\1\uffff\1\64\1\u010e\13\64\1\u010f\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u010d\6\64",
+            "\1\uffff\3\64\1\u0110\7\64\1\u0112\6\64\1\u0111\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u010f\16\64\1\u010e\6\64",
+            "\1\uffff\24\64\1\u0113\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0111\16\64\1\u0110\6\64",
+            "\1\uffff\24\64\1\u0114\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\20\64\1\u0112\11\64",
+            "\1\uffff\10\64\1\u0115\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u0113\22\64",
+            "\1\uffff\4\64\1\u0116\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\1\64\1\u0119\11\64\6\uffff\32\64"+
+            "\4\uffff\1\64\1\uffff\4\64\1\u0118\16\64\1\u0117\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0115\1\64\1\u0114\27\64",
+            "\1\uffff\16\64\1\u011a\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0116\14\64",
+            "\1\uffff\14\64\1\u011b\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u0117\13\64\1\u0118\14\64",
+            "\1\uffff\15\64\1\u011c\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0119\7\64\1\u011b\6\64\1\u011a\7\64",
+            "\1\uffff\13\64\1\u011d\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u011c\5\64",
+            "\1\uffff\3\64\1\u011e\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u011d\5\64",
+            "\1\uffff\1\u0121\22\64\1\u0120\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u011e\21\64",
+            "\1\uffff\20\64\1\u0122\11\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u011f\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\1\64\1\u0122\11\64\6\uffff\32\64"+
-            "\4\uffff\1\64\1\uffff\4\64\1\u0121\16\64\1\u0120\6\64",
+            "\1\uffff\4\64\1\u0124\16\64\1\u0123\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0123\13\64",
+            "\1\uffff\4\64\1\u0126\16\64\1\u0125\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u0124\15\64",
+            "\1\uffff\4\64\1\u0127\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0125\14\64",
+            "\1\uffff\21\64\1\u0128\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0126\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0127\26\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u012a\22\64\1\u0129\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\20\64\1\u012b\11\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u012d\16\64\1\u012c\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u012f\16\64\1\u012e\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0130\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0131\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u0132\22\64",
-            "\1\64\10\uffff\2\64\1\uffff\6\64\1\u0133\4\64\6\uffff\32\64"+
+            "\1\uffff\7\64\1\u0129\22\64",
+            "\1\64\10\uffff\2\64\1\uffff\6\64\1\u012a\4\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0138\1\u0139\1\64\1\u013b\4\64\1\u0134\2\64\1\u0135"+
-            "\5\64\1\u0137\1\u013a\1\u0136\1\64\1\u013c\4\64",
+            "\1\uffff\1\u012f\1\u0130\1\64\1\u0132\4\64\1\u012b\2\64\1\u012c"+
+            "\5\64\1\u012e\1\u0131\1\u012d\1\64\1\u0133\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u013d\15\64",
-            "\1\64\10\uffff\2\64\1\uffff\12\u0082\1\64\6\uffff\32\64\4\uffff"+
+            "\1\uffff\14\64\1\u0134\15\64",
+            "\1\64\10\uffff\2\64\1\uffff\12\174\1\64\6\uffff\32\64\4\uffff"+
             "\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u013f\21\64",
+            "\1\uffff\10\64\1\u0136\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0140\6\64",
+            "\1\uffff\23\64\1\u0137\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0141\13\64",
+            "\1\uffff\16\64\1\u0138\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\25\64\1\u0142\4\64",
+            "\1\uffff\25\64\1\u0139\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u013b\1\u013c\1\u013d\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u013e\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u013f\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\17\64\1\u0141\12\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u0142\7\64\1\u0143\6\64",
+            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\12\64\1\u0144\2\64\1\u0145\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9175,87 +9174,70 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\4\64\1\u0184\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0185\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0186\26\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u0187\15\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0188\31\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\1\64\1\u0185\30\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u018a\2\64",
+            "\1\uffff\4\64\1\u0186\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u018b\16\64",
+            "\1\uffff\21\64\1\u0187\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u018c\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u018d\30\64",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u018e\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u018f\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0191\10\64",
+            "\1\uffff\21\64\1\u0189\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0194\10\64",
+            "\1\uffff\21\64\1\u018c\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0195\31\64",
+            "\1\uffff\1\u018d\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0196\5\64\1\u0197\23\64",
+            "\1\uffff\1\u018e\5\64\1\u018f\23\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0198\13\64",
+            "\1\uffff\16\64\1\u0190\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u0199\12\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u019a"+
+            "\1\uffff\17\64\1\u0191\12\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0192"+
             "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u019c"+
-            "\1\uffff\24\64\1\u019b\5\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0194"+
+            "\1\uffff\24\64\1\u0193\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u019d\21\64",
+            "\1\uffff\10\64\1\u0195\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u019e\25\64",
+            "\1\uffff\4\64\1\u0196\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u019f\10\64",
+            "\1\uffff\21\64\1\u0197\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u01a0\15\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\14\64\1\u0198\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u01a3\24\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\25\64\1\u01a4\4\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u01a5\6\64\1\u01a6\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u01a7\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u01a8\1\u01a9\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u01ab\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u01ac"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u01ad\6\64",
+            "\1\uffff\5\64\1\u019b\24\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01ae\25\64",
+            "\1\uffff\25\64\1\u019c\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u01af\13\64",
+            "\1\uffff\14\64\1\u019d\6\64\1\u019e\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u01b0\14\64",
+            "\1\uffff\10\64\1\u019f\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u01b1\23\64",
+            "\1\uffff\21\64\1\u01a0\1\u01a1\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01b2\25\64",
+            "\1\uffff\23\64\1\u01a3\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u01a4"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u01a5\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u01a6\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u01a7\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u01a8\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\6\64\1\u01a9\23\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u01aa\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9265,55 +9247,51 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u01b7\10\64",
+            "\1\uffff\21\64\1\u01af\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u01b8\6\64",
+            "\1\uffff\23\64\1\u01b0\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u01b9\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\21\64\1\u01b1\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u01bd\13\64",
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u01be\5\64",
-            "\1\64\10\uffff\2\64\1\uffff\4\64\1\u01bf\6\64\6\uffff\32\64"+
+            "\1\uffff\16\64\1\u01b5\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\24\64\1\u01b6\5\64",
+            "\1\64\10\uffff\2\64\1\uffff\4\64\1\u01b7\6\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u01c0\31\64",
+            "\1\uffff\1\u01b8\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\25\64\1\u01c1\4\64",
+            "\1\uffff\25\64\1\u01b9\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u01c2\15\64",
+            "\1\uffff\14\64\1\u01ba\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u01c3\31\64",
+            "\1\uffff\1\u01bb\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u01c4\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u01c6\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u01c8\31\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01c9\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u01ca\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01cb\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u01cc\2\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u01cd\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u01ce\13\64",
+            "\1\uffff\15\64\1\u01bc\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\21\64\1\u01be\10\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u01c0\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u01c1\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u01c2\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u01c3\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\27\64\1\u01c4\2\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u01c5\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u01c6\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9321,54 +9299,56 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u01d4\10\64",
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u01d5\31\64",
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u01d6\26\64",
+            "\1\uffff\21\64\1\u01cc\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\12\64\1\u01d7\17\64",
+            "\1\uffff\1\u01cd\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01d8\25\64",
+            "\1\uffff\3\64\1\u01ce\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u01d9\26\64",
+            "\1\uffff\12\64\1\u01cf\17\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u01da\26\64",
+            "\1\uffff\4\64\1\u01d0\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u01db\6\64",
+            "\1\uffff\3\64\1\u01d1\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u01dc\7\64",
+            "\1\uffff\3\64\1\u01d2\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u01dd\30\64",
+            "\1\uffff\23\64\1\u01d3\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u01de\16\64",
+            "\1\uffff\22\64\1\u01d4\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\25\64\1\u01df\4\64",
+            "\1\uffff\1\64\1\u01d5\30\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u01e0\15\64",
+            "\1\uffff\13\64\1\u01d6\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u01e2\2\64\1\u01e1\10\64",
+            "\1\uffff\25\64\1\u01d7\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u01e3\2\64",
-            "\1\64\10\uffff\2\64\1\uffff\2\64\1\u01e4\10\64\6\uffff\32\64"+
+            "\1\uffff\14\64\1\u01d8\15\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u01da\2\64\1\u01d9\10\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\27\64\1\u01db\2\64",
+            "\1\64\10\uffff\2\64\1\uffff\2\64\1\u01dc\10\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u01e5\31\64",
+            "\1\uffff\1\u01dd\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u01e6\12\64",
+            "\1\uffff\17\64\1\u01de\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u01e7\27\64",
+            "\1\uffff\2\64\1\u01df\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u01e8\6\64",
+            "\1\uffff\23\64\1\u01e0\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u01ea\4\64\1\u01eb\7\64",
+            "\1\uffff\15\64\1\u01e2\4\64\1\u01e3\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\20\64\1\u01ec\11\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\20\64\1\u01e4\11\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9382,39 +9362,58 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u01f4\23\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u01f5"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u01f6\6\64",
+            "\1\uffff\6\64\1\u01ec\23\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u01ed"+
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u01f7\21\64",
+            "\1\uffff\23\64\1\u01ee\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01f9\16\64\1\u01f8\6\64",
+            "\1\uffff\10\64\1\u01ef\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01fa\25\64",
+            "\1\uffff\4\64\1\u01f1\16\64\1\u01f0\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u01fb\16\64",
+            "\1\uffff\4\64\1\u01f2\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u01fc\13\64",
+            "\1\uffff\13\64\1\u01f3\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u01fd\25\64",
+            "\1\uffff\16\64\1\u01f4\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u01fe\21\64",
+            "\1\uffff\4\64\1\u01f5\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u01ff\13\64",
+            "\1\uffff\10\64\1\u01f6\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u0200\12\64",
+            "\1\uffff\16\64\1\u01f7\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\17\64\1\u01f8\12\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0201\16\64",
+            "\1\uffff\13\64\1\u01f9\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0202\27\64",
+            "\1\uffff\2\64\1\u01fa\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0203\27\64",
+            "\1\uffff\2\64\1\u01fb\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0204\31\64",
+            "\1\uffff\1\u01fc\31\64",
             "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\3\64\1\u01fd\26\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\14\64\1\u01fe\15\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\22\64\1\u01ff\7\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u0200\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\27\64\1\u0202\2\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u0203\16\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0204\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\4\64\1\u0205\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9537,61 +9536,46 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0245\6\64",
+            "\1\uffff\1\u0245\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0246\27\64",
+            "\1\uffff\13\64\1\u0246\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0248\13\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0249\14\64",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u024a\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u024c\22\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u024d\31\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u024e\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u024f\15\64\1\u0250\7\64",
+            "\1\uffff\4\64\1\u0247\15\64\1\u0248\7\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0252\25\64",
+            "\1\uffff\4\64\1\u024a\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\30\64\1\u0253\1\64",
+            "\1\uffff\30\64\1\u024b\1\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0254\7\64",
+            "\1\uffff\22\64\1\u024c\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0255\14\64",
+            "\1\uffff\15\64\1\u024d\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0256\27\64",
+            "\1\uffff\2\64\1\u024e\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0258\31\64",
+            "\1\uffff\1\u0250\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0259\21\64",
+            "\1\uffff\10\64\1\u0251\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u025a\10\64",
+            "\1\uffff\21\64\1\u0252\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u025b\16\64",
+            "\1\uffff\13\64\1\u0253\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u025c\14\64",
+            "\1\uffff\15\64\1\u0254\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u025d\21\64",
+            "\1\uffff\10\64\1\u0255\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u025e\21\64",
+            "\1\uffff\10\64\1\u0256\21\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u025f\24\64",
+            "\1\uffff\5\64\1\u0257\24\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9599,171 +9583,186 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0263\6\64",
+            "\1\uffff\23\64\1\u025b\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0264\25\64",
+            "\1\uffff\4\64\1\u025c\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0265\6\64",
+            "\1\uffff\23\64\1\u025d\6\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u025f\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u0260\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0261\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\5\64\1\u0262\24\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u0263\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u0264\16\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u0265\25\64",
+            "",
+            "",
+            "",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0266"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\2\64\1\u0267\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0268\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0269\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u026a\24\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u026b\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u026c\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u026d\25\64",
-            "",
-            "",
-            "",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u026e"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u026f\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0270\25\64",
+            "\1\uffff\4\64\1\u0268\25\64",
             "",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0271\6\64",
+            "\1\uffff\23\64\1\u0269\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0272\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\3\64\1\u0273\7\64\6\uffff\32\64"+
+            "\1\uffff\13\64\1\u026a\16\64",
+            "\1\64\10\uffff\2\64\1\uffff\3\64\1\u026b\7\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0274\26\64",
+            "\1\uffff\3\64\1\u026c\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u0277\30\64",
+            "\1\uffff\1\64\1\u026f\30\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0278\21\64",
+            "\1\uffff\10\64\1\u0270\21\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0279\26\64",
+            "\1\uffff\3\64\1\u0271\26\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u027a\15\64",
+            "\1\uffff\5\64\1\u0272\24\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u027b\24\64",
+            "\1\uffff\14\64\1\u0273\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u027c\14\64",
+            "\1\uffff\15\64\1\u0274\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u027d\31\64",
+            "\1\uffff\1\u0275\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u0280\24\64",
-            "",
-            "",
+            "\1\uffff\5\64\1\u0278\24\64",
             "",
             "",
             "",
+            "",
+            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0282\16\64",
+            "\1\uffff\13\64\1\u027a\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0284\11\64\1\u0285\13\64",
+            "\1\uffff\4\64\1\u027c\11\64\1\u027d\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0286\16\64",
+            "\1\uffff\13\64\1\u027e\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0287\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0289\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u028b\25\64",
+            "\1\uffff\10\64\1\u027f\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\2\64\1\u0281\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u0283\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u0290\5\64",
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0292\1\64\1\u0291\5\64",
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0293\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\10\64\1\u0294\2\64\6\uffff\32\64"+
+            "\1\uffff\24\64\1\u0288\5\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\22\64\1\u028a\1\64\1\u0289\5\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u028b\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\10\64\1\u028c\2\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0295\6\64",
+            "\1\uffff\23\64\1\u028d\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0297\25\64",
+            "\1\uffff\4\64\1\u028f\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0298\25\64",
+            "\1\uffff\4\64\1\u0290\25\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0299\13\64",
+            "\1\uffff\16\64\1\u0291\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u0292\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\24\64\1\u0293\5\64",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\6\64\1\u0298\4\64\6\uffff\32\64"+
+            "\4\uffff\1\64\1\uffff\5\64\1\u0295\6\64\1\u0299\5\64\1\u0296"+
+            "\1\u0297\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\10\64\1\u029a\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u029b\5\64",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\uffff\15\64\1\u029b\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\6\64\1\u02a0\4\64\6\uffff\32\64"+
-            "\4\uffff\1\64\1\uffff\5\64\1\u029d\6\64\1\u02a1\5\64\1\u029e"+
-            "\1\u029f\6\64",
+            "\1\uffff\16\64\1\u029c\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u02a2\21\64",
+            "\1\uffff\13\64\1\u029e\5\64\1\u029d\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u02a3\14\64",
+            "\1\uffff\6\64\1\u029f\23\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u02a4\13\64",
+            "\1\uffff\13\64\1\u02a0\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u02a6\5\64\1\u02a5\10\64",
+            "\1\uffff\24\64\1\u02a1\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u02a7\23\64",
+            "\1\uffff\21\64\1\u02a2\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u02a8\16\64",
+            "\1\uffff\21\64\1\u02a3\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u02a9\5\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u02aa\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u02ab\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\12\64\1\u02ac\17\64",
+            "\1\uffff\12\64\1\u02a4\17\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u02ae\6\64",
+            "\1\uffff\23\64\1\u02a6\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u02af\31\64",
+            "\1\uffff\1\u02a7\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\12\64\1\u02b0\17\64",
+            "\1\uffff\12\64\1\u02a8\17\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u02b1\16\64",
+            "\1\uffff\13\64\1\u02a9\16\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u02aa\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u02ac\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u02ad\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u02ae\14\64",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u02af\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\7\64\1\u02b1\22\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\3\64\1\u02b2\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -9880,128 +9879,114 @@ public class InternalLLVM_IRLexer extends Lexer {
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u02ed\31\64",
+            "\1\uffff\13\64\1\u02ed\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u02ee\27\64",
+            "\1\uffff\4\64\1\u02ee\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\22\64\1\u02ef\7\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\17\64\1\u02f0\12\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u02ef\14\64",
+            "\1\uffff\6\64\1\u02f1\23\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u02f0\5\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u02f1\22\64",
-            "",
+            "\1\uffff\22\64\1\u02f2\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u02f3\16\64",
+            "\1\uffff\22\64\1\u02f4\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u02f4\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u02f5\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u02f6\12\64",
+            "\1\uffff\1\u02f6\31\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u02f7\23\64",
+            "\1\uffff\1\u02f8\16\64\1\u02f7\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u02f8\7\64",
+            "\1\uffff\21\64\1\u02f9\10\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u02fa\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u02fb\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\3\64\1\u02fc\26\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\64\1\u02fd\30\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u02fe\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u02ff\16\64",
+            "",
+            "",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u0300\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\20\64\1\u0301\11\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\21\64\1\u0302\10\64",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\22\64\1\u0303\7\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\16\64\1\u0304\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u0305\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\17\64\1\u0306\12\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\27\64\1\u0307\2\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u0308\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\5\64\1\u0309\24\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\5\64\1\u030b\4\64\1\u030a\17\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\7\64\1\u030c\22\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u02fa\7\64",
+            "\1\uffff\16\64\1\u030e\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u02fc\31\64",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u02fe\16\64\1\u02fd\12\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u02ff\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0300\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0301\31\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0302\26\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u0303\30\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0304\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0305\16\64",
-            "",
-            "",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0306\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\20\64\1\u0307\11\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0308\10\64",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0309\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u030a\13\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u030b\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u030c\12\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u030d\2\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u030e\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u030f\24\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u0311\4\64\1\u0310\17\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u0312\22\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0314\13\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0315\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\1\u0316\12\64\6\uffff\32\64\4\uffff"+
+            "\1\uffff\4\64\1\u030f\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\1\u0310\12\64\6\uffff\32\64\4\uffff"+
             "\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0317\31\64",
+            "\1\uffff\1\u0311\31\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0318\16\64",
+            "\1\uffff\13\64\1\u0312\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0319\6\64",
+            "\1\uffff\23\64\1\u0313\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u031a\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u031b\25\64",
+            "\1\uffff\4\64\1\u0314\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u031d\26\64",
+            "\1\uffff\4\64\1\u0316\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u031e\27\64",
+            "\1\uffff\3\64\1\u0317\26\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0318\27\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u031f\12\64",
+            "\1\uffff\17\64\1\u0319\12\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u0320\1\u0321\25\64",
+            "\1\uffff\3\64\1\u031a\1\u031b\25\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0322\10\64",
+            "\1\uffff\21\64\1\u031c\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0323\14\64",
+            "\1\uffff\15\64\1\u031d\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0325\14\64",
+            "\1\uffff\15\64\1\u031f\14\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0326\27\64",
+            "\1\uffff\2\64\1\u0320\27\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
@@ -10010,68 +9995,82 @@ public class InternalLLVM_IRLexer extends Lexer {
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0327\14\64",
+            "\1\uffff\15\64\1\u0321\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0328\21\64",
+            "\1\uffff\10\64\1\u0322\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0329\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\10\64\1\u0323\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u032e\10\64",
+            "\1\uffff\21\64\1\u0328\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u032f\14\64",
+            "\1\uffff\15\64\1\u0329\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\31\64\1\u0330",
+            "\1\uffff\31\64\1\u032a",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0331\25\64",
+            "\1\uffff\4\64\1\u032b\25\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0333\16\64\1\u0332\12\64",
+            "\1\uffff\1\u032d\16\64\1\u032c\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0334\6\64",
+            "\1\uffff\23\64\1\u032e\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u0335\22\64",
-            "\1\64\10\uffff\2\64\1\uffff\4\64\1\u0336\6\64\6\uffff\32\64"+
+            "\1\uffff\7\64\1\u032f\22\64",
+            "\1\64\10\uffff\2\64\1\uffff\4\64\1\u0330\6\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u0337\15\64",
+            "\1\uffff\14\64\1\u0331\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0338\31\64",
+            "\1\uffff\1\u0332\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0339\25\64",
+            "\1\uffff\4\64\1\u0333\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u033a\12\64",
+            "\1\uffff\17\64\1\u0334\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u033b\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u033c"+
-            "\1\uffff\3\64\1\u033d\26\64",
+            "\1\uffff\15\64\1\u0335\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0336"+
+            "\1\uffff\3\64\1\u0337\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u033f\13\64",
+            "\1\uffff\16\64\1\u0339\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0340\14\64",
+            "\1\uffff\15\64\1\u033a\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0341\6\64",
+            "\1\uffff\23\64\1\u033b\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0342\25\64",
+            "\1\uffff\4\64\1\u033c\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0343\25\64",
+            "\1\uffff\4\64\1\u033d\25\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0344\21\64",
+            "\1\uffff\10\64\1\u033e\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0345\7\64",
+            "\1\uffff\22\64\1\u033f\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0346\31\64",
+            "\1\uffff\1\u0340\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0342\27\64",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u0343\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u0344\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\24\64\1\u0345\5\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\7\64\1\u0346\22\64",
+            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10180,117 +10179,106 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u037d\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\14\64\1\u037e\15\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u0380\12\64",
+            "\1\uffff\22\64\1\u037f\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u0381\23\64",
+            "\1\uffff\1\u0380\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0381\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\10\64\1\u0382\21\64",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u0383\6\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u0383\15\64",
+            "\1\uffff\2\64\1\u0385\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0384\7\64",
+            "\1\uffff\17\64\1\u0386\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0385\31\64",
+            "\1\uffff\4\64\1\u0387\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0386\27\64",
+            "\1\uffff\13\64\1\u0388\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0387\21\64",
-            "",
+            "\1\uffff\1\64\1\u0389\30\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0388\6\64",
-            "",
+            "\1\uffff\10\64\1\u038a\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\24\64\1\u038b\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u038a\27\64",
+            "\1\uffff\21\64\1\u038c\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u038b\12\64",
+            "\1\uffff\4\64\1\u038e\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u038c\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u038d\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u038e\30\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u038f\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u0390\5\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0391\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0393\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\31\64\1\u0394",
+            "\1\uffff\31\64\1\u038f",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u0396\13\64",
+            "\1\uffff\16\64\1\u0391\13\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u0392\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u0393\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u0396\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\23\64\1\u0397\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0398\14\64",
+            "\1\uffff\5\64\1\u0398\24\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\4\64\1\u0399\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u039b\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u039c\6\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\5\64\1\u039d\24\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u039e\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\24\64\1\u039f\5\64",
+            "\1\uffff\24\64\1\u039a\5\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u03a1\14\64",
+            "\1\uffff\15\64\1\u039c\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03a3"+
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u039e"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u03a4\6\64",
+            "\1\uffff\23\64\1\u039f\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u03a5\25\64",
+            "\1\uffff\4\64\1\u03a0\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u03a6\21\64",
+            "\1\uffff\10\64\1\u03a1\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u03a7\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u03a8\26\64",
+            "\1\uffff\21\64\1\u03a2\10\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u03aa\22\64",
+            "\1\uffff\3\64\1\u03a3\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\30\64\1\u03ac\1\64",
+            "\1\uffff\7\64\1\u03a5\22\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u03ad\2\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03ae"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u03af\27\64",
+            "\1\uffff\30\64\1\u03a7\1\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\27\64\1\u03a8\2\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03a9"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u03aa\27\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u03b0\23\64",
+            "\1\uffff\6\64\1\u03ab\23\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u03b2\27\64",
+            "\1\uffff\2\64\1\u03ad\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10302,52 +10290,63 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u03b6\25\64",
+            "\1\uffff\4\64\1\u03b1\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u03b7\25\64",
+            "\1\uffff\4\64\1\u03b2\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
-            "\1\64\10\uffff\2\64\1\uffff\10\64\1\u03b9\2\64\6\uffff\32\64"+
+            "\1\64\10\uffff\2\64\1\uffff\10\64\1\u03b4\2\64\6\uffff\32\64"+
             "\4\uffff\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u03ba\7\64",
+            "\1\uffff\22\64\1\u03b5\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u03bb\26\64",
+            "\1\uffff\3\64\1\u03b6\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u03bc\21\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03bd"+
+            "\1\uffff\10\64\1\u03b7\21\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03b8"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u03be\2\64",
+            "\1\uffff\27\64\1\u03b9\2\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u03bf\16\64",
+            "\1\uffff\13\64\1\u03ba\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u03c0\22\64",
+            "\1\uffff\7\64\1\u03bb\22\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u03c1\6\64",
+            "\1\uffff\23\64\1\u03bc\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u03c2\31\64",
+            "\1\uffff\1\u03bd\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\16\64\1\u03c3\13\64",
+            "\1\uffff\16\64\1\u03be\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u03c4\21\64",
+            "\1\uffff\10\64\1\u03bf\21\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u03c5\27\64",
+            "\1\uffff\2\64\1\u03c0\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u03c6\26\64",
+            "\1\uffff\3\64\1\u03c1\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u03c7\20\64\1\u03c8\4\64",
+            "\1\uffff\4\64\1\u03c2\20\64\1\u03c3\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u03c9\27\64",
+            "\1\uffff\2\64\1\u03c4\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u03c6\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u03c7\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\3\64\1\u03c8\26\64",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\15\64\1\u03cb\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u03cc\6\64",
+            "\1\uffff\17\64\1\u03cc\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u03cd\26\64",
+            "\1\uffff\6\64\1\u03cd\23\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10443,52 +10442,44 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\13\64\1\u03fa\6\64\1\u03f9\7\64",
             "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u03fb\6\64",
-            "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u03fb\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03fc"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\2\64\1\u03fd\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u03fe\27\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\15\64\1\u03ff\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u0400\31\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u03fe\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u03ff"+
-            "\1\uffff\32\64",
+            "\1\uffff\22\64\1\u0401\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0400\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0401\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0402\14\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0403\31\64",
-            "",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0404\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0405\27\64",
+            "\1\uffff\2\64\1\u0402\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0408\16\64",
+            "\1\uffff\13\64\1\u0405\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0409\14\64",
+            "\1\uffff\15\64\1\u0406\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u040a\6\64",
+            "\1\uffff\23\64\1\u0407\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\14\64\1\u040b\15\64",
+            "\1\uffff\14\64\1\u0408\15\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\25\64\1\u040c\4\64",
+            "\1\uffff\25\64\1\u0409\4\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u040d\25\64",
+            "\1\uffff\4\64\1\u040a\25\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u040e\14\64",
+            "\1\uffff\15\64\1\u040b\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10498,43 +10489,43 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\7\64\1\u0412\22\64",
+            "\1\uffff\7\64\1\u040f\22\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0413\25\64",
+            "\1\uffff\4\64\1\u0410\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0414\10\64",
+            "\1\uffff\21\64\1\u0411\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0415\14\64",
+            "\1\uffff\15\64\1\u0412\14\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0416\21\64",
+            "\1\uffff\10\64\1\u0413\21\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0417\21\64",
+            "\1\uffff\10\64\1\u0414\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0418\31\64",
+            "\1\uffff\1\u0415\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u0417\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\4\64\1\u0418\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0419"+
+            "\1\uffff\32\64",
+            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\1\u041a\31\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u041b\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u041c"+
-            "\1\uffff\32\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u041d\31\64",
-            "",
+            "\1\uffff\15\64\1\u041b\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u041e\14\64",
+            "\1\uffff\4\64\1\u041c\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u041f\25\64",
+            "\1\uffff\17\64\1\u041d\12\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u0420\12\64",
+            "\1\uffff\4\64\1\u041e\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0421\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\17\64\1\u0422\12\64",
+            "\1\uffff\17\64\1\u041f\12\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
@@ -10546,47 +10537,55 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "",
-            "\1\64\10\uffff\2\64\1\uffff\1\u0426\12\64\6\uffff\32\64\4\uffff"+
+            "\1\64\10\uffff\2\64\1\uffff\1\u0423\12\64\6\uffff\32\64\4\uffff"+
             "\1\64\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0427\6\64",
+            "\1\uffff\23\64\1\u0424\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0428\27\64",
+            "\1\uffff\2\64\1\u0425\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0429\7\64",
+            "\1\uffff\22\64\1\u0426\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u042a\3\64\1\u042b\3\64",
+            "\1\uffff\22\64\1\u0427\3\64\1\u0428\3\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u042d\25\64",
+            "\1\uffff\4\64\1\u042a\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u042e\21\64",
+            "\1\uffff\10\64\1\u042b\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u042f\10\64",
+            "\1\uffff\21\64\1\u042c\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0430\16\64",
+            "\1\uffff\13\64\1\u042d\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0431\27\64",
+            "\1\uffff\2\64\1\u042e\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0432\31\64",
+            "\1\uffff\1\u042f\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\1\u0430\31\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\22\64\1\u0431\7\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\13\64\1\u0432\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\1\u0433\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0434\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0435\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0436\31\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\23\64\1\u0437\6\64",
+            "\1\uffff\23\64\1\u0434\6\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u043a\26\64",
+            "\1\uffff\3\64\1\u0437\26\64",
+            "",
+            "",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\23\64\1\u0438\6\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\10\64\1\u043b\21\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10670,119 +10669,119 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\16\64\1\u0461\13\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
-            "",
-            "",
+            "\1\uffff\15\64\1\u0462\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0463\14\64",
+            "\1\uffff\22\64\1\u0463\7\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u0464\7\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0465\25\64",
+            "\1\uffff\4\64\1\u0464\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0467\16\64",
+            "\1\uffff\13\64\1\u0466\16\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0467\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\2\64\1\u0468\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0469\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\22\64\1\u046a\7\64",
+            "\1\uffff\22\64\1\u0469\7\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u046b\25\64",
+            "\1\uffff\4\64\1\u046a\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u046c\23\64",
+            "\1\uffff\6\64\1\u046b\23\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u046d\25\64",
+            "\1\uffff\4\64\1\u046c\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\26\64\1\u046e\3\64",
+            "\1\uffff\26\64\1\u046d\3\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u046f\25\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0470"+
+            "\1\uffff\4\64\1\u046e\25\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u046f"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\6\64\1\u0471\23\64",
+            "\1\uffff\6\64\1\u0470\23\64",
             "",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0472\10\64",
+            "\1\uffff\21\64\1\u0471\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0473\27\64",
+            "\1\uffff\2\64\1\u0472\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0474\14\64",
+            "\1\uffff\15\64\1\u0473\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\2\64\1\u0474\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\2\64\1\u0475\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0476\27\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u0477\14\64",
+            "\1\uffff\15\64\1\u0476\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0479\16\64",
+            "\1\uffff\13\64\1\u0478\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\3\64\1\u047a\26\64",
+            "\1\uffff\3\64\1\u0479\26\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u047b\31\64",
+            "\1\uffff\1\u047a\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u047c\30\64",
+            "\1\uffff\1\64\1\u047b\30\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u047d\31\64",
+            "\1\uffff\1\u047c\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u047e\27\64",
+            "\1\uffff\2\64\1\u047d\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u047f\10\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u0480"+
+            "\1\uffff\21\64\1\u047e\10\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\u047f"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0482\31\64",
+            "\1\uffff\1\u0481\31\64",
             "",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0484\27\64",
+            "\1\uffff\2\64\1\u0483\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\u0485\31\64",
+            "\1\uffff\1\u0484\31\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\2\64\1\u0486\27\64",
+            "\1\uffff\2\64\1\u0485\27\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\30\64\1\u0487\1\64",
+            "\1\uffff\30\64\1\u0486\1\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\10\64\1\u0488\21\64",
+            "\1\uffff\10\64\1\u0487\21\64",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\27\64\1\u0489\2\64",
+            "\1\uffff\27\64\1\u0488\2\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\15\64\1\u048a\14\64",
+            "\1\uffff\15\64\1\u0489\14\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\32\64",
+            "\1\uffff\13\64\1\u048c\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\13\64\1\u048d\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u048e\16\64",
-            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\4\64\1\u0491\25\64",
+            "\1\uffff\4\64\1\u0490\25\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\13\64\1\u0492\16\64",
+            "\1\uffff\13\64\1\u0491\16\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\1\64\1\u0493\30\64",
+            "\1\uffff\1\64\1\u0492\30\64",
             "",
             "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
-            "\1\uffff\21\64\1\u0494\10\64",
+            "\1\uffff\21\64\1\u0493\10\64",
+            "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
+            "\1\uffff\32\64",
+            "",
+            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\15\64\1\u0495\14\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10855,7 +10854,6 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\uffff\5\64\1\u04b6\24\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\2\64\1\u04b7\27\64",
-            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\23\64\1\u04b8\6\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -10948,6 +10946,7 @@ public class InternalLLVM_IRLexer extends Lexer {
             "\1\uffff\21\64\1\u04e4\10\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\4\64\1\u04e5\25\64",
+            "",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
             "\1\uffff\32\64",
             "\1\64\10\uffff\2\64\1\uffff\13\64\6\uffff\32\64\4\uffff\1\64"+
@@ -11584,30 +11583,6 @@ public class InternalLLVM_IRLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA24_565 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA24_565=='\"') ) {s = 183;}
-
-                        else if ( (LA24_565=='\\') ) {s = 181;}
-
-                        else if ( ((LA24_565>='\u0000' && LA24_565<='!')||(LA24_565>='#' && LA24_565<='[')||(LA24_565>=']' && LA24_565<='\uFFFF')) ) {s = 182;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA24_371 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA24_371=='\"') ) {s = 183;}
-
-                        else if ( (LA24_371=='\\') ) {s = 181;}
-
-                        else if ( ((LA24_371>='\u0000' && LA24_371<='!')||(LA24_371>='#' && LA24_371<='[')||(LA24_371>=']' && LA24_371<='\uFFFF')) ) {s = 182;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
                         int LA24_0 = input.LA(1);
 
                         s = -1;
@@ -11615,29 +11590,29 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                         else if ( (LA24_0=='t') ) {s = 2;}
 
-                        else if ( (LA24_0=='c') ) {s = 3;}
+                        else if ( (LA24_0=='g') ) {s = 3;}
 
-                        else if ( (LA24_0=='g') ) {s = 4;}
+                        else if ( (LA24_0=='a') ) {s = 4;}
 
-                        else if ( (LA24_0=='a') ) {s = 5;}
+                        else if ( (LA24_0=='s') ) {s = 5;}
 
-                        else if ( (LA24_0=='s') ) {s = 6;}
+                        else if ( (LA24_0=='m') ) {s = 6;}
 
-                        else if ( (LA24_0=='m') ) {s = 7;}
+                        else if ( (LA24_0=='u') ) {s = 7;}
 
-                        else if ( (LA24_0=='u') ) {s = 8;}
+                        else if ( (LA24_0=='l') ) {s = 8;}
 
-                        else if ( (LA24_0=='l') ) {s = 9;}
+                        else if ( (LA24_0=='f') ) {s = 9;}
 
-                        else if ( (LA24_0=='f') ) {s = 10;}
+                        else if ( (LA24_0=='o') ) {s = 10;}
 
-                        else if ( (LA24_0=='o') ) {s = 11;}
+                        else if ( (LA24_0=='x') ) {s = 11;}
 
-                        else if ( (LA24_0=='x') ) {s = 12;}
+                        else if ( (LA24_0=='i') ) {s = 12;}
 
-                        else if ( (LA24_0=='i') ) {s = 13;}
+                        else if ( (LA24_0=='b') ) {s = 13;}
 
-                        else if ( (LA24_0=='b') ) {s = 14;}
+                        else if ( (LA24_0=='c') ) {s = 14;}
 
                         else if ( (LA24_0=='n') ) {s = 15;}
 
@@ -11704,6 +11679,30 @@ public class InternalLLVM_IRLexer extends Lexer {
                         else if ( ((LA24_0>='\t' && LA24_0<='\n')||LA24_0=='\r'||LA24_0==' ') ) {s = 46;}
 
                         else if ( ((LA24_0>='\u0000' && LA24_0<='\b')||(LA24_0>='\u000B' && LA24_0<='\f')||(LA24_0>='\u000E' && LA24_0<='\u001F')||(LA24_0>='&' && LA24_0<='\'')||LA24_0=='/'||LA24_0==':'||LA24_0=='?'||LA24_0=='\\'||LA24_0=='^'||LA24_0=='`'||LA24_0=='|'||(LA24_0>='~' && LA24_0<='\uFFFF')) ) {s = 47;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA24_565 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA24_565=='\"') ) {s = 183;}
+
+                        else if ( (LA24_565=='\\') ) {s = 181;}
+
+                        else if ( ((LA24_565>='\u0000' && LA24_565<='!')||(LA24_565>='#' && LA24_565<='[')||(LA24_565>=']' && LA24_565<='\uFFFF')) ) {s = 182;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA24_371 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA24_371=='\"') ) {s = 183;}
+
+                        else if ( (LA24_371=='\\') ) {s = 181;}
+
+                        else if ( ((LA24_371>='\u0000' && LA24_371<='!')||(LA24_371>='#' && LA24_371<='[')||(LA24_371>=']' && LA24_371<='\uFFFF')) ) {s = 182;}
 
                         if ( s>=0 ) return s;
                         break;

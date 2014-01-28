@@ -647,9 +647,11 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAddrspaceAddressSpaceParserRuleCall_2_0 = (RuleCall)cAddrspaceAssignment_2.eContents().get(0);
 		private final Assignment cTlsModelAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cTlsModelTLSmodelParserRuleCall_3_0 = (RuleCall)cTlsModelAssignment_3.eContents().get(0);
-		private final Keyword cUnnamed_addrKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cUnsignificantAddressAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cUnsignificantAddressUnnamed_addrKeyword_4_0 = (Keyword)cUnsignificantAddressAssignment_4.eContents().get(0);
 		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
-		private final Keyword cConstantKeyword_5_0 = (Keyword)cAlternatives_5.eContents().get(0);
+		private final Assignment cConstantAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final Keyword cConstantConstantKeyword_5_0_0 = (Keyword)cConstantAssignment_5_0.eContents().get(0);
 		private final Keyword cGlobalKeyword_5_1 = (Keyword)cAlternatives_5.eContents().get(1);
 		private final Assignment cTypeAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cTypeTypeParserRuleCall_6_0 = (RuleCall)cTypeAssignment_6.eContents().get(0);
@@ -665,12 +667,12 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAlignAlignParserRuleCall_9_1_0 = (RuleCall)cAlignAssignment_9_1.eContents().get(0);
 		
 		//GlobalVariable:
-		//	name=GlobalName linkage=Linkage? addrspace=AddressSpace? tlsModel=TLSmodel? "unnamed_addr"? ("constant" | "global")
-		//	type=Type initialValue=Constant? ("," section=Section)? ("," align=Align)?;
+		//	name=GlobalName linkage=Linkage? addrspace=AddressSpace? tlsModel=TLSmodel? unsignificantAddress?="unnamed_addr"?
+		//	(constant?="constant" | "global") type=Type initialValue=Constant? ("," section=Section)? ("," align=Align)?;
 		public ParserRule getRule() { return rule; }
 
-		//name=GlobalName linkage=Linkage? addrspace=AddressSpace? tlsModel=TLSmodel? "unnamed_addr"? ("constant" | "global")
-		//type=Type initialValue=Constant? ("," section=Section)? ("," align=Align)?
+		//name=GlobalName linkage=Linkage? addrspace=AddressSpace? tlsModel=TLSmodel? unsignificantAddress?="unnamed_addr"?
+		//(constant?="constant" | "global") type=Type initialValue=Constant? ("," section=Section)? ("," align=Align)?
 		public Group getGroup() { return cGroup; }
 
 		//name=GlobalName
@@ -697,14 +699,20 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		//TLSmodel
 		public RuleCall getTlsModelTLSmodelParserRuleCall_3_0() { return cTlsModelTLSmodelParserRuleCall_3_0; }
 
-		//"unnamed_addr"?
-		public Keyword getUnnamed_addrKeyword_4() { return cUnnamed_addrKeyword_4; }
+		//unsignificantAddress?="unnamed_addr"?
+		public Assignment getUnsignificantAddressAssignment_4() { return cUnsignificantAddressAssignment_4; }
 
-		//"constant" | "global"
+		//"unnamed_addr"
+		public Keyword getUnsignificantAddressUnnamed_addrKeyword_4_0() { return cUnsignificantAddressUnnamed_addrKeyword_4_0; }
+
+		//constant?="constant" | "global"
 		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 
+		//constant?="constant"
+		public Assignment getConstantAssignment_5_0() { return cConstantAssignment_5_0; }
+
 		//"constant"
-		public Keyword getConstantKeyword_5_0() { return cConstantKeyword_5_0; }
+		public Keyword getConstantConstantKeyword_5_0_0() { return cConstantConstantKeyword_5_0_0; }
 
 		//"global"
 		public Keyword getGlobalKeyword_5_1() { return cGlobalKeyword_5_1; }
@@ -5779,7 +5787,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// <result> = getelementptr <pty>* <ptrval>{, <ty> <idx>}*
 		//// <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
-		//// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx 
+		//// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
 		//Instruction_getelementptr:
 		//	opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*;
 		public ParserRule getRule() { return rule; }
@@ -7207,7 +7215,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStarsStarParserRuleCall_4_0 = (RuleCall)cStarsAssignment_4.eContents().get(0);
 		
 		//// A suffix of a function type or a pointer to a function type - basically
-		//// the entire function type, not including the return type.  
+		//// the entire function type, not including the return type.
 		//TypeSuffix:
 		//	{TypeSuffix} "(" ((containedTypes+=ParameterType ("," containedTypes+=ParameterType)* ("," vararg="...")?)? |
 		//	vararg="...") ")" stars+=Star*;
@@ -8453,8 +8461,8 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GlobalVariable:
-	//	name=GlobalName linkage=Linkage? addrspace=AddressSpace? tlsModel=TLSmodel? "unnamed_addr"? ("constant" | "global")
-	//	type=Type initialValue=Constant? ("," section=Section)? ("," align=Align)?;
+	//	name=GlobalName linkage=Linkage? addrspace=AddressSpace? tlsModel=TLSmodel? unsignificantAddress?="unnamed_addr"?
+	//	(constant?="constant" | "global") type=Type initialValue=Constant? ("," section=Section)? ("," align=Align)?;
 	public GlobalVariableElements getGlobalVariableAccess() {
 		return (pGlobalVariable != null) ? pGlobalVariable : (pGlobalVariable = new GlobalVariableElements());
 	}
@@ -9521,7 +9529,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = getelementptr <pty>* <ptrval>{, <ty> <idx>}*
 	//// <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
-	//// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx 
+	//// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
 	//Instruction_getelementptr:
 	//	opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*;
 	public Instruction_getelementptrElements getInstruction_getelementptrAccess() {
@@ -9826,7 +9834,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// A suffix of a function type or a pointer to a function type - basically
-	//// the entire function type, not including the return type.  
+	//// the entire function type, not including the return type.
 	//TypeSuffix:
 	//	{TypeSuffix} "(" ((containedTypes+=ParameterType ("," containedTypes+=ParameterType)* ("," vararg="...")?)? |
 	//	vararg="...") ")" stars+=Star*;

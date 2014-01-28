@@ -1658,9 +1658,29 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getGlobalVariable_UnsignificantAddress()
+  {
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGlobalVariable_Constant()
+  {
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getGlobalVariable_Type()
   {
-        return (EReference)getGlobalVariable().getEStructuralFeatures().get(4);
+        return (EReference)getGlobalVariable().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1670,7 +1690,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getGlobalVariable_InitialValue()
   {
-        return (EReference)getGlobalVariable().getEStructuralFeatures().get(5);
+        return (EReference)getGlobalVariable().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1680,7 +1700,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_Section()
   {
-        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(6);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(8);
   }
 
   /**
@@ -1690,7 +1710,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_Align()
   {
-        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(7);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(9);
   }
 
   /**

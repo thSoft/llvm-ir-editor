@@ -15,6 +15,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getLinkage <em>Linkage</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getAddrspace <em>Addrspace</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getTlsModel <em>Tls Model</em>}</li>
+ *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isUnsignificantAddress <em>Unsignificant Address</em>}</li>
+ *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isConstant <em>Constant</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getType <em>Type</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#getSection <em>Section</em>}</li>
@@ -131,6 +133,58 @@ public interface GlobalVariable extends GlobalValue, GlobalValueDef
    * @generated
    */
   void setTlsModel(String value);
+
+  /**
+   * Returns the value of the '<em><b>Unsignificant Address</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Unsignificant Address</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Unsignificant Address</em>' attribute.
+   * @see #setUnsignificantAddress(boolean)
+   * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage#getGlobalVariable_UnsignificantAddress()
+   * @model
+   * @generated
+   */
+  boolean isUnsignificantAddress();
+
+  /**
+   * Sets the value of the '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isUnsignificantAddress <em>Unsignificant Address</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Unsignificant Address</em>' attribute.
+   * @see #isUnsignificantAddress()
+   * @generated
+   */
+  void setUnsignificantAddress(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Constant</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Constant</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Constant</em>' attribute.
+   * @see #setConstant(boolean)
+   * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage#getGlobalVariable_Constant()
+   * @model
+   * @generated
+   */
+  boolean isConstant();
+
+  /**
+   * Sets the value of the '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalVariable#isConstant <em>Constant</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Constant</em>' attribute.
+   * @see #isConstant()
+   * @generated
+   */
+  void setConstant(boolean value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' containment reference.

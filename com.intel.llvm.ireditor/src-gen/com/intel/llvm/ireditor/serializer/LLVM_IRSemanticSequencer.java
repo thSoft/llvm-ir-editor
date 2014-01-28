@@ -1488,6 +1488,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         linkage=Linkage? 
 	 *         addrspace=AddressSpace? 
 	 *         tlsModel=TLSmodel? 
+	 *         unsignificantAddress?='unnamed_addr'? 
+	 *         constant?='constant'? 
 	 *         type=Type 
 	 *         initialValue=Constant? 
 	 *         section=Section? 

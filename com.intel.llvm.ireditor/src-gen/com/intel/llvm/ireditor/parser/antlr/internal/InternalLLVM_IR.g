@@ -1170,15 +1170,37 @@ ruleGlobalVariable returns [EObject current=null]
 	    }
 
 )
-)?(	otherlv_4='unnamed_addr' 
+)?(
+(
+		lv_unsignificantAddress_4_0=	'unnamed_addr' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getGlobalVariableAccess().getUnnamed_addrKeyword_4());
+        newLeafNode(lv_unsignificantAddress_4_0, grammarAccess.getGlobalVariableAccess().getUnsignificantAddressUnnamed_addrKeyword_4_0());
     }
-)?(	otherlv_5='constant' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getGlobalVariableAccess().getConstantKeyword_5_0());
-    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getGlobalVariableRule());
+	        }
+       		setWithLastConsumed($current, "unsignificantAddress", true, "unnamed_addr");
+	    }
 
+)
+)?((
+(
+		lv_constant_5_0=	'constant' 
+    {
+        newLeafNode(lv_constant_5_0, grammarAccess.getGlobalVariableAccess().getConstantConstantKeyword_5_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getGlobalVariableRule());
+	        }
+       		setWithLastConsumed($current, "constant", true, "constant");
+	    }
+
+)
+)
     |	otherlv_6='global' 
     {
     	newLeafNode(otherlv_6, grammarAccess.getGlobalVariableAccess().getGlobalKeyword_5_1());
