@@ -121,7 +121,7 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ATTRIBUTE_GROUP;
+    return LLVM_IRPackage.eINSTANCE.getAttributeGroup();
   }
 
   /**

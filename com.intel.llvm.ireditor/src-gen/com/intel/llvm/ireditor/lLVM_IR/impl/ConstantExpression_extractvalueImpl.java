@@ -74,7 +74,7 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_EXTRACTVALUE;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_extractvalue();
   }
 
   /**

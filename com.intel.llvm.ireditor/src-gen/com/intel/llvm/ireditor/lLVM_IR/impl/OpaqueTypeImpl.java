@@ -38,7 +38,7 @@ public class OpaqueTypeImpl extends MinimalEObjectImpl.Container implements Opaq
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.OPAQUE_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getOpaqueType();
   }
 
 } //OpaqueTypeImpl

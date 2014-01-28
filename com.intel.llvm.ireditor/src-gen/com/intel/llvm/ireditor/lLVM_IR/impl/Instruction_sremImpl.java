@@ -36,7 +36,7 @@ public class Instruction_sremImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_SREM;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_srem();
   }
 
 } //Instruction_sremImpl

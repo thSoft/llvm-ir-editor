@@ -2,156 +2,27 @@
  */
 package com.intel.llvm.ireditor.lLVM_IR.impl;
 
-import com.intel.llvm.ireditor.lLVM_IR.AddressSpace;
-import com.intel.llvm.ireditor.lLVM_IR.AggregateInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.Alias;
-import com.intel.llvm.ireditor.lLVM_IR.Aliasee;
-import com.intel.llvm.ireditor.lLVM_IR.AlignStack;
-import com.intel.llvm.ireditor.lLVM_IR.ArgList;
-import com.intel.llvm.ireditor.lLVM_IR.Argument;
-import com.intel.llvm.ireditor.lLVM_IR.ArrayConstant;
-import com.intel.llvm.ireditor.lLVM_IR.ArrayType;
-import com.intel.llvm.ireditor.lLVM_IR.AttributeGroup;
-import com.intel.llvm.ireditor.lLVM_IR.BasicBlock;
-import com.intel.llvm.ireditor.lLVM_IR.BasicBlockRef;
-import com.intel.llvm.ireditor.lLVM_IR.BinaryInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.BlockAddress;
-import com.intel.llvm.ireditor.lLVM_IR.CConv;
-import com.intel.llvm.ireditor.lLVM_IR.Callee;
-import com.intel.llvm.ireditor.lLVM_IR.Constant;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_binary;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_compare;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_convert;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_extractelement;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_extractvalue;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_getelementptr;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_insertelement;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_insertvalue;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_select;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_shufflevector;
-import com.intel.llvm.ireditor.lLVM_IR.ConstantList;
-import com.intel.llvm.ireditor.lLVM_IR.ConversionInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.FastMathFlag;
-import com.intel.llvm.ireditor.lLVM_IR.FloatingType;
-import com.intel.llvm.ireditor.lLVM_IR.Function;
-import com.intel.llvm.ireditor.lLVM_IR.FunctionAttribute;
-import com.intel.llvm.ireditor.lLVM_IR.FunctionAttributes;
-import com.intel.llvm.ireditor.lLVM_IR.FunctionDecl;
-import com.intel.llvm.ireditor.lLVM_IR.FunctionDef;
-import com.intel.llvm.ireditor.lLVM_IR.FunctionHeader;
-import com.intel.llvm.ireditor.lLVM_IR.FunctionPrefix;
-import com.intel.llvm.ireditor.lLVM_IR.GlobalValue;
-import com.intel.llvm.ireditor.lLVM_IR.GlobalValueDef;
-import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRef;
-import com.intel.llvm.ireditor.lLVM_IR.GlobalVariable;
-import com.intel.llvm.ireditor.lLVM_IR.InlineAsm;
-import com.intel.llvm.ireditor.lLVM_IR.InlineAssembler;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_add;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_alloca;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_and;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_ashr;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_atomicrmw;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_br;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_call_nonVoid;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_call_void;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_cmpxchg;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_extractelement;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_extractvalue;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_fadd;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_fcmp;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_fdiv;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_fence;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_fmul;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_frem;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_fsub;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_getelementptr;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_icmp;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_indirectbr;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_insertelement;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_insertvalue;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_landingpad;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_load;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_lshr;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_mul;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_or;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_phi;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_resume;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_ret;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_sdiv;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_select;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_shl;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_shufflevector;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_srem;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_store;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_sub;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_switch;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_udiv;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_unreachable;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_urem;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_va_arg;
-import com.intel.llvm.ireditor.lLVM_IR.Instruction_xor;
-import com.intel.llvm.ireditor.lLVM_IR.IntType;
 import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRFactory;
 import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage;
-import com.intel.llvm.ireditor.lLVM_IR.LandingpadClause;
-import com.intel.llvm.ireditor.lLVM_IR.LocalValue;
-import com.intel.llvm.ireditor.lLVM_IR.LocalValueRef;
-import com.intel.llvm.ireditor.lLVM_IR.MemoryInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.MetadataNode;
-import com.intel.llvm.ireditor.lLVM_IR.MetadataNodeElement;
-import com.intel.llvm.ireditor.lLVM_IR.MetadataRef;
-import com.intel.llvm.ireditor.lLVM_IR.MetadataString;
-import com.intel.llvm.ireditor.lLVM_IR.MetadataSuffix;
-import com.intel.llvm.ireditor.lLVM_IR.MetadataType;
-import com.intel.llvm.ireditor.lLVM_IR.MiddleInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.Model;
-import com.intel.llvm.ireditor.lLVM_IR.NamedInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.NamedMetadata;
-import com.intel.llvm.ireditor.lLVM_IR.NamedMiddleInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.NamedTerminatorInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.NonLeftRecursiveNonVoidType;
-import com.intel.llvm.ireditor.lLVM_IR.NonLeftRecursiveType;
-import com.intel.llvm.ireditor.lLVM_IR.NonVoidType;
-import com.intel.llvm.ireditor.lLVM_IR.OpaqueType;
-import com.intel.llvm.ireditor.lLVM_IR.OtherInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.Parameter;
-import com.intel.llvm.ireditor.lLVM_IR.ParameterAttributes;
-import com.intel.llvm.ireditor.lLVM_IR.ParameterType;
-import com.intel.llvm.ireditor.lLVM_IR.Parameters;
-import com.intel.llvm.ireditor.lLVM_IR.SimpleConstant;
-import com.intel.llvm.ireditor.lLVM_IR.Star;
-import com.intel.llvm.ireditor.lLVM_IR.StartingInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.StructType;
-import com.intel.llvm.ireditor.lLVM_IR.StructureConstant;
-import com.intel.llvm.ireditor.lLVM_IR.TargetInfo;
-import com.intel.llvm.ireditor.lLVM_IR.TargetSpecificAttribute;
-import com.intel.llvm.ireditor.lLVM_IR.TerminatorInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.TopLevelElement;
-import com.intel.llvm.ireditor.lLVM_IR.Type;
-import com.intel.llvm.ireditor.lLVM_IR.TypeDef;
-import com.intel.llvm.ireditor.lLVM_IR.TypeSuffix;
-import com.intel.llvm.ireditor.lLVM_IR.TypedConstant;
-import com.intel.llvm.ireditor.lLVM_IR.TypedValue;
-import com.intel.llvm.ireditor.lLVM_IR.Undef;
-import com.intel.llvm.ireditor.lLVM_IR.ValueRef;
-import com.intel.llvm.ireditor.lLVM_IR.VectorConstant;
-import com.intel.llvm.ireditor.lLVM_IR.VectorInstructions;
-import com.intel.llvm.ireditor.lLVM_IR.VectorType;
-import com.intel.llvm.ireditor.lLVM_IR.VoidType;
-import com.intel.llvm.ireditor.lLVM_IR.X86mmxType;
-import com.intel.llvm.ireditor.lLVM_IR.ZeroInitializer;
+
+import java.io.IOException;
+
+import java.net.URL;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.WrappedException;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.resource.Resource;
+
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -161,6 +32,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  */
 public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected String packageFilename = "lLVM_IR.ecore";
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1183,8 +1061,6 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #eNS_URI
-   * @see #createPackageContents()
-   * @see #initializePackageContents()
    * @generated
    */
   public static LLVM_IRPackage init()
@@ -1196,11 +1072,11 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 
     isInited = true;
 
-    // Create package meta-data objects
-    theLLVM_IRPackage.createPackageContents();
+    // Load packages
+    theLLVM_IRPackage.loadPackage();
 
-    // Initialize created meta-data
-    theLLVM_IRPackage.initializePackageContents();
+    // Fix loaded packages
+    theLLVM_IRPackage.fixPackageContents();
 
     // Mark meta-data to indicate it can't be changed
     theLLVM_IRPackage.freeze();
@@ -1218,6 +1094,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getModel()
   {
+    if (modelEClass == null)
+    {
+      modelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(0);
+    }
     return modelEClass;
   }
 
@@ -1228,7 +1108,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getModel_Elements()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(0);
+        return (EReference)getModel().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1238,6 +1118,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTopLevelElement()
   {
+    if (topLevelElementEClass == null)
+    {
+      topLevelElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(1);
+    }
     return topLevelElementEClass;
   }
 
@@ -1248,6 +1132,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getAttributeGroup()
   {
+    if (attributeGroupEClass == null)
+    {
+      attributeGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(2);
+    }
     return attributeGroupEClass;
   }
 
@@ -1258,7 +1146,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAttributeGroup_Name()
   {
-    return (EAttribute)attributeGroupEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getAttributeGroup().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1268,7 +1156,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAttributeGroup_Attributes()
   {
-    return (EReference)attributeGroupEClass.getEStructuralFeatures().get(1);
+        return (EReference)getAttributeGroup().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1278,7 +1166,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAttributeGroup_Alignstack()
   {
-    return (EReference)attributeGroupEClass.getEStructuralFeatures().get(2);
+        return (EReference)getAttributeGroup().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1288,7 +1176,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAttributeGroup_AlignstackValue()
   {
-    return (EAttribute)attributeGroupEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getAttributeGroup().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1298,7 +1186,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAttributeGroup_TargetSpecificAttributes()
   {
-    return (EReference)attributeGroupEClass.getEStructuralFeatures().get(4);
+        return (EReference)getAttributeGroup().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1308,6 +1196,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTargetSpecificAttribute()
   {
+    if (targetSpecificAttributeEClass == null)
+    {
+      targetSpecificAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(3);
+    }
     return targetSpecificAttributeEClass;
   }
 
@@ -1318,7 +1210,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getTargetSpecificAttribute_Name()
   {
-    return (EAttribute)targetSpecificAttributeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTargetSpecificAttribute().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1328,7 +1220,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getTargetSpecificAttribute_Value()
   {
-    return (EAttribute)targetSpecificAttributeEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTargetSpecificAttribute().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1338,6 +1230,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNamedMetadata()
   {
+    if (namedMetadataEClass == null)
+    {
+      namedMetadataEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(4);
+    }
     return namedMetadataEClass;
   }
 
@@ -1348,7 +1244,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getNamedMetadata_Name()
   {
-    return (EAttribute)namedMetadataEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getNamedMetadata().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1358,7 +1254,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNamedMetadata_Node()
   {
-    return (EReference)namedMetadataEClass.getEStructuralFeatures().get(1);
+        return (EReference)getNamedMetadata().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1368,6 +1264,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMetadataRef()
   {
+    if (metadataRefEClass == null)
+    {
+      metadataRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(5);
+    }
     return metadataRefEClass;
   }
 
@@ -1378,7 +1278,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getMetadataRef_Ref()
   {
-    return (EReference)metadataRefEClass.getEStructuralFeatures().get(0);
+        return (EReference)getMetadataRef().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1388,6 +1288,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getValueRef()
   {
+    if (valueRefEClass == null)
+    {
+      valueRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(6);
+    }
     return valueRefEClass;
   }
 
@@ -1398,6 +1302,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getGlobalValueRef()
   {
+    if (globalValueRefEClass == null)
+    {
+      globalValueRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(7);
+    }
     return globalValueRefEClass;
   }
 
@@ -1408,7 +1316,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getGlobalValueRef_Constant()
   {
-    return (EReference)globalValueRefEClass.getEStructuralFeatures().get(0);
+        return (EReference)getGlobalValueRef().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1418,7 +1326,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getGlobalValueRef_Metadata()
   {
-    return (EReference)globalValueRefEClass.getEStructuralFeatures().get(1);
+        return (EReference)getGlobalValueRef().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1428,6 +1336,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getLocalValueRef()
   {
+    if (localValueRefEClass == null)
+    {
+      localValueRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(8);
+    }
     return localValueRefEClass;
   }
 
@@ -1438,7 +1350,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getLocalValueRef_Ref()
   {
-    return (EReference)localValueRefEClass.getEStructuralFeatures().get(0);
+        return (EReference)getLocalValueRef().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1448,6 +1360,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getGlobalValue()
   {
+    if (globalValueEClass == null)
+    {
+      globalValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(9);
+    }
     return globalValueEClass;
   }
 
@@ -1458,6 +1374,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getGlobalValueDef()
   {
+    if (globalValueDefEClass == null)
+    {
+      globalValueDefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(10);
+    }
     return globalValueDefEClass;
   }
 
@@ -1468,6 +1388,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getLocalValue()
   {
+    if (localValueEClass == null)
+    {
+      localValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(11);
+    }
     return localValueEClass;
   }
 
@@ -1478,7 +1402,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getLocalValue_Name()
   {
-    return (EAttribute)localValueEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getLocalValue().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1488,6 +1412,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNamedInstruction()
   {
+    if (namedInstructionEClass == null)
+    {
+      namedInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(12);
+    }
     return namedInstructionEClass;
   }
 
@@ -1498,6 +1426,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction()
   {
+    if (instructionEClass == null)
+    {
+      instructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(13);
+    }
     return instructionEClass;
   }
 
@@ -1508,7 +1440,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_Metadata()
   {
-    return (EReference)instructionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1518,6 +1450,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getAlias()
   {
+    if (aliasEClass == null)
+    {
+      aliasEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(14);
+    }
     return aliasEClass;
   }
 
@@ -1528,7 +1464,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAlias_Name()
   {
-    return (EAttribute)aliasEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getAlias().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1538,7 +1474,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAlias_Linkage()
   {
-    return (EAttribute)aliasEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getAlias().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1548,7 +1484,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAlias_Visibility()
   {
-    return (EAttribute)aliasEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getAlias().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1558,7 +1494,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAlias_Type()
   {
-    return (EReference)aliasEClass.getEStructuralFeatures().get(3);
+        return (EReference)getAlias().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1568,7 +1504,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAlias_Aliasee()
   {
-    return (EReference)aliasEClass.getEStructuralFeatures().get(4);
+        return (EReference)getAlias().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1578,6 +1514,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getAliasee()
   {
+    if (aliaseeEClass == null)
+    {
+      aliaseeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(15);
+    }
     return aliaseeEClass;
   }
 
@@ -1588,7 +1528,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAliasee_Ref()
   {
-    return (EReference)aliaseeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getAliasee().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1598,7 +1538,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAliasee_Bitcast()
   {
-    return (EReference)aliaseeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getAliasee().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1608,6 +1548,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTargetInfo()
   {
+    if (targetInfoEClass == null)
+    {
+      targetInfoEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(16);
+    }
     return targetInfoEClass;
   }
 
@@ -1618,7 +1562,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getTargetInfo_InfoType()
   {
-    return (EAttribute)targetInfoEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTargetInfo().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1628,7 +1572,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getTargetInfo_Layout()
   {
-    return (EAttribute)targetInfoEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTargetInfo().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1638,6 +1582,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInlineAsm()
   {
+    if (inlineAsmEClass == null)
+    {
+      inlineAsmEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(17);
+    }
     return inlineAsmEClass;
   }
 
@@ -1648,7 +1596,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInlineAsm_AsmLine()
   {
-    return (EAttribute)inlineAsmEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInlineAsm().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1658,6 +1606,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getGlobalVariable()
   {
+    if (globalVariableEClass == null)
+    {
+      globalVariableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(18);
+    }
     return globalVariableEClass;
   }
 
@@ -1668,7 +1620,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_Name()
   {
-    return (EAttribute)globalVariableEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1678,7 +1630,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_Linkage()
   {
-    return (EAttribute)globalVariableEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1688,7 +1640,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getGlobalVariable_Addrspace()
   {
-    return (EReference)globalVariableEClass.getEStructuralFeatures().get(2);
+        return (EReference)getGlobalVariable().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1698,7 +1650,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_TlsModel()
   {
-    return (EAttribute)globalVariableEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1708,7 +1660,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getGlobalVariable_Type()
   {
-    return (EReference)globalVariableEClass.getEStructuralFeatures().get(4);
+        return (EReference)getGlobalVariable().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1718,7 +1670,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getGlobalVariable_InitialValue()
   {
-    return (EReference)globalVariableEClass.getEStructuralFeatures().get(5);
+        return (EReference)getGlobalVariable().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1728,7 +1680,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_Section()
   {
-    return (EAttribute)globalVariableEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1738,7 +1690,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getGlobalVariable_Align()
   {
-    return (EAttribute)globalVariableEClass.getEStructuralFeatures().get(7);
+        return (EAttribute)getGlobalVariable().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1748,6 +1700,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstant()
   {
+    if (constantEClass == null)
+    {
+      constantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(19);
+    }
     return constantEClass;
   }
 
@@ -1758,7 +1714,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstant_Ref()
   {
-    return (EReference)constantEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstant().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1768,6 +1724,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression()
   {
+    if (constantExpressionEClass == null)
+    {
+      constantExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(20);
+    }
     return constantExpressionEClass;
   }
 
@@ -1778,7 +1738,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getConstantExpression_Opcode()
   {
-    return (EAttribute)constantExpressionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getConstantExpression().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1788,6 +1748,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_convert()
   {
+    if (constantExpression_convertEClass == null)
+    {
+      constantExpression_convertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(21);
+    }
     return constantExpression_convertEClass;
   }
 
@@ -1798,7 +1762,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_convert_FromType()
   {
-    return (EReference)constantExpression_convertEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_convert().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1808,7 +1772,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_convert_Constant()
   {
-    return (EReference)constantExpression_convertEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_convert().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1818,7 +1782,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_convert_TargetType()
   {
-    return (EReference)constantExpression_convertEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConstantExpression_convert().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1828,6 +1792,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_getelementptr()
   {
+    if (constantExpression_getelementptrEClass == null)
+    {
+      constantExpression_getelementptrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(22);
+    }
     return constantExpression_getelementptrEClass;
   }
 
@@ -1838,7 +1806,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_getelementptr_ConstantType()
   {
-    return (EReference)constantExpression_getelementptrEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_getelementptr().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1848,7 +1816,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_getelementptr_Constant()
   {
-    return (EReference)constantExpression_getelementptrEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_getelementptr().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1858,7 +1826,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_getelementptr_IndexTypes()
   {
-    return (EReference)constantExpression_getelementptrEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConstantExpression_getelementptr().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1868,7 +1836,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_getelementptr_Indices()
   {
-    return (EReference)constantExpression_getelementptrEClass.getEStructuralFeatures().get(3);
+        return (EReference)getConstantExpression_getelementptr().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1878,6 +1846,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_select()
   {
+    if (constantExpression_selectEClass == null)
+    {
+      constantExpression_selectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(23);
+    }
     return constantExpression_selectEClass;
   }
 
@@ -1888,7 +1860,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_select_Condition()
   {
-    return (EReference)constantExpression_selectEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_select().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1898,7 +1870,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_select_Op1()
   {
-    return (EReference)constantExpression_selectEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_select().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1908,7 +1880,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_select_Op2()
   {
-    return (EReference)constantExpression_selectEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConstantExpression_select().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1918,6 +1890,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_compare()
   {
+    if (constantExpression_compareEClass == null)
+    {
+      constantExpression_compareEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(24);
+    }
     return constantExpression_compareEClass;
   }
 
@@ -1928,7 +1904,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getConstantExpression_compare_Condition()
   {
-    return (EAttribute)constantExpression_compareEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getConstantExpression_compare().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1938,7 +1914,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_compare_Op1()
   {
-    return (EReference)constantExpression_compareEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_compare().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1948,7 +1924,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_compare_Op2()
   {
-    return (EReference)constantExpression_compareEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConstantExpression_compare().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1958,6 +1934,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_extractelement()
   {
+    if (constantExpression_extractelementEClass == null)
+    {
+      constantExpression_extractelementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(25);
+    }
     return constantExpression_extractelementEClass;
   }
 
@@ -1968,7 +1948,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_extractelement_Vector()
   {
-    return (EReference)constantExpression_extractelementEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_extractelement().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1978,7 +1958,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_extractelement_Index()
   {
-    return (EReference)constantExpression_extractelementEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_extractelement().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1988,6 +1968,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_insertelement()
   {
+    if (constantExpression_insertelementEClass == null)
+    {
+      constantExpression_insertelementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(26);
+    }
     return constantExpression_insertelementEClass;
   }
 
@@ -1998,7 +1982,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_insertelement_VectorType()
   {
-    return (EReference)constantExpression_insertelementEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_insertelement().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2008,7 +1992,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_insertelement_Vector()
   {
-    return (EReference)constantExpression_insertelementEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_insertelement().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2018,7 +2002,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_insertelement_Element()
   {
-    return (EReference)constantExpression_insertelementEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConstantExpression_insertelement().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2028,7 +2012,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_insertelement_Index()
   {
-    return (EReference)constantExpression_insertelementEClass.getEStructuralFeatures().get(3);
+        return (EReference)getConstantExpression_insertelement().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2038,6 +2022,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_shufflevector()
   {
+    if (constantExpression_shufflevectorEClass == null)
+    {
+      constantExpression_shufflevectorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(27);
+    }
     return constantExpression_shufflevectorEClass;
   }
 
@@ -2048,7 +2036,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_shufflevector_Vector1()
   {
-    return (EReference)constantExpression_shufflevectorEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_shufflevector().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2058,7 +2046,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_shufflevector_Vector2()
   {
-    return (EReference)constantExpression_shufflevectorEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_shufflevector().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2068,7 +2056,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_shufflevector_Mask()
   {
-    return (EReference)constantExpression_shufflevectorEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConstantExpression_shufflevector().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2078,6 +2066,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_extractvalue()
   {
+    if (constantExpression_extractvalueEClass == null)
+    {
+      constantExpression_extractvalueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(28);
+    }
     return constantExpression_extractvalueEClass;
   }
 
@@ -2088,7 +2080,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_extractvalue_Value()
   {
-    return (EReference)constantExpression_extractvalueEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_extractvalue().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2098,7 +2090,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getConstantExpression_extractvalue_Indices()
   {
-    return (EAttribute)constantExpression_extractvalueEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getConstantExpression_extractvalue().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2108,6 +2100,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_insertvalue()
   {
+    if (constantExpression_insertvalueEClass == null)
+    {
+      constantExpression_insertvalueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(29);
+    }
     return constantExpression_insertvalueEClass;
   }
 
@@ -2118,7 +2114,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_insertvalue_Value()
   {
-    return (EReference)constantExpression_insertvalueEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_insertvalue().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2128,7 +2124,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_insertvalue_Element()
   {
-    return (EReference)constantExpression_insertvalueEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_insertvalue().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2138,7 +2134,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getConstantExpression_insertvalue_Indices()
   {
-    return (EAttribute)constantExpression_insertvalueEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getConstantExpression_insertvalue().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2148,6 +2144,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantExpression_binary()
   {
+    if (constantExpression_binaryEClass == null)
+    {
+      constantExpression_binaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(30);
+    }
     return constantExpression_binaryEClass;
   }
 
@@ -2158,7 +2158,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_binary_Op1()
   {
-    return (EReference)constantExpression_binaryEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantExpression_binary().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2168,7 +2168,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantExpression_binary_Op2()
   {
-    return (EReference)constantExpression_binaryEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConstantExpression_binary().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2178,6 +2178,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getUndef()
   {
+    if (undefEClass == null)
+    {
+      undefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(31);
+    }
     return undefEClass;
   }
 
@@ -2188,6 +2192,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getBlockAddress()
   {
+    if (blockAddressEClass == null)
+    {
+      blockAddressEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(32);
+    }
     return blockAddressEClass;
   }
 
@@ -2198,7 +2206,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBlockAddress_Function()
   {
-    return (EReference)blockAddressEClass.getEStructuralFeatures().get(0);
+        return (EReference)getBlockAddress().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2208,7 +2216,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBlockAddress_BasicBlock()
   {
-    return (EReference)blockAddressEClass.getEStructuralFeatures().get(1);
+        return (EReference)getBlockAddress().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2218,6 +2226,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getZeroInitializer()
   {
+    if (zeroInitializerEClass == null)
+    {
+      zeroInitializerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(33);
+    }
     return zeroInitializerEClass;
   }
 
@@ -2228,6 +2240,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getStructureConstant()
   {
+    if (structureConstantEClass == null)
+    {
+      structureConstantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(34);
+    }
     return structureConstantEClass;
   }
 
@@ -2238,7 +2254,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getStructureConstant_List()
   {
-    return (EReference)structureConstantEClass.getEStructuralFeatures().get(0);
+        return (EReference)getStructureConstant().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2248,7 +2264,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getStructureConstant_Packed()
   {
-    return (EAttribute)structureConstantEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getStructureConstant().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2258,6 +2274,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getArrayConstant()
   {
+    if (arrayConstantEClass == null)
+    {
+      arrayConstantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(35);
+    }
     return arrayConstantEClass;
   }
 
@@ -2268,7 +2288,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getArrayConstant_List()
   {
-    return (EReference)arrayConstantEClass.getEStructuralFeatures().get(0);
+        return (EReference)getArrayConstant().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2278,6 +2298,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getVectorConstant()
   {
+    if (vectorConstantEClass == null)
+    {
+      vectorConstantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(36);
+    }
     return vectorConstantEClass;
   }
 
@@ -2288,7 +2312,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getVectorConstant_List()
   {
-    return (EReference)vectorConstantEClass.getEStructuralFeatures().get(0);
+        return (EReference)getVectorConstant().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2298,6 +2322,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConstantList()
   {
+    if (constantListEClass == null)
+    {
+      constantListEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(37);
+    }
     return constantListEClass;
   }
 
@@ -2308,7 +2336,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConstantList_TypedConstants()
   {
-    return (EReference)constantListEClass.getEStructuralFeatures().get(0);
+        return (EReference)getConstantList().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2318,6 +2346,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTypedConstant()
   {
+    if (typedConstantEClass == null)
+    {
+      typedConstantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(38);
+    }
     return typedConstantEClass;
   }
 
@@ -2328,7 +2360,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypedConstant_Type()
   {
-    return (EReference)typedConstantEClass.getEStructuralFeatures().get(0);
+        return (EReference)getTypedConstant().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2338,7 +2370,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypedConstant_Value()
   {
-    return (EReference)typedConstantEClass.getEStructuralFeatures().get(1);
+        return (EReference)getTypedConstant().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2348,6 +2380,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getSimpleConstant()
   {
+    if (simpleConstantEClass == null)
+    {
+      simpleConstantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(39);
+    }
     return simpleConstantEClass;
   }
 
@@ -2358,7 +2394,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getSimpleConstant_Value()
   {
-    return (EAttribute)simpleConstantEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getSimpleConstant().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2368,6 +2404,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMetadataNode()
   {
+    if (metadataNodeEClass == null)
+    {
+      metadataNodeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(40);
+    }
     return metadataNodeEClass;
   }
 
@@ -2378,7 +2418,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getMetadataNode_Elements()
   {
-    return (EReference)metadataNodeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getMetadataNode().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2388,6 +2428,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMetadataNodeElement()
   {
+    if (metadataNodeElementEClass == null)
+    {
+      metadataNodeElementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(41);
+    }
     return metadataNodeElementEClass;
   }
 
@@ -2398,7 +2442,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getMetadataNodeElement_Value()
   {
-    return (EReference)metadataNodeElementEClass.getEStructuralFeatures().get(0);
+        return (EReference)getMetadataNodeElement().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2408,7 +2452,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getMetadataNodeElement_MetadataRef()
   {
-    return (EReference)metadataNodeElementEClass.getEStructuralFeatures().get(1);
+        return (EReference)getMetadataNodeElement().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2418,7 +2462,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getMetadataNodeElement_Null()
   {
-    return (EAttribute)metadataNodeElementEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getMetadataNodeElement().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2428,6 +2472,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMetadataString()
   {
+    if (metadataStringEClass == null)
+    {
+      metadataStringEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(42);
+    }
     return metadataStringEClass;
   }
 
@@ -2438,7 +2486,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getMetadataString_Name()
   {
-    return (EAttribute)metadataStringEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getMetadataString().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2448,6 +2496,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getAddressSpace()
   {
+    if (addressSpaceEClass == null)
+    {
+      addressSpaceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(43);
+    }
     return addressSpaceEClass;
   }
 
@@ -2458,7 +2510,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAddressSpace_Value()
   {
-    return (EAttribute)addressSpaceEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getAddressSpace().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2468,6 +2520,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunction()
   {
+    if (functionEClass == null)
+    {
+      functionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(44);
+    }
     return functionEClass;
   }
 
@@ -2478,7 +2534,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunction_Header()
   {
-    return (EReference)functionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2488,6 +2544,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunctionDef()
   {
+    if (functionDefEClass == null)
+    {
+      functionDefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(45);
+    }
     return functionDefEClass;
   }
 
@@ -2498,7 +2558,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionDef_BasicBlocks()
   {
-    return (EReference)functionDefEClass.getEStructuralFeatures().get(0);
+        return (EReference)getFunctionDef().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2508,6 +2568,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunctionDecl()
   {
+    if (functionDeclEClass == null)
+    {
+      functionDeclEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(46);
+    }
     return functionDeclEClass;
   }
 
@@ -2518,6 +2582,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunctionHeader()
   {
+    if (functionHeaderEClass == null)
+    {
+      functionHeaderEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(47);
+    }
     return functionHeaderEClass;
   }
 
@@ -2528,7 +2596,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionHeader_Linkage()
   {
-    return (EAttribute)functionHeaderEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getFunctionHeader().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2538,7 +2606,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionHeader_Visibility()
   {
-    return (EAttribute)functionHeaderEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getFunctionHeader().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2548,7 +2616,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionHeader_Cconv()
   {
-    return (EReference)functionHeaderEClass.getEStructuralFeatures().get(2);
+        return (EReference)getFunctionHeader().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2558,7 +2626,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionHeader_RettypeAttrs()
   {
-    return (EReference)functionHeaderEClass.getEStructuralFeatures().get(3);
+        return (EReference)getFunctionHeader().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2568,7 +2636,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionHeader_Rettype()
   {
-    return (EReference)functionHeaderEClass.getEStructuralFeatures().get(4);
+        return (EReference)getFunctionHeader().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2578,7 +2646,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionHeader_Name()
   {
-    return (EAttribute)functionHeaderEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getFunctionHeader().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -2588,7 +2656,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionHeader_Parameters()
   {
-    return (EReference)functionHeaderEClass.getEStructuralFeatures().get(6);
+        return (EReference)getFunctionHeader().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -2598,7 +2666,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionHeader_Attrs()
   {
-    return (EReference)functionHeaderEClass.getEStructuralFeatures().get(7);
+        return (EReference)getFunctionHeader().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -2608,7 +2676,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionHeader_Section()
   {
-    return (EAttribute)functionHeaderEClass.getEStructuralFeatures().get(8);
+        return (EAttribute)getFunctionHeader().getEStructuralFeatures().get(8);
   }
 
   /**
@@ -2618,7 +2686,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionHeader_Align()
   {
-    return (EAttribute)functionHeaderEClass.getEStructuralFeatures().get(9);
+        return (EAttribute)getFunctionHeader().getEStructuralFeatures().get(9);
   }
 
   /**
@@ -2628,7 +2696,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionHeader_Gc()
   {
-    return (EAttribute)functionHeaderEClass.getEStructuralFeatures().get(10);
+        return (EAttribute)getFunctionHeader().getEStructuralFeatures().get(10);
   }
 
   /**
@@ -2638,7 +2706,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionHeader_FunctionPrefix()
   {
-    return (EReference)functionHeaderEClass.getEStructuralFeatures().get(11);
+        return (EReference)getFunctionHeader().getEStructuralFeatures().get(11);
   }
 
   /**
@@ -2648,6 +2716,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunctionPrefix()
   {
+    if (functionPrefixEClass == null)
+    {
+      functionPrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(48);
+    }
     return functionPrefixEClass;
   }
 
@@ -2658,7 +2730,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionPrefix_Value()
   {
-    return (EReference)functionPrefixEClass.getEStructuralFeatures().get(0);
+        return (EReference)getFunctionPrefix().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2668,6 +2740,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getParameters()
   {
+    if (parametersEClass == null)
+    {
+      parametersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(49);
+    }
     return parametersEClass;
   }
 
@@ -2678,7 +2754,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getParameters_Parameters()
   {
-    return (EReference)parametersEClass.getEStructuralFeatures().get(0);
+        return (EReference)getParameters().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2688,7 +2764,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getParameters_Vararg()
   {
-    return (EAttribute)parametersEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getParameters().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2698,6 +2774,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunctionAttributes()
   {
+    if (functionAttributesEClass == null)
+    {
+      functionAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(50);
+    }
     return functionAttributesEClass;
   }
 
@@ -2708,7 +2788,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionAttributes_FunctionAttributes()
   {
-    return (EReference)functionAttributesEClass.getEStructuralFeatures().get(0);
+        return (EReference)getFunctionAttributes().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2718,7 +2798,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionAttributes_Alignstack()
   {
-    return (EReference)functionAttributesEClass.getEStructuralFeatures().get(1);
+        return (EReference)getFunctionAttributes().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2728,7 +2808,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionAttributes_AlignstackValue()
   {
-    return (EAttribute)functionAttributesEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getFunctionAttributes().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2738,7 +2818,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getFunctionAttributes_FunctionAttributeGroupRefs()
   {
-    return (EReference)functionAttributesEClass.getEStructuralFeatures().get(3);
+        return (EReference)getFunctionAttributes().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2748,6 +2828,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getAlignStack()
   {
+    if (alignStackEClass == null)
+    {
+      alignStackEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(51);
+    }
     return alignStackEClass;
   }
 
@@ -2758,6 +2842,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFunctionAttribute()
   {
+    if (functionAttributeEClass == null)
+    {
+      functionAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(52);
+    }
     return functionAttributeEClass;
   }
 
@@ -2768,7 +2856,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFunctionAttribute_Attribute()
   {
-    return (EAttribute)functionAttributeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getFunctionAttribute().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2778,6 +2866,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getBasicBlock()
   {
+    if (basicBlockEClass == null)
+    {
+      basicBlockEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(53);
+    }
     return basicBlockEClass;
   }
 
@@ -2788,7 +2880,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getBasicBlock_Name()
   {
-    return (EAttribute)basicBlockEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getBasicBlock().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2798,7 +2890,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBasicBlock_Instructions()
   {
-    return (EReference)basicBlockEClass.getEStructuralFeatures().get(1);
+        return (EReference)getBasicBlock().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2808,6 +2900,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMetadataSuffix()
   {
+    if (metadataSuffixEClass == null)
+    {
+      metadataSuffixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(54);
+    }
     return metadataSuffixEClass;
   }
 
@@ -2818,7 +2914,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getMetadataSuffix_Name()
   {
-    return (EAttribute)metadataSuffixEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getMetadataSuffix().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2828,7 +2924,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getMetadataSuffix_Value()
   {
-    return (EReference)metadataSuffixEClass.getEStructuralFeatures().get(1);
+        return (EReference)getMetadataSuffix().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2838,6 +2934,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getStartingInstruction()
   {
+    if (startingInstructionEClass == null)
+    {
+      startingInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(55);
+    }
     return startingInstructionEClass;
   }
 
@@ -2848,7 +2948,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getStartingInstruction_Instruction()
   {
-    return (EReference)startingInstructionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getStartingInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2858,6 +2958,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMiddleInstruction()
   {
+    if (middleInstructionEClass == null)
+    {
+      middleInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(56);
+    }
     return middleInstructionEClass;
   }
 
@@ -2868,7 +2972,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getMiddleInstruction_Instruction()
   {
-    return (EReference)middleInstructionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getMiddleInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2878,6 +2982,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNamedMiddleInstruction()
   {
+    if (namedMiddleInstructionEClass == null)
+    {
+      namedMiddleInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(57);
+    }
     return namedMiddleInstructionEClass;
   }
 
@@ -2888,7 +2996,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNamedMiddleInstruction_Instruction()
   {
-    return (EReference)namedMiddleInstructionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getNamedMiddleInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2898,6 +3006,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTerminatorInstruction()
   {
+    if (terminatorInstructionEClass == null)
+    {
+      terminatorInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(58);
+    }
     return terminatorInstructionEClass;
   }
 
@@ -2908,7 +3020,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTerminatorInstruction_Instruction()
   {
-    return (EReference)terminatorInstructionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getTerminatorInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2918,6 +3030,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNamedTerminatorInstruction()
   {
+    if (namedTerminatorInstructionEClass == null)
+    {
+      namedTerminatorInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(59);
+    }
     return namedTerminatorInstructionEClass;
   }
 
@@ -2928,7 +3044,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNamedTerminatorInstruction_Instruction()
   {
-    return (EReference)namedTerminatorInstructionEClass.getEStructuralFeatures().get(0);
+        return (EReference)getNamedTerminatorInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2938,6 +3054,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_ret()
   {
+    if (instruction_retEClass == null)
+    {
+      instruction_retEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(60);
+    }
     return instruction_retEClass;
   }
 
@@ -2948,7 +3068,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_ret_Opcode()
   {
-    return (EAttribute)instruction_retEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_ret().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2958,7 +3078,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_ret_Val()
   {
-    return (EReference)instruction_retEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_ret().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2968,6 +3088,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_br()
   {
+    if (instruction_brEClass == null)
+    {
+      instruction_brEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(61);
+    }
     return instruction_brEClass;
   }
 
@@ -2978,7 +3102,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_br_Opcode()
   {
-    return (EAttribute)instruction_brEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_br().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2988,7 +3112,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_br_Condition()
   {
-    return (EReference)instruction_brEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_br().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2998,7 +3122,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_br_True()
   {
-    return (EReference)instruction_brEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_br().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3008,7 +3132,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_br_False()
   {
-    return (EReference)instruction_brEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_br().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3018,7 +3142,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_br_Unconditional()
   {
-    return (EReference)instruction_brEClass.getEStructuralFeatures().get(4);
+        return (EReference)getInstruction_br().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -3028,6 +3152,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_switch()
   {
+    if (instruction_switchEClass == null)
+    {
+      instruction_switchEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(62);
+    }
     return instruction_switchEClass;
   }
 
@@ -3038,7 +3166,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_switch_Opcode()
   {
-    return (EAttribute)instruction_switchEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_switch().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3048,7 +3176,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_switch_ComparisonValue()
   {
-    return (EReference)instruction_switchEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_switch().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3058,7 +3186,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_switch_DefaultDest()
   {
-    return (EReference)instruction_switchEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_switch().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3068,7 +3196,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_switch_CaseConditions()
   {
-    return (EReference)instruction_switchEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_switch().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3078,7 +3206,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_switch_Destinations()
   {
-    return (EReference)instruction_switchEClass.getEStructuralFeatures().get(4);
+        return (EReference)getInstruction_switch().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -3088,6 +3216,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_indirectbr()
   {
+    if (instruction_indirectbrEClass == null)
+    {
+      instruction_indirectbrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(63);
+    }
     return instruction_indirectbrEClass;
   }
 
@@ -3098,7 +3230,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_indirectbr_Opcode()
   {
-    return (EAttribute)instruction_indirectbrEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_indirectbr().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3108,7 +3240,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_indirectbr_Address()
   {
-    return (EReference)instruction_indirectbrEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_indirectbr().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3118,7 +3250,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_indirectbr_Destinations()
   {
-    return (EReference)instruction_indirectbrEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_indirectbr().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3128,6 +3260,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_invoke_void()
   {
+    if (instruction_invoke_voidEClass == null)
+    {
+      instruction_invoke_voidEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(64);
+    }
     return instruction_invoke_voidEClass;
   }
 
@@ -3138,7 +3274,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_invoke_void_Opcode()
   {
-    return (EAttribute)instruction_invoke_voidEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_invoke_void().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3148,7 +3284,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_Cconv()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3158,7 +3294,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_Type()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3168,7 +3304,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_Callee()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3178,7 +3314,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_Args()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(4);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -3188,7 +3324,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_Attributes()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(5);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -3198,7 +3334,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_ToLabel()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(6);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -3208,7 +3344,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_void_ExceptionLabel()
   {
-    return (EReference)instruction_invoke_voidEClass.getEStructuralFeatures().get(7);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -3218,6 +3354,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_invoke_nonVoid()
   {
+    if (instruction_invoke_nonVoidEClass == null)
+    {
+      instruction_invoke_nonVoidEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(65);
+    }
     return instruction_invoke_nonVoidEClass;
   }
 
@@ -3228,7 +3368,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_invoke_nonVoid_Opcode()
   {
-    return (EAttribute)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3238,7 +3378,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_Cconv()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3248,7 +3388,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_Type()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3258,7 +3398,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_Callee()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3268,7 +3408,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_Args()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(4);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -3278,7 +3418,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_Attributes()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(5);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -3288,7 +3428,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_ToLabel()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(6);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -3298,7 +3438,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_invoke_nonVoid_ExceptionLabel()
   {
-    return (EReference)instruction_invoke_nonVoidEClass.getEStructuralFeatures().get(7);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -3308,6 +3448,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_resume()
   {
+    if (instruction_resumeEClass == null)
+    {
+      instruction_resumeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(66);
+    }
     return instruction_resumeEClass;
   }
 
@@ -3318,7 +3462,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_resume_Opcode()
   {
-    return (EAttribute)instruction_resumeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_resume().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3328,7 +3472,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_resume_Value()
   {
-    return (EReference)instruction_resumeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_resume().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3338,6 +3482,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_unreachable()
   {
+    if (instruction_unreachableEClass == null)
+    {
+      instruction_unreachableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(67);
+    }
     return instruction_unreachableEClass;
   }
 
@@ -3348,7 +3496,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_unreachable_Opcode()
   {
-    return (EAttribute)instruction_unreachableEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_unreachable().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3358,6 +3506,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getBasicBlockRef()
   {
+    if (basicBlockRefEClass == null)
+    {
+      basicBlockRefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(68);
+    }
     return basicBlockRefEClass;
   }
 
@@ -3368,7 +3520,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBasicBlockRef_Ref()
   {
-    return (EReference)basicBlockRefEClass.getEStructuralFeatures().get(0);
+        return (EReference)getBasicBlockRef().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3378,6 +3530,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getBinaryInstruction()
   {
+    if (binaryInstructionEClass == null)
+    {
+      binaryInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(69);
+    }
     return binaryInstructionEClass;
   }
 
@@ -3388,7 +3544,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getBinaryInstruction_Opcode()
   {
-    return (EAttribute)binaryInstructionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getBinaryInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3398,7 +3554,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBinaryInstruction_Type()
   {
-    return (EReference)binaryInstructionEClass.getEStructuralFeatures().get(1);
+        return (EReference)getBinaryInstruction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3408,7 +3564,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBinaryInstruction_Op1()
   {
-    return (EReference)binaryInstructionEClass.getEStructuralFeatures().get(2);
+        return (EReference)getBinaryInstruction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3418,7 +3574,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBinaryInstruction_Op2()
   {
-    return (EReference)binaryInstructionEClass.getEStructuralFeatures().get(3);
+        return (EReference)getBinaryInstruction().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3428,6 +3584,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_add()
   {
+    if (instruction_addEClass == null)
+    {
+      instruction_addEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(70);
+    }
     return instruction_addEClass;
   }
 
@@ -3438,6 +3598,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_fadd()
   {
+    if (instruction_faddEClass == null)
+    {
+      instruction_faddEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(71);
+    }
     return instruction_faddEClass;
   }
 
@@ -3448,7 +3612,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fadd_FastMathFlags()
   {
-    return (EReference)instruction_faddEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_fadd().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3458,6 +3622,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFastMathFlag()
   {
+    if (fastMathFlagEClass == null)
+    {
+      fastMathFlagEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(72);
+    }
     return fastMathFlagEClass;
   }
 
@@ -3468,7 +3636,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getFastMathFlag_Kind()
   {
-    return (EAttribute)fastMathFlagEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getFastMathFlag().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3478,6 +3646,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_sub()
   {
+    if (instruction_subEClass == null)
+    {
+      instruction_subEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(73);
+    }
     return instruction_subEClass;
   }
 
@@ -3488,6 +3660,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_fsub()
   {
+    if (instruction_fsubEClass == null)
+    {
+      instruction_fsubEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(74);
+    }
     return instruction_fsubEClass;
   }
 
@@ -3498,7 +3674,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fsub_FastMathFlags()
   {
-    return (EReference)instruction_fsubEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_fsub().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3508,6 +3684,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_mul()
   {
+    if (instruction_mulEClass == null)
+    {
+      instruction_mulEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(75);
+    }
     return instruction_mulEClass;
   }
 
@@ -3518,6 +3698,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_fmul()
   {
+    if (instruction_fmulEClass == null)
+    {
+      instruction_fmulEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(76);
+    }
     return instruction_fmulEClass;
   }
 
@@ -3528,7 +3712,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fmul_FastMathFlags()
   {
-    return (EReference)instruction_fmulEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_fmul().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3538,6 +3722,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_udiv()
   {
+    if (instruction_udivEClass == null)
+    {
+      instruction_udivEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(77);
+    }
     return instruction_udivEClass;
   }
 
@@ -3548,6 +3736,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_sdiv()
   {
+    if (instruction_sdivEClass == null)
+    {
+      instruction_sdivEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(78);
+    }
     return instruction_sdivEClass;
   }
 
@@ -3558,6 +3750,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_fdiv()
   {
+    if (instruction_fdivEClass == null)
+    {
+      instruction_fdivEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(79);
+    }
     return instruction_fdivEClass;
   }
 
@@ -3568,7 +3764,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fdiv_FastMathFlags()
   {
-    return (EReference)instruction_fdivEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_fdiv().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3578,6 +3774,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_urem()
   {
+    if (instruction_uremEClass == null)
+    {
+      instruction_uremEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(80);
+    }
     return instruction_uremEClass;
   }
 
@@ -3588,6 +3788,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_srem()
   {
+    if (instruction_sremEClass == null)
+    {
+      instruction_sremEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(81);
+    }
     return instruction_sremEClass;
   }
 
@@ -3598,6 +3802,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_frem()
   {
+    if (instruction_fremEClass == null)
+    {
+      instruction_fremEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(82);
+    }
     return instruction_fremEClass;
   }
 
@@ -3608,6 +3816,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getBitwiseBinaryInstruction()
   {
+    if (bitwiseBinaryInstructionEClass == null)
+    {
+      bitwiseBinaryInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(83);
+    }
     return bitwiseBinaryInstructionEClass;
   }
 
@@ -3618,7 +3830,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getBitwiseBinaryInstruction_Opcode()
   {
-    return (EAttribute)bitwiseBinaryInstructionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getBitwiseBinaryInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3628,7 +3840,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBitwiseBinaryInstruction_Type()
   {
-    return (EReference)bitwiseBinaryInstructionEClass.getEStructuralFeatures().get(1);
+        return (EReference)getBitwiseBinaryInstruction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3638,7 +3850,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBitwiseBinaryInstruction_Op1()
   {
-    return (EReference)bitwiseBinaryInstructionEClass.getEStructuralFeatures().get(2);
+        return (EReference)getBitwiseBinaryInstruction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3648,7 +3860,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getBitwiseBinaryInstruction_Op2()
   {
-    return (EReference)bitwiseBinaryInstructionEClass.getEStructuralFeatures().get(3);
+        return (EReference)getBitwiseBinaryInstruction().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3658,6 +3870,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_shl()
   {
+    if (instruction_shlEClass == null)
+    {
+      instruction_shlEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(84);
+    }
     return instruction_shlEClass;
   }
 
@@ -3668,6 +3884,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_lshr()
   {
+    if (instruction_lshrEClass == null)
+    {
+      instruction_lshrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(85);
+    }
     return instruction_lshrEClass;
   }
 
@@ -3678,6 +3898,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_ashr()
   {
+    if (instruction_ashrEClass == null)
+    {
+      instruction_ashrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(86);
+    }
     return instruction_ashrEClass;
   }
 
@@ -3688,6 +3912,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_and()
   {
+    if (instruction_andEClass == null)
+    {
+      instruction_andEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(87);
+    }
     return instruction_andEClass;
   }
 
@@ -3698,6 +3926,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_or()
   {
+    if (instruction_orEClass == null)
+    {
+      instruction_orEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(88);
+    }
     return instruction_orEClass;
   }
 
@@ -3708,6 +3940,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_xor()
   {
+    if (instruction_xorEClass == null)
+    {
+      instruction_xorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(89);
+    }
     return instruction_xorEClass;
   }
 
@@ -3718,6 +3954,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getVectorInstructions()
   {
+    if (vectorInstructionsEClass == null)
+    {
+      vectorInstructionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(90);
+    }
     return vectorInstructionsEClass;
   }
 
@@ -3728,7 +3968,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getVectorInstructions_Opcode()
   {
-    return (EAttribute)vectorInstructionsEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getVectorInstructions().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3738,6 +3978,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_extractelement()
   {
+    if (instruction_extractelementEClass == null)
+    {
+      instruction_extractelementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(91);
+    }
     return instruction_extractelementEClass;
   }
 
@@ -3748,7 +3992,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_extractelement_Vector()
   {
-    return (EReference)instruction_extractelementEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_extractelement().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3758,7 +4002,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_extractelement_Index()
   {
-    return (EReference)instruction_extractelementEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_extractelement().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3768,6 +4012,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_insertelement()
   {
+    if (instruction_insertelementEClass == null)
+    {
+      instruction_insertelementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(92);
+    }
     return instruction_insertelementEClass;
   }
 
@@ -3778,7 +4026,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_insertelement_Vector()
   {
-    return (EReference)instruction_insertelementEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_insertelement().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3788,7 +4036,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_insertelement_Element()
   {
-    return (EReference)instruction_insertelementEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_insertelement().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3798,7 +4046,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_insertelement_Index()
   {
-    return (EReference)instruction_insertelementEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_insertelement().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3808,6 +4056,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_shufflevector()
   {
+    if (instruction_shufflevectorEClass == null)
+    {
+      instruction_shufflevectorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(93);
+    }
     return instruction_shufflevectorEClass;
   }
 
@@ -3818,7 +4070,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_shufflevector_Vector1()
   {
-    return (EReference)instruction_shufflevectorEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_shufflevector().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3828,7 +4080,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_shufflevector_Vector2()
   {
-    return (EReference)instruction_shufflevectorEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_shufflevector().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3838,7 +4090,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_shufflevector_Mask()
   {
-    return (EReference)instruction_shufflevectorEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_shufflevector().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3848,6 +4100,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getAggregateInstruction()
   {
+    if (aggregateInstructionEClass == null)
+    {
+      aggregateInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(94);
+    }
     return aggregateInstructionEClass;
   }
 
@@ -3858,7 +4114,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getAggregateInstruction_Opcode()
   {
-    return (EAttribute)aggregateInstructionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getAggregateInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3868,7 +4124,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAggregateInstruction_Aggregate()
   {
-    return (EReference)aggregateInstructionEClass.getEStructuralFeatures().get(1);
+        return (EReference)getAggregateInstruction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3878,7 +4134,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getAggregateInstruction_Indices()
   {
-    return (EReference)aggregateInstructionEClass.getEStructuralFeatures().get(2);
+        return (EReference)getAggregateInstruction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3888,6 +4144,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_extractvalue()
   {
+    if (instruction_extractvalueEClass == null)
+    {
+      instruction_extractvalueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(95);
+    }
     return instruction_extractvalueEClass;
   }
 
@@ -3898,6 +4158,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_insertvalue()
   {
+    if (instruction_insertvalueEClass == null)
+    {
+      instruction_insertvalueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(96);
+    }
     return instruction_insertvalueEClass;
   }
 
@@ -3908,7 +4172,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_insertvalue_Element()
   {
-    return (EReference)instruction_insertvalueEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_insertvalue().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3918,6 +4182,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMemoryInstruction()
   {
+    if (memoryInstructionEClass == null)
+    {
+      memoryInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(97);
+    }
     return memoryInstructionEClass;
   }
 
@@ -3928,7 +4196,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getMemoryInstruction_Opcode()
   {
-    return (EAttribute)memoryInstructionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getMemoryInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3938,6 +4206,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_alloca()
   {
+    if (instruction_allocaEClass == null)
+    {
+      instruction_allocaEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(98);
+    }
     return instruction_allocaEClass;
   }
 
@@ -3948,7 +4220,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_alloca_Type()
   {
-    return (EReference)instruction_allocaEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_alloca().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3958,7 +4230,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_alloca_NumElements()
   {
-    return (EReference)instruction_allocaEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_alloca().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3968,7 +4240,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_alloca_Alignment()
   {
-    return (EAttribute)instruction_allocaEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getInstruction_alloca().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3978,6 +4250,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_load()
   {
+    if (instruction_loadEClass == null)
+    {
+      instruction_loadEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(99);
+    }
     return instruction_loadEClass;
   }
 
@@ -3988,7 +4264,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_load_Pointer()
   {
-    return (EReference)instruction_loadEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_load().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3998,7 +4274,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_load_Alignment()
   {
-    return (EAttribute)instruction_loadEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getInstruction_load().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4008,7 +4284,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_load_NontemporalIndex()
   {
-    return (EReference)instruction_loadEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_load().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4018,7 +4294,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_load_InvariantLoadIndex()
   {
-    return (EReference)instruction_loadEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_load().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4028,7 +4304,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_load_Ordering()
   {
-    return (EAttribute)instruction_loadEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getInstruction_load().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -4038,6 +4314,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_store()
   {
+    if (instruction_storeEClass == null)
+    {
+      instruction_storeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(100);
+    }
     return instruction_storeEClass;
   }
 
@@ -4048,7 +4328,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_store_Value()
   {
-    return (EReference)instruction_storeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_store().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4058,7 +4338,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_store_Pointer()
   {
-    return (EReference)instruction_storeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_store().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4068,7 +4348,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_store_Alignment()
   {
-    return (EAttribute)instruction_storeEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getInstruction_store().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4078,7 +4358,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_store_NontemporalIndex()
   {
-    return (EReference)instruction_storeEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_store().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4088,7 +4368,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_store_Ordering()
   {
-    return (EAttribute)instruction_storeEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getInstruction_store().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -4098,6 +4378,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_fence()
   {
+    if (instruction_fenceEClass == null)
+    {
+      instruction_fenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(101);
+    }
     return instruction_fenceEClass;
   }
 
@@ -4108,7 +4392,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_fence_Ordering()
   {
-    return (EAttribute)instruction_fenceEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_fence().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4118,6 +4402,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_cmpxchg()
   {
+    if (instruction_cmpxchgEClass == null)
+    {
+      instruction_cmpxchgEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(102);
+    }
     return instruction_cmpxchgEClass;
   }
 
@@ -4128,7 +4416,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_cmpxchg_Pointer()
   {
-    return (EReference)instruction_cmpxchgEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_cmpxchg().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4138,7 +4426,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_cmpxchg_ComparedWith()
   {
-    return (EReference)instruction_cmpxchgEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_cmpxchg().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4148,7 +4436,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_cmpxchg_NewValue()
   {
-    return (EReference)instruction_cmpxchgEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_cmpxchg().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4158,7 +4446,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_cmpxchg_Ordering()
   {
-    return (EAttribute)instruction_cmpxchgEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getInstruction_cmpxchg().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4168,6 +4456,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_atomicrmw()
   {
+    if (instruction_atomicrmwEClass == null)
+    {
+      instruction_atomicrmwEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(103);
+    }
     return instruction_atomicrmwEClass;
   }
 
@@ -4178,7 +4470,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_atomicrmw_Operation()
   {
-    return (EAttribute)instruction_atomicrmwEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_atomicrmw().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4188,7 +4480,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_atomicrmw_Pointer()
   {
-    return (EReference)instruction_atomicrmwEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_atomicrmw().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4198,7 +4490,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_atomicrmw_Argument()
   {
-    return (EReference)instruction_atomicrmwEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_atomicrmw().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4208,7 +4500,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_atomicrmw_Ordering()
   {
-    return (EAttribute)instruction_atomicrmwEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getInstruction_atomicrmw().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4218,6 +4510,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_getelementptr()
   {
+    if (instruction_getelementptrEClass == null)
+    {
+      instruction_getelementptrEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(104);
+    }
     return instruction_getelementptrEClass;
   }
 
@@ -4228,7 +4524,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_getelementptr_Base()
   {
-    return (EReference)instruction_getelementptrEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_getelementptr().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4238,7 +4534,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_getelementptr_Indices()
   {
-    return (EReference)instruction_getelementptrEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_getelementptr().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4248,6 +4544,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getConversionInstruction()
   {
+    if (conversionInstructionEClass == null)
+    {
+      conversionInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(105);
+    }
     return conversionInstructionEClass;
   }
 
@@ -4258,7 +4558,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getConversionInstruction_Opcode()
   {
-    return (EAttribute)conversionInstructionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getConversionInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4268,7 +4568,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConversionInstruction_FromType()
   {
-    return (EReference)conversionInstructionEClass.getEStructuralFeatures().get(1);
+        return (EReference)getConversionInstruction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4278,7 +4578,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConversionInstruction_Value()
   {
-    return (EReference)conversionInstructionEClass.getEStructuralFeatures().get(2);
+        return (EReference)getConversionInstruction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4288,7 +4588,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getConversionInstruction_TargetType()
   {
-    return (EReference)conversionInstructionEClass.getEStructuralFeatures().get(3);
+        return (EReference)getConversionInstruction().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4298,6 +4598,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getOtherInstruction()
   {
+    if (otherInstructionEClass == null)
+    {
+      otherInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(106);
+    }
     return otherInstructionEClass;
   }
 
@@ -4308,7 +4612,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getOtherInstruction_Opcode()
   {
-    return (EAttribute)otherInstructionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getOtherInstruction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4318,6 +4622,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_icmp()
   {
+    if (instruction_icmpEClass == null)
+    {
+      instruction_icmpEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(107);
+    }
     return instruction_icmpEClass;
   }
 
@@ -4328,7 +4636,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_icmp_Condition()
   {
-    return (EAttribute)instruction_icmpEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_icmp().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4338,7 +4646,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_icmp_Type()
   {
-    return (EReference)instruction_icmpEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_icmp().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4348,7 +4656,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_icmp_Op1()
   {
-    return (EReference)instruction_icmpEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_icmp().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4358,7 +4666,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_icmp_Op2()
   {
-    return (EReference)instruction_icmpEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_icmp().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4368,6 +4676,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_fcmp()
   {
+    if (instruction_fcmpEClass == null)
+    {
+      instruction_fcmpEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(108);
+    }
     return instruction_fcmpEClass;
   }
 
@@ -4378,7 +4690,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_fcmp_Condition()
   {
-    return (EAttribute)instruction_fcmpEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_fcmp().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4388,7 +4700,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fcmp_Type()
   {
-    return (EReference)instruction_fcmpEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_fcmp().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4398,7 +4710,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fcmp_Op1()
   {
-    return (EReference)instruction_fcmpEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_fcmp().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4408,7 +4720,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_fcmp_Op2()
   {
-    return (EReference)instruction_fcmpEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_fcmp().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4418,6 +4730,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_phi()
   {
+    if (instruction_phiEClass == null)
+    {
+      instruction_phiEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(109);
+    }
     return instruction_phiEClass;
   }
 
@@ -4428,7 +4744,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_phi_Opcode()
   {
-    return (EAttribute)instruction_phiEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_phi().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4438,7 +4754,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_phi_Type()
   {
-    return (EReference)instruction_phiEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_phi().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4448,7 +4764,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_phi_Values()
   {
-    return (EReference)instruction_phiEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_phi().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4458,7 +4774,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_phi_Labels()
   {
-    return (EReference)instruction_phiEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_phi().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4468,6 +4784,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_select()
   {
+    if (instruction_selectEClass == null)
+    {
+      instruction_selectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(110);
+    }
     return instruction_selectEClass;
   }
 
@@ -4478,7 +4798,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_select_Condition()
   {
-    return (EReference)instruction_selectEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_select().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4488,7 +4808,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_select_Value1()
   {
-    return (EReference)instruction_selectEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_select().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4498,7 +4818,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_select_Value2()
   {
-    return (EReference)instruction_selectEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_select().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4508,6 +4828,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_call_nonVoid()
   {
+    if (instruction_call_nonVoidEClass == null)
+    {
+      instruction_call_nonVoidEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(111);
+    }
     return instruction_call_nonVoidEClass;
   }
 
@@ -4518,7 +4842,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_call_nonVoid_IsTail()
   {
-    return (EAttribute)instruction_call_nonVoidEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_call_nonVoid().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4528,7 +4852,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_call_nonVoid_Opcode()
   {
-    return (EAttribute)instruction_call_nonVoidEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getInstruction_call_nonVoid().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4538,7 +4862,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_nonVoid_Cconv()
   {
-    return (EReference)instruction_call_nonVoidEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_call_nonVoid().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4548,7 +4872,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_nonVoid_ReturnAttributes()
   {
-    return (EReference)instruction_call_nonVoidEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_call_nonVoid().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4558,7 +4882,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_nonVoid_Type()
   {
-    return (EReference)instruction_call_nonVoidEClass.getEStructuralFeatures().get(4);
+        return (EReference)getInstruction_call_nonVoid().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -4568,7 +4892,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_nonVoid_Callee()
   {
-    return (EReference)instruction_call_nonVoidEClass.getEStructuralFeatures().get(5);
+        return (EReference)getInstruction_call_nonVoid().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -4578,7 +4902,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_nonVoid_Args()
   {
-    return (EReference)instruction_call_nonVoidEClass.getEStructuralFeatures().get(6);
+        return (EReference)getInstruction_call_nonVoid().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -4588,7 +4912,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_nonVoid_FunctionAttributes()
   {
-    return (EReference)instruction_call_nonVoidEClass.getEStructuralFeatures().get(7);
+        return (EReference)getInstruction_call_nonVoid().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -4598,6 +4922,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_call_void()
   {
+    if (instruction_call_voidEClass == null)
+    {
+      instruction_call_voidEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(112);
+    }
     return instruction_call_voidEClass;
   }
 
@@ -4608,7 +4936,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_call_void_IsTail()
   {
-    return (EAttribute)instruction_call_voidEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInstruction_call_void().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4618,7 +4946,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInstruction_call_void_Opcode()
   {
-    return (EAttribute)instruction_call_voidEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getInstruction_call_void().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4628,7 +4956,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_void_Cconv()
   {
-    return (EReference)instruction_call_voidEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_call_void().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4638,7 +4966,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_void_ReturnAttributes()
   {
-    return (EReference)instruction_call_voidEClass.getEStructuralFeatures().get(3);
+        return (EReference)getInstruction_call_void().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4648,7 +4976,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_void_Type()
   {
-    return (EReference)instruction_call_voidEClass.getEStructuralFeatures().get(4);
+        return (EReference)getInstruction_call_void().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -4658,7 +4986,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_void_Callee()
   {
-    return (EReference)instruction_call_voidEClass.getEStructuralFeatures().get(5);
+        return (EReference)getInstruction_call_void().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -4668,7 +4996,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_void_Args()
   {
-    return (EReference)instruction_call_voidEClass.getEStructuralFeatures().get(6);
+        return (EReference)getInstruction_call_void().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -4678,7 +5006,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_call_void_FunctionAttributes()
   {
-    return (EReference)instruction_call_voidEClass.getEStructuralFeatures().get(7);
+        return (EReference)getInstruction_call_void().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -4688,6 +5016,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getArgList()
   {
+    if (argListEClass == null)
+    {
+      argListEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(113);
+    }
     return argListEClass;
   }
 
@@ -4698,7 +5030,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getArgList_Arguments()
   {
-    return (EReference)argListEClass.getEStructuralFeatures().get(0);
+        return (EReference)getArgList().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4708,6 +5040,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getCallee()
   {
+    if (calleeEClass == null)
+    {
+      calleeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(114);
+    }
     return calleeEClass;
   }
 
@@ -4718,6 +5054,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInlineAssembler()
   {
+    if (inlineAssemblerEClass == null)
+    {
+      inlineAssemblerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(115);
+    }
     return inlineAssemblerEClass;
   }
 
@@ -4728,7 +5068,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInlineAssembler_Assembler()
   {
-    return (EAttribute)inlineAssemblerEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInlineAssembler().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4738,7 +5078,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getInlineAssembler_Flags()
   {
-    return (EAttribute)inlineAssemblerEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getInlineAssembler().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4748,6 +5088,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_va_arg()
   {
+    if (instruction_va_argEClass == null)
+    {
+      instruction_va_argEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(116);
+    }
     return instruction_va_argEClass;
   }
 
@@ -4758,7 +5102,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_va_arg_Arglist()
   {
-    return (EReference)instruction_va_argEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_va_arg().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4768,7 +5112,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_va_arg_Type()
   {
-    return (EReference)instruction_va_argEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_va_arg().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4778,6 +5122,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getInstruction_landingpad()
   {
+    if (instruction_landingpadEClass == null)
+    {
+      instruction_landingpadEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(117);
+    }
     return instruction_landingpadEClass;
   }
 
@@ -4788,7 +5136,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_landingpad_ResultType()
   {
-    return (EReference)instruction_landingpadEClass.getEStructuralFeatures().get(0);
+        return (EReference)getInstruction_landingpad().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4798,7 +5146,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_landingpad_Personality()
   {
-    return (EReference)instruction_landingpadEClass.getEStructuralFeatures().get(1);
+        return (EReference)getInstruction_landingpad().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4808,7 +5156,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getInstruction_landingpad_Clauses()
   {
-    return (EReference)instruction_landingpadEClass.getEStructuralFeatures().get(2);
+        return (EReference)getInstruction_landingpad().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4818,6 +5166,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getLandingpadClause()
   {
+    if (landingpadClauseEClass == null)
+    {
+      landingpadClauseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(118);
+    }
     return landingpadClauseEClass;
   }
 
@@ -4828,7 +5180,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getLandingpadClause_LandingPadType()
   {
-    return (EAttribute)landingpadClauseEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getLandingpadClause().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4838,7 +5190,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getLandingpadClause_CatchType()
   {
-    return (EReference)landingpadClauseEClass.getEStructuralFeatures().get(1);
+        return (EReference)getLandingpadClause().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4848,7 +5200,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getLandingpadClause_ArrayType()
   {
-    return (EReference)landingpadClauseEClass.getEStructuralFeatures().get(2);
+        return (EReference)getLandingpadClause().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -4858,7 +5210,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getLandingpadClause_ArrayConstant()
   {
-    return (EReference)landingpadClauseEClass.getEStructuralFeatures().get(3);
+        return (EReference)getLandingpadClause().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -4868,6 +5220,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTypedValue()
   {
+    if (typedValueEClass == null)
+    {
+      typedValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(119);
+    }
     return typedValueEClass;
   }
 
@@ -4878,7 +5234,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypedValue_Type()
   {
-    return (EReference)typedValueEClass.getEStructuralFeatures().get(0);
+        return (EReference)getTypedValue().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4888,7 +5244,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypedValue_Ref()
   {
-    return (EReference)typedValueEClass.getEStructuralFeatures().get(1);
+        return (EReference)getTypedValue().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4898,6 +5254,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getParameterType()
   {
+    if (parameterTypeEClass == null)
+    {
+      parameterTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(120);
+    }
     return parameterTypeEClass;
   }
 
@@ -4908,7 +5268,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getParameterType_Type()
   {
-    return (EReference)parameterTypeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getParameterType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4918,7 +5278,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getParameterType_Attrs()
   {
-    return (EReference)parameterTypeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getParameterType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4928,6 +5288,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getParameterAttributes()
   {
+    if (parameterAttributesEClass == null)
+    {
+      parameterAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(121);
+    }
     return parameterAttributesEClass;
   }
 
@@ -4938,7 +5302,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getParameterAttributes_Attributes()
   {
-    return (EAttribute)parameterAttributesEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getParameterAttributes().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4948,6 +5312,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getArgument()
   {
+    if (argumentEClass == null)
+    {
+      argumentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(122);
+    }
     return argumentEClass;
   }
 
@@ -4958,7 +5326,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getArgument_Type()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getArgument().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4968,7 +5336,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getArgument_Ref()
   {
-    return (EReference)argumentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getArgument().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -4978,6 +5346,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getParameter()
   {
+    if (parameterEClass == null)
+    {
+      parameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(123);
+    }
     return parameterEClass;
   }
 
@@ -4988,7 +5360,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getParameter_Type()
   {
-    return (EReference)parameterEClass.getEStructuralFeatures().get(0);
+        return (EReference)getParameter().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4998,6 +5370,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNonVoidType()
   {
+    if (nonVoidTypeEClass == null)
+    {
+      nonVoidTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(124);
+    }
     return nonVoidTypeEClass;
   }
 
@@ -5008,7 +5384,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonVoidType_BaseType()
   {
-    return (EReference)nonVoidTypeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getNonVoidType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5018,7 +5394,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonVoidType_Suffixes()
   {
-    return (EReference)nonVoidTypeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getNonVoidType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5028,7 +5404,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonVoidType_Stars()
   {
-    return (EReference)nonVoidTypeEClass.getEStructuralFeatures().get(2);
+        return (EReference)getNonVoidType().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -5038,6 +5414,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getStar()
   {
+    if (starEClass == null)
+    {
+      starEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(125);
+    }
     return starEClass;
   }
 
@@ -5048,7 +5428,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getStar_AddressSpace()
   {
-    return (EReference)starEClass.getEStructuralFeatures().get(0);
+        return (EReference)getStar().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5058,6 +5438,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getType()
   {
+    if (typeEClass == null)
+    {
+      typeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(126);
+    }
     return typeEClass;
   }
 
@@ -5068,7 +5452,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getType_BaseType()
   {
-    return (EReference)typeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5078,7 +5462,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getType_Stars()
   {
-    return (EReference)typeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5088,7 +5472,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getType_Suffixes()
   {
-    return (EReference)typeEClass.getEStructuralFeatures().get(2);
+        return (EReference)getType().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -5098,6 +5482,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTypeSuffix()
   {
+    if (typeSuffixEClass == null)
+    {
+      typeSuffixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(127);
+    }
     return typeSuffixEClass;
   }
 
@@ -5108,7 +5496,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypeSuffix_ContainedTypes()
   {
-    return (EReference)typeSuffixEClass.getEStructuralFeatures().get(0);
+        return (EReference)getTypeSuffix().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5118,7 +5506,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getTypeSuffix_Vararg()
   {
-    return (EAttribute)typeSuffixEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTypeSuffix().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5128,7 +5516,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypeSuffix_Stars()
   {
-    return (EReference)typeSuffixEClass.getEStructuralFeatures().get(2);
+        return (EReference)getTypeSuffix().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -5138,6 +5526,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNonLeftRecursiveType()
   {
+    if (nonLeftRecursiveTypeEClass == null)
+    {
+      nonLeftRecursiveTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(128);
+    }
     return nonLeftRecursiveTypeEClass;
   }
 
@@ -5148,7 +5540,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonLeftRecursiveType_Type()
   {
-    return (EReference)nonLeftRecursiveTypeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getNonLeftRecursiveType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5158,7 +5550,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonLeftRecursiveType_Typedef()
   {
-    return (EReference)nonLeftRecursiveTypeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getNonLeftRecursiveType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5168,6 +5560,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getNonLeftRecursiveNonVoidType()
   {
+    if (nonLeftRecursiveNonVoidTypeEClass == null)
+    {
+      nonLeftRecursiveNonVoidTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(129);
+    }
     return nonLeftRecursiveNonVoidTypeEClass;
   }
 
@@ -5178,7 +5574,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonLeftRecursiveNonVoidType_Type()
   {
-    return (EReference)nonLeftRecursiveNonVoidTypeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getNonLeftRecursiveNonVoidType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5188,7 +5584,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getNonLeftRecursiveNonVoidType_Typedef()
   {
-    return (EReference)nonLeftRecursiveNonVoidTypeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getNonLeftRecursiveNonVoidType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5198,6 +5594,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getTypeDef()
   {
+    if (typeDefEClass == null)
+    {
+      typeDefEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(130);
+    }
     return typeDefEClass;
   }
 
@@ -5208,7 +5608,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getTypeDef_Name()
   {
-    return (EAttribute)typeDefEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTypeDef().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5218,7 +5618,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getTypeDef_Type()
   {
-    return (EReference)typeDefEClass.getEStructuralFeatures().get(1);
+        return (EReference)getTypeDef().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5228,6 +5628,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getIntType()
   {
+    if (intTypeEClass == null)
+    {
+      intTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(131);
+    }
     return intTypeEClass;
   }
 
@@ -5238,6 +5642,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getOpaqueType()
   {
+    if (opaqueTypeEClass == null)
+    {
+      opaqueTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(132);
+    }
     return opaqueTypeEClass;
   }
 
@@ -5248,6 +5656,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getStructType()
   {
+    if (structTypeEClass == null)
+    {
+      structTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(133);
+    }
     return structTypeEClass;
   }
 
@@ -5258,7 +5670,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getStructType_Types()
   {
-    return (EReference)structTypeEClass.getEStructuralFeatures().get(0);
+        return (EReference)getStructType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5268,7 +5680,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getStructType_Packed()
   {
-    return (EAttribute)structTypeEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getStructType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5278,6 +5690,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getVectorType()
   {
+    if (vectorTypeEClass == null)
+    {
+      vectorTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(134);
+    }
     return vectorTypeEClass;
   }
 
@@ -5288,7 +5704,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getVectorType_Size()
   {
-    return (EAttribute)vectorTypeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getVectorType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5298,7 +5714,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getVectorType_ElemType()
   {
-    return (EReference)vectorTypeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getVectorType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5308,6 +5724,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getArrayType()
   {
+    if (arrayTypeEClass == null)
+    {
+      arrayTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(135);
+    }
     return arrayTypeEClass;
   }
 
@@ -5318,7 +5738,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getArrayType_Size()
   {
-    return (EAttribute)arrayTypeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getArrayType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5328,7 +5748,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EReference getArrayType_ElemType()
   {
-    return (EReference)arrayTypeEClass.getEStructuralFeatures().get(1);
+        return (EReference)getArrayType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5338,6 +5758,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getX86mmxType()
   {
+    if (x86mmxTypeEClass == null)
+    {
+      x86mmxTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(136);
+    }
     return x86mmxTypeEClass;
   }
 
@@ -5348,6 +5772,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getVoidType()
   {
+    if (voidTypeEClass == null)
+    {
+      voidTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(137);
+    }
     return voidTypeEClass;
   }
 
@@ -5358,6 +5786,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getMetadataType()
   {
+    if (metadataTypeEClass == null)
+    {
+      metadataTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(138);
+    }
     return metadataTypeEClass;
   }
 
@@ -5368,6 +5800,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getFloatingType()
   {
+    if (floatingTypeEClass == null)
+    {
+      floatingTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(139);
+    }
     return floatingTypeEClass;
   }
 
@@ -5378,6 +5814,10 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EClass getCConv()
   {
+    if (cConvEClass == null)
+    {
+      cConvEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(140);
+    }
     return cConvEClass;
   }
 
@@ -5388,7 +5828,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getCConv_Val()
   {
-    return (EAttribute)cConvEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getCConv().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -5398,7 +5838,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    */
   public EAttribute getCConv_CustomNumber()
   {
-    return (EAttribute)cConvEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getCConv().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5416,1256 +5856,73 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private boolean isCreated = false;
+  private boolean isLoaded = false;
 
   /**
-   * Creates the meta-model objects for the package.  This method is
-   * guarded to have no affect on any invocation but its first.
+   * Laods the package and any sub-packages from their serialized form.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public void createPackageContents()
+  public void loadPackage()
   {
-    if (isCreated) return;
-    isCreated = true;
-
-    // Create classes and their features
-    modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__ELEMENTS);
-
-    topLevelElementEClass = createEClass(TOP_LEVEL_ELEMENT);
-
-    attributeGroupEClass = createEClass(ATTRIBUTE_GROUP);
-    createEAttribute(attributeGroupEClass, ATTRIBUTE_GROUP__NAME);
-    createEReference(attributeGroupEClass, ATTRIBUTE_GROUP__ATTRIBUTES);
-    createEReference(attributeGroupEClass, ATTRIBUTE_GROUP__ALIGNSTACK);
-    createEAttribute(attributeGroupEClass, ATTRIBUTE_GROUP__ALIGNSTACK_VALUE);
-    createEReference(attributeGroupEClass, ATTRIBUTE_GROUP__TARGET_SPECIFIC_ATTRIBUTES);
-
-    targetSpecificAttributeEClass = createEClass(TARGET_SPECIFIC_ATTRIBUTE);
-    createEAttribute(targetSpecificAttributeEClass, TARGET_SPECIFIC_ATTRIBUTE__NAME);
-    createEAttribute(targetSpecificAttributeEClass, TARGET_SPECIFIC_ATTRIBUTE__VALUE);
-
-    namedMetadataEClass = createEClass(NAMED_METADATA);
-    createEAttribute(namedMetadataEClass, NAMED_METADATA__NAME);
-    createEReference(namedMetadataEClass, NAMED_METADATA__NODE);
-
-    metadataRefEClass = createEClass(METADATA_REF);
-    createEReference(metadataRefEClass, METADATA_REF__REF);
-
-    valueRefEClass = createEClass(VALUE_REF);
-
-    globalValueRefEClass = createEClass(GLOBAL_VALUE_REF);
-    createEReference(globalValueRefEClass, GLOBAL_VALUE_REF__CONSTANT);
-    createEReference(globalValueRefEClass, GLOBAL_VALUE_REF__METADATA);
-
-    localValueRefEClass = createEClass(LOCAL_VALUE_REF);
-    createEReference(localValueRefEClass, LOCAL_VALUE_REF__REF);
-
-    globalValueEClass = createEClass(GLOBAL_VALUE);
-
-    globalValueDefEClass = createEClass(GLOBAL_VALUE_DEF);
-
-    localValueEClass = createEClass(LOCAL_VALUE);
-    createEAttribute(localValueEClass, LOCAL_VALUE__NAME);
-
-    namedInstructionEClass = createEClass(NAMED_INSTRUCTION);
-
-    instructionEClass = createEClass(INSTRUCTION);
-    createEReference(instructionEClass, INSTRUCTION__METADATA);
-
-    aliasEClass = createEClass(ALIAS);
-    createEAttribute(aliasEClass, ALIAS__NAME);
-    createEAttribute(aliasEClass, ALIAS__LINKAGE);
-    createEAttribute(aliasEClass, ALIAS__VISIBILITY);
-    createEReference(aliasEClass, ALIAS__TYPE);
-    createEReference(aliasEClass, ALIAS__ALIASEE);
-
-    aliaseeEClass = createEClass(ALIASEE);
-    createEReference(aliaseeEClass, ALIASEE__REF);
-    createEReference(aliaseeEClass, ALIASEE__BITCAST);
-
-    targetInfoEClass = createEClass(TARGET_INFO);
-    createEAttribute(targetInfoEClass, TARGET_INFO__INFO_TYPE);
-    createEAttribute(targetInfoEClass, TARGET_INFO__LAYOUT);
-
-    inlineAsmEClass = createEClass(INLINE_ASM);
-    createEAttribute(inlineAsmEClass, INLINE_ASM__ASM_LINE);
-
-    globalVariableEClass = createEClass(GLOBAL_VARIABLE);
-    createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__NAME);
-    createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__LINKAGE);
-    createEReference(globalVariableEClass, GLOBAL_VARIABLE__ADDRSPACE);
-    createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__TLS_MODEL);
-    createEReference(globalVariableEClass, GLOBAL_VARIABLE__TYPE);
-    createEReference(globalVariableEClass, GLOBAL_VARIABLE__INITIAL_VALUE);
-    createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__SECTION);
-    createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__ALIGN);
-
-    constantEClass = createEClass(CONSTANT);
-    createEReference(constantEClass, CONSTANT__REF);
-
-    constantExpressionEClass = createEClass(CONSTANT_EXPRESSION);
-    createEAttribute(constantExpressionEClass, CONSTANT_EXPRESSION__OPCODE);
-
-    constantExpression_convertEClass = createEClass(CONSTANT_EXPRESSION_CONVERT);
-    createEReference(constantExpression_convertEClass, CONSTANT_EXPRESSION_CONVERT__FROM_TYPE);
-    createEReference(constantExpression_convertEClass, CONSTANT_EXPRESSION_CONVERT__CONSTANT);
-    createEReference(constantExpression_convertEClass, CONSTANT_EXPRESSION_CONVERT__TARGET_TYPE);
-
-    constantExpression_getelementptrEClass = createEClass(CONSTANT_EXPRESSION_GETELEMENTPTR);
-    createEReference(constantExpression_getelementptrEClass, CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE);
-    createEReference(constantExpression_getelementptrEClass, CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT);
-    createEReference(constantExpression_getelementptrEClass, CONSTANT_EXPRESSION_GETELEMENTPTR__INDEX_TYPES);
-    createEReference(constantExpression_getelementptrEClass, CONSTANT_EXPRESSION_GETELEMENTPTR__INDICES);
-
-    constantExpression_selectEClass = createEClass(CONSTANT_EXPRESSION_SELECT);
-    createEReference(constantExpression_selectEClass, CONSTANT_EXPRESSION_SELECT__CONDITION);
-    createEReference(constantExpression_selectEClass, CONSTANT_EXPRESSION_SELECT__OP1);
-    createEReference(constantExpression_selectEClass, CONSTANT_EXPRESSION_SELECT__OP2);
-
-    constantExpression_compareEClass = createEClass(CONSTANT_EXPRESSION_COMPARE);
-    createEAttribute(constantExpression_compareEClass, CONSTANT_EXPRESSION_COMPARE__CONDITION);
-    createEReference(constantExpression_compareEClass, CONSTANT_EXPRESSION_COMPARE__OP1);
-    createEReference(constantExpression_compareEClass, CONSTANT_EXPRESSION_COMPARE__OP2);
-
-    constantExpression_extractelementEClass = createEClass(CONSTANT_EXPRESSION_EXTRACTELEMENT);
-    createEReference(constantExpression_extractelementEClass, CONSTANT_EXPRESSION_EXTRACTELEMENT__VECTOR);
-    createEReference(constantExpression_extractelementEClass, CONSTANT_EXPRESSION_EXTRACTELEMENT__INDEX);
-
-    constantExpression_insertelementEClass = createEClass(CONSTANT_EXPRESSION_INSERTELEMENT);
-    createEReference(constantExpression_insertelementEClass, CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE);
-    createEReference(constantExpression_insertelementEClass, CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR);
-    createEReference(constantExpression_insertelementEClass, CONSTANT_EXPRESSION_INSERTELEMENT__ELEMENT);
-    createEReference(constantExpression_insertelementEClass, CONSTANT_EXPRESSION_INSERTELEMENT__INDEX);
-
-    constantExpression_shufflevectorEClass = createEClass(CONSTANT_EXPRESSION_SHUFFLEVECTOR);
-    createEReference(constantExpression_shufflevectorEClass, CONSTANT_EXPRESSION_SHUFFLEVECTOR__VECTOR1);
-    createEReference(constantExpression_shufflevectorEClass, CONSTANT_EXPRESSION_SHUFFLEVECTOR__VECTOR2);
-    createEReference(constantExpression_shufflevectorEClass, CONSTANT_EXPRESSION_SHUFFLEVECTOR__MASK);
-
-    constantExpression_extractvalueEClass = createEClass(CONSTANT_EXPRESSION_EXTRACTVALUE);
-    createEReference(constantExpression_extractvalueEClass, CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE);
-    createEAttribute(constantExpression_extractvalueEClass, CONSTANT_EXPRESSION_EXTRACTVALUE__INDICES);
-
-    constantExpression_insertvalueEClass = createEClass(CONSTANT_EXPRESSION_INSERTVALUE);
-    createEReference(constantExpression_insertvalueEClass, CONSTANT_EXPRESSION_INSERTVALUE__VALUE);
-    createEReference(constantExpression_insertvalueEClass, CONSTANT_EXPRESSION_INSERTVALUE__ELEMENT);
-    createEAttribute(constantExpression_insertvalueEClass, CONSTANT_EXPRESSION_INSERTVALUE__INDICES);
-
-    constantExpression_binaryEClass = createEClass(CONSTANT_EXPRESSION_BINARY);
-    createEReference(constantExpression_binaryEClass, CONSTANT_EXPRESSION_BINARY__OP1);
-    createEReference(constantExpression_binaryEClass, CONSTANT_EXPRESSION_BINARY__OP2);
-
-    undefEClass = createEClass(UNDEF);
-
-    blockAddressEClass = createEClass(BLOCK_ADDRESS);
-    createEReference(blockAddressEClass, BLOCK_ADDRESS__FUNCTION);
-    createEReference(blockAddressEClass, BLOCK_ADDRESS__BASIC_BLOCK);
-
-    zeroInitializerEClass = createEClass(ZERO_INITIALIZER);
-
-    structureConstantEClass = createEClass(STRUCTURE_CONSTANT);
-    createEReference(structureConstantEClass, STRUCTURE_CONSTANT__LIST);
-    createEAttribute(structureConstantEClass, STRUCTURE_CONSTANT__PACKED);
-
-    arrayConstantEClass = createEClass(ARRAY_CONSTANT);
-    createEReference(arrayConstantEClass, ARRAY_CONSTANT__LIST);
-
-    vectorConstantEClass = createEClass(VECTOR_CONSTANT);
-    createEReference(vectorConstantEClass, VECTOR_CONSTANT__LIST);
-
-    constantListEClass = createEClass(CONSTANT_LIST);
-    createEReference(constantListEClass, CONSTANT_LIST__TYPED_CONSTANTS);
-
-    typedConstantEClass = createEClass(TYPED_CONSTANT);
-    createEReference(typedConstantEClass, TYPED_CONSTANT__TYPE);
-    createEReference(typedConstantEClass, TYPED_CONSTANT__VALUE);
-
-    simpleConstantEClass = createEClass(SIMPLE_CONSTANT);
-    createEAttribute(simpleConstantEClass, SIMPLE_CONSTANT__VALUE);
-
-    metadataNodeEClass = createEClass(METADATA_NODE);
-    createEReference(metadataNodeEClass, METADATA_NODE__ELEMENTS);
-
-    metadataNodeElementEClass = createEClass(METADATA_NODE_ELEMENT);
-    createEReference(metadataNodeElementEClass, METADATA_NODE_ELEMENT__VALUE);
-    createEReference(metadataNodeElementEClass, METADATA_NODE_ELEMENT__METADATA_REF);
-    createEAttribute(metadataNodeElementEClass, METADATA_NODE_ELEMENT__NULL);
-
-    metadataStringEClass = createEClass(METADATA_STRING);
-    createEAttribute(metadataStringEClass, METADATA_STRING__NAME);
-
-    addressSpaceEClass = createEClass(ADDRESS_SPACE);
-    createEAttribute(addressSpaceEClass, ADDRESS_SPACE__VALUE);
-
-    functionEClass = createEClass(FUNCTION);
-    createEReference(functionEClass, FUNCTION__HEADER);
-
-    functionDefEClass = createEClass(FUNCTION_DEF);
-    createEReference(functionDefEClass, FUNCTION_DEF__BASIC_BLOCKS);
-
-    functionDeclEClass = createEClass(FUNCTION_DECL);
-
-    functionHeaderEClass = createEClass(FUNCTION_HEADER);
-    createEAttribute(functionHeaderEClass, FUNCTION_HEADER__LINKAGE);
-    createEAttribute(functionHeaderEClass, FUNCTION_HEADER__VISIBILITY);
-    createEReference(functionHeaderEClass, FUNCTION_HEADER__CCONV);
-    createEReference(functionHeaderEClass, FUNCTION_HEADER__RETTYPE_ATTRS);
-    createEReference(functionHeaderEClass, FUNCTION_HEADER__RETTYPE);
-    createEAttribute(functionHeaderEClass, FUNCTION_HEADER__NAME);
-    createEReference(functionHeaderEClass, FUNCTION_HEADER__PARAMETERS);
-    createEReference(functionHeaderEClass, FUNCTION_HEADER__ATTRS);
-    createEAttribute(functionHeaderEClass, FUNCTION_HEADER__SECTION);
-    createEAttribute(functionHeaderEClass, FUNCTION_HEADER__ALIGN);
-    createEAttribute(functionHeaderEClass, FUNCTION_HEADER__GC);
-    createEReference(functionHeaderEClass, FUNCTION_HEADER__FUNCTION_PREFIX);
-
-    functionPrefixEClass = createEClass(FUNCTION_PREFIX);
-    createEReference(functionPrefixEClass, FUNCTION_PREFIX__VALUE);
-
-    parametersEClass = createEClass(PARAMETERS);
-    createEReference(parametersEClass, PARAMETERS__PARAMETERS);
-    createEAttribute(parametersEClass, PARAMETERS__VARARG);
-
-    functionAttributesEClass = createEClass(FUNCTION_ATTRIBUTES);
-    createEReference(functionAttributesEClass, FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES);
-    createEReference(functionAttributesEClass, FUNCTION_ATTRIBUTES__ALIGNSTACK);
-    createEAttribute(functionAttributesEClass, FUNCTION_ATTRIBUTES__ALIGNSTACK_VALUE);
-    createEReference(functionAttributesEClass, FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTE_GROUP_REFS);
-
-    alignStackEClass = createEClass(ALIGN_STACK);
-
-    functionAttributeEClass = createEClass(FUNCTION_ATTRIBUTE);
-    createEAttribute(functionAttributeEClass, FUNCTION_ATTRIBUTE__ATTRIBUTE);
-
-    basicBlockEClass = createEClass(BASIC_BLOCK);
-    createEAttribute(basicBlockEClass, BASIC_BLOCK__NAME);
-    createEReference(basicBlockEClass, BASIC_BLOCK__INSTRUCTIONS);
-
-    metadataSuffixEClass = createEClass(METADATA_SUFFIX);
-    createEAttribute(metadataSuffixEClass, METADATA_SUFFIX__NAME);
-    createEReference(metadataSuffixEClass, METADATA_SUFFIX__VALUE);
-
-    startingInstructionEClass = createEClass(STARTING_INSTRUCTION);
-    createEReference(startingInstructionEClass, STARTING_INSTRUCTION__INSTRUCTION);
-
-    middleInstructionEClass = createEClass(MIDDLE_INSTRUCTION);
-    createEReference(middleInstructionEClass, MIDDLE_INSTRUCTION__INSTRUCTION);
-
-    namedMiddleInstructionEClass = createEClass(NAMED_MIDDLE_INSTRUCTION);
-    createEReference(namedMiddleInstructionEClass, NAMED_MIDDLE_INSTRUCTION__INSTRUCTION);
-
-    terminatorInstructionEClass = createEClass(TERMINATOR_INSTRUCTION);
-    createEReference(terminatorInstructionEClass, TERMINATOR_INSTRUCTION__INSTRUCTION);
-
-    namedTerminatorInstructionEClass = createEClass(NAMED_TERMINATOR_INSTRUCTION);
-    createEReference(namedTerminatorInstructionEClass, NAMED_TERMINATOR_INSTRUCTION__INSTRUCTION);
-
-    instruction_retEClass = createEClass(INSTRUCTION_RET);
-    createEAttribute(instruction_retEClass, INSTRUCTION_RET__OPCODE);
-    createEReference(instruction_retEClass, INSTRUCTION_RET__VAL);
-
-    instruction_brEClass = createEClass(INSTRUCTION_BR);
-    createEAttribute(instruction_brEClass, INSTRUCTION_BR__OPCODE);
-    createEReference(instruction_brEClass, INSTRUCTION_BR__CONDITION);
-    createEReference(instruction_brEClass, INSTRUCTION_BR__TRUE);
-    createEReference(instruction_brEClass, INSTRUCTION_BR__FALSE);
-    createEReference(instruction_brEClass, INSTRUCTION_BR__UNCONDITIONAL);
-
-    instruction_switchEClass = createEClass(INSTRUCTION_SWITCH);
-    createEAttribute(instruction_switchEClass, INSTRUCTION_SWITCH__OPCODE);
-    createEReference(instruction_switchEClass, INSTRUCTION_SWITCH__COMPARISON_VALUE);
-    createEReference(instruction_switchEClass, INSTRUCTION_SWITCH__DEFAULT_DEST);
-    createEReference(instruction_switchEClass, INSTRUCTION_SWITCH__CASE_CONDITIONS);
-    createEReference(instruction_switchEClass, INSTRUCTION_SWITCH__DESTINATIONS);
-
-    instruction_indirectbrEClass = createEClass(INSTRUCTION_INDIRECTBR);
-    createEAttribute(instruction_indirectbrEClass, INSTRUCTION_INDIRECTBR__OPCODE);
-    createEReference(instruction_indirectbrEClass, INSTRUCTION_INDIRECTBR__ADDRESS);
-    createEReference(instruction_indirectbrEClass, INSTRUCTION_INDIRECTBR__DESTINATIONS);
-
-    instruction_invoke_voidEClass = createEClass(INSTRUCTION_INVOKE_VOID);
-    createEAttribute(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__OPCODE);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__CCONV);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__TYPE);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__CALLEE);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__ARGS);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__ATTRIBUTES);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__TO_LABEL);
-    createEReference(instruction_invoke_voidEClass, INSTRUCTION_INVOKE_VOID__EXCEPTION_LABEL);
-
-    instruction_invoke_nonVoidEClass = createEClass(INSTRUCTION_INVOKE_NON_VOID);
-    createEAttribute(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__OPCODE);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__CCONV);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__TYPE);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__CALLEE);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__ARGS);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__ATTRIBUTES);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__TO_LABEL);
-    createEReference(instruction_invoke_nonVoidEClass, INSTRUCTION_INVOKE_NON_VOID__EXCEPTION_LABEL);
-
-    instruction_resumeEClass = createEClass(INSTRUCTION_RESUME);
-    createEAttribute(instruction_resumeEClass, INSTRUCTION_RESUME__OPCODE);
-    createEReference(instruction_resumeEClass, INSTRUCTION_RESUME__VALUE);
-
-    instruction_unreachableEClass = createEClass(INSTRUCTION_UNREACHABLE);
-    createEAttribute(instruction_unreachableEClass, INSTRUCTION_UNREACHABLE__OPCODE);
-
-    basicBlockRefEClass = createEClass(BASIC_BLOCK_REF);
-    createEReference(basicBlockRefEClass, BASIC_BLOCK_REF__REF);
-
-    binaryInstructionEClass = createEClass(BINARY_INSTRUCTION);
-    createEAttribute(binaryInstructionEClass, BINARY_INSTRUCTION__OPCODE);
-    createEReference(binaryInstructionEClass, BINARY_INSTRUCTION__TYPE);
-    createEReference(binaryInstructionEClass, BINARY_INSTRUCTION__OP1);
-    createEReference(binaryInstructionEClass, BINARY_INSTRUCTION__OP2);
-
-    instruction_addEClass = createEClass(INSTRUCTION_ADD);
-
-    instruction_faddEClass = createEClass(INSTRUCTION_FADD);
-    createEReference(instruction_faddEClass, INSTRUCTION_FADD__FAST_MATH_FLAGS);
-
-    fastMathFlagEClass = createEClass(FAST_MATH_FLAG);
-    createEAttribute(fastMathFlagEClass, FAST_MATH_FLAG__KIND);
-
-    instruction_subEClass = createEClass(INSTRUCTION_SUB);
-
-    instruction_fsubEClass = createEClass(INSTRUCTION_FSUB);
-    createEReference(instruction_fsubEClass, INSTRUCTION_FSUB__FAST_MATH_FLAGS);
-
-    instruction_mulEClass = createEClass(INSTRUCTION_MUL);
-
-    instruction_fmulEClass = createEClass(INSTRUCTION_FMUL);
-    createEReference(instruction_fmulEClass, INSTRUCTION_FMUL__FAST_MATH_FLAGS);
-
-    instruction_udivEClass = createEClass(INSTRUCTION_UDIV);
-
-    instruction_sdivEClass = createEClass(INSTRUCTION_SDIV);
-
-    instruction_fdivEClass = createEClass(INSTRUCTION_FDIV);
-    createEReference(instruction_fdivEClass, INSTRUCTION_FDIV__FAST_MATH_FLAGS);
-
-    instruction_uremEClass = createEClass(INSTRUCTION_UREM);
-
-    instruction_sremEClass = createEClass(INSTRUCTION_SREM);
-
-    instruction_fremEClass = createEClass(INSTRUCTION_FREM);
-
-    bitwiseBinaryInstructionEClass = createEClass(BITWISE_BINARY_INSTRUCTION);
-    createEAttribute(bitwiseBinaryInstructionEClass, BITWISE_BINARY_INSTRUCTION__OPCODE);
-    createEReference(bitwiseBinaryInstructionEClass, BITWISE_BINARY_INSTRUCTION__TYPE);
-    createEReference(bitwiseBinaryInstructionEClass, BITWISE_BINARY_INSTRUCTION__OP1);
-    createEReference(bitwiseBinaryInstructionEClass, BITWISE_BINARY_INSTRUCTION__OP2);
-
-    instruction_shlEClass = createEClass(INSTRUCTION_SHL);
-
-    instruction_lshrEClass = createEClass(INSTRUCTION_LSHR);
-
-    instruction_ashrEClass = createEClass(INSTRUCTION_ASHR);
-
-    instruction_andEClass = createEClass(INSTRUCTION_AND);
-
-    instruction_orEClass = createEClass(INSTRUCTION_OR);
-
-    instruction_xorEClass = createEClass(INSTRUCTION_XOR);
-
-    vectorInstructionsEClass = createEClass(VECTOR_INSTRUCTIONS);
-    createEAttribute(vectorInstructionsEClass, VECTOR_INSTRUCTIONS__OPCODE);
-
-    instruction_extractelementEClass = createEClass(INSTRUCTION_EXTRACTELEMENT);
-    createEReference(instruction_extractelementEClass, INSTRUCTION_EXTRACTELEMENT__VECTOR);
-    createEReference(instruction_extractelementEClass, INSTRUCTION_EXTRACTELEMENT__INDEX);
-
-    instruction_insertelementEClass = createEClass(INSTRUCTION_INSERTELEMENT);
-    createEReference(instruction_insertelementEClass, INSTRUCTION_INSERTELEMENT__VECTOR);
-    createEReference(instruction_insertelementEClass, INSTRUCTION_INSERTELEMENT__ELEMENT);
-    createEReference(instruction_insertelementEClass, INSTRUCTION_INSERTELEMENT__INDEX);
-
-    instruction_shufflevectorEClass = createEClass(INSTRUCTION_SHUFFLEVECTOR);
-    createEReference(instruction_shufflevectorEClass, INSTRUCTION_SHUFFLEVECTOR__VECTOR1);
-    createEReference(instruction_shufflevectorEClass, INSTRUCTION_SHUFFLEVECTOR__VECTOR2);
-    createEReference(instruction_shufflevectorEClass, INSTRUCTION_SHUFFLEVECTOR__MASK);
-
-    aggregateInstructionEClass = createEClass(AGGREGATE_INSTRUCTION);
-    createEAttribute(aggregateInstructionEClass, AGGREGATE_INSTRUCTION__OPCODE);
-    createEReference(aggregateInstructionEClass, AGGREGATE_INSTRUCTION__AGGREGATE);
-    createEReference(aggregateInstructionEClass, AGGREGATE_INSTRUCTION__INDICES);
-
-    instruction_extractvalueEClass = createEClass(INSTRUCTION_EXTRACTVALUE);
-
-    instruction_insertvalueEClass = createEClass(INSTRUCTION_INSERTVALUE);
-    createEReference(instruction_insertvalueEClass, INSTRUCTION_INSERTVALUE__ELEMENT);
-
-    memoryInstructionEClass = createEClass(MEMORY_INSTRUCTION);
-    createEAttribute(memoryInstructionEClass, MEMORY_INSTRUCTION__OPCODE);
-
-    instruction_allocaEClass = createEClass(INSTRUCTION_ALLOCA);
-    createEReference(instruction_allocaEClass, INSTRUCTION_ALLOCA__TYPE);
-    createEReference(instruction_allocaEClass, INSTRUCTION_ALLOCA__NUM_ELEMENTS);
-    createEAttribute(instruction_allocaEClass, INSTRUCTION_ALLOCA__ALIGNMENT);
-
-    instruction_loadEClass = createEClass(INSTRUCTION_LOAD);
-    createEReference(instruction_loadEClass, INSTRUCTION_LOAD__POINTER);
-    createEAttribute(instruction_loadEClass, INSTRUCTION_LOAD__ALIGNMENT);
-    createEReference(instruction_loadEClass, INSTRUCTION_LOAD__NONTEMPORAL_INDEX);
-    createEReference(instruction_loadEClass, INSTRUCTION_LOAD__INVARIANT_LOAD_INDEX);
-    createEAttribute(instruction_loadEClass, INSTRUCTION_LOAD__ORDERING);
-
-    instruction_storeEClass = createEClass(INSTRUCTION_STORE);
-    createEReference(instruction_storeEClass, INSTRUCTION_STORE__VALUE);
-    createEReference(instruction_storeEClass, INSTRUCTION_STORE__POINTER);
-    createEAttribute(instruction_storeEClass, INSTRUCTION_STORE__ALIGNMENT);
-    createEReference(instruction_storeEClass, INSTRUCTION_STORE__NONTEMPORAL_INDEX);
-    createEAttribute(instruction_storeEClass, INSTRUCTION_STORE__ORDERING);
-
-    instruction_fenceEClass = createEClass(INSTRUCTION_FENCE);
-    createEAttribute(instruction_fenceEClass, INSTRUCTION_FENCE__ORDERING);
-
-    instruction_cmpxchgEClass = createEClass(INSTRUCTION_CMPXCHG);
-    createEReference(instruction_cmpxchgEClass, INSTRUCTION_CMPXCHG__POINTER);
-    createEReference(instruction_cmpxchgEClass, INSTRUCTION_CMPXCHG__COMPARED_WITH);
-    createEReference(instruction_cmpxchgEClass, INSTRUCTION_CMPXCHG__NEW_VALUE);
-    createEAttribute(instruction_cmpxchgEClass, INSTRUCTION_CMPXCHG__ORDERING);
-
-    instruction_atomicrmwEClass = createEClass(INSTRUCTION_ATOMICRMW);
-    createEAttribute(instruction_atomicrmwEClass, INSTRUCTION_ATOMICRMW__OPERATION);
-    createEReference(instruction_atomicrmwEClass, INSTRUCTION_ATOMICRMW__POINTER);
-    createEReference(instruction_atomicrmwEClass, INSTRUCTION_ATOMICRMW__ARGUMENT);
-    createEAttribute(instruction_atomicrmwEClass, INSTRUCTION_ATOMICRMW__ORDERING);
-
-    instruction_getelementptrEClass = createEClass(INSTRUCTION_GETELEMENTPTR);
-    createEReference(instruction_getelementptrEClass, INSTRUCTION_GETELEMENTPTR__BASE);
-    createEReference(instruction_getelementptrEClass, INSTRUCTION_GETELEMENTPTR__INDICES);
-
-    conversionInstructionEClass = createEClass(CONVERSION_INSTRUCTION);
-    createEAttribute(conversionInstructionEClass, CONVERSION_INSTRUCTION__OPCODE);
-    createEReference(conversionInstructionEClass, CONVERSION_INSTRUCTION__FROM_TYPE);
-    createEReference(conversionInstructionEClass, CONVERSION_INSTRUCTION__VALUE);
-    createEReference(conversionInstructionEClass, CONVERSION_INSTRUCTION__TARGET_TYPE);
-
-    otherInstructionEClass = createEClass(OTHER_INSTRUCTION);
-    createEAttribute(otherInstructionEClass, OTHER_INSTRUCTION__OPCODE);
-
-    instruction_icmpEClass = createEClass(INSTRUCTION_ICMP);
-    createEAttribute(instruction_icmpEClass, INSTRUCTION_ICMP__CONDITION);
-    createEReference(instruction_icmpEClass, INSTRUCTION_ICMP__TYPE);
-    createEReference(instruction_icmpEClass, INSTRUCTION_ICMP__OP1);
-    createEReference(instruction_icmpEClass, INSTRUCTION_ICMP__OP2);
-
-    instruction_fcmpEClass = createEClass(INSTRUCTION_FCMP);
-    createEAttribute(instruction_fcmpEClass, INSTRUCTION_FCMP__CONDITION);
-    createEReference(instruction_fcmpEClass, INSTRUCTION_FCMP__TYPE);
-    createEReference(instruction_fcmpEClass, INSTRUCTION_FCMP__OP1);
-    createEReference(instruction_fcmpEClass, INSTRUCTION_FCMP__OP2);
-
-    instruction_phiEClass = createEClass(INSTRUCTION_PHI);
-    createEAttribute(instruction_phiEClass, INSTRUCTION_PHI__OPCODE);
-    createEReference(instruction_phiEClass, INSTRUCTION_PHI__TYPE);
-    createEReference(instruction_phiEClass, INSTRUCTION_PHI__VALUES);
-    createEReference(instruction_phiEClass, INSTRUCTION_PHI__LABELS);
-
-    instruction_selectEClass = createEClass(INSTRUCTION_SELECT);
-    createEReference(instruction_selectEClass, INSTRUCTION_SELECT__CONDITION);
-    createEReference(instruction_selectEClass, INSTRUCTION_SELECT__VALUE1);
-    createEReference(instruction_selectEClass, INSTRUCTION_SELECT__VALUE2);
-
-    instruction_call_nonVoidEClass = createEClass(INSTRUCTION_CALL_NON_VOID);
-    createEAttribute(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__IS_TAIL);
-    createEAttribute(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__OPCODE);
-    createEReference(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__CCONV);
-    createEReference(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__RETURN_ATTRIBUTES);
-    createEReference(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__TYPE);
-    createEReference(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__CALLEE);
-    createEReference(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__ARGS);
-    createEReference(instruction_call_nonVoidEClass, INSTRUCTION_CALL_NON_VOID__FUNCTION_ATTRIBUTES);
-
-    instruction_call_voidEClass = createEClass(INSTRUCTION_CALL_VOID);
-    createEAttribute(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__IS_TAIL);
-    createEAttribute(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__OPCODE);
-    createEReference(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__CCONV);
-    createEReference(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__RETURN_ATTRIBUTES);
-    createEReference(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__TYPE);
-    createEReference(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__CALLEE);
-    createEReference(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__ARGS);
-    createEReference(instruction_call_voidEClass, INSTRUCTION_CALL_VOID__FUNCTION_ATTRIBUTES);
-
-    argListEClass = createEClass(ARG_LIST);
-    createEReference(argListEClass, ARG_LIST__ARGUMENTS);
-
-    calleeEClass = createEClass(CALLEE);
-
-    inlineAssemblerEClass = createEClass(INLINE_ASSEMBLER);
-    createEAttribute(inlineAssemblerEClass, INLINE_ASSEMBLER__ASSEMBLER);
-    createEAttribute(inlineAssemblerEClass, INLINE_ASSEMBLER__FLAGS);
-
-    instruction_va_argEClass = createEClass(INSTRUCTION_VA_ARG);
-    createEReference(instruction_va_argEClass, INSTRUCTION_VA_ARG__ARGLIST);
-    createEReference(instruction_va_argEClass, INSTRUCTION_VA_ARG__TYPE);
-
-    instruction_landingpadEClass = createEClass(INSTRUCTION_LANDINGPAD);
-    createEReference(instruction_landingpadEClass, INSTRUCTION_LANDINGPAD__RESULT_TYPE);
-    createEReference(instruction_landingpadEClass, INSTRUCTION_LANDINGPAD__PERSONALITY);
-    createEReference(instruction_landingpadEClass, INSTRUCTION_LANDINGPAD__CLAUSES);
-
-    landingpadClauseEClass = createEClass(LANDINGPAD_CLAUSE);
-    createEAttribute(landingpadClauseEClass, LANDINGPAD_CLAUSE__LANDING_PAD_TYPE);
-    createEReference(landingpadClauseEClass, LANDINGPAD_CLAUSE__CATCH_TYPE);
-    createEReference(landingpadClauseEClass, LANDINGPAD_CLAUSE__ARRAY_TYPE);
-    createEReference(landingpadClauseEClass, LANDINGPAD_CLAUSE__ARRAY_CONSTANT);
-
-    typedValueEClass = createEClass(TYPED_VALUE);
-    createEReference(typedValueEClass, TYPED_VALUE__TYPE);
-    createEReference(typedValueEClass, TYPED_VALUE__REF);
-
-    parameterTypeEClass = createEClass(PARAMETER_TYPE);
-    createEReference(parameterTypeEClass, PARAMETER_TYPE__TYPE);
-    createEReference(parameterTypeEClass, PARAMETER_TYPE__ATTRS);
-
-    parameterAttributesEClass = createEClass(PARAMETER_ATTRIBUTES);
-    createEAttribute(parameterAttributesEClass, PARAMETER_ATTRIBUTES__ATTRIBUTES);
-
-    argumentEClass = createEClass(ARGUMENT);
-    createEReference(argumentEClass, ARGUMENT__TYPE);
-    createEReference(argumentEClass, ARGUMENT__REF);
-
-    parameterEClass = createEClass(PARAMETER);
-    createEReference(parameterEClass, PARAMETER__TYPE);
-
-    nonVoidTypeEClass = createEClass(NON_VOID_TYPE);
-    createEReference(nonVoidTypeEClass, NON_VOID_TYPE__BASE_TYPE);
-    createEReference(nonVoidTypeEClass, NON_VOID_TYPE__SUFFIXES);
-    createEReference(nonVoidTypeEClass, NON_VOID_TYPE__STARS);
-
-    starEClass = createEClass(STAR);
-    createEReference(starEClass, STAR__ADDRESS_SPACE);
-
-    typeEClass = createEClass(TYPE);
-    createEReference(typeEClass, TYPE__BASE_TYPE);
-    createEReference(typeEClass, TYPE__STARS);
-    createEReference(typeEClass, TYPE__SUFFIXES);
-
-    typeSuffixEClass = createEClass(TYPE_SUFFIX);
-    createEReference(typeSuffixEClass, TYPE_SUFFIX__CONTAINED_TYPES);
-    createEAttribute(typeSuffixEClass, TYPE_SUFFIX__VARARG);
-    createEReference(typeSuffixEClass, TYPE_SUFFIX__STARS);
-
-    nonLeftRecursiveTypeEClass = createEClass(NON_LEFT_RECURSIVE_TYPE);
-    createEReference(nonLeftRecursiveTypeEClass, NON_LEFT_RECURSIVE_TYPE__TYPE);
-    createEReference(nonLeftRecursiveTypeEClass, NON_LEFT_RECURSIVE_TYPE__TYPEDEF);
-
-    nonLeftRecursiveNonVoidTypeEClass = createEClass(NON_LEFT_RECURSIVE_NON_VOID_TYPE);
-    createEReference(nonLeftRecursiveNonVoidTypeEClass, NON_LEFT_RECURSIVE_NON_VOID_TYPE__TYPE);
-    createEReference(nonLeftRecursiveNonVoidTypeEClass, NON_LEFT_RECURSIVE_NON_VOID_TYPE__TYPEDEF);
-
-    typeDefEClass = createEClass(TYPE_DEF);
-    createEAttribute(typeDefEClass, TYPE_DEF__NAME);
-    createEReference(typeDefEClass, TYPE_DEF__TYPE);
-
-    intTypeEClass = createEClass(INT_TYPE);
-
-    opaqueTypeEClass = createEClass(OPAQUE_TYPE);
-
-    structTypeEClass = createEClass(STRUCT_TYPE);
-    createEReference(structTypeEClass, STRUCT_TYPE__TYPES);
-    createEAttribute(structTypeEClass, STRUCT_TYPE__PACKED);
-
-    vectorTypeEClass = createEClass(VECTOR_TYPE);
-    createEAttribute(vectorTypeEClass, VECTOR_TYPE__SIZE);
-    createEReference(vectorTypeEClass, VECTOR_TYPE__ELEM_TYPE);
-
-    arrayTypeEClass = createEClass(ARRAY_TYPE);
-    createEAttribute(arrayTypeEClass, ARRAY_TYPE__SIZE);
-    createEReference(arrayTypeEClass, ARRAY_TYPE__ELEM_TYPE);
-
-    x86mmxTypeEClass = createEClass(X8_6MMX_TYPE);
-
-    voidTypeEClass = createEClass(VOID_TYPE);
-
-    metadataTypeEClass = createEClass(METADATA_TYPE);
-
-    floatingTypeEClass = createEClass(FLOATING_TYPE);
-
-    cConvEClass = createEClass(CCONV);
-    createEAttribute(cConvEClass, CCONV__VAL);
-    createEAttribute(cConvEClass, CCONV__CUSTOM_NUMBER);
+    if (isLoaded) return;
+    isLoaded = true;
+
+    URL url = getClass().getResource(packageFilename);
+    if (url == null)
+    {
+      throw new RuntimeException("Missing serialized package: " + packageFilename);
+    }
+    URI uri = URI.createURI(url.toString());
+    Resource resource = new EcoreResourceFactoryImpl().createResource(uri);
+    try
+    {
+      resource.load(null);
+    }
+    catch (IOException exception)
+    {
+      throw new WrappedException(exception);
+    }
+    initializeFromLoadedEPackage(this, (EPackage)resource.getContents().get(0));
+    createResource(eNS_URI);
+  }
+
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private boolean isFixed = false;
+
+  /**
+   * Fixes up the loaded package, to make it appear as if it had been programmatically built.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void fixPackageContents()
+  {
+    if (isFixed) return;
+    isFixed = true;
+    fixEClassifiers();
   }
 
   /**
+   * Sets the instance class on the given classifier.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private boolean isInitialized = false;
-
-  /**
-   * Complete the initialization of the package and its meta-model.  This
-   * method is guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void initializePackageContents()
+  @Override
+  protected void fixInstanceClass(EClassifier eClassifier)
   {
-    if (isInitialized) return;
-    isInitialized = true;
-
-    // Initialize package
-    setName(eNAME);
-    setNsPrefix(eNS_PREFIX);
-    setNsURI(eNS_URI);
-
-    // Create type parameters
-
-    // Set bounds for type parameters
-
-    // Add supertypes to classes
-    attributeGroupEClass.getESuperTypes().add(this.getTopLevelElement());
-    namedMetadataEClass.getESuperTypes().add(this.getTopLevelElement());
-    valueRefEClass.getESuperTypes().add(this.getCallee());
-    globalValueRefEClass.getESuperTypes().add(this.getValueRef());
-    localValueRefEClass.getESuperTypes().add(this.getValueRef());
-    globalValueEClass.getESuperTypes().add(this.getTopLevelElement());
-    namedInstructionEClass.getESuperTypes().add(this.getLocalValue());
-    aliasEClass.getESuperTypes().add(this.getGlobalValue());
-    aliasEClass.getESuperTypes().add(this.getGlobalValueDef());
-    targetInfoEClass.getESuperTypes().add(this.getTopLevelElement());
-    inlineAsmEClass.getESuperTypes().add(this.getTopLevelElement());
-    globalVariableEClass.getESuperTypes().add(this.getGlobalValue());
-    globalVariableEClass.getESuperTypes().add(this.getGlobalValueDef());
-    constantExpressionEClass.getESuperTypes().add(this.getConstant());
-    constantExpression_convertEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_getelementptrEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_selectEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_compareEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_extractelementEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_insertelementEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_shufflevectorEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_extractvalueEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_insertvalueEClass.getESuperTypes().add(this.getConstantExpression());
-    constantExpression_binaryEClass.getESuperTypes().add(this.getConstantExpression());
-    undefEClass.getESuperTypes().add(this.getConstant());
-    blockAddressEClass.getESuperTypes().add(this.getConstant());
-    zeroInitializerEClass.getESuperTypes().add(this.getConstant());
-    structureConstantEClass.getESuperTypes().add(this.getConstant());
-    arrayConstantEClass.getESuperTypes().add(this.getConstant());
-    vectorConstantEClass.getESuperTypes().add(this.getConstant());
-    simpleConstantEClass.getESuperTypes().add(this.getConstant());
-    metadataNodeEClass.getESuperTypes().add(this.getConstant());
-    metadataStringEClass.getESuperTypes().add(this.getConstant());
-    functionEClass.getESuperTypes().add(this.getGlobalValue());
-    functionDefEClass.getESuperTypes().add(this.getFunction());
-    functionDeclEClass.getESuperTypes().add(this.getFunction());
-    functionHeaderEClass.getESuperTypes().add(this.getGlobalValueDef());
-    startingInstructionEClass.getESuperTypes().add(this.getNamedInstruction());
-    startingInstructionEClass.getESuperTypes().add(this.getInstruction());
-    middleInstructionEClass.getESuperTypes().add(this.getInstruction());
-    namedMiddleInstructionEClass.getESuperTypes().add(this.getNamedInstruction());
-    terminatorInstructionEClass.getESuperTypes().add(this.getInstruction());
-    namedTerminatorInstructionEClass.getESuperTypes().add(this.getNamedInstruction());
-    instruction_addEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_faddEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_subEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_fsubEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_mulEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_fmulEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_udivEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_sdivEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_fdivEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_uremEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_sremEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_fremEClass.getESuperTypes().add(this.getBinaryInstruction());
-    instruction_shlEClass.getESuperTypes().add(this.getBitwiseBinaryInstruction());
-    instruction_lshrEClass.getESuperTypes().add(this.getBitwiseBinaryInstruction());
-    instruction_ashrEClass.getESuperTypes().add(this.getBitwiseBinaryInstruction());
-    instruction_andEClass.getESuperTypes().add(this.getBitwiseBinaryInstruction());
-    instruction_orEClass.getESuperTypes().add(this.getBitwiseBinaryInstruction());
-    instruction_xorEClass.getESuperTypes().add(this.getBitwiseBinaryInstruction());
-    instruction_extractelementEClass.getESuperTypes().add(this.getVectorInstructions());
-    instruction_insertelementEClass.getESuperTypes().add(this.getVectorInstructions());
-    instruction_shufflevectorEClass.getESuperTypes().add(this.getVectorInstructions());
-    instruction_extractvalueEClass.getESuperTypes().add(this.getAggregateInstruction());
-    instruction_insertvalueEClass.getESuperTypes().add(this.getAggregateInstruction());
-    instruction_allocaEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_loadEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_storeEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_fenceEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_cmpxchgEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_atomicrmwEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_getelementptrEClass.getESuperTypes().add(this.getMemoryInstruction());
-    instruction_icmpEClass.getESuperTypes().add(this.getOtherInstruction());
-    instruction_fcmpEClass.getESuperTypes().add(this.getOtherInstruction());
-    instruction_selectEClass.getESuperTypes().add(this.getOtherInstruction());
-    inlineAssemblerEClass.getESuperTypes().add(this.getCallee());
-    instruction_va_argEClass.getESuperTypes().add(this.getOtherInstruction());
-    instruction_landingpadEClass.getESuperTypes().add(this.getOtherInstruction());
-    parameterEClass.getESuperTypes().add(this.getLocalValue());
-    typeDefEClass.getESuperTypes().add(this.getTopLevelElement());
-
-    // Initialize classes and features; add operations and parameters
-    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Elements(), this.getTopLevelElement(), null, "elements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(topLevelElementEClass, TopLevelElement.class, "TopLevelElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(attributeGroupEClass, AttributeGroup.class, "AttributeGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAttributeGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAttributeGroup_Attributes(), this.getFunctionAttribute(), null, "attributes", null, 0, -1, AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAttributeGroup_Alignstack(), this.getAlignStack(), null, "alignstack", null, 0, -1, AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAttributeGroup_AlignstackValue(), ecorePackage.getEString(), "alignstackValue", null, 0, -1, AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAttributeGroup_TargetSpecificAttributes(), this.getTargetSpecificAttribute(), null, "targetSpecificAttributes", null, 0, -1, AttributeGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(targetSpecificAttributeEClass, TargetSpecificAttribute.class, "TargetSpecificAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTargetSpecificAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, TargetSpecificAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTargetSpecificAttribute_Value(), ecorePackage.getEString(), "value", null, 0, 1, TargetSpecificAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(namedMetadataEClass, NamedMetadata.class, "NamedMetadata", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNamedMetadata_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedMetadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNamedMetadata_Node(), this.getMetadataNode(), null, "node", null, 0, 1, NamedMetadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(metadataRefEClass, MetadataRef.class, "MetadataRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMetadataRef_Ref(), this.getNamedMetadata(), null, "ref", null, 0, 1, MetadataRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(valueRefEClass, ValueRef.class, "ValueRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(globalValueRefEClass, GlobalValueRef.class, "GlobalValueRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGlobalValueRef_Constant(), this.getConstant(), null, "constant", null, 0, 1, GlobalValueRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGlobalValueRef_Metadata(), this.getMetadataRef(), null, "metadata", null, 0, 1, GlobalValueRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(localValueRefEClass, LocalValueRef.class, "LocalValueRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLocalValueRef_Ref(), this.getLocalValue(), null, "ref", null, 0, 1, LocalValueRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(globalValueEClass, GlobalValue.class, "GlobalValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(globalValueDefEClass, GlobalValueDef.class, "GlobalValueDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(localValueEClass, LocalValue.class, "LocalValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLocalValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, LocalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(namedInstructionEClass, NamedInstruction.class, "NamedInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_Metadata(), this.getMetadataSuffix(), null, "metadata", null, 0, -1, Instruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(aliasEClass, Alias.class, "Alias", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAlias_Name(), ecorePackage.getEString(), "name", null, 0, 1, Alias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlias_Linkage(), ecorePackage.getEString(), "linkage", null, 0, 1, Alias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlias_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, Alias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAlias_Type(), this.getType(), null, "type", null, 0, 1, Alias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAlias_Aliasee(), this.getAliasee(), null, "aliasee", null, 0, 1, Alias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(aliaseeEClass, Aliasee.class, "Aliasee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAliasee_Ref(), this.getGlobalValueDef(), null, "ref", null, 0, 1, Aliasee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAliasee_Bitcast(), this.getConstantExpression_convert(), null, "bitcast", null, 0, 1, Aliasee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(targetInfoEClass, TargetInfo.class, "TargetInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTargetInfo_InfoType(), ecorePackage.getEString(), "infoType", null, 0, 1, TargetInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTargetInfo_Layout(), ecorePackage.getEString(), "layout", null, 0, 1, TargetInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(inlineAsmEClass, InlineAsm.class, "InlineAsm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInlineAsm_AsmLine(), ecorePackage.getEString(), "asmLine", null, 0, 1, InlineAsm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(globalVariableEClass, GlobalVariable.class, "GlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGlobalVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGlobalVariable_Linkage(), ecorePackage.getEString(), "linkage", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGlobalVariable_Addrspace(), this.getAddressSpace(), null, "addrspace", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGlobalVariable_TlsModel(), ecorePackage.getEString(), "tlsModel", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGlobalVariable_Type(), this.getType(), null, "type", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGlobalVariable_InitialValue(), this.getConstant(), null, "initialValue", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGlobalVariable_Section(), ecorePackage.getEString(), "section", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGlobalVariable_Align(), ecorePackage.getEString(), "align", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstant_Ref(), this.getGlobalValueDef(), null, "ref", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpressionEClass, ConstantExpression.class, "ConstantExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConstantExpression_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, ConstantExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_convertEClass, ConstantExpression_convert.class, "ConstantExpression_convert", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_convert_FromType(), this.getType(), null, "fromType", null, 0, 1, ConstantExpression_convert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_convert_Constant(), this.getGlobalValueRef(), null, "constant", null, 0, 1, ConstantExpression_convert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_convert_TargetType(), this.getType(), null, "targetType", null, 0, 1, ConstantExpression_convert.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_getelementptrEClass, ConstantExpression_getelementptr.class, "ConstantExpression_getelementptr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_getelementptr_ConstantType(), this.getType(), null, "constantType", null, 0, 1, ConstantExpression_getelementptr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_getelementptr_Constant(), this.getGlobalValueRef(), null, "constant", null, 0, 1, ConstantExpression_getelementptr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_getelementptr_IndexTypes(), this.getType(), null, "indexTypes", null, 0, -1, ConstantExpression_getelementptr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_getelementptr_Indices(), this.getConstant(), null, "indices", null, 0, -1, ConstantExpression_getelementptr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_selectEClass, ConstantExpression_select.class, "ConstantExpression_select", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_select_Condition(), this.getTypedValue(), null, "condition", null, 0, 1, ConstantExpression_select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_select_Op1(), this.getTypedValue(), null, "op1", null, 0, 1, ConstantExpression_select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_select_Op2(), this.getTypedValue(), null, "op2", null, 0, 1, ConstantExpression_select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_compareEClass, ConstantExpression_compare.class, "ConstantExpression_compare", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConstantExpression_compare_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, ConstantExpression_compare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_compare_Op1(), this.getTypedValue(), null, "op1", null, 0, 1, ConstantExpression_compare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_compare_Op2(), this.getTypedValue(), null, "op2", null, 0, 1, ConstantExpression_compare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_extractelementEClass, ConstantExpression_extractelement.class, "ConstantExpression_extractelement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_extractelement_Vector(), this.getTypedValue(), null, "vector", null, 0, 1, ConstantExpression_extractelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_extractelement_Index(), this.getTypedValue(), null, "index", null, 0, 1, ConstantExpression_extractelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_insertelementEClass, ConstantExpression_insertelement.class, "ConstantExpression_insertelement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_insertelement_VectorType(), this.getVectorType(), null, "vectorType", null, 0, 1, ConstantExpression_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_insertelement_Vector(), this.getValueRef(), null, "vector", null, 0, 1, ConstantExpression_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_insertelement_Element(), this.getTypedValue(), null, "element", null, 0, 1, ConstantExpression_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_insertelement_Index(), this.getTypedValue(), null, "index", null, 0, 1, ConstantExpression_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_shufflevectorEClass, ConstantExpression_shufflevector.class, "ConstantExpression_shufflevector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_shufflevector_Vector1(), this.getTypedValue(), null, "vector1", null, 0, 1, ConstantExpression_shufflevector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_shufflevector_Vector2(), this.getTypedValue(), null, "vector2", null, 0, 1, ConstantExpression_shufflevector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_shufflevector_Mask(), this.getTypedValue(), null, "mask", null, 0, 1, ConstantExpression_shufflevector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_extractvalueEClass, ConstantExpression_extractvalue.class, "ConstantExpression_extractvalue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_extractvalue_Value(), this.getTypedValue(), null, "value", null, 0, 1, ConstantExpression_extractvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConstantExpression_extractvalue_Indices(), ecorePackage.getEString(), "indices", null, 0, -1, ConstantExpression_extractvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_insertvalueEClass, ConstantExpression_insertvalue.class, "ConstantExpression_insertvalue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_insertvalue_Value(), this.getTypedValue(), null, "value", null, 0, 1, ConstantExpression_insertvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_insertvalue_Element(), this.getTypedValue(), null, "element", null, 0, 1, ConstantExpression_insertvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConstantExpression_insertvalue_Indices(), ecorePackage.getEString(), "indices", null, 0, -1, ConstantExpression_insertvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantExpression_binaryEClass, ConstantExpression_binary.class, "ConstantExpression_binary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantExpression_binary_Op1(), this.getTypedValue(), null, "op1", null, 0, 1, ConstantExpression_binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantExpression_binary_Op2(), this.getTypedValue(), null, "op2", null, 0, 1, ConstantExpression_binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(undefEClass, Undef.class, "Undef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(blockAddressEClass, BlockAddress.class, "BlockAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBlockAddress_Function(), this.getGlobalValueRef(), null, "function", null, 0, 1, BlockAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBlockAddress_BasicBlock(), this.getBasicBlockRef(), null, "basicBlock", null, 0, 1, BlockAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(zeroInitializerEClass, ZeroInitializer.class, "ZeroInitializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(structureConstantEClass, StructureConstant.class, "StructureConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStructureConstant_List(), this.getConstantList(), null, "list", null, 0, 1, StructureConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStructureConstant_Packed(), ecorePackage.getEString(), "packed", null, 0, 1, StructureConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(arrayConstantEClass, ArrayConstant.class, "ArrayConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getArrayConstant_List(), this.getConstantList(), null, "list", null, 0, 1, ArrayConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(vectorConstantEClass, VectorConstant.class, "VectorConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVectorConstant_List(), this.getConstantList(), null, "list", null, 0, 1, VectorConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(constantListEClass, ConstantList.class, "ConstantList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConstantList_TypedConstants(), this.getTypedConstant(), null, "typedConstants", null, 0, -1, ConstantList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(typedConstantEClass, TypedConstant.class, "TypedConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTypedConstant_Type(), this.getType(), null, "type", null, 0, 1, TypedConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTypedConstant_Value(), this.getConstant(), null, "value", null, 0, 1, TypedConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(simpleConstantEClass, SimpleConstant.class, "SimpleConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSimpleConstant_Value(), ecorePackage.getEString(), "value", null, 0, 1, SimpleConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(metadataNodeEClass, MetadataNode.class, "MetadataNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMetadataNode_Elements(), this.getMetadataNodeElement(), null, "elements", null, 0, -1, MetadataNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(metadataNodeElementEClass, MetadataNodeElement.class, "MetadataNodeElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMetadataNodeElement_Value(), this.getTypedValue(), null, "value", null, 0, 1, MetadataNodeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMetadataNodeElement_MetadataRef(), this.getMetadataRef(), null, "metadataRef", null, 0, 1, MetadataNodeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMetadataNodeElement_Null(), ecorePackage.getEString(), "null", null, 0, 1, MetadataNodeElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(metadataStringEClass, MetadataString.class, "MetadataString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMetadataString_Name(), ecorePackage.getEString(), "name", null, 0, 1, MetadataString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(addressSpaceEClass, AddressSpace.class, "AddressSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAddressSpace_Value(), ecorePackage.getEString(), "value", null, 0, 1, AddressSpace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunction_Header(), this.getFunctionHeader(), null, "header", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionDefEClass, FunctionDef.class, "FunctionDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunctionDef_BasicBlocks(), this.getBasicBlock(), null, "basicBlocks", null, 0, -1, FunctionDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionDeclEClass, FunctionDecl.class, "FunctionDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(functionHeaderEClass, FunctionHeader.class, "FunctionHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFunctionHeader_Linkage(), ecorePackage.getEString(), "linkage", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFunctionHeader_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionHeader_Cconv(), this.getCConv(), null, "cconv", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionHeader_RettypeAttrs(), this.getParameterAttributes(), null, "rettypeAttrs", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionHeader_Rettype(), this.getType(), null, "rettype", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFunctionHeader_Name(), ecorePackage.getEString(), "name", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionHeader_Parameters(), this.getParameters(), null, "parameters", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionHeader_Attrs(), this.getFunctionAttributes(), null, "attrs", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFunctionHeader_Section(), ecorePackage.getEString(), "section", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFunctionHeader_Align(), ecorePackage.getEString(), "align", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFunctionHeader_Gc(), ecorePackage.getEString(), "gc", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionHeader_FunctionPrefix(), this.getFunctionPrefix(), null, "functionPrefix", null, 0, 1, FunctionHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionPrefixEClass, FunctionPrefix.class, "FunctionPrefix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunctionPrefix_Value(), this.getTypedConstant(), null, "value", null, 0, 1, FunctionPrefix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(parametersEClass, Parameters.class, "Parameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParameters_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getParameters_Vararg(), ecorePackage.getEString(), "vararg", null, 0, 1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionAttributesEClass, FunctionAttributes.class, "FunctionAttributes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunctionAttributes_FunctionAttributes(), this.getFunctionAttribute(), null, "functionAttributes", null, 0, -1, FunctionAttributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionAttributes_Alignstack(), this.getAlignStack(), null, "alignstack", null, 0, -1, FunctionAttributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFunctionAttributes_AlignstackValue(), ecorePackage.getEString(), "alignstackValue", null, 0, -1, FunctionAttributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionAttributes_FunctionAttributeGroupRefs(), this.getAttributeGroup(), null, "functionAttributeGroupRefs", null, 0, -1, FunctionAttributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(alignStackEClass, AlignStack.class, "AlignStack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(functionAttributeEClass, FunctionAttribute.class, "FunctionAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFunctionAttribute_Attribute(), ecorePackage.getEString(), "attribute", null, 0, 1, FunctionAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(basicBlockEClass, BasicBlock.class, "BasicBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBasicBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, BasicBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBasicBlock_Instructions(), this.getInstruction(), null, "instructions", null, 0, -1, BasicBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(metadataSuffixEClass, MetadataSuffix.class, "MetadataSuffix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMetadataSuffix_Name(), ecorePackage.getEString(), "name", null, 0, 1, MetadataSuffix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMetadataSuffix_Value(), this.getMetadataRef(), null, "value", null, 0, 1, MetadataSuffix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(startingInstructionEClass, StartingInstruction.class, "StartingInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStartingInstruction_Instruction(), this.getInstruction_phi(), null, "instruction", null, 0, 1, StartingInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(middleInstructionEClass, MiddleInstruction.class, "MiddleInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMiddleInstruction_Instruction(), ecorePackage.getEObject(), null, "instruction", null, 0, 1, MiddleInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(namedMiddleInstructionEClass, NamedMiddleInstruction.class, "NamedMiddleInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNamedMiddleInstruction_Instruction(), ecorePackage.getEObject(), null, "instruction", null, 0, 1, NamedMiddleInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(terminatorInstructionEClass, TerminatorInstruction.class, "TerminatorInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTerminatorInstruction_Instruction(), ecorePackage.getEObject(), null, "instruction", null, 0, 1, TerminatorInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(namedTerminatorInstructionEClass, NamedTerminatorInstruction.class, "NamedTerminatorInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNamedTerminatorInstruction_Instruction(), this.getInstruction_invoke_nonVoid(), null, "instruction", null, 0, 1, NamedTerminatorInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_retEClass, Instruction_ret.class, "Instruction_ret", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_ret_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_ret.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_ret_Val(), this.getTypedValue(), null, "val", null, 0, 1, Instruction_ret.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_brEClass, Instruction_br.class, "Instruction_br", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_br_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_br.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_br_Condition(), this.getTypedValue(), null, "condition", null, 0, 1, Instruction_br.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_br_True(), this.getBasicBlockRef(), null, "true", null, 0, 1, Instruction_br.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_br_False(), this.getBasicBlockRef(), null, "false", null, 0, 1, Instruction_br.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_br_Unconditional(), this.getBasicBlockRef(), null, "unconditional", null, 0, 1, Instruction_br.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_switchEClass, Instruction_switch.class, "Instruction_switch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_switch_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_switch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_switch_ComparisonValue(), this.getTypedValue(), null, "comparisonValue", null, 0, 1, Instruction_switch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_switch_DefaultDest(), this.getBasicBlockRef(), null, "defaultDest", null, 0, 1, Instruction_switch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_switch_CaseConditions(), this.getTypedValue(), null, "caseConditions", null, 0, -1, Instruction_switch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_switch_Destinations(), this.getBasicBlockRef(), null, "destinations", null, 0, -1, Instruction_switch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_indirectbrEClass, Instruction_indirectbr.class, "Instruction_indirectbr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_indirectbr_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_indirectbr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_indirectbr_Address(), this.getTypedValue(), null, "address", null, 0, 1, Instruction_indirectbr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_indirectbr_Destinations(), this.getBasicBlockRef(), null, "destinations", null, 0, -1, Instruction_indirectbr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_invoke_voidEClass, Instruction_invoke_void.class, "Instruction_invoke_void", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_invoke_void_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_Cconv(), this.getCConv(), null, "cconv", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_Type(), this.getVoidType(), null, "type", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_Callee(), this.getCallee(), null, "callee", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_Args(), this.getArgList(), null, "args", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_Attributes(), this.getFunctionAttributes(), null, "attributes", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_ToLabel(), this.getBasicBlockRef(), null, "toLabel", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_void_ExceptionLabel(), this.getBasicBlockRef(), null, "exceptionLabel", null, 0, 1, Instruction_invoke_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_invoke_nonVoidEClass, Instruction_invoke_nonVoid.class, "Instruction_invoke_nonVoid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_invoke_nonVoid_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_Cconv(), this.getCConv(), null, "cconv", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_Type(), this.getNonVoidType(), null, "type", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_Callee(), this.getCallee(), null, "callee", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_Args(), this.getArgList(), null, "args", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_Attributes(), this.getFunctionAttributes(), null, "attributes", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_ToLabel(), this.getBasicBlockRef(), null, "toLabel", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_invoke_nonVoid_ExceptionLabel(), this.getBasicBlockRef(), null, "exceptionLabel", null, 0, 1, Instruction_invoke_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_resumeEClass, Instruction_resume.class, "Instruction_resume", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_resume_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_resume_Value(), this.getTypedValue(), null, "value", null, 0, 1, Instruction_resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_unreachableEClass, Instruction_unreachable.class, "Instruction_unreachable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_unreachable_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_unreachable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(basicBlockRefEClass, BasicBlockRef.class, "BasicBlockRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBasicBlockRef_Ref(), this.getBasicBlock(), null, "ref", null, 0, 1, BasicBlockRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(binaryInstructionEClass, BinaryInstruction.class, "BinaryInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBinaryInstruction_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, BinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBinaryInstruction_Type(), this.getType(), null, "type", null, 0, 1, BinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBinaryInstruction_Op1(), this.getValueRef(), null, "op1", null, 0, 1, BinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBinaryInstruction_Op2(), this.getValueRef(), null, "op2", null, 0, 1, BinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_addEClass, Instruction_add.class, "Instruction_add", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_faddEClass, Instruction_fadd.class, "Instruction_fadd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_fadd_FastMathFlags(), this.getFastMathFlag(), null, "fastMathFlags", null, 0, -1, Instruction_fadd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fastMathFlagEClass, FastMathFlag.class, "FastMathFlag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFastMathFlag_Kind(), ecorePackage.getEString(), "kind", null, 0, 1, FastMathFlag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_subEClass, Instruction_sub.class, "Instruction_sub", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_fsubEClass, Instruction_fsub.class, "Instruction_fsub", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_fsub_FastMathFlags(), this.getFastMathFlag(), null, "fastMathFlags", null, 0, -1, Instruction_fsub.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_mulEClass, Instruction_mul.class, "Instruction_mul", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_fmulEClass, Instruction_fmul.class, "Instruction_fmul", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_fmul_FastMathFlags(), this.getFastMathFlag(), null, "fastMathFlags", null, 0, -1, Instruction_fmul.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_udivEClass, Instruction_udiv.class, "Instruction_udiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_sdivEClass, Instruction_sdiv.class, "Instruction_sdiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_fdivEClass, Instruction_fdiv.class, "Instruction_fdiv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_fdiv_FastMathFlags(), this.getFastMathFlag(), null, "fastMathFlags", null, 0, -1, Instruction_fdiv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_uremEClass, Instruction_urem.class, "Instruction_urem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_sremEClass, Instruction_srem.class, "Instruction_srem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_fremEClass, Instruction_frem.class, "Instruction_frem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(bitwiseBinaryInstructionEClass, BitwiseBinaryInstruction.class, "BitwiseBinaryInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBitwiseBinaryInstruction_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, BitwiseBinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBitwiseBinaryInstruction_Type(), this.getType(), null, "type", null, 0, 1, BitwiseBinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBitwiseBinaryInstruction_Op1(), this.getValueRef(), null, "op1", null, 0, 1, BitwiseBinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBitwiseBinaryInstruction_Op2(), this.getValueRef(), null, "op2", null, 0, 1, BitwiseBinaryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_shlEClass, Instruction_shl.class, "Instruction_shl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_lshrEClass, Instruction_lshr.class, "Instruction_lshr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_ashrEClass, Instruction_ashr.class, "Instruction_ashr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_andEClass, Instruction_and.class, "Instruction_and", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_orEClass, Instruction_or.class, "Instruction_or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_xorEClass, Instruction_xor.class, "Instruction_xor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(vectorInstructionsEClass, VectorInstructions.class, "VectorInstructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getVectorInstructions_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, VectorInstructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_extractelementEClass, Instruction_extractelement.class, "Instruction_extractelement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_extractelement_Vector(), this.getTypedValue(), null, "vector", null, 0, 1, Instruction_extractelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_extractelement_Index(), this.getTypedValue(), null, "index", null, 0, 1, Instruction_extractelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_insertelementEClass, Instruction_insertelement.class, "Instruction_insertelement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_insertelement_Vector(), this.getTypedValue(), null, "vector", null, 0, 1, Instruction_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_insertelement_Element(), this.getTypedValue(), null, "element", null, 0, 1, Instruction_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_insertelement_Index(), this.getTypedValue(), null, "index", null, 0, 1, Instruction_insertelement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_shufflevectorEClass, Instruction_shufflevector.class, "Instruction_shufflevector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_shufflevector_Vector1(), this.getTypedValue(), null, "vector1", null, 0, 1, Instruction_shufflevector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_shufflevector_Vector2(), this.getTypedValue(), null, "vector2", null, 0, 1, Instruction_shufflevector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_shufflevector_Mask(), this.getTypedValue(), null, "mask", null, 0, 1, Instruction_shufflevector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(aggregateInstructionEClass, AggregateInstruction.class, "AggregateInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAggregateInstruction_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, AggregateInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAggregateInstruction_Aggregate(), this.getTypedValue(), null, "aggregate", null, 0, 1, AggregateInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAggregateInstruction_Indices(), this.getConstant(), null, "indices", null, 0, -1, AggregateInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_extractvalueEClass, Instruction_extractvalue.class, "Instruction_extractvalue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(instruction_insertvalueEClass, Instruction_insertvalue.class, "Instruction_insertvalue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_insertvalue_Element(), this.getTypedValue(), null, "element", null, 0, 1, Instruction_insertvalue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(memoryInstructionEClass, MemoryInstruction.class, "MemoryInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMemoryInstruction_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, MemoryInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_allocaEClass, Instruction_alloca.class, "Instruction_alloca", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_alloca_Type(), this.getType(), null, "type", null, 0, 1, Instruction_alloca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_alloca_NumElements(), this.getTypedValue(), null, "numElements", null, 0, 1, Instruction_alloca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_alloca_Alignment(), ecorePackage.getEString(), "alignment", null, 0, 1, Instruction_alloca.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_loadEClass, Instruction_load.class, "Instruction_load", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_load_Pointer(), this.getTypedValue(), null, "pointer", null, 0, 1, Instruction_load.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_load_Alignment(), ecorePackage.getEString(), "alignment", null, 0, 1, Instruction_load.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_load_NontemporalIndex(), this.getMetadataRef(), null, "nontemporalIndex", null, 0, 1, Instruction_load.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_load_InvariantLoadIndex(), this.getMetadataRef(), null, "invariantLoadIndex", null, 0, 1, Instruction_load.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_load_Ordering(), ecorePackage.getEString(), "ordering", null, 0, 1, Instruction_load.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_storeEClass, Instruction_store.class, "Instruction_store", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_store_Value(), this.getTypedValue(), null, "value", null, 0, 1, Instruction_store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_store_Pointer(), this.getTypedValue(), null, "pointer", null, 0, 1, Instruction_store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_store_Alignment(), ecorePackage.getEString(), "alignment", null, 0, 1, Instruction_store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_store_NontemporalIndex(), this.getMetadataRef(), null, "nontemporalIndex", null, 0, 1, Instruction_store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_store_Ordering(), ecorePackage.getEString(), "ordering", null, 0, 1, Instruction_store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_fenceEClass, Instruction_fence.class, "Instruction_fence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_fence_Ordering(), ecorePackage.getEString(), "ordering", null, 0, 1, Instruction_fence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_cmpxchgEClass, Instruction_cmpxchg.class, "Instruction_cmpxchg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_cmpxchg_Pointer(), this.getTypedValue(), null, "pointer", null, 0, 1, Instruction_cmpxchg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_cmpxchg_ComparedWith(), this.getTypedValue(), null, "comparedWith", null, 0, 1, Instruction_cmpxchg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_cmpxchg_NewValue(), this.getTypedValue(), null, "newValue", null, 0, 1, Instruction_cmpxchg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_cmpxchg_Ordering(), ecorePackage.getEString(), "ordering", null, 0, 1, Instruction_cmpxchg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_atomicrmwEClass, Instruction_atomicrmw.class, "Instruction_atomicrmw", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_atomicrmw_Operation(), ecorePackage.getEString(), "operation", null, 0, 1, Instruction_atomicrmw.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_atomicrmw_Pointer(), this.getTypedValue(), null, "pointer", null, 0, 1, Instruction_atomicrmw.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_atomicrmw_Argument(), this.getTypedValue(), null, "argument", null, 0, 1, Instruction_atomicrmw.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_atomicrmw_Ordering(), ecorePackage.getEString(), "ordering", null, 0, 1, Instruction_atomicrmw.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_getelementptrEClass, Instruction_getelementptr.class, "Instruction_getelementptr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_getelementptr_Base(), this.getTypedValue(), null, "base", null, 0, 1, Instruction_getelementptr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_getelementptr_Indices(), this.getTypedValue(), null, "indices", null, 0, -1, Instruction_getelementptr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(conversionInstructionEClass, ConversionInstruction.class, "ConversionInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConversionInstruction_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, ConversionInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConversionInstruction_FromType(), this.getType(), null, "fromType", null, 0, 1, ConversionInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConversionInstruction_Value(), this.getValueRef(), null, "value", null, 0, 1, ConversionInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConversionInstruction_TargetType(), this.getType(), null, "targetType", null, 0, 1, ConversionInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(otherInstructionEClass, OtherInstruction.class, "OtherInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOtherInstruction_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, OtherInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_icmpEClass, Instruction_icmp.class, "Instruction_icmp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_icmp_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Instruction_icmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_icmp_Type(), this.getType(), null, "type", null, 0, 1, Instruction_icmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_icmp_Op1(), this.getValueRef(), null, "op1", null, 0, 1, Instruction_icmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_icmp_Op2(), this.getValueRef(), null, "op2", null, 0, 1, Instruction_icmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_fcmpEClass, Instruction_fcmp.class, "Instruction_fcmp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_fcmp_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Instruction_fcmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_fcmp_Type(), this.getType(), null, "type", null, 0, 1, Instruction_fcmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_fcmp_Op1(), this.getValueRef(), null, "op1", null, 0, 1, Instruction_fcmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_fcmp_Op2(), this.getValueRef(), null, "op2", null, 0, 1, Instruction_fcmp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_phiEClass, Instruction_phi.class, "Instruction_phi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_phi_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_phi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_phi_Type(), this.getType(), null, "type", null, 0, 1, Instruction_phi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_phi_Values(), this.getValueRef(), null, "values", null, 0, -1, Instruction_phi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_phi_Labels(), this.getBasicBlockRef(), null, "labels", null, 0, -1, Instruction_phi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_selectEClass, Instruction_select.class, "Instruction_select", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_select_Condition(), this.getTypedValue(), null, "condition", null, 0, 1, Instruction_select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_select_Value1(), this.getTypedValue(), null, "value1", null, 0, 1, Instruction_select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_select_Value2(), this.getTypedValue(), null, "value2", null, 0, 1, Instruction_select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_call_nonVoidEClass, Instruction_call_nonVoid.class, "Instruction_call_nonVoid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_call_nonVoid_IsTail(), ecorePackage.getEBoolean(), "isTail", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_call_nonVoid_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_nonVoid_Cconv(), this.getCConv(), null, "cconv", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_nonVoid_ReturnAttributes(), this.getParameterAttributes(), null, "returnAttributes", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_nonVoid_Type(), this.getNonVoidType(), null, "type", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_nonVoid_Callee(), this.getCallee(), null, "callee", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_nonVoid_Args(), this.getArgList(), null, "args", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_nonVoid_FunctionAttributes(), this.getFunctionAttributes(), null, "functionAttributes", null, 0, 1, Instruction_call_nonVoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_call_voidEClass, Instruction_call_void.class, "Instruction_call_void", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInstruction_call_void_IsTail(), ecorePackage.getEBoolean(), "isTail", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_call_void_Opcode(), ecorePackage.getEString(), "opcode", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_void_Cconv(), this.getCConv(), null, "cconv", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_void_ReturnAttributes(), this.getParameterAttributes(), null, "returnAttributes", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_void_Type(), this.getVoidType(), null, "type", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_void_Callee(), this.getCallee(), null, "callee", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_void_Args(), this.getArgList(), null, "args", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_call_void_FunctionAttributes(), this.getFunctionAttributes(), null, "functionAttributes", null, 0, 1, Instruction_call_void.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(argListEClass, ArgList.class, "ArgList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getArgList_Arguments(), this.getArgument(), null, "arguments", null, 0, -1, ArgList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(calleeEClass, Callee.class, "Callee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(inlineAssemblerEClass, InlineAssembler.class, "InlineAssembler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInlineAssembler_Assembler(), ecorePackage.getEString(), "assembler", null, 0, 1, InlineAssembler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInlineAssembler_Flags(), ecorePackage.getEString(), "flags", null, 0, 1, InlineAssembler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_va_argEClass, Instruction_va_arg.class, "Instruction_va_arg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_va_arg_Arglist(), this.getTypedValue(), null, "arglist", null, 0, 1, Instruction_va_arg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_va_arg_Type(), this.getType(), null, "type", null, 0, 1, Instruction_va_arg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instruction_landingpadEClass, Instruction_landingpad.class, "Instruction_landingpad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstruction_landingpad_ResultType(), this.getType(), null, "resultType", null, 0, 1, Instruction_landingpad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_landingpad_Personality(), this.getTypedValue(), null, "personality", null, 0, 1, Instruction_landingpad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInstruction_landingpad_Clauses(), this.getLandingpadClause(), null, "clauses", null, 0, -1, Instruction_landingpad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(landingpadClauseEClass, LandingpadClause.class, "LandingpadClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLandingpadClause_LandingPadType(), ecorePackage.getEString(), "landingPadType", null, 0, 1, LandingpadClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLandingpadClause_CatchType(), this.getTypedValue(), null, "catchType", null, 0, 1, LandingpadClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLandingpadClause_ArrayType(), this.getArrayType(), null, "arrayType", null, 0, 1, LandingpadClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLandingpadClause_ArrayConstant(), this.getArrayConstant(), null, "arrayConstant", null, 0, 1, LandingpadClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(typedValueEClass, TypedValue.class, "TypedValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTypedValue_Type(), this.getType(), null, "type", null, 0, 1, TypedValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTypedValue_Ref(), this.getValueRef(), null, "ref", null, 0, 1, TypedValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(parameterTypeEClass, ParameterType.class, "ParameterType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParameterType_Type(), this.getType(), null, "type", null, 0, 1, ParameterType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParameterType_Attrs(), this.getParameterAttributes(), null, "attrs", null, 0, 1, ParameterType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(parameterAttributesEClass, ParameterAttributes.class, "ParameterAttributes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParameterAttributes_Attributes(), ecorePackage.getEString(), "attributes", null, 0, -1, ParameterAttributes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getArgument_Type(), this.getParameterType(), null, "type", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArgument_Ref(), this.getValueRef(), null, "ref", null, 0, 1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParameter_Type(), this.getParameterType(), null, "type", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(nonVoidTypeEClass, NonVoidType.class, "NonVoidType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNonVoidType_BaseType(), ecorePackage.getEObject(), null, "baseType", null, 0, 1, NonVoidType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNonVoidType_Suffixes(), this.getTypeSuffix(), null, "suffixes", null, 0, -1, NonVoidType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNonVoidType_Stars(), this.getStar(), null, "stars", null, 0, -1, NonVoidType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(starEClass, Star.class, "Star", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStar_AddressSpace(), this.getAddressSpace(), null, "addressSpace", null, 0, 1, Star.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getType_BaseType(), this.getNonLeftRecursiveType(), null, "baseType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getType_Stars(), this.getStar(), null, "stars", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getType_Suffixes(), this.getTypeSuffix(), null, "suffixes", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(typeSuffixEClass, TypeSuffix.class, "TypeSuffix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTypeSuffix_ContainedTypes(), this.getParameterType(), null, "containedTypes", null, 0, -1, TypeSuffix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTypeSuffix_Vararg(), ecorePackage.getEString(), "vararg", null, 0, 1, TypeSuffix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTypeSuffix_Stars(), this.getStar(), null, "stars", null, 0, -1, TypeSuffix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(nonLeftRecursiveTypeEClass, NonLeftRecursiveType.class, "NonLeftRecursiveType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNonLeftRecursiveType_Type(), ecorePackage.getEObject(), null, "type", null, 0, 1, NonLeftRecursiveType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNonLeftRecursiveType_Typedef(), this.getTypeDef(), null, "typedef", null, 0, 1, NonLeftRecursiveType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(nonLeftRecursiveNonVoidTypeEClass, NonLeftRecursiveNonVoidType.class, "NonLeftRecursiveNonVoidType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNonLeftRecursiveNonVoidType_Type(), ecorePackage.getEObject(), null, "type", null, 0, 1, NonLeftRecursiveNonVoidType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNonLeftRecursiveNonVoidType_Typedef(), this.getTypeDef(), null, "typedef", null, 0, 1, NonLeftRecursiveNonVoidType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(typeDefEClass, TypeDef.class, "TypeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTypeDef_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTypeDef_Type(), this.getNonVoidType(), null, "type", null, 0, 1, TypeDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intTypeEClass, IntType.class, "IntType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(opaqueTypeEClass, OpaqueType.class, "OpaqueType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(structTypeEClass, StructType.class, "StructType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStructType_Types(), this.getType(), null, "types", null, 0, -1, StructType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStructType_Packed(), ecorePackage.getEString(), "packed", null, 0, 1, StructType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(vectorTypeEClass, VectorType.class, "VectorType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getVectorType_Size(), ecorePackage.getEString(), "size", null, 0, 1, VectorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getVectorType_ElemType(), this.getType(), null, "elemType", null, 0, 1, VectorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(arrayTypeEClass, ArrayType.class, "ArrayType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getArrayType_Size(), ecorePackage.getEString(), "size", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getArrayType_ElemType(), this.getType(), null, "elemType", null, 0, 1, ArrayType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(x86mmxTypeEClass, X86mmxType.class, "X86mmxType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(voidTypeEClass, VoidType.class, "VoidType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(metadataTypeEClass, MetadataType.class, "MetadataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(floatingTypeEClass, FloatingType.class, "FloatingType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(cConvEClass, CConv.class, "CConv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCConv_Val(), ecorePackage.getEString(), "val", null, 0, 1, CConv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCConv_CustomNumber(), ecorePackage.getEString(), "customNumber", null, 0, 1, CConv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    // Create resource
-    createResource(eNS_URI);
+    if (eClassifier.getInstanceClassName() == null)
+    {
+      eClassifier.setInstanceClassName("com.intel.llvm.ireditor.lLVM_IR." + eClassifier.getName());
+      setGeneratedClassName(eClassifier);
+    }
   }
 
 } //LLVM_IRPackageImpl

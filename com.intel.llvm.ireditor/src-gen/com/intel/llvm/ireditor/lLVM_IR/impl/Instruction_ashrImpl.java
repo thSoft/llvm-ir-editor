@@ -36,7 +36,7 @@ public class Instruction_ashrImpl extends BitwiseBinaryInstructionImpl implement
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_ASHR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_ashr();
   }
 
 } //Instruction_ashrImpl

@@ -78,7 +78,7 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TYPE_DEF;
+    return LLVM_IRPackage.eINSTANCE.getTypeDef();
   }
 
   /**

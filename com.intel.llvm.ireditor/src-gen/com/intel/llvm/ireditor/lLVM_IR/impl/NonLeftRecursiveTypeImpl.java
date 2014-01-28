@@ -70,7 +70,7 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NON_LEFT_RECURSIVE_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getNonLeftRecursiveType();
   }
 
   /**

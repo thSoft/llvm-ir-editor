@@ -58,7 +58,7 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FUNCTION_PREFIX;
+    return LLVM_IRPackage.eINSTANCE.getFunctionPrefix();
   }
 
   /**

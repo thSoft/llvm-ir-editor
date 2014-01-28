@@ -57,7 +57,7 @@ public class NamedTerminatorInstructionImpl extends NamedInstructionImpl impleme
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NAMED_TERMINATOR_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getNamedTerminatorInstruction();
   }
 
   /**

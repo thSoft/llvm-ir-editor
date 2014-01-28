@@ -36,7 +36,7 @@ public class Instruction_lshrImpl extends BitwiseBinaryInstructionImpl implement
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_LSHR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_lshr();
   }
 
 } //Instruction_lshrImpl

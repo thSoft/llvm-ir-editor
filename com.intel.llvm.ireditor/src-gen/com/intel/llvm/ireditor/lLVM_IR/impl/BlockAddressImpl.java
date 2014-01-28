@@ -69,7 +69,7 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.BLOCK_ADDRESS;
+    return LLVM_IRPackage.eINSTANCE.getBlockAddress();
   }
 
   /**

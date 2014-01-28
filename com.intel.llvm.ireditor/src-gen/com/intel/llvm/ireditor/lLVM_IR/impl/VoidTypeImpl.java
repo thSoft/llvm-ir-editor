@@ -38,7 +38,7 @@ public class VoidTypeImpl extends MinimalEObjectImpl.Container implements VoidTy
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.VOID_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getVoidType();
   }
 
 } //VoidTypeImpl

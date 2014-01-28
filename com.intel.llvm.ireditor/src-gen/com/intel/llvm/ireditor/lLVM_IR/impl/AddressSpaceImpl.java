@@ -65,7 +65,7 @@ public class AddressSpaceImpl extends MinimalEObjectImpl.Container implements Ad
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ADDRESS_SPACE;
+    return LLVM_IRPackage.eINSTANCE.getAddressSpace();
   }
 
   /**

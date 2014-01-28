@@ -69,7 +69,7 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_VA_ARG;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_va_arg();
   }
 
   /**

@@ -78,7 +78,7 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.STRUCTURE_CONSTANT;
+    return LLVM_IRPackage.eINSTANCE.getStructureConstant();
   }
 
   /**

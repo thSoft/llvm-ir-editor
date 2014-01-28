@@ -63,7 +63,7 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_LIST;
+    return LLVM_IRPackage.eINSTANCE.getConstantList();
   }
 
   /**

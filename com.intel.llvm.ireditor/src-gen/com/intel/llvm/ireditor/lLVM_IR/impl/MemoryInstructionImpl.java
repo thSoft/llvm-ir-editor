@@ -65,7 +65,7 @@ public class MemoryInstructionImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.MEMORY_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getMemoryInstruction();
   }
 
   /**

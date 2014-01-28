@@ -36,7 +36,7 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NAMED_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getNamedInstruction();
   }
 
 } //NamedInstructionImpl

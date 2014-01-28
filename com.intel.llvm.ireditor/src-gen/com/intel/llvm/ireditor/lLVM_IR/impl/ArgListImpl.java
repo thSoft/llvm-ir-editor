@@ -63,7 +63,7 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ARG_LIST;
+    return LLVM_IRPackage.eINSTANCE.getArgList();
   }
 
   /**

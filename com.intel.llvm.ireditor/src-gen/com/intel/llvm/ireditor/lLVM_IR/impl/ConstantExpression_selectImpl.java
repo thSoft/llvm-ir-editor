@@ -79,7 +79,7 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_SELECT;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_select();
   }
 
   /**

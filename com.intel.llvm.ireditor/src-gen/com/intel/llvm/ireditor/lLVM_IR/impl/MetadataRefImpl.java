@@ -57,7 +57,7 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.METADATA_REF;
+    return LLVM_IRPackage.eINSTANCE.getMetadataRef();
   }
 
   /**

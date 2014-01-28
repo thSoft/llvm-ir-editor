@@ -36,7 +36,7 @@ public class Instruction_extractvalueImpl extends AggregateInstructionImpl imple
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_EXTRACTVALUE;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_extractvalue();
   }
 
 } //Instruction_extractvalueImpl

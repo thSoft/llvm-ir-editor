@@ -86,7 +86,7 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CCONV;
+    return LLVM_IRPackage.eINSTANCE.getCConv();
   }
 
   /**

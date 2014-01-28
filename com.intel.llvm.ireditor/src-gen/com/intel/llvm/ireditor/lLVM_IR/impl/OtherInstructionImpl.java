@@ -65,7 +65,7 @@ public class OtherInstructionImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.OTHER_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getOtherInstruction();
   }
 
   /**

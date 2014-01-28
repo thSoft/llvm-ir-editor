@@ -88,7 +88,7 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_LANDINGPAD;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_landingpad();
   }
 
   /**

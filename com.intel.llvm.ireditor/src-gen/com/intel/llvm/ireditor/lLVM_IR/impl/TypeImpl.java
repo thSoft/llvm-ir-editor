@@ -89,7 +89,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TYPE;
+    return LLVM_IRPackage.eINSTANCE.getType();
   }
 
   /**

@@ -102,7 +102,7 @@ public class ConversionInstructionImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getConversionInstruction();
   }
 
   /**

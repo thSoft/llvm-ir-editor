@@ -98,7 +98,7 @@ public class AggregateInstructionImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.AGGREGATE_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getAggregateInstruction();
   }
 
   /**

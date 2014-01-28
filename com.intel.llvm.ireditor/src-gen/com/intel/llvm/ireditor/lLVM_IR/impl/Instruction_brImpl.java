@@ -113,7 +113,7 @@ public class Instruction_brImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_BR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_br();
   }
 
   /**

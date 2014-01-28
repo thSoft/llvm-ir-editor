@@ -86,7 +86,7 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.STRUCT_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getStructType();
   }
 
   /**

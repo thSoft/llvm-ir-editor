@@ -77,7 +77,7 @@ public class StartingInstructionImpl extends NamedInstructionImpl implements Sta
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.STARTING_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getStartingInstruction();
   }
 
   /**

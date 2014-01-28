@@ -69,7 +69,7 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.GLOBAL_VALUE_REF;
+    return LLVM_IRPackage.eINSTANCE.getGlobalValueRef();
   }
 
   /**

@@ -91,7 +91,7 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.METADATA_NODE_ELEMENT;
+    return LLVM_IRPackage.eINSTANCE.getMetadataNodeElement();
   }
 
   /**

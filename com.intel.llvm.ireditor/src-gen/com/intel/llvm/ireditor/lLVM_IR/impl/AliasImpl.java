@@ -132,7 +132,7 @@ public class AliasImpl extends GlobalValueImpl implements Alias
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ALIAS;
+    return LLVM_IRPackage.eINSTANCE.getAlias();
   }
 
   /**

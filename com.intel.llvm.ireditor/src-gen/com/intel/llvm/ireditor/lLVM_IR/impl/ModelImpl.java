@@ -63,7 +63,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.MODEL;
+    return LLVM_IRPackage.eINSTANCE.getModel();
   }
 
   /**

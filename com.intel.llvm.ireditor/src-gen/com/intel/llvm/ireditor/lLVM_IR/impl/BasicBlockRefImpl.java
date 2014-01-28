@@ -57,7 +57,7 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.BASIC_BLOCK_REF;
+    return LLVM_IRPackage.eINSTANCE.getBasicBlockRef();
   }
 
   /**

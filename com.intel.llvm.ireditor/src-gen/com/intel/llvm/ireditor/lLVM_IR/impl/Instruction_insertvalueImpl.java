@@ -57,7 +57,7 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_INSERTVALUE;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_insertvalue();
   }
 
   /**

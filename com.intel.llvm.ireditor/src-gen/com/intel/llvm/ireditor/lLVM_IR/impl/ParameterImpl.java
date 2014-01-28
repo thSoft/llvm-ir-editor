@@ -57,7 +57,7 @@ public class ParameterImpl extends LocalValueImpl implements Parameter
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.PARAMETER;
+    return LLVM_IRPackage.eINSTANCE.getParameter();
   }
 
   /**

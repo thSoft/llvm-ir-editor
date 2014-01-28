@@ -65,7 +65,7 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FUNCTION_ATTRIBUTE;
+    return LLVM_IRPackage.eINSTANCE.getFunctionAttribute();
   }
 
   /**

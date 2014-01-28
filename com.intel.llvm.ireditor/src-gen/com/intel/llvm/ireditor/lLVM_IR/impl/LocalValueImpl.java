@@ -65,7 +65,7 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.LOCAL_VALUE;
+    return LLVM_IRPackage.eINSTANCE.getLocalValue();
   }
 
   /**

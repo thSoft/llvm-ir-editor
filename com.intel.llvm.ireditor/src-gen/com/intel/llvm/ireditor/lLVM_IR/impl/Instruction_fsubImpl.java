@@ -61,7 +61,7 @@ public class Instruction_fsubImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FSUB;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_fsub();
   }
 
   /**

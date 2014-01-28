@@ -120,7 +120,7 @@ public class Instruction_switchImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_SWITCH;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_switch();
   }
 
   /**

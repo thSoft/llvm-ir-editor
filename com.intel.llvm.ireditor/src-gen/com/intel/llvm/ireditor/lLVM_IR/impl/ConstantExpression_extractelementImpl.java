@@ -68,7 +68,7 @@ public class ConstantExpression_extractelementImpl extends ConstantExpressionImp
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_EXTRACTELEMENT;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_extractelement();
   }
 
   /**

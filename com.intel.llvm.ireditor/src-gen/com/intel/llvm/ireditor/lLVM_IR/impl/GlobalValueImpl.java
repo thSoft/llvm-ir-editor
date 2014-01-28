@@ -36,7 +36,7 @@ public class GlobalValueImpl extends TopLevelElementImpl implements GlobalValue
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.GLOBAL_VALUE;
+    return LLVM_IRPackage.eINSTANCE.getGlobalValue();
   }
 
 } //GlobalValueImpl

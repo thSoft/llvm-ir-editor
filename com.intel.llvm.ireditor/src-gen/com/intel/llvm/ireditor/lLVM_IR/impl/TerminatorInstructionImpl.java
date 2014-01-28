@@ -57,7 +57,7 @@ public class TerminatorInstructionImpl extends InstructionImpl implements Termin
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TERMINATOR_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getTerminatorInstruction();
   }
 
   /**

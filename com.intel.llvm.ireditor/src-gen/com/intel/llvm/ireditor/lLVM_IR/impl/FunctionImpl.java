@@ -57,7 +57,7 @@ public class FunctionImpl extends GlobalValueImpl implements Function
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FUNCTION;
+    return LLVM_IRPackage.eINSTANCE.getFunction();
   }
 
   /**

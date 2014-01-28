@@ -64,7 +64,7 @@ public class SimpleConstantImpl extends ConstantImpl implements SimpleConstant
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.SIMPLE_CONSTANT;
+    return LLVM_IRPackage.eINSTANCE.getSimpleConstant();
   }
 
   /**

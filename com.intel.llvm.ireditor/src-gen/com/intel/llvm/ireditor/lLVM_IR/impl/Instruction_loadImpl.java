@@ -122,7 +122,7 @@ public class Instruction_loadImpl extends MemoryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_LOAD;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_load();
   }
 
   /**

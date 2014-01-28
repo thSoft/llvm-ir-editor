@@ -101,7 +101,7 @@ public class Instruction_icmpImpl extends OtherInstructionImpl implements Instru
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_ICMP;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_icmp();
   }
 
   /**

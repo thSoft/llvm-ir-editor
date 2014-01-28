@@ -78,7 +78,7 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NAMED_METADATA;
+    return LLVM_IRPackage.eINSTANCE.getNamedMetadata();
   }
 
   /**

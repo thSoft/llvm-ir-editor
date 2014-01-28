@@ -38,7 +38,7 @@ public class FloatingTypeImpl extends MinimalEObjectImpl.Container implements Fl
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FLOATING_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getFloatingType();
   }
 
 } //FloatingTypeImpl

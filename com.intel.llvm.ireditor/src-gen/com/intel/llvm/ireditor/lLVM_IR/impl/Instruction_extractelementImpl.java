@@ -68,7 +68,7 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_EXTRACTELEMENT;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_extractelement();
   }
 
   /**

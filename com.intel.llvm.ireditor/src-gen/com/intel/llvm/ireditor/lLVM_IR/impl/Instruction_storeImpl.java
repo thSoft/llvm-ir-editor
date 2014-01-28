@@ -122,7 +122,7 @@ public class Instruction_storeImpl extends MemoryInstructionImpl implements Inst
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_STORE;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_store();
   }
 
   /**

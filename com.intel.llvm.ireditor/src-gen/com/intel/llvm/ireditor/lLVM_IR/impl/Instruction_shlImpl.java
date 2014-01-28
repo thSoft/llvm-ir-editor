@@ -36,7 +36,7 @@ public class Instruction_shlImpl extends BitwiseBinaryInstructionImpl implements
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_SHL;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_shl();
   }
 
 } //Instruction_shlImpl

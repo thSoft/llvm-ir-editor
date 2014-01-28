@@ -79,7 +79,7 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_SELECT;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_select();
   }
 
   /**

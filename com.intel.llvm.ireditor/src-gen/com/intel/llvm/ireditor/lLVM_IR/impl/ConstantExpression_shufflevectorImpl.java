@@ -79,7 +79,7 @@ public class ConstantExpression_shufflevectorImpl extends ConstantExpressionImpl
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_SHUFFLEVECTOR;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector();
   }
 
   /**

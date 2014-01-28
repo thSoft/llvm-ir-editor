@@ -85,7 +85,7 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TARGET_INFO;
+    return LLVM_IRPackage.eINSTANCE.getTargetInfo();
   }
 
   /**

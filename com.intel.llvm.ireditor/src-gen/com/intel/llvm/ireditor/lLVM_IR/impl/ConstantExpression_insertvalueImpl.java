@@ -85,7 +85,7 @@ public class ConstantExpression_insertvalueImpl extends ConstantExpressionImpl i
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_INSERTVALUE;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_insertvalue();
   }
 
   /**

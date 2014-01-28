@@ -36,7 +36,7 @@ public class Instruction_fremImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FREM;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_frem();
   }
 
 } //Instruction_fremImpl

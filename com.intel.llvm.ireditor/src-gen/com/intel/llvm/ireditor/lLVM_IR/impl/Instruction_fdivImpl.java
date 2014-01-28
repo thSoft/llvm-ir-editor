@@ -61,7 +61,7 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FDIV;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_fdiv();
   }
 
   /**

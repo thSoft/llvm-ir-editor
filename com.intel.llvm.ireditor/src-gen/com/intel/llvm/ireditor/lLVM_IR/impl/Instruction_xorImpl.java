@@ -36,7 +36,7 @@ public class Instruction_xorImpl extends BitwiseBinaryInstructionImpl implements
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_XOR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_xor();
   }
 
 } //Instruction_xorImpl

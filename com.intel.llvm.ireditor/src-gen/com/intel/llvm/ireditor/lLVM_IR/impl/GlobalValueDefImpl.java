@@ -38,7 +38,7 @@ public class GlobalValueDefImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.GLOBAL_VALUE_DEF;
+    return LLVM_IRPackage.eINSTANCE.getGlobalValueDef();
   }
 
 } //GlobalValueDefImpl

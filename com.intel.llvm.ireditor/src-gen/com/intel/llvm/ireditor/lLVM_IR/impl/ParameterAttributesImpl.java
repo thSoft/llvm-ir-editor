@@ -58,7 +58,7 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.PARAMETER_ATTRIBUTES;
+    return LLVM_IRPackage.eINSTANCE.getParameterAttributes();
   }
 
   /**

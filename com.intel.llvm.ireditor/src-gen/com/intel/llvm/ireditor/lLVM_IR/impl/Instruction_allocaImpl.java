@@ -90,7 +90,7 @@ public class Instruction_allocaImpl extends MemoryInstructionImpl implements Ins
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_ALLOCA;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_alloca();
   }
 
   /**

@@ -79,7 +79,7 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.METADATA_SUFFIX;
+    return LLVM_IRPackage.eINSTANCE.getMetadataSuffix();
   }
 
   /**

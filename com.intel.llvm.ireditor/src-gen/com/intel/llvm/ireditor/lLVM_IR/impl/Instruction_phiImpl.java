@@ -110,7 +110,7 @@ public class Instruction_phiImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_PHI;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_phi();
   }
 
   /**

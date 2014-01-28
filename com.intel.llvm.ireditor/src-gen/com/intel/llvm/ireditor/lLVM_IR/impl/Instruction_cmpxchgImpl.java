@@ -100,7 +100,7 @@ public class Instruction_cmpxchgImpl extends MemoryInstructionImpl implements In
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg();
   }
 
   /**

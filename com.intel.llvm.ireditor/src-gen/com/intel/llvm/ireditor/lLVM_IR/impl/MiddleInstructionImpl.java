@@ -57,7 +57,7 @@ public class MiddleInstructionImpl extends InstructionImpl implements MiddleInst
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.MIDDLE_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getMiddleInstruction();
   }
 
   /**

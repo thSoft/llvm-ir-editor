@@ -100,13 +100,13 @@ import com.intel.llvm.ireditor.lLVM_IR.Instruction_sub;
 import com.intel.llvm.ireditor.lLVM_IR.Instruction_switch;
 import com.intel.llvm.ireditor.lLVM_IR.Instruction_udiv;
 import com.intel.llvm.ireditor.lLVM_IR.Instruction_urem;
+import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValue;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValueRef;
 import com.intel.llvm.ireditor.lLVM_IR.Model;
 import com.intel.llvm.ireditor.lLVM_IR.NamedMiddleInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.NamedTerminatorInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.TerminatorInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage.Literals;
 import com.intel.llvm.ireditor.lLVM_IR.NamedInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.Parameter;
 import com.intel.llvm.ireditor.lLVM_IR.Parameters;
@@ -128,7 +128,7 @@ import com.intel.llvm.ireditor.types.TypeResolver;
 import com.intel.llvm.ireditor.validation.AbstractLLVM_IRJavaValidator;
 
 import static com.intel.llvm.ireditor.types.TypeResolver.*;
- 
+
 
 public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 	public static final String ERROR_EXPECTED_TYPE = "expected type not matched";
@@ -149,11 +149,11 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 				return;
 			}
 			String message = "No predecessors for basic block " + val.getName();
-			INode nameNode = NodeModelUtils.findNodesForFeature(val, Literals.BASIC_BLOCK__NAME).get(0);
+			INode nameNode = NodeModelUtils.findNodesForFeature(val, LLVM_IRPackage.eINSTANCE.getBasicBlock_Name()).get(0);
 			boolean hasName = NodeModelUtils.getTokenText(nameNode).isEmpty() == false;
 			if (hasName) {
 				// This basic block has a name - use that as the report location
-				warning(message, Literals.BASIC_BLOCK__NAME);
+				warning(message, LLVM_IRPackage.eINSTANCE.getBasicBlock_Name());
 				return;
 			}
 
@@ -162,7 +162,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			acceptWarning(message, val, node.getOffset(), node.getLength(), null);
 		}
 	}
-	
+
 	@Check
 	public void checkConstantList(ConstantList val) {
 		if (val.eContainer() instanceof VectorConstant) {
@@ -171,31 +171,31 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			int i = 0;
 			for (TypedConstant tc : val.getTypedConstants()) {
 				if (sameType == null) sameType = resolveType(tc.getType());
-				else checkExpected(sameType, resolveType(tc.getType()), Literals.CONSTANT_LIST__TYPED_CONSTANTS, i);
+				else checkExpected(sameType, resolveType(tc.getType()), LLVM_IRPackage.eINSTANCE.getConstantList_TypedConstants(), i);
 				i++;
 			}
 		}
 	}
-	
+
 	@Check
 	public void checkTypedConstant(TypedConstant val) {
 		ResolvedType type = resolveType(val.getType());
-		
+
 		// Constant value must match its type.
 		checkExpected(type, val.getValue());
-		
+
 		// Integer constant should be small enough to fit in its type.
 		if (type.isInteger()) {
 			checkConstantFitsInType(type, val.getValue());
 		}
 	}
-	
+
 	@Check
 	public void checkTypedValue(TypedValue val) {
 		// Value must match the type.
 		checkExpected(val.getType(), val.getRef());
 	}
-	
+
 	@Check
 	public void checkRet(Instruction_ret val) {
 		EObject f = val.eContainer().eContainer().eContainer();
@@ -211,28 +211,28 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			checkExpected(rettype, val.getVal());
 		}
 	}
-	
+
 	@Check
 	public void checkSwitch(Instruction_switch val) {
 		// Verify the condition is an integer type
 		ResolvedType t = resolveType(val.getComparisonValue().getType());
-		checkRequired(t, Literals.INSTRUCTION_SWITCH__COMPARISON_VALUE, 0, TYPE_ANY_INTEGER);
-		
+		checkRequired(t, LLVM_IRPackage.eINSTANCE.getInstruction_switch_ComparisonValue(), 0, TYPE_ANY_INTEGER);
+
 		// Verify all condition cases share the condition's type
 		int index = -1;
 		for (TypedValue v : val.getCaseConditions()) {
 			index++;
 			ResolvedType conditionType = resolveType(v);
-			checkExpected(t, conditionType, Literals.INSTRUCTION_SWITCH__CASE_CONDITIONS, index);
+			checkExpected(t, conditionType, LLVM_IRPackage.eINSTANCE.getInstruction_switch_CaseConditions(), index);
 		}
-		
+
 		// Verify none of the referred bb is the entry bb
 		for (BasicBlockRef ref : val.getDestinations()) {
 			verifyNotEntry(ref);
 		}
 		verifyNotEntry(val.getDefaultDest());
 	}
-	
+
 	@Check
 	public void checkBranch(Instruction_br val) {
 		BasicBlockRef bb = val.getUnconditional();
@@ -243,18 +243,18 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			verifyNotEntry(val.getFalse());
 			if (val.getTrue().getRef() == val.getFalse().getRef()) {
 				warning("Both true and false branch to the same basic block",
-						Literals.INSTRUCTION_BR__OPCODE);
+						LLVM_IRPackage.eINSTANCE.getInstruction_br_Opcode());
 			}
 		}
 	}
-	
+
 	@Check
 	public void checkIndirectBr(Instruction_indirectbr val) {
 		for (BasicBlockRef ref : val.getDestinations()) {
 			verifyNotEntry(ref);
 		}
 	}
-	
+
 	private void verifyNotEntry(BasicBlockRef ref) {
 		if (ref == null) return;
 		FunctionDef def = (FunctionDef) ref.getRef().eContainer();
@@ -267,80 +267,80 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 	public void checkAdd(Instruction_add inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkFadd(Instruction_fadd inst) {
 		checkFloatingBinary(inst);
 	}
-	
+
 	@Check
 	public void checkSub(Instruction_sub inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkFsub(Instruction_fsub inst) {
 		checkFloatingBinary(inst);
 	}
-	
+
 	@Check
 	public void checkMul(Instruction_mul inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkFmul(Instruction_fmul inst) {
 		checkFloatingBinary(inst);
 	}
-	
+
 	@Check
 	public void checkUdiv(Instruction_udiv inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkSdiv(Instruction_sdiv inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkFdiv(Instruction_fdiv inst) {
 		checkFloatingBinary(inst);
 	}
-	
+
 	@Check
 	public void checkUrem(Instruction_urem inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkSrem(Instruction_srem inst) {
 		checkIntegerBinary(inst);
 	}
-	
+
 	@Check
 	public void checkFrem(Instruction_frem inst) {
 		checkFloatingBinary(inst);
 	}
-	
+
 	public void checkBinary(BinaryInstruction inst) {
 		ResolvedType t = resolveType(inst.getType());
 		checkExpected(t, inst.getOp1());
 		checkExpected(t, inst.getOp2());
 	}
-	
+
 	@Check
 	public void checkBitwiseBinary(BitwiseBinaryInstruction inst) {
 		ResolvedType t = resolveType(inst.getType());
-		checkRequired(t, Literals.BITWISE_BINARY_INSTRUCTION__TYPE, 0, TYPE_ANY_INTEGER, TYPE_INTEGER_VECTOR);
+		checkRequired(t, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type(), 0, TYPE_ANY_INTEGER, TYPE_INTEGER_VECTOR);
 		checkExpected(t, inst.getOp1());
 		checkExpected(t, inst.getOp2());
 	}
-	
+
 	@Check
 	public void checkConversion(ConversionInstruction inst) {
 		checkExpected(inst.getFromType(), inst.getValue());
-		
+
 		// The below checks seem to have some duplication, but I could not find
 		// an elegant way to generalize them.
 		String opc = inst.getOpcode();
@@ -348,8 +348,8 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		Type to = inst.getTargetType();
 		ResolvedType fromType = resolveType(from);
 		ResolvedType toType = resolveType(to);
-		EStructuralFeature fromFeature = Literals.CONVERSION_INSTRUCTION__FROM_TYPE;
-		EStructuralFeature toFeature = Literals.CONVERSION_INSTRUCTION__TARGET_TYPE;
+		EStructuralFeature fromFeature = LLVM_IRPackage.eINSTANCE.getConversionInstruction_FromType();
+		EStructuralFeature toFeature = LLVM_IRPackage.eINSTANCE.getConversionInstruction_TargetType();
 		if (opc.equals("ptrtoint")) {
 			if (TYPE_ANY_POINTER.accepts(fromType)) {
 				checkRequired(toType, toFeature, 0, TYPE_ANY_INTEGER);
@@ -473,38 +473,38 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			}
 		}
 	}
-	
+
 	@Check
 	public void checkExtractelement(Instruction_extractelement inst) {
 		checkRequired(inst.getVector(), TYPE_ANY_VECTOR);
 		checkRequired(inst.getIndex(), TYPE_I32);
 	}
-	
+
 	@Check
 	public void checkInsertelement(Instruction_insertelement inst) {
 		ResolvedType vectorType = resolveType(inst.getVector().getType());
-		
-		checkRequired(vectorType, Literals.INSTRUCTION_INSERTELEMENT__VECTOR, 0, TYPE_ANY_VECTOR);
+
+		checkRequired(vectorType, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Vector(), 0, TYPE_ANY_VECTOR);
 		checkRequired(inst.getIndex(), TYPE_I32);
-		
+
 		checkExpected(vectorType.getContainedType(0), inst.getElement());
 	}
-	
+
 	@Check
 	public void checkShuffleelement(Instruction_shufflevector inst) {
 		ResolvedType vector1type = resolveType(inst.getVector1().getType());
 		ResolvedType vector2type = resolveType(inst.getVector2().getType());
-		checkRequired(vector1type, Literals.INSTRUCTION_SHUFFLEVECTOR__VECTOR1, 0, TYPE_ANY_VECTOR);
-		checkRequired(vector2type, Literals.INSTRUCTION_SHUFFLEVECTOR__VECTOR2, 0, TYPE_ANY_VECTOR);
-		
+		checkRequired(vector1type, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector1(), 0, TYPE_ANY_VECTOR);
+		checkRequired(vector2type, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector2(), 0, TYPE_ANY_VECTOR);
+
 		checkExpected(vector1type, vector2type, inst.getVector2().eContainingFeature());
 	}
-	
+
 	@Check
 	public void checkGetelementpointer(Instruction_getelementptr inst) {
 		if (verifyGepStructure(inst)) verifyGepType(inst);
 	}
-	
+
 	private void verifyGepType(Instruction_getelementptr inst) {
 		if (resolveType(inst).isUnknown()) {
 			INode node = NodeModelUtils.findActualNodeFor(inst);
@@ -515,7 +515,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 
 	private boolean verifyGepStructure(Instruction_getelementptr inst) {
 		ResolvedType baseType = resolveType(inst.getBase().getType());
-		
+
 		if (baseType.isPointer()) {
 			// Regular GEP
 			int index = 0;
@@ -523,43 +523,43 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			for (TypedValue indexValue : inst.getIndices()) {
 				// Verify the index is numeric
 				isLegal &= checkRequired(resolveType(indexValue.getType()),
-						Literals.INSTRUCTION_GETELEMENTPTR__INDICES, index, TYPE_ANY_INTEGER);
+						LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Indices(), index, TYPE_ANY_INTEGER);
 				index++;
 			}
-			
+
 			return isLegal;
 		}
-		
+
 		if (baseType.isVector() == false) {
 			error("A GEP instruction base must be either a pointer or a pointer of vectors",
-					Literals.INSTRUCTION_GETELEMENTPTR__BASE);
-			
+					LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Base());
+
 			return false;
 		}
 
 		// Vector GEP
 
 		// Verify it's a vector of pointers
-		if (checkRequired(baseType, Literals.INSTRUCTION_GETELEMENTPTR__BASE, 0, TYPE_POINTER_VECTOR) == false) {
+		if (checkRequired(baseType, LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Base(), 0, TYPE_POINTER_VECTOR) == false) {
 			return false;
 		}
 
 		// Verify the index list is of size 1
 		if (inst.getIndices().size() != 1) {
 			error("A GEP instruction with pointer vector base can receive only one index",
-					Literals.INSTRUCTION_GETELEMENTPTR__INDICES);
+					LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Indices());
 			return false;
 		}
 
 		// Verify the (single) index is a vector
 		ResolvedType indexType = resolveType(inst.getIndices().get(0));
-		if (checkRequired(indexType, Literals.INSTRUCTION_GETELEMENTPTR__INDICES, 0, TYPE_ANY_VECTOR) == false) {
+		if (checkRequired(indexType, LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Indices(), 0, TYPE_ANY_VECTOR) == false) {
 			return false;
 		}
 
 		// Verify the contained type in the (single) index is numeric
 		ResolvedVectorType indexVectorType = indexType.asVector();
-		if (checkRequired(indexVectorType.getContainedType(0), Literals.INSTRUCTION_GETELEMENTPTR__INDICES,
+		if (checkRequired(indexVectorType.getContainedType(0), LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Indices(),
 				0, TYPE_ANY_INTEGER) == false) {
 			return false;
 		}
@@ -567,108 +567,108 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		// Verify the size of the (single) index is identical to the base size
 		if (indexType.asVector().getSize() != baseType.asVector().getSize()) {
 			error("The index of a GEP instruction with pointer vector base must be the same size as the base",
-					Literals.INSTRUCTION_GETELEMENTPTR__INDICES);
+					LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr_Indices());
 			return false;
 		}
-		
+
 		return true;
 	}
 
 	@Check
 	public void checkExtractvalue(Instruction_extractvalue inst) {
 		checkRequired(inst.getAggregate(), TYPE_ANY_ARRAY, TYPE_ANY_STRUCT);
-		
+
 		int index = 0;
 		for (Constant c : inst.getIndices()) {
-			checkRequired(resolveType(c), Literals.INSTRUCTION_EXTRACTELEMENT__INDEX, index, TYPE_ANY_INTEGER);
+			checkRequired(resolveType(c), LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Index(), index, TYPE_ANY_INTEGER);
 			index++;
 		}
 	}
-	
+
 	@Check
 	public void checkInsertvalue(Instruction_insertvalue inst) {
 		ResolvedType type = resolveType(inst.getAggregate().getType());
 		checkRequired(type, inst.getAggregate().eContainingFeature(), 0,
 				TYPE_ANY_ARRAY, TYPE_ANY_STRUCT);
-		
+
 		int index = 0;
 		for (Constant c : inst.getIndices()) {
 			// Verify the constant is an integer
 			checkRequired(resolveType(c), c.eContainingFeature(), index, TYPE_ANY_INTEGER);
-			
+
 			// Calculate the element type, if possible
 			Integer indexValue = constResolver.getInteger(c);
 			type = indexValue == null ? TYPE_ANY : type.getContainedType(indexValue);
 			index++;
 		}
-		
+
 		checkExpected(type, inst.getElement());
 	}
-	
+
 	@Check
 	public void checkStore(Instruction_store inst) {
 		checkExpected(resolveType(inst.getPointer()).getContainedType(0), inst.getValue());
 	}
-	
+
 	@Check
 	public void checkCmpxchg(Instruction_cmpxchg inst) {
 		ResolvedType pointer = resolveType(inst.getPointer().getType());
-		checkRequired(pointer, Literals.INSTRUCTION_CMPXCHG__POINTER, 0, TYPE_ANY_POINTER);
-		checkRequired(pointer.getContainedType(0), Literals.INSTRUCTION_CMPXCHG__POINTER, 0, TYPE_ANY_INTEGER);
+		checkRequired(pointer, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Pointer(), 0, TYPE_ANY_POINTER);
+		checkRequired(pointer.getContainedType(0), LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Pointer(), 0, TYPE_ANY_INTEGER);
 		checkExpected(pointer.getContainedType(0), inst.getComparedWith());
 		checkExpected(pointer.getContainedType(0), inst.getNewValue());
-		
+
 		// There are some special requirements on the type here
 		BigInteger width = pointer.getContainedType(0).getBits();
 		if (width.compareTo(BigInteger.valueOf(8)) < 0) {
 			error("cmpxchg type must have at least 8 bits", inst.eContainingFeature());
 		} else if (width.bitCount() != 1) error("cmpxchg type size must be a power of 2", inst.eContainingFeature());
 	}
-	
+
 	@Check
 	public void checkAtomicrmw(Instruction_atomicrmw inst) {
 		ResolvedType pointer = resolveType(inst.getPointer().getType());
-		checkRequired(pointer, Literals.INSTRUCTION_ATOMICRMW__POINTER, 0, TYPE_ANY_POINTER);
-		checkRequired(pointer.getContainedType(0), Literals.INSTRUCTION_ATOMICRMW__POINTER, 0, TYPE_ANY_INTEGER);
+		checkRequired(pointer, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Pointer(), 0, TYPE_ANY_POINTER);
+		checkRequired(pointer.getContainedType(0), LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Pointer(), 0, TYPE_ANY_INTEGER);
 		checkExpected(pointer.getContainedType(0), inst.getArgument());
-		
+
 		// There are some special requirements on the type here
 		BigInteger width = pointer.getContainedType(0).getBits();
 		if (width.compareTo(BigInteger.valueOf(8)) < 0) {
 			error("atomicrmw type must have at least 8 bits", inst.eContainingFeature());
 		} else if (width.bitCount() != 1) error("atomicrmw type size must be a power of 2", inst.eContainingFeature());
 	}
-	
+
 	@Check
 	public void checkIcmp(Instruction_icmp inst) {
 		ResolvedType type = resolveType(inst.getType());
-		checkRequired(type, Literals.INSTRUCTION_ICMP__TYPE, 0,
+		checkRequired(type, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Type(), 0,
 				TYPE_ANY_INTEGER, TYPE_ANY_POINTER, TYPE_INTEGER_VECTOR, TYPE_POINTER_VECTOR);
-		
+
 		checkExpected(type, inst.getOp1());
 		checkExpected(type, inst.getOp2());
 	}
-	
+
 	@Check
 	public void checkFcmp(Instruction_fcmp inst) {
 		ResolvedType type = resolveType(inst.getType());
-		checkRequired(type, Literals.INSTRUCTION_FCMP__TYPE, 0,
+		checkRequired(type, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Type(), 0,
 				TYPE_FLOATING, TYPE_FLOATING_VECTOR);
-		
+
 		checkExpected(type, inst.getOp1());
 		checkExpected(type, inst.getOp2());
 	}
-	
+
 	@Check
 	public void checkPhi(Instruction_phi inst) {
 		// Verify all values are of the appropriate type
 		ResolvedType type = resolveType(inst.getType());
 		int index = 0;
 		for (ValueRef val : inst.getValues()) {
-			checkExpected(type, resolveType(val), Literals.INSTRUCTION_PHI__VALUES, index);
+			checkExpected(type, resolveType(val), LLVM_IRPackage.eINSTANCE.getInstruction_phi_Values(), index);
 			index++;
 		}
-		
+
 		// Populate the "mentionedBlocks" list, and verify it does not contain duplicates
 		List<BasicBlock> mentionedBlocks = new LinkedList<BasicBlock>();
 		index = 0;
@@ -676,22 +676,22 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			BasicBlock actual = ref.getRef();
 			if (mentionedBlocks.contains(actual)) {
 				error("The basic block " + actual.getName() + " was already mentioned in this phi node",
-						Literals.INSTRUCTION_PHI__LABELS, index);
+						LLVM_IRPackage.eINSTANCE.getInstruction_phi_Labels(), index);
 			}
 			index++;
 			mentionedBlocks.add(actual);
 		}
-		
+
 		// Verify no predecessors are missing
 		for (BasicBlock pred : predecessors(EcoreUtil2.getContainerOfType(inst, BasicBlock.class))) {
 			if (mentionedBlocks.contains(pred)) {
 				mentionedBlocks.remove(pred);
 			} else {
 				error("The basic block " + pred.getName() + " is missing from this phi node",
-						Literals.INSTRUCTION_PHI__OPCODE);
+						LLVM_IRPackage.eINSTANCE.getInstruction_phi_Opcode());
 			}
 		}
-		
+
 		// Produce error about unused labels
 		if (mentionedBlocks.isEmpty()) return;
 		index = -1;
@@ -702,51 +702,51 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 				String name = actual.getName();
 				if (name == null) continue; // No name probably means bad reference; no need to add this error as well
 				error("The basic block " + name + " is not a predecessor of this phi node",
-						Literals.INSTRUCTION_PHI__LABELS, index);
+						LLVM_IRPackage.eINSTANCE.getInstruction_phi_Labels(), index);
 			}
 		}
 	}
-	
+
 	@Check
 	public void checkSelect(Instruction_select inst) {
 		// Verify types are identical
 		ResolvedType type = resolveType(inst.getValue1().getType());
 		checkExpected(type, inst.getValue2());
-		
+
 		// Verify condition type
 		ResolvedType condType = resolveType(inst.getCondition().getType());
 		if (condType.isVector()) {
-			checkRequired(condType, Literals.INSTRUCTION_SELECT__CONDITION, 0, TYPE_BOOLEAN_VECTOR);
+			checkRequired(condType, LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition(), 0, TYPE_BOOLEAN_VECTOR);
 			// This is a vector select
 			if (condType.asVector().getSize() != type.asVector().getSize()) {
-				error("Select condition must be the same size as select values", Literals.INSTRUCTION_SELECT__CONDITION);
+				error("Select condition must be the same size as select values", LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition());
 			}
 		} else {
-			checkRequired(condType, Literals.INSTRUCTION_SELECT__CONDITION, 0, TYPE_BOOLEAN);
+			checkRequired(condType, LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition(), 0, TYPE_BOOLEAN);
 		}
 	}
-	
+
 	@Check
 	public void checkGlobal(GlobalVariable val) {
 		if (val.getInitialValue() != null) {
 			checkExpected(val.getType(), val.getInitialValue());
 		}
 	}
-	
+
 	@Check
 	public void checkCall(Instruction_call_nonVoid inst) {
 		checkAnyCall(inst.getCallee(),
 				inst.getType(),
 				inst.getArgs());
 	}
-	
+
 	@Check
 	public void checkCall(Instruction_call_void inst) {
 		checkAnyCall(inst.getCallee(),
 				inst.getType(),
 				inst.getArgs());
 	}
-	
+
 	@Check
 	public void checkInvoke(Instruction_invoke_nonVoid inst) {
 		checkAnyCall(inst.getCallee(),
@@ -755,7 +755,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		verifyNotEntry(inst.getToLabel());
 		verifyNotEntry(inst.getExceptionLabel());
 	}
-	
+
 	@Check
 	public void checkInvoke(Instruction_invoke_void inst) {
 		checkAnyCall(inst.getCallee(),
@@ -764,7 +764,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		verifyNotEntry(inst.getToLabel());
 		verifyNotEntry(inst.getExceptionLabel());
 	}
-	
+
 	@Check
 	public void checkModel(Model model) {
 		// Verify that there's no two (or more) values with the same name in the model
@@ -787,7 +787,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			}
 		}
 	}
-	
+
 	@Check
 	public void checkFunctionDef(FunctionDef def) {
 		// Verify that there's no two (or more) values with the same name in each function
@@ -817,29 +817,29 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			}
 		}
 	}
-	
+
 	@Check
 	public void checkFunctionHeaderParameters(Parameters val) {
 		if (val.eContainer() == null) return;
-		
+
 		FunctionHeader header = (FunctionHeader) val.eContainer();
 		boolean isIntrinsic = header.getName().startsWith("@llvm.");
-		
+
 		int index = 0;
 		for (Parameter param : val.getParameters()) {
 			ResolvedType t = resolveType(param);
 			// Verify a metadata type only appears in intrinsics
 			if (isIntrinsic == false && t.isMetadata()) {
 				error("Metadata parameters are only permitted on intrinsic functions",
-						Literals.PARAMETERS__PARAMETERS, index);
+						LLVM_IRPackage.eINSTANCE.getParameters_Parameters(), index);
 			} else if (t.isVoid()) {
 				error(t.toString() + " is not a valid parameter type",
-						Literals.PARAMETERS__PARAMETERS, index);
+						LLVM_IRPackage.eINSTANCE.getParameters_Parameters(), index);
 			}
 			index++;
 		}
 	}
-	
+
 	public void checkAnyCall(Callee callee, EObject type, ArgList args) {
 		if (callee instanceof ValueRef == false) return;
 		ResolvedType calleeType = resolveType(callee);
@@ -851,7 +851,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			// any other check.
 			return;
 		}
-		
+
 		boolean typeOmitted = false;
 		ResolvedAnyFunctionType fType = calleeType.getContainedType(0).asFunction();
 		ResolvedType retType = resolveType(type);
@@ -871,8 +871,8 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 						new ResolvedPointerType(fType, BigInteger.ZERO).toString());
 			}
 		}
-		
-		
+
+
 		Iterator<Argument> iter = args.getArguments().iterator();
 		for (ResolvedType p : fType.getParameters()) {
 			if (p.isVararg()) {
@@ -903,15 +903,15 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 					argNode.getOffset(), argNode.getLength(), null);
 		}
 	}
-	
+
 	@Check void checkDeadCode(NamedMiddleInstruction val) {
 		// We don't bother checking terminator instructions, since the only non-void
 		// one there is a non-void invoke, and that may have side effects.
 		if (mayHaveSideEffects(val.getInstruction())) return;
-		
+
 		warnIfUnused(val);
 	}
-	
+
 	@Check void checkUnusedParameter(Parameter param) {
 		EObject container = param;
 		while (true) {
@@ -920,7 +920,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			if (container instanceof FunctionDecl) return; // Don't report unused in declarations!
 			if (container instanceof FunctionDef) break;
 		}
-		
+
 		warnIfUnused(param);
 	}
 
@@ -932,7 +932,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			acceptWarning(message, val, node.getOffset(), node.getLength(), null);
 		}
 	}
-	
+
 	private boolean mayHaveSideEffects(EObject instruction) {
 		return  instruction instanceof Instruction_call_nonVoid ||
 				instruction instanceof Instruction_atomicrmw ||
@@ -944,84 +944,84 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 	public void checkNumberSequence(NamedInstruction val) {
 		checkNumberSequence(val, null);
 	}
-	
+
 	@Check
 	public void checkNumberSequence(Parameter val) {
-		checkNumberSequence(val, Literals.PARAMETER.getEStructuralFeature("name"));
+		checkNumberSequence(val, LLVM_IRPackage.eINSTANCE.getParameter().getEStructuralFeature("name"));
 	}
-	
+
 	@Check
 	public void checkNumberSequence(BasicBlock val) {
-		checkNumberSequence(val, Literals.BASIC_BLOCK__NAME);
+		checkNumberSequence(val, LLVM_IRPackage.eINSTANCE.getBasicBlock_Name());
 	}
-	
+
 	@Check
 	public void checkNumberSequence(GlobalVariable val) {
-		checkNumberSequence(val, Literals.GLOBAL_VARIABLE__NAME);
+		checkNumberSequence(val, LLVM_IRPackage.eINSTANCE.getGlobalVariable_Name());
 	}
-	
+
 	@Check
 	public void checkNumberSequence(FunctionHeader val) {
-		checkNumberSequence(val, Literals.FUNCTION_HEADER__NAME);
+		checkNumberSequence(val, LLVM_IRPackage.eINSTANCE.getFunctionHeader_Name());
 	}
-	
+
 	@Check
 	public void checkNumberSequence(Alias val) {
-		checkNumberSequence(val, Literals.ALIAS__NAME);
+		checkNumberSequence(val, LLVM_IRPackage.eINSTANCE.getAlias_Name());
 	}
-	
+
 	@Check
 	public void checkAlias(Alias val) {
 		ResolvedType type = resolveType(val.getType());
 		if (val.getAliasee().getBitcast() != null) {
-			checkExpected(type, resolveType(val.getAliasee().getBitcast()), Literals.ALIAS__ALIASEE);
+			checkExpected(type, resolveType(val.getAliasee().getBitcast()), LLVM_IRPackage.eINSTANCE.getAlias_Aliasee());
 			if (val.getAliasee().getBitcast().getOpcode().equals("bitcast") == false) {
-				error("Only legal conversion for aliasee is bitcast", Literals.ALIAS__ALIASEE);
+				error("Only legal conversion for aliasee is bitcast", LLVM_IRPackage.eINSTANCE.getAlias_Aliasee());
 			}
 		} else {
-			checkExpected(type, resolveType(val.getAliasee().getRef()), Literals.ALIAS__ALIASEE);
+			checkExpected(type, resolveType(val.getAliasee().getRef()), LLVM_IRPackage.eINSTANCE.getAlias_Aliasee());
 		}
 	}
-	
+
 	@Check
 	public void checkArgument(Argument val) {
 		checkExpected(val.getType(), val.getRef());
 	}
-	
+
 	@Check
 	public void checkType(Type t) {
 		ResolvedType resolved = resolveType(t);
 		if (resolved.isPointer() &&
 				resolved.getContainedType(0).isVoid()) {
 			error(resolved.toString() + " is not a legal LLVM type (use i8* for an arbitrary pointer)",
-					Literals.TYPE__BASE_TYPE);
+					LLVM_IRPackage.eINSTANCE.getType_BaseType());
 		}
 	}
-	
+
 	@Check
 	public void checkTypeDef(TypeDef val) {
 		ResolvedNamedType typedefType = (ResolvedNamedType) resolveType(val);
 		ResolvedType referred = resolveType(val.getType());
 		if (typedefType == referred) {
-			error("Recursive types are illegal (did you forget {} ?)", Literals.TYPE_DEF__TYPE);
+			error("Recursive types are illegal (did you forget {} ?)", LLVM_IRPackage.eINSTANCE.getTypeDef_Type());
 		}
 	}
-	
+
 	@Check
 	public void checkLocalValueRef(LocalValueRef val) {
 		// Check that the ref is indeed dominated by the def
 		LocalValue def = val.getRef();
 		if (def instanceof Parameter) return; // Parameters dominate the entire function
-		
+
 		Instruction_phi phi = EcoreUtil2.getContainerOfType(val, Instruction_phi.class);
 		if (phi == null) {
 			// If not in a phi node, just check if the def directly dominates the ref
 			if (dominates(def, val) == false) {
-				error("This use is not dominated by the referred value", Literals.LOCAL_VALUE_REF__REF);
+				error("This use is not dominated by the referred value", LLVM_IRPackage.eINSTANCE.getLocalValueRef_Ref());
 			}
 			return;
 		}
-		
+
 		// If in a phi node, check that the appropriate basic block either contains the def,
 		// or is dominated by it.
 		BasicBlock defBb = EcoreUtil2.getContainerOfType(def, BasicBlock.class);
@@ -1035,27 +1035,27 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 				if (bb == defBb) return;
 				if (dominates(defBb, bb) == false) {
 					error("The value " + def.getName() + " is neither defined in " + bb.getName() +
-							" nor is dominating it", Literals.LOCAL_VALUE_REF__REF);
+							" nor is dominating it", LLVM_IRPackage.eINSTANCE.getLocalValueRef_Ref());
 				}
 				break;
 			}
 		}
 	}
-	
+
 	private boolean dominates(LocalValue def, LocalValueRef ref) {
 		if (def instanceof Parameter) return true;
-		
+
 		BasicBlock defBb = EcoreUtil2.getContainerOfType(def, BasicBlock.class);
 		BasicBlock refBb = EcoreUtil2.getContainerOfType(ref, BasicBlock.class);
 		if (defBb == null || refBb == null) {
 			// Should not happen
 			return true;
 		}
-		
+
 		if (defBb == refBb) {
 			return appearsInSameBbAndBefore(def, ref);
 		}
-		
+
 		return dominates(defBb, refBb);
 	}
 
@@ -1073,7 +1073,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		// We should not reach this location
 		return false;
 	}
-	
+
 	private boolean dominates(final BasicBlock dominator, final BasicBlock dominatee) {
 		Object key = Tuples.create(dominator, dominatee);
 		return dominationCache.get(key, dominator.eResource(), new Provider<Boolean>() {
@@ -1082,12 +1082,12 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 				seen.add(dominatee);
 				return dominates(dominator, dominatee, seen);
 			}
-			
+
 			private boolean dominates(BasicBlock dominator, BasicBlock dominatee, Set<BasicBlock> seen) {
 				if (dominator == dominatee) return true; // Dominator reached
 				Iterable<? extends BasicBlock> preds = predecessors(dominatee);
 				if (preds.iterator().hasNext() == false) return false; // Start of function reached
-				
+
 				// Otherwise, only return true if all predecessors are dominated by the dominator.
 				for (BasicBlock pred : preds) {
 					if (seen.contains(pred)) continue;
@@ -1098,12 +1098,12 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			}
 		});
 	}
-	
+
 
 	public void checkNumberSequence(EObject val, EStructuralFeature feature) {
 		NumberedName name = namer.resolveNumberedName(val);
-		if (name == null) return; // It has a regular name 
-		
+		if (name == null) return; // It has a regular name
+
 		int expected = 0;
 		try {
 			for (EObject prev : new ReverseElementIterable(val)) {
@@ -1117,7 +1117,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			// be reported, so skip this.
 			return;
 		}
-		
+
 		if (name.getNumber() != expected) {
 			String prefix = val instanceof BasicBlock == false ? name.getPrefix() : "";
 			String actualStr = prefix + name.getNumber();
@@ -1131,21 +1131,21 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			}
 		}
 	}
-	
+
 	private void checkIntegerBinary(BinaryInstruction inst) {
 		// Instruction is only permitted on integers and integer vectors.
 		checkRequired(inst.getType(), TYPE_ANY_INTEGER, TYPE_INTEGER_VECTOR);
 		// General binary verification.
 		checkBinary(inst);
 	}
-	
+
 	private void checkFloatingBinary(BinaryInstruction inst) {
 		// Add is only permitted on integers and integer vectors.
 		checkRequired(inst.getType(), TYPE_FLOATING, TYPE_FLOATING_VECTOR);
 		// General binary verification.
 		checkBinary(inst);
 	}
-	
+
 	private void checkConstantFitsInType(ResolvedType type, Constant val) {
 		long size = type.getBits().longValue();
 		String constText = NodeModelUtils.getTokenText(NodeModelUtils.getNode(val));
@@ -1159,11 +1159,11 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			// Discard.
 		}
 	}
-	
+
 	private boolean checkRequired(EObject obj, ResolvedType... types) {
 		return checkRequired(resolveType(obj), obj.eContainingFeature(), 0, types);
 	}
-	
+
 	private boolean checkRequired(ResolvedType instType, EStructuralFeature feature, int index, ResolvedType... types) {
 		if (instType == null) {
 			warning("Unknown type expected", feature);
@@ -1179,19 +1179,19 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		error("Encountered " + instType + ", only allowed types are " + Arrays.toString(types), feature, index);
 		return false;
 	}
-	
+
 	private void checkExpected(EObject expected, EObject actual) {
 		checkExpected(resolveType(expected), resolveType(actual), actual.eContainingFeature(), 0);
 	}
-	
+
 	private void checkExpected(ResolvedType expectedType, EObject actual) {
 		checkExpected(expectedType, resolveType(actual), actual.eContainingFeature(), 0);
 	}
-	
+
 	private void checkExpected(ResolvedType expectedType, ResolvedType actualType, EStructuralFeature feature) {
 		checkExpected(expectedType, actualType, feature, 0);
 	}
-	
+
 	private void checkExpected(ResolvedType expectedType, ResolvedType actualType, EStructuralFeature feature, int index) {
 		if (expectedType == null) {
 			error("Unknown type expected", feature);
@@ -1212,7 +1212,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		}
 		error("Expected " + expectedType.toString() + ", found " + actualType.toString(), feature, index, ERROR_EXPECTED_TYPE, data);
 	}
-	
+
 	private void checkExpected(ResolvedType expectedType, ResolvedType actualType, EObject obj,
 			int offset, int length) {
 		if (expectedType == null) {
@@ -1237,7 +1237,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 
 	private List<String> getConversionOps(ResolvedType from, ResolvedType to) {
 		List<String> result = new LinkedList<String>();
-		
+
 		if (from.isInteger()) {
 			if (to.isInteger()) {
 				if (from.getBits().compareTo(to.getBits()) > 0) {
@@ -1266,13 +1266,13 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		} else if (from.isPointer() && to.isInteger()) {
 			result.add("ptrtoint");
 		}
-		
+
 		// If there's no other option and the types are of the same size, add the 'bitcast' option
 		if (result.isEmpty() && from.getBits().equals(to.getBits())) result.add("bitcast");
-		
+
 		return result;
 	}
-	
+
 	private Iterable<? extends BasicBlock> predecessors(BasicBlock val) {
 		LinkedList<BasicBlock> result = new LinkedList<BasicBlock>();
 		for (EObject ref : LLVM_IRUtils.xrefs(val)) {
@@ -1284,7 +1284,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 		}
 		return result;
 	}
-	
+
 	private boolean hasPredecessors(BasicBlock val) {
 		for (EObject ref : LLVM_IRUtils.xrefs(val)) {
 			// Check if at least one of its references is in a terminator instruction

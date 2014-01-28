@@ -70,7 +70,7 @@ public class ArgumentImpl extends MinimalEObjectImpl.Container implements Argume
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ARGUMENT;
+    return LLVM_IRPackage.eINSTANCE.getArgument();
   }
 
   /**

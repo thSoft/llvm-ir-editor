@@ -61,7 +61,7 @@ public class Instruction_fmulImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FMUL;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_fmul();
   }
 
   /**

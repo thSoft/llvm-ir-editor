@@ -64,7 +64,7 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INLINE_ASM;
+    return LLVM_IRPackage.eINSTANCE.getInlineAsm();
   }
 
   /**

@@ -65,7 +65,7 @@ public class Instruction_unreachableImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_UNREACHABLE;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_unreachable();
   }
 
   /**

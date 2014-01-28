@@ -98,7 +98,7 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TYPE_SUFFIX;
+    return LLVM_IRPackage.eINSTANCE.getTypeSuffix();
   }
 
   /**

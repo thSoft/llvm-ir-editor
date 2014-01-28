@@ -42,7 +42,7 @@ import com.intel.llvm.ireditor.lLVM_IR.BasicBlock;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionDef;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionHeader;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalValue;
-import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage.Literals;
+import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage;
 import com.intel.llvm.ireditor.lLVM_IR.MiddleInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.Parameter;
 import com.intel.llvm.ireditor.lLVM_IR.StartingInstruction;
@@ -56,7 +56,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 		BB(BasicBlock.class),
 		PARAM(Parameter.class),
 		GLOBAL(GlobalValue.class);
-		
+
 		private final Class<? extends EObject> eobjectType;
 		private final String ruleName;
 
@@ -64,7 +64,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			this.eobjectType = eobjectType;
 			ruleName = eobjectType.getSimpleName();
 		}
-		
+
 		public Class<? extends EObject> getEObjectType() {
 			return eobjectType;
 		}
@@ -73,10 +73,10 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			return ruleName;
 		}
 	}
-	
+
 	private final INode initialNode;
 	private final ReverseElementIterable.Mode initialMode;
-	
+
 	public ReverseElementIterable(EObject object) {
 		for (Mode mode : Mode.values()) {
 			EObject container = EcoreUtil2.getContainerOfType(object, mode.getEObjectType());
@@ -92,11 +92,11 @@ public class ReverseElementIterable implements Iterable<EObject> {
 				return;
 			}
 		}
-		
+
 		throw new IllegalArgumentException(
 				"Can only reverse iterate from a basic block, a paremeter, a global or an instruction");
 	}
-	
+
 	public ReverseElementIterable(INode node) {
 		while (node != null) {
 			EObject obj = node.getGrammarElement();
@@ -121,7 +121,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 	public Iterator<EObject> iterator() {
 		return new ReverseElementIterator();
 	}
-	
+
 	class ReverseElementIterator implements Iterator<EObject> {
 		INode currNode = initialNode;
 		INode nextNode;
@@ -178,7 +178,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 		public void remove() {
 			throw new UnsupportedOperationException();
 		}
-		
+
 		private INode inst2inst(INode node) {
 			// Previous instruction of the same type (terminator, middle, starting)
 			INode prev = node.getPreviousSibling();
@@ -189,14 +189,14 @@ public class ReverseElementIterable implements Iterable<EObject> {
 					return prev;
 				}
 			}
-			
+
 			return null;
 		}
-		
+
 		private INode inst2bb(INode node) {
 			return node.getParent();
 		}
-		
+
 		private INode bb2inst(INode node) {
 			INode prev = node.getPreviousSibling();
 			if (prev instanceof ICompositeNode == false) return null;
@@ -218,27 +218,27 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			// This method is full of sub-checks because the source file may be malformed, so
 			// the rest of the tree, including the header, may have missing components.
 			ICompositeNode functionDefNode = node.getParent();
-			
+
 			// Get header node from function def:
 			if (functionDefNode.hasDirectSemanticElement() == false) return null;
 			FunctionDef functionDef = (FunctionDef) functionDefNode.getSemanticElement();
 			List<INode> headerNodes = NodeModelUtils.findNodesForFeature(
-					functionDef, Literals.FUNCTION_DEF.getEStructuralFeature("header"));
+					functionDef, LLVM_IRPackage.eINSTANCE.getFunctionDef().getEStructuralFeature("header"));
 			if (headerNodes.isEmpty()) return null;
 			INode headerNode = headerNodes.get(0);
-			
+
 			// Get parameters node from function header:
 			if (headerNode.hasDirectSemanticElement() == false) return null;
 			FunctionHeader header = (FunctionHeader) headerNode.getSemanticElement();
 			List<INode> paramNodes = NodeModelUtils.findNodesForFeature(
-					header, Literals.FUNCTION_HEADER__PARAMETERS);
+					header, LLVM_IRPackage.eINSTANCE.getFunctionHeader_Parameters());
 			if (paramNodes.isEmpty()) return null;
 			INode paramNode = paramNodes.get(0);
-			
+
 			// Get last parameter from parameter node:
 			if (paramNode instanceof ICompositeNode == false) return null;
 			return ((ICompositeNode)paramNode).getLastChild(); // The last parameter
 		}
 	}
-	
+
 }

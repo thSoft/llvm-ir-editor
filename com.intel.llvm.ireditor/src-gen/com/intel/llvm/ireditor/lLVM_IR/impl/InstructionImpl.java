@@ -63,7 +63,7 @@ public class InstructionImpl extends MinimalEObjectImpl.Container implements Ins
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getInstruction();
   }
 
   /**

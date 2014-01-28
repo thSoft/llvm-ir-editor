@@ -70,7 +70,7 @@ public class TypedValueImpl extends MinimalEObjectImpl.Container implements Type
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TYPED_VALUE;
+    return LLVM_IRPackage.eINSTANCE.getTypedValue();
   }
 
   /**

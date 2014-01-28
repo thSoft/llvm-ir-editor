@@ -79,7 +79,7 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_insertelement();
   }
 
   /**

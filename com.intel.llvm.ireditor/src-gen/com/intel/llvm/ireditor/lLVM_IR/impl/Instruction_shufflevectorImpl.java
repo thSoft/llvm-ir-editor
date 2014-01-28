@@ -79,7 +79,7 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector();
   }
 
   /**

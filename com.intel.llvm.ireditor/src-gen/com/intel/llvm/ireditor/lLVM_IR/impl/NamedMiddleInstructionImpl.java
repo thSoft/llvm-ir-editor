@@ -57,7 +57,7 @@ public class NamedMiddleInstructionImpl extends NamedInstructionImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NAMED_MIDDLE_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getNamedMiddleInstruction();
   }
 
   /**

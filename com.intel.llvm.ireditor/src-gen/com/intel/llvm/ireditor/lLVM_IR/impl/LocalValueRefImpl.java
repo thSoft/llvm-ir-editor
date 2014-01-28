@@ -56,7 +56,7 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.LOCAL_VALUE_REF;
+    return LLVM_IRPackage.eINSTANCE.getLocalValueRef();
   }
 
   /**

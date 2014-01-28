@@ -110,7 +110,7 @@ public class Instruction_atomicrmwImpl extends MemoryInstructionImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw();
   }
 
   /**

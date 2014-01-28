@@ -89,7 +89,7 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NON_VOID_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getNonVoidType();
   }
 
   /**

@@ -65,7 +65,7 @@ public class VectorInstructionsImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS;
+    return LLVM_IRPackage.eINSTANCE.getVectorInstructions();
   }
 
   /**

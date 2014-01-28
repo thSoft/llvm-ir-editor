@@ -57,7 +57,7 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.VECTOR_CONSTANT;
+    return LLVM_IRPackage.eINSTANCE.getVectorConstant();
   }
 
   /**

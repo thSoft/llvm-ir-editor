@@ -57,7 +57,7 @@ public class ArrayConstantImpl extends ConstantImpl implements ArrayConstant
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ARRAY_CONSTANT;
+    return LLVM_IRPackage.eINSTANCE.getArrayConstant();
   }
 
   /**

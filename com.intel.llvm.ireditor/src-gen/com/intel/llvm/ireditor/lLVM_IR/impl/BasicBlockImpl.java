@@ -86,7 +86,7 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.BASIC_BLOCK;
+    return LLVM_IRPackage.eINSTANCE.getBasicBlock();
   }
 
   /**

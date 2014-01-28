@@ -101,7 +101,7 @@ public class Instruction_fcmpImpl extends OtherInstructionImpl implements Instru
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FCMP;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_fcmp();
   }
 
   /**

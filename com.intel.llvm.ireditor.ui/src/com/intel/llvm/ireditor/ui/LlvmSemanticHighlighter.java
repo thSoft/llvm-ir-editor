@@ -41,28 +41,28 @@ import com.intel.llvm.ireditor.lLVM_IR.BasicBlockRef;
 import com.intel.llvm.ireditor.lLVM_IR.Constant;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionHeader;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalVariable;
+import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValue;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValueRef;
 import com.intel.llvm.ireditor.lLVM_IR.NonVoidType;
 import com.intel.llvm.ireditor.lLVM_IR.Type;
 import com.intel.llvm.ireditor.lLVM_IR.VectorType;
 import com.intel.llvm.ireditor.lLVM_IR.VoidType;
-import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage.Literals;
 import com.intel.llvm.ireditor.lLVM_IR.util.LLVM_IRSwitch;
 
 public class LlvmSemanticHighlighter extends LLVM_IRSwitch<LLVM_IRUtils.Position> implements ISemanticHighlightingCalculator {
-	
+
 	private INode node;
-	
+
 	private LLVM_IRUtils.Position caseAnyType(EObject object) {
 		return new LLVM_IRUtils.Position(node.getOffset(), node.getLength(), LlvmHighlighter.TYPE_ID);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseType(Type object) {
 		return caseAnyType(object);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseVectorType(VectorType object) {
 		return caseAnyType(object);
@@ -72,22 +72,22 @@ public class LlvmSemanticHighlighter extends LLVM_IRSwitch<LLVM_IRUtils.Position
 	public LLVM_IRUtils.Position caseNonVoidType(NonVoidType object) {
 		return caseAnyType(object);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseVoidType(VoidType object) {
 		return caseAnyType(object);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseBasicBlockRef(BasicBlockRef object) {
 		return new LLVM_IRUtils.Position(node.getOffset(), node.getLength(), LlvmHighlighter.BASICBLOCK_ID);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseBasicBlock(BasicBlock object) {
 		// The node contains the entire basic block; we just want to highlight the name, if
 		// it exists.
-		String name = (String) object.eGet(Literals.BASIC_BLOCK__NAME);
+		String name = (String) object.eGet(LLVM_IRPackage.eINSTANCE.getBasicBlock_Name());
 		if (name == null) return null;
 		if (node.getText().startsWith(name.substring(1))) {
 			// It is explicitly named - so there's something to highlight
@@ -95,14 +95,14 @@ public class LlvmSemanticHighlighter extends LLVM_IRSwitch<LLVM_IRUtils.Position
 		}
 		return null;
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseLocalValue(LocalValue object) {
-		String name = (String) object.eGet(Literals.LOCAL_VALUE__NAME);
+		String name = (String) object.eGet(LLVM_IRPackage.eINSTANCE.getLocalValue_Name());
 		if (node.getText().startsWith(name) == false) return null;
 		return new LLVM_IRUtils.Position(node.getOffset(), name.length(), LlvmHighlighter.LOCALVALUE_ID);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseLocalValueRef(LocalValueRef object) {
 		return new LLVM_IRUtils.Position(node.getOffset(), node.getLength(), LlvmHighlighter.LOCALVALUE_ID);
@@ -110,26 +110,26 @@ public class LlvmSemanticHighlighter extends LLVM_IRSwitch<LLVM_IRUtils.Position
 
 	@Override
 	public LLVM_IRUtils.Position caseGlobalVariable(GlobalVariable object) {
-		String name = (String) object.eGet(Literals.GLOBAL_VARIABLE__NAME);
+		String name = (String) object.eGet(LLVM_IRPackage.eINSTANCE.getGlobalVariable_Name());
 		if (node.getText().startsWith(name) == false) return null;
 		return new LLVM_IRUtils.Position(node.getOffset(), name.length(), LlvmHighlighter.GLOBALVALUE_ID);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseAlias(Alias object) {
-		String name = (String) object.eGet(Literals.ALIAS__NAME);
+		String name = (String) object.eGet(LLVM_IRPackage.eINSTANCE.getAlias_Name());
 		if (node.getText().startsWith(name) == false) return null;
 		return new LLVM_IRUtils.Position(node.getOffset(), name.length(), LlvmHighlighter.GLOBALVALUE_ID);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseFunctionHeader(FunctionHeader object) {
-		String name = (String) object.eGet(Literals.FUNCTION_HEADER__NAME);
+		String name = (String) object.eGet(LLVM_IRPackage.eINSTANCE.getFunctionHeader_Name());
 		if (name == null) return null;
 		if (node.getText().startsWith(name) == false) return null;
 		return new LLVM_IRUtils.Position(node.getOffset(), name.length(), LlvmHighlighter.GLOBALVALUE_ID);
 	}
-	
+
 	@Override
 	public LLVM_IRUtils.Position caseConstant(Constant object) {
 		if (object.getRef() != null) {
@@ -137,7 +137,7 @@ public class LlvmSemanticHighlighter extends LLVM_IRSwitch<LLVM_IRUtils.Position
 		}
 		return super.caseConstant(object);
 	}
-	
+
 	public void provideHighlightingFor(XtextResource resource,
 			IHighlightedPositionAcceptor acceptor) {
 		if (resource == null || resource.getParseResult() == null)

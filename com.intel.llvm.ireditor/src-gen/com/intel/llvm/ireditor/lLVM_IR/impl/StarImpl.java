@@ -58,7 +58,7 @@ public class StarImpl extends MinimalEObjectImpl.Container implements Star
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.STAR;
+    return LLVM_IRPackage.eINSTANCE.getStar();
   }
 
   /**

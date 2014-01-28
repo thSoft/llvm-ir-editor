@@ -98,7 +98,7 @@ public class Instruction_indirectbrImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_INDIRECTBR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_indirectbr();
   }
 
   /**

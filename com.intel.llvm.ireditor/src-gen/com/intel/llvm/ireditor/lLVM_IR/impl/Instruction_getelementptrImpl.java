@@ -75,7 +75,7 @@ public class Instruction_getelementptrImpl extends MemoryInstructionImpl impleme
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_GETELEMENTPTR;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr();
   }
 
   /**

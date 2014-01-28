@@ -36,7 +36,7 @@ public class Instruction_sdivImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_SDIV;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_sdiv();
   }
 
 } //Instruction_sdivImpl

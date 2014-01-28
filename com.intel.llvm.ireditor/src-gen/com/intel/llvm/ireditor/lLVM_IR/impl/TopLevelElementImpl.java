@@ -38,7 +38,7 @@ public class TopLevelElementImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TOP_LEVEL_ELEMENT;
+    return LLVM_IRPackage.eINSTANCE.getTopLevelElement();
   }
 
 } //TopLevelElementImpl

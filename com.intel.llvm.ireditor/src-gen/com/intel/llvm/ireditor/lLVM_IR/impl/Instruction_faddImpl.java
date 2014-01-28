@@ -61,7 +61,7 @@ public class Instruction_faddImpl extends BinaryInstructionImpl implements Instr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FADD;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_fadd();
   }
 
   /**

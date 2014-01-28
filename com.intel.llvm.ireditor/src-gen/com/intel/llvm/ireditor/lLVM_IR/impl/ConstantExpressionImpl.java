@@ -64,7 +64,7 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression();
   }
 
   /**

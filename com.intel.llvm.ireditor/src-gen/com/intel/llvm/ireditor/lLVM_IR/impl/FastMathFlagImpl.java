@@ -65,7 +65,7 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FAST_MATH_FLAG;
+    return LLVM_IRPackage.eINSTANCE.getFastMathFlag();
   }
 
   /**

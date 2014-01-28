@@ -36,7 +36,7 @@ public class Instruction_mulImpl extends BinaryInstructionImpl implements Instru
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_MUL;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_mul();
   }
 
 } //Instruction_mulImpl

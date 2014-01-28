@@ -38,7 +38,7 @@ public class IntTypeImpl extends MinimalEObjectImpl.Container implements IntType
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INT_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getIntType();
   }
 
 } //IntTypeImpl

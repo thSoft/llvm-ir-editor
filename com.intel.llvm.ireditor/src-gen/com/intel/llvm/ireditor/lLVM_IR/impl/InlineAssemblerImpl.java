@@ -85,7 +85,7 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INLINE_ASSEMBLER;
+    return LLVM_IRPackage.eINSTANCE.getInlineAssembler();
   }
 
   /**

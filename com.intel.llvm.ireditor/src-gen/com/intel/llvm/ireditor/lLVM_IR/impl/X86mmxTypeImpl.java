@@ -38,7 +38,7 @@ public class X86mmxTypeImpl extends MinimalEObjectImpl.Container implements X86m
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.X8_6MMX_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getX86mmxType();
   }
 
 } //X86mmxTypeImpl

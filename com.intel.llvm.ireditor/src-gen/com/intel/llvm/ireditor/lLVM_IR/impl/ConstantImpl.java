@@ -57,7 +57,7 @@ public class ConstantImpl extends MinimalEObjectImpl.Container implements Consta
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT;
+    return LLVM_IRPackage.eINSTANCE.getConstant();
   }
 
   /**

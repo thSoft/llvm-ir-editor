@@ -102,7 +102,7 @@ public class BitwiseBinaryInstructionImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction();
   }
 
   /**

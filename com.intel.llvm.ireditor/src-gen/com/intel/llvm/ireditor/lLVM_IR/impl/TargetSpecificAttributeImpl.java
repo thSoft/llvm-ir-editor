@@ -86,7 +86,7 @@ public class TargetSpecificAttributeImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TARGET_SPECIFIC_ATTRIBUTE;
+    return LLVM_IRPackage.eINSTANCE.getTargetSpecificAttribute();
   }
 
   /**

@@ -1006,8 +1006,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_AddressSpace(EObject context, AddressSpace semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.ADDRESS_SPACE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.ADDRESS_SPACE__VALUE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getAddressSpace_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getAddressSpace_Value()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1058,10 +1058,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Argument(EObject context, Argument semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.ARGUMENT__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.ARGUMENT__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.ARGUMENT__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.ARGUMENT__REF));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getArgument_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getArgument_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getArgument_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getArgument_Ref()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1086,10 +1086,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_ArrayType(EObject context, ArrayType semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.ARRAY_TYPE__SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.ARRAY_TYPE__SIZE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.ARRAY_TYPE__ELEM_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.ARRAY_TYPE__ELEM_TYPE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getArrayType_Size()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getArrayType_Size()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getArrayType_ElemType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getArrayType_ElemType()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1117,8 +1117,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_BasicBlockRef(EObject context, BasicBlockRef semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BASIC_BLOCK_REF__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BASIC_BLOCK_REF__REF));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBasicBlockRef_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBasicBlockRef_Ref()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1305,8 +1305,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Constant(EObject context, Constant semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.CONSTANT__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.CONSTANT__REF));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstant_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstant_Ref()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1321,14 +1321,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_ConversionInstruction(EObject context, ConversionInstruction semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__FROM_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__FROM_TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__VALUE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__TARGET_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.CONVERSION_INSTRUCTION__TARGET_TYPE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_FromType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_FromType()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Value()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_TargetType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_TargetType()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1415,8 +1415,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_FunctionDecl(EObject context, FunctionDecl semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.FUNCTION__HEADER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.FUNCTION__HEADER));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getFunction_Header()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getFunction_Header()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1462,8 +1462,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_FunctionPrefix(EObject context, FunctionPrefix semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.FUNCTION_PREFIX__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.FUNCTION_PREFIX__VALUE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getFunctionPrefix_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getFunctionPrefix_Value()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1505,8 +1505,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_InlineAsm(EObject context, InlineAsm semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INLINE_ASM__ASM_LINE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INLINE_ASM__ASM_LINE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInlineAsm_AsmLine()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInlineAsm_AsmLine()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1521,10 +1521,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_InlineAssembler(EObject context, InlineAssembler semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INLINE_ASSEMBLER__ASSEMBLER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INLINE_ASSEMBLER__ASSEMBLER));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INLINE_ASSEMBLER__FLAGS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INLINE_ASSEMBLER__FLAGS));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInlineAssembler_Assembler()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInlineAssembler_Assembler()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInlineAssembler_Flags()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInlineAssembler_Flags()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1540,14 +1540,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_add(EObject context, Instruction_add semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1574,14 +1574,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_and(EObject context, Instruction_and semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1599,14 +1599,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_ashr(EObject context, Instruction_ashr semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1624,16 +1624,16 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_atomicrmw(EObject context, Instruction_atomicrmw semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.MEMORY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.MEMORY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__OPERATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__OPERATION));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__POINTER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__POINTER));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__ARGUMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__ARGUMENT));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__ORDERING) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ATOMICRMW__ORDERING));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Operation()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Operation()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Pointer()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Pointer()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Argument()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Argument()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Ordering()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Ordering()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1697,16 +1697,16 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_cmpxchg(EObject context, Instruction_cmpxchg semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.MEMORY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.MEMORY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__POINTER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__POINTER));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__COMPARED_WITH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__COMPARED_WITH));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__NEW_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__NEW_VALUE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__ORDERING) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_CMPXCHG__ORDERING));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Pointer()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Pointer()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_ComparedWith()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_ComparedWith()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_NewValue()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_NewValue()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Ordering()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Ordering()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1725,12 +1725,12 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_extractelement(EObject context, Instruction_extractelement semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_EXTRACTELEMENT__VECTOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_EXTRACTELEMENT__VECTOR));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_EXTRACTELEMENT__INDEX) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_EXTRACTELEMENT__INDEX));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Vector()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Vector()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Index()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Index()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1765,16 +1765,16 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_fcmp(EObject context, Instruction_fcmp semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__CONDITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__CONDITION));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FCMP__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Condition()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Condition()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1802,10 +1802,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_fence(EObject context, Instruction_fence semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.MEMORY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.MEMORY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FENCE__ORDERING) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_FENCE__ORDERING));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fence_Ordering()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fence_Ordering()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1830,14 +1830,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_frem(EObject context, Instruction_frem semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1873,16 +1873,16 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_icmp(EObject context, Instruction_icmp semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__CONDITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__CONDITION));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_ICMP__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Condition()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Condition()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -1910,14 +1910,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_insertelement(EObject context, Instruction_insertelement semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT__VECTOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT__VECTOR));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT__ELEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT__ELEMENT));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT__INDEX) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_INSERTELEMENT__INDEX));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Vector()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Vector()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Element()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Element()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Index()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Index()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2004,14 +2004,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_lshr(EObject context, Instruction_lshr semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2029,14 +2029,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_mul(EObject context, Instruction_mul semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2054,14 +2054,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_or(EObject context, Instruction_or semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2088,10 +2088,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_resume(EObject context, Instruction_resume semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_RESUME__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_RESUME__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_RESUME__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_RESUME__VALUE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Value()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2116,14 +2116,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_sdiv(EObject context, Instruction_sdiv semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2141,14 +2141,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_select(EObject context, Instruction_select semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SELECT__CONDITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SELECT__CONDITION));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SELECT__VALUE1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SELECT__VALUE1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SELECT__VALUE2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SELECT__VALUE2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2166,14 +2166,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_shl(EObject context, Instruction_shl semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2191,14 +2191,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_shufflevector(EObject context, Instruction_shufflevector semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.VECTOR_INSTRUCTIONS__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR__VECTOR1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR__VECTOR1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR__VECTOR2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR__VECTOR2));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR__MASK) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_SHUFFLEVECTOR__MASK));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector2()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Mask()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Mask()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2216,14 +2216,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_srem(EObject context, Instruction_srem semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2256,14 +2256,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_sub(EObject context, Instruction_sub semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2290,14 +2290,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_udiv(EObject context, Instruction_udiv semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2315,8 +2315,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_unreachable(EObject context, Instruction_unreachable semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_UNREACHABLE__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_UNREACHABLE__OPCODE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_unreachable_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_unreachable_Opcode()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2331,14 +2331,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_urem(EObject context, Instruction_urem semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2356,12 +2356,12 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_va_arg(EObject context, Instruction_va_arg semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.OTHER_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_VA_ARG__ARGLIST) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_VA_ARG__ARGLIST));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_VA_ARG__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.INSTRUCTION_VA_ARG__TYPE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Arglist()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Arglist()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Type()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2378,14 +2378,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Instruction_xor(EObject context, Instruction_xor semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OPCODE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP1));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.BITWISE_BINARY_INSTRUCTION__OP2));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2421,8 +2421,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_LocalValueRef(EObject context, LocalValueRef semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.LOCAL_VALUE_REF__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.LOCAL_VALUE_REF__REF));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValueRef_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValueRef_Ref()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2455,8 +2455,8 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_MetadataRef(EObject context, MetadataRef semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.METADATA_REF__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.METADATA_REF__REF));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataRef_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataRef_Ref()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2480,10 +2480,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_MetadataSuffix(EObject context, MetadataSuffix semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.METADATA_SUFFIX__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.METADATA_SUFFIX__NAME));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.METADATA_SUFFIX__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.METADATA_SUFFIX__VALUE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataSuffix_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataSuffix_Name()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataSuffix_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataSuffix_Value()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2563,10 +2563,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_NamedTerminatorInstruction(EObject context, NamedTerminatorInstruction semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.LOCAL_VALUE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.LOCAL_VALUE__NAME));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.NAMED_TERMINATOR_INSTRUCTION__INSTRUCTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.NAMED_TERMINATOR_INSTRUCTION__INSTRUCTION));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValue_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValue_Name()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getNamedTerminatorInstruction_Instruction()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getNamedTerminatorInstruction_Instruction()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2657,10 +2657,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Parameter(EObject context, Parameter semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.LOCAL_VALUE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.LOCAL_VALUE__NAME));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.PARAMETER__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.PARAMETER__TYPE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValue_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValue_Name()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getParameter_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getParameter_Type()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2776,10 +2776,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_TypeDef(EObject context, TypeDef semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.TYPE_DEF__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.TYPE_DEF__NAME));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.TYPE_DEF__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.TYPE_DEF__TYPE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getTypeDef_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getTypeDef_Name()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getTypeDef_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getTypeDef_Type()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2813,10 +2813,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_TypedConstant(EObject context, TypedConstant semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.TYPED_CONSTANT__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.TYPED_CONSTANT__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.TYPED_CONSTANT__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.TYPED_CONSTANT__VALUE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedConstant_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedConstant_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedConstant_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedConstant_Value()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2832,10 +2832,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_TypedValue(EObject context, TypedValue semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.TYPED_VALUE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.TYPED_VALUE__TYPE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.TYPED_VALUE__REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.TYPED_VALUE__REF));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedValue_Type()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedValue_Type()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedValue_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getTypedValue_Ref()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
@@ -2869,10 +2869,10 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_VectorType(EObject context, VectorType semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.VECTOR_TYPE__SIZE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.VECTOR_TYPE__SIZE));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.Literals.VECTOR_TYPE__ELEM_TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.Literals.VECTOR_TYPE__ELEM_TYPE));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorType_Size()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorType_Size()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorType_ElemType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorType_ElemType()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);

@@ -36,7 +36,7 @@ public class Instruction_addImpl extends BinaryInstructionImpl implements Instru
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_ADD;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_add();
   }
 
 } //Instruction_addImpl

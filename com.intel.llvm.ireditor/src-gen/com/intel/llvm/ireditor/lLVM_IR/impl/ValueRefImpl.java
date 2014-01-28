@@ -36,7 +36,7 @@ public class ValueRefImpl extends CalleeImpl implements ValueRef
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.VALUE_REF;
+    return LLVM_IRPackage.eINSTANCE.getValueRef();
   }
 
 } //ValueRefImpl

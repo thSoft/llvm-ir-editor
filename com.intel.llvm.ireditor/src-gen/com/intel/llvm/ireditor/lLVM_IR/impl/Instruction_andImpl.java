@@ -36,7 +36,7 @@ public class Instruction_andImpl extends BitwiseBinaryInstructionImpl implements
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_AND;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_and();
   }
 
 } //Instruction_andImpl

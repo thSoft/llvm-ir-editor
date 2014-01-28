@@ -38,7 +38,7 @@ public class AlignStackImpl extends MinimalEObjectImpl.Container implements Alig
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ALIGN_STACK;
+    return LLVM_IRPackage.eINSTANCE.getAlignStack();
   }
 
 } //AlignStackImpl

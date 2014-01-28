@@ -70,7 +70,7 @@ public class ParameterTypeImpl extends MinimalEObjectImpl.Container implements P
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.PARAMETER_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getParameterType();
   }
 
   /**

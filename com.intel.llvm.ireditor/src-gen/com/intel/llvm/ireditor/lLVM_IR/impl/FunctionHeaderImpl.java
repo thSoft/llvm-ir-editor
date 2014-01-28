@@ -243,7 +243,7 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FUNCTION_HEADER;
+    return LLVM_IRPackage.eINSTANCE.getFunctionHeader();
   }
 
   /**

@@ -61,7 +61,7 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FUNCTION_DEF;
+    return LLVM_IRPackage.eINSTANCE.getFunctionDef();
   }
 
   /**

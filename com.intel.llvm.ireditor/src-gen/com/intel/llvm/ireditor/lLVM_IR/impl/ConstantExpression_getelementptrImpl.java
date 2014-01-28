@@ -99,7 +99,7 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_GETELEMENTPTR;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_getelementptr();
   }
 
   /**

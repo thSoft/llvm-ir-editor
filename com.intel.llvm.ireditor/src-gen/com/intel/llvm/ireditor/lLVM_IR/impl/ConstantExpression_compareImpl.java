@@ -89,7 +89,7 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_COMPARE;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_compare();
   }
 
   /**

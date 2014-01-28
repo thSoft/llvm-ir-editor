@@ -186,7 +186,7 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.GLOBAL_VARIABLE;
+    return LLVM_IRPackage.eINSTANCE.getGlobalVariable();
   }
 
   /**

@@ -150,7 +150,7 @@ public class Instruction_invoke_voidImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_INVOKE_VOID;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_invoke_void();
   }
 
   /**

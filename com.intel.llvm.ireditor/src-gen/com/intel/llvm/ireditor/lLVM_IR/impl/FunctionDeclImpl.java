@@ -36,7 +36,7 @@ public class FunctionDeclImpl extends FunctionImpl implements FunctionDecl
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.FUNCTION_DECL;
+    return LLVM_IRPackage.eINSTANCE.getFunctionDecl();
   }
 
 } //FunctionDeclImpl

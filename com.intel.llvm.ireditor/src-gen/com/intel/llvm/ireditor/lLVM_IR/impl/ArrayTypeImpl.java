@@ -79,7 +79,7 @@ public class ArrayTypeImpl extends MinimalEObjectImpl.Container implements Array
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ARRAY_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getArrayType();
   }
 
   /**

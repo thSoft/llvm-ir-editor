@@ -64,7 +64,7 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.METADATA_STRING;
+    return LLVM_IRPackage.eINSTANCE.getMetadataString();
   }
 
   /**

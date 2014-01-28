@@ -36,7 +36,7 @@ public class UndefImpl extends ConstantImpl implements Undef
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.UNDEF;
+    return LLVM_IRPackage.eINSTANCE.getUndef();
   }
 
 } //UndefImpl

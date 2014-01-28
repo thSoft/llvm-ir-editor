@@ -103,7 +103,7 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.LANDINGPAD_CLAUSE;
+    return LLVM_IRPackage.eINSTANCE.getLandingpadClause();
   }
 
   /**

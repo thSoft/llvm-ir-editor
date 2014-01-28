@@ -61,7 +61,7 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.METADATA_NODE;
+    return LLVM_IRPackage.eINSTANCE.getMetadataNode();
   }
 
   /**

@@ -70,7 +70,7 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.TYPED_CONSTANT;
+    return LLVM_IRPackage.eINSTANCE.getTypedConstant();
   }
 
   /**

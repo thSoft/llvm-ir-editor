@@ -70,7 +70,7 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ALIASEE;
+    return LLVM_IRPackage.eINSTANCE.getAliasee();
   }
 
   /**

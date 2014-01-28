@@ -160,7 +160,7 @@ public class Instruction_call_nonVoidImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_CALL_NON_VOID;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_call_nonVoid();
   }
 
   /**

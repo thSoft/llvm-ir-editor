@@ -68,7 +68,7 @@ public class ConstantExpression_binaryImpl extends ConstantExpressionImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CONSTANT_EXPRESSION_BINARY;
+    return LLVM_IRPackage.eINSTANCE.getConstantExpression_binary();
   }
 
   /**

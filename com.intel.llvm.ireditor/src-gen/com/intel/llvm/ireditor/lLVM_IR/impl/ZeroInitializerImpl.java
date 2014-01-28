@@ -36,7 +36,7 @@ public class ZeroInitializerImpl extends ConstantImpl implements ZeroInitializer
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.ZERO_INITIALIZER;
+    return LLVM_IRPackage.eINSTANCE.getZeroInitializer();
   }
 
 } //ZeroInitializerImpl

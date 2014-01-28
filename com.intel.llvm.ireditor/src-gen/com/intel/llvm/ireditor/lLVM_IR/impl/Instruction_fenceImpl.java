@@ -64,7 +64,7 @@ public class Instruction_fenceImpl extends MemoryInstructionImpl implements Inst
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_FENCE;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_fence();
   }
 
   /**

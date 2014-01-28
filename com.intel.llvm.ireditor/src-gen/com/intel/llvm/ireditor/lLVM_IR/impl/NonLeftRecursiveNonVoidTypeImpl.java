@@ -70,7 +70,7 @@ public class NonLeftRecursiveNonVoidTypeImpl extends MinimalEObjectImpl.Containe
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.NON_LEFT_RECURSIVE_NON_VOID_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getNonLeftRecursiveNonVoidType();
   }
 
   /**

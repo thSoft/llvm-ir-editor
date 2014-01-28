@@ -79,7 +79,7 @@ public class Instruction_resumeImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.INSTRUCTION_RESUME;
+    return LLVM_IRPackage.eINSTANCE.getInstruction_resume();
   }
 
   /**

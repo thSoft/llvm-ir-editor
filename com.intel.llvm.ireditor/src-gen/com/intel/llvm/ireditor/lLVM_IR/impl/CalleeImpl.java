@@ -38,7 +38,7 @@ public class CalleeImpl extends MinimalEObjectImpl.Container implements Callee
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.CALLEE;
+    return LLVM_IRPackage.eINSTANCE.getCallee();
   }
 
 } //CalleeImpl

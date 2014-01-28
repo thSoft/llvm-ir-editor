@@ -79,7 +79,7 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.VECTOR_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getVectorType();
   }
 
   /**

@@ -86,7 +86,7 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.PARAMETERS;
+    return LLVM_IRPackage.eINSTANCE.getParameters();
   }
 
   /**

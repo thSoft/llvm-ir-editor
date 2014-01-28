@@ -38,7 +38,7 @@ public class MetadataTypeImpl extends MinimalEObjectImpl.Container implements Me
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.METADATA_TYPE;
+    return LLVM_IRPackage.eINSTANCE.getMetadataType();
   }
 
 } //MetadataTypeImpl

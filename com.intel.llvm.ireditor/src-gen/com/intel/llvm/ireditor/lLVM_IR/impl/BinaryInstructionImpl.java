@@ -102,7 +102,7 @@ public class BinaryInstructionImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-    return LLVM_IRPackage.Literals.BINARY_INSTRUCTION;
+    return LLVM_IRPackage.eINSTANCE.getBinaryInstruction();
   }
 
   /**
