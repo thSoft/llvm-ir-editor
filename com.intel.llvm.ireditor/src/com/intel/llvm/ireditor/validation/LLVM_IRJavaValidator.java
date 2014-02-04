@@ -198,7 +198,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 
 	@Check
 	public void checkRet(Instruction_ret val) {
-		EObject f = val.eContainer().eContainer().eContainer();
+		EObject f = val.eContainer().eContainer();
 		Type rettype = ((Function)f).getHeader().getRettype();
 		if (val.getVal() == null) {
 			ResolvedType resolvedRettype = resolveType(rettype);
