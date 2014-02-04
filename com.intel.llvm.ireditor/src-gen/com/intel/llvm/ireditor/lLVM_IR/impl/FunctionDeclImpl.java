@@ -16,27 +16,24 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FunctionDeclImpl extends FunctionImpl implements FunctionDecl
-{
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected FunctionDeclImpl()
-  {
-    super();
-  }
+public class FunctionDeclImpl extends FunctionImpl implements FunctionDecl {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionDeclImpl() {
+		super();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  protected EClass eStaticClass()
-  {
-    return LLVM_IRPackage.eINSTANCE.getFunctionDecl();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LLVM_IRPackage.eINSTANCE.getFunctionDecl();
+	}
 
 } //FunctionDeclImpl

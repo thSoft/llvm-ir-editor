@@ -16,27 +16,24 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_andImpl extends BitwiseBinaryInstructionImpl implements Instruction_and
-{
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected Instruction_andImpl()
-  {
-    super();
-  }
+public class Instruction_andImpl extends BitwiseBinaryInstructionImpl implements Instruction_and {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Instruction_andImpl() {
+		super();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  protected EClass eStaticClass()
-  {
-    return LLVM_IRPackage.eINSTANCE.getInstruction_and();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LLVM_IRPackage.eINSTANCE.getInstruction_and();
+	}
 
 } //Instruction_andImpl

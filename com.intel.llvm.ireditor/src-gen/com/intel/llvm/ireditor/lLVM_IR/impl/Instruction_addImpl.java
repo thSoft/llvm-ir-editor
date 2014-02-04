@@ -16,27 +16,24 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_addImpl extends BinaryInstructionImpl implements Instruction_add
-{
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected Instruction_addImpl()
-  {
-    super();
-  }
+public class Instruction_addImpl extends BinaryInstructionImpl implements Instruction_add {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Instruction_addImpl() {
+		super();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  protected EClass eStaticClass()
-  {
-    return LLVM_IRPackage.eINSTANCE.getInstruction_add();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LLVM_IRPackage.eINSTANCE.getInstruction_add();
+	}
 
 } //Instruction_addImpl

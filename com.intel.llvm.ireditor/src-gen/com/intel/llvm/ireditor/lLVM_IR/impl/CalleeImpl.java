@@ -18,27 +18,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class CalleeImpl extends MinimalEObjectImpl.Container implements Callee
-{
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected CalleeImpl()
-  {
-    super();
-  }
+public class CalleeImpl extends MinimalEObjectImpl.Container implements Callee {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalleeImpl() {
+		super();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  protected EClass eStaticClass()
-  {
-    return LLVM_IRPackage.eINSTANCE.getCallee();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LLVM_IRPackage.eINSTANCE.getCallee();
+	}
 
 } //CalleeImpl

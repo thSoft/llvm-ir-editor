@@ -31,7 +31,7 @@ grammar com.intel.llvm.ireditor.LLVM_IR hidden(WS, FILECHECK_COMMENT, SL_COMMENT
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-generate lLVM_IR "http://www.intel.com/llvm/ireditor"
+import "http://www.intel.com/llvm/ireditor"
 
 Model:
 	elements+=TopLevelElement*
@@ -408,13 +408,12 @@ MetadataSuffix:
 ;
 
 StartingInstruction:
-	name=LocalName
-	instruction=Instruction_phi
+	Instruction_phi
 	metadata+=MetadataSuffix*
 ;
 
 MiddleInstruction:
-	instruction=(
+	(
 		NamedMiddleInstruction |
 		Instruction_store |
 		Instruction_fence |
@@ -424,21 +423,18 @@ MiddleInstruction:
 ;
 
 NamedMiddleInstruction:
-	name=LocalName
-	instruction=(
-		BinaryInstruction |
-		BitwiseBinaryInstruction |
-		VectorInstructions |
-		AggregateInstruction |
-		Instruction_alloca |
-		Instruction_load |
-		Instruction_getelementptr |
-		Instruction_cmpxchg |
-		Instruction_atomicrmw |
-		ConversionInstruction |
-		OtherInstruction |
-		Instruction_call_nonVoid
-	)
+	(BinaryInstruction |
+	BitwiseBinaryInstruction |
+	VectorInstructions |
+	AggregateInstruction |
+	Instruction_alloca |
+	Instruction_load |
+	Instruction_getelementptr |
+	Instruction_cmpxchg |
+	Instruction_atomicrmw |
+	ConversionInstruction |
+	OtherInstruction |
+	Instruction_call_nonVoid)
 ;
 
 ParamName returns ecore::EString:
@@ -460,7 +456,7 @@ GlobalName returns ecore::EString:
 ;
 
 TerminatorInstruction:
-	instruction=(
+	(
 		NamedTerminatorInstruction |
 		Instruction_ret |
 		Instruction_br |
@@ -474,10 +470,7 @@ TerminatorInstruction:
 ;
 
 NamedTerminatorInstruction:
-	name=LocalName
-	instruction=(
-		Instruction_invoke_nonVoid
-	)
+	Instruction_invoke_nonVoid
 ;
 
 // ret <type> <value>       ; Return a value from a non-void function
@@ -512,7 +505,7 @@ Instruction_indirectbr:
 	']'
 ;
 
-// <result> = invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
+// invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
 //                 to label <normal label> unwind label <exception label>
 // Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
 // behaves just like in a call instruction, so it's possible to provide return type only.
@@ -531,6 +524,7 @@ Instruction_invoke_void:
 // Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
 // behaves just like in a call instruction, so it's possible to provide return type only.
 Instruction_invoke_nonVoid:
+	name=LocalName
 	opcode='invoke' cconv=CConv?
 	('zeroext'? & 'signext'? & 'inreg'?)
 	type=NonVoidType
@@ -574,11 +568,13 @@ BinaryInstruction:
 // <result> = add nsw <ty> <op1>, <op2>      ; yields {ty}:result
 // <result> = add nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 Instruction_add:
+	name=LocalName
 	opcode='add' ('nuw'? & 'nsw'?) type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = fadd [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_fadd:
+	name=LocalName
 	opcode='fadd' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
@@ -592,11 +588,13 @@ FastMathFlag:
 // <result> = sub nsw <ty> <op1>, <op2>      ; yields {ty}:result
 // <result> = sub nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 Instruction_sub:
+	name=LocalName
 	opcode='sub' ('nuw'? & 'nsw'?) type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = fsub [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_fsub:
+	name=LocalName
 	opcode='fsub' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
@@ -605,43 +603,51 @@ Instruction_fsub:
 // <result> = mul nsw <ty> <op1>, <op2>      ; yields {ty}:result
 // <result> = mul nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 Instruction_mul:
+	name=LocalName
 	opcode='mul' ('nuw'? & 'nsw'?) type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = fmul [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_fmul:
+	name=LocalName
 	opcode='fmul' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = udiv <ty> <op1>, <op2>         ; yields {ty}:result
 // <result> = udiv exact <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_udiv:
+	name=LocalName
 	opcode='udiv' 'exact'? type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = sdiv <ty> <op1>, <op2>         ; yields {ty}:result
 // <result> = sdiv exact <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_sdiv:
+	name=LocalName
 	opcode='sdiv' 'exact'? type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = fdiv [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_fdiv:
+	name=LocalName
 	opcode='fdiv' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = urem <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_urem:
+	name=LocalName
 	opcode='urem' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = srem <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_srem:
+	name=LocalName
 	opcode='srem' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = frem <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_frem:
+	name=LocalName
 	opcode='frem' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
@@ -659,33 +665,39 @@ BitwiseBinaryInstruction:
 // <result> = shl nsw <ty> <op1>, <op2>       ; yields {ty}:result
 // <result> = shl nuw nsw <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_shl:
+	name=LocalName
 	opcode='shl' ('nuw'? & 'nsw'?) type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = lshr <ty> <op1>, <op2>         ; yields {ty}:result
 // <result> = lshr exact <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_lshr:
+	name=LocalName
 	opcode='lshr' 'exact'? type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = ashr <ty> <op1>, <op2>         ; yields {ty}:result
 // <result> = ashr exact <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_ashr:
+	name=LocalName
 	opcode='ashr' 'exact'? type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = and <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_and:
+	name=LocalName
 	opcode='and' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = or <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_or:
+	name=LocalName
 	opcode='or' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
 // <result> = xor <ty> <op1>, <op2>   ; yields {ty}:result
 Instruction_xor:
+	name=LocalName
 	opcode='xor' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
@@ -697,11 +709,13 @@ VectorInstructions:
 
 // <result> = extractelement <n x <ty>> <val>, i32 <idx>    ; yields <ty>
 Instruction_extractelement:
+	name=LocalName
 	opcode='extractelement' vector=TypedValue ',' index=TypedValue
 ;
 
 // <result> = insertelement <n x <ty>> <val>, <ty> <elt>, i32 <idx>    ; yields <n x <ty>>
 Instruction_insertelement:
+	name=LocalName
 	opcode='insertelement' vector=TypedValue
 	',' element=TypedValue
 	',' index=TypedValue
@@ -709,6 +723,7 @@ Instruction_insertelement:
 
 // <result> = shufflevector <n x <ty>> <v1>, <n x <ty>> <v2>, <m x i32> <mask>    ; yields <m x <ty>>
 Instruction_shufflevector:
+	name=LocalName
 	opcode='shufflevector'
 	vector1=TypedValue ','
 	vector2=TypedValue ','
@@ -722,28 +737,21 @@ AggregateInstruction:
 
 // <result> = extractvalue <aggregate type> <val>, <idx>{, <idx>}*
 Instruction_extractvalue:
+	name=LocalName
 	opcode='extractvalue' aggregate=TypedValue (',' indices+=Constant)+
 ;
 
 // <result> = insertvalue <aggregate type> <val>, <ty> <elt>, <idx>{, <idx>}*    ; yields <aggregate type>
 Instruction_insertvalue:
+	name=LocalName
 	opcode='insertvalue' aggregate=TypedValue
 	',' element=TypedValue
 	(',' indices+=Constant)+
 ;
 
-MemoryInstruction:
-	Instruction_alloca |
-	Instruction_load |
-	Instruction_store |
-	Instruction_fence |
-	Instruction_cmpxchg |
-	Instruction_atomicrmw |
-	Instruction_getelementptr
-;
-
 // <result> = alloca <type>[, <ty> <NumElements>][, align <alignment>]     ; yields {type*}:result
 Instruction_alloca:
+	name=LocalName
 	opcode='alloca' type=Type
 	(',' numElements=TypedValue)?
 	(',' alignment=Align)?
@@ -753,6 +761,7 @@ Instruction_alloca:
 // <result> = load atomic [volatile] <ty>* <pointer> [singlethread] <ordering>, align <alignment>
 // !<index> = !{ i32 1 }
 Instruction_load:
+	name=LocalName
 	opcode='load'
 	(
 		(
@@ -798,17 +807,19 @@ Instruction_fence:
 	opcode='fence' 'singlethread'? ordering=Ordering
 ;
 
-// cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering>  ; yields {ty}
+// <result> = cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering>  ; yields {ty}
 Instruction_cmpxchg:
+	name=LocalName
 	opcode='cmpxchg' 'volatile'? pointer=TypedValue
 	',' comparedWith=TypedValue
 	',' newValue=TypedValue
 	'singlethread'? ordering=Ordering
 ;
 
-// atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
+// <result> = atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
 //                   ; yields {ty}
 Instruction_atomicrmw:
+	name=LocalName
 	opcode='atomicrmw' 'volatile'? operation=Atomicrmw_operation
 	pointer=TypedValue
 	',' argument=TypedValue 'singlethread'? ordering=Ordering
@@ -823,6 +834,7 @@ Atomicrmw_operation:
 // <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
 // <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
 Instruction_getelementptr:
+	name=LocalName
 	opcode='getelementptr' 'inbounds'?
 	base=TypedValue
 	(',' indices+=TypedValue)*
@@ -830,6 +842,7 @@ Instruction_getelementptr:
 
 ConversionInstruction:
 	// Merged since they all look exactly the same except the opcode
+	name=LocalName
 	opcode=ConvertionOpcode
 	fromType=Type value=ValueRef 'to' targetType=Type
 ;
@@ -851,6 +864,7 @@ OtherInstruction:
 
 // <result> = icmp <cond> <ty> <op1>, <op2>   ; yields {i1} or {<N x i1>}:result
 Instruction_icmp:
+	name=LocalName
 	opcode='icmp' condition=IcmpCondition type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
@@ -862,6 +876,7 @@ IcmpCondition:
 
 // <result> = fcmp <cond> <ty> <op1>, <op2>     ; yields {i1} or {<N x i1>}:result
 Instruction_fcmp:
+	name=LocalName
 	opcode='fcmp' condition=FcmpCondition type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
@@ -873,6 +888,7 @@ FcmpCondition:
 
 // <result> = phi <ty> [ <val0>, <label0>], ...
 Instruction_phi:
+	name=LocalName
 	opcode='phi' type=Type
 	('[' values+=ValueRef ',' labels+=BasicBlockRef ']')
 	(',' '[' values+=ValueRef ',' labels+=BasicBlockRef ']')*
@@ -881,13 +897,19 @@ Instruction_phi:
 // <result> = select selty <cond>, <ty> <val1>, <ty> <val2>             ; yields ty
 // selty is either i1 or {<N x i1>}
 Instruction_select:
+	name=LocalName
 	opcode='select' condition=TypedValue
 	',' value1=TypedValue
 	',' value2=TypedValue
 ;
 
+Instruction_call:
+	Instruction_call_nonVoid | Instruction_call_void
+;
+
 // <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 Instruction_call_nonVoid:
+	name=LocalName
 	isTail?='tail'?
 	opcode='call'
 	cconv=CConv?
@@ -898,6 +920,7 @@ Instruction_call_nonVoid:
 	functionAttributes=FunctionAttributes?
 ;
 
+// [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 Instruction_call_void:
 	isTail?='tail'?
 	opcode='call'
@@ -925,6 +948,7 @@ InlineAssembler:
 
 // <resultval> = va_arg <va_list*> <arglist>, <argty>
 Instruction_va_arg:
+	name=LocalName
 	opcode='va_arg' arglist=TypedValue ',' type=Type
 ;
 
@@ -933,6 +957,7 @@ Instruction_va_arg:
 // <clause> := catch <type> <value>
 // <clause> := filter <array constant type> <array constant>
 Instruction_landingpad:
+	name=LocalName
 	opcode='landingpad' resultType=Type 'personality' personality=TypedValue
 	(clauses+=LandingpadClause | 'cleanup')
 	clauses+=LandingpadClause*

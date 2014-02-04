@@ -14,6 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FloatingType extends EObject
-{
+public interface FloatingType extends EObject {
 } // FloatingType

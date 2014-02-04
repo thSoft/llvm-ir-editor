@@ -76,7 +76,7 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 	public Class<? extends IValueConverterService> bindIValueConverterService() {
 		return LlvmValueConverterService.class;
 	}
-	
+
 	/**
 	 * Registers a name converter, because Xtext by default works with qualified names
 	 * with the "." delimiter. We don't need no stinkin' qualifications and delimiters!
@@ -84,23 +84,23 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 	public Class<? extends IQualifiedNameConverter> bindIQualifiedNameConverter() {
 		return LlvmQualifiedNameConverter.class;
 	}
-	
+
 	@Override
 	public Class<? extends IParser> bindIParser() {
 		// To fix hanging on unclosed functions
 		return LlvmParser.class;
 	}
-	
+
 	@Override
 	public Class<? extends ILocationInFileProvider> bindILocationInFileProvider() {
 		// In order to locate nameless elements.
 		return LlvmLocationInFileProvider.class;
 	}
-	
+
 	public Class<? extends ISyntaxErrorMessageProvider> bindISyntaxErrorMessageProvider() {
 		return LlvmSyntaxErrorMessageProvider.class;
 	}
-	
+
 	public static class LlvmSyntaxErrorMessageProvider extends SyntaxErrorMessageProvider {
 		@Override
 		public SyntaxErrorMessage getSyntaxErrorMessage(
@@ -117,9 +117,9 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 			return super.getSyntaxErrorMessage(context);
 		}
 	}
-	
+
 	public static class LlvmLocationInFileProvider extends DefaultLocationInFileProvider {
-		
+
 		@Override
 		protected ITextRegion doGetTextRegion(EObject obj, @NonNull RegionDescription query) {
 			ITextRegion result = super.doGetTextRegion(obj, query);
@@ -143,20 +143,20 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 			}
 			return result;
 		}
-		
+
 		@Override
 		protected List<INode> getLocationNodes(EObject obj) {
 			if (obj instanceof MiddleInstruction) {
-				return getLocationNodes(((MiddleInstruction) obj).getInstruction());
+				return getLocationNodes(((MiddleInstruction) obj));
 			} else if (obj instanceof TerminatorInstruction) {
-				return getLocationNodes(((TerminatorInstruction) obj).getInstruction());
+				return getLocationNodes(((TerminatorInstruction) obj));
 			}
-			
+
 			EStructuralFeature nameFeature = obj.eClass().getEStructuralFeature("name");
 			if (nameFeature == null) return super.getLocationNodes(obj);
-			
+
 			List<INode> result = NodeModelUtils.findNodesForFeature(obj, nameFeature);
-			
+
 			// Special cases for nameless basic blocks, instructions and parameters
 			String text = NodeModelUtils.getTokenText(result.get(0));
 			if (text.isEmpty()) {
@@ -170,11 +170,11 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 					return getLocationNodes(firstInstruction);
 				}
 			}
-			
-			
+
+
 			return result;
 		}
-		
+
 		private INode getOpcodeNode(EObject inst) {
 			EStructuralFeature instructionFeature = inst.eClass().getEStructuralFeature("instruction");
 			EObject actualInst = (EObject) inst.eGet(instructionFeature);
@@ -182,9 +182,9 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 			return NodeModelUtils.findNodesForFeature(actualInst, opcodeFeature).get(0);
 		}
 	}
-	
+
 	public static class LlvmParser extends LLVM_IRParser {
-		
+
 		@Override
 		protected InternalLLVM_IRParser createParser(XtextTokenStream stream) {
 			return new InternalLLVM_IRParser(stream, getGrammarAccess()) {
@@ -198,7 +198,7 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 				}
 			};
 		}
-		
+
 		@Override
 		protected boolean isReparseSupported() {
 			// Reparse is disabled because right now the repase region for elements inside a function
@@ -208,7 +208,7 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 			return false;
 		}
 	}
-	
+
 	public static class LlvmQualifiedNameConverter implements IQualifiedNameConverter {
 
 		public String toString(QualifiedName name) {
@@ -220,7 +220,7 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 			if (qualifiedNameAsText == null) return null;
 			return QualifiedName.create(qualifiedNameAsText);
 		}
-		
+
 	}
 
 	/**
@@ -231,39 +231,39 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 		public IValueConverter<String> convertLocalName() {
 			return new LocalNameConverter();
 		}
-		
+
 		@ValueConverter(rule="ParamName")
 		public IValueConverter<String> convertParamName() {
 			return new ParamNameConverter();
 		}
-		
+
 		@ValueConverter(rule="GlobalName")
 		public IValueConverter<String> convertGlobalName() {
 			return new GlobalNameConverter();
 		}
-		
+
 		@ValueConverter(rule="BasicBlockName")
 		public IValueConverter<String> convertBasicBlockName() {
 			return new BasicBlockNameConverter();
 		}
-		
+
 	}
-	
+
 	public static abstract class LlvmNameConverter implements IValueConverter<String> {
-		
+
 		private NameResolver namer = new NameResolver();
-		
+
 		public String toValue(String string, INode node) throws ValueConverterException {
 			if (string == null || string.isEmpty()) {
 				return nameFromIndex(findIndex(node));
 			}
 			return nameFromString(string);
 		}
-		
+
 		public String toString(String value) throws ValueConverterException {
 			return value;
 		}
-		
+
 		private int findIndex(INode node) {
 			// This works by searching for the last location in which an unnamed object was
 			// defined in this scope, taking its name, and incrementing it by one.
@@ -274,29 +274,29 @@ public class LLVM_IRRuntimeModule extends com.intel.llvm.ireditor.AbstractLLVM_I
 			}
 			return 0;
 		}
-		
+
 		protected abstract String nameFromIndex(int index);
 		protected abstract String nameFromString(String string);
 	}
-	
+
 	public static class LocalNameConverter extends LlvmNameConverter {
 		@Override protected String nameFromIndex(int index) { return "%" + index; }
 		@Override protected String nameFromString(String string) { return string.replaceFirst("\\s*=\\s*$", ""); }
 	}
-	
+
 	public static class ParamNameConverter extends LlvmNameConverter {
 		@Override protected String nameFromIndex(int index) { return "%" + index; }
 		@Override protected String nameFromString(String string) { return string; }
 	}
-	
+
 	public static class GlobalNameConverter extends LlvmNameConverter {
 		@Override protected String nameFromIndex(int index) { return "@" + index; }
 		@Override protected String nameFromString(String string) { return string.replaceFirst("\\s*=\\s*$", ""); }
 	}
-	
+
 	public static class BasicBlockNameConverter extends LlvmNameConverter {
 		@Override protected String nameFromIndex(int index) { return "%" + index; }
 		@Override protected String nameFromString(String string) { return "%" + string.substring(0, string.length()-1); }
 	}
-	
+
 }

@@ -50,17 +50,17 @@ import com.intel.llvm.ireditor.lLVM_IR.util.LLVM_IRSwitch;
 public class NameResolver extends LLVM_IRSwitch<String> {
 	private static Pattern NUMBERED_NAME_PATTERN = Pattern.compile("([%@!])(\\d+)(\\s*=\\s*)?");
 	private static Pattern NUMBERED_BB_PATTERN = Pattern.compile("(\\d+):");
-	
+
 	public String resolveName(EObject element) {
 		return doSwitch(element);
 	}
-	
+
 	public NumberedName resolveNumberedName(EObject element) {
 		if (element == null) return null;
 		String name = resolveName(element);
 		// No name:
 		if (name == null) return null;
-		
+
 		Matcher m = NUMBERED_NAME_PATTERN.matcher(name);
 		if (m.matches()) {
 			// Numbered non-bb name:
@@ -71,46 +71,46 @@ public class NameResolver extends LLVM_IRSwitch<String> {
 			// Numbered bb name:
 			return new NumberedName("%", Integer.parseInt(m.group(1)));
 		}
-		
+
 		// Non-numbered name:
 		return null;
 	}
-	
+
 	@Override
 	public String caseAlias(Alias object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseBasicBlock(BasicBlock object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseGlobalVariable(GlobalVariable object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseFunctionDecl(FunctionDecl object) {
 		return object.getHeader().getName();
 	}
-	
+
 	@Override
 	public String caseFunctionDef(FunctionDef object) {
 		return object.getHeader().getName();
 	}
-	
+
 	@Override
 	public String caseNamedMetadata(NamedMetadata object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseStartingInstruction(StartingInstruction object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseNamedMiddleInstruction(NamedMiddleInstruction object) {
 		return object.getName();
@@ -120,26 +120,26 @@ public class NameResolver extends LLVM_IRSwitch<String> {
 	public String caseNamedTerminatorInstruction(NamedTerminatorInstruction object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseMiddleInstruction(MiddleInstruction object) {
-		EObject inner = object.getInstruction();
+		EObject inner = object;
 		if (inner instanceof NamedMiddleInstruction) return ((NamedMiddleInstruction) inner).getName();
 		return null;
 	}
-	
+
 	@Override
 	public String caseTerminatorInstruction(TerminatorInstruction object) {
-		EObject inner = object.getInstruction();
+		EObject inner = object;
 		if (inner instanceof NamedTerminatorInstruction) return ((NamedTerminatorInstruction) inner).getName();
 		return null;
 	}
-	
+
 	@Override
 	public String caseParameter(Parameter object) {
 		return object.getName();
 	}
-	
+
 	@Override
 	public String caseTypeDef(TypeDef object) {
 		return object.getName();

@@ -14,6 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface IntType extends EObject
-{
+public interface IntType extends EObject {
 } // IntType

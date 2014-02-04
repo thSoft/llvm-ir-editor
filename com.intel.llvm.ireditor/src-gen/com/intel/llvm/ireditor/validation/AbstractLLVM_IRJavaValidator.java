@@ -13,7 +13,7 @@ public class AbstractLLVM_IRJavaValidator extends org.eclipse.xtext.validation.A
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage.eINSTANCE);
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.intel.com/llvm/ireditor"));
 		return result;
 	}
 

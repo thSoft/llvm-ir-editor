@@ -19,32 +19,31 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface VectorConstant extends Constant
-{
-  /**
-   * Returns the value of the '<em><b>List</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>List</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>List</em>' containment reference.
-   * @see #setList(ConstantList)
-   * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage#getVectorConstant_List()
-   * @model containment="true"
-   * @generated
-   */
-  ConstantList getList();
+public interface VectorConstant extends Constant {
+	/**
+	 * Returns the value of the '<em><b>List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>List</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>List</em>' containment reference.
+	 * @see #setList(ConstantList)
+	 * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage#getVectorConstant_List()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ConstantList getList();
 
-  /**
-   * Sets the value of the '{@link com.intel.llvm.ireditor.lLVM_IR.VectorConstant#getList <em>List</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>List</em>' containment reference.
-   * @see #getList()
-   * @generated
-   */
-  void setList(ConstantList value);
+	/**
+	 * Sets the value of the '{@link com.intel.llvm.ireditor.lLVM_IR.VectorConstant#getList <em>List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>List</em>' containment reference.
+	 * @see #getList()
+	 * @generated
+	 */
+	void setList(ConstantList value);
 
 } // VectorConstant

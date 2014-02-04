@@ -13,6 +13,5 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface GlobalValue extends TopLevelElement
-{
+public interface GlobalValue extends TopLevelElement {
 } // GlobalValue

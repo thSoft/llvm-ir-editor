@@ -96,11 +96,8 @@ import com.intel.llvm.ireditor.lLVM_IR.MetadataRef;
 import com.intel.llvm.ireditor.lLVM_IR.MetadataString;
 import com.intel.llvm.ireditor.lLVM_IR.MetadataSuffix;
 import com.intel.llvm.ireditor.lLVM_IR.MetadataType;
-import com.intel.llvm.ireditor.lLVM_IR.MiddleInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.Model;
 import com.intel.llvm.ireditor.lLVM_IR.NamedMetadata;
-import com.intel.llvm.ireditor.lLVM_IR.NamedMiddleInstruction;
-import com.intel.llvm.ireditor.lLVM_IR.NamedTerminatorInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.NonLeftRecursiveNonVoidType;
 import com.intel.llvm.ireditor.lLVM_IR.NonLeftRecursiveType;
 import com.intel.llvm.ireditor.lLVM_IR.NonVoidType;
@@ -111,12 +108,10 @@ import com.intel.llvm.ireditor.lLVM_IR.ParameterType;
 import com.intel.llvm.ireditor.lLVM_IR.Parameters;
 import com.intel.llvm.ireditor.lLVM_IR.SimpleConstant;
 import com.intel.llvm.ireditor.lLVM_IR.Star;
-import com.intel.llvm.ireditor.lLVM_IR.StartingInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.StructType;
 import com.intel.llvm.ireditor.lLVM_IR.StructureConstant;
 import com.intel.llvm.ireditor.lLVM_IR.TargetInfo;
 import com.intel.llvm.ireditor.lLVM_IR.TargetSpecificAttribute;
-import com.intel.llvm.ireditor.lLVM_IR.TerminatorInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.Type;
 import com.intel.llvm.ireditor.lLVM_IR.TypeDef;
 import com.intel.llvm.ireditor.lLVM_IR.TypeSuffix;
@@ -326,8 +321,16 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				}
 				else break;
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION:
-				if(context == grammarAccess.getConversionInstructionRule()) {
+				if(context == grammarAccess.getConversionInstructionRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_ConversionInstruction(context, (ConversionInstruction) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_ConversionInstruction_MiddleInstruction(context, (ConversionInstruction) semanticObject); 
 					return; 
 				}
 				else break;
@@ -419,36 +422,74 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_ADD:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_addRule()) {
+				   context == grammarAccess.getInstruction_addRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_add(context, (Instruction_add) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_add_MiddleInstruction(context, (Instruction_add) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_ALLOCA:
 				if(context == grammarAccess.getInstruction_allocaRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_alloca(context, (Instruction_alloca) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_alloca_MiddleInstruction(context, (Instruction_alloca) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_AND:
 				if(context == grammarAccess.getBitwiseBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_andRule()) {
+				   context == grammarAccess.getInstruction_andRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_and(context, (Instruction_and) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_and_MiddleInstruction(context, (Instruction_and) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_ASHR:
 				if(context == grammarAccess.getBitwiseBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_ashrRule()) {
+				   context == grammarAccess.getInstruction_ashrRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_ashr(context, (Instruction_ashr) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_ashr_MiddleInstruction(context, (Instruction_ashr) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_ATOMICRMW:
 				if(context == grammarAccess.getInstruction_atomicrmwRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_atomicrmw(context, (Instruction_atomicrmw) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_atomicrmw_MiddleInstruction(context, (Instruction_atomicrmw) semanticObject); 
 					return; 
 				}
 				else break;
@@ -457,100 +498,210 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_br(context, (Instruction_br) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_br_TerminatorInstruction(context, (Instruction_br) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_CALL_NON_VOID:
-				if(context == grammarAccess.getInstruction_call_nonVoidRule()) {
+				if(context == grammarAccess.getInstruction_callRule() ||
+				   context == grammarAccess.getInstruction_call_nonVoidRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_call_nonVoid(context, (Instruction_call_nonVoid) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_call_nonVoid_MiddleInstruction(context, (Instruction_call_nonVoid) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_CALL_VOID:
-				if(context == grammarAccess.getInstruction_call_voidRule()) {
+				if(context == grammarAccess.getInstruction_callRule() ||
+				   context == grammarAccess.getInstruction_call_voidRule()) {
 					sequence_Instruction_call_void(context, (Instruction_call_void) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_call_void_MiddleInstruction(context, (Instruction_call_void) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG:
 				if(context == grammarAccess.getInstruction_cmpxchgRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_cmpxchg(context, (Instruction_cmpxchg) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_cmpxchg_MiddleInstruction(context, (Instruction_cmpxchg) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT:
 				if(context == grammarAccess.getInstruction_extractelementRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getVectorInstructionsRule()) {
 					sequence_Instruction_extractelement(context, (Instruction_extractelement) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_extractelement_MiddleInstruction(context, (Instruction_extractelement) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTVALUE:
 				if(context == grammarAccess.getAggregateInstructionRule() ||
-				   context == grammarAccess.getInstruction_extractvalueRule()) {
+				   context == grammarAccess.getInstruction_extractvalueRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_extractvalue(context, (Instruction_extractvalue) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_extractvalue_MiddleInstruction(context, (Instruction_extractvalue) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FADD:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_faddRule()) {
+				   context == grammarAccess.getInstruction_faddRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_fadd(context, (Instruction_fadd) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_fadd_MiddleInstruction(context, (Instruction_fadd) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FCMP:
 				if(context == grammarAccess.getInstruction_fcmpRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getOtherInstructionRule()) {
 					sequence_Instruction_fcmp(context, (Instruction_fcmp) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_fcmp_MiddleInstruction(context, (Instruction_fcmp) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FDIV:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_fdivRule()) {
+				   context == grammarAccess.getInstruction_fdivRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_fdiv(context, (Instruction_fdiv) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_fdiv_MiddleInstruction(context, (Instruction_fdiv) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FENCE:
-				if(context == grammarAccess.getInstruction_fenceRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				if(context == grammarAccess.getInstruction_fenceRule()) {
 					sequence_Instruction_fence(context, (Instruction_fence) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_fence_MiddleInstruction(context, (Instruction_fence) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FMUL:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_fmulRule()) {
+				   context == grammarAccess.getInstruction_fmulRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_fmul(context, (Instruction_fmul) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_fmul_MiddleInstruction(context, (Instruction_fmul) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FREM:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_fremRule()) {
+				   context == grammarAccess.getInstruction_fremRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_frem(context, (Instruction_frem) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_frem_MiddleInstruction(context, (Instruction_frem) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_FSUB:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_fsubRule()) {
+				   context == grammarAccess.getInstruction_fsubRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_fsub(context, (Instruction_fsub) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_fsub_MiddleInstruction(context, (Instruction_fsub) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR:
 				if(context == grammarAccess.getInstruction_getelementptrRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_getelementptr(context, (Instruction_getelementptr) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_getelementptr_MiddleInstruction(context, (Instruction_getelementptr) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_ICMP:
 				if(context == grammarAccess.getInstruction_icmpRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getOtherInstructionRule()) {
 					sequence_Instruction_icmp(context, (Instruction_icmp) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_icmp_MiddleInstruction(context, (Instruction_icmp) semanticObject); 
 					return; 
 				}
 				else break;
@@ -559,24 +710,53 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_indirectbr(context, (Instruction_indirectbr) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_indirectbr_TerminatorInstruction(context, (Instruction_indirectbr) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT:
 				if(context == grammarAccess.getInstruction_insertelementRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getVectorInstructionsRule()) {
 					sequence_Instruction_insertelement(context, (Instruction_insertelement) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_insertelement_MiddleInstruction(context, (Instruction_insertelement) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE:
 				if(context == grammarAccess.getAggregateInstructionRule() ||
-				   context == grammarAccess.getInstruction_insertvalueRule()) {
+				   context == grammarAccess.getInstruction_insertvalueRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_insertvalue(context, (Instruction_insertvalue) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_insertvalue_MiddleInstruction(context, (Instruction_insertvalue) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID:
-				if(context == grammarAccess.getInstruction_invoke_nonVoidRule()) {
+				if(context == grammarAccess.getInstruction_invoke_nonVoidRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedTerminatorInstructionRule()) {
 					sequence_Instruction_invoke_nonVoid(context, (Instruction_invoke_nonVoid) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_invoke_nonVoid_TerminatorInstruction(context, (Instruction_invoke_nonVoid) semanticObject); 
 					return; 
 				}
 				else break;
@@ -585,39 +765,83 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_invoke_void(context, (Instruction_invoke_void) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_invoke_void_TerminatorInstruction(context, (Instruction_invoke_void) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD:
 				if(context == grammarAccess.getInstruction_landingpadRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getOtherInstructionRule()) {
 					sequence_Instruction_landingpad(context, (Instruction_landingpad) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_landingpad_MiddleInstruction(context, (Instruction_landingpad) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_LOAD:
 				if(context == grammarAccess.getInstruction_loadRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_load(context, (Instruction_load) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_load_MiddleInstruction(context, (Instruction_load) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_LSHR:
 				if(context == grammarAccess.getBitwiseBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_lshrRule()) {
+				   context == grammarAccess.getInstruction_lshrRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_lshr(context, (Instruction_lshr) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_lshr_MiddleInstruction(context, (Instruction_lshr) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_MUL:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_mulRule()) {
+				   context == grammarAccess.getInstruction_mulRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_mul(context, (Instruction_mul) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_mul_MiddleInstruction(context, (Instruction_mul) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_OR:
 				if(context == grammarAccess.getBitwiseBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_orRule()) {
+				   context == grammarAccess.getInstruction_orRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_or(context, (Instruction_or) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_or_MiddleInstruction(context, (Instruction_or) semanticObject); 
 					return; 
 				}
 				else break;
@@ -626,10 +850,22 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_phi(context, (Instruction_phi) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getStartingInstructionRule()) {
+					sequence_Instruction_phi_StartingInstruction(context, (Instruction_phi) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_RESUME:
 				if(context == grammarAccess.getInstruction_resumeRule()) {
 					sequence_Instruction_resume(context, (Instruction_resume) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_resume_TerminatorInstruction(context, (Instruction_resume) semanticObject); 
 					return; 
 				}
 				else break;
@@ -638,53 +874,110 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_ret(context, (Instruction_ret) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_ret_TerminatorInstruction(context, (Instruction_ret) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_SDIV:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_sdivRule()) {
+				   context == grammarAccess.getInstruction_sdivRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_sdiv(context, (Instruction_sdiv) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_sdiv_MiddleInstruction(context, (Instruction_sdiv) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_SELECT:
 				if(context == grammarAccess.getInstruction_selectRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getOtherInstructionRule()) {
 					sequence_Instruction_select(context, (Instruction_select) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_select_MiddleInstruction(context, (Instruction_select) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_SHL:
 				if(context == grammarAccess.getBitwiseBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_shlRule()) {
+				   context == grammarAccess.getInstruction_shlRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_shl(context, (Instruction_shl) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_shl_MiddleInstruction(context, (Instruction_shl) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR:
 				if(context == grammarAccess.getInstruction_shufflevectorRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getVectorInstructionsRule()) {
 					sequence_Instruction_shufflevector(context, (Instruction_shufflevector) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_shufflevector_MiddleInstruction(context, (Instruction_shufflevector) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_SREM:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_sremRule()) {
+				   context == grammarAccess.getInstruction_sremRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_srem(context, (Instruction_srem) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_srem_MiddleInstruction(context, (Instruction_srem) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_STORE:
-				if(context == grammarAccess.getInstruction_storeRule() ||
-				   context == grammarAccess.getMemoryInstructionRule()) {
+				if(context == grammarAccess.getInstruction_storeRule()) {
 					sequence_Instruction_store(context, (Instruction_store) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_store_MiddleInstruction(context, (Instruction_store) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_SUB:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_subRule()) {
+				   context == grammarAccess.getInstruction_subRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_sub(context, (Instruction_sub) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_sub_MiddleInstruction(context, (Instruction_sub) semanticObject); 
 					return; 
 				}
 				else break;
@@ -693,11 +986,24 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_switch(context, (Instruction_switch) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_switch_TerminatorInstruction(context, (Instruction_switch) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_UDIV:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_udivRule()) {
+				   context == grammarAccess.getInstruction_udivRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_udiv(context, (Instruction_udiv) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_udiv_MiddleInstruction(context, (Instruction_udiv) semanticObject); 
 					return; 
 				}
 				else break;
@@ -706,25 +1012,54 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					sequence_Instruction_unreachable(context, (Instruction_unreachable) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getTerminatorInstructionRule()) {
+					sequence_Instruction_unreachable_TerminatorInstruction(context, (Instruction_unreachable) semanticObject); 
+					return; 
+				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_UREM:
 				if(context == grammarAccess.getBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_uremRule()) {
+				   context == grammarAccess.getInstruction_uremRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_urem(context, (Instruction_urem) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_urem_MiddleInstruction(context, (Instruction_urem) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG:
 				if(context == grammarAccess.getInstruction_va_argRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule() ||
 				   context == grammarAccess.getOtherInstructionRule()) {
 					sequence_Instruction_va_arg(context, (Instruction_va_arg) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_va_arg_MiddleInstruction(context, (Instruction_va_arg) semanticObject); 
 					return; 
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_XOR:
 				if(context == grammarAccess.getBitwiseBinaryInstructionRule() ||
-				   context == grammarAccess.getInstruction_xorRule()) {
+				   context == grammarAccess.getInstruction_xorRule() ||
+				   context == grammarAccess.getLocalValueRule() ||
+				   context == grammarAccess.getNamedInstructionRule() ||
+				   context == grammarAccess.getNamedMiddleInstructionRule()) {
 					sequence_Instruction_xor(context, (Instruction_xor) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInstructionRule() ||
+				   context == grammarAccess.getMiddleInstructionRule()) {
+					sequence_Instruction_xor_MiddleInstruction(context, (Instruction_xor) semanticObject); 
 					return; 
 				}
 				else break;
@@ -786,13 +1121,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					return; 
 				}
 				else break;
-			case LLVM_IRPackage.MIDDLE_INSTRUCTION:
-				if(context == grammarAccess.getInstructionRule() ||
-				   context == grammarAccess.getMiddleInstructionRule()) {
-					sequence_MiddleInstruction(context, (MiddleInstruction) semanticObject); 
-					return; 
-				}
-				else break;
 			case LLVM_IRPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
@@ -803,22 +1131,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				if(context == grammarAccess.getNamedMetadataRule() ||
 				   context == grammarAccess.getTopLevelElementRule()) {
 					sequence_NamedMetadata(context, (NamedMetadata) semanticObject); 
-					return; 
-				}
-				else break;
-			case LLVM_IRPackage.NAMED_MIDDLE_INSTRUCTION:
-				if(context == grammarAccess.getLocalValueRule() ||
-				   context == grammarAccess.getNamedInstructionRule() ||
-				   context == grammarAccess.getNamedMiddleInstructionRule()) {
-					sequence_NamedMiddleInstruction(context, (NamedMiddleInstruction) semanticObject); 
-					return; 
-				}
-				else break;
-			case LLVM_IRPackage.NAMED_TERMINATOR_INSTRUCTION:
-				if(context == grammarAccess.getLocalValueRule() ||
-				   context == grammarAccess.getNamedInstructionRule() ||
-				   context == grammarAccess.getNamedTerminatorInstructionRule()) {
-					sequence_NamedTerminatorInstruction(context, (NamedTerminatorInstruction) semanticObject); 
 					return; 
 				}
 				else break;
@@ -884,15 +1196,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					return; 
 				}
 				else break;
-			case LLVM_IRPackage.STARTING_INSTRUCTION:
-				if(context == grammarAccess.getInstructionRule() ||
-				   context == grammarAccess.getLocalValueRule() ||
-				   context == grammarAccess.getNamedInstructionRule() ||
-				   context == grammarAccess.getStartingInstructionRule()) {
-					sequence_StartingInstruction(context, (StartingInstruction) semanticObject); 
-					return; 
-				}
-				else break;
 			case LLVM_IRPackage.STRUCT_TYPE:
 				if(context == grammarAccess.getStructTypeRule()) {
 					sequence_StructType(context, (StructType) semanticObject); 
@@ -916,13 +1219,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case LLVM_IRPackage.TARGET_SPECIFIC_ATTRIBUTE:
 				if(context == grammarAccess.getTargetSpecificAttributeRule()) {
 					sequence_TargetSpecificAttribute(context, (TargetSpecificAttribute) semanticObject); 
-					return; 
-				}
-				else break;
-			case LLVM_IRPackage.TERMINATOR_INSTRUCTION:
-				if(context == grammarAccess.getInstructionRule() ||
-				   context == grammarAccess.getTerminatorInstructionRule()) {
-					sequence_TerminatorInstruction(context, (TerminatorInstruction) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1317,26 +1613,26 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode=ConvertionOpcode fromType=Type value=ValueRef targetType=Type)
+	 *     (name=LocalName opcode=ConvertionOpcode fromType=Type value=ValueRef targetType=Type)
 	 */
 	protected void sequence_ConversionInstruction(EObject context, ConversionInstruction semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_FromType()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_FromType()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Value()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_Value()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_TargetType()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConversionInstruction_TargetType()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getConversionInstructionAccess().getOpcodeConvertionOpcodeParserRuleCall_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getConversionInstructionAccess().getFromTypeTypeParserRuleCall_1_0(), semanticObject.getFromType());
-		feeder.accept(grammarAccess.getConversionInstructionAccess().getValueValueRefParserRuleCall_2_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getConversionInstructionAccess().getTargetTypeTypeParserRuleCall_4_0(), semanticObject.getTargetType());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode=ConvertionOpcode 
+	 *         fromType=Type 
+	 *         value=ValueRef 
+	 *         targetType=Type 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_ConversionInstruction_MiddleInstruction(EObject context, ConversionInstruction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1538,32 +1834,32 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='add' type=Type op1=ValueRef op2=ValueRef)
+	 *     (name=LocalName opcode='add' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_add(EObject context, Instruction_add semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_addAccess().getOpcodeAddKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_addAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_addAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_addAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='alloca' type=Type numElements=TypedValue? alignment=Align?)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='add' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_add_MiddleInstruction(EObject context, Instruction_add semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='alloca' type=Type numElements=TypedValue? alignment=Align?)
 	 */
 	protected void sequence_Instruction_alloca(EObject context, Instruction_alloca semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1572,79 +1868,100 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='and' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='alloca' 
+	 *         type=Type 
+	 *         numElements=TypedValue? 
+	 *         alignment=Align? 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_alloca_MiddleInstruction(EObject context, Instruction_alloca semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='and' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_and(EObject context, Instruction_and semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_andAccess().getOpcodeAndKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_andAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_andAccess().getOp1ValueRefParserRuleCall_2_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_andAccess().getOp2ValueRefParserRuleCall_4_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='ashr' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='and' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_and_MiddleInstruction(EObject context, Instruction_and semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='ashr' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_ashr(EObject context, Instruction_ashr semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_ashrAccess().getOpcodeAshrKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_ashrAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_ashrAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_ashrAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='atomicrmw' operation=Atomicrmw_operation pointer=TypedValue argument=TypedValue ordering=Ordering)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='ashr' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_ashr_MiddleInstruction(EObject context, Instruction_ashr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='atomicrmw' 
+	 *         operation=Atomicrmw_operation 
+	 *         pointer=TypedValue 
+	 *         argument=TypedValue 
+	 *         ordering=Ordering
+	 *     )
 	 */
 	protected void sequence_Instruction_atomicrmw(EObject context, Instruction_atomicrmw semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Operation()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Operation()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Pointer()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Pointer()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Argument()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Argument()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Ordering()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_atomicrmw_Ordering()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_atomicrmwAccess().getOpcodeAtomicrmwKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_atomicrmwAccess().getOperationAtomicrmw_operationParserRuleCall_2_0(), semanticObject.getOperation());
-		feeder.accept(grammarAccess.getInstruction_atomicrmwAccess().getPointerTypedValueParserRuleCall_3_0(), semanticObject.getPointer());
-		feeder.accept(grammarAccess.getInstruction_atomicrmwAccess().getArgumentTypedValueParserRuleCall_5_0(), semanticObject.getArgument());
-		feeder.accept(grammarAccess.getInstruction_atomicrmwAccess().getOrderingOrderingParserRuleCall_7_0(), semanticObject.getOrdering());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='atomicrmw' 
+	 *         operation=Atomicrmw_operation 
+	 *         pointer=TypedValue 
+	 *         argument=TypedValue 
+	 *         ordering=Ordering 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_atomicrmw_MiddleInstruction(EObject context, Instruction_atomicrmw semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1659,7 +1976,17 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
+	 *     (opcode='br' ((condition=TypedValue true=BasicBlockRef false=BasicBlockRef) | unconditional=BasicBlockRef) metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_br_TerminatorInstruction(EObject context, Instruction_br semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
+	 *         name=LocalName 
 	 *         isTail?='tail'? 
 	 *         opcode='call' 
 	 *         cconv=CConv? 
@@ -1671,6 +1998,26 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     )
 	 */
 	protected void sequence_Instruction_call_nonVoid(EObject context, Instruction_call_nonVoid semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         isTail?='tail'? 
+	 *         opcode='call' 
+	 *         cconv=CConv? 
+	 *         returnAttributes=ParameterAttributes? 
+	 *         type=NonVoidType 
+	 *         callee=Callee 
+	 *         args=ArgList 
+	 *         functionAttributes=FunctionAttributes? 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_call_nonVoid_MiddleInstruction(EObject context, Instruction_call_nonVoid semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1695,57 +2042,77 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='cmpxchg' pointer=TypedValue comparedWith=TypedValue newValue=TypedValue ordering=Ordering)
+	 *     (
+	 *         isTail?='tail'? 
+	 *         opcode='call' 
+	 *         cconv=CConv? 
+	 *         returnAttributes=ParameterAttributes? 
+	 *         type=VoidType 
+	 *         callee=Callee 
+	 *         args=ArgList 
+	 *         functionAttributes=FunctionAttributes? 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_call_void_MiddleInstruction(EObject context, Instruction_call_void semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='cmpxchg' 
+	 *         pointer=TypedValue 
+	 *         comparedWith=TypedValue 
+	 *         newValue=TypedValue 
+	 *         ordering=Ordering
+	 *     )
 	 */
 	protected void sequence_Instruction_cmpxchg(EObject context, Instruction_cmpxchg semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Pointer()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Pointer()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_ComparedWith()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_ComparedWith()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_NewValue()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_NewValue()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Ordering()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg_Ordering()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_cmpxchgAccess().getOpcodeCmpxchgKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_cmpxchgAccess().getPointerTypedValueParserRuleCall_2_0(), semanticObject.getPointer());
-		feeder.accept(grammarAccess.getInstruction_cmpxchgAccess().getComparedWithTypedValueParserRuleCall_4_0(), semanticObject.getComparedWith());
-		feeder.accept(grammarAccess.getInstruction_cmpxchgAccess().getNewValueTypedValueParserRuleCall_6_0(), semanticObject.getNewValue());
-		feeder.accept(grammarAccess.getInstruction_cmpxchgAccess().getOrderingOrderingParserRuleCall_8_0(), semanticObject.getOrdering());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='extractelement' vector=TypedValue index=TypedValue)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='cmpxchg' 
+	 *         pointer=TypedValue 
+	 *         comparedWith=TypedValue 
+	 *         newValue=TypedValue 
+	 *         ordering=Ordering 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_cmpxchg_MiddleInstruction(EObject context, Instruction_cmpxchg semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='extractelement' vector=TypedValue index=TypedValue)
 	 */
 	protected void sequence_Instruction_extractelement(EObject context, Instruction_extractelement semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Vector()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Vector()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Index()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_extractelement_Index()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_extractelementAccess().getOpcodeExtractelementKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_extractelementAccess().getVectorTypedValueParserRuleCall_1_0(), semanticObject.getVector());
-		feeder.accept(grammarAccess.getInstruction_extractelementAccess().getIndexTypedValueParserRuleCall_3_0(), semanticObject.getIndex());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='extractvalue' aggregate=TypedValue indices+=Constant+)
+	 *     (name=LocalName opcode='extractelement' vector=TypedValue index=TypedValue metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_extractelement_MiddleInstruction(EObject context, Instruction_extractelement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='extractvalue' aggregate=TypedValue indices+=Constant+)
 	 */
 	protected void sequence_Instruction_extractvalue(EObject context, Instruction_extractvalue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1754,7 +2121,23 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='fadd' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef op2=ValueRef)
+	 *     (name=LocalName opcode='extractvalue' aggregate=TypedValue indices+=Constant+ metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_extractvalue_MiddleInstruction(EObject context, Instruction_extractvalue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fadd' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef
+	 *     )
 	 */
 	protected void sequence_Instruction_fadd(EObject context, Instruction_fadd semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1763,37 +2146,83 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='fcmp' condition=FcmpCondition type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fadd' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
 	 */
-	protected void sequence_Instruction_fcmp(EObject context, Instruction_fcmp semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Condition()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Condition()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fcmp_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_fcmpAccess().getOpcodeFcmpKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_fcmpAccess().getConditionFcmpConditionParserRuleCall_1_0(), semanticObject.getCondition());
-		feeder.accept(grammarAccess.getInstruction_fcmpAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_fcmpAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_fcmpAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+	protected void sequence_Instruction_fadd_MiddleInstruction(EObject context, Instruction_fadd semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='fdiv' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fcmp' 
+	 *         condition=FcmpCondition 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef
+	 *     )
+	 */
+	protected void sequence_Instruction_fcmp(EObject context, Instruction_fcmp semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fcmp' 
+	 *         condition=FcmpCondition 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_fcmp_MiddleInstruction(EObject context, Instruction_fcmp semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fdiv' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef
+	 *     )
 	 */
 	protected void sequence_Instruction_fdiv(EObject context, Instruction_fdiv semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fdiv' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_fdiv_MiddleInstruction(EObject context, Instruction_fdiv semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1803,23 +2232,29 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode='fence' ordering=Ordering)
 	 */
 	protected void sequence_Instruction_fence(EObject context, Instruction_fence semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMemoryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fence_Ordering()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_fence_Ordering()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_fenceAccess().getOpcodeFenceKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_fenceAccess().getOrderingOrderingParserRuleCall_2_0(), semanticObject.getOrdering());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='fmul' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef op2=ValueRef)
+	 *     (opcode='fence' ordering=Ordering metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_fence_MiddleInstruction(EObject context, Instruction_fence semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fmul' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef
+	 *     )
 	 */
 	protected void sequence_Instruction_fmul(EObject context, Instruction_fmul semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1828,32 +2263,56 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='frem' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fmul' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
 	 */
-	protected void sequence_Instruction_frem(EObject context, Instruction_frem semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_fremAccess().getOpcodeFremKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_fremAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_fremAccess().getOp1ValueRefParserRuleCall_2_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_fremAccess().getOp2ValueRefParserRuleCall_4_0(), semanticObject.getOp2());
-		feeder.finish();
+	protected void sequence_Instruction_fmul_MiddleInstruction(EObject context, Instruction_fmul semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='fsub' fastMathFlags+=FastMathFlag* type=Type op1=ValueRef op2=ValueRef)
+	 *     (name=LocalName opcode='frem' type=Type op1=ValueRef op2=ValueRef)
+	 */
+	protected void sequence_Instruction_frem(EObject context, Instruction_frem semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='frem' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_frem_MiddleInstruction(EObject context, Instruction_frem semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fsub' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef
+	 *     )
 	 */
 	protected void sequence_Instruction_fsub(EObject context, Instruction_fsub semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1862,7 +2321,24 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='getelementptr' base=TypedValue indices+=TypedValue*)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='fsub' 
+	 *         fastMathFlags+=FastMathFlag* 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_fsub_MiddleInstruction(EObject context, Instruction_fsub semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='getelementptr' base=TypedValue indices+=TypedValue*)
 	 */
 	protected void sequence_Instruction_getelementptr(EObject context, Instruction_getelementptr semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1871,29 +2347,43 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='icmp' condition=IcmpCondition type=Type op1=ValueRef op2=ValueRef)
+	 *     (name=LocalName opcode='getelementptr' base=TypedValue indices+=TypedValue* metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_getelementptr_MiddleInstruction(EObject context, Instruction_getelementptr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='icmp' 
+	 *         condition=IcmpCondition 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef
+	 *     )
 	 */
 	protected void sequence_Instruction_icmp(EObject context, Instruction_icmp semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Condition()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Condition()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_icmp_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_icmpAccess().getOpcodeIcmpKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_icmpAccess().getConditionIcmpConditionParserRuleCall_1_0(), semanticObject.getCondition());
-		feeder.accept(grammarAccess.getInstruction_icmpAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_icmpAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_icmpAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='icmp' 
+	 *         condition=IcmpCondition 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_icmp_MiddleInstruction(EObject context, Instruction_icmp semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1908,32 +2398,41 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='insertelement' vector=TypedValue element=TypedValue index=TypedValue)
+	 *     (opcode='indirectbr' address=TypedValue (destinations+=BasicBlockRef destinations+=BasicBlockRef*)? metadata+=MetadataSuffix*)
 	 */
-	protected void sequence_Instruction_insertelement(EObject context, Instruction_insertelement semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Vector()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Vector()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Element()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Element()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Index()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_insertelement_Index()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_insertelementAccess().getOpcodeInsertelementKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_insertelementAccess().getVectorTypedValueParserRuleCall_1_0(), semanticObject.getVector());
-		feeder.accept(grammarAccess.getInstruction_insertelementAccess().getElementTypedValueParserRuleCall_3_0(), semanticObject.getElement());
-		feeder.accept(grammarAccess.getInstruction_insertelementAccess().getIndexTypedValueParserRuleCall_5_0(), semanticObject.getIndex());
-		feeder.finish();
+	protected void sequence_Instruction_indirectbr_TerminatorInstruction(EObject context, Instruction_indirectbr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='insertvalue' aggregate=TypedValue element=TypedValue indices+=Constant+)
+	 *     (name=LocalName opcode='insertelement' vector=TypedValue element=TypedValue index=TypedValue)
+	 */
+	protected void sequence_Instruction_insertelement(EObject context, Instruction_insertelement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='insertelement' 
+	 *         vector=TypedValue 
+	 *         element=TypedValue 
+	 *         index=TypedValue 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_insertelement_MiddleInstruction(EObject context, Instruction_insertelement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='insertvalue' aggregate=TypedValue element=TypedValue indices+=Constant+)
 	 */
 	protected void sequence_Instruction_insertvalue(EObject context, Instruction_insertvalue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1943,6 +2442,23 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * Constraint:
 	 *     (
+	 *         name=LocalName 
+	 *         opcode='insertvalue' 
+	 *         aggregate=TypedValue 
+	 *         element=TypedValue 
+	 *         indices+=Constant+ 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_insertvalue_MiddleInstruction(EObject context, Instruction_insertvalue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
 	 *         opcode='invoke' 
 	 *         cconv=CConv? 
 	 *         type=NonVoidType 
@@ -1954,6 +2470,26 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     )
 	 */
 	protected void sequence_Instruction_invoke_nonVoid(EObject context, Instruction_invoke_nonVoid semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='invoke' 
+	 *         cconv=CConv? 
+	 *         type=NonVoidType 
+	 *         callee=Callee 
+	 *         args=ArgList 
+	 *         attributes=FunctionAttributes? 
+	 *         toLabel=BasicBlockRef 
+	 *         exceptionLabel=BasicBlockRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_invoke_nonVoid_TerminatorInstruction(EObject context, Instruction_invoke_nonVoid semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1978,7 +2514,33 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='landingpad' resultType=Type personality=TypedValue clauses+=LandingpadClause? clauses+=LandingpadClause*)
+	 *     (
+	 *         opcode='invoke' 
+	 *         cconv=CConv? 
+	 *         type=VoidType 
+	 *         callee=Callee 
+	 *         args=ArgList 
+	 *         attributes=FunctionAttributes? 
+	 *         toLabel=BasicBlockRef 
+	 *         exceptionLabel=BasicBlockRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_invoke_void_TerminatorInstruction(EObject context, Instruction_invoke_void semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='landingpad' 
+	 *         resultType=Type 
+	 *         personality=TypedValue 
+	 *         clauses+=LandingpadClause? 
+	 *         clauses+=LandingpadClause*
+	 *     )
 	 */
 	protected void sequence_Instruction_landingpad(EObject context, Instruction_landingpad semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1988,6 +2550,24 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * Constraint:
 	 *     (
+	 *         name=LocalName 
+	 *         opcode='landingpad' 
+	 *         resultType=Type 
+	 *         personality=TypedValue 
+	 *         clauses+=LandingpadClause? 
+	 *         clauses+=LandingpadClause* 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_landingpad_MiddleInstruction(EObject context, Instruction_landingpad semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
 	 *         opcode='load' 
 	 *         (
 	 *             (pointer=TypedValue alignment=Align? nontemporalIndex=MetadataRef? invariantLoadIndex=MetadataRef?) | 
@@ -2002,84 +2582,125 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='lshr' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='load' 
+	 *         (
+	 *             (pointer=TypedValue alignment=Align? nontemporalIndex=MetadataRef? invariantLoadIndex=MetadataRef?) | 
+	 *             (pointer=TypedValue ordering=Ordering alignment=Align)
+	 *         ) 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_load_MiddleInstruction(EObject context, Instruction_load semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='lshr' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_lshr(EObject context, Instruction_lshr semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_lshrAccess().getOpcodeLshrKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_lshrAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_lshrAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_lshrAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='mul' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='lshr' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_lshr_MiddleInstruction(EObject context, Instruction_lshr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='mul' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_mul(EObject context, Instruction_mul semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_mulAccess().getOpcodeMulKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_mulAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_mulAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_mulAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='or' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='mul' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_mul_MiddleInstruction(EObject context, Instruction_mul semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='or' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_or(EObject context, Instruction_or semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_orAccess().getOpcodeOrKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_orAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_orAccess().getOp1ValueRefParserRuleCall_2_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_orAccess().getOp2ValueRefParserRuleCall_4_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='phi' type=Type values+=ValueRef labels+=BasicBlockRef (values+=ValueRef labels+=BasicBlockRef)*)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='or' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_or_MiddleInstruction(EObject context, Instruction_or semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='phi' 
+	 *         type=Type 
+	 *         values+=ValueRef 
+	 *         labels+=BasicBlockRef 
+	 *         (values+=ValueRef labels+=BasicBlockRef)*
+	 *     )
 	 */
 	protected void sequence_Instruction_phi(EObject context, Instruction_phi semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='phi' 
+	 *         type=Type 
+	 *         values+=ValueRef 
+	 *         labels+=BasicBlockRef 
+	 *         (values+=ValueRef labels+=BasicBlockRef)* 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_phi_StartingInstruction(EObject context, Instruction_phi semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -2089,17 +2710,16 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode='resume' value=TypedValue)
 	 */
 	protected void sequence_Instruction_resume(EObject context, Instruction_resume semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Value()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_resume_Value()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_resumeAccess().getOpcodeResumeKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_resumeAccess().getValueTypedValueParserRuleCall_1_0(), semanticObject.getValue());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (opcode='resume' value=TypedValue metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_resume_TerminatorInstruction(EObject context, Instruction_resume semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2114,126 +2734,135 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='sdiv' type=Type op1=ValueRef op2=ValueRef)
+	 *     (opcode='ret' val=TypedValue? metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_ret_TerminatorInstruction(EObject context, Instruction_ret semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='sdiv' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_sdiv(EObject context, Instruction_sdiv semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_sdivAccess().getOpcodeSdivKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_sdivAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_sdivAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_sdivAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='select' condition=TypedValue value1=TypedValue value2=TypedValue)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='sdiv' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_sdiv_MiddleInstruction(EObject context, Instruction_sdiv semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='select' condition=TypedValue value1=TypedValue value2=TypedValue)
 	 */
 	protected void sequence_Instruction_select(EObject context, Instruction_select semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Condition()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_select_Value2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_selectAccess().getOpcodeSelectKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_selectAccess().getConditionTypedValueParserRuleCall_1_0(), semanticObject.getCondition());
-		feeder.accept(grammarAccess.getInstruction_selectAccess().getValue1TypedValueParserRuleCall_3_0(), semanticObject.getValue1());
-		feeder.accept(grammarAccess.getInstruction_selectAccess().getValue2TypedValueParserRuleCall_5_0(), semanticObject.getValue2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='shl' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='select' 
+	 *         condition=TypedValue 
+	 *         value1=TypedValue 
+	 *         value2=TypedValue 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_select_MiddleInstruction(EObject context, Instruction_select semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='shl' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_shl(EObject context, Instruction_shl semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_shlAccess().getOpcodeShlKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_shlAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_shlAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_shlAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='shufflevector' vector1=TypedValue vector2=TypedValue mask=TypedValue)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='shl' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_shl_MiddleInstruction(EObject context, Instruction_shl semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='shufflevector' vector1=TypedValue vector2=TypedValue mask=TypedValue)
 	 */
 	protected void sequence_Instruction_shufflevector(EObject context, Instruction_shufflevector semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getVectorInstructions_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Vector2()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Mask()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector_Mask()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_shufflevectorAccess().getOpcodeShufflevectorKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_shufflevectorAccess().getVector1TypedValueParserRuleCall_1_0(), semanticObject.getVector1());
-		feeder.accept(grammarAccess.getInstruction_shufflevectorAccess().getVector2TypedValueParserRuleCall_3_0(), semanticObject.getVector2());
-		feeder.accept(grammarAccess.getInstruction_shufflevectorAccess().getMaskTypedValueParserRuleCall_5_0(), semanticObject.getMask());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='srem' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='shufflevector' 
+	 *         vector1=TypedValue 
+	 *         vector2=TypedValue 
+	 *         mask=TypedValue 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_shufflevector_MiddleInstruction(EObject context, Instruction_shufflevector semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='srem' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_srem(EObject context, Instruction_srem semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_sremAccess().getOpcodeSremKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_sremAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_sremAccess().getOp1ValueRefParserRuleCall_2_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_sremAccess().getOp2ValueRefParserRuleCall_4_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='srem' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_srem_MiddleInstruction(EObject context, Instruction_srem semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2254,26 +2883,42 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='sub' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         opcode='store' 
+	 *         (
+	 *             (value=TypedValue pointer=TypedValue alignment=Align? nontemporalIndex=MetadataRef?) | 
+	 *             (value=TypedValue pointer=TypedValue ordering=Ordering alignment=Align)
+	 *         ) 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_store_MiddleInstruction(EObject context, Instruction_store semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='sub' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_sub(EObject context, Instruction_sub semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_subAccess().getOpcodeSubKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_subAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_subAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_subAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='sub' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_sub_MiddleInstruction(EObject context, Instruction_sub semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2288,26 +2933,41 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (opcode='udiv' type=Type op1=ValueRef op2=ValueRef)
+	 *     (
+	 *         opcode='switch' 
+	 *         comparisonValue=TypedValue 
+	 *         defaultDest=BasicBlockRef 
+	 *         (caseConditions+=TypedValue destinations+=BasicBlockRef)* 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_switch_TerminatorInstruction(EObject context, Instruction_switch semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='udiv' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_udiv(EObject context, Instruction_udiv semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_udivAccess().getOpcodeUdivKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_udivAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_udivAccess().getOp1ValueRefParserRuleCall_3_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_udivAccess().getOp2ValueRefParserRuleCall_5_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='udiv' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_udiv_MiddleInstruction(EObject context, Instruction_udiv semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2316,86 +2976,84 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     opcode='unreachable'
 	 */
 	protected void sequence_Instruction_unreachable(EObject context, Instruction_unreachable semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_unreachable_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_unreachable_Opcode()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_unreachableAccess().getOpcodeUnreachableKeyword_0(), semanticObject.getOpcode());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='urem' type=Type op1=ValueRef op2=ValueRef)
+	 *     (opcode='unreachable' metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_unreachable_TerminatorInstruction(EObject context, Instruction_unreachable semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='urem' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_urem(EObject context, Instruction_urem semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_uremAccess().getOpcodeUremKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_uremAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_uremAccess().getOp1ValueRefParserRuleCall_2_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_uremAccess().getOp2ValueRefParserRuleCall_4_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='va_arg' arglist=TypedValue type=Type)
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='urem' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_urem_MiddleInstruction(EObject context, Instruction_urem semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='va_arg' arglist=TypedValue type=Type)
 	 */
 	protected void sequence_Instruction_va_arg(EObject context, Instruction_va_arg semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getOtherInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Arglist()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Arglist()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getInstruction_va_arg_Type()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_va_argAccess().getOpcodeVa_argKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_va_argAccess().getArglistTypedValueParserRuleCall_1_0(), semanticObject.getArglist());
-		feeder.accept(grammarAccess.getInstruction_va_argAccess().getTypeTypeParserRuleCall_3_0(), semanticObject.getType());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (opcode='xor' type=Type op1=ValueRef op2=ValueRef)
+	 *     (name=LocalName opcode='va_arg' arglist=TypedValue type=Type metadata+=MetadataSuffix*)
+	 */
+	protected void sequence_Instruction_va_arg_MiddleInstruction(EObject context, Instruction_va_arg semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LocalName opcode='xor' type=Type op1=ValueRef op2=ValueRef)
 	 */
 	protected void sequence_Instruction_xor(EObject context, Instruction_xor semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Opcode()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op1()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Op2()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInstruction_xorAccess().getOpcodeXorKeyword_0_0(), semanticObject.getOpcode());
-		feeder.accept(grammarAccess.getInstruction_xorAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getInstruction_xorAccess().getOp1ValueRefParserRuleCall_2_0(), semanticObject.getOp1());
-		feeder.accept(grammarAccess.getInstruction_xorAccess().getOp2ValueRefParserRuleCall_4_0(), semanticObject.getOp2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=LocalName 
+	 *         opcode='xor' 
+	 *         type=Type 
+	 *         op1=ValueRef 
+	 *         op2=ValueRef 
+	 *         metadata+=MetadataSuffix*
+	 *     )
+	 */
+	protected void sequence_Instruction_xor_MiddleInstruction(EObject context, Instruction_xor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2506,18 +3164,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         (instruction=NamedMiddleInstruction | instruction=Instruction_store | instruction=Instruction_fence | instruction=Instruction_call_void) 
-	 *         metadata+=MetadataSuffix*
-	 *     )
-	 */
-	protected void sequence_MiddleInstruction(EObject context, MiddleInstruction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     elements+=TopLevelElement*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
@@ -2531,50 +3177,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_NamedMetadata(EObject context, NamedMetadata semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         name=LocalName 
-	 *         (
-	 *             instruction=BinaryInstruction | 
-	 *             instruction=BitwiseBinaryInstruction | 
-	 *             instruction=VectorInstructions | 
-	 *             instruction=AggregateInstruction | 
-	 *             instruction=Instruction_alloca | 
-	 *             instruction=Instruction_load | 
-	 *             instruction=Instruction_getelementptr | 
-	 *             instruction=Instruction_cmpxchg | 
-	 *             instruction=Instruction_atomicrmw | 
-	 *             instruction=ConversionInstruction | 
-	 *             instruction=OtherInstruction | 
-	 *             instruction=Instruction_call_nonVoid
-	 *         )
-	 *     )
-	 */
-	protected void sequence_NamedMiddleInstruction(EObject context, NamedMiddleInstruction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=LocalName instruction=Instruction_invoke_nonVoid)
-	 */
-	protected void sequence_NamedTerminatorInstruction(EObject context, NamedTerminatorInstruction semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValue_Name()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getLocalValue_Name()));
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getNamedTerminatorInstruction_Instruction()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getNamedTerminatorInstruction_Instruction()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getNamedTerminatorInstructionAccess().getNameLocalNameParserRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getNamedTerminatorInstructionAccess().getInstructionInstruction_invoke_nonVoidParserRuleCall_1_0(), semanticObject.getInstruction());
-		feeder.finish();
 	}
 	
 	
@@ -2708,15 +3310,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (name=LocalName instruction=Instruction_phi metadata+=MetadataSuffix*)
-	 */
-	protected void sequence_StartingInstruction(EObject context, StartingInstruction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     ((types+=Type types+=Type*)? | (packed='<' (types+=Type types+=Type*)?))
 	 */
 	protected void sequence_StructType(EObject context, StructType semanticObject) {
@@ -2747,27 +3340,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (name=STRING value=STRING?)
 	 */
 	protected void sequence_TargetSpecificAttribute(EObject context, TargetSpecificAttribute semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         (
-	 *             instruction=NamedTerminatorInstruction | 
-	 *             instruction=Instruction_ret | 
-	 *             instruction=Instruction_br | 
-	 *             instruction=Instruction_switch | 
-	 *             instruction=Instruction_indirectbr | 
-	 *             instruction=Instruction_resume | 
-	 *             instruction=Instruction_unreachable | 
-	 *             instruction=Instruction_invoke_void
-	 *         ) 
-	 *         metadata+=MetadataSuffix*
-	 *     )
-	 */
-	protected void sequence_TerminatorInstruction(EObject context, TerminatorInstruction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

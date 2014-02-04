@@ -16,27 +16,24 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_extractvalueImpl extends AggregateInstructionImpl implements Instruction_extractvalue
-{
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected Instruction_extractvalueImpl()
-  {
-    super();
-  }
+public class Instruction_extractvalueImpl extends AggregateInstructionImpl implements Instruction_extractvalue {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Instruction_extractvalueImpl() {
+		super();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  protected EClass eStaticClass()
-  {
-    return LLVM_IRPackage.eINSTANCE.getInstruction_extractvalue();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LLVM_IRPackage.eINSTANCE.getInstruction_extractvalue();
+	}
 
 } //Instruction_extractvalueImpl

@@ -243,7 +243,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 			verifyNotEntry(val.getFalse());
 			if (val.getTrue().getRef() == val.getFalse().getRef()) {
 				warning("Both true and false branch to the same basic block",
-						LLVM_IRPackage.eINSTANCE.getInstruction_br_Opcode());
+						LLVM_IRPackage.eINSTANCE.getInstruction_Opcode());
 			}
 		}
 	}
@@ -688,7 +688,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 				mentionedBlocks.remove(pred);
 			} else {
 				error("The basic block " + pred.getName() + " is missing from this phi node",
-						LLVM_IRPackage.eINSTANCE.getInstruction_phi_Opcode());
+						LLVM_IRPackage.eINSTANCE.getInstruction_Opcode());
 			}
 		}
 
@@ -907,7 +907,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 	@Check void checkDeadCode(NamedMiddleInstruction val) {
 		// We don't bother checking terminator instructions, since the only non-void
 		// one there is a non-void invoke, and that may have side effects.
-		if (mayHaveSideEffects(val.getInstruction())) return;
+		if (mayHaveSideEffects(val)) return;
 
 		warnIfUnused(val);
 	}

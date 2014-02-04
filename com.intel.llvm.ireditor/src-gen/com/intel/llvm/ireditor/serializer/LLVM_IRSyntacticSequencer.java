@@ -26,28 +26,28 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_InlineAssembler_AlignstackKeyword_2_q;
 	protected AbstractElementAlias match_InlineAssembler_InteldialectKeyword_3_q;
 	protected AbstractElementAlias match_InlineAssembler_SideeffectKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_add___NswKeyword_1_1_or_NuwKeyword_1_0__a;
-	protected AbstractElementAlias match_Instruction_ashr_ExactKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_atomicrmw_SinglethreadKeyword_6_q;
-	protected AbstractElementAlias match_Instruction_atomicrmw_VolatileKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_cmpxchg_SinglethreadKeyword_7_q;
-	protected AbstractElementAlias match_Instruction_cmpxchg_VolatileKeyword_1_q;
+	protected AbstractElementAlias match_Instruction_add___NswKeyword_2_1_or_NuwKeyword_2_0__a;
+	protected AbstractElementAlias match_Instruction_ashr_ExactKeyword_2_q;
+	protected AbstractElementAlias match_Instruction_atomicrmw_SinglethreadKeyword_7_q;
+	protected AbstractElementAlias match_Instruction_atomicrmw_VolatileKeyword_2_q;
+	protected AbstractElementAlias match_Instruction_cmpxchg_SinglethreadKeyword_8_q;
+	protected AbstractElementAlias match_Instruction_cmpxchg_VolatileKeyword_2_q;
 	protected AbstractElementAlias match_Instruction_fence_SinglethreadKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_getelementptr_InboundsKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_invoke_nonVoid___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a;
+	protected AbstractElementAlias match_Instruction_getelementptr_InboundsKeyword_2_q;
+	protected AbstractElementAlias match_Instruction_invoke_nonVoid___InregKeyword_3_2_or_SignextKeyword_3_1_or_ZeroextKeyword_3_0__a;
 	protected AbstractElementAlias match_Instruction_invoke_void___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a;
-	protected AbstractElementAlias match_Instruction_load_SinglethreadKeyword_1_1_3_q;
-	protected AbstractElementAlias match_Instruction_load_VolatileKeyword_1_0_0_q;
-	protected AbstractElementAlias match_Instruction_load_VolatileKeyword_1_1_1_q;
-	protected AbstractElementAlias match_Instruction_lshr_ExactKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_mul___NswKeyword_1_1_or_NuwKeyword_1_0__a;
-	protected AbstractElementAlias match_Instruction_sdiv_ExactKeyword_1_q;
-	protected AbstractElementAlias match_Instruction_shl___NswKeyword_1_1_or_NuwKeyword_1_0__a;
+	protected AbstractElementAlias match_Instruction_load_SinglethreadKeyword_2_1_3_q;
+	protected AbstractElementAlias match_Instruction_load_VolatileKeyword_2_0_0_q;
+	protected AbstractElementAlias match_Instruction_load_VolatileKeyword_2_1_1_q;
+	protected AbstractElementAlias match_Instruction_lshr_ExactKeyword_2_q;
+	protected AbstractElementAlias match_Instruction_mul___NswKeyword_2_1_or_NuwKeyword_2_0__a;
+	protected AbstractElementAlias match_Instruction_sdiv_ExactKeyword_2_q;
+	protected AbstractElementAlias match_Instruction_shl___NswKeyword_2_1_or_NuwKeyword_2_0__a;
 	protected AbstractElementAlias match_Instruction_store_SinglethreadKeyword_1_1_4_q;
 	protected AbstractElementAlias match_Instruction_store_VolatileKeyword_1_0_0_q;
 	protected AbstractElementAlias match_Instruction_store_VolatileKeyword_1_1_1_q;
-	protected AbstractElementAlias match_Instruction_sub___NswKeyword_1_1_or_NuwKeyword_1_0__a;
-	protected AbstractElementAlias match_Instruction_udiv_ExactKeyword_1_q;
+	protected AbstractElementAlias match_Instruction_sub___NswKeyword_2_1_or_NuwKeyword_2_0__a;
+	protected AbstractElementAlias match_Instruction_udiv_ExactKeyword_2_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -60,28 +60,28 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_InlineAssembler_AlignstackKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInlineAssemblerAccess().getAlignstackKeyword_2());
 		match_InlineAssembler_InteldialectKeyword_3_q = new TokenAlias(false, true, grammarAccess.getInlineAssemblerAccess().getInteldialectKeyword_3());
 		match_InlineAssembler_SideeffectKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInlineAssemblerAccess().getSideeffectKeyword_1());
-		match_Instruction_add___NswKeyword_1_1_or_NuwKeyword_1_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_addAccess().getNswKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getInstruction_addAccess().getNuwKeyword_1_0()));
-		match_Instruction_ashr_ExactKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_ashrAccess().getExactKeyword_1());
-		match_Instruction_atomicrmw_SinglethreadKeyword_6_q = new TokenAlias(false, true, grammarAccess.getInstruction_atomicrmwAccess().getSinglethreadKeyword_6());
-		match_Instruction_atomicrmw_VolatileKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_atomicrmwAccess().getVolatileKeyword_1());
-		match_Instruction_cmpxchg_SinglethreadKeyword_7_q = new TokenAlias(false, true, grammarAccess.getInstruction_cmpxchgAccess().getSinglethreadKeyword_7());
-		match_Instruction_cmpxchg_VolatileKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_cmpxchgAccess().getVolatileKeyword_1());
+		match_Instruction_add___NswKeyword_2_1_or_NuwKeyword_2_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_addAccess().getNswKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getInstruction_addAccess().getNuwKeyword_2_0()));
+		match_Instruction_ashr_ExactKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_ashrAccess().getExactKeyword_2());
+		match_Instruction_atomicrmw_SinglethreadKeyword_7_q = new TokenAlias(false, true, grammarAccess.getInstruction_atomicrmwAccess().getSinglethreadKeyword_7());
+		match_Instruction_atomicrmw_VolatileKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_atomicrmwAccess().getVolatileKeyword_2());
+		match_Instruction_cmpxchg_SinglethreadKeyword_8_q = new TokenAlias(false, true, grammarAccess.getInstruction_cmpxchgAccess().getSinglethreadKeyword_8());
+		match_Instruction_cmpxchg_VolatileKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_cmpxchgAccess().getVolatileKeyword_2());
 		match_Instruction_fence_SinglethreadKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_fenceAccess().getSinglethreadKeyword_1());
-		match_Instruction_getelementptr_InboundsKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_getelementptrAccess().getInboundsKeyword_1());
-		match_Instruction_invoke_nonVoid___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_invoke_nonVoidAccess().getInregKeyword_2_2()), new TokenAlias(false, false, grammarAccess.getInstruction_invoke_nonVoidAccess().getSignextKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getInstruction_invoke_nonVoidAccess().getZeroextKeyword_2_0()));
+		match_Instruction_getelementptr_InboundsKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_getelementptrAccess().getInboundsKeyword_2());
+		match_Instruction_invoke_nonVoid___InregKeyword_3_2_or_SignextKeyword_3_1_or_ZeroextKeyword_3_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_invoke_nonVoidAccess().getInregKeyword_3_2()), new TokenAlias(false, false, grammarAccess.getInstruction_invoke_nonVoidAccess().getSignextKeyword_3_1()), new TokenAlias(false, false, grammarAccess.getInstruction_invoke_nonVoidAccess().getZeroextKeyword_3_0()));
 		match_Instruction_invoke_void___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_invoke_voidAccess().getInregKeyword_2_2()), new TokenAlias(false, false, grammarAccess.getInstruction_invoke_voidAccess().getSignextKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getInstruction_invoke_voidAccess().getZeroextKeyword_2_0()));
-		match_Instruction_load_SinglethreadKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getInstruction_loadAccess().getSinglethreadKeyword_1_1_3());
-		match_Instruction_load_VolatileKeyword_1_0_0_q = new TokenAlias(false, true, grammarAccess.getInstruction_loadAccess().getVolatileKeyword_1_0_0());
-		match_Instruction_load_VolatileKeyword_1_1_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_loadAccess().getVolatileKeyword_1_1_1());
-		match_Instruction_lshr_ExactKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_lshrAccess().getExactKeyword_1());
-		match_Instruction_mul___NswKeyword_1_1_or_NuwKeyword_1_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_mulAccess().getNswKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getInstruction_mulAccess().getNuwKeyword_1_0()));
-		match_Instruction_sdiv_ExactKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_sdivAccess().getExactKeyword_1());
-		match_Instruction_shl___NswKeyword_1_1_or_NuwKeyword_1_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_shlAccess().getNswKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getInstruction_shlAccess().getNuwKeyword_1_0()));
+		match_Instruction_load_SinglethreadKeyword_2_1_3_q = new TokenAlias(false, true, grammarAccess.getInstruction_loadAccess().getSinglethreadKeyword_2_1_3());
+		match_Instruction_load_VolatileKeyword_2_0_0_q = new TokenAlias(false, true, grammarAccess.getInstruction_loadAccess().getVolatileKeyword_2_0_0());
+		match_Instruction_load_VolatileKeyword_2_1_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_loadAccess().getVolatileKeyword_2_1_1());
+		match_Instruction_lshr_ExactKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_lshrAccess().getExactKeyword_2());
+		match_Instruction_mul___NswKeyword_2_1_or_NuwKeyword_2_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_mulAccess().getNswKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getInstruction_mulAccess().getNuwKeyword_2_0()));
+		match_Instruction_sdiv_ExactKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_sdivAccess().getExactKeyword_2());
+		match_Instruction_shl___NswKeyword_2_1_or_NuwKeyword_2_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_shlAccess().getNswKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getInstruction_shlAccess().getNuwKeyword_2_0()));
 		match_Instruction_store_SinglethreadKeyword_1_1_4_q = new TokenAlias(false, true, grammarAccess.getInstruction_storeAccess().getSinglethreadKeyword_1_1_4());
 		match_Instruction_store_VolatileKeyword_1_0_0_q = new TokenAlias(false, true, grammarAccess.getInstruction_storeAccess().getVolatileKeyword_1_0_0());
 		match_Instruction_store_VolatileKeyword_1_1_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_storeAccess().getVolatileKeyword_1_1_1());
-		match_Instruction_sub___NswKeyword_1_1_or_NuwKeyword_1_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_subAccess().getNswKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getInstruction_subAccess().getNuwKeyword_1_0()));
-		match_Instruction_udiv_ExactKeyword_1_q = new TokenAlias(false, true, grammarAccess.getInstruction_udivAccess().getExactKeyword_1());
+		match_Instruction_sub___NswKeyword_2_1_or_NuwKeyword_2_0__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getInstruction_subAccess().getNswKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getInstruction_subAccess().getNuwKeyword_2_0()));
+		match_Instruction_udiv_ExactKeyword_2_q = new TokenAlias(false, true, grammarAccess.getInstruction_udivAccess().getExactKeyword_2());
 	}
 	
 	@Override
@@ -124,50 +124,50 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_InlineAssembler_InteldialectKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_InlineAssembler_SideeffectKeyword_1_q.equals(syntax))
 				emit_InlineAssembler_SideeffectKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_add___NswKeyword_1_1_or_NuwKeyword_1_0__a.equals(syntax))
-				emit_Instruction_add___NswKeyword_1_1_or_NuwKeyword_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_ashr_ExactKeyword_1_q.equals(syntax))
-				emit_Instruction_ashr_ExactKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_atomicrmw_SinglethreadKeyword_6_q.equals(syntax))
-				emit_Instruction_atomicrmw_SinglethreadKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_atomicrmw_VolatileKeyword_1_q.equals(syntax))
-				emit_Instruction_atomicrmw_VolatileKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_cmpxchg_SinglethreadKeyword_7_q.equals(syntax))
-				emit_Instruction_cmpxchg_SinglethreadKeyword_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_cmpxchg_VolatileKeyword_1_q.equals(syntax))
-				emit_Instruction_cmpxchg_VolatileKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_add___NswKeyword_2_1_or_NuwKeyword_2_0__a.equals(syntax))
+				emit_Instruction_add___NswKeyword_2_1_or_NuwKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_ashr_ExactKeyword_2_q.equals(syntax))
+				emit_Instruction_ashr_ExactKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_atomicrmw_SinglethreadKeyword_7_q.equals(syntax))
+				emit_Instruction_atomicrmw_SinglethreadKeyword_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_atomicrmw_VolatileKeyword_2_q.equals(syntax))
+				emit_Instruction_atomicrmw_VolatileKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_cmpxchg_SinglethreadKeyword_8_q.equals(syntax))
+				emit_Instruction_cmpxchg_SinglethreadKeyword_8_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_cmpxchg_VolatileKeyword_2_q.equals(syntax))
+				emit_Instruction_cmpxchg_VolatileKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Instruction_fence_SinglethreadKeyword_1_q.equals(syntax))
 				emit_Instruction_fence_SinglethreadKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_getelementptr_InboundsKeyword_1_q.equals(syntax))
-				emit_Instruction_getelementptr_InboundsKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_invoke_nonVoid___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a.equals(syntax))
-				emit_Instruction_invoke_nonVoid___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_getelementptr_InboundsKeyword_2_q.equals(syntax))
+				emit_Instruction_getelementptr_InboundsKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_invoke_nonVoid___InregKeyword_3_2_or_SignextKeyword_3_1_or_ZeroextKeyword_3_0__a.equals(syntax))
+				emit_Instruction_invoke_nonVoid___InregKeyword_3_2_or_SignextKeyword_3_1_or_ZeroextKeyword_3_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Instruction_invoke_void___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a.equals(syntax))
 				emit_Instruction_invoke_void___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_load_SinglethreadKeyword_1_1_3_q.equals(syntax))
-				emit_Instruction_load_SinglethreadKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_load_VolatileKeyword_1_0_0_q.equals(syntax))
-				emit_Instruction_load_VolatileKeyword_1_0_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_load_VolatileKeyword_1_1_1_q.equals(syntax))
-				emit_Instruction_load_VolatileKeyword_1_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_lshr_ExactKeyword_1_q.equals(syntax))
-				emit_Instruction_lshr_ExactKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_mul___NswKeyword_1_1_or_NuwKeyword_1_0__a.equals(syntax))
-				emit_Instruction_mul___NswKeyword_1_1_or_NuwKeyword_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_sdiv_ExactKeyword_1_q.equals(syntax))
-				emit_Instruction_sdiv_ExactKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_shl___NswKeyword_1_1_or_NuwKeyword_1_0__a.equals(syntax))
-				emit_Instruction_shl___NswKeyword_1_1_or_NuwKeyword_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_load_SinglethreadKeyword_2_1_3_q.equals(syntax))
+				emit_Instruction_load_SinglethreadKeyword_2_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_load_VolatileKeyword_2_0_0_q.equals(syntax))
+				emit_Instruction_load_VolatileKeyword_2_0_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_load_VolatileKeyword_2_1_1_q.equals(syntax))
+				emit_Instruction_load_VolatileKeyword_2_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_lshr_ExactKeyword_2_q.equals(syntax))
+				emit_Instruction_lshr_ExactKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_mul___NswKeyword_2_1_or_NuwKeyword_2_0__a.equals(syntax))
+				emit_Instruction_mul___NswKeyword_2_1_or_NuwKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_sdiv_ExactKeyword_2_q.equals(syntax))
+				emit_Instruction_sdiv_ExactKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_shl___NswKeyword_2_1_or_NuwKeyword_2_0__a.equals(syntax))
+				emit_Instruction_shl___NswKeyword_2_1_or_NuwKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Instruction_store_SinglethreadKeyword_1_1_4_q.equals(syntax))
 				emit_Instruction_store_SinglethreadKeyword_1_1_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Instruction_store_VolatileKeyword_1_0_0_q.equals(syntax))
 				emit_Instruction_store_VolatileKeyword_1_0_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Instruction_store_VolatileKeyword_1_1_1_q.equals(syntax))
 				emit_Instruction_store_VolatileKeyword_1_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_sub___NswKeyword_1_1_or_NuwKeyword_1_0__a.equals(syntax))
-				emit_Instruction_sub___NswKeyword_1_1_or_NuwKeyword_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Instruction_udiv_ExactKeyword_1_q.equals(syntax))
-				emit_Instruction_udiv_ExactKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_sub___NswKeyword_2_1_or_NuwKeyword_2_0__a.equals(syntax))
+				emit_Instruction_sub___NswKeyword_2_1_or_NuwKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Instruction_udiv_ExactKeyword_2_q.equals(syntax))
+				emit_Instruction_udiv_ExactKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -182,7 +182,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     ('nuw' | 'nsw')*
+	 *     ('nsw' | 'nuw')*
 	 */
 	protected void emit_ConstantExpression_binary___NswKeyword_0_0_1_1_or_NuwKeyword_0_0_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -200,11 +200,11 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     (
 	     'fp128' | 
-	     'half' | 
+	     'ppc_fp128' | 
 	     'double' | 
 	     'x86_fp80' | 
-	     'float' | 
-	     'ppc_fp128'
+	     'half' | 
+	     'float'
 	 )
 	 */
 	protected void emit_FloatingType_DoubleKeyword_0_2_or_FloatKeyword_0_1_or_Fp128Keyword_0_3_or_HalfKeyword_0_0_or_Ppc_fp128Keyword_0_5_or_X86_fp80Keyword_0_4(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -247,7 +247,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('nuw' | 'nsw')*
 	 */
-	protected void emit_Instruction_add___NswKeyword_1_1_or_NuwKeyword_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_add___NswKeyword_2_1_or_NuwKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -255,7 +255,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'exact'?
 	 */
-	protected void emit_Instruction_ashr_ExactKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_ashr_ExactKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -263,7 +263,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'singlethread'?
 	 */
-	protected void emit_Instruction_atomicrmw_SinglethreadKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_atomicrmw_SinglethreadKeyword_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -271,7 +271,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'volatile'?
 	 */
-	protected void emit_Instruction_atomicrmw_VolatileKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_atomicrmw_VolatileKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -279,7 +279,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'singlethread'?
 	 */
-	protected void emit_Instruction_cmpxchg_SinglethreadKeyword_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_cmpxchg_SinglethreadKeyword_8_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -287,7 +287,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'volatile'?
 	 */
-	protected void emit_Instruction_cmpxchg_VolatileKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_cmpxchg_VolatileKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -303,21 +303,21 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'inbounds'?
 	 */
-	protected void emit_Instruction_getelementptr_InboundsKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('inreg' | 'signext' | 'zeroext')*
-	 */
-	protected void emit_Instruction_invoke_nonVoid___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_getelementptr_InboundsKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
 	 *     ('signext' | 'zeroext' | 'inreg')*
+	 */
+	protected void emit_Instruction_invoke_nonVoid___InregKeyword_3_2_or_SignextKeyword_3_1_or_ZeroextKeyword_3_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('zeroext' | 'signext' | 'inreg')*
 	 */
 	protected void emit_Instruction_invoke_void___InregKeyword_2_2_or_SignextKeyword_2_1_or_ZeroextKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -327,7 +327,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'singlethread'?
 	 */
-	protected void emit_Instruction_load_SinglethreadKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_load_SinglethreadKeyword_2_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -335,7 +335,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'volatile'?
 	 */
-	protected void emit_Instruction_load_VolatileKeyword_1_0_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_load_VolatileKeyword_2_0_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -343,7 +343,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'volatile'?
 	 */
-	protected void emit_Instruction_load_VolatileKeyword_1_1_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_load_VolatileKeyword_2_1_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -351,7 +351,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'exact'?
 	 */
-	protected void emit_Instruction_lshr_ExactKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_lshr_ExactKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -359,7 +359,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('nuw' | 'nsw')*
 	 */
-	protected void emit_Instruction_mul___NswKeyword_1_1_or_NuwKeyword_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_mul___NswKeyword_2_1_or_NuwKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -367,7 +367,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'exact'?
 	 */
-	protected void emit_Instruction_sdiv_ExactKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_sdiv_ExactKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -375,7 +375,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('nuw' | 'nsw')*
 	 */
-	protected void emit_Instruction_shl___NswKeyword_1_1_or_NuwKeyword_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_shl___NswKeyword_2_1_or_NuwKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -405,9 +405,9 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     ('nsw' | 'nuw')*
+	 *     ('nuw' | 'nsw')*
 	 */
-	protected void emit_Instruction_sub___NswKeyword_1_1_or_NuwKeyword_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_sub___NswKeyword_2_1_or_NuwKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -415,7 +415,7 @@ public class LLVM_IRSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     'exact'?
 	 */
-	protected void emit_Instruction_udiv_ExactKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Instruction_udiv_ExactKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -43,862 +43,806 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHeader
-{
-  /**
-   * The default value of the '{@link #getLinkage() <em>Linkage</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLinkage()
-   * @generated
-   * @ordered
-   */
-  protected static final String LINKAGE_EDEFAULT = null;
+public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHeader {
+	/**
+	 * The default value of the '{@link #getLinkage() <em>Linkage</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LINKAGE_EDEFAULT = null;
 
-  /**
-   * The cached value of the '{@link #getLinkage() <em>Linkage</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLinkage()
-   * @generated
-   * @ordered
-   */
-  protected String linkage = LINKAGE_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getLinkage() <em>Linkage</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String linkage = LINKAGE_EDEFAULT;
 
-  /**
-   * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVisibility()
-   * @generated
-   * @ordered
-   */
-  protected static final String VISIBILITY_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVisibility()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VISIBILITY_EDEFAULT = null;
 
-  /**
-   * The cached value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVisibility()
-   * @generated
-   * @ordered
-   */
-  protected String visibility = VISIBILITY_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getVisibility() <em>Visibility</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVisibility()
+	 * @generated
+	 * @ordered
+	 */
+	protected String visibility = VISIBILITY_EDEFAULT;
 
-  /**
-   * The cached value of the '{@link #getCconv() <em>Cconv</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCconv()
-   * @generated
-   * @ordered
-   */
-  protected CConv cconv;
+	/**
+	 * The cached value of the '{@link #getCconv() <em>Cconv</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCconv()
+	 * @generated
+	 * @ordered
+	 */
+	protected CConv cconv;
 
-  /**
-   * The cached value of the '{@link #getRettypeAttrs() <em>Rettype Attrs</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRettypeAttrs()
-   * @generated
-   * @ordered
-   */
-  protected ParameterAttributes rettypeAttrs;
+	/**
+	 * The cached value of the '{@link #getRettypeAttrs() <em>Rettype Attrs</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRettypeAttrs()
+	 * @generated
+	 * @ordered
+	 */
+	protected ParameterAttributes rettypeAttrs;
 
-  /**
-   * The cached value of the '{@link #getRettype() <em>Rettype</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRettype()
-   * @generated
-   * @ordered
-   */
-  protected Type rettype;
+	/**
+	 * The cached value of the '{@link #getRettype() <em>Rettype</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRettype()
+	 * @generated
+	 * @ordered
+	 */
+	protected Type rettype;
 
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
 
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
-  /**
-   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParameters()
-   * @generated
-   * @ordered
-   */
-  protected Parameters parameters;
+	/**
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected Parameters parameters;
 
-  /**
-   * The cached value of the '{@link #getAttrs() <em>Attrs</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAttrs()
-   * @generated
-   * @ordered
-   */
-  protected FunctionAttributes attrs;
+	/**
+	 * The cached value of the '{@link #getAttrs() <em>Attrs</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttrs()
+	 * @generated
+	 * @ordered
+	 */
+	protected FunctionAttributes attrs;
 
-  /**
-   * The default value of the '{@link #getSection() <em>Section</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSection()
-   * @generated
-   * @ordered
-   */
-  protected static final String SECTION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getSection() <em>Section</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSection()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SECTION_EDEFAULT = null;
 
-  /**
-   * The cached value of the '{@link #getSection() <em>Section</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSection()
-   * @generated
-   * @ordered
-   */
-  protected String section = SECTION_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getSection() <em>Section</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSection()
+	 * @generated
+	 * @ordered
+	 */
+	protected String section = SECTION_EDEFAULT;
 
-  /**
-   * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAlign()
-   * @generated
-   * @ordered
-   */
-  protected static final String ALIGN_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ALIGN_EDEFAULT = null;
 
-  /**
-   * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAlign()
-   * @generated
-   * @ordered
-   */
-  protected String align = ALIGN_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected String align = ALIGN_EDEFAULT;
 
-  /**
-   * The default value of the '{@link #getGc() <em>Gc</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGc()
-   * @generated
-   * @ordered
-   */
-  protected static final String GC_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getGc() <em>Gc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GC_EDEFAULT = null;
 
-  /**
-   * The cached value of the '{@link #getGc() <em>Gc</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGc()
-   * @generated
-   * @ordered
-   */
-  protected String gc = GC_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getGc() <em>Gc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGc()
+	 * @generated
+	 * @ordered
+	 */
+	protected String gc = GC_EDEFAULT;
 
-  /**
-   * The cached value of the '{@link #getFunctionPrefix() <em>Function Prefix</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFunctionPrefix()
-   * @generated
-   * @ordered
-   */
-  protected FunctionPrefix functionPrefix;
+	/**
+	 * The cached value of the '{@link #getFunctionPrefix() <em>Function Prefix</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunctionPrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected FunctionPrefix functionPrefix;
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  protected FunctionHeaderImpl()
-  {
-    super();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FunctionHeaderImpl() {
+		super();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  protected EClass eStaticClass()
-  {
-    return LLVM_IRPackage.eINSTANCE.getFunctionHeader();
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return LLVM_IRPackage.eINSTANCE.getFunctionHeader();
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getLinkage()
-  {
-    return linkage;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLinkage() {
+		return linkage;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLinkage(String newLinkage)
-  {
-    String oldLinkage = linkage;
-    linkage = newLinkage;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__LINKAGE, oldLinkage, linkage));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLinkage(String newLinkage) {
+		String oldLinkage = linkage;
+		linkage = newLinkage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__LINKAGE, oldLinkage, linkage));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getVisibility()
-  {
-    return visibility;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getVisibility() {
+		return visibility;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVisibility(String newVisibility)
-  {
-    String oldVisibility = visibility;
-    visibility = newVisibility;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY, oldVisibility, visibility));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVisibility(String newVisibility) {
+		String oldVisibility = visibility;
+		visibility = newVisibility;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY, oldVisibility, visibility));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CConv getCconv()
-  {
-    return cconv;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CConv getCconv() {
+		return cconv;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs)
-  {
-    CConv oldCconv = cconv;
-    cconv = newCconv;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__CCONV, oldCconv, newCconv);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs) {
+		CConv oldCconv = cconv;
+		cconv = newCconv;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__CCONV, oldCconv, newCconv);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCconv(CConv newCconv)
-  {
-    if (newCconv != cconv)
-    {
-      NotificationChain msgs = null;
-      if (cconv != null)
-        msgs = ((InternalEObject)cconv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__CCONV, null, msgs);
-      if (newCconv != null)
-        msgs = ((InternalEObject)newCconv).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__CCONV, null, msgs);
-      msgs = basicSetCconv(newCconv, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__CCONV, newCconv, newCconv));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCconv(CConv newCconv) {
+		if (newCconv != cconv) {
+			NotificationChain msgs = null;
+			if (cconv != null)
+				msgs = ((InternalEObject)cconv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__CCONV, null, msgs);
+			if (newCconv != null)
+				msgs = ((InternalEObject)newCconv).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__CCONV, null, msgs);
+			msgs = basicSetCconv(newCconv, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__CCONV, newCconv, newCconv));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ParameterAttributes getRettypeAttrs()
-  {
-    return rettypeAttrs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParameterAttributes getRettypeAttrs() {
+		return rettypeAttrs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRettypeAttrs(ParameterAttributes newRettypeAttrs, NotificationChain msgs)
-  {
-    ParameterAttributes oldRettypeAttrs = rettypeAttrs;
-    rettypeAttrs = newRettypeAttrs;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, oldRettypeAttrs, newRettypeAttrs);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRettypeAttrs(ParameterAttributes newRettypeAttrs, NotificationChain msgs) {
+		ParameterAttributes oldRettypeAttrs = rettypeAttrs;
+		rettypeAttrs = newRettypeAttrs;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, oldRettypeAttrs, newRettypeAttrs);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRettypeAttrs(ParameterAttributes newRettypeAttrs)
-  {
-    if (newRettypeAttrs != rettypeAttrs)
-    {
-      NotificationChain msgs = null;
-      if (rettypeAttrs != null)
-        msgs = ((InternalEObject)rettypeAttrs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, null, msgs);
-      if (newRettypeAttrs != null)
-        msgs = ((InternalEObject)newRettypeAttrs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, null, msgs);
-      msgs = basicSetRettypeAttrs(newRettypeAttrs, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, newRettypeAttrs, newRettypeAttrs));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRettypeAttrs(ParameterAttributes newRettypeAttrs) {
+		if (newRettypeAttrs != rettypeAttrs) {
+			NotificationChain msgs = null;
+			if (rettypeAttrs != null)
+				msgs = ((InternalEObject)rettypeAttrs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, null, msgs);
+			if (newRettypeAttrs != null)
+				msgs = ((InternalEObject)newRettypeAttrs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, null, msgs);
+			msgs = basicSetRettypeAttrs(newRettypeAttrs, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, newRettypeAttrs, newRettypeAttrs));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Type getRettype()
-  {
-    return rettype;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type getRettype() {
+		return rettype;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRettype(Type newRettype, NotificationChain msgs)
-  {
-    Type oldRettype = rettype;
-    rettype = newRettype;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, oldRettype, newRettype);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRettype(Type newRettype, NotificationChain msgs) {
+		Type oldRettype = rettype;
+		rettype = newRettype;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, oldRettype, newRettype);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRettype(Type newRettype)
-  {
-    if (newRettype != rettype)
-    {
-      NotificationChain msgs = null;
-      if (rettype != null)
-        msgs = ((InternalEObject)rettype).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, null, msgs);
-      if (newRettype != null)
-        msgs = ((InternalEObject)newRettype).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, null, msgs);
-      msgs = basicSetRettype(newRettype, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, newRettype, newRettype));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRettype(Type newRettype) {
+		if (newRettype != rettype) {
+			NotificationChain msgs = null;
+			if (rettype != null)
+				msgs = ((InternalEObject)rettype).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, null, msgs);
+			if (newRettype != null)
+				msgs = ((InternalEObject)newRettype).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, null, msgs);
+			msgs = basicSetRettype(newRettype, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, newRettype, newRettype));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__NAME, oldName, name));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__NAME, oldName, name));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Parameters getParameters()
-  {
-    return parameters;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameters getParameters() {
+		return parameters;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetParameters(Parameters newParameters, NotificationChain msgs)
-  {
-    Parameters oldParameters = parameters;
-    parameters = newParameters;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, oldParameters, newParameters);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParameters(Parameters newParameters, NotificationChain msgs) {
+		Parameters oldParameters = parameters;
+		parameters = newParameters;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, oldParameters, newParameters);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setParameters(Parameters newParameters)
-  {
-    if (newParameters != parameters)
-    {
-      NotificationChain msgs = null;
-      if (parameters != null)
-        msgs = ((InternalEObject)parameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, null, msgs);
-      if (newParameters != null)
-        msgs = ((InternalEObject)newParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, null, msgs);
-      msgs = basicSetParameters(newParameters, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, newParameters, newParameters));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParameters(Parameters newParameters) {
+		if (newParameters != parameters) {
+			NotificationChain msgs = null;
+			if (parameters != null)
+				msgs = ((InternalEObject)parameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, null, msgs);
+			if (newParameters != null)
+				msgs = ((InternalEObject)newParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, null, msgs);
+			msgs = basicSetParameters(newParameters, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, newParameters, newParameters));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FunctionAttributes getAttrs()
-  {
-    return attrs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionAttributes getAttrs() {
+		return attrs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetAttrs(FunctionAttributes newAttrs, NotificationChain msgs)
-  {
-    FunctionAttributes oldAttrs = attrs;
-    attrs = newAttrs;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ATTRS, oldAttrs, newAttrs);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAttrs(FunctionAttributes newAttrs, NotificationChain msgs) {
+		FunctionAttributes oldAttrs = attrs;
+		attrs = newAttrs;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ATTRS, oldAttrs, newAttrs);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAttrs(FunctionAttributes newAttrs)
-  {
-    if (newAttrs != attrs)
-    {
-      NotificationChain msgs = null;
-      if (attrs != null)
-        msgs = ((InternalEObject)attrs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__ATTRS, null, msgs);
-      if (newAttrs != null)
-        msgs = ((InternalEObject)newAttrs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__ATTRS, null, msgs);
-      msgs = basicSetAttrs(newAttrs, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ATTRS, newAttrs, newAttrs));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttrs(FunctionAttributes newAttrs) {
+		if (newAttrs != attrs) {
+			NotificationChain msgs = null;
+			if (attrs != null)
+				msgs = ((InternalEObject)attrs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__ATTRS, null, msgs);
+			if (newAttrs != null)
+				msgs = ((InternalEObject)newAttrs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__ATTRS, null, msgs);
+			msgs = basicSetAttrs(newAttrs, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ATTRS, newAttrs, newAttrs));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getSection()
-  {
-    return section;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSection() {
+		return section;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSection(String newSection)
-  {
-    String oldSection = section;
-    section = newSection;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__SECTION, oldSection, section));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSection(String newSection) {
+		String oldSection = section;
+		section = newSection;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__SECTION, oldSection, section));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getAlign()
-  {
-    return align;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAlign() {
+		return align;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAlign(String newAlign)
-  {
-    String oldAlign = align;
-    align = newAlign;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ALIGN, oldAlign, align));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlign(String newAlign) {
+		String oldAlign = align;
+		align = newAlign;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ALIGN, oldAlign, align));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getGc()
-  {
-    return gc;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getGc() {
+		return gc;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setGc(String newGc)
-  {
-    String oldGc = gc;
-    gc = newGc;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__GC, oldGc, gc));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGc(String newGc) {
+		String oldGc = gc;
+		gc = newGc;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__GC, oldGc, gc));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FunctionPrefix getFunctionPrefix()
-  {
-    return functionPrefix;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionPrefix getFunctionPrefix() {
+		return functionPrefix;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetFunctionPrefix(FunctionPrefix newFunctionPrefix, NotificationChain msgs)
-  {
-    FunctionPrefix oldFunctionPrefix = functionPrefix;
-    functionPrefix = newFunctionPrefix;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, oldFunctionPrefix, newFunctionPrefix);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFunctionPrefix(FunctionPrefix newFunctionPrefix, NotificationChain msgs) {
+		FunctionPrefix oldFunctionPrefix = functionPrefix;
+		functionPrefix = newFunctionPrefix;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, oldFunctionPrefix, newFunctionPrefix);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFunctionPrefix(FunctionPrefix newFunctionPrefix)
-  {
-    if (newFunctionPrefix != functionPrefix)
-    {
-      NotificationChain msgs = null;
-      if (functionPrefix != null)
-        msgs = ((InternalEObject)functionPrefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, null, msgs);
-      if (newFunctionPrefix != null)
-        msgs = ((InternalEObject)newFunctionPrefix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, null, msgs);
-      msgs = basicSetFunctionPrefix(newFunctionPrefix, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, newFunctionPrefix, newFunctionPrefix));
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFunctionPrefix(FunctionPrefix newFunctionPrefix) {
+		if (newFunctionPrefix != functionPrefix) {
+			NotificationChain msgs = null;
+			if (functionPrefix != null)
+				msgs = ((InternalEObject)functionPrefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, null, msgs);
+			if (newFunctionPrefix != null)
+				msgs = ((InternalEObject)newFunctionPrefix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, null, msgs);
+			msgs = basicSetFunctionPrefix(newFunctionPrefix, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, newFunctionPrefix, newFunctionPrefix));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
-        return basicSetCconv(null, msgs);
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
-        return basicSetRettypeAttrs(null, msgs);
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
-        return basicSetRettype(null, msgs);
-      case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
-        return basicSetParameters(null, msgs);
-      case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
-        return basicSetAttrs(null, msgs);
-      case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
-        return basicSetFunctionPrefix(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
+				return basicSetCconv(null, msgs);
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
+				return basicSetRettypeAttrs(null, msgs);
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
+				return basicSetRettype(null, msgs);
+			case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
+				return basicSetParameters(null, msgs);
+			case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
+				return basicSetAttrs(null, msgs);
+			case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
+				return basicSetFunctionPrefix(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
-    switch (featureID)
-    {
-      case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
-        return getLinkage();
-      case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
-        return getVisibility();
-      case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
-        return getCconv();
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
-        return getRettypeAttrs();
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
-        return getRettype();
-      case LLVM_IRPackage.FUNCTION_HEADER__NAME:
-        return getName();
-      case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
-        return getParameters();
-      case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
-        return getAttrs();
-      case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
-        return getSection();
-      case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
-        return getAlign();
-      case LLVM_IRPackage.FUNCTION_HEADER__GC:
-        return getGc();
-      case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
-        return getFunctionPrefix();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
+				return getLinkage();
+			case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
+				return getVisibility();
+			case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
+				return getCconv();
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
+				return getRettypeAttrs();
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
+				return getRettype();
+			case LLVM_IRPackage.FUNCTION_HEADER__NAME:
+				return getName();
+			case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
+				return getParameters();
+			case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
+				return getAttrs();
+			case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
+				return getSection();
+			case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
+				return getAlign();
+			case LLVM_IRPackage.FUNCTION_HEADER__GC:
+				return getGc();
+			case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
+				return getFunctionPrefix();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
-    switch (featureID)
-    {
-      case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
-        setLinkage((String)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
-        setVisibility((String)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
-        setCconv((CConv)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
-        setRettypeAttrs((ParameterAttributes)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
-        setRettype((Type)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__NAME:
-        setName((String)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
-        setParameters((Parameters)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
-        setAttrs((FunctionAttributes)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
-        setSection((String)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
-        setAlign((String)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__GC:
-        setGc((String)newValue);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
-        setFunctionPrefix((FunctionPrefix)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
+				setLinkage((String)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
+				setVisibility((String)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
+				setCconv((CConv)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
+				setRettypeAttrs((ParameterAttributes)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
+				setRettype((Type)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__NAME:
+				setName((String)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
+				setParameters((Parameters)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
+				setAttrs((FunctionAttributes)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
+				setSection((String)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
+				setAlign((String)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__GC:
+				setGc((String)newValue);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
+				setFunctionPrefix((FunctionPrefix)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eUnset(int featureID)
-  {
-    switch (featureID)
-    {
-      case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
-        setLinkage(LINKAGE_EDEFAULT);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
-        setVisibility(VISIBILITY_EDEFAULT);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
-        setCconv((CConv)null);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
-        setRettypeAttrs((ParameterAttributes)null);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
-        setRettype((Type)null);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
-        setParameters((Parameters)null);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
-        setAttrs((FunctionAttributes)null);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
-        setSection(SECTION_EDEFAULT);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
-        setAlign(ALIGN_EDEFAULT);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__GC:
-        setGc(GC_EDEFAULT);
-        return;
-      case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
-        setFunctionPrefix((FunctionPrefix)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
+				setLinkage(LINKAGE_EDEFAULT);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
+				setVisibility(VISIBILITY_EDEFAULT);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
+				setCconv((CConv)null);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
+				setRettypeAttrs((ParameterAttributes)null);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
+				setRettype((Type)null);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
+				setParameters((Parameters)null);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
+				setAttrs((FunctionAttributes)null);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
+				setSection(SECTION_EDEFAULT);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
+				setAlign(ALIGN_EDEFAULT);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__GC:
+				setGc(GC_EDEFAULT);
+				return;
+			case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
+				setFunctionPrefix((FunctionPrefix)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
-    switch (featureID)
-    {
-      case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
-        return LINKAGE_EDEFAULT == null ? linkage != null : !LINKAGE_EDEFAULT.equals(linkage);
-      case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
-        return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
-      case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
-        return cconv != null;
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
-        return rettypeAttrs != null;
-      case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
-        return rettype != null;
-      case LLVM_IRPackage.FUNCTION_HEADER__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
-        return parameters != null;
-      case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
-        return attrs != null;
-      case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
-        return SECTION_EDEFAULT == null ? section != null : !SECTION_EDEFAULT.equals(section);
-      case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
-        return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
-      case LLVM_IRPackage.FUNCTION_HEADER__GC:
-        return GC_EDEFAULT == null ? gc != null : !GC_EDEFAULT.equals(gc);
-      case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
-        return functionPrefix != null;
-    }
-    return super.eIsSet(featureID);
-  }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
+				return LINKAGE_EDEFAULT == null ? linkage != null : !LINKAGE_EDEFAULT.equals(linkage);
+			case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
+				return VISIBILITY_EDEFAULT == null ? visibility != null : !VISIBILITY_EDEFAULT.equals(visibility);
+			case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
+				return cconv != null;
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
+				return rettypeAttrs != null;
+			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE:
+				return rettype != null;
+			case LLVM_IRPackage.FUNCTION_HEADER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS:
+				return parameters != null;
+			case LLVM_IRPackage.FUNCTION_HEADER__ATTRS:
+				return attrs != null;
+			case LLVM_IRPackage.FUNCTION_HEADER__SECTION:
+				return SECTION_EDEFAULT == null ? section != null : !SECTION_EDEFAULT.equals(section);
+			case LLVM_IRPackage.FUNCTION_HEADER__ALIGN:
+				return ALIGN_EDEFAULT == null ? align != null : !ALIGN_EDEFAULT.equals(align);
+			case LLVM_IRPackage.FUNCTION_HEADER__GC:
+				return GC_EDEFAULT == null ? gc != null : !GC_EDEFAULT.equals(gc);
+			case LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX:
+				return functionPrefix != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (linkage: ");
-    result.append(linkage);
-    result.append(", visibility: ");
-    result.append(visibility);
-    result.append(", name: ");
-    result.append(name);
-    result.append(", section: ");
-    result.append(section);
-    result.append(", align: ");
-    result.append(align);
-    result.append(", gc: ");
-    result.append(gc);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (linkage: ");
+		result.append(linkage);
+		result.append(", visibility: ");
+		result.append(visibility);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", section: ");
+		result.append(section);
+		result.append(", align: ");
+		result.append(align);
+		result.append(", gc: ");
+		result.append(gc);
+		result.append(')');
+		return result.toString();
+	}
 
 } //FunctionHeaderImpl

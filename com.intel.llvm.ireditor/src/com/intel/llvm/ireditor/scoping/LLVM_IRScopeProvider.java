@@ -49,9 +49,9 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 
 /**
  * This class contains custom scoping description.
- * 
+ *
  * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping
- * on how and when to use it 
+ * on how and when to use it
  *
  */
 public class LLVM_IRScopeProvider extends AbstractDeclarativeScopeProvider {
@@ -76,7 +76,7 @@ public class LLVM_IRScopeProvider extends AbstractDeclarativeScopeProvider {
 		}
 		return super.getScope(context, reference);
 	}
-	
+
 	private <U extends EObject> U getAncestor(EObject obj, Class<U> ancestor) {
 		while (ancestor.isInstance(obj) == false) {
 			if (obj == null) return null;
@@ -84,11 +84,11 @@ public class LLVM_IRScopeProvider extends AbstractDeclarativeScopeProvider {
 		}
 		return ancestor.cast(obj);
 	}
-	
+
 	private EObject getContainedInstruction(Instruction inst) {
-		if (inst instanceof StartingInstruction) return ((StartingInstruction) inst).getInstruction();
-		if (inst instanceof MiddleInstruction) return ((MiddleInstruction) inst).getInstruction();
-		if (inst instanceof TerminatorInstruction) return ((TerminatorInstruction) inst).getInstruction();
+		if (inst instanceof StartingInstruction) return ((StartingInstruction) inst);
+		if (inst instanceof MiddleInstruction) return ((MiddleInstruction) inst);
+		if (inst instanceof TerminatorInstruction) return ((TerminatorInstruction) inst);
 		return null;
 	}
 
@@ -101,11 +101,11 @@ public class LLVM_IRScopeProvider extends AbstractDeclarativeScopeProvider {
 			inScope.addAll(block.getInstructions());
 		}
 	}
-	
+
 	private void addParameters(LinkedList<EObject> inScope, FunctionDef func) {
 		inScope.addAll(func.getHeader().getParameters().getParameters());
 	}
-	
+
 	private void addGlobals(LinkedList<EObject> inScope, FunctionDef func) {
 		Model m = getAncestor(func, Model.class);
 		if (m == null) return;
@@ -115,5 +115,5 @@ public class LLVM_IRScopeProvider extends AbstractDeclarativeScopeProvider {
 			}
 		}
 	}
-	
+
 }

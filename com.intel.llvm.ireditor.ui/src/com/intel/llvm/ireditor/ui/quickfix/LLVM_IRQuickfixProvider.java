@@ -86,17 +86,17 @@ import com.intel.llvm.ireditor.validation.LLVM_IRJavaValidator;
 
 @SuppressWarnings("restriction")
 public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
-	
+
 	@Inject
 	private IRenameSupport.Factory renameSupportFactory;
 
 	TypeResolver resolver = new TypeResolver();
-	
+
 	@Fix(LLVM_IRJavaValidator.ERROR_EXPECTED_TYPE)
 	public void suggestConversion(final Issue issue, IssueResolutionAcceptor acceptor) throws BadLocationException {
 		String[] data = issue.getData();
 		if (data.length <= 2) return;
-		
+
 		IModificationContext context = getModificationContextFactory().createModificationContext(issue);
 		final IXtextDocument doc = getDoc(context);
 		String name = doc.get(issue.getOffset(), issue.getLength());
@@ -110,19 +110,19 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 			// Not inside an instruction - don't suggest anything.
 			return;
 		}
-		
+
 		final int instOffset = offsetOf(inst);
-		
+
 		// Calculate preceding indentation, to preserve it for the new instruction:
 		int lineOffset = doc.getLineOffset(doc.getLineOfOffset(instOffset));
 		String indentation = doc.get(lineOffset, instOffset - lineOffset);
-		
+
 		for (int i = 2; i < data.length; i++) {
 			final String newInst = String.format("%s = %s %s %s to %s\n%s",
 					newInstName, data[i], data[1], name, data[0], indentation);
 			String description = "This will insert\n" + newInst + "\nimmediately before this instruction, " +
 					"and rename " + name + " to " + newInstName + " in this instruction";
-			
+
 			acceptor.accept(issue, "Insert " + data[i] + " conversion for " + name, description, "upcase.png", new IModification() {
 				public void apply(IModificationContext context) throws BadLocationException {
 					// Changing the name in the current instruction to refer to the new instruction:
@@ -133,7 +133,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 			});
 		}
 	}
-	
+
 	@Fix(LLVM_IRJavaValidator.ERROR_MISSING_FUNCTION_PTR_TYPE)
 	public void addMissingFunctionPtr(final Issue issue, IssueResolutionAcceptor acceptor) throws BadLocationException {
 		String[] data = issue.getData();
@@ -146,16 +146,16 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 			}
 		});
 	}
-	
+
 	@Fix(LLVM_IRJavaValidator.ERROR_WRONG_NUMBER)
 	public void suggestFixingNumbers(final Issue issue, IssueResolutionAcceptor acceptor) throws BadLocationException {
 		String[] data = issue.getData();
 		final String name = data[0];
 		final String newName = data[1];
-		
+
 		String label = "";
 		String description = "";
-		
+
 		// Suggestion 1: local rename
 //		label = "Locally replace " + name + " with " + newName;
 //		description = name + " will be replaced by " + newName + " in this location only.";
@@ -165,7 +165,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 //				doc.replace(issue.getOffset(), name.length(), newName);
 //			}
 //		});
-		
+
 		// Suggestion 2: rename-refactor
 		label = "Rename " + name + " to " + newName;
 		description = name + " will be replaced by " + newName + " here and everywhere it is used in this context.";
@@ -178,7 +178,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 				replacements.execute(doc);
 			}
 		});
-		
+
 		// Suggestion 3: rename-refactor the entire sequence
 		label = "Update all names in current sequence";
 		description = label;
@@ -191,7 +191,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 			}
 		});
 	}
-	
+
 	private Replacements fixSequence(EObject object) throws InterruptedException, BadLocationException {
 		Replacements result = new Replacements();
 		EObject lastInContext = getLastObjectInContext(object);
@@ -202,36 +202,36 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 		for (EObject namedElement : iter) {
 			toRename.push(namedElement);
 		}
-		
+
 		NameResolver namer = new NameResolver();
 		int num = -1;
-		
+
 		while (toRename.isEmpty() == false) {
 			EObject element = toRename.pop();
 			NumberedName name = namer.resolveNumberedName(element);
 			if (name == null) continue;
-			
+
 			// This is an unnamed element
 			num++;
 			if (name.getNumber() == num) continue;
-			
-			// Hack to get the directly-named element, for the rename refactoring target. 
+
+			// Hack to get the directly-named element, for the rename refactoring target.
 			if (element instanceof MiddleInstruction) {
-				element = ((MiddleInstruction) element).getInstruction();
+				element = ((MiddleInstruction) element);
 			} else if (element instanceof TerminatorInstruction) {
-				element = ((TerminatorInstruction) element).getInstruction();
+				element = ((TerminatorInstruction) element);
 			}
-			
+
 			String prefix = element instanceof BasicBlock == false ? name.getPrefix() : "";
 			String oldName = prefix + name.getNumber();
 			String newName = prefix + num;
-			
+
 			performSmartRenameRefactoring(result, element, oldName, newName);
 		}
-		
+
 		return result;
 	}
-	
+
 	private EObject getLastObjectInContext(EObject object) {
 		do {
 			if (object instanceof Model) {
@@ -251,11 +251,11 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 
 	@Inject
 	ResourceDescriptionsProvider resourceDescriptionsProvider;
-	
+
 	@Inject
 	IContainer.Manager containerManager;
 
-	
+
 	private void performSmartRenameRefactoring(Replacements replacements, EObject object,
 			String oldName, String newName) throws BadLocationException {
 		// Rename object, if it has an explicit name already:
@@ -267,18 +267,18 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 		} else if (text.startsWith(oldName)) {
 			replacements.add(new Replacement(objNode.getOffset(), oldName.length(), newName));
 		}
-		
+
 		// Rename references:
 		for (EObject ref : LLVM_IRUtils.xrefs(object)) {
 			INode refNode = NodeModelUtils.findActualNodeFor(ref);
 			replacements.add(new Replacement(refNode.getOffset(), refNode.getLength(), newName));
 		}
 	}
-	
+
 	@Override
 	public List<IssueResolution> getResolutionsForLinkingIssue(Issue issue) {
 		List<IssueResolution> result = super.getResolutionsForLinkingIssue(issue);
-		
+
 		IModificationContext context = getModificationContextFactory().createModificationContext(issue);
 		IXtextDocument doc = getDoc(context);
 		if (doc == null) {
@@ -293,12 +293,12 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 		if (isCallToMissing(object) == false) {
 			return result;
 		}
-		
-		
+
+
 		// This replacement is done via text, though it should really be done
 		// using an LLVM_IRFactory instead.
 		final String declaration = buildDeclarationFromCall(object.eContainer().eContainer());
-		
+
 		result.add(new IssueResolution("Create function declaration",
 				"The signature\n" + declaration + "\nwill be appended to the end of the file.",
 				"upcase.png", context, new IModification() {
@@ -307,7 +307,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 				IXtextDocument doc = getDoc(context);
 				doc.replace(doc.getLength(), 0, declaration);
 			}
-			
+
 		}));
 		return result;
 	}
@@ -320,9 +320,9 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 				|| object.eContainer().eContainer() instanceof Instruction_invoke_nonVoid
 				|| object.eContainer().eContainer() instanceof Instruction_invoke_void);
 	}
-	
+
 	private String buildDeclarationFromCall(Callee callee, EObject functionPointerType) {
-		
+
 		ResolvedAnyFunctionType fType =
 				resolver.resolve(functionPointerType).getContainedType(0).asFunction();
 		StringBuilder paramString = new StringBuilder();
@@ -333,7 +333,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 		return String.format("\ndeclare %s %s(%s)\n",
 				fType.getReturnType(), textOf(callee), paramString.toString());
 	}
-	
+
 	/**
 	 * Get the full IR text for a function declaration.
 	 * @param callee The called function.
@@ -359,7 +359,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 		sb.append(")");
 		return "\ndeclare " + sb.toString() + "\n";
 	}
-	
+
 	private String buildDeclarationFromCall(EObject inst) {
 		Callee callee = null;
 		EObject type = null;
@@ -387,7 +387,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 		} else {
 			return null;
 		}
-		
+
 		ResolvedType resolvedType = resolver.resolve(type);
 		if (resolvedType.isPointer() && resolvedType.getContainedType(0).isFunction()) {
 			return buildDeclarationFromCall(callee, type);
@@ -402,29 +402,29 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 			}
 		});
 	}
-	
+
 	private String textOf(EObject object) {
 		return NodeModelUtils.getTokenText(NodeModelUtils.getNode(object));
 	}
-	
+
 	private int offsetOf(EObject object) {
 		return NodeModelUtils.getNode(object).getOffset();
 	}
-	
+
 	private static class Replacements {
 		private SortedSet<Replacement> replacements = new TreeSet<Replacement>();
-		
+
 		public void add(Replacement r) {
 			replacements.add(r);
 		}
-		
+
 		public void execute(IXtextDocument doc) throws BadLocationException {
 			for (Replacement r : replacements) {
 				r.execute(doc);
 			}
 		}
 	}
-	
+
 	private static class Replacement implements Comparable<Replacement> {
 		private int offset;
 		private int length;
@@ -435,7 +435,7 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 			this.length = length;
 			this.newStr = newStr;
 		}
-		
+
 		public void execute(IXtextDocument doc) throws BadLocationException {
 			doc.replace(offset, length, newStr);
 		}
@@ -477,19 +477,19 @@ public class LLVM_IRQuickfixProvider extends DefaultQuickfixProvider {
 				return false;
 			return true;
 		}
-		
+
 	}
-	
+
 	private IXtextDocument getDoc(IModificationContext context) {
 		IXtextDocument doc = context.getXtextDocument();
 		if (doc != null) return doc;
-		
+
 		// We should only reach this point if this is a workspace-external file
 		IEditorPart editor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor();
 		if (editor instanceof XtextEditor) {
 			return ((XtextEditor) editor).getDocument();
 		}
-		
+
 		return null;
 	}
 }

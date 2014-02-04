@@ -20,22 +20,21 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_fdiv extends BinaryInstruction
-{
-  /**
-   * Returns the value of the '<em><b>Fast Math Flags</b></em>' containment reference list.
-   * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.FastMathFlag}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Fast Math Flags</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Fast Math Flags</em>' containment reference list.
-   * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage#getInstruction_fdiv_FastMathFlags()
-   * @model containment="true"
-   * @generated
-   */
-  EList<FastMathFlag> getFastMathFlags();
+public interface Instruction_fdiv extends BinaryInstruction {
+	/**
+	 * Returns the value of the '<em><b>Fast Math Flags</b></em>' containment reference list.
+	 * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.FastMathFlag}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fast Math Flags</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fast Math Flags</em>' containment reference list.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage#getInstruction_fdiv_FastMathFlags()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<FastMathFlag> getFastMathFlags();
 
 } // Instruction_fdiv

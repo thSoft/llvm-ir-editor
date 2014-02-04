@@ -5363,10 +5363,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:14: ( ( 'true' | 'false' ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:16: ( 'true' | 'false' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37909:14: ( ( 'true' | 'false' ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37909:16: ( 'true' | 'false' )
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:16: ( 'true' | 'false' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37909:16: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -5384,7 +5384,7 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:17: 'true'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37909:17: 'true'
                     {
                     match("true"); 
 
@@ -5392,7 +5392,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36483:24: 'false'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37909:24: 'false'
                     {
                     match("false"); 
 
@@ -5418,8 +5418,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36485:11: ( 'null' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36485:13: 'null'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37911:11: ( 'null' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37911:13: 'null'
             {
             match("null"); 
 
@@ -5439,8 +5439,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_INT_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36487:15: ( 'i' RULE_INTEGER )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36487:17: 'i' RULE_INTEGER
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37913:15: ( 'i' RULE_INTEGER )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37913:17: 'i' RULE_INTEGER
             {
             match('i'); 
             mRULE_INTEGER(); 
@@ -5460,11 +5460,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_GLOBAL_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:16: ( '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:18: '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37915:16: ( '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37915:18: '@' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             {
             match('@'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:22: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37915:22: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             int alt2=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -5555,21 +5555,21 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:23: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37915:23: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:36: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37915:36: RULE_NAME
                     {
                     mRULE_NAME(); 
 
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36489:46: RULE_STRING
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37915:46: RULE_STRING
                     {
                     mRULE_STRING(); 
 
@@ -5594,11 +5594,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_LOCAL_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:15: ( '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:17: '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37917:15: ( '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37917:17: '%' ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             {
             match('%'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:21: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37917:21: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             int alt3=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -5689,21 +5689,21 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:22: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37917:22: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:35: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37917:35: RULE_NAME
                     {
                     mRULE_NAME(); 
 
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36491:45: RULE_STRING
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37917:45: RULE_STRING
                     {
                     mRULE_STRING(); 
 
@@ -5728,10 +5728,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_BASIC_BLOCK_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:21: ( ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37919:21: ( ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37919:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING ) ':'
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37919:23: ( RULE_INTEGER | RULE_NAME | RULE_STRING )
             int alt4=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -5822,21 +5822,21 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             switch (alt4) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:24: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37919:24: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:37: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37919:37: RULE_NAME
                     {
                     mRULE_NAME(); 
 
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36493:47: RULE_STRING
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37919:47: RULE_STRING
                     {
                     mRULE_STRING(); 
 
@@ -5862,8 +5862,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_META_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36495:15: ( '!' RULE_INTEGER )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36495:17: '!' RULE_INTEGER
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37921:15: ( '!' RULE_INTEGER )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37921:17: '!' RULE_INTEGER
             {
             match('!'); 
             mRULE_INTEGER(); 
@@ -5883,8 +5883,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_META_NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36497:16: ( '!' RULE_NAME )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36497:18: '!' RULE_NAME
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37923:16: ( '!' RULE_NAME )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37923:18: '!' RULE_NAME
             {
             match('!'); 
             mRULE_NAME(); 
@@ -5904,11 +5904,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_ATTRIBUTE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:19: ( '#' ( RULE_INTEGER | RULE_NAME ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:21: '#' ( RULE_INTEGER | RULE_NAME )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37925:19: ( '#' ( RULE_INTEGER | RULE_NAME ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37925:21: '#' ( RULE_INTEGER | RULE_NAME )
             {
             match('#'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:25: ( RULE_INTEGER | RULE_NAME )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37925:25: ( RULE_INTEGER | RULE_NAME )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -5926,14 +5926,14 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:26: RULE_INTEGER
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37925:26: RULE_INTEGER
                     {
                     mRULE_INTEGER(); 
 
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36499:39: RULE_NAME
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37925:39: RULE_NAME
                     {
                     mRULE_NAME(); 
 
@@ -5958,10 +5958,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:14: ( ( '0' .. '9' )+ )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:16: ( '0' .. '9' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37927:14: ( ( '0' .. '9' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37927:16: ( '0' .. '9' )+
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:16: ( '0' .. '9' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37927:16: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -5975,7 +5975,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36501:17: '0' .. '9'
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37927:17: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -6007,8 +6007,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_SIGNED_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36503:17: ( ( '+' | '-' ) RULE_INTEGER )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36503:19: ( '+' | '-' ) RULE_INTEGER
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37929:17: ( ( '+' | '-' ) RULE_INTEGER )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37929:19: ( '+' | '-' ) RULE_INTEGER
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -6034,8 +6034,8 @@ public class InternalLLVM_IRLexer extends Lexer {
     // $ANTLR start "RULE_NAME"
     public final void mRULE_NAME() throws RecognitionException {
         try {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36505:20: ( ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )* )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36505:22: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37931:20: ( ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )* )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37931:22: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '-' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
             {
             if ( input.LA(1)=='$'||(input.LA(1)>='-' && input.LA(1)<='.')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -6046,7 +6046,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36505:58: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37931:58: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '.' | '_' | '0' .. '9' | '-' )*
             loop7:
             do {
                 int alt7=2;
@@ -6093,8 +6093,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_CSTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36507:14: ( 'c' RULE_STRING )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36507:16: 'c' RULE_STRING
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37933:14: ( 'c' RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37933:16: 'c' RULE_STRING
             {
             match('c'); 
             mRULE_STRING(); 
@@ -6114,11 +6114,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:13: ( '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:15: '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:13: ( '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:15: '\"' ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:19: ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:19: ( '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ) | ~ ( ( '\\\\' | '\"' ) ) )*
             loop9:
             do {
                 int alt9=3;
@@ -6134,10 +6134,10 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:20: '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:20: '\\\\' ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
             	    {
             	    match('\\'); 
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:25: ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:25: ( '\\\\' | ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) )
             	    int alt8=2;
             	    int LA8_0 = input.LA(1);
 
@@ -6155,14 +6155,14 @@ public class InternalLLVM_IRLexer extends Lexer {
             	    }
             	    switch (alt8) {
             	        case 1 :
-            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:26: '\\\\'
+            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:26: '\\\\'
             	            {
             	            match('\\'); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:31: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )
+            	            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:31: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' ) ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )
             	            {
             	            if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
             	                input.consume();
@@ -6192,7 +6192,7 @@ public class InternalLLVM_IRLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36509:90: ~ ( ( '\\\\' | '\"' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37935:90: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -6229,8 +6229,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_METADATA_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36511:22: ( '!' RULE_STRING )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36511:24: '!' RULE_STRING
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37937:22: ( '!' RULE_STRING )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37937:24: '!' RULE_STRING
             {
             match('!'); 
             mRULE_STRING(); 
@@ -6250,10 +6250,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:12: ( ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ ) )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:12: ( ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ ) )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:14: ( ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )? | '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+ )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -6284,9 +6284,9 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:15: ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:15: ( RULE_SIGNED_INT | RULE_INTEGER ) '.' RULE_INTEGER ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
                     {
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:15: ( RULE_SIGNED_INT | RULE_INTEGER )
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:15: ( RULE_SIGNED_INT | RULE_INTEGER )
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -6304,14 +6304,14 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:16: RULE_SIGNED_INT
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:16: RULE_SIGNED_INT
                             {
                             mRULE_SIGNED_INT(); 
 
                             }
                             break;
                         case 2 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:32: RULE_INTEGER
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:32: RULE_INTEGER
                             {
                             mRULE_INTEGER(); 
 
@@ -6322,7 +6322,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                     match('.'); 
                     mRULE_INTEGER(); 
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:63: ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:63: ( 'e' ( RULE_SIGNED_INT | RULE_INTEGER ) )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -6331,10 +6331,10 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:64: 'e' ( RULE_SIGNED_INT | RULE_INTEGER )
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:64: 'e' ( RULE_SIGNED_INT | RULE_INTEGER )
                             {
                             match('e'); 
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:68: ( RULE_SIGNED_INT | RULE_INTEGER )
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:68: ( RULE_SIGNED_INT | RULE_INTEGER )
                             int alt11=2;
                             int LA11_0 = input.LA(1);
 
@@ -6352,14 +6352,14 @@ public class InternalLLVM_IRLexer extends Lexer {
                             }
                             switch (alt11) {
                                 case 1 :
-                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:69: RULE_SIGNED_INT
+                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:69: RULE_SIGNED_INT
                                     {
                                     mRULE_SIGNED_INT(); 
 
                                     }
                                     break;
                                 case 2 :
-                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:85: RULE_INTEGER
+                                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:85: RULE_INTEGER
                                     {
                                     mRULE_INTEGER(); 
 
@@ -6378,11 +6378,11 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:101: '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:101: '0x' ( 'K' | 'L' | 'M' | 'H' )? ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
                     {
                     match("0x"); 
 
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:106: ( 'K' | 'L' | 'M' | 'H' )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:106: ( 'K' | 'L' | 'M' | 'H' )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -6408,7 +6408,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                     }
 
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36513:125: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37939:125: ( 'a' .. 'f' | 'A' .. 'F' | '0' .. '9' )+
                     int cnt14=0;
                     loop14:
                     do {
@@ -6468,12 +6468,12 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_FILECHECK_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:24: ( '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:26: '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:24: ( '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:26: '; ' ( 'A' .. 'Z' | '_' | '-' )+ ': ' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("; "); 
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:31: ( 'A' .. 'Z' | '_' | '-' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:31: ( 'A' .. 'Z' | '_' | '-' )+
             int cnt16=0;
             loop16:
             do {
@@ -6513,7 +6513,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
             match(": "); 
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:56: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:56: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -6526,7 +6526,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:56: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:56: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -6546,7 +6546,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:72: ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:72: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -6555,9 +6555,9 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:73: ( '\\r' )? '\\n'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:73: ( '\\r' )? '\\n'
                     {
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:73: ( '\\r' )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:73: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -6566,7 +6566,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36515:73: '\\r'
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37941:73: '\\r'
                             {
                             match('\r'); 
 
@@ -6598,11 +6598,11 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:17: ( ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:19: ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:17: ( ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:19: ';' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match(';'); 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:23: (~ ( ( '\\n' | '\\r' ) ) )*
             loop20:
             do {
                 int alt20=2;
@@ -6615,7 +6615,7 @@ public class InternalLLVM_IRLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -6635,7 +6635,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:39: ( ( '\\r' )? '\\n' )?
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:39: ( ( '\\r' )? '\\n' )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -6644,9 +6644,9 @@ public class InternalLLVM_IRLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:40: ( '\\r' )? '\\n'
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:40: ( '\\r' )? '\\n'
                     {
-                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:40: ( '\\r' )?
+                    // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:40: ( '\\r' )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
@@ -6655,7 +6655,7 @@ public class InternalLLVM_IRLexer extends Lexer {
                     }
                     switch (alt21) {
                         case 1 :
-                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36517:40: '\\r'
+                            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37943:40: '\\r'
                             {
                             match('\r'); 
 
@@ -6687,10 +6687,10 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36519:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36519:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37945:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37945:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36519:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37945:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt23=0;
             loop23:
             do {
@@ -6744,8 +6744,8 @@ public class InternalLLVM_IRLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36521:16: ( . )
-            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:36521:18: .
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37947:16: ( . )
+            // ../com.intel.llvm.ireditor.ui/src-gen/com/intel/llvm/ireditor/ui/contentassist/antlr/internal/InternalLLVM_IR.g:37947:18: .
             {
             matchAny(); 
 

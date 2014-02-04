@@ -13,6 +13,5 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_add extends BinaryInstruction
-{
+public interface Instruction_add extends BinaryInstruction {
 } // Instruction_add

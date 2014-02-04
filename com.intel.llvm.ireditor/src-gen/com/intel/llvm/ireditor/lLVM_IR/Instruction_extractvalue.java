@@ -13,6 +13,5 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_extractvalue extends AggregateInstruction
-{
+public interface Instruction_extractvalue extends AggregateInstruction {
 } // Instruction_extractvalue

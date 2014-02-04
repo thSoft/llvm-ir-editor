@@ -115,7 +115,7 @@ import com.intel.llvm.ireditor.lLVM_IR.util.LLVM_IRSwitch;
 public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 	private final ConstantResolver constResolver = new ConstantResolver();
 	private final OnChangeEvictingCache resolvedNamedTypesCache = new OnChangeEvictingCache();
-	
+
 	public static final Map<String, ResolvedType> SIMPLE_TYPES = new HashMap<String, ResolvedType>();
 	public static final ResolvedUnknownType TYPE_UNKNOWN = new ResolvedUnknownType();
 	public static final ResolvedVarargType TYPE_VARARG = new ResolvedVarargType();
@@ -138,7 +138,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 	public static final ResolvedAnyVectorType TYPE_FLOATING_VECTOR = new ResolvedAnyVectorType(TYPE_FLOATING);
 	public static final ResolvedAnyVectorType TYPE_BOOLEAN_VECTOR = new ResolvedAnyVectorType(TYPE_BOOLEAN);
 	public static final ResolvedVoidType TYPE_VOID = new ResolvedVoidType();
-	
+
 	private static final BigInteger MAX_INTEGER_TYPE_SIZE = BigInteger.valueOf((2 << 23)-1);
 	private static final Object RESOLVED_NAMED_TYPES_CACHE_KEY = new Object();
 
@@ -151,17 +151,17 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		SIMPLE_TYPES.put("x86_fp80", new ResolvedFloatingType("half", 80));
 		SIMPLE_TYPES.put("ppc_fp128", new ResolvedFloatingType("half", 128));
 	}
-	
+
 	public ResolvedType resolve(EObject object) {
 		if (object == null) return TYPE_UNKNOWN;
 		ResolvedType result = doSwitch(object);
 		return result == null ? TYPE_UNKNOWN : result;
 	}
-	
+
 	public ResolvedType defaultCase(EObject object) {
 		return TYPE_UNKNOWN;
 	}
-	
+
 	@Override
 	public ResolvedType caseType(Type object) {
 		ResolvedType result = resolve(object.getBaseType());
@@ -171,7 +171,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return result;
 	}
-	
+
 	@Override
 	public ResolvedType caseNonVoidType(NonVoidType object) {
 		ResolvedType result = resolve(object.getBaseType());
@@ -181,17 +181,17 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return result;
 	}
-	
+
 	@Override
 	public ResolvedType caseNonLeftRecursiveType(NonLeftRecursiveType object) {
 		return resolveNonLeftRecursiveType(object.getType(), object.getTypedef());
 	}
-	
+
 	@Override
 	public ResolvedType caseNonLeftRecursiveNonVoidType(NonLeftRecursiveNonVoidType object) {
 		return resolveNonLeftRecursiveType(object.getType(), object.getTypedef());
 	}
-	
+
 	private ResolvedType resolveNonLeftRecursiveType(EObject type, TypeDef typeDef) {
 		return resolve(type != null ? type : typeDef);
 	}
@@ -200,64 +200,64 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 	public ResolvedType caseParameterType(ParameterType object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseIntType(IntType object) {
 		BigInteger bits = atoi(textOf(object).substring(1));
 		if (bits.compareTo(MAX_INTEGER_TYPE_SIZE) >= 0) return TYPE_UNKNOWN;
 		return new ResolvedIntegerType(bits.intValue());
 	}
-	
+
 	@Override
 	public ResolvedFloatingType caseFloatingType(FloatingType object) {
 		return (ResolvedFloatingType) getSimpleType(textOf(object));
 	}
-	
+
 	@Override
 	public ResolvedFloatingType caseX86mmxType(X86mmxType object) {
 		return (ResolvedFloatingType) getSimpleType(textOf(object));
 	}
-	
+
 	@Override
 	public ResolvedVoidType caseVoidType(VoidType object) {
 		return (ResolvedVoidType) getSimpleType(textOf(object));
 	}
-	
+
 	@Override
 	public ResolvedMetadataType caseMetadataType(MetadataType object) {
 		return TYPE_METADATA;
 	}
-	
+
 	@Override
 	public ResolvedType caseMetadataNode(MetadataNode object) {
 		return TYPE_METADATA;
 	}
-	
+
 	@Override
 	public ResolvedType caseMetadataString(MetadataString object) {
 		return TYPE_METADATA;
 	}
-	
+
 	@Override
 	public ResolvedType caseMetadataRef(MetadataRef object) {
 		return TYPE_METADATA;
 	}
-	
+
 	@Override
 	public ResolvedOpaqueType caseOpaqueType(OpaqueType object) {
 		return TYPE_OPAQUE;
 	}
-	
+
 	@Override
 	public ResolvedVectorType caseVectorType(VectorType object) {
 		return new ResolvedVectorType(atoi(object.getSize()).intValue(), resolve(object.getElemType()));
 	}
-	
+
 	@Override
 	public ResolvedArrayType caseArrayType(ArrayType object) {
 		return new ResolvedArrayType(atoi(object.getSize()).intValue(), resolve(object.getElemType()));
 	}
-	
+
 	@Override
 	public ResolvedStructType caseStructType(StructType object) {
 		EList<Type> types = object.getTypes();
@@ -267,11 +267,11 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return new ResolvedStructType(resolvedTypes, object.getPacked() != null, false);
 	}
-	
+
 	@Override
 	public ResolvedNamedType caseTypeDef(TypeDef object) {
 		String name = object.getName();
-		
+
 		Map<String, ResolvedNamedType> resolvedNamedTypes = resolvedNamedTypesCache.get(
 				RESOLVED_NAMED_TYPES_CACHE_KEY, object.eResource(), new Provider<Map<String, ResolvedNamedType>>() {
 					public Map<String, ResolvedNamedType> get() {
@@ -282,57 +282,57 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		// To prevent infinite recursion on recursive types:
 		ResolvedNamedType type = resolvedNamedTypes.get(name);
 		if (type != null) return type;
-		
+
 		// Create a named type, resolve the actual type, and then set the named type to refer to it
 		ResolvedNamedType result = new ResolvedNamedType(name);
 		resolvedNamedTypes.put(name, result);
 		result.setReferredType(resolve(object.getType()));
-		
+
 		return result;
 	}
-	
+
 	@Override
 	public ResolvedType caseTypedValue(TypedValue object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseLocalValueRef(LocalValueRef object) {
 		return resolve(object.getRef());
 	}
-	
+
 	@Override
 	public ResolvedType caseGlobalValueRef(GlobalValueRef object) {
 		if (object.getConstant() != null) return resolve(object.getConstant());
 		if (object.getMetadata() != null) return resolve(object.getMetadata());
 		return null;
 	}
-	
+
 	@Override
 	public ResolvedType caseParameter(Parameter object) {
 		return resolve(object.getType().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseStartingInstruction(StartingInstruction object) {
-		return resolve(object.getInstruction());
+		return resolve(object);
 	}
-	
+
 	@Override
 	public ResolvedType caseNamedMiddleInstruction(NamedMiddleInstruction object) {
-		return resolve(object.getInstruction());
+		return resolve(object);
 	}
-	
+
 	@Override
 	public ResolvedType caseNamedTerminatorInstruction(NamedTerminatorInstruction object) {
-		return resolve(object.getInstruction());
+		return resolve(object);
 	}
-	
+
 	@Override
 	public ResolvedType caseAlias(Alias object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedPointerType caseFunctionHeader(FunctionHeader object) {
 		ResolvedType rettype = resolve(object.getRettype());
@@ -343,12 +343,12 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		if (object.getParameters().getVararg() != null) paramTypes.add(TYPE_VARARG);
 		return new ResolvedPointerType(new ResolvedFunctionType(rettype, paramTypes), BigInteger.ZERO);
 	}
-	
+
 	@Override
 	public ResolvedType caseTypedConstant(TypedConstant object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseSimpleConstant(SimpleConstant object) {
 		String content = textOf(object);
@@ -366,29 +366,29 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return null;
 	}
-	
+
 	@Override
 	public ResolvedType caseZeroInitializer(ZeroInitializer object) {
 		return TYPE_ANY;
 	}
-	
+
 	@Override
 	public ResolvedType caseUndef(Undef object) {
 		return TYPE_ANY;
 	}
-	
+
 	@Override
 	public ResolvedVectorType caseVectorConstant(VectorConstant object) {
 		EList<TypedConstant> values = object.getList().getTypedConstants();
 		return new ResolvedVectorType(BigInteger.valueOf(values.size()).intValue(), resolve(values.get(0).getType()));
 	}
-	
+
 	@Override
 	public ResolvedArrayType caseArrayConstant(ArrayConstant object) {
 		EList<TypedConstant> values = object.getList().getTypedConstants();
 		return new ResolvedArrayType(BigInteger.valueOf(values.size()).intValue(), resolve(values.get(0).getType()));
 	}
-	
+
 	@Override
 	public ResolvedStructType caseStructureConstant(StructureConstant object) {
 		EList<TypedConstant> values = object.getList().getTypedConstants();
@@ -398,37 +398,37 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return new ResolvedStructType(resolvedTypes, object.getPacked() != null, true);
 	}
-	
+
 	@Override
 	public ResolvedType caseBinaryInstruction(BinaryInstruction object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseBitwiseBinaryInstruction(BitwiseBinaryInstruction object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseConversionInstruction(ConversionInstruction object) {
 		return resolve(object.getTargetType());
 	}
-	
+
 	@Override
 	public ResolvedPointerType caseInstruction_alloca(Instruction_alloca object) {
 		return new ResolvedPointerType(resolve(object.getType()), BigInteger.ZERO);
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_atomicrmw(Instruction_atomicrmw object) {
 		return resolve(object.getArgument().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_phi(Instruction_phi object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_select(Instruction_select object) {
 		ResolvedType conditionType = resolve(object.getCondition());
@@ -438,22 +438,22 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return resolve(object.getValue1().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_load(Instruction_load object) {
 		return resolve(object.getPointer().getType()).getContainedType(0);
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_extractelement(Instruction_extractelement object) {
 		return resolve(object.getVector().getType()).getContainedType(0);
 	}
-	
+
 	@Override
 	public ResolvedVectorType caseInstruction_insertelement(Instruction_insertelement object) {
 		return resolve(object.getVector().getType()).asVector();
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_shufflevector(Instruction_shufflevector object) {
 		ResolvedVectorType mask = resolve(object.getMask().getType()).asVector();
@@ -461,16 +461,16 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		if (element == null) return null;
 		return new ResolvedVectorType(mask.getSize(), element);
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_getelementptr(Instruction_getelementptr object) {
 		return resolveGep(object.getBase().getType(), object.getIndices());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_extractvalue(Instruction_extractvalue object) {
 		ResolvedType result = resolve(object.getAggregate().getType());
-		
+
 		for (Constant index : object.getIndices()) {
 			Integer indexValue = constResolver.getInteger(index);
 			if (indexValue == null) {
@@ -480,20 +480,20 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 			result = result.getContainedType(indexValue);
 			if (result == null) return null;
 		}
-		
+
 		return result;
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_insertvalue(Instruction_insertvalue object) {
 		return resolve(object.getAggregate().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_cmpxchg(Instruction_cmpxchg object) {
 		return resolve(object.getComparedWith().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_icmp(Instruction_icmp object) {
 		ResolvedType type = resolve(object.getType());
@@ -502,7 +502,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return TYPE_BOOLEAN;
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_fcmp(Instruction_fcmp object) {
 		ResolvedType type = resolve(object.getType());
@@ -511,27 +511,27 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return TYPE_BOOLEAN;
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_va_arg(Instruction_va_arg object) {
 		return resolve(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_landingpad(Instruction_landingpad object) {
 		return resolve(object.getResultType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_call_nonVoid(Instruction_call_nonVoid object) {
 		return resolveCall(object.getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseInstruction_invoke_nonVoid(Instruction_invoke_nonVoid object) {
 		return resolveCall(object.getType());
 	};
-	
+
 	private ResolvedType resolveCall(NonVoidType type) {
 		ResolvedType t = resolve(type);
 		if (t.isPointer() && t.getContainedType(0).isFunction()) {
@@ -539,18 +539,18 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return t;
 	}
-	
+
 	@Override
 	public ResolvedPointerType caseGlobalVariable(GlobalVariable object) {
 		return new ResolvedPointerType(resolve(object.getType()),
 				atoi(object.getAddrspace().getValue()));
 	}
-	
+
 	@Override
 	public ResolvedType caseConstantExpression_binary(ConstantExpression_binary object) {
 		return resolve(object.getOp1().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseConstantExpression_compare(ConstantExpression_compare object) {
 		ResolvedType type = resolve(object.getOp1().getType());
@@ -559,12 +559,12 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return TYPE_BOOLEAN;
 	}
-	
+
 	@Override
 	public ResolvedType caseConstantExpression_convert(ConstantExpression_convert object) {
 		return resolve(object.getTargetType());
 	}
-	
+
 	@Override
 	public ResolvedType caseConstantExpression_select(ConstantExpression_select object) {
 		ResolvedType conditionType = resolve(object.getCondition());
@@ -574,36 +574,36 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return resolve(object.getOp1().getType());
 	}
-	
+
 	@Override
 	public ResolvedType caseConstantExpression_getelementptr(ConstantExpression_getelementptr object) {
 		return resolveGep(object.getConstantType(), object.getIndices());
 	}
-	
+
 	@Override
 	public ResolvedType caseConstantExpression(ConstantExpression object) {
 		// TODO remove this once all constant expression types are handled
 		return TYPE_ANY;
 	}
-	
+
 	@Override
 	public ResolvedType caseConstant(Constant object) {
 		return resolve(object.getRef());
 	}
-	
+
 	private ResolvedType resolveGep(Type baseType, EList<? extends EObject> indices) {
 		ResolvedType result = resolve(baseType);
 		if (result.isVector()) {
 			return result;
 		}
-		
+
 		if (result.isPointer() == false) {
 			// That's not legal
 			return TYPE_UNKNOWN;
 		}
-		
+
 		BigInteger addrSpace = result.asPointer().getAddrSpace();
-		
+
 		for (EObject index : indices) {
 			Integer indexValue = 0;
 			if (result.isStruct()) {
@@ -616,14 +616,14 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 			result = result.getContainedType(indexValue);
 			if (result == null) return null;
 		}
-		
+
 		return new ResolvedPointerType(result, addrSpace);
 	}
-	
+
 	private String textOf(EObject object) {
 		return NodeModelUtils.getTokenText(NodeModelUtils.getNode(object));
 	}
-	
+
 	private BigInteger atoi(String s) {
 		try {
 			return new BigInteger(s);
@@ -631,7 +631,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 			return null;
 		}
 	}
-	
+
 	private ResolvedType buildTypeFromSuffix(ResolvedType rettype, TypeSuffix suffix) {
 		List<ResolvedType> paramTypes = new LinkedList<ResolvedType>();
 		for (ParameterType t : suffix.getContainedTypes()) {
@@ -641,7 +641,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		ResolvedType result = new ResolvedFunctionType(rettype, paramTypes);
 		return buildPointersTo(result, suffix.getStars());
 	}
-	
+
 	private ResolvedType buildPointersTo(ResolvedType base, Iterable<Star> stars) {
 		ResolvedType result = base;
 		for (Star star : stars) {
@@ -651,7 +651,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 		}
 		return result;
 	}
-	
+
 	private ResolvedType getSimpleType(String text) {
 		return SIMPLE_TYPES.get(text);
 	}

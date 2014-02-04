@@ -2815,77 +2815,59 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class StartingInstructionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StartingInstruction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cInstructionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInstructionInstruction_phiParserRuleCall_1_0 = (RuleCall)cInstructionAssignment_1.eContents().get(0);
-		private final Assignment cMetadataAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMetadataMetadataSuffixParserRuleCall_2_0 = (RuleCall)cMetadataAssignment_2.eContents().get(0);
+		private final RuleCall cInstruction_phiParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cMetadataAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cMetadataMetadataSuffixParserRuleCall_1_0 = (RuleCall)cMetadataAssignment_1.eContents().get(0);
 		
 		//StartingInstruction:
-		//	name=LocalName instruction=Instruction_phi metadata+=MetadataSuffix*;
+		//	Instruction_phi metadata+=MetadataSuffix*;
 		public ParserRule getRule() { return rule; }
 
-		//name=LocalName instruction=Instruction_phi metadata+=MetadataSuffix*
+		//Instruction_phi metadata+=MetadataSuffix*
 		public Group getGroup() { return cGroup; }
 
-		//name=LocalName
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//LocalName
-		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
-
-		//instruction=Instruction_phi
-		public Assignment getInstructionAssignment_1() { return cInstructionAssignment_1; }
-
 		//Instruction_phi
-		public RuleCall getInstructionInstruction_phiParserRuleCall_1_0() { return cInstructionInstruction_phiParserRuleCall_1_0; }
+		public RuleCall getInstruction_phiParserRuleCall_0() { return cInstruction_phiParserRuleCall_0; }
 
 		//metadata+=MetadataSuffix*
-		public Assignment getMetadataAssignment_2() { return cMetadataAssignment_2; }
+		public Assignment getMetadataAssignment_1() { return cMetadataAssignment_1; }
 
 		//MetadataSuffix
-		public RuleCall getMetadataMetadataSuffixParserRuleCall_2_0() { return cMetadataMetadataSuffixParserRuleCall_2_0; }
+		public RuleCall getMetadataMetadataSuffixParserRuleCall_1_0() { return cMetadataMetadataSuffixParserRuleCall_1_0; }
 	}
 
 	public class MiddleInstructionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MiddleInstruction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cInstructionAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cInstructionAlternatives_0_0 = (Alternatives)cInstructionAssignment_0.eContents().get(0);
-		private final RuleCall cInstructionNamedMiddleInstructionParserRuleCall_0_0_0 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(0);
-		private final RuleCall cInstructionInstruction_storeParserRuleCall_0_0_1 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(1);
-		private final RuleCall cInstructionInstruction_fenceParserRuleCall_0_0_2 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(2);
-		private final RuleCall cInstructionInstruction_call_voidParserRuleCall_0_0_3 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(3);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cNamedMiddleInstructionParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final RuleCall cInstruction_storeParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final RuleCall cInstruction_fenceParserRuleCall_0_2 = (RuleCall)cAlternatives_0.eContents().get(2);
+		private final RuleCall cInstruction_call_voidParserRuleCall_0_3 = (RuleCall)cAlternatives_0.eContents().get(3);
 		private final Assignment cMetadataAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cMetadataMetadataSuffixParserRuleCall_1_0 = (RuleCall)cMetadataAssignment_1.eContents().get(0);
 		
 		//MiddleInstruction:
-		//	instruction=(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void)
-		//	metadata+=MetadataSuffix*;
+		//	(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void) metadata+=MetadataSuffix*;
 		public ParserRule getRule() { return rule; }
 
-		//instruction=(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void)
-		//metadata+=MetadataSuffix*
+		//(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void) metadata+=MetadataSuffix*
 		public Group getGroup() { return cGroup; }
 
-		//instruction=(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void)
-		public Assignment getInstructionAssignment_0() { return cInstructionAssignment_0; }
-
 		//NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void
-		public Alternatives getInstructionAlternatives_0_0() { return cInstructionAlternatives_0_0; }
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//NamedMiddleInstruction
-		public RuleCall getInstructionNamedMiddleInstructionParserRuleCall_0_0_0() { return cInstructionNamedMiddleInstructionParserRuleCall_0_0_0; }
+		public RuleCall getNamedMiddleInstructionParserRuleCall_0_0() { return cNamedMiddleInstructionParserRuleCall_0_0; }
 
 		//Instruction_store
-		public RuleCall getInstructionInstruction_storeParserRuleCall_0_0_1() { return cInstructionInstruction_storeParserRuleCall_0_0_1; }
+		public RuleCall getInstruction_storeParserRuleCall_0_1() { return cInstruction_storeParserRuleCall_0_1; }
 
 		//Instruction_fence
-		public RuleCall getInstructionInstruction_fenceParserRuleCall_0_0_2() { return cInstructionInstruction_fenceParserRuleCall_0_0_2; }
+		public RuleCall getInstruction_fenceParserRuleCall_0_2() { return cInstruction_fenceParserRuleCall_0_2; }
 
 		//Instruction_call_void
-		public RuleCall getInstructionInstruction_call_voidParserRuleCall_0_0_3() { return cInstructionInstruction_call_voidParserRuleCall_0_0_3; }
+		public RuleCall getInstruction_call_voidParserRuleCall_0_3() { return cInstruction_call_voidParserRuleCall_0_3; }
 
 		//metadata+=MetadataSuffix*
 		public Assignment getMetadataAssignment_1() { return cMetadataAssignment_1; }
@@ -2896,86 +2878,66 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class NamedMiddleInstructionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NamedMiddleInstruction");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cInstructionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Alternatives cInstructionAlternatives_1_0 = (Alternatives)cInstructionAssignment_1.eContents().get(0);
-		private final RuleCall cInstructionBinaryInstructionParserRuleCall_1_0_0 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(0);
-		private final RuleCall cInstructionBitwiseBinaryInstructionParserRuleCall_1_0_1 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(1);
-		private final RuleCall cInstructionVectorInstructionsParserRuleCall_1_0_2 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(2);
-		private final RuleCall cInstructionAggregateInstructionParserRuleCall_1_0_3 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(3);
-		private final RuleCall cInstructionInstruction_allocaParserRuleCall_1_0_4 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(4);
-		private final RuleCall cInstructionInstruction_loadParserRuleCall_1_0_5 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(5);
-		private final RuleCall cInstructionInstruction_getelementptrParserRuleCall_1_0_6 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(6);
-		private final RuleCall cInstructionInstruction_cmpxchgParserRuleCall_1_0_7 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(7);
-		private final RuleCall cInstructionInstruction_atomicrmwParserRuleCall_1_0_8 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(8);
-		private final RuleCall cInstructionConversionInstructionParserRuleCall_1_0_9 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(9);
-		private final RuleCall cInstructionOtherInstructionParserRuleCall_1_0_10 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(10);
-		private final RuleCall cInstructionInstruction_call_nonVoidParserRuleCall_1_0_11 = (RuleCall)cInstructionAlternatives_1_0.eContents().get(11);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cBinaryInstructionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cBitwiseBinaryInstructionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cVectorInstructionsParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cAggregateInstructionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cInstruction_allocaParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cInstruction_loadParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cInstruction_getelementptrParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cInstruction_cmpxchgParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cInstruction_atomicrmwParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cConversionInstructionParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cOtherInstructionParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cInstruction_call_nonVoidParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
 		
 		//NamedMiddleInstruction:
-		//	name=LocalName instruction=(BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction |
-		//	Instruction_alloca | Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw |
-		//	ConversionInstruction | OtherInstruction | Instruction_call_nonVoid);
+		//	BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction | Instruction_alloca |
+		//	Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw | ConversionInstruction |
+		//	OtherInstruction | Instruction_call_nonVoid;
 		public ParserRule getRule() { return rule; }
-
-		//name=LocalName instruction=(BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction |
-		//Instruction_alloca | Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw |
-		//ConversionInstruction | OtherInstruction | Instruction_call_nonVoid)
-		public Group getGroup() { return cGroup; }
-
-		//name=LocalName
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//LocalName
-		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
-
-		//instruction=(BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction |
-		//Instruction_alloca | Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw |
-		//ConversionInstruction | OtherInstruction | Instruction_call_nonVoid)
-		public Assignment getInstructionAssignment_1() { return cInstructionAssignment_1; }
 
 		//BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction | Instruction_alloca |
 		//Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw | ConversionInstruction |
 		//OtherInstruction | Instruction_call_nonVoid
-		public Alternatives getInstructionAlternatives_1_0() { return cInstructionAlternatives_1_0; }
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//BinaryInstruction
-		public RuleCall getInstructionBinaryInstructionParserRuleCall_1_0_0() { return cInstructionBinaryInstructionParserRuleCall_1_0_0; }
+		public RuleCall getBinaryInstructionParserRuleCall_0() { return cBinaryInstructionParserRuleCall_0; }
 
 		//BitwiseBinaryInstruction
-		public RuleCall getInstructionBitwiseBinaryInstructionParserRuleCall_1_0_1() { return cInstructionBitwiseBinaryInstructionParserRuleCall_1_0_1; }
+		public RuleCall getBitwiseBinaryInstructionParserRuleCall_1() { return cBitwiseBinaryInstructionParserRuleCall_1; }
 
 		//VectorInstructions
-		public RuleCall getInstructionVectorInstructionsParserRuleCall_1_0_2() { return cInstructionVectorInstructionsParserRuleCall_1_0_2; }
+		public RuleCall getVectorInstructionsParserRuleCall_2() { return cVectorInstructionsParserRuleCall_2; }
 
 		//AggregateInstruction
-		public RuleCall getInstructionAggregateInstructionParserRuleCall_1_0_3() { return cInstructionAggregateInstructionParserRuleCall_1_0_3; }
+		public RuleCall getAggregateInstructionParserRuleCall_3() { return cAggregateInstructionParserRuleCall_3; }
 
 		//Instruction_alloca
-		public RuleCall getInstructionInstruction_allocaParserRuleCall_1_0_4() { return cInstructionInstruction_allocaParserRuleCall_1_0_4; }
+		public RuleCall getInstruction_allocaParserRuleCall_4() { return cInstruction_allocaParserRuleCall_4; }
 
 		//Instruction_load
-		public RuleCall getInstructionInstruction_loadParserRuleCall_1_0_5() { return cInstructionInstruction_loadParserRuleCall_1_0_5; }
+		public RuleCall getInstruction_loadParserRuleCall_5() { return cInstruction_loadParserRuleCall_5; }
 
 		//Instruction_getelementptr
-		public RuleCall getInstructionInstruction_getelementptrParserRuleCall_1_0_6() { return cInstructionInstruction_getelementptrParserRuleCall_1_0_6; }
+		public RuleCall getInstruction_getelementptrParserRuleCall_6() { return cInstruction_getelementptrParserRuleCall_6; }
 
 		//Instruction_cmpxchg
-		public RuleCall getInstructionInstruction_cmpxchgParserRuleCall_1_0_7() { return cInstructionInstruction_cmpxchgParserRuleCall_1_0_7; }
+		public RuleCall getInstruction_cmpxchgParserRuleCall_7() { return cInstruction_cmpxchgParserRuleCall_7; }
 
 		//Instruction_atomicrmw
-		public RuleCall getInstructionInstruction_atomicrmwParserRuleCall_1_0_8() { return cInstructionInstruction_atomicrmwParserRuleCall_1_0_8; }
+		public RuleCall getInstruction_atomicrmwParserRuleCall_8() { return cInstruction_atomicrmwParserRuleCall_8; }
 
 		//ConversionInstruction
-		public RuleCall getInstructionConversionInstructionParserRuleCall_1_0_9() { return cInstructionConversionInstructionParserRuleCall_1_0_9; }
+		public RuleCall getConversionInstructionParserRuleCall_9() { return cConversionInstructionParserRuleCall_9; }
 
 		//OtherInstruction
-		public RuleCall getInstructionOtherInstructionParserRuleCall_1_0_10() { return cInstructionOtherInstructionParserRuleCall_1_0_10; }
+		public RuleCall getOtherInstructionParserRuleCall_10() { return cOtherInstructionParserRuleCall_10; }
 
 		//Instruction_call_nonVoid
-		public RuleCall getInstructionInstruction_call_nonVoidParserRuleCall_1_0_11() { return cInstructionInstruction_call_nonVoidParserRuleCall_1_0_11; }
+		public RuleCall getInstruction_call_nonVoidParserRuleCall_11() { return cInstruction_call_nonVoidParserRuleCall_11; }
 	}
 
 	public class ParamNameElements extends AbstractParserRuleElementFinder {
@@ -3048,60 +3010,54 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class TerminatorInstructionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TerminatorInstruction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cInstructionAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cInstructionAlternatives_0_0 = (Alternatives)cInstructionAssignment_0.eContents().get(0);
-		private final RuleCall cInstructionNamedTerminatorInstructionParserRuleCall_0_0_0 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(0);
-		private final RuleCall cInstructionInstruction_retParserRuleCall_0_0_1 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(1);
-		private final RuleCall cInstructionInstruction_brParserRuleCall_0_0_2 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(2);
-		private final RuleCall cInstructionInstruction_switchParserRuleCall_0_0_3 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(3);
-		private final RuleCall cInstructionInstruction_indirectbrParserRuleCall_0_0_4 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(4);
-		private final RuleCall cInstructionInstruction_resumeParserRuleCall_0_0_5 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(5);
-		private final RuleCall cInstructionInstruction_unreachableParserRuleCall_0_0_6 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(6);
-		private final RuleCall cInstructionInstruction_invoke_voidParserRuleCall_0_0_7 = (RuleCall)cInstructionAlternatives_0_0.eContents().get(7);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cNamedTerminatorInstructionParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final RuleCall cInstruction_retParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final RuleCall cInstruction_brParserRuleCall_0_2 = (RuleCall)cAlternatives_0.eContents().get(2);
+		private final RuleCall cInstruction_switchParserRuleCall_0_3 = (RuleCall)cAlternatives_0.eContents().get(3);
+		private final RuleCall cInstruction_indirectbrParserRuleCall_0_4 = (RuleCall)cAlternatives_0.eContents().get(4);
+		private final RuleCall cInstruction_resumeParserRuleCall_0_5 = (RuleCall)cAlternatives_0.eContents().get(5);
+		private final RuleCall cInstruction_unreachableParserRuleCall_0_6 = (RuleCall)cAlternatives_0.eContents().get(6);
+		private final RuleCall cInstruction_invoke_voidParserRuleCall_0_7 = (RuleCall)cAlternatives_0.eContents().get(7);
 		private final Assignment cMetadataAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cMetadataMetadataSuffixParserRuleCall_1_0 = (RuleCall)cMetadataAssignment_1.eContents().get(0);
 		
 		//TerminatorInstruction:
-		//	instruction=(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch |
-		//	Instruction_indirectbr | Instruction_resume | Instruction_unreachable | Instruction_invoke_void)
-		//	metadata+=MetadataSuffix*;
+		//	(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch | Instruction_indirectbr |
+		//	Instruction_resume | Instruction_unreachable | Instruction_invoke_void) metadata+=MetadataSuffix*;
 		public ParserRule getRule() { return rule; }
 
-		//instruction=(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch | Instruction_indirectbr
-		//| Instruction_resume | Instruction_unreachable | Instruction_invoke_void) metadata+=MetadataSuffix*
+		//(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch | Instruction_indirectbr |
+		//Instruction_resume | Instruction_unreachable | Instruction_invoke_void) metadata+=MetadataSuffix*
 		public Group getGroup() { return cGroup; }
-
-		//instruction=(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch | Instruction_indirectbr
-		//| Instruction_resume | Instruction_unreachable | Instruction_invoke_void)
-		public Assignment getInstructionAssignment_0() { return cInstructionAssignment_0; }
 
 		//NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch | Instruction_indirectbr |
 		//Instruction_resume | Instruction_unreachable | Instruction_invoke_void
-		public Alternatives getInstructionAlternatives_0_0() { return cInstructionAlternatives_0_0; }
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//NamedTerminatorInstruction
-		public RuleCall getInstructionNamedTerminatorInstructionParserRuleCall_0_0_0() { return cInstructionNamedTerminatorInstructionParserRuleCall_0_0_0; }
+		public RuleCall getNamedTerminatorInstructionParserRuleCall_0_0() { return cNamedTerminatorInstructionParserRuleCall_0_0; }
 
 		//Instruction_ret
-		public RuleCall getInstructionInstruction_retParserRuleCall_0_0_1() { return cInstructionInstruction_retParserRuleCall_0_0_1; }
+		public RuleCall getInstruction_retParserRuleCall_0_1() { return cInstruction_retParserRuleCall_0_1; }
 
 		//Instruction_br
-		public RuleCall getInstructionInstruction_brParserRuleCall_0_0_2() { return cInstructionInstruction_brParserRuleCall_0_0_2; }
+		public RuleCall getInstruction_brParserRuleCall_0_2() { return cInstruction_brParserRuleCall_0_2; }
 
 		//Instruction_switch
-		public RuleCall getInstructionInstruction_switchParserRuleCall_0_0_3() { return cInstructionInstruction_switchParserRuleCall_0_0_3; }
+		public RuleCall getInstruction_switchParserRuleCall_0_3() { return cInstruction_switchParserRuleCall_0_3; }
 
 		//Instruction_indirectbr
-		public RuleCall getInstructionInstruction_indirectbrParserRuleCall_0_0_4() { return cInstructionInstruction_indirectbrParserRuleCall_0_0_4; }
+		public RuleCall getInstruction_indirectbrParserRuleCall_0_4() { return cInstruction_indirectbrParserRuleCall_0_4; }
 
 		//Instruction_resume
-		public RuleCall getInstructionInstruction_resumeParserRuleCall_0_0_5() { return cInstructionInstruction_resumeParserRuleCall_0_0_5; }
+		public RuleCall getInstruction_resumeParserRuleCall_0_5() { return cInstruction_resumeParserRuleCall_0_5; }
 
 		//Instruction_unreachable
-		public RuleCall getInstructionInstruction_unreachableParserRuleCall_0_0_6() { return cInstructionInstruction_unreachableParserRuleCall_0_0_6; }
+		public RuleCall getInstruction_unreachableParserRuleCall_0_6() { return cInstruction_unreachableParserRuleCall_0_6; }
 
 		//Instruction_invoke_void
-		public RuleCall getInstructionInstruction_invoke_voidParserRuleCall_0_0_7() { return cInstructionInstruction_invoke_voidParserRuleCall_0_0_7; }
+		public RuleCall getInstruction_invoke_voidParserRuleCall_0_7() { return cInstruction_invoke_voidParserRuleCall_0_7; }
 
 		//metadata+=MetadataSuffix*
 		public Assignment getMetadataAssignment_1() { return cMetadataAssignment_1; }
@@ -3112,30 +3068,14 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class NamedTerminatorInstructionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NamedTerminatorInstruction");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cInstructionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInstructionInstruction_invoke_nonVoidParserRuleCall_1_0 = (RuleCall)cInstructionAssignment_1.eContents().get(0);
+		private final RuleCall cInstruction_invoke_nonVoidParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
 		//NamedTerminatorInstruction:
-		//	name=LocalName instruction=Instruction_invoke_nonVoid;
+		//	Instruction_invoke_nonVoid;
 		public ParserRule getRule() { return rule; }
 
-		//name=LocalName instruction=Instruction_invoke_nonVoid
-		public Group getGroup() { return cGroup; }
-
-		//name=LocalName
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//LocalName
-		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
-
-		//instruction=Instruction_invoke_nonVoid
-		public Assignment getInstructionAssignment_1() { return cInstructionAssignment_1; }
-
 		//Instruction_invoke_nonVoid
-		public RuleCall getInstructionInstruction_invoke_nonVoidParserRuleCall_1_0() { return cInstructionInstruction_invoke_nonVoidParserRuleCall_1_0; }
+		public RuleCall getInstruction_invoke_nonVoidParserRuleCall() { return cInstruction_invoke_nonVoidParserRuleCall; }
 	}
 
 	public class Instruction_retElements extends AbstractParserRuleElementFinder {
@@ -3455,7 +3395,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cExceptionLabelAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cExceptionLabelBasicBlockRefParserRuleCall_12_0 = (RuleCall)cExceptionLabelAssignment_12.eContents().get(0);
 		
-		//// <result> = invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
+		//// invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
 		////                 to label <normal label> unwind label <exception label>
 		//// Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
 		//// behaves just like in a call instruction, so it's possible to provide return type only.
@@ -3544,115 +3484,125 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_invoke_nonVoidElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_invoke_nonVoid");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeInvokeKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cCconvAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCconvCConvParserRuleCall_1_0 = (RuleCall)cCconvAssignment_1.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
-		private final Keyword cZeroextKeyword_2_0 = (Keyword)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cSignextKeyword_2_1 = (Keyword)cUnorderedGroup_2.eContents().get(1);
-		private final Keyword cInregKeyword_2_2 = (Keyword)cUnorderedGroup_2.eContents().get(2);
-		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cTypeNonVoidTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
-		private final Assignment cCalleeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCalleeCalleeParserRuleCall_4_0 = (RuleCall)cCalleeAssignment_4.eContents().get(0);
-		private final Assignment cArgsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cArgsArgListParserRuleCall_5_0 = (RuleCall)cArgsAssignment_5.eContents().get(0);
-		private final Assignment cAttributesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cAttributesFunctionAttributesParserRuleCall_6_0 = (RuleCall)cAttributesAssignment_6.eContents().get(0);
-		private final Keyword cToKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cLabelKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cToLabelAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cToLabelBasicBlockRefParserRuleCall_9_0 = (RuleCall)cToLabelAssignment_9.eContents().get(0);
-		private final Keyword cUnwindKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Keyword cLabelKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cExceptionLabelAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cExceptionLabelBasicBlockRefParserRuleCall_12_0 = (RuleCall)cExceptionLabelAssignment_12.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeInvokeKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cCconvAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCconvCConvParserRuleCall_2_0 = (RuleCall)cCconvAssignment_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
+		private final Keyword cZeroextKeyword_3_0 = (Keyword)cUnorderedGroup_3.eContents().get(0);
+		private final Keyword cSignextKeyword_3_1 = (Keyword)cUnorderedGroup_3.eContents().get(1);
+		private final Keyword cInregKeyword_3_2 = (Keyword)cUnorderedGroup_3.eContents().get(2);
+		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTypeNonVoidTypeParserRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final Assignment cCalleeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cCalleeCalleeParserRuleCall_5_0 = (RuleCall)cCalleeAssignment_5.eContents().get(0);
+		private final Assignment cArgsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cArgsArgListParserRuleCall_6_0 = (RuleCall)cArgsAssignment_6.eContents().get(0);
+		private final Assignment cAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cAttributesFunctionAttributesParserRuleCall_7_0 = (RuleCall)cAttributesAssignment_7.eContents().get(0);
+		private final Keyword cToKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cLabelKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cToLabelAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cToLabelBasicBlockRefParserRuleCall_10_0 = (RuleCall)cToLabelAssignment_10.eContents().get(0);
+		private final Keyword cUnwindKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cLabelKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Assignment cExceptionLabelAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cExceptionLabelBasicBlockRefParserRuleCall_13_0 = (RuleCall)cExceptionLabelAssignment_13.eContents().get(0);
 		
 		//// <result> = invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
 		////                 to label <normal label> unwind label <exception label>
 		//// Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
 		//// behaves just like in a call instruction, so it's possible to provide return type only.
 		//Instruction_invoke_nonVoid:
-		//	opcode="invoke" cconv=CConv? ("zeroext"? & "signext"? & "inreg"?) type=NonVoidType callee=Callee args=ArgList
-		//	attributes=FunctionAttributes? "to" "label" toLabel=BasicBlockRef "unwind" "label" exceptionLabel=BasicBlockRef;
+		//	name=LocalName opcode="invoke" cconv=CConv? ("zeroext"? & "signext"? & "inreg"?) type=NonVoidType callee=Callee
+		//	args=ArgList attributes=FunctionAttributes? "to" "label" toLabel=BasicBlockRef "unwind" "label"
+		//	exceptionLabel=BasicBlockRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="invoke" cconv=CConv? ("zeroext"? & "signext"? & "inreg"?) type=NonVoidType callee=Callee args=ArgList
-		//attributes=FunctionAttributes? "to" "label" toLabel=BasicBlockRef "unwind" "label" exceptionLabel=BasicBlockRef
+		//name=LocalName opcode="invoke" cconv=CConv? ("zeroext"? & "signext"? & "inreg"?) type=NonVoidType callee=Callee
+		//args=ArgList attributes=FunctionAttributes? "to" "label" toLabel=BasicBlockRef "unwind" "label"
+		//exceptionLabel=BasicBlockRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="invoke"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"invoke"
-		public Keyword getOpcodeInvokeKeyword_0_0() { return cOpcodeInvokeKeyword_0_0; }
+		public Keyword getOpcodeInvokeKeyword_1_0() { return cOpcodeInvokeKeyword_1_0; }
 
 		//cconv=CConv?
-		public Assignment getCconvAssignment_1() { return cCconvAssignment_1; }
+		public Assignment getCconvAssignment_2() { return cCconvAssignment_2; }
 
 		//CConv
-		public RuleCall getCconvCConvParserRuleCall_1_0() { return cCconvCConvParserRuleCall_1_0; }
+		public RuleCall getCconvCConvParserRuleCall_2_0() { return cCconvCConvParserRuleCall_2_0; }
 
 		//"zeroext"? & "signext"? & "inreg"?
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
+		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 
 		//"zeroext"?
-		public Keyword getZeroextKeyword_2_0() { return cZeroextKeyword_2_0; }
+		public Keyword getZeroextKeyword_3_0() { return cZeroextKeyword_3_0; }
 
 		//"signext"?
-		public Keyword getSignextKeyword_2_1() { return cSignextKeyword_2_1; }
+		public Keyword getSignextKeyword_3_1() { return cSignextKeyword_3_1; }
 
 		//"inreg"?
-		public Keyword getInregKeyword_2_2() { return cInregKeyword_2_2; }
+		public Keyword getInregKeyword_3_2() { return cInregKeyword_3_2; }
 
 		//type=NonVoidType
-		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
 
 		//NonVoidType
-		public RuleCall getTypeNonVoidTypeParserRuleCall_3_0() { return cTypeNonVoidTypeParserRuleCall_3_0; }
+		public RuleCall getTypeNonVoidTypeParserRuleCall_4_0() { return cTypeNonVoidTypeParserRuleCall_4_0; }
 
 		//callee=Callee
-		public Assignment getCalleeAssignment_4() { return cCalleeAssignment_4; }
+		public Assignment getCalleeAssignment_5() { return cCalleeAssignment_5; }
 
 		//Callee
-		public RuleCall getCalleeCalleeParserRuleCall_4_0() { return cCalleeCalleeParserRuleCall_4_0; }
+		public RuleCall getCalleeCalleeParserRuleCall_5_0() { return cCalleeCalleeParserRuleCall_5_0; }
 
 		//args=ArgList
-		public Assignment getArgsAssignment_5() { return cArgsAssignment_5; }
+		public Assignment getArgsAssignment_6() { return cArgsAssignment_6; }
 
 		//ArgList
-		public RuleCall getArgsArgListParserRuleCall_5_0() { return cArgsArgListParserRuleCall_5_0; }
+		public RuleCall getArgsArgListParserRuleCall_6_0() { return cArgsArgListParserRuleCall_6_0; }
 
 		//attributes=FunctionAttributes?
-		public Assignment getAttributesAssignment_6() { return cAttributesAssignment_6; }
+		public Assignment getAttributesAssignment_7() { return cAttributesAssignment_7; }
 
 		//FunctionAttributes
-		public RuleCall getAttributesFunctionAttributesParserRuleCall_6_0() { return cAttributesFunctionAttributesParserRuleCall_6_0; }
+		public RuleCall getAttributesFunctionAttributesParserRuleCall_7_0() { return cAttributesFunctionAttributesParserRuleCall_7_0; }
 
 		//"to"
-		public Keyword getToKeyword_7() { return cToKeyword_7; }
+		public Keyword getToKeyword_8() { return cToKeyword_8; }
 
 		//"label"
-		public Keyword getLabelKeyword_8() { return cLabelKeyword_8; }
+		public Keyword getLabelKeyword_9() { return cLabelKeyword_9; }
 
 		//toLabel=BasicBlockRef
-		public Assignment getToLabelAssignment_9() { return cToLabelAssignment_9; }
+		public Assignment getToLabelAssignment_10() { return cToLabelAssignment_10; }
 
 		//BasicBlockRef
-		public RuleCall getToLabelBasicBlockRefParserRuleCall_9_0() { return cToLabelBasicBlockRefParserRuleCall_9_0; }
+		public RuleCall getToLabelBasicBlockRefParserRuleCall_10_0() { return cToLabelBasicBlockRefParserRuleCall_10_0; }
 
 		//"unwind"
-		public Keyword getUnwindKeyword_10() { return cUnwindKeyword_10; }
+		public Keyword getUnwindKeyword_11() { return cUnwindKeyword_11; }
 
 		//"label"
-		public Keyword getLabelKeyword_11() { return cLabelKeyword_11; }
+		public Keyword getLabelKeyword_12() { return cLabelKeyword_12; }
 
 		//exceptionLabel=BasicBlockRef
-		public Assignment getExceptionLabelAssignment_12() { return cExceptionLabelAssignment_12; }
+		public Assignment getExceptionLabelAssignment_13() { return cExceptionLabelAssignment_13; }
 
 		//BasicBlockRef
-		public RuleCall getExceptionLabelBasicBlockRefParserRuleCall_12_0() { return cExceptionLabelBasicBlockRefParserRuleCall_12_0; }
+		public RuleCall getExceptionLabelBasicBlockRefParserRuleCall_13_0() { return cExceptionLabelBasicBlockRefParserRuleCall_13_0; }
 	}
 
 	public class Instruction_resumeElements extends AbstractParserRuleElementFinder {
@@ -3786,122 +3736,138 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_addElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_add");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeAddKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_1 = (UnorderedGroup)cGroup.eContents().get(1);
-		private final Keyword cNuwKeyword_1_0 = (Keyword)cUnorderedGroup_1.eContents().get(0);
-		private final Keyword cNswKeyword_1_1 = (Keyword)cUnorderedGroup_1.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeAddKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
+		private final Keyword cNuwKeyword_2_0 = (Keyword)cUnorderedGroup_2.eContents().get(0);
+		private final Keyword cNswKeyword_2_1 = (Keyword)cUnorderedGroup_2.eContents().get(1);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = add <ty> <op1>, <op2>          ; yields {ty}:result
 		//// <result> = add nuw <ty> <op1>, <op2>      ; yields {ty}:result
 		//// <result> = add nsw <ty> <op1>, <op2>      ; yields {ty}:result
 		//// <result> = add nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 		//Instruction_add:
-		//	opcode="add" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="add" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="add" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="add" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="add"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"add"
-		public Keyword getOpcodeAddKeyword_0_0() { return cOpcodeAddKeyword_0_0; }
+		public Keyword getOpcodeAddKeyword_1_0() { return cOpcodeAddKeyword_1_0; }
 
 		//"nuw"? & "nsw"?
-		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
+		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
 
 		//"nuw"?
-		public Keyword getNuwKeyword_1_0() { return cNuwKeyword_1_0; }
+		public Keyword getNuwKeyword_2_0() { return cNuwKeyword_2_0; }
 
 		//"nsw"?
-		public Keyword getNswKeyword_1_1() { return cNswKeyword_1_1; }
+		public Keyword getNswKeyword_2_1() { return cNswKeyword_2_1; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_faddElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_fadd");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeFaddKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cFastMathFlagsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_1_0 = (RuleCall)cFastMathFlagsAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeFaddKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cFastMathFlagsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_2_0 = (RuleCall)cFastMathFlagsAssignment_2.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = fadd [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_fadd:
-		//	opcode="fadd" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="fadd" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="fadd" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="fadd" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="fadd"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"fadd"
-		public Keyword getOpcodeFaddKeyword_0_0() { return cOpcodeFaddKeyword_0_0; }
+		public Keyword getOpcodeFaddKeyword_1_0() { return cOpcodeFaddKeyword_1_0; }
 
 		//fastMathFlags+=FastMathFlag*
-		public Assignment getFastMathFlagsAssignment_1() { return cFastMathFlagsAssignment_1; }
+		public Assignment getFastMathFlagsAssignment_2() { return cFastMathFlagsAssignment_2; }
 
 		//FastMathFlag
-		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_1_0() { return cFastMathFlagsFastMathFlagParserRuleCall_1_0; }
+		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_2_0() { return cFastMathFlagsFastMathFlagParserRuleCall_2_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class FastMathFlagElements extends AbstractParserRuleElementFinder {
@@ -3951,360 +3917,473 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_subElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_sub");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeSubKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_1 = (UnorderedGroup)cGroup.eContents().get(1);
-		private final Keyword cNuwKeyword_1_0 = (Keyword)cUnorderedGroup_1.eContents().get(0);
-		private final Keyword cNswKeyword_1_1 = (Keyword)cUnorderedGroup_1.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeSubKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
+		private final Keyword cNuwKeyword_2_0 = (Keyword)cUnorderedGroup_2.eContents().get(0);
+		private final Keyword cNswKeyword_2_1 = (Keyword)cUnorderedGroup_2.eContents().get(1);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = sub <ty> <op1>, <op2>          ; yields {ty}:result
 		//// <result> = sub nuw <ty> <op1>, <op2>      ; yields {ty}:result
 		//// <result> = sub nsw <ty> <op1>, <op2>      ; yields {ty}:result
 		//// <result> = sub nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 		//Instruction_sub:
-		//	opcode="sub" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="sub" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="sub" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="sub" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="sub"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"sub"
-		public Keyword getOpcodeSubKeyword_0_0() { return cOpcodeSubKeyword_0_0; }
+		public Keyword getOpcodeSubKeyword_1_0() { return cOpcodeSubKeyword_1_0; }
 
 		//"nuw"? & "nsw"?
-		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
+		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
 
 		//"nuw"?
-		public Keyword getNuwKeyword_1_0() { return cNuwKeyword_1_0; }
+		public Keyword getNuwKeyword_2_0() { return cNuwKeyword_2_0; }
 
 		//"nsw"?
-		public Keyword getNswKeyword_1_1() { return cNswKeyword_1_1; }
+		public Keyword getNswKeyword_2_1() { return cNswKeyword_2_1; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_fsubElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_fsub");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeFsubKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cFastMathFlagsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_1_0 = (RuleCall)cFastMathFlagsAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeFsubKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cFastMathFlagsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_2_0 = (RuleCall)cFastMathFlagsAssignment_2.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = fsub [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_fsub:
-		//	opcode="fsub" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="fsub" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="fsub" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="fsub" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="fsub"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"fsub"
-		public Keyword getOpcodeFsubKeyword_0_0() { return cOpcodeFsubKeyword_0_0; }
+		public Keyword getOpcodeFsubKeyword_1_0() { return cOpcodeFsubKeyword_1_0; }
 
 		//fastMathFlags+=FastMathFlag*
-		public Assignment getFastMathFlagsAssignment_1() { return cFastMathFlagsAssignment_1; }
+		public Assignment getFastMathFlagsAssignment_2() { return cFastMathFlagsAssignment_2; }
 
 		//FastMathFlag
-		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_1_0() { return cFastMathFlagsFastMathFlagParserRuleCall_1_0; }
+		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_2_0() { return cFastMathFlagsFastMathFlagParserRuleCall_2_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_mulElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_mul");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeMulKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_1 = (UnorderedGroup)cGroup.eContents().get(1);
-		private final Keyword cNuwKeyword_1_0 = (Keyword)cUnorderedGroup_1.eContents().get(0);
-		private final Keyword cNswKeyword_1_1 = (Keyword)cUnorderedGroup_1.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeMulKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
+		private final Keyword cNuwKeyword_2_0 = (Keyword)cUnorderedGroup_2.eContents().get(0);
+		private final Keyword cNswKeyword_2_1 = (Keyword)cUnorderedGroup_2.eContents().get(1);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = mul <ty> <op1>, <op2>          ; yields {ty}:result
 		//// <result> = mul nuw <ty> <op1>, <op2>      ; yields {ty}:result
 		//// <result> = mul nsw <ty> <op1>, <op2>      ; yields {ty}:result
 		//// <result> = mul nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 		//Instruction_mul:
-		//	opcode="mul" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="mul" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="mul" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="mul" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="mul"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"mul"
-		public Keyword getOpcodeMulKeyword_0_0() { return cOpcodeMulKeyword_0_0; }
+		public Keyword getOpcodeMulKeyword_1_0() { return cOpcodeMulKeyword_1_0; }
 
 		//"nuw"? & "nsw"?
-		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
+		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
 
 		//"nuw"?
-		public Keyword getNuwKeyword_1_0() { return cNuwKeyword_1_0; }
+		public Keyword getNuwKeyword_2_0() { return cNuwKeyword_2_0; }
 
 		//"nsw"?
-		public Keyword getNswKeyword_1_1() { return cNswKeyword_1_1; }
+		public Keyword getNswKeyword_2_1() { return cNswKeyword_2_1; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_fmulElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_fmul");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeFmulKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cFastMathFlagsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_1_0 = (RuleCall)cFastMathFlagsAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeFmulKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cFastMathFlagsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_2_0 = (RuleCall)cFastMathFlagsAssignment_2.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = fmul [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_fmul:
-		//	opcode="fmul" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="fmul" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="fmul" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="fmul" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="fmul"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"fmul"
-		public Keyword getOpcodeFmulKeyword_0_0() { return cOpcodeFmulKeyword_0_0; }
+		public Keyword getOpcodeFmulKeyword_1_0() { return cOpcodeFmulKeyword_1_0; }
 
 		//fastMathFlags+=FastMathFlag*
-		public Assignment getFastMathFlagsAssignment_1() { return cFastMathFlagsAssignment_1; }
+		public Assignment getFastMathFlagsAssignment_2() { return cFastMathFlagsAssignment_2; }
 
 		//FastMathFlag
-		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_1_0() { return cFastMathFlagsFastMathFlagParserRuleCall_1_0; }
+		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_2_0() { return cFastMathFlagsFastMathFlagParserRuleCall_2_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_udivElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_udiv");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeUdivKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cExactKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeUdivKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cExactKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = udiv <ty> <op1>, <op2>         ; yields {ty}:result
 		//// <result> = udiv exact <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_udiv:
-		//	opcode="udiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="udiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="udiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="udiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="udiv"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"udiv"
-		public Keyword getOpcodeUdivKeyword_0_0() { return cOpcodeUdivKeyword_0_0; }
+		public Keyword getOpcodeUdivKeyword_1_0() { return cOpcodeUdivKeyword_1_0; }
 
 		//"exact"?
-		public Keyword getExactKeyword_1() { return cExactKeyword_1; }
+		public Keyword getExactKeyword_2() { return cExactKeyword_2; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_sdivElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_sdiv");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeSdivKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cExactKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeSdivKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cExactKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = sdiv <ty> <op1>, <op2>         ; yields {ty}:result
 		//// <result> = sdiv exact <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_sdiv:
-		//	opcode="sdiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="sdiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="sdiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="sdiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="sdiv"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"sdiv"
-		public Keyword getOpcodeSdivKeyword_0_0() { return cOpcodeSdivKeyword_0_0; }
+		public Keyword getOpcodeSdivKeyword_1_0() { return cOpcodeSdivKeyword_1_0; }
 
 		//"exact"?
-		public Keyword getExactKeyword_1() { return cExactKeyword_1; }
+		public Keyword getExactKeyword_2() { return cExactKeyword_2; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_fdivElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_fdiv");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeFdivKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cFastMathFlagsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_1_0 = (RuleCall)cFastMathFlagsAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeFdivKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cFastMathFlagsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFastMathFlagsFastMathFlagParserRuleCall_2_0 = (RuleCall)cFastMathFlagsAssignment_2.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
+		
+		//// <result> = fdiv [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
+		//Instruction_fdiv:
+		//	name=LocalName opcode="fdiv" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+		public ParserRule getRule() { return rule; }
+
+		//name=LocalName opcode="fdiv" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
+		public Group getGroup() { return cGroup; }
+
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
+		//opcode="fdiv"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"fdiv"
+		public Keyword getOpcodeFdivKeyword_1_0() { return cOpcodeFdivKeyword_1_0; }
+
+		//fastMathFlags+=FastMathFlag*
+		public Assignment getFastMathFlagsAssignment_2() { return cFastMathFlagsAssignment_2; }
+
+		//FastMathFlag
+		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_2_0() { return cFastMathFlagsFastMathFlagParserRuleCall_2_0; }
+
+		//type=Type
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+
+		//Type
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
+
+		//op1=ValueRef
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
+
+		//ValueRef
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
+
+		//","
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+
+		//op2=ValueRef
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
+
+		//ValueRef
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
+	}
+
+	public class Instruction_uremElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_urem");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeUremKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
@@ -4313,25 +4392,25 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
 		
-		//// <result> = fdiv [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
-		//Instruction_fdiv:
-		//	opcode="fdiv" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+		//// <result> = urem <ty> <op1>, <op2>   ; yields {ty}:result
+		//Instruction_urem:
+		//	name=LocalName opcode="urem" type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="fdiv" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="urem" type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
-		//opcode="fdiv"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//"fdiv"
-		public Keyword getOpcodeFdivKeyword_0_0() { return cOpcodeFdivKeyword_0_0; }
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
 
-		//fastMathFlags+=FastMathFlag*
-		public Assignment getFastMathFlagsAssignment_1() { return cFastMathFlagsAssignment_1; }
+		//opcode="urem"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
-		//FastMathFlag
-		public RuleCall getFastMathFlagsFastMathFlagParserRuleCall_1_0() { return cFastMathFlagsFastMathFlagParserRuleCall_1_0; }
+		//"urem"
+		public Keyword getOpcodeUremKeyword_1_0() { return cOpcodeUremKeyword_1_0; }
 
 		//type=Type
 		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
@@ -4355,151 +4434,118 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
-	public class Instruction_uremElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_urem");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeUremKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cOp1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOp1ValueRefParserRuleCall_2_0 = (RuleCall)cOp1Assignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOp2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOp2ValueRefParserRuleCall_4_0 = (RuleCall)cOp2Assignment_4.eContents().get(0);
-		
-		//// <result> = urem <ty> <op1>, <op2>   ; yields {ty}:result
-		//Instruction_urem:
-		//	opcode="urem" type=Type op1=ValueRef "," op2=ValueRef;
-		public ParserRule getRule() { return rule; }
-
-		//opcode="urem" type=Type op1=ValueRef "," op2=ValueRef
-		public Group getGroup() { return cGroup; }
-
-		//opcode="urem"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
-
-		//"urem"
-		public Keyword getOpcodeUremKeyword_0_0() { return cOpcodeUremKeyword_0_0; }
-
-		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
-
-		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
-
-		//op1=ValueRef
-		public Assignment getOp1Assignment_2() { return cOp1Assignment_2; }
-
-		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_2_0() { return cOp1ValueRefParserRuleCall_2_0; }
-
-		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-
-		//op2=ValueRef
-		public Assignment getOp2Assignment_4() { return cOp2Assignment_4; }
-
-		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_4_0() { return cOp2ValueRefParserRuleCall_4_0; }
-	}
-
 	public class Instruction_sremElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_srem");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeSremKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cOp1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOp1ValueRefParserRuleCall_2_0 = (RuleCall)cOp1Assignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOp2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOp2ValueRefParserRuleCall_4_0 = (RuleCall)cOp2Assignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeSremKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
 		
 		//// <result> = srem <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_srem:
-		//	opcode="srem" type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="srem" type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="srem" type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="srem" type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="srem"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"srem"
-		public Keyword getOpcodeSremKeyword_0_0() { return cOpcodeSremKeyword_0_0; }
+		public Keyword getOpcodeSremKeyword_1_0() { return cOpcodeSremKeyword_1_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_2() { return cOp1Assignment_2; }
+		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_2_0() { return cOp1ValueRefParserRuleCall_2_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_4() { return cOp2Assignment_4; }
+		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_4_0() { return cOp2ValueRefParserRuleCall_4_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
 	public class Instruction_fremElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_frem");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeFremKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cOp1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOp1ValueRefParserRuleCall_2_0 = (RuleCall)cOp1Assignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOp2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOp2ValueRefParserRuleCall_4_0 = (RuleCall)cOp2Assignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeFremKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
 		
 		//// <result> = frem <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_frem:
-		//	opcode="frem" type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="frem" type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="frem" type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="frem" type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="frem"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"frem"
-		public Keyword getOpcodeFremKeyword_0_0() { return cOpcodeFremKeyword_0_0; }
+		public Keyword getOpcodeFremKeyword_1_0() { return cOpcodeFremKeyword_1_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_2() { return cOp1Assignment_2; }
+		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_2_0() { return cOp1ValueRefParserRuleCall_2_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_4() { return cOp2Assignment_4; }
+		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_4_0() { return cOp2ValueRefParserRuleCall_4_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
 	public class BitwiseBinaryInstructionElements extends AbstractParserRuleElementFinder {
@@ -4541,127 +4587,206 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_shlElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_shl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeShlKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_1 = (UnorderedGroup)cGroup.eContents().get(1);
-		private final Keyword cNuwKeyword_1_0 = (Keyword)cUnorderedGroup_1.eContents().get(0);
-		private final Keyword cNswKeyword_1_1 = (Keyword)cUnorderedGroup_1.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeShlKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
+		private final Keyword cNuwKeyword_2_0 = (Keyword)cUnorderedGroup_2.eContents().get(0);
+		private final Keyword cNswKeyword_2_1 = (Keyword)cUnorderedGroup_2.eContents().get(1);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = shl <ty> <op1>, <op2>           ; yields {ty}:result
 		//// <result> = shl nuw <ty> <op1>, <op2>       ; yields {ty}:result
 		//// <result> = shl nsw <ty> <op1>, <op2>       ; yields {ty}:result
 		//// <result> = shl nuw nsw <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_shl:
-		//	opcode="shl" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="shl" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="shl" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="shl" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="shl"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"shl"
-		public Keyword getOpcodeShlKeyword_0_0() { return cOpcodeShlKeyword_0_0; }
+		public Keyword getOpcodeShlKeyword_1_0() { return cOpcodeShlKeyword_1_0; }
 
 		//"nuw"? & "nsw"?
-		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
+		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
 
 		//"nuw"?
-		public Keyword getNuwKeyword_1_0() { return cNuwKeyword_1_0; }
+		public Keyword getNuwKeyword_2_0() { return cNuwKeyword_2_0; }
 
 		//"nsw"?
-		public Keyword getNswKeyword_1_1() { return cNswKeyword_1_1; }
+		public Keyword getNswKeyword_2_1() { return cNswKeyword_2_1; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_lshrElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_lshr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeLshrKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cExactKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeLshrKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cExactKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = lshr <ty> <op1>, <op2>         ; yields {ty}:result
 		//// <result> = lshr exact <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_lshr:
-		//	opcode="lshr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="lshr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="lshr" "exact"? type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="lshr" "exact"? type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="lshr"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"lshr"
-		public Keyword getOpcodeLshrKeyword_0_0() { return cOpcodeLshrKeyword_0_0; }
+		public Keyword getOpcodeLshrKeyword_1_0() { return cOpcodeLshrKeyword_1_0; }
 
 		//"exact"?
-		public Keyword getExactKeyword_1() { return cExactKeyword_1; }
+		public Keyword getExactKeyword_2() { return cExactKeyword_2; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class Instruction_ashrElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_ashr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeAshrKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cExactKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeAshrKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cExactKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
+		
+		//// <result> = ashr <ty> <op1>, <op2>         ; yields {ty}:result
+		//// <result> = ashr exact <ty> <op1>, <op2>   ; yields {ty}:result
+		//Instruction_ashr:
+		//	name=LocalName opcode="ashr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+		public ParserRule getRule() { return rule; }
+
+		//name=LocalName opcode="ashr" "exact"? type=Type op1=ValueRef "," op2=ValueRef
+		public Group getGroup() { return cGroup; }
+
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
+		//opcode="ashr"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"ashr"
+		public Keyword getOpcodeAshrKeyword_1_0() { return cOpcodeAshrKeyword_1_0; }
+
+		//"exact"?
+		public Keyword getExactKeyword_2() { return cExactKeyword_2; }
+
+		//type=Type
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+
+		//Type
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
+
+		//op1=ValueRef
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
+
+		//ValueRef
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
+
+		//","
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+
+		//op2=ValueRef
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
+
+		//ValueRef
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
+	}
+
+	public class Instruction_andElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_and");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeAndKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
@@ -4670,23 +4795,25 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
 		
-		//// <result> = ashr <ty> <op1>, <op2>         ; yields {ty}:result
-		//// <result> = ashr exact <ty> <op1>, <op2>   ; yields {ty}:result
-		//Instruction_ashr:
-		//	opcode="ashr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+		//// <result> = and <ty> <op1>, <op2>   ; yields {ty}:result
+		//Instruction_and:
+		//	name=LocalName opcode="and" type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="ashr" "exact"? type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="and" type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
-		//opcode="ashr"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//"ashr"
-		public Keyword getOpcodeAshrKeyword_0_0() { return cOpcodeAshrKeyword_0_0; }
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
 
-		//"exact"?
-		public Keyword getExactKeyword_1() { return cExactKeyword_1; }
+		//opcode="and"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"and"
+		public Keyword getOpcodeAndKeyword_1_0() { return cOpcodeAndKeyword_1_0; }
 
 		//type=Type
 		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
@@ -4710,151 +4837,118 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
-	public class Instruction_andElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_and");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeAndKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cOp1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOp1ValueRefParserRuleCall_2_0 = (RuleCall)cOp1Assignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOp2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOp2ValueRefParserRuleCall_4_0 = (RuleCall)cOp2Assignment_4.eContents().get(0);
-		
-		//// <result> = and <ty> <op1>, <op2>   ; yields {ty}:result
-		//Instruction_and:
-		//	opcode="and" type=Type op1=ValueRef "," op2=ValueRef;
-		public ParserRule getRule() { return rule; }
-
-		//opcode="and" type=Type op1=ValueRef "," op2=ValueRef
-		public Group getGroup() { return cGroup; }
-
-		//opcode="and"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
-
-		//"and"
-		public Keyword getOpcodeAndKeyword_0_0() { return cOpcodeAndKeyword_0_0; }
-
-		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
-
-		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
-
-		//op1=ValueRef
-		public Assignment getOp1Assignment_2() { return cOp1Assignment_2; }
-
-		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_2_0() { return cOp1ValueRefParserRuleCall_2_0; }
-
-		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-
-		//op2=ValueRef
-		public Assignment getOp2Assignment_4() { return cOp2Assignment_4; }
-
-		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_4_0() { return cOp2ValueRefParserRuleCall_4_0; }
-	}
-
 	public class Instruction_orElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_or");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeOrKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cOp1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOp1ValueRefParserRuleCall_2_0 = (RuleCall)cOp1Assignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOp2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOp2ValueRefParserRuleCall_4_0 = (RuleCall)cOp2Assignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeOrKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
 		
 		//// <result> = or <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_or:
-		//	opcode="or" type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="or" type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="or" type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="or" type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="or"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"or"
-		public Keyword getOpcodeOrKeyword_0_0() { return cOpcodeOrKeyword_0_0; }
+		public Keyword getOpcodeOrKeyword_1_0() { return cOpcodeOrKeyword_1_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_2() { return cOp1Assignment_2; }
+		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_2_0() { return cOp1ValueRefParserRuleCall_2_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_4() { return cOp2Assignment_4; }
+		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_4_0() { return cOp2ValueRefParserRuleCall_4_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
 	public class Instruction_xorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_xor");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeXorKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Assignment cOp1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOp1ValueRefParserRuleCall_2_0 = (RuleCall)cOp1Assignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cOp2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOp2ValueRefParserRuleCall_4_0 = (RuleCall)cOp2Assignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeXorKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
+		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
 		
 		//// <result> = xor <ty> <op1>, <op2>   ; yields {ty}:result
 		//Instruction_xor:
-		//	opcode="xor" type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="xor" type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="xor" type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="xor" type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="xor"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"xor"
-		public Keyword getOpcodeXorKeyword_0_0() { return cOpcodeXorKeyword_0_0; }
+		public Keyword getOpcodeXorKeyword_1_0() { return cOpcodeXorKeyword_1_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_2() { return cOp1Assignment_2; }
+		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_2_0() { return cOp1ValueRefParserRuleCall_2_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
 
 		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_4() { return cOp2Assignment_4; }
+		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_4_0() { return cOp2ValueRefParserRuleCall_4_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
 	public class VectorInstructionsElements extends AbstractParserRuleElementFinder {
@@ -4884,148 +4978,172 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_extractelementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_extractelement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeExtractelementKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cVectorAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVectorTypedValueParserRuleCall_1_0 = (RuleCall)cVectorAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cIndexAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cIndexTypedValueParserRuleCall_3_0 = (RuleCall)cIndexAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeExtractelementKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cVectorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVectorTypedValueParserRuleCall_2_0 = (RuleCall)cVectorAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIndexAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIndexTypedValueParserRuleCall_4_0 = (RuleCall)cIndexAssignment_4.eContents().get(0);
 		
 		//// <result> = extractelement <n x <ty>> <val>, i32 <idx>    ; yields <ty>
 		//Instruction_extractelement:
-		//	opcode="extractelement" vector=TypedValue "," index=TypedValue;
+		//	name=LocalName opcode="extractelement" vector=TypedValue "," index=TypedValue;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="extractelement" vector=TypedValue "," index=TypedValue
+		//name=LocalName opcode="extractelement" vector=TypedValue "," index=TypedValue
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="extractelement"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"extractelement"
-		public Keyword getOpcodeExtractelementKeyword_0_0() { return cOpcodeExtractelementKeyword_0_0; }
+		public Keyword getOpcodeExtractelementKeyword_1_0() { return cOpcodeExtractelementKeyword_1_0; }
 
 		//vector=TypedValue
-		public Assignment getVectorAssignment_1() { return cVectorAssignment_1; }
+		public Assignment getVectorAssignment_2() { return cVectorAssignment_2; }
 
 		//TypedValue
-		public RuleCall getVectorTypedValueParserRuleCall_1_0() { return cVectorTypedValueParserRuleCall_1_0; }
+		public RuleCall getVectorTypedValueParserRuleCall_2_0() { return cVectorTypedValueParserRuleCall_2_0; }
 
 		//","
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 
 		//index=TypedValue
-		public Assignment getIndexAssignment_3() { return cIndexAssignment_3; }
+		public Assignment getIndexAssignment_4() { return cIndexAssignment_4; }
 
 		//TypedValue
-		public RuleCall getIndexTypedValueParserRuleCall_3_0() { return cIndexTypedValueParserRuleCall_3_0; }
+		public RuleCall getIndexTypedValueParserRuleCall_4_0() { return cIndexTypedValueParserRuleCall_4_0; }
 	}
 
 	public class Instruction_insertelementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_insertelement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeInsertelementKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cVectorAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVectorTypedValueParserRuleCall_1_0 = (RuleCall)cVectorAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cElementAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cElementTypedValueParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cIndexAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cIndexTypedValueParserRuleCall_5_0 = (RuleCall)cIndexAssignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeInsertelementKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cVectorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVectorTypedValueParserRuleCall_2_0 = (RuleCall)cVectorAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cElementAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cElementTypedValueParserRuleCall_4_0 = (RuleCall)cElementAssignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cIndexAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cIndexTypedValueParserRuleCall_6_0 = (RuleCall)cIndexAssignment_6.eContents().get(0);
 		
 		//// <result> = insertelement <n x <ty>> <val>, <ty> <elt>, i32 <idx>    ; yields <n x <ty>>
 		//Instruction_insertelement:
-		//	opcode="insertelement" vector=TypedValue "," element=TypedValue "," index=TypedValue;
+		//	name=LocalName opcode="insertelement" vector=TypedValue "," element=TypedValue "," index=TypedValue;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="insertelement" vector=TypedValue "," element=TypedValue "," index=TypedValue
+		//name=LocalName opcode="insertelement" vector=TypedValue "," element=TypedValue "," index=TypedValue
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="insertelement"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"insertelement"
-		public Keyword getOpcodeInsertelementKeyword_0_0() { return cOpcodeInsertelementKeyword_0_0; }
+		public Keyword getOpcodeInsertelementKeyword_1_0() { return cOpcodeInsertelementKeyword_1_0; }
 
 		//vector=TypedValue
-		public Assignment getVectorAssignment_1() { return cVectorAssignment_1; }
+		public Assignment getVectorAssignment_2() { return cVectorAssignment_2; }
 
 		//TypedValue
-		public RuleCall getVectorTypedValueParserRuleCall_1_0() { return cVectorTypedValueParserRuleCall_1_0; }
+		public RuleCall getVectorTypedValueParserRuleCall_2_0() { return cVectorTypedValueParserRuleCall_2_0; }
 
 		//","
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 
 		//element=TypedValue
-		public Assignment getElementAssignment_3() { return cElementAssignment_3; }
+		public Assignment getElementAssignment_4() { return cElementAssignment_4; }
 
 		//TypedValue
-		public RuleCall getElementTypedValueParserRuleCall_3_0() { return cElementTypedValueParserRuleCall_3_0; }
+		public RuleCall getElementTypedValueParserRuleCall_4_0() { return cElementTypedValueParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//index=TypedValue
-		public Assignment getIndexAssignment_5() { return cIndexAssignment_5; }
+		public Assignment getIndexAssignment_6() { return cIndexAssignment_6; }
 
 		//TypedValue
-		public RuleCall getIndexTypedValueParserRuleCall_5_0() { return cIndexTypedValueParserRuleCall_5_0; }
+		public RuleCall getIndexTypedValueParserRuleCall_6_0() { return cIndexTypedValueParserRuleCall_6_0; }
 	}
 
 	public class Instruction_shufflevectorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_shufflevector");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeShufflevectorKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cVector1Assignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVector1TypedValueParserRuleCall_1_0 = (RuleCall)cVector1Assignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cVector2Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cVector2TypedValueParserRuleCall_3_0 = (RuleCall)cVector2Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cMaskAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cMaskTypedValueParserRuleCall_5_0 = (RuleCall)cMaskAssignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeShufflevectorKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cVector1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVector1TypedValueParserRuleCall_2_0 = (RuleCall)cVector1Assignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cVector2Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cVector2TypedValueParserRuleCall_4_0 = (RuleCall)cVector2Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cMaskAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cMaskTypedValueParserRuleCall_6_0 = (RuleCall)cMaskAssignment_6.eContents().get(0);
 		
 		//// <result> = shufflevector <n x <ty>> <v1>, <n x <ty>> <v2>, <m x i32> <mask>    ; yields <m x <ty>>
 		//Instruction_shufflevector:
-		//	opcode="shufflevector" vector1=TypedValue "," vector2=TypedValue "," mask=TypedValue;
+		//	name=LocalName opcode="shufflevector" vector1=TypedValue "," vector2=TypedValue "," mask=TypedValue;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="shufflevector" vector1=TypedValue "," vector2=TypedValue "," mask=TypedValue
+		//name=LocalName opcode="shufflevector" vector1=TypedValue "," vector2=TypedValue "," mask=TypedValue
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="shufflevector"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"shufflevector"
-		public Keyword getOpcodeShufflevectorKeyword_0_0() { return cOpcodeShufflevectorKeyword_0_0; }
+		public Keyword getOpcodeShufflevectorKeyword_1_0() { return cOpcodeShufflevectorKeyword_1_0; }
 
 		//vector1=TypedValue
-		public Assignment getVector1Assignment_1() { return cVector1Assignment_1; }
+		public Assignment getVector1Assignment_2() { return cVector1Assignment_2; }
 
 		//TypedValue
-		public RuleCall getVector1TypedValueParserRuleCall_1_0() { return cVector1TypedValueParserRuleCall_1_0; }
+		public RuleCall getVector1TypedValueParserRuleCall_2_0() { return cVector1TypedValueParserRuleCall_2_0; }
 
 		//","
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 
 		//vector2=TypedValue
-		public Assignment getVector2Assignment_3() { return cVector2Assignment_3; }
+		public Assignment getVector2Assignment_4() { return cVector2Assignment_4; }
 
 		//TypedValue
-		public RuleCall getVector2TypedValueParserRuleCall_3_0() { return cVector2TypedValueParserRuleCall_3_0; }
+		public RuleCall getVector2TypedValueParserRuleCall_4_0() { return cVector2TypedValueParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//mask=TypedValue
-		public Assignment getMaskAssignment_5() { return cMaskAssignment_5; }
+		public Assignment getMaskAssignment_6() { return cMaskAssignment_6; }
 
 		//TypedValue
-		public RuleCall getMaskTypedValueParserRuleCall_5_0() { return cMaskTypedValueParserRuleCall_5_0; }
+		public RuleCall getMaskTypedValueParserRuleCall_6_0() { return cMaskTypedValueParserRuleCall_6_0; }
 	}
 
 	public class AggregateInstructionElements extends AbstractParserRuleElementFinder {
@@ -5051,352 +5169,342 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_extractvalueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_extractvalue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeExtractvalueKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cAggregateAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cAggregateTypedValueParserRuleCall_1_0 = (RuleCall)cAggregateAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cIndicesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cIndicesConstantParserRuleCall_2_1_0 = (RuleCall)cIndicesAssignment_2_1.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeExtractvalueKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cAggregateAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAggregateTypedValueParserRuleCall_2_0 = (RuleCall)cAggregateAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cIndicesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cIndicesConstantParserRuleCall_3_1_0 = (RuleCall)cIndicesAssignment_3_1.eContents().get(0);
 		
 		//// <result> = extractvalue <aggregate type> <val>, <idx>{, <idx>}*
 		//Instruction_extractvalue:
-		//	opcode="extractvalue" aggregate=TypedValue ("," indices+=Constant)+;
+		//	name=LocalName opcode="extractvalue" aggregate=TypedValue ("," indices+=Constant)+;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="extractvalue" aggregate=TypedValue ("," indices+=Constant)+
+		//name=LocalName opcode="extractvalue" aggregate=TypedValue ("," indices+=Constant)+
 		public Group getGroup() { return cGroup; }
+
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
 
 		//opcode="extractvalue"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"extractvalue"
-		public Keyword getOpcodeExtractvalueKeyword_0_0() { return cOpcodeExtractvalueKeyword_0_0; }
+		public Keyword getOpcodeExtractvalueKeyword_1_0() { return cOpcodeExtractvalueKeyword_1_0; }
 
 		//aggregate=TypedValue
-		public Assignment getAggregateAssignment_1() { return cAggregateAssignment_1; }
+		public Assignment getAggregateAssignment_2() { return cAggregateAssignment_2; }
 
 		//TypedValue
-		public RuleCall getAggregateTypedValueParserRuleCall_1_0() { return cAggregateTypedValueParserRuleCall_1_0; }
+		public RuleCall getAggregateTypedValueParserRuleCall_2_0() { return cAggregateTypedValueParserRuleCall_2_0; }
 
 		//("," indices+=Constant)+
-		public Group getGroup_2() { return cGroup_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
-
-		//indices+=Constant
-		public Assignment getIndicesAssignment_2_1() { return cIndicesAssignment_2_1; }
-
-		//Constant
-		public RuleCall getIndicesConstantParserRuleCall_2_1_0() { return cIndicesConstantParserRuleCall_2_1_0; }
-	}
-
-	public class Instruction_insertvalueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_insertvalue");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeInsertvalueKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cAggregateAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cAggregateTypedValueParserRuleCall_1_0 = (RuleCall)cAggregateAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cElementAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cElementTypedValueParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cIndicesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cIndicesConstantParserRuleCall_4_1_0 = (RuleCall)cIndicesAssignment_4_1.eContents().get(0);
-		
-		//// <result> = insertvalue <aggregate type> <val>, <ty> <elt>, <idx>{, <idx>}*    ; yields <aggregate type>
-		//Instruction_insertvalue:
-		//	opcode="insertvalue" aggregate=TypedValue "," element=TypedValue ("," indices+=Constant)+;
-		public ParserRule getRule() { return rule; }
-
-		//opcode="insertvalue" aggregate=TypedValue "," element=TypedValue ("," indices+=Constant)+
-		public Group getGroup() { return cGroup; }
-
-		//opcode="insertvalue"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
-
-		//"insertvalue"
-		public Keyword getOpcodeInsertvalueKeyword_0_0() { return cOpcodeInsertvalueKeyword_0_0; }
-
-		//aggregate=TypedValue
-		public Assignment getAggregateAssignment_1() { return cAggregateAssignment_1; }
-
-		//TypedValue
-		public RuleCall getAggregateTypedValueParserRuleCall_1_0() { return cAggregateTypedValueParserRuleCall_1_0; }
-
-		//","
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
-
-		//element=TypedValue
-		public Assignment getElementAssignment_3() { return cElementAssignment_3; }
-
-		//TypedValue
-		public RuleCall getElementTypedValueParserRuleCall_3_0() { return cElementTypedValueParserRuleCall_3_0; }
-
-		//("," indices+=Constant)+
-		public Group getGroup_4() { return cGroup_4; }
-
-		//","
-		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
-
-		//indices+=Constant
-		public Assignment getIndicesAssignment_4_1() { return cIndicesAssignment_4_1; }
-
-		//Constant
-		public RuleCall getIndicesConstantParserRuleCall_4_1_0() { return cIndicesConstantParserRuleCall_4_1_0; }
-	}
-
-	public class MemoryInstructionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MemoryInstruction");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cInstruction_allocaParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cInstruction_loadParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cInstruction_storeParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cInstruction_fenceParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cInstruction_cmpxchgParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cInstruction_atomicrmwParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cInstruction_getelementptrParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		
-		//MemoryInstruction:
-		//	Instruction_alloca | Instruction_load | Instruction_store | Instruction_fence | Instruction_cmpxchg |
-		//	Instruction_atomicrmw | Instruction_getelementptr;
-		public ParserRule getRule() { return rule; }
-
-		//Instruction_alloca | Instruction_load | Instruction_store | Instruction_fence | Instruction_cmpxchg |
-		//Instruction_atomicrmw | Instruction_getelementptr
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//Instruction_alloca
-		public RuleCall getInstruction_allocaParserRuleCall_0() { return cInstruction_allocaParserRuleCall_0; }
-
-		//Instruction_load
-		public RuleCall getInstruction_loadParserRuleCall_1() { return cInstruction_loadParserRuleCall_1; }
-
-		//Instruction_store
-		public RuleCall getInstruction_storeParserRuleCall_2() { return cInstruction_storeParserRuleCall_2; }
-
-		//Instruction_fence
-		public RuleCall getInstruction_fenceParserRuleCall_3() { return cInstruction_fenceParserRuleCall_3; }
-
-		//Instruction_cmpxchg
-		public RuleCall getInstruction_cmpxchgParserRuleCall_4() { return cInstruction_cmpxchgParserRuleCall_4; }
-
-		//Instruction_atomicrmw
-		public RuleCall getInstruction_atomicrmwParserRuleCall_5() { return cInstruction_atomicrmwParserRuleCall_5; }
-
-		//Instruction_getelementptr
-		public RuleCall getInstruction_getelementptrParserRuleCall_6() { return cInstruction_getelementptrParserRuleCall_6; }
-	}
-
-	public class Instruction_allocaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_alloca");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeAllocaKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cNumElementsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cNumElementsTypedValueParserRuleCall_2_1_0 = (RuleCall)cNumElementsAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cAlignmentAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cAlignmentAlignParserRuleCall_3_1_0 = (RuleCall)cAlignmentAssignment_3_1.eContents().get(0);
-		
-		//// <result> = alloca <type>[, <ty> <NumElements>][, align <alignment>]     ; yields {type*}:result
-		//Instruction_alloca:
-		//	opcode="alloca" type=Type ("," numElements=TypedValue)? ("," alignment=Align)?;
-		public ParserRule getRule() { return rule; }
-
-		//opcode="alloca" type=Type ("," numElements=TypedValue)? ("," alignment=Align)?
-		public Group getGroup() { return cGroup; }
-
-		//opcode="alloca"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
-
-		//"alloca"
-		public Keyword getOpcodeAllocaKeyword_0_0() { return cOpcodeAllocaKeyword_0_0; }
-
-		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
-
-		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
-
-		//("," numElements=TypedValue)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
-
-		//numElements=TypedValue
-		public Assignment getNumElementsAssignment_2_1() { return cNumElementsAssignment_2_1; }
-
-		//TypedValue
-		public RuleCall getNumElementsTypedValueParserRuleCall_2_1_0() { return cNumElementsTypedValueParserRuleCall_2_1_0; }
-
-		//("," alignment=Align)?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//","
 		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
+		//indices+=Constant
+		public Assignment getIndicesAssignment_3_1() { return cIndicesAssignment_3_1; }
+
+		//Constant
+		public RuleCall getIndicesConstantParserRuleCall_3_1_0() { return cIndicesConstantParserRuleCall_3_1_0; }
+	}
+
+	public class Instruction_insertvalueElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_insertvalue");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeInsertvalueKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cAggregateAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAggregateTypedValueParserRuleCall_2_0 = (RuleCall)cAggregateAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cElementAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cElementTypedValueParserRuleCall_4_0 = (RuleCall)cElementAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cIndicesAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cIndicesConstantParserRuleCall_5_1_0 = (RuleCall)cIndicesAssignment_5_1.eContents().get(0);
+		
+		//// <result> = insertvalue <aggregate type> <val>, <ty> <elt>, <idx>{, <idx>}*    ; yields <aggregate type>
+		//Instruction_insertvalue:
+		//	name=LocalName opcode="insertvalue" aggregate=TypedValue "," element=TypedValue ("," indices+=Constant)+;
+		public ParserRule getRule() { return rule; }
+
+		//name=LocalName opcode="insertvalue" aggregate=TypedValue "," element=TypedValue ("," indices+=Constant)+
+		public Group getGroup() { return cGroup; }
+
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
+		//opcode="insertvalue"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"insertvalue"
+		public Keyword getOpcodeInsertvalueKeyword_1_0() { return cOpcodeInsertvalueKeyword_1_0; }
+
+		//aggregate=TypedValue
+		public Assignment getAggregateAssignment_2() { return cAggregateAssignment_2; }
+
+		//TypedValue
+		public RuleCall getAggregateTypedValueParserRuleCall_2_0() { return cAggregateTypedValueParserRuleCall_2_0; }
+
+		//","
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+
+		//element=TypedValue
+		public Assignment getElementAssignment_4() { return cElementAssignment_4; }
+
+		//TypedValue
+		public RuleCall getElementTypedValueParserRuleCall_4_0() { return cElementTypedValueParserRuleCall_4_0; }
+
+		//("," indices+=Constant)+
+		public Group getGroup_5() { return cGroup_5; }
+
+		//","
+		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
+
+		//indices+=Constant
+		public Assignment getIndicesAssignment_5_1() { return cIndicesAssignment_5_1; }
+
+		//Constant
+		public RuleCall getIndicesConstantParserRuleCall_5_1_0() { return cIndicesConstantParserRuleCall_5_1_0; }
+	}
+
+	public class Instruction_allocaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_alloca");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeAllocaKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cNumElementsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cNumElementsTypedValueParserRuleCall_3_1_0 = (RuleCall)cNumElementsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cAlignmentAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cAlignmentAlignParserRuleCall_4_1_0 = (RuleCall)cAlignmentAssignment_4_1.eContents().get(0);
+		
+		//// <result> = alloca <type>[, <ty> <NumElements>][, align <alignment>]     ; yields {type*}:result
+		//Instruction_alloca:
+		//	name=LocalName opcode="alloca" type=Type ("," numElements=TypedValue)? ("," alignment=Align)?;
+		public ParserRule getRule() { return rule; }
+
+		//name=LocalName opcode="alloca" type=Type ("," numElements=TypedValue)? ("," alignment=Align)?
+		public Group getGroup() { return cGroup; }
+
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
+		//opcode="alloca"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"alloca"
+		public Keyword getOpcodeAllocaKeyword_1_0() { return cOpcodeAllocaKeyword_1_0; }
+
+		//type=Type
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+
+		//Type
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+
+		//("," numElements=TypedValue)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+
+		//numElements=TypedValue
+		public Assignment getNumElementsAssignment_3_1() { return cNumElementsAssignment_3_1; }
+
+		//TypedValue
+		public RuleCall getNumElementsTypedValueParserRuleCall_3_1_0() { return cNumElementsTypedValueParserRuleCall_3_1_0; }
+
+		//("," alignment=Align)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//","
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+
 		//alignment=Align
-		public Assignment getAlignmentAssignment_3_1() { return cAlignmentAssignment_3_1; }
+		public Assignment getAlignmentAssignment_4_1() { return cAlignmentAssignment_4_1; }
 
 		//Align
-		public RuleCall getAlignmentAlignParserRuleCall_3_1_0() { return cAlignmentAlignParserRuleCall_3_1_0; }
+		public RuleCall getAlignmentAlignParserRuleCall_4_1_0() { return cAlignmentAlignParserRuleCall_4_1_0; }
 	}
 
 	public class Instruction_loadElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_load");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeLoadKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
-		private final Keyword cVolatileKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
-		private final Assignment cPointerAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
-		private final RuleCall cPointerTypedValueParserRuleCall_1_0_1_0 = (RuleCall)cPointerAssignment_1_0_1.eContents().get(0);
-		private final Group cGroup_1_0_2 = (Group)cGroup_1_0.eContents().get(2);
-		private final Keyword cCommaKeyword_1_0_2_0 = (Keyword)cGroup_1_0_2.eContents().get(0);
-		private final Assignment cAlignmentAssignment_1_0_2_1 = (Assignment)cGroup_1_0_2.eContents().get(1);
-		private final RuleCall cAlignmentAlignParserRuleCall_1_0_2_1_0 = (RuleCall)cAlignmentAssignment_1_0_2_1.eContents().get(0);
-		private final Group cGroup_1_0_3 = (Group)cGroup_1_0.eContents().get(3);
-		private final Keyword cCommaKeyword_1_0_3_0 = (Keyword)cGroup_1_0_3.eContents().get(0);
-		private final Keyword cNontemporalKeyword_1_0_3_1 = (Keyword)cGroup_1_0_3.eContents().get(1);
-		private final Assignment cNontemporalIndexAssignment_1_0_3_2 = (Assignment)cGroup_1_0_3.eContents().get(2);
-		private final RuleCall cNontemporalIndexMetadataRefParserRuleCall_1_0_3_2_0 = (RuleCall)cNontemporalIndexAssignment_1_0_3_2.eContents().get(0);
-		private final Group cGroup_1_0_4 = (Group)cGroup_1_0.eContents().get(4);
-		private final Keyword cCommaKeyword_1_0_4_0 = (Keyword)cGroup_1_0_4.eContents().get(0);
-		private final Keyword cInvariantLoadKeyword_1_0_4_1 = (Keyword)cGroup_1_0_4.eContents().get(1);
-		private final Assignment cInvariantLoadIndexAssignment_1_0_4_2 = (Assignment)cGroup_1_0_4.eContents().get(2);
-		private final RuleCall cInvariantLoadIndexMetadataRefParserRuleCall_1_0_4_2_0 = (RuleCall)cInvariantLoadIndexAssignment_1_0_4_2.eContents().get(0);
-		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
-		private final Keyword cAtomicKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final Keyword cVolatileKeyword_1_1_1 = (Keyword)cGroup_1_1.eContents().get(1);
-		private final Assignment cPointerAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
-		private final RuleCall cPointerTypedValueParserRuleCall_1_1_2_0 = (RuleCall)cPointerAssignment_1_1_2.eContents().get(0);
-		private final Keyword cSinglethreadKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
-		private final Assignment cOrderingAssignment_1_1_4 = (Assignment)cGroup_1_1.eContents().get(4);
-		private final RuleCall cOrderingOrderingParserRuleCall_1_1_4_0 = (RuleCall)cOrderingAssignment_1_1_4.eContents().get(0);
-		private final Assignment cAlignmentAssignment_1_1_5 = (Assignment)cGroup_1_1.eContents().get(5);
-		private final RuleCall cAlignmentAlignParserRuleCall_1_1_5_0 = (RuleCall)cAlignmentAssignment_1_1_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeLoadKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
+		private final Keyword cVolatileKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
+		private final Assignment cPointerAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
+		private final RuleCall cPointerTypedValueParserRuleCall_2_0_1_0 = (RuleCall)cPointerAssignment_2_0_1.eContents().get(0);
+		private final Group cGroup_2_0_2 = (Group)cGroup_2_0.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0_2_0 = (Keyword)cGroup_2_0_2.eContents().get(0);
+		private final Assignment cAlignmentAssignment_2_0_2_1 = (Assignment)cGroup_2_0_2.eContents().get(1);
+		private final RuleCall cAlignmentAlignParserRuleCall_2_0_2_1_0 = (RuleCall)cAlignmentAssignment_2_0_2_1.eContents().get(0);
+		private final Group cGroup_2_0_3 = (Group)cGroup_2_0.eContents().get(3);
+		private final Keyword cCommaKeyword_2_0_3_0 = (Keyword)cGroup_2_0_3.eContents().get(0);
+		private final Keyword cNontemporalKeyword_2_0_3_1 = (Keyword)cGroup_2_0_3.eContents().get(1);
+		private final Assignment cNontemporalIndexAssignment_2_0_3_2 = (Assignment)cGroup_2_0_3.eContents().get(2);
+		private final RuleCall cNontemporalIndexMetadataRefParserRuleCall_2_0_3_2_0 = (RuleCall)cNontemporalIndexAssignment_2_0_3_2.eContents().get(0);
+		private final Group cGroup_2_0_4 = (Group)cGroup_2_0.eContents().get(4);
+		private final Keyword cCommaKeyword_2_0_4_0 = (Keyword)cGroup_2_0_4.eContents().get(0);
+		private final Keyword cInvariantLoadKeyword_2_0_4_1 = (Keyword)cGroup_2_0_4.eContents().get(1);
+		private final Assignment cInvariantLoadIndexAssignment_2_0_4_2 = (Assignment)cGroup_2_0_4.eContents().get(2);
+		private final RuleCall cInvariantLoadIndexMetadataRefParserRuleCall_2_0_4_2_0 = (RuleCall)cInvariantLoadIndexAssignment_2_0_4_2.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
+		private final Keyword cAtomicKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Keyword cVolatileKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
+		private final Assignment cPointerAssignment_2_1_2 = (Assignment)cGroup_2_1.eContents().get(2);
+		private final RuleCall cPointerTypedValueParserRuleCall_2_1_2_0 = (RuleCall)cPointerAssignment_2_1_2.eContents().get(0);
+		private final Keyword cSinglethreadKeyword_2_1_3 = (Keyword)cGroup_2_1.eContents().get(3);
+		private final Assignment cOrderingAssignment_2_1_4 = (Assignment)cGroup_2_1.eContents().get(4);
+		private final RuleCall cOrderingOrderingParserRuleCall_2_1_4_0 = (RuleCall)cOrderingAssignment_2_1_4.eContents().get(0);
+		private final Assignment cAlignmentAssignment_2_1_5 = (Assignment)cGroup_2_1.eContents().get(5);
+		private final RuleCall cAlignmentAlignParserRuleCall_2_1_5_0 = (RuleCall)cAlignmentAssignment_2_1_5.eContents().get(0);
 		
 		//// <result> = load [volatile] <ty>* <pointer>[, align <alignment>][, !nontemporal !<index>][, !invariant.load !<index>]
 		//// <result> = load atomic [volatile] <ty>* <pointer> [singlethread] <ordering>, align <alignment>
 		//// !<index> = !{ i32 1 }
 		//Instruction_load:
-		//	opcode="load" ("volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal"
+		//	name=LocalName opcode="load" ("volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal"
 		//	nontemporalIndex=MetadataRef)? ("," "!invariant.load" invariantLoadIndex=MetadataRef)? | "atomic" "volatile"?
 		//	pointer=TypedValue "singlethread"? ordering=Ordering alignment=Align);
 		public ParserRule getRule() { return rule; }
 
-		//opcode="load" ("volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal" nontemporalIndex=MetadataRef)?
-		//("," "!invariant.load" invariantLoadIndex=MetadataRef)? | "atomic" "volatile"? pointer=TypedValue "singlethread"?
-		//ordering=Ordering alignment=Align)
+		//name=LocalName opcode="load" ("volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal"
+		//nontemporalIndex=MetadataRef)? ("," "!invariant.load" invariantLoadIndex=MetadataRef)? | "atomic" "volatile"?
+		//pointer=TypedValue "singlethread"? ordering=Ordering alignment=Align)
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="load"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"load"
-		public Keyword getOpcodeLoadKeyword_0_0() { return cOpcodeLoadKeyword_0_0; }
+		public Keyword getOpcodeLoadKeyword_1_0() { return cOpcodeLoadKeyword_1_0; }
 
 		//"volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal" nontemporalIndex=MetadataRef)? (","
 		//"!invariant.load" invariantLoadIndex=MetadataRef)? | "atomic" "volatile"? pointer=TypedValue "singlethread"?
 		//ordering=Ordering alignment=Align
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//"volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal" nontemporalIndex=MetadataRef)? (","
 		//"!invariant.load" invariantLoadIndex=MetadataRef)?
-		public Group getGroup_1_0() { return cGroup_1_0; }
+		public Group getGroup_2_0() { return cGroup_2_0; }
 
 		//"volatile"?
-		public Keyword getVolatileKeyword_1_0_0() { return cVolatileKeyword_1_0_0; }
+		public Keyword getVolatileKeyword_2_0_0() { return cVolatileKeyword_2_0_0; }
 
 		//pointer=TypedValue
-		public Assignment getPointerAssignment_1_0_1() { return cPointerAssignment_1_0_1; }
+		public Assignment getPointerAssignment_2_0_1() { return cPointerAssignment_2_0_1; }
 
 		//TypedValue
-		public RuleCall getPointerTypedValueParserRuleCall_1_0_1_0() { return cPointerTypedValueParserRuleCall_1_0_1_0; }
+		public RuleCall getPointerTypedValueParserRuleCall_2_0_1_0() { return cPointerTypedValueParserRuleCall_2_0_1_0; }
 
 		//("," alignment=Align)?
-		public Group getGroup_1_0_2() { return cGroup_1_0_2; }
+		public Group getGroup_2_0_2() { return cGroup_2_0_2; }
 
 		//","
-		public Keyword getCommaKeyword_1_0_2_0() { return cCommaKeyword_1_0_2_0; }
+		public Keyword getCommaKeyword_2_0_2_0() { return cCommaKeyword_2_0_2_0; }
 
 		//alignment=Align
-		public Assignment getAlignmentAssignment_1_0_2_1() { return cAlignmentAssignment_1_0_2_1; }
+		public Assignment getAlignmentAssignment_2_0_2_1() { return cAlignmentAssignment_2_0_2_1; }
 
 		//Align
-		public RuleCall getAlignmentAlignParserRuleCall_1_0_2_1_0() { return cAlignmentAlignParserRuleCall_1_0_2_1_0; }
+		public RuleCall getAlignmentAlignParserRuleCall_2_0_2_1_0() { return cAlignmentAlignParserRuleCall_2_0_2_1_0; }
 
 		//("," "!nontemporal" nontemporalIndex=MetadataRef)?
-		public Group getGroup_1_0_3() { return cGroup_1_0_3; }
+		public Group getGroup_2_0_3() { return cGroup_2_0_3; }
 
 		//","
-		public Keyword getCommaKeyword_1_0_3_0() { return cCommaKeyword_1_0_3_0; }
+		public Keyword getCommaKeyword_2_0_3_0() { return cCommaKeyword_2_0_3_0; }
 
 		//"!nontemporal"
-		public Keyword getNontemporalKeyword_1_0_3_1() { return cNontemporalKeyword_1_0_3_1; }
+		public Keyword getNontemporalKeyword_2_0_3_1() { return cNontemporalKeyword_2_0_3_1; }
 
 		//nontemporalIndex=MetadataRef
-		public Assignment getNontemporalIndexAssignment_1_0_3_2() { return cNontemporalIndexAssignment_1_0_3_2; }
+		public Assignment getNontemporalIndexAssignment_2_0_3_2() { return cNontemporalIndexAssignment_2_0_3_2; }
 
 		//MetadataRef
-		public RuleCall getNontemporalIndexMetadataRefParserRuleCall_1_0_3_2_0() { return cNontemporalIndexMetadataRefParserRuleCall_1_0_3_2_0; }
+		public RuleCall getNontemporalIndexMetadataRefParserRuleCall_2_0_3_2_0() { return cNontemporalIndexMetadataRefParserRuleCall_2_0_3_2_0; }
 
 		//("," "!invariant.load" invariantLoadIndex=MetadataRef)?
-		public Group getGroup_1_0_4() { return cGroup_1_0_4; }
+		public Group getGroup_2_0_4() { return cGroup_2_0_4; }
 
 		//","
-		public Keyword getCommaKeyword_1_0_4_0() { return cCommaKeyword_1_0_4_0; }
+		public Keyword getCommaKeyword_2_0_4_0() { return cCommaKeyword_2_0_4_0; }
 
 		//"!invariant.load"
-		public Keyword getInvariantLoadKeyword_1_0_4_1() { return cInvariantLoadKeyword_1_0_4_1; }
+		public Keyword getInvariantLoadKeyword_2_0_4_1() { return cInvariantLoadKeyword_2_0_4_1; }
 
 		//invariantLoadIndex=MetadataRef
-		public Assignment getInvariantLoadIndexAssignment_1_0_4_2() { return cInvariantLoadIndexAssignment_1_0_4_2; }
+		public Assignment getInvariantLoadIndexAssignment_2_0_4_2() { return cInvariantLoadIndexAssignment_2_0_4_2; }
 
 		//MetadataRef
-		public RuleCall getInvariantLoadIndexMetadataRefParserRuleCall_1_0_4_2_0() { return cInvariantLoadIndexMetadataRefParserRuleCall_1_0_4_2_0; }
+		public RuleCall getInvariantLoadIndexMetadataRefParserRuleCall_2_0_4_2_0() { return cInvariantLoadIndexMetadataRefParserRuleCall_2_0_4_2_0; }
 
 		//"atomic" "volatile"? pointer=TypedValue "singlethread"? ordering=Ordering alignment=Align
-		public Group getGroup_1_1() { return cGroup_1_1; }
+		public Group getGroup_2_1() { return cGroup_2_1; }
 
 		//"atomic"
-		public Keyword getAtomicKeyword_1_1_0() { return cAtomicKeyword_1_1_0; }
+		public Keyword getAtomicKeyword_2_1_0() { return cAtomicKeyword_2_1_0; }
 
 		//"volatile"?
-		public Keyword getVolatileKeyword_1_1_1() { return cVolatileKeyword_1_1_1; }
+		public Keyword getVolatileKeyword_2_1_1() { return cVolatileKeyword_2_1_1; }
 
 		//pointer=TypedValue
-		public Assignment getPointerAssignment_1_1_2() { return cPointerAssignment_1_1_2; }
+		public Assignment getPointerAssignment_2_1_2() { return cPointerAssignment_2_1_2; }
 
 		//TypedValue
-		public RuleCall getPointerTypedValueParserRuleCall_1_1_2_0() { return cPointerTypedValueParserRuleCall_1_1_2_0; }
+		public RuleCall getPointerTypedValueParserRuleCall_2_1_2_0() { return cPointerTypedValueParserRuleCall_2_1_2_0; }
 
 		//"singlethread"?
-		public Keyword getSinglethreadKeyword_1_1_3() { return cSinglethreadKeyword_1_1_3; }
+		public Keyword getSinglethreadKeyword_2_1_3() { return cSinglethreadKeyword_2_1_3; }
 
 		//ordering=Ordering
-		public Assignment getOrderingAssignment_1_1_4() { return cOrderingAssignment_1_1_4; }
+		public Assignment getOrderingAssignment_2_1_4() { return cOrderingAssignment_2_1_4; }
 
 		//Ordering
-		public RuleCall getOrderingOrderingParserRuleCall_1_1_4_0() { return cOrderingOrderingParserRuleCall_1_1_4_0; }
+		public RuleCall getOrderingOrderingParserRuleCall_2_1_4_0() { return cOrderingOrderingParserRuleCall_2_1_4_0; }
 
 		//alignment=Align
-		public Assignment getAlignmentAssignment_1_1_5() { return cAlignmentAssignment_1_1_5; }
+		public Assignment getAlignmentAssignment_2_1_5() { return cAlignmentAssignment_2_1_5; }
 
 		//Align
-		public RuleCall getAlignmentAlignParserRuleCall_1_1_5_0() { return cAlignmentAlignParserRuleCall_1_1_5_0; }
+		public RuleCall getAlignmentAlignParserRuleCall_2_1_5_0() { return cAlignmentAlignParserRuleCall_2_1_5_0; }
 	}
 
 	public class Instruction_storeElements extends AbstractParserRuleElementFinder {
@@ -5580,116 +5688,47 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_cmpxchgElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_cmpxchg");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeCmpxchgKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cVolatileKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cPointerAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPointerTypedValueParserRuleCall_2_0 = (RuleCall)cPointerAssignment_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cComparedWithAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cComparedWithTypedValueParserRuleCall_4_0 = (RuleCall)cComparedWithAssignment_4.eContents().get(0);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cNewValueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cNewValueTypedValueParserRuleCall_6_0 = (RuleCall)cNewValueAssignment_6.eContents().get(0);
-		private final Keyword cSinglethreadKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cOrderingAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cOrderingOrderingParserRuleCall_8_0 = (RuleCall)cOrderingAssignment_8.eContents().get(0);
-		
-		//// cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering>  ; yields {ty}
-		//Instruction_cmpxchg:
-		//	opcode="cmpxchg" "volatile"? pointer=TypedValue "," comparedWith=TypedValue "," newValue=TypedValue "singlethread"?
-		//	ordering=Ordering;
-		public ParserRule getRule() { return rule; }
-
-		//opcode="cmpxchg" "volatile"? pointer=TypedValue "," comparedWith=TypedValue "," newValue=TypedValue "singlethread"?
-		//ordering=Ordering
-		public Group getGroup() { return cGroup; }
-
-		//opcode="cmpxchg"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
-
-		//"cmpxchg"
-		public Keyword getOpcodeCmpxchgKeyword_0_0() { return cOpcodeCmpxchgKeyword_0_0; }
-
-		//"volatile"?
-		public Keyword getVolatileKeyword_1() { return cVolatileKeyword_1; }
-
-		//pointer=TypedValue
-		public Assignment getPointerAssignment_2() { return cPointerAssignment_2; }
-
-		//TypedValue
-		public RuleCall getPointerTypedValueParserRuleCall_2_0() { return cPointerTypedValueParserRuleCall_2_0; }
-
-		//","
-		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
-
-		//comparedWith=TypedValue
-		public Assignment getComparedWithAssignment_4() { return cComparedWithAssignment_4; }
-
-		//TypedValue
-		public RuleCall getComparedWithTypedValueParserRuleCall_4_0() { return cComparedWithTypedValueParserRuleCall_4_0; }
-
-		//","
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
-
-		//newValue=TypedValue
-		public Assignment getNewValueAssignment_6() { return cNewValueAssignment_6; }
-
-		//TypedValue
-		public RuleCall getNewValueTypedValueParserRuleCall_6_0() { return cNewValueTypedValueParserRuleCall_6_0; }
-
-		//"singlethread"?
-		public Keyword getSinglethreadKeyword_7() { return cSinglethreadKeyword_7; }
-
-		//ordering=Ordering
-		public Assignment getOrderingAssignment_8() { return cOrderingAssignment_8; }
-
-		//Ordering
-		public RuleCall getOrderingOrderingParserRuleCall_8_0() { return cOrderingOrderingParserRuleCall_8_0; }
-	}
-
-	public class Instruction_atomicrmwElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_atomicrmw");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeAtomicrmwKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cVolatileKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cOperationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOperationAtomicrmw_operationParserRuleCall_2_0 = (RuleCall)cOperationAssignment_2.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeCmpxchgKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cVolatileKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cPointerAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cPointerTypedValueParserRuleCall_3_0 = (RuleCall)cPointerAssignment_3.eContents().get(0);
 		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cArgumentAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cArgumentTypedValueParserRuleCall_5_0 = (RuleCall)cArgumentAssignment_5.eContents().get(0);
-		private final Keyword cSinglethreadKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cOrderingAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cOrderingOrderingParserRuleCall_7_0 = (RuleCall)cOrderingAssignment_7.eContents().get(0);
+		private final Assignment cComparedWithAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cComparedWithTypedValueParserRuleCall_5_0 = (RuleCall)cComparedWithAssignment_5.eContents().get(0);
+		private final Keyword cCommaKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cNewValueAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cNewValueTypedValueParserRuleCall_7_0 = (RuleCall)cNewValueAssignment_7.eContents().get(0);
+		private final Keyword cSinglethreadKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cOrderingAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cOrderingOrderingParserRuleCall_9_0 = (RuleCall)cOrderingAssignment_9.eContents().get(0);
 		
-		//// atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
-		////                   ; yields {ty}
-		//Instruction_atomicrmw:
-		//	opcode="atomicrmw" "volatile"? operation=Atomicrmw_operation pointer=TypedValue "," argument=TypedValue
+		//// <result> = cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering>  ; yields {ty}
+		//Instruction_cmpxchg:
+		//	name=LocalName opcode="cmpxchg" "volatile"? pointer=TypedValue "," comparedWith=TypedValue "," newValue=TypedValue
 		//	"singlethread"? ordering=Ordering;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="atomicrmw" "volatile"? operation=Atomicrmw_operation pointer=TypedValue "," argument=TypedValue "singlethread"?
-		//ordering=Ordering
+		//name=LocalName opcode="cmpxchg" "volatile"? pointer=TypedValue "," comparedWith=TypedValue "," newValue=TypedValue
+		//"singlethread"? ordering=Ordering
 		public Group getGroup() { return cGroup; }
 
-		//opcode="atomicrmw"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//"atomicrmw"
-		public Keyword getOpcodeAtomicrmwKeyword_0_0() { return cOpcodeAtomicrmwKeyword_0_0; }
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
+		//opcode="cmpxchg"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"cmpxchg"
+		public Keyword getOpcodeCmpxchgKeyword_1_0() { return cOpcodeCmpxchgKeyword_1_0; }
 
 		//"volatile"?
-		public Keyword getVolatileKeyword_1() { return cVolatileKeyword_1; }
-
-		//operation=Atomicrmw_operation
-		public Assignment getOperationAssignment_2() { return cOperationAssignment_2; }
-
-		//Atomicrmw_operation
-		public RuleCall getOperationAtomicrmw_operationParserRuleCall_2_0() { return cOperationAtomicrmw_operationParserRuleCall_2_0; }
+		public Keyword getVolatileKeyword_2() { return cVolatileKeyword_2; }
 
 		//pointer=TypedValue
 		public Assignment getPointerAssignment_3() { return cPointerAssignment_3; }
@@ -5700,20 +5739,105 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
 
-		//argument=TypedValue
-		public Assignment getArgumentAssignment_5() { return cArgumentAssignment_5; }
+		//comparedWith=TypedValue
+		public Assignment getComparedWithAssignment_5() { return cComparedWithAssignment_5; }
 
 		//TypedValue
-		public RuleCall getArgumentTypedValueParserRuleCall_5_0() { return cArgumentTypedValueParserRuleCall_5_0; }
+		public RuleCall getComparedWithTypedValueParserRuleCall_5_0() { return cComparedWithTypedValueParserRuleCall_5_0; }
+
+		//","
+		public Keyword getCommaKeyword_6() { return cCommaKeyword_6; }
+
+		//newValue=TypedValue
+		public Assignment getNewValueAssignment_7() { return cNewValueAssignment_7; }
+
+		//TypedValue
+		public RuleCall getNewValueTypedValueParserRuleCall_7_0() { return cNewValueTypedValueParserRuleCall_7_0; }
 
 		//"singlethread"?
-		public Keyword getSinglethreadKeyword_6() { return cSinglethreadKeyword_6; }
+		public Keyword getSinglethreadKeyword_8() { return cSinglethreadKeyword_8; }
 
 		//ordering=Ordering
-		public Assignment getOrderingAssignment_7() { return cOrderingAssignment_7; }
+		public Assignment getOrderingAssignment_9() { return cOrderingAssignment_9; }
 
 		//Ordering
-		public RuleCall getOrderingOrderingParserRuleCall_7_0() { return cOrderingOrderingParserRuleCall_7_0; }
+		public RuleCall getOrderingOrderingParserRuleCall_9_0() { return cOrderingOrderingParserRuleCall_9_0; }
+	}
+
+	public class Instruction_atomicrmwElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_atomicrmw");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeAtomicrmwKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cVolatileKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cOperationAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOperationAtomicrmw_operationParserRuleCall_3_0 = (RuleCall)cOperationAssignment_3.eContents().get(0);
+		private final Assignment cPointerAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPointerTypedValueParserRuleCall_4_0 = (RuleCall)cPointerAssignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cArgumentAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cArgumentTypedValueParserRuleCall_6_0 = (RuleCall)cArgumentAssignment_6.eContents().get(0);
+		private final Keyword cSinglethreadKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cOrderingAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cOrderingOrderingParserRuleCall_8_0 = (RuleCall)cOrderingAssignment_8.eContents().get(0);
+		
+		//// <result> = atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
+		////                   ; yields {ty}
+		//Instruction_atomicrmw:
+		//	name=LocalName opcode="atomicrmw" "volatile"? operation=Atomicrmw_operation pointer=TypedValue "," argument=TypedValue
+		//	"singlethread"? ordering=Ordering;
+		public ParserRule getRule() { return rule; }
+
+		//name=LocalName opcode="atomicrmw" "volatile"? operation=Atomicrmw_operation pointer=TypedValue "," argument=TypedValue
+		//"singlethread"? ordering=Ordering
+		public Group getGroup() { return cGroup; }
+
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
+		//opcode="atomicrmw"
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+
+		//"atomicrmw"
+		public Keyword getOpcodeAtomicrmwKeyword_1_0() { return cOpcodeAtomicrmwKeyword_1_0; }
+
+		//"volatile"?
+		public Keyword getVolatileKeyword_2() { return cVolatileKeyword_2; }
+
+		//operation=Atomicrmw_operation
+		public Assignment getOperationAssignment_3() { return cOperationAssignment_3; }
+
+		//Atomicrmw_operation
+		public RuleCall getOperationAtomicrmw_operationParserRuleCall_3_0() { return cOperationAtomicrmw_operationParserRuleCall_3_0; }
+
+		//pointer=TypedValue
+		public Assignment getPointerAssignment_4() { return cPointerAssignment_4; }
+
+		//TypedValue
+		public RuleCall getPointerTypedValueParserRuleCall_4_0() { return cPointerTypedValueParserRuleCall_4_0; }
+
+		//","
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+
+		//argument=TypedValue
+		public Assignment getArgumentAssignment_6() { return cArgumentAssignment_6; }
+
+		//TypedValue
+		public RuleCall getArgumentTypedValueParserRuleCall_6_0() { return cArgumentTypedValueParserRuleCall_6_0; }
+
+		//"singlethread"?
+		public Keyword getSinglethreadKeyword_7() { return cSinglethreadKeyword_7; }
+
+		//ordering=Ordering
+		public Assignment getOrderingAssignment_8() { return cOrderingAssignment_8; }
+
+		//Ordering
+		public RuleCall getOrderingOrderingParserRuleCall_8_0() { return cOrderingOrderingParserRuleCall_8_0; }
 	}
 
 	public class Atomicrmw_operationElements extends AbstractParserRuleElementFinder {
@@ -5775,102 +5899,118 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_getelementptrElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_getelementptr");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeGetelementptrKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Keyword cInboundsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cBaseAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cBaseTypedValueParserRuleCall_2_0 = (RuleCall)cBaseAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cIndicesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cIndicesTypedValueParserRuleCall_3_1_0 = (RuleCall)cIndicesAssignment_3_1.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeGetelementptrKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Keyword cInboundsKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cBaseAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cBaseTypedValueParserRuleCall_3_0 = (RuleCall)cBaseAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cIndicesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cIndicesTypedValueParserRuleCall_4_1_0 = (RuleCall)cIndicesAssignment_4_1.eContents().get(0);
 		
 		//// <result> = getelementptr <pty>* <ptrval>{, <ty> <idx>}*
 		//// <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
 		//// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
 		//Instruction_getelementptr:
-		//	opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*;
+		//	name=LocalName opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*
+		//name=LocalName opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="getelementptr"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"getelementptr"
-		public Keyword getOpcodeGetelementptrKeyword_0_0() { return cOpcodeGetelementptrKeyword_0_0; }
+		public Keyword getOpcodeGetelementptrKeyword_1_0() { return cOpcodeGetelementptrKeyword_1_0; }
 
 		//"inbounds"?
-		public Keyword getInboundsKeyword_1() { return cInboundsKeyword_1; }
+		public Keyword getInboundsKeyword_2() { return cInboundsKeyword_2; }
 
 		//base=TypedValue
-		public Assignment getBaseAssignment_2() { return cBaseAssignment_2; }
+		public Assignment getBaseAssignment_3() { return cBaseAssignment_3; }
 
 		//TypedValue
-		public RuleCall getBaseTypedValueParserRuleCall_2_0() { return cBaseTypedValueParserRuleCall_2_0; }
+		public RuleCall getBaseTypedValueParserRuleCall_3_0() { return cBaseTypedValueParserRuleCall_3_0; }
 
 		//("," indices+=TypedValue)*
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_4() { return cGroup_4; }
 
 		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
 
 		//indices+=TypedValue
-		public Assignment getIndicesAssignment_3_1() { return cIndicesAssignment_3_1; }
+		public Assignment getIndicesAssignment_4_1() { return cIndicesAssignment_4_1; }
 
 		//TypedValue
-		public RuleCall getIndicesTypedValueParserRuleCall_3_1_0() { return cIndicesTypedValueParserRuleCall_3_1_0; }
+		public RuleCall getIndicesTypedValueParserRuleCall_4_1_0() { return cIndicesTypedValueParserRuleCall_4_1_0; }
 	}
 
 	public class ConversionInstructionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConversionInstruction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cOpcodeConvertionOpcodeParserRuleCall_0_0 = (RuleCall)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cFromTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFromTypeTypeParserRuleCall_1_0 = (RuleCall)cFromTypeAssignment_1.eContents().get(0);
-		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueValueRefParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
-		private final Keyword cToKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTargetTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTargetTypeTypeParserRuleCall_4_0 = (RuleCall)cTargetTypeAssignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOpcodeConvertionOpcodeParserRuleCall_1_0 = (RuleCall)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cFromTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFromTypeTypeParserRuleCall_2_0 = (RuleCall)cFromTypeAssignment_2.eContents().get(0);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueValueRefParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final Keyword cToKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTargetTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTargetTypeTypeParserRuleCall_5_0 = (RuleCall)cTargetTypeAssignment_5.eContents().get(0);
 		
 		//ConversionInstruction: // Merged since they all look exactly the same except the opcode
-		//	opcode=ConvertionOpcode fromType=Type value=ValueRef "to" targetType=Type;
+		//	name=LocalName opcode=ConvertionOpcode fromType=Type value=ValueRef "to" targetType=Type;
 		public ParserRule getRule() { return rule; }
 
 		//// Merged since they all look exactly the same except the opcode
-		//opcode=ConvertionOpcode fromType=Type value=ValueRef "to" targetType=Type
+		//name=LocalName opcode=ConvertionOpcode fromType=Type value=ValueRef "to" targetType=Type
 		public Group getGroup() { return cGroup; }
 
 		//// Merged since they all look exactly the same except the opcode
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode=ConvertionOpcode
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//ConvertionOpcode
-		public RuleCall getOpcodeConvertionOpcodeParserRuleCall_0_0() { return cOpcodeConvertionOpcodeParserRuleCall_0_0; }
+		public RuleCall getOpcodeConvertionOpcodeParserRuleCall_1_0() { return cOpcodeConvertionOpcodeParserRuleCall_1_0; }
 
 		//fromType=Type
-		public Assignment getFromTypeAssignment_1() { return cFromTypeAssignment_1; }
+		public Assignment getFromTypeAssignment_2() { return cFromTypeAssignment_2; }
 
 		//Type
-		public RuleCall getFromTypeTypeParserRuleCall_1_0() { return cFromTypeTypeParserRuleCall_1_0; }
+		public RuleCall getFromTypeTypeParserRuleCall_2_0() { return cFromTypeTypeParserRuleCall_2_0; }
 
 		//value=ValueRef
-		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
 
 		//ValueRef
-		public RuleCall getValueValueRefParserRuleCall_2_0() { return cValueValueRefParserRuleCall_2_0; }
+		public RuleCall getValueValueRefParserRuleCall_3_0() { return cValueValueRefParserRuleCall_3_0; }
 
 		//"to"
-		public Keyword getToKeyword_3() { return cToKeyword_3; }
+		public Keyword getToKeyword_4() { return cToKeyword_4; }
 
 		//targetType=Type
-		public Assignment getTargetTypeAssignment_4() { return cTargetTypeAssignment_4; }
+		public Assignment getTargetTypeAssignment_5() { return cTargetTypeAssignment_5; }
 
 		//Type
-		public RuleCall getTargetTypeTypeParserRuleCall_4_0() { return cTargetTypeTypeParserRuleCall_4_0; }
+		public RuleCall getTargetTypeTypeParserRuleCall_5_0() { return cTargetTypeTypeParserRuleCall_5_0; }
 	}
 
 	public class ConvertionOpcodeElements extends AbstractParserRuleElementFinder {
@@ -5974,58 +6114,66 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_icmpElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_icmp");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeIcmpKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionIcmpConditionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeIcmpKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cConditionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cConditionIcmpConditionParserRuleCall_2_0 = (RuleCall)cConditionAssignment_2.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = icmp <cond> <ty> <op1>, <op2>   ; yields {i1} or {<N x i1>}:result
 		//Instruction_icmp:
-		//	opcode="icmp" condition=IcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="icmp" condition=IcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="icmp" condition=IcmpCondition type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="icmp" condition=IcmpCondition type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="icmp"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"icmp"
-		public Keyword getOpcodeIcmpKeyword_0_0() { return cOpcodeIcmpKeyword_0_0; }
+		public Keyword getOpcodeIcmpKeyword_1_0() { return cOpcodeIcmpKeyword_1_0; }
 
 		//condition=IcmpCondition
-		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
+		public Assignment getConditionAssignment_2() { return cConditionAssignment_2; }
 
 		//IcmpCondition
-		public RuleCall getConditionIcmpConditionParserRuleCall_1_0() { return cConditionIcmpConditionParserRuleCall_1_0; }
+		public RuleCall getConditionIcmpConditionParserRuleCall_2_0() { return cConditionIcmpConditionParserRuleCall_2_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class IcmpConditionElements extends AbstractParserRuleElementFinder {
@@ -6083,58 +6231,66 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_fcmpElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_fcmp");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeFcmpKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionFcmpConditionParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cOp1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cOp1ValueRefParserRuleCall_3_0 = (RuleCall)cOp1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOp2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOp2ValueRefParserRuleCall_5_0 = (RuleCall)cOp2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeFcmpKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cConditionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cConditionFcmpConditionParserRuleCall_2_0 = (RuleCall)cConditionAssignment_2.eContents().get(0);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cOp1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOp1ValueRefParserRuleCall_4_0 = (RuleCall)cOp1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOp2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOp2ValueRefParserRuleCall_6_0 = (RuleCall)cOp2Assignment_6.eContents().get(0);
 		
 		//// <result> = fcmp <cond> <ty> <op1>, <op2>     ; yields {i1} or {<N x i1>}:result
 		//Instruction_fcmp:
-		//	opcode="fcmp" condition=FcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
+		//	name=LocalName opcode="fcmp" condition=FcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="fcmp" condition=FcmpCondition type=Type op1=ValueRef "," op2=ValueRef
+		//name=LocalName opcode="fcmp" condition=FcmpCondition type=Type op1=ValueRef "," op2=ValueRef
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="fcmp"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"fcmp"
-		public Keyword getOpcodeFcmpKeyword_0_0() { return cOpcodeFcmpKeyword_0_0; }
+		public Keyword getOpcodeFcmpKeyword_1_0() { return cOpcodeFcmpKeyword_1_0; }
 
 		//condition=FcmpCondition
-		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
+		public Assignment getConditionAssignment_2() { return cConditionAssignment_2; }
 
 		//FcmpCondition
-		public RuleCall getConditionFcmpConditionParserRuleCall_1_0() { return cConditionFcmpConditionParserRuleCall_1_0; }
+		public RuleCall getConditionFcmpConditionParserRuleCall_2_0() { return cConditionFcmpConditionParserRuleCall_2_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
 
 		//op1=ValueRef
-		public Assignment getOp1Assignment_3() { return cOp1Assignment_3; }
+		public Assignment getOp1Assignment_4() { return cOp1Assignment_4; }
 
 		//ValueRef
-		public RuleCall getOp1ValueRefParserRuleCall_3_0() { return cOp1ValueRefParserRuleCall_3_0; }
+		public RuleCall getOp1ValueRefParserRuleCall_4_0() { return cOp1ValueRefParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//op2=ValueRef
-		public Assignment getOp2Assignment_5() { return cOp2Assignment_5; }
+		public Assignment getOp2Assignment_6() { return cOp2Assignment_6; }
 
 		//ValueRef
-		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
+		public RuleCall getOp2ValueRefParserRuleCall_6_0() { return cOp2ValueRefParserRuleCall_6_0; }
 	}
 
 	public class FcmpConditionElements extends AbstractParserRuleElementFinder {
@@ -6213,233 +6369,277 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_phiElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_phi");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodePhiKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftSquareBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cValuesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cValuesValueRefParserRuleCall_2_1_0 = (RuleCall)cValuesAssignment_2_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Assignment cLabelsAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
-		private final RuleCall cLabelsBasicBlockRefParserRuleCall_2_3_0 = (RuleCall)cLabelsAssignment_2_3.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodePhiKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Keyword cLeftSquareBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cValuesAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cValuesValueRefParserRuleCall_3_2_0 = (RuleCall)cValuesAssignment_3_2.eContents().get(0);
-		private final Keyword cCommaKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
-		private final Assignment cLabelsAssignment_3_4 = (Assignment)cGroup_3.eContents().get(4);
-		private final RuleCall cLabelsBasicBlockRefParserRuleCall_3_4_0 = (RuleCall)cLabelsAssignment_3_4.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_3_5 = (Keyword)cGroup_3.eContents().get(5);
+		private final Keyword cLeftSquareBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cValuesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cValuesValueRefParserRuleCall_3_1_0 = (RuleCall)cValuesAssignment_3_1.eContents().get(0);
+		private final Keyword cCommaKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Assignment cLabelsAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
+		private final RuleCall cLabelsBasicBlockRefParserRuleCall_3_3_0 = (RuleCall)cLabelsAssignment_3_3.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cValuesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cValuesValueRefParserRuleCall_4_2_0 = (RuleCall)cValuesAssignment_4_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		private final Assignment cLabelsAssignment_4_4 = (Assignment)cGroup_4.eContents().get(4);
+		private final RuleCall cLabelsBasicBlockRefParserRuleCall_4_4_0 = (RuleCall)cLabelsAssignment_4_4.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_4_5 = (Keyword)cGroup_4.eContents().get(5);
 		
 		//// <result> = phi <ty> [ <val0>, <label0>], ...
 		//Instruction_phi:
-		//	opcode="phi" type=Type ("[" values+=ValueRef "," labels+=BasicBlockRef "]") ("," "[" values+=ValueRef ","
-		//	labels+=BasicBlockRef "]")*;
+		//	name=LocalName opcode="phi" type=Type ("[" values+=ValueRef "," labels+=BasicBlockRef "]") ("," "[" values+=ValueRef
+		//	"," labels+=BasicBlockRef "]")*;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="phi" type=Type ("[" values+=ValueRef "," labels+=BasicBlockRef "]") ("," "[" values+=ValueRef ","
+		//name=LocalName opcode="phi" type=Type ("[" values+=ValueRef "," labels+=BasicBlockRef "]") ("," "[" values+=ValueRef ","
 		//labels+=BasicBlockRef "]")*
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="phi"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"phi"
-		public Keyword getOpcodePhiKeyword_0_0() { return cOpcodePhiKeyword_0_0; }
+		public Keyword getOpcodePhiKeyword_1_0() { return cOpcodePhiKeyword_1_0; }
 
 		//type=Type
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_1_0() { return cTypeTypeParserRuleCall_1_0; }
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
 
 		//"[" values+=ValueRef "," labels+=BasicBlockRef "]"
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"["
-		public Keyword getLeftSquareBracketKeyword_2_0() { return cLeftSquareBracketKeyword_2_0; }
-
-		//values+=ValueRef
-		public Assignment getValuesAssignment_2_1() { return cValuesAssignment_2_1; }
-
-		//ValueRef
-		public RuleCall getValuesValueRefParserRuleCall_2_1_0() { return cValuesValueRefParserRuleCall_2_1_0; }
-
-		//","
-		public Keyword getCommaKeyword_2_2() { return cCommaKeyword_2_2; }
-
-		//labels+=BasicBlockRef
-		public Assignment getLabelsAssignment_2_3() { return cLabelsAssignment_2_3; }
-
-		//BasicBlockRef
-		public RuleCall getLabelsBasicBlockRefParserRuleCall_2_3_0() { return cLabelsBasicBlockRefParserRuleCall_2_3_0; }
-
-		//"]"
-		public Keyword getRightSquareBracketKeyword_2_4() { return cRightSquareBracketKeyword_2_4; }
-
-		//("," "[" values+=ValueRef "," labels+=BasicBlockRef "]")*
 		public Group getGroup_3() { return cGroup_3; }
 
-		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
-
 		//"["
-		public Keyword getLeftSquareBracketKeyword_3_1() { return cLeftSquareBracketKeyword_3_1; }
+		public Keyword getLeftSquareBracketKeyword_3_0() { return cLeftSquareBracketKeyword_3_0; }
 
 		//values+=ValueRef
-		public Assignment getValuesAssignment_3_2() { return cValuesAssignment_3_2; }
+		public Assignment getValuesAssignment_3_1() { return cValuesAssignment_3_1; }
 
 		//ValueRef
-		public RuleCall getValuesValueRefParserRuleCall_3_2_0() { return cValuesValueRefParserRuleCall_3_2_0; }
+		public RuleCall getValuesValueRefParserRuleCall_3_1_0() { return cValuesValueRefParserRuleCall_3_1_0; }
 
 		//","
-		public Keyword getCommaKeyword_3_3() { return cCommaKeyword_3_3; }
+		public Keyword getCommaKeyword_3_2() { return cCommaKeyword_3_2; }
 
 		//labels+=BasicBlockRef
-		public Assignment getLabelsAssignment_3_4() { return cLabelsAssignment_3_4; }
+		public Assignment getLabelsAssignment_3_3() { return cLabelsAssignment_3_3; }
 
 		//BasicBlockRef
-		public RuleCall getLabelsBasicBlockRefParserRuleCall_3_4_0() { return cLabelsBasicBlockRefParserRuleCall_3_4_0; }
+		public RuleCall getLabelsBasicBlockRefParserRuleCall_3_3_0() { return cLabelsBasicBlockRefParserRuleCall_3_3_0; }
 
 		//"]"
-		public Keyword getRightSquareBracketKeyword_3_5() { return cRightSquareBracketKeyword_3_5; }
+		public Keyword getRightSquareBracketKeyword_3_4() { return cRightSquareBracketKeyword_3_4; }
+
+		//("," "[" values+=ValueRef "," labels+=BasicBlockRef "]")*
+		public Group getGroup_4() { return cGroup_4; }
+
+		//","
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_4_1() { return cLeftSquareBracketKeyword_4_1; }
+
+		//values+=ValueRef
+		public Assignment getValuesAssignment_4_2() { return cValuesAssignment_4_2; }
+
+		//ValueRef
+		public RuleCall getValuesValueRefParserRuleCall_4_2_0() { return cValuesValueRefParserRuleCall_4_2_0; }
+
+		//","
+		public Keyword getCommaKeyword_4_3() { return cCommaKeyword_4_3; }
+
+		//labels+=BasicBlockRef
+		public Assignment getLabelsAssignment_4_4() { return cLabelsAssignment_4_4; }
+
+		//BasicBlockRef
+		public RuleCall getLabelsBasicBlockRefParserRuleCall_4_4_0() { return cLabelsBasicBlockRefParserRuleCall_4_4_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_4_5() { return cRightSquareBracketKeyword_4_5; }
 	}
 
 	public class Instruction_selectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_select");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeSelectKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cConditionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConditionTypedValueParserRuleCall_1_0 = (RuleCall)cConditionAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cValue1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cValue1TypedValueParserRuleCall_3_0 = (RuleCall)cValue1Assignment_3.eContents().get(0);
-		private final Keyword cCommaKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cValue2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cValue2TypedValueParserRuleCall_5_0 = (RuleCall)cValue2Assignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeSelectKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cConditionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cConditionTypedValueParserRuleCall_2_0 = (RuleCall)cConditionAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValue1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValue1TypedValueParserRuleCall_4_0 = (RuleCall)cValue1Assignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cValue2Assignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cValue2TypedValueParserRuleCall_6_0 = (RuleCall)cValue2Assignment_6.eContents().get(0);
 		
 		//// <result> = select selty <cond>, <ty> <val1>, <ty> <val2>             ; yields ty
 		//// selty is either i1 or {<N x i1>}
 		//Instruction_select:
-		//	opcode="select" condition=TypedValue "," value1=TypedValue "," value2=TypedValue;
+		//	name=LocalName opcode="select" condition=TypedValue "," value1=TypedValue "," value2=TypedValue;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="select" condition=TypedValue "," value1=TypedValue "," value2=TypedValue
+		//name=LocalName opcode="select" condition=TypedValue "," value1=TypedValue "," value2=TypedValue
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="select"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"select"
-		public Keyword getOpcodeSelectKeyword_0_0() { return cOpcodeSelectKeyword_0_0; }
+		public Keyword getOpcodeSelectKeyword_1_0() { return cOpcodeSelectKeyword_1_0; }
 
 		//condition=TypedValue
-		public Assignment getConditionAssignment_1() { return cConditionAssignment_1; }
+		public Assignment getConditionAssignment_2() { return cConditionAssignment_2; }
 
 		//TypedValue
-		public RuleCall getConditionTypedValueParserRuleCall_1_0() { return cConditionTypedValueParserRuleCall_1_0; }
+		public RuleCall getConditionTypedValueParserRuleCall_2_0() { return cConditionTypedValueParserRuleCall_2_0; }
 
 		//","
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 
 		//value1=TypedValue
-		public Assignment getValue1Assignment_3() { return cValue1Assignment_3; }
+		public Assignment getValue1Assignment_4() { return cValue1Assignment_4; }
 
 		//TypedValue
-		public RuleCall getValue1TypedValueParserRuleCall_3_0() { return cValue1TypedValueParserRuleCall_3_0; }
+		public RuleCall getValue1TypedValueParserRuleCall_4_0() { return cValue1TypedValueParserRuleCall_4_0; }
 
 		//","
-		public Keyword getCommaKeyword_4() { return cCommaKeyword_4; }
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
 		//value2=TypedValue
-		public Assignment getValue2Assignment_5() { return cValue2Assignment_5; }
+		public Assignment getValue2Assignment_6() { return cValue2Assignment_6; }
 
 		//TypedValue
-		public RuleCall getValue2TypedValueParserRuleCall_5_0() { return cValue2TypedValueParserRuleCall_5_0; }
+		public RuleCall getValue2TypedValueParserRuleCall_6_0() { return cValue2TypedValueParserRuleCall_6_0; }
+	}
+
+	public class Instruction_callElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_call");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cInstruction_call_nonVoidParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cInstruction_call_voidParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Instruction_call:
+		//	Instruction_call_nonVoid | Instruction_call_void;
+		public ParserRule getRule() { return rule; }
+
+		//Instruction_call_nonVoid | Instruction_call_void
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Instruction_call_nonVoid
+		public RuleCall getInstruction_call_nonVoidParserRuleCall_0() { return cInstruction_call_nonVoidParserRuleCall_0; }
+
+		//Instruction_call_void
+		public RuleCall getInstruction_call_voidParserRuleCall_1() { return cInstruction_call_voidParserRuleCall_1; }
 	}
 
 	public class Instruction_call_nonVoidElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_call_nonVoid");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cIsTailAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cIsTailTailKeyword_0_0 = (Keyword)cIsTailAssignment_0.eContents().get(0);
-		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cOpcodeCallKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
-		private final Assignment cCconvAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCconvCConvParserRuleCall_2_0 = (RuleCall)cCconvAssignment_2.eContents().get(0);
-		private final Assignment cReturnAttributesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cReturnAttributesParameterAttributesParserRuleCall_3_0 = (RuleCall)cReturnAttributesAssignment_3.eContents().get(0);
-		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTypeNonVoidTypeParserRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
-		private final Assignment cCalleeAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cCalleeCalleeParserRuleCall_5_0 = (RuleCall)cCalleeAssignment_5.eContents().get(0);
-		private final Assignment cArgsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cArgsArgListParserRuleCall_6_0 = (RuleCall)cArgsAssignment_6.eContents().get(0);
-		private final Assignment cFunctionAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFunctionAttributesFunctionAttributesParserRuleCall_7_0 = (RuleCall)cFunctionAttributesAssignment_7.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cIsTailAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cIsTailTailKeyword_1_0 = (Keyword)cIsTailAssignment_1.eContents().get(0);
+		private final Assignment cOpcodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cOpcodeCallKeyword_2_0 = (Keyword)cOpcodeAssignment_2.eContents().get(0);
+		private final Assignment cCconvAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cCconvCConvParserRuleCall_3_0 = (RuleCall)cCconvAssignment_3.eContents().get(0);
+		private final Assignment cReturnAttributesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cReturnAttributesParameterAttributesParserRuleCall_4_0 = (RuleCall)cReturnAttributesAssignment_4.eContents().get(0);
+		private final Assignment cTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTypeNonVoidTypeParserRuleCall_5_0 = (RuleCall)cTypeAssignment_5.eContents().get(0);
+		private final Assignment cCalleeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cCalleeCalleeParserRuleCall_6_0 = (RuleCall)cCalleeAssignment_6.eContents().get(0);
+		private final Assignment cArgsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cArgsArgListParserRuleCall_7_0 = (RuleCall)cArgsAssignment_7.eContents().get(0);
+		private final Assignment cFunctionAttributesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cFunctionAttributesFunctionAttributesParserRuleCall_8_0 = (RuleCall)cFunctionAttributesAssignment_8.eContents().get(0);
 		
 		//// <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 		//Instruction_call_nonVoid:
-		//	isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType callee=Callee
-		//	args=ArgList functionAttributes=FunctionAttributes?;
+		//	name=LocalName isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType
+		//	callee=Callee args=ArgList functionAttributes=FunctionAttributes?;
 		public ParserRule getRule() { return rule; }
 
-		//isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType callee=Callee
-		//args=ArgList functionAttributes=FunctionAttributes?
+		//name=LocalName isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType
+		//callee=Callee args=ArgList functionAttributes=FunctionAttributes?
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//isTail?="tail"?
-		public Assignment getIsTailAssignment_0() { return cIsTailAssignment_0; }
+		public Assignment getIsTailAssignment_1() { return cIsTailAssignment_1; }
 
 		//"tail"
-		public Keyword getIsTailTailKeyword_0_0() { return cIsTailTailKeyword_0_0; }
+		public Keyword getIsTailTailKeyword_1_0() { return cIsTailTailKeyword_1_0; }
 
 		//opcode="call"
-		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
+		public Assignment getOpcodeAssignment_2() { return cOpcodeAssignment_2; }
 
 		//"call"
-		public Keyword getOpcodeCallKeyword_1_0() { return cOpcodeCallKeyword_1_0; }
+		public Keyword getOpcodeCallKeyword_2_0() { return cOpcodeCallKeyword_2_0; }
 
 		//cconv=CConv?
-		public Assignment getCconvAssignment_2() { return cCconvAssignment_2; }
+		public Assignment getCconvAssignment_3() { return cCconvAssignment_3; }
 
 		//CConv
-		public RuleCall getCconvCConvParserRuleCall_2_0() { return cCconvCConvParserRuleCall_2_0; }
+		public RuleCall getCconvCConvParserRuleCall_3_0() { return cCconvCConvParserRuleCall_3_0; }
 
 		//returnAttributes=ParameterAttributes?
-		public Assignment getReturnAttributesAssignment_3() { return cReturnAttributesAssignment_3; }
+		public Assignment getReturnAttributesAssignment_4() { return cReturnAttributesAssignment_4; }
 
 		//ParameterAttributes
-		public RuleCall getReturnAttributesParameterAttributesParserRuleCall_3_0() { return cReturnAttributesParameterAttributesParserRuleCall_3_0; }
+		public RuleCall getReturnAttributesParameterAttributesParserRuleCall_4_0() { return cReturnAttributesParameterAttributesParserRuleCall_4_0; }
 
 		//type=NonVoidType
-		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
+		public Assignment getTypeAssignment_5() { return cTypeAssignment_5; }
 
 		//NonVoidType
-		public RuleCall getTypeNonVoidTypeParserRuleCall_4_0() { return cTypeNonVoidTypeParserRuleCall_4_0; }
+		public RuleCall getTypeNonVoidTypeParserRuleCall_5_0() { return cTypeNonVoidTypeParserRuleCall_5_0; }
 
 		//callee=Callee
-		public Assignment getCalleeAssignment_5() { return cCalleeAssignment_5; }
+		public Assignment getCalleeAssignment_6() { return cCalleeAssignment_6; }
 
 		//Callee
-		public RuleCall getCalleeCalleeParserRuleCall_5_0() { return cCalleeCalleeParserRuleCall_5_0; }
+		public RuleCall getCalleeCalleeParserRuleCall_6_0() { return cCalleeCalleeParserRuleCall_6_0; }
 
 		//args=ArgList
-		public Assignment getArgsAssignment_6() { return cArgsAssignment_6; }
+		public Assignment getArgsAssignment_7() { return cArgsAssignment_7; }
 
 		//ArgList
-		public RuleCall getArgsArgListParserRuleCall_6_0() { return cArgsArgListParserRuleCall_6_0; }
+		public RuleCall getArgsArgListParserRuleCall_7_0() { return cArgsArgListParserRuleCall_7_0; }
 
 		//functionAttributes=FunctionAttributes?
-		public Assignment getFunctionAttributesAssignment_7() { return cFunctionAttributesAssignment_7; }
+		public Assignment getFunctionAttributesAssignment_8() { return cFunctionAttributesAssignment_8; }
 
 		//FunctionAttributes
-		public RuleCall getFunctionAttributesFunctionAttributesParserRuleCall_7_0() { return cFunctionAttributesFunctionAttributesParserRuleCall_7_0; }
+		public RuleCall getFunctionAttributesFunctionAttributesParserRuleCall_8_0() { return cFunctionAttributesFunctionAttributesParserRuleCall_8_0; }
 	}
 
 	public class Instruction_call_voidElements extends AbstractParserRuleElementFinder {
@@ -6462,6 +6662,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFunctionAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cFunctionAttributesFunctionAttributesParserRuleCall_7_0 = (RuleCall)cFunctionAttributesAssignment_7.eContents().get(0);
 		
+		//// [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 		//Instruction_call_void:
 		//	isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=VoidType callee=Callee
 		//	args=ArgList functionAttributes=FunctionAttributes?;
@@ -6643,112 +6844,128 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	public class Instruction_va_argElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_va_arg");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeVa_argKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cArglistAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cArglistTypedValueParserRuleCall_1_0 = (RuleCall)cArglistAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cTypeTypeParserRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeVa_argKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cArglistAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cArglistTypedValueParserRuleCall_2_0 = (RuleCall)cArglistAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTypeTypeParserRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
 		
 		//// <resultval> = va_arg <va_list*> <arglist>, <argty>
 		//Instruction_va_arg:
-		//	opcode="va_arg" arglist=TypedValue "," type=Type;
+		//	name=LocalName opcode="va_arg" arglist=TypedValue "," type=Type;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="va_arg" arglist=TypedValue "," type=Type
+		//name=LocalName opcode="va_arg" arglist=TypedValue "," type=Type
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="va_arg"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"va_arg"
-		public Keyword getOpcodeVa_argKeyword_0_0() { return cOpcodeVa_argKeyword_0_0; }
+		public Keyword getOpcodeVa_argKeyword_1_0() { return cOpcodeVa_argKeyword_1_0; }
 
 		//arglist=TypedValue
-		public Assignment getArglistAssignment_1() { return cArglistAssignment_1; }
+		public Assignment getArglistAssignment_2() { return cArglistAssignment_2; }
 
 		//TypedValue
-		public RuleCall getArglistTypedValueParserRuleCall_1_0() { return cArglistTypedValueParserRuleCall_1_0; }
+		public RuleCall getArglistTypedValueParserRuleCall_2_0() { return cArglistTypedValueParserRuleCall_2_0; }
 
 		//","
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 
 		//type=Type
-		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
 
 		//Type
-		public RuleCall getTypeTypeParserRuleCall_3_0() { return cTypeTypeParserRuleCall_3_0; }
+		public RuleCall getTypeTypeParserRuleCall_4_0() { return cTypeTypeParserRuleCall_4_0; }
 	}
 
 	public class Instruction_landingpadElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_landingpad");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOpcodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cOpcodeLandingpadKeyword_0_0 = (Keyword)cOpcodeAssignment_0.eContents().get(0);
-		private final Assignment cResultTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cResultTypeTypeParserRuleCall_1_0 = (RuleCall)cResultTypeAssignment_1.eContents().get(0);
-		private final Keyword cPersonalityKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPersonalityAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPersonalityTypedValueParserRuleCall_3_0 = (RuleCall)cPersonalityAssignment_3.eContents().get(0);
-		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
-		private final Assignment cClausesAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
-		private final RuleCall cClausesLandingpadClauseParserRuleCall_4_0_0 = (RuleCall)cClausesAssignment_4_0.eContents().get(0);
-		private final Keyword cCleanupKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
-		private final Assignment cClausesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cClausesLandingpadClauseParserRuleCall_5_0 = (RuleCall)cClausesAssignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLocalNameParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cOpcodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cOpcodeLandingpadKeyword_1_0 = (Keyword)cOpcodeAssignment_1.eContents().get(0);
+		private final Assignment cResultTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cResultTypeTypeParserRuleCall_2_0 = (RuleCall)cResultTypeAssignment_2.eContents().get(0);
+		private final Keyword cPersonalityKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPersonalityAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPersonalityTypedValueParserRuleCall_4_0 = (RuleCall)cPersonalityAssignment_4.eContents().get(0);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Assignment cClausesAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cClausesLandingpadClauseParserRuleCall_5_0_0 = (RuleCall)cClausesAssignment_5_0.eContents().get(0);
+		private final Keyword cCleanupKeyword_5_1 = (Keyword)cAlternatives_5.eContents().get(1);
+		private final Assignment cClausesAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cClausesLandingpadClauseParserRuleCall_6_0 = (RuleCall)cClausesAssignment_6.eContents().get(0);
 		
 		//// <resultval> = landingpad <resultty> personality <type> <pers_fn> <clause>+
 		//// <resultval> = landingpad <resultty> personality <type> <pers_fn> cleanup <clause>*
 		//// <clause> := catch <type> <value>
 		//// <clause> := filter <array constant type> <array constant>
 		//Instruction_landingpad:
-		//	opcode="landingpad" resultType=Type "personality" personality=TypedValue (clauses+=LandingpadClause | "cleanup")
-		//	clauses+=LandingpadClause*;
+		//	name=LocalName opcode="landingpad" resultType=Type "personality" personality=TypedValue (clauses+=LandingpadClause |
+		//	"cleanup") clauses+=LandingpadClause*;
 		public ParserRule getRule() { return rule; }
 
-		//opcode="landingpad" resultType=Type "personality" personality=TypedValue (clauses+=LandingpadClause | "cleanup")
-		//clauses+=LandingpadClause*
+		//name=LocalName opcode="landingpad" resultType=Type "personality" personality=TypedValue (clauses+=LandingpadClause |
+		//"cleanup") clauses+=LandingpadClause*
 		public Group getGroup() { return cGroup; }
 
+		//name=LocalName
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//LocalName
+		public RuleCall getNameLocalNameParserRuleCall_0_0() { return cNameLocalNameParserRuleCall_0_0; }
+
 		//opcode="landingpad"
-		public Assignment getOpcodeAssignment_0() { return cOpcodeAssignment_0; }
+		public Assignment getOpcodeAssignment_1() { return cOpcodeAssignment_1; }
 
 		//"landingpad"
-		public Keyword getOpcodeLandingpadKeyword_0_0() { return cOpcodeLandingpadKeyword_0_0; }
+		public Keyword getOpcodeLandingpadKeyword_1_0() { return cOpcodeLandingpadKeyword_1_0; }
 
 		//resultType=Type
-		public Assignment getResultTypeAssignment_1() { return cResultTypeAssignment_1; }
+		public Assignment getResultTypeAssignment_2() { return cResultTypeAssignment_2; }
 
 		//Type
-		public RuleCall getResultTypeTypeParserRuleCall_1_0() { return cResultTypeTypeParserRuleCall_1_0; }
+		public RuleCall getResultTypeTypeParserRuleCall_2_0() { return cResultTypeTypeParserRuleCall_2_0; }
 
 		//"personality"
-		public Keyword getPersonalityKeyword_2() { return cPersonalityKeyword_2; }
+		public Keyword getPersonalityKeyword_3() { return cPersonalityKeyword_3; }
 
 		//personality=TypedValue
-		public Assignment getPersonalityAssignment_3() { return cPersonalityAssignment_3; }
+		public Assignment getPersonalityAssignment_4() { return cPersonalityAssignment_4; }
 
 		//TypedValue
-		public RuleCall getPersonalityTypedValueParserRuleCall_3_0() { return cPersonalityTypedValueParserRuleCall_3_0; }
+		public RuleCall getPersonalityTypedValueParserRuleCall_4_0() { return cPersonalityTypedValueParserRuleCall_4_0; }
 
 		//clauses+=LandingpadClause | "cleanup"
-		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 
 		//clauses+=LandingpadClause
-		public Assignment getClausesAssignment_4_0() { return cClausesAssignment_4_0; }
+		public Assignment getClausesAssignment_5_0() { return cClausesAssignment_5_0; }
 
 		//LandingpadClause
-		public RuleCall getClausesLandingpadClauseParserRuleCall_4_0_0() { return cClausesLandingpadClauseParserRuleCall_4_0_0; }
+		public RuleCall getClausesLandingpadClauseParserRuleCall_5_0_0() { return cClausesLandingpadClauseParserRuleCall_5_0_0; }
 
 		//"cleanup"
-		public Keyword getCleanupKeyword_4_1() { return cCleanupKeyword_4_1; }
+		public Keyword getCleanupKeyword_5_1() { return cCleanupKeyword_5_1; }
 
 		//clauses+=LandingpadClause*
-		public Assignment getClausesAssignment_5() { return cClausesAssignment_5; }
+		public Assignment getClausesAssignment_6() { return cClausesAssignment_6; }
 
 		//LandingpadClause
-		public RuleCall getClausesLandingpadClauseParserRuleCall_5_0() { return cClausesLandingpadClauseParserRuleCall_5_0; }
+		public RuleCall getClausesLandingpadClauseParserRuleCall_6_0() { return cClausesLandingpadClauseParserRuleCall_6_0; }
 	}
 
 	public class LandingpadClauseElements extends AbstractParserRuleElementFinder {
@@ -8165,7 +8382,6 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	private AggregateInstructionElements pAggregateInstruction;
 	private Instruction_extractvalueElements pInstruction_extractvalue;
 	private Instruction_insertvalueElements pInstruction_insertvalue;
-	private MemoryInstructionElements pMemoryInstruction;
 	private Instruction_allocaElements pInstruction_alloca;
 	private Instruction_loadElements pInstruction_load;
 	private Instruction_storeElements pInstruction_store;
@@ -8183,6 +8399,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	private FcmpConditionElements pFcmpCondition;
 	private Instruction_phiElements pInstruction_phi;
 	private Instruction_selectElements pInstruction_select;
+	private Instruction_callElements pInstruction_call;
 	private Instruction_call_nonVoidElements pInstruction_call_nonVoid;
 	private Instruction_call_voidElements pInstruction_call_void;
 	private ArgListElements pArgList;
@@ -8910,7 +9127,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//StartingInstruction:
-	//	name=LocalName instruction=Instruction_phi metadata+=MetadataSuffix*;
+	//	Instruction_phi metadata+=MetadataSuffix*;
 	public StartingInstructionElements getStartingInstructionAccess() {
 		return (pStartingInstruction != null) ? pStartingInstruction : (pStartingInstruction = new StartingInstructionElements());
 	}
@@ -8920,8 +9137,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MiddleInstruction:
-	//	instruction=(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void)
-	//	metadata+=MetadataSuffix*;
+	//	(NamedMiddleInstruction | Instruction_store | Instruction_fence | Instruction_call_void) metadata+=MetadataSuffix*;
 	public MiddleInstructionElements getMiddleInstructionAccess() {
 		return (pMiddleInstruction != null) ? pMiddleInstruction : (pMiddleInstruction = new MiddleInstructionElements());
 	}
@@ -8931,9 +9147,9 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NamedMiddleInstruction:
-	//	name=LocalName instruction=(BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction |
-	//	Instruction_alloca | Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw |
-	//	ConversionInstruction | OtherInstruction | Instruction_call_nonVoid);
+	//	BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction | Instruction_alloca |
+	//	Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw | ConversionInstruction |
+	//	OtherInstruction | Instruction_call_nonVoid;
 	public NamedMiddleInstructionElements getNamedMiddleInstructionAccess() {
 		return (pNamedMiddleInstruction != null) ? pNamedMiddleInstruction : (pNamedMiddleInstruction = new NamedMiddleInstructionElements());
 	}
@@ -8978,9 +9194,8 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TerminatorInstruction:
-	//	instruction=(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch |
-	//	Instruction_indirectbr | Instruction_resume | Instruction_unreachable | Instruction_invoke_void)
-	//	metadata+=MetadataSuffix*;
+	//	(NamedTerminatorInstruction | Instruction_ret | Instruction_br | Instruction_switch | Instruction_indirectbr |
+	//	Instruction_resume | Instruction_unreachable | Instruction_invoke_void) metadata+=MetadataSuffix*;
 	public TerminatorInstructionElements getTerminatorInstructionAccess() {
 		return (pTerminatorInstruction != null) ? pTerminatorInstruction : (pTerminatorInstruction = new TerminatorInstructionElements());
 	}
@@ -8990,7 +9205,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NamedTerminatorInstruction:
-	//	name=LocalName instruction=Instruction_invoke_nonVoid;
+	//	Instruction_invoke_nonVoid;
 	public NamedTerminatorInstructionElements getNamedTerminatorInstructionAccess() {
 		return (pNamedTerminatorInstruction != null) ? pNamedTerminatorInstruction : (pNamedTerminatorInstruction = new NamedTerminatorInstructionElements());
 	}
@@ -9048,7 +9263,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_indirectbrAccess().getRule();
 	}
 
-	//// <result> = invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
+	//// invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
 	////                 to label <normal label> unwind label <exception label>
 	//// Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
 	//// behaves just like in a call instruction, so it's possible to provide return type only.
@@ -9068,8 +9283,9 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
 	//// behaves just like in a call instruction, so it's possible to provide return type only.
 	//Instruction_invoke_nonVoid:
-	//	opcode="invoke" cconv=CConv? ("zeroext"? & "signext"? & "inreg"?) type=NonVoidType callee=Callee args=ArgList
-	//	attributes=FunctionAttributes? "to" "label" toLabel=BasicBlockRef "unwind" "label" exceptionLabel=BasicBlockRef;
+	//	name=LocalName opcode="invoke" cconv=CConv? ("zeroext"? & "signext"? & "inreg"?) type=NonVoidType callee=Callee
+	//	args=ArgList attributes=FunctionAttributes? "to" "label" toLabel=BasicBlockRef "unwind" "label"
+	//	exceptionLabel=BasicBlockRef;
 	public Instruction_invoke_nonVoidElements getInstruction_invoke_nonVoidAccess() {
 		return (pInstruction_invoke_nonVoid != null) ? pInstruction_invoke_nonVoid : (pInstruction_invoke_nonVoid = new Instruction_invoke_nonVoidElements());
 	}
@@ -9126,7 +9342,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = add nsw <ty> <op1>, <op2>      ; yields {ty}:result
 	//// <result> = add nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 	//Instruction_add:
-	//	opcode="add" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="add" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_addElements getInstruction_addAccess() {
 		return (pInstruction_add != null) ? pInstruction_add : (pInstruction_add = new Instruction_addElements());
 	}
@@ -9137,7 +9353,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = fadd [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_fadd:
-	//	opcode="fadd" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="fadd" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_faddElements getInstruction_faddAccess() {
 		return (pInstruction_fadd != null) ? pInstruction_fadd : (pInstruction_fadd = new Instruction_faddElements());
 	}
@@ -9161,7 +9377,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = sub nsw <ty> <op1>, <op2>      ; yields {ty}:result
 	//// <result> = sub nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 	//Instruction_sub:
-	//	opcode="sub" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="sub" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_subElements getInstruction_subAccess() {
 		return (pInstruction_sub != null) ? pInstruction_sub : (pInstruction_sub = new Instruction_subElements());
 	}
@@ -9172,7 +9388,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = fsub [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_fsub:
-	//	opcode="fsub" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="fsub" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_fsubElements getInstruction_fsubAccess() {
 		return (pInstruction_fsub != null) ? pInstruction_fsub : (pInstruction_fsub = new Instruction_fsubElements());
 	}
@@ -9186,7 +9402,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = mul nsw <ty> <op1>, <op2>      ; yields {ty}:result
 	//// <result> = mul nuw nsw <ty> <op1>, <op2>  ; yields {ty}:result
 	//Instruction_mul:
-	//	opcode="mul" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="mul" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_mulElements getInstruction_mulAccess() {
 		return (pInstruction_mul != null) ? pInstruction_mul : (pInstruction_mul = new Instruction_mulElements());
 	}
@@ -9197,7 +9413,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = fmul [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_fmul:
-	//	opcode="fmul" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="fmul" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_fmulElements getInstruction_fmulAccess() {
 		return (pInstruction_fmul != null) ? pInstruction_fmul : (pInstruction_fmul = new Instruction_fmulElements());
 	}
@@ -9209,7 +9425,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = udiv <ty> <op1>, <op2>         ; yields {ty}:result
 	//// <result> = udiv exact <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_udiv:
-	//	opcode="udiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="udiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_udivElements getInstruction_udivAccess() {
 		return (pInstruction_udiv != null) ? pInstruction_udiv : (pInstruction_udiv = new Instruction_udivElements());
 	}
@@ -9221,7 +9437,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = sdiv <ty> <op1>, <op2>         ; yields {ty}:result
 	//// <result> = sdiv exact <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_sdiv:
-	//	opcode="sdiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="sdiv" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_sdivElements getInstruction_sdivAccess() {
 		return (pInstruction_sdiv != null) ? pInstruction_sdiv : (pInstruction_sdiv = new Instruction_sdivElements());
 	}
@@ -9232,7 +9448,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = fdiv [fast-math flags]* <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_fdiv:
-	//	opcode="fdiv" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="fdiv" fastMathFlags+=FastMathFlag* type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_fdivElements getInstruction_fdivAccess() {
 		return (pInstruction_fdiv != null) ? pInstruction_fdiv : (pInstruction_fdiv = new Instruction_fdivElements());
 	}
@@ -9243,7 +9459,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = urem <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_urem:
-	//	opcode="urem" type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="urem" type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_uremElements getInstruction_uremAccess() {
 		return (pInstruction_urem != null) ? pInstruction_urem : (pInstruction_urem = new Instruction_uremElements());
 	}
@@ -9254,7 +9470,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = srem <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_srem:
-	//	opcode="srem" type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="srem" type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_sremElements getInstruction_sremAccess() {
 		return (pInstruction_srem != null) ? pInstruction_srem : (pInstruction_srem = new Instruction_sremElements());
 	}
@@ -9265,7 +9481,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = frem <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_frem:
-	//	opcode="frem" type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="frem" type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_fremElements getInstruction_fremAccess() {
 		return (pInstruction_frem != null) ? pInstruction_frem : (pInstruction_frem = new Instruction_fremElements());
 	}
@@ -9289,7 +9505,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = shl nsw <ty> <op1>, <op2>       ; yields {ty}:result
 	//// <result> = shl nuw nsw <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_shl:
-	//	opcode="shl" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="shl" ("nuw"? & "nsw"?) type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_shlElements getInstruction_shlAccess() {
 		return (pInstruction_shl != null) ? pInstruction_shl : (pInstruction_shl = new Instruction_shlElements());
 	}
@@ -9301,7 +9517,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = lshr <ty> <op1>, <op2>         ; yields {ty}:result
 	//// <result> = lshr exact <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_lshr:
-	//	opcode="lshr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="lshr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_lshrElements getInstruction_lshrAccess() {
 		return (pInstruction_lshr != null) ? pInstruction_lshr : (pInstruction_lshr = new Instruction_lshrElements());
 	}
@@ -9313,7 +9529,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = ashr <ty> <op1>, <op2>         ; yields {ty}:result
 	//// <result> = ashr exact <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_ashr:
-	//	opcode="ashr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="ashr" "exact"? type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_ashrElements getInstruction_ashrAccess() {
 		return (pInstruction_ashr != null) ? pInstruction_ashr : (pInstruction_ashr = new Instruction_ashrElements());
 	}
@@ -9324,7 +9540,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = and <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_and:
-	//	opcode="and" type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="and" type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_andElements getInstruction_andAccess() {
 		return (pInstruction_and != null) ? pInstruction_and : (pInstruction_and = new Instruction_andElements());
 	}
@@ -9335,7 +9551,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = or <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_or:
-	//	opcode="or" type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="or" type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_orElements getInstruction_orAccess() {
 		return (pInstruction_or != null) ? pInstruction_or : (pInstruction_or = new Instruction_orElements());
 	}
@@ -9346,7 +9562,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = xor <ty> <op1>, <op2>   ; yields {ty}:result
 	//Instruction_xor:
-	//	opcode="xor" type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="xor" type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_xorElements getInstruction_xorAccess() {
 		return (pInstruction_xor != null) ? pInstruction_xor : (pInstruction_xor = new Instruction_xorElements());
 	}
@@ -9367,7 +9583,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = extractelement <n x <ty>> <val>, i32 <idx>    ; yields <ty>
 	//Instruction_extractelement:
-	//	opcode="extractelement" vector=TypedValue "," index=TypedValue;
+	//	name=LocalName opcode="extractelement" vector=TypedValue "," index=TypedValue;
 	public Instruction_extractelementElements getInstruction_extractelementAccess() {
 		return (pInstruction_extractelement != null) ? pInstruction_extractelement : (pInstruction_extractelement = new Instruction_extractelementElements());
 	}
@@ -9378,7 +9594,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = insertelement <n x <ty>> <val>, <ty> <elt>, i32 <idx>    ; yields <n x <ty>>
 	//Instruction_insertelement:
-	//	opcode="insertelement" vector=TypedValue "," element=TypedValue "," index=TypedValue;
+	//	name=LocalName opcode="insertelement" vector=TypedValue "," element=TypedValue "," index=TypedValue;
 	public Instruction_insertelementElements getInstruction_insertelementAccess() {
 		return (pInstruction_insertelement != null) ? pInstruction_insertelement : (pInstruction_insertelement = new Instruction_insertelementElements());
 	}
@@ -9389,7 +9605,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = shufflevector <n x <ty>> <v1>, <n x <ty>> <v2>, <m x i32> <mask>    ; yields <m x <ty>>
 	//Instruction_shufflevector:
-	//	opcode="shufflevector" vector1=TypedValue "," vector2=TypedValue "," mask=TypedValue;
+	//	name=LocalName opcode="shufflevector" vector1=TypedValue "," vector2=TypedValue "," mask=TypedValue;
 	public Instruction_shufflevectorElements getInstruction_shufflevectorAccess() {
 		return (pInstruction_shufflevector != null) ? pInstruction_shufflevector : (pInstruction_shufflevector = new Instruction_shufflevectorElements());
 	}
@@ -9410,7 +9626,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = extractvalue <aggregate type> <val>, <idx>{, <idx>}*
 	//Instruction_extractvalue:
-	//	opcode="extractvalue" aggregate=TypedValue ("," indices+=Constant)+;
+	//	name=LocalName opcode="extractvalue" aggregate=TypedValue ("," indices+=Constant)+;
 	public Instruction_extractvalueElements getInstruction_extractvalueAccess() {
 		return (pInstruction_extractvalue != null) ? pInstruction_extractvalue : (pInstruction_extractvalue = new Instruction_extractvalueElements());
 	}
@@ -9421,7 +9637,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = insertvalue <aggregate type> <val>, <ty> <elt>, <idx>{, <idx>}*    ; yields <aggregate type>
 	//Instruction_insertvalue:
-	//	opcode="insertvalue" aggregate=TypedValue "," element=TypedValue ("," indices+=Constant)+;
+	//	name=LocalName opcode="insertvalue" aggregate=TypedValue "," element=TypedValue ("," indices+=Constant)+;
 	public Instruction_insertvalueElements getInstruction_insertvalueAccess() {
 		return (pInstruction_insertvalue != null) ? pInstruction_insertvalue : (pInstruction_insertvalue = new Instruction_insertvalueElements());
 	}
@@ -9430,20 +9646,9 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_insertvalueAccess().getRule();
 	}
 
-	//MemoryInstruction:
-	//	Instruction_alloca | Instruction_load | Instruction_store | Instruction_fence | Instruction_cmpxchg |
-	//	Instruction_atomicrmw | Instruction_getelementptr;
-	public MemoryInstructionElements getMemoryInstructionAccess() {
-		return (pMemoryInstruction != null) ? pMemoryInstruction : (pMemoryInstruction = new MemoryInstructionElements());
-	}
-	
-	public ParserRule getMemoryInstructionRule() {
-		return getMemoryInstructionAccess().getRule();
-	}
-
 	//// <result> = alloca <type>[, <ty> <NumElements>][, align <alignment>]     ; yields {type*}:result
 	//Instruction_alloca:
-	//	opcode="alloca" type=Type ("," numElements=TypedValue)? ("," alignment=Align)?;
+	//	name=LocalName opcode="alloca" type=Type ("," numElements=TypedValue)? ("," alignment=Align)?;
 	public Instruction_allocaElements getInstruction_allocaAccess() {
 		return (pInstruction_alloca != null) ? pInstruction_alloca : (pInstruction_alloca = new Instruction_allocaElements());
 	}
@@ -9456,7 +9661,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = load atomic [volatile] <ty>* <pointer> [singlethread] <ordering>, align <alignment>
 	//// !<index> = !{ i32 1 }
 	//Instruction_load:
-	//	opcode="load" ("volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal"
+	//	name=LocalName opcode="load" ("volatile"? pointer=TypedValue ("," alignment=Align)? ("," "!nontemporal"
 	//	nontemporalIndex=MetadataRef)? ("," "!invariant.load" invariantLoadIndex=MetadataRef)? | "atomic" "volatile"?
 	//	pointer=TypedValue "singlethread"? ordering=Ordering alignment=Align);
 	public Instruction_loadElements getInstruction_loadAccess() {
@@ -9492,10 +9697,10 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_fenceAccess().getRule();
 	}
 
-	//// cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering>  ; yields {ty}
+	//// <result> = cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering>  ; yields {ty}
 	//Instruction_cmpxchg:
-	//	opcode="cmpxchg" "volatile"? pointer=TypedValue "," comparedWith=TypedValue "," newValue=TypedValue "singlethread"?
-	//	ordering=Ordering;
+	//	name=LocalName opcode="cmpxchg" "volatile"? pointer=TypedValue "," comparedWith=TypedValue "," newValue=TypedValue
+	//	"singlethread"? ordering=Ordering;
 	public Instruction_cmpxchgElements getInstruction_cmpxchgAccess() {
 		return (pInstruction_cmpxchg != null) ? pInstruction_cmpxchg : (pInstruction_cmpxchg = new Instruction_cmpxchgElements());
 	}
@@ -9504,10 +9709,10 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_cmpxchgAccess().getRule();
 	}
 
-	//// atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
+	//// <result> = atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
 	////                   ; yields {ty}
 	//Instruction_atomicrmw:
-	//	opcode="atomicrmw" "volatile"? operation=Atomicrmw_operation pointer=TypedValue "," argument=TypedValue
+	//	name=LocalName opcode="atomicrmw" "volatile"? operation=Atomicrmw_operation pointer=TypedValue "," argument=TypedValue
 	//	"singlethread"? ordering=Ordering;
 	public Instruction_atomicrmwElements getInstruction_atomicrmwAccess() {
 		return (pInstruction_atomicrmw != null) ? pInstruction_atomicrmw : (pInstruction_atomicrmw = new Instruction_atomicrmwElements());
@@ -9531,7 +9736,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
 	//// <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
 	//Instruction_getelementptr:
-	//	opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*;
+	//	name=LocalName opcode="getelementptr" "inbounds"? base=TypedValue ("," indices+=TypedValue)*;
 	public Instruction_getelementptrElements getInstruction_getelementptrAccess() {
 		return (pInstruction_getelementptr != null) ? pInstruction_getelementptr : (pInstruction_getelementptr = new Instruction_getelementptrElements());
 	}
@@ -9541,7 +9746,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ConversionInstruction: // Merged since they all look exactly the same except the opcode
-	//	opcode=ConvertionOpcode fromType=Type value=ValueRef "to" targetType=Type;
+	//	name=LocalName opcode=ConvertionOpcode fromType=Type value=ValueRef "to" targetType=Type;
 	public ConversionInstructionElements getConversionInstructionAccess() {
 		return (pConversionInstruction != null) ? pConversionInstruction : (pConversionInstruction = new ConversionInstructionElements());
 	}
@@ -9573,7 +9778,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = icmp <cond> <ty> <op1>, <op2>   ; yields {i1} or {<N x i1>}:result
 	//Instruction_icmp:
-	//	opcode="icmp" condition=IcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="icmp" condition=IcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_icmpElements getInstruction_icmpAccess() {
 		return (pInstruction_icmp != null) ? pInstruction_icmp : (pInstruction_icmp = new Instruction_icmpElements());
 	}
@@ -9594,7 +9799,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = fcmp <cond> <ty> <op1>, <op2>     ; yields {i1} or {<N x i1>}:result
 	//Instruction_fcmp:
-	//	opcode="fcmp" condition=FcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
+	//	name=LocalName opcode="fcmp" condition=FcmpCondition type=Type op1=ValueRef "," op2=ValueRef;
 	public Instruction_fcmpElements getInstruction_fcmpAccess() {
 		return (pInstruction_fcmp != null) ? pInstruction_fcmp : (pInstruction_fcmp = new Instruction_fcmpElements());
 	}
@@ -9616,8 +9821,8 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <result> = phi <ty> [ <val0>, <label0>], ...
 	//Instruction_phi:
-	//	opcode="phi" type=Type ("[" values+=ValueRef "," labels+=BasicBlockRef "]") ("," "[" values+=ValueRef ","
-	//	labels+=BasicBlockRef "]")*;
+	//	name=LocalName opcode="phi" type=Type ("[" values+=ValueRef "," labels+=BasicBlockRef "]") ("," "[" values+=ValueRef
+	//	"," labels+=BasicBlockRef "]")*;
 	public Instruction_phiElements getInstruction_phiAccess() {
 		return (pInstruction_phi != null) ? pInstruction_phi : (pInstruction_phi = new Instruction_phiElements());
 	}
@@ -9629,7 +9834,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = select selty <cond>, <ty> <val1>, <ty> <val2>             ; yields ty
 	//// selty is either i1 or {<N x i1>}
 	//Instruction_select:
-	//	opcode="select" condition=TypedValue "," value1=TypedValue "," value2=TypedValue;
+	//	name=LocalName opcode="select" condition=TypedValue "," value1=TypedValue "," value2=TypedValue;
 	public Instruction_selectElements getInstruction_selectAccess() {
 		return (pInstruction_select != null) ? pInstruction_select : (pInstruction_select = new Instruction_selectElements());
 	}
@@ -9638,10 +9843,20 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_selectAccess().getRule();
 	}
 
+	//Instruction_call:
+	//	Instruction_call_nonVoid | Instruction_call_void;
+	public Instruction_callElements getInstruction_callAccess() {
+		return (pInstruction_call != null) ? pInstruction_call : (pInstruction_call = new Instruction_callElements());
+	}
+	
+	public ParserRule getInstruction_callRule() {
+		return getInstruction_callAccess().getRule();
+	}
+
 	//// <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 	//Instruction_call_nonVoid:
-	//	isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType callee=Callee
-	//	args=ArgList functionAttributes=FunctionAttributes?;
+	//	name=LocalName isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType
+	//	callee=Callee args=ArgList functionAttributes=FunctionAttributes?;
 	public Instruction_call_nonVoidElements getInstruction_call_nonVoidAccess() {
 		return (pInstruction_call_nonVoid != null) ? pInstruction_call_nonVoid : (pInstruction_call_nonVoid = new Instruction_call_nonVoidElements());
 	}
@@ -9650,6 +9865,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_call_nonVoidAccess().getRule();
 	}
 
+	//// [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 	//Instruction_call_void:
 	//	isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=VoidType callee=Callee
 	//	args=ArgList functionAttributes=FunctionAttributes?;
@@ -9693,7 +9909,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// <resultval> = va_arg <va_list*> <arglist>, <argty>
 	//Instruction_va_arg:
-	//	opcode="va_arg" arglist=TypedValue "," type=Type;
+	//	name=LocalName opcode="va_arg" arglist=TypedValue "," type=Type;
 	public Instruction_va_argElements getInstruction_va_argAccess() {
 		return (pInstruction_va_arg != null) ? pInstruction_va_arg : (pInstruction_va_arg = new Instruction_va_argElements());
 	}
@@ -9707,8 +9923,8 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <clause> := catch <type> <value>
 	//// <clause> := filter <array constant type> <array constant>
 	//Instruction_landingpad:
-	//	opcode="landingpad" resultType=Type "personality" personality=TypedValue (clauses+=LandingpadClause | "cleanup")
-	//	clauses+=LandingpadClause*;
+	//	name=LocalName opcode="landingpad" resultType=Type "personality" personality=TypedValue (clauses+=LandingpadClause |
+	//	"cleanup") clauses+=LandingpadClause*;
 	public Instruction_landingpadElements getInstruction_landingpadAccess() {
 		return (pInstruction_landingpad != null) ? pInstruction_landingpad : (pInstruction_landingpad = new Instruction_landingpadElements());
 	}

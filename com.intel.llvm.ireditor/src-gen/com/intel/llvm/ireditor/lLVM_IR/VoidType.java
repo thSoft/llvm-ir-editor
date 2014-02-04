@@ -14,6 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VoidType extends EObject
-{
+public interface VoidType extends EObject {
 } // VoidType
