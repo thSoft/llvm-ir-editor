@@ -13,5 +13,6 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_lshr extends BitwiseBinaryInstruction {
+public interface Instruction_lshr extends BitwiseBinaryInstruction
+{
 } // Instruction_lshr

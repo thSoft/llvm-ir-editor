@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_xorImpl extends BitwiseBinaryInstructionImpl implements Instruction_xor {
+public class Instruction_xorImpl extends BitwiseBinaryInstructionImpl implements Instruction_xor
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_xorImpl() {
+	protected Instruction_xorImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_xorImpl extends BitwiseBinaryInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_xor();
 	}
 

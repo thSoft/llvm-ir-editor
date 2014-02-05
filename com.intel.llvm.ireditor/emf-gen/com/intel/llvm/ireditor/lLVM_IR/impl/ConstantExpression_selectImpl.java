@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ConstantExpression_selectImpl extends ConstantExpressionImpl implements ConstantExpression_select {
+public class ConstantExpression_selectImpl extends ConstantExpressionImpl implements ConstantExpression_select
+{
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantExpression_selectImpl() {
+	protected ConstantExpression_selectImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantExpression_select();
 	}
 
@@ -84,7 +87,8 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getCondition() {
+	public TypedValue getCondition()
+	{
 		return condition;
 	}
 
@@ -93,10 +97,12 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCondition(TypedValue newCondition, NotificationChain msgs) {
+	public NotificationChain basicSetCondition(TypedValue newCondition, NotificationChain msgs)
+	{
 		TypedValue oldCondition = condition;
 		condition = newCondition;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION, oldCondition, newCondition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -108,8 +114,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(TypedValue newCondition) {
-		if (newCondition != condition) {
+	public void setCondition(TypedValue newCondition)
+	{
+		if (newCondition != condition)
+		{
 			NotificationChain msgs = null;
 			if (condition != null)
 				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION, null, msgs);
@@ -127,7 +135,8 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getOp1() {
+	public TypedValue getOp1()
+	{
 		return op1;
 	}
 
@@ -136,10 +145,12 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOp1(TypedValue newOp1, NotificationChain msgs) {
+	public NotificationChain basicSetOp1(TypedValue newOp1, NotificationChain msgs)
+	{
 		TypedValue oldOp1 = op1;
 		op1 = newOp1;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP1, oldOp1, newOp1);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -151,8 +162,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOp1(TypedValue newOp1) {
-		if (newOp1 != op1) {
+	public void setOp1(TypedValue newOp1)
+	{
+		if (newOp1 != op1)
+		{
 			NotificationChain msgs = null;
 			if (op1 != null)
 				msgs = ((InternalEObject)op1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP1, null, msgs);
@@ -170,7 +183,8 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getOp2() {
+	public TypedValue getOp2()
+	{
 		return op2;
 	}
 
@@ -179,10 +193,12 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOp2(TypedValue newOp2, NotificationChain msgs) {
+	public NotificationChain basicSetOp2(TypedValue newOp2, NotificationChain msgs)
+	{
 		TypedValue oldOp2 = op2;
 		op2 = newOp2;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP2, oldOp2, newOp2);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -194,8 +210,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOp2(TypedValue newOp2) {
-		if (newOp2 != op2) {
+	public void setOp2(TypedValue newOp2)
+	{
+		if (newOp2 != op2)
+		{
 			NotificationChain msgs = null;
 			if (op2 != null)
 				msgs = ((InternalEObject)op2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP2, null, msgs);
@@ -214,8 +232,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION:
 				return basicSetCondition(null, msgs);
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP1:
@@ -232,8 +252,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION:
 				return getCondition();
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP1:
@@ -250,8 +272,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION:
 				setCondition((TypedValue)newValue);
 				return;
@@ -271,8 +295,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION:
 				setCondition((TypedValue)null);
 				return;
@@ -292,8 +318,10 @@ public class ConstantExpression_selectImpl extends ConstantExpressionImpl implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__CONDITION:
 				return condition != null;
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT__OP1:

@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruction {
+public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruction
+{
 	/**
 	 * The cached value of the '{@link #getMetadata() <em>Metadata</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,8 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamedInstructionImpl() {
+	protected NamedInstructionImpl()
+	{
 		super();
 	}
 
@@ -82,7 +84,8 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getNamedInstruction();
 	}
 
@@ -91,8 +94,10 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MetadataSuffix> getMetadata() {
-		if (metadata == null) {
+	public EList<MetadataSuffix> getMetadata()
+	{
+		if (metadata == null)
+		{
 			metadata = new EObjectContainmentEList<MetadataSuffix>(MetadataSuffix.class, this, LLVM_IRPackage.NAMED_INSTRUCTION__METADATA);
 		}
 		return metadata;
@@ -103,7 +108,8 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOpcode() {
+	public String getOpcode()
+	{
 		return opcode;
 	}
 
@@ -112,7 +118,8 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOpcode(String newOpcode) {
+	public void setOpcode(String newOpcode)
+	{
 		String oldOpcode = opcode;
 		opcode = newOpcode;
 		if (eNotificationRequired())
@@ -125,8 +132,10 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_INSTRUCTION__METADATA:
 				return ((InternalEList<?>)getMetadata()).basicRemove(otherEnd, msgs);
 		}
@@ -139,8 +148,10 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_INSTRUCTION__METADATA:
 				return getMetadata();
 			case LLVM_IRPackage.NAMED_INSTRUCTION__OPCODE:
@@ -156,8 +167,10 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_INSTRUCTION__METADATA:
 				getMetadata().clear();
 				getMetadata().addAll((Collection<? extends MetadataSuffix>)newValue);
@@ -175,8 +188,10 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_INSTRUCTION__METADATA:
 				getMetadata().clear();
 				return;
@@ -193,8 +208,10 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_INSTRUCTION__METADATA:
 				return metadata != null && !metadata.isEmpty();
 			case LLVM_IRPackage.NAMED_INSTRUCTION__OPCODE:
@@ -209,9 +226,12 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Instruction.class) {
-			switch (derivedFeatureID) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == Instruction.class)
+		{
+			switch (derivedFeatureID)
+			{
 				case LLVM_IRPackage.NAMED_INSTRUCTION__METADATA: return LLVM_IRPackage.INSTRUCTION__METADATA;
 				case LLVM_IRPackage.NAMED_INSTRUCTION__OPCODE: return LLVM_IRPackage.INSTRUCTION__OPCODE;
 				default: return -1;
@@ -226,9 +246,12 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Instruction.class) {
-			switch (baseFeatureID) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == Instruction.class)
+		{
+			switch (baseFeatureID)
+			{
 				case LLVM_IRPackage.INSTRUCTION__METADATA: return LLVM_IRPackage.NAMED_INSTRUCTION__METADATA;
 				case LLVM_IRPackage.INSTRUCTION__OPCODE: return LLVM_IRPackage.NAMED_INSTRUCTION__OPCODE;
 				default: return -1;
@@ -243,7 +266,8 @@ public class NamedInstructionImpl extends LocalValueImpl implements NamedInstruc
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

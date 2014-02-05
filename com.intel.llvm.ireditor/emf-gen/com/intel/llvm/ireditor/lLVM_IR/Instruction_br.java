@@ -22,7 +22,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_br extends TerminatorInstruction {
+public interface Instruction_br extends TerminatorInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

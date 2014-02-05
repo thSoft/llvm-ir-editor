@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_insertelementImpl extends VectorInstructionsImpl implements Instruction_insertelement {
+public class Instruction_insertelementImpl extends VectorInstructionsImpl implements Instruction_insertelement
+{
 	/**
 	 * The cached value of the '{@link #getVector() <em>Vector</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_insertelementImpl() {
+	protected Instruction_insertelementImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_insertelement();
 	}
 
@@ -84,7 +87,8 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getVector() {
+	public TypedValue getVector()
+	{
 		return vector;
 	}
 
@@ -93,10 +97,12 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVector(TypedValue newVector, NotificationChain msgs) {
+	public NotificationChain basicSetVector(TypedValue newVector, NotificationChain msgs)
+	{
 		TypedValue oldVector = vector;
 		vector = newVector;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR, oldVector, newVector);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -108,8 +114,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVector(TypedValue newVector) {
-		if (newVector != vector) {
+	public void setVector(TypedValue newVector)
+	{
+		if (newVector != vector)
+		{
 			NotificationChain msgs = null;
 			if (vector != null)
 				msgs = ((InternalEObject)vector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR, null, msgs);
@@ -127,7 +135,8 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getElement() {
+	public TypedValue getElement()
+	{
 		return element;
 	}
 
@@ -136,10 +145,12 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElement(TypedValue newElement, NotificationChain msgs) {
+	public NotificationChain basicSetElement(TypedValue newElement, NotificationChain msgs)
+	{
 		TypedValue oldElement = element;
 		element = newElement;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__ELEMENT, oldElement, newElement);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -151,8 +162,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElement(TypedValue newElement) {
-		if (newElement != element) {
+	public void setElement(TypedValue newElement)
+	{
+		if (newElement != element)
+		{
 			NotificationChain msgs = null;
 			if (element != null)
 				msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__ELEMENT, null, msgs);
@@ -170,7 +183,8 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getIndex() {
+	public TypedValue getIndex()
+	{
 		return index;
 	}
 
@@ -179,10 +193,12 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIndex(TypedValue newIndex, NotificationChain msgs) {
+	public NotificationChain basicSetIndex(TypedValue newIndex, NotificationChain msgs)
+	{
 		TypedValue oldIndex = index;
 		index = newIndex;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__INDEX, oldIndex, newIndex);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -194,8 +210,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIndex(TypedValue newIndex) {
-		if (newIndex != index) {
+	public void setIndex(TypedValue newIndex)
+	{
+		if (newIndex != index)
+		{
 			NotificationChain msgs = null;
 			if (index != null)
 				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__INDEX, null, msgs);
@@ -214,8 +232,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR:
 				return basicSetVector(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__ELEMENT:
@@ -232,8 +252,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR:
 				return getVector();
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__ELEMENT:
@@ -250,8 +272,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR:
 				setVector((TypedValue)newValue);
 				return;
@@ -271,8 +295,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR:
 				setVector((TypedValue)null);
 				return;
@@ -292,8 +318,10 @@ public class Instruction_insertelementImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__VECTOR:
 				return vector != null;
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT__ELEMENT:

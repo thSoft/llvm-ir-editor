@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AlignStackImpl extends MinimalEObjectImpl.Container implements AlignStack {
+public class AlignStackImpl extends MinimalEObjectImpl.Container implements AlignStack
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AlignStackImpl() {
+	protected AlignStackImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class AlignStackImpl extends MinimalEObjectImpl.Container implements Alig
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getAlignStack();
 	}
 

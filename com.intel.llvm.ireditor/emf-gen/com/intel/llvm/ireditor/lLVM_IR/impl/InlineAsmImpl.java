@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
+public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm
+{
 	/**
 	 * The default value of the '{@link #getAsmLine() <em>Asm Line</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InlineAsmImpl() {
+	protected InlineAsmImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInlineAsm();
 	}
 
@@ -69,7 +72,8 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAsmLine() {
+	public String getAsmLine()
+	{
 		return asmLine;
 	}
 
@@ -78,7 +82,8 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAsmLine(String newAsmLine) {
+	public void setAsmLine(String newAsmLine)
+	{
 		String oldAsmLine = asmLine;
 		asmLine = newAsmLine;
 		if (eNotificationRequired())
@@ -91,8 +96,10 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASM__ASM_LINE:
 				return getAsmLine();
 		}
@@ -105,8 +112,10 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASM__ASM_LINE:
 				setAsmLine((String)newValue);
 				return;
@@ -120,8 +129,10 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASM__ASM_LINE:
 				setAsmLine(ASM_LINE_EDEFAULT);
 				return;
@@ -135,8 +146,10 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASM__ASM_LINE:
 				return ASM_LINE_EDEFAULT == null ? asmLine != null : !ASM_LINE_EDEFAULT.equals(asmLine);
 		}
@@ -149,7 +162,8 @@ public class InlineAsmImpl extends TopLevelElementImpl implements InlineAsm {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

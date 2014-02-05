@@ -13,5 +13,6 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Undef extends Constant {
+public interface Undef extends Constant
+{
 } // Undef

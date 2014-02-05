@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ParametersImpl extends MinimalEObjectImpl.Container implements Parameters {
+public class ParametersImpl extends MinimalEObjectImpl.Container implements Parameters
+{
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,8 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParametersImpl() {
+	protected ParametersImpl()
+	{
 		super();
 	}
 
@@ -82,7 +84,8 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getParameters();
 	}
 
@@ -91,8 +94,10 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameter> getParameters() {
-		if (parameters == null) {
+	public EList<Parameter> getParameters()
+	{
+		if (parameters == null)
+		{
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, LLVM_IRPackage.PARAMETERS__PARAMETERS);
 		}
 		return parameters;
@@ -103,7 +108,8 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVararg() {
+	public String getVararg()
+	{
 		return vararg;
 	}
 
@@ -112,7 +118,8 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVararg(String newVararg) {
+	public void setVararg(String newVararg)
+	{
 		String oldVararg = vararg;
 		vararg = newVararg;
 		if (eNotificationRequired())
@@ -125,8 +132,10 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETERS__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 		}
@@ -139,8 +148,10 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETERS__PARAMETERS:
 				return getParameters();
 			case LLVM_IRPackage.PARAMETERS__VARARG:
@@ -156,8 +167,10 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETERS__PARAMETERS:
 				getParameters().clear();
 				getParameters().addAll((Collection<? extends Parameter>)newValue);
@@ -175,8 +188,10 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETERS__PARAMETERS:
 				getParameters().clear();
 				return;
@@ -193,8 +208,10 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETERS__PARAMETERS:
 				return parameters != null && !parameters.isEmpty();
 			case LLVM_IRPackage.PARAMETERS__VARARG:
@@ -209,7 +226,8 @@ public class ParametersImpl extends MinimalEObjectImpl.Container implements Para
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

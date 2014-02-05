@@ -22,7 +22,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_phi extends StartingInstruction {
+public interface Instruction_phi extends StartingInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

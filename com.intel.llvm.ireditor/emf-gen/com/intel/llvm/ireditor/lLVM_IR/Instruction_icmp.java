@@ -22,7 +22,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_icmp extends OtherInstruction {
+public interface Instruction_icmp extends OtherInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' attribute.
 	 * <!-- begin-user-doc -->

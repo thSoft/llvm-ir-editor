@@ -32,7 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl implements ConstantExpression_insertelement {
+public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl implements ConstantExpression_insertelement
+{
 	/**
 	 * The cached value of the '{@link #getVectorType() <em>Vector Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -78,7 +79,8 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantExpression_insertelementImpl() {
+	protected ConstantExpression_insertelementImpl()
+	{
 		super();
 	}
 
@@ -88,7 +90,8 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement();
 	}
 
@@ -97,7 +100,8 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VectorType getVectorType() {
+	public VectorType getVectorType()
+	{
 		return vectorType;
 	}
 
@@ -106,10 +110,12 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVectorType(VectorType newVectorType, NotificationChain msgs) {
+	public NotificationChain basicSetVectorType(VectorType newVectorType, NotificationChain msgs)
+	{
 		VectorType oldVectorType = vectorType;
 		vectorType = newVectorType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE, oldVectorType, newVectorType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -121,8 +127,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVectorType(VectorType newVectorType) {
-		if (newVectorType != vectorType) {
+	public void setVectorType(VectorType newVectorType)
+	{
+		if (newVectorType != vectorType)
+		{
 			NotificationChain msgs = null;
 			if (vectorType != null)
 				msgs = ((InternalEObject)vectorType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE, null, msgs);
@@ -140,7 +148,8 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueRef getVector() {
+	public ValueRef getVector()
+	{
 		return vector;
 	}
 
@@ -149,10 +158,12 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVector(ValueRef newVector, NotificationChain msgs) {
+	public NotificationChain basicSetVector(ValueRef newVector, NotificationChain msgs)
+	{
 		ValueRef oldVector = vector;
 		vector = newVector;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR, oldVector, newVector);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -164,8 +175,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVector(ValueRef newVector) {
-		if (newVector != vector) {
+	public void setVector(ValueRef newVector)
+	{
+		if (newVector != vector)
+		{
 			NotificationChain msgs = null;
 			if (vector != null)
 				msgs = ((InternalEObject)vector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR, null, msgs);
@@ -183,7 +196,8 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getElement() {
+	public TypedValue getElement()
+	{
 		return element;
 	}
 
@@ -192,10 +206,12 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElement(TypedValue newElement, NotificationChain msgs) {
+	public NotificationChain basicSetElement(TypedValue newElement, NotificationChain msgs)
+	{
 		TypedValue oldElement = element;
 		element = newElement;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__ELEMENT, oldElement, newElement);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -207,8 +223,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElement(TypedValue newElement) {
-		if (newElement != element) {
+	public void setElement(TypedValue newElement)
+	{
+		if (newElement != element)
+		{
 			NotificationChain msgs = null;
 			if (element != null)
 				msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__ELEMENT, null, msgs);
@@ -226,7 +244,8 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getIndex() {
+	public TypedValue getIndex()
+	{
 		return index;
 	}
 
@@ -235,10 +254,12 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIndex(TypedValue newIndex, NotificationChain msgs) {
+	public NotificationChain basicSetIndex(TypedValue newIndex, NotificationChain msgs)
+	{
 		TypedValue oldIndex = index;
 		index = newIndex;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__INDEX, oldIndex, newIndex);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -250,8 +271,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIndex(TypedValue newIndex) {
-		if (newIndex != index) {
+	public void setIndex(TypedValue newIndex)
+	{
+		if (newIndex != index)
+		{
 			NotificationChain msgs = null;
 			if (index != null)
 				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__INDEX, null, msgs);
@@ -270,8 +293,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE:
 				return basicSetVectorType(null, msgs);
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR:
@@ -290,8 +315,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE:
 				return getVectorType();
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR:
@@ -310,8 +337,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE:
 				setVectorType((VectorType)newValue);
 				return;
@@ -334,8 +363,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE:
 				setVectorType((VectorType)null);
 				return;
@@ -358,8 +389,10 @@ public class ConstantExpression_insertelementImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR_TYPE:
 				return vectorType != null;
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT__VECTOR:

@@ -35,7 +35,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl implements Instruction_getelementptr {
+public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl implements Instruction_getelementptr
+{
 	/**
 	 * The cached value of the '{@link #getBase() <em>Base</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -61,7 +62,8 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_getelementptrImpl() {
+	protected Instruction_getelementptrImpl()
+	{
 		super();
 	}
 
@@ -71,7 +73,8 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_getelementptr();
 	}
 
@@ -80,7 +83,8 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getBase() {
+	public TypedValue getBase()
+	{
 		return base;
 	}
 
@@ -89,10 +93,12 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBase(TypedValue newBase, NotificationChain msgs) {
+	public NotificationChain basicSetBase(TypedValue newBase, NotificationChain msgs)
+	{
 		TypedValue oldBase = base;
 		base = newBase;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE, oldBase, newBase);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -104,8 +110,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBase(TypedValue newBase) {
-		if (newBase != base) {
+	public void setBase(TypedValue newBase)
+	{
+		if (newBase != base)
+		{
 			NotificationChain msgs = null;
 			if (base != null)
 				msgs = ((InternalEObject)base).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE, null, msgs);
@@ -123,8 +131,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TypedValue> getIndices() {
-		if (indices == null) {
+	public EList<TypedValue> getIndices()
+	{
+		if (indices == null)
+		{
 			indices = new EObjectContainmentEList<TypedValue>(TypedValue.class, this, LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__INDICES);
 		}
 		return indices;
@@ -136,8 +146,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE:
 				return basicSetBase(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__INDICES:
@@ -152,8 +164,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE:
 				return getBase();
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__INDICES:
@@ -169,8 +183,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE:
 				setBase((TypedValue)newValue);
 				return;
@@ -188,8 +204,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE:
 				setBase((TypedValue)null);
 				return;
@@ -206,8 +224,10 @@ public class Instruction_getelementptrImpl extends NamedMiddleInstructionImpl im
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__BASE:
 				return base != null;
 			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR__INDICES:

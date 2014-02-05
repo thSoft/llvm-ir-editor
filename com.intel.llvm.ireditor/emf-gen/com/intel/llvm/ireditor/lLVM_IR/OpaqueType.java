@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface OpaqueType extends EObject {
+public interface OpaqueType extends EObject
+{
 } // OpaqueType

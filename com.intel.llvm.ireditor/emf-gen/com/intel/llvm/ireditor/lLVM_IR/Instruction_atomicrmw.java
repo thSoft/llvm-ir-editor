@@ -22,7 +22,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_atomicrmw extends NamedMiddleInstruction {
+public interface Instruction_atomicrmw extends NamedMiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Operation</b></em>' attribute.
 	 * <!-- begin-user-doc -->

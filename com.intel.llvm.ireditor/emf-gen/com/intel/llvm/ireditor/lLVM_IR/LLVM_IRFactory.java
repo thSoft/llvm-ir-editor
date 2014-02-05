@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage
  * @generated
  */
-public interface LLVM_IRFactory extends EFactory {
+public interface LLVM_IRFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->

@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_fenceImpl extends MiddleInstructionImpl implements Instruction_fence {
+public class Instruction_fenceImpl extends MiddleInstructionImpl implements Instruction_fence
+{
 	/**
 	 * The default value of the '{@link #getOrdering() <em>Ordering</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_fenceImpl() {
+	protected Instruction_fenceImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_fence();
 	}
 
@@ -69,7 +72,8 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOrdering() {
+	public String getOrdering()
+	{
 		return ordering;
 	}
 
@@ -78,7 +82,8 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrdering(String newOrdering) {
+	public void setOrdering(String newOrdering)
+	{
 		String oldOrdering = ordering;
 		ordering = newOrdering;
 		if (eNotificationRequired())
@@ -91,8 +96,10 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FENCE__ORDERING:
 				return getOrdering();
 		}
@@ -105,8 +112,10 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FENCE__ORDERING:
 				setOrdering((String)newValue);
 				return;
@@ -120,8 +129,10 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FENCE__ORDERING:
 				setOrdering(ORDERING_EDEFAULT);
 				return;
@@ -135,8 +146,10 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FENCE__ORDERING:
 				return ORDERING_EDEFAULT == null ? ordering != null : !ORDERING_EDEFAULT.equals(ordering);
 		}
@@ -149,7 +162,8 @@ public class Instruction_fenceImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

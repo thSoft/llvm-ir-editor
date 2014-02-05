@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface NamedMetadata extends TopLevelElement {
+public interface NamedMetadata extends TopLevelElement
+{
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

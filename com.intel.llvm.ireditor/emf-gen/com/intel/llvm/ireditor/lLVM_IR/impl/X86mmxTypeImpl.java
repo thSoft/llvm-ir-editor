@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class X86mmxTypeImpl extends MinimalEObjectImpl.Container implements X86mmxType {
+public class X86mmxTypeImpl extends MinimalEObjectImpl.Container implements X86mmxType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected X86mmxTypeImpl() {
+	protected X86mmxTypeImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class X86mmxTypeImpl extends MinimalEObjectImpl.Container implements X86m
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getX86mmxType();
 	}
 

@@ -32,7 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_storeImpl extends MiddleInstructionImpl implements Instruction_store {
+public class Instruction_storeImpl extends MiddleInstructionImpl implements Instruction_store
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -108,7 +109,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_storeImpl() {
+	protected Instruction_storeImpl()
+	{
 		super();
 	}
 
@@ -118,7 +120,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_store();
 	}
 
@@ -127,7 +130,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getValue() {
+	public TypedValue getValue()
+	{
 		return value;
 	}
 
@@ -136,10 +140,12 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs)
+	{
 		TypedValue oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_STORE__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -151,8 +157,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(TypedValue newValue) {
-		if (newValue != value) {
+	public void setValue(TypedValue newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_STORE__VALUE, null, msgs);
@@ -170,7 +178,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getPointer() {
+	public TypedValue getPointer()
+	{
 		return pointer;
 	}
 
@@ -179,10 +188,12 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPointer(TypedValue newPointer, NotificationChain msgs) {
+	public NotificationChain basicSetPointer(TypedValue newPointer, NotificationChain msgs)
+	{
 		TypedValue oldPointer = pointer;
 		pointer = newPointer;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_STORE__POINTER, oldPointer, newPointer);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -194,8 +205,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointer(TypedValue newPointer) {
-		if (newPointer != pointer) {
+	public void setPointer(TypedValue newPointer)
+	{
+		if (newPointer != pointer)
+		{
 			NotificationChain msgs = null;
 			if (pointer != null)
 				msgs = ((InternalEObject)pointer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_STORE__POINTER, null, msgs);
@@ -213,7 +226,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAlignment() {
+	public String getAlignment()
+	{
 		return alignment;
 	}
 
@@ -222,7 +236,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlignment(String newAlignment) {
+	public void setAlignment(String newAlignment)
+	{
 		String oldAlignment = alignment;
 		alignment = newAlignment;
 		if (eNotificationRequired())
@@ -234,7 +249,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef getNontemporalIndex() {
+	public MetadataRef getNontemporalIndex()
+	{
 		return nontemporalIndex;
 	}
 
@@ -243,10 +259,12 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNontemporalIndex(MetadataRef newNontemporalIndex, NotificationChain msgs) {
+	public NotificationChain basicSetNontemporalIndex(MetadataRef newNontemporalIndex, NotificationChain msgs)
+	{
 		MetadataRef oldNontemporalIndex = nontemporalIndex;
 		nontemporalIndex = newNontemporalIndex;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_STORE__NONTEMPORAL_INDEX, oldNontemporalIndex, newNontemporalIndex);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -258,8 +276,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNontemporalIndex(MetadataRef newNontemporalIndex) {
-		if (newNontemporalIndex != nontemporalIndex) {
+	public void setNontemporalIndex(MetadataRef newNontemporalIndex)
+	{
+		if (newNontemporalIndex != nontemporalIndex)
+		{
 			NotificationChain msgs = null;
 			if (nontemporalIndex != null)
 				msgs = ((InternalEObject)nontemporalIndex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_STORE__NONTEMPORAL_INDEX, null, msgs);
@@ -277,7 +297,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOrdering() {
+	public String getOrdering()
+	{
 		return ordering;
 	}
 
@@ -286,7 +307,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrdering(String newOrdering) {
+	public void setOrdering(String newOrdering)
+	{
 		String oldOrdering = ordering;
 		ordering = newOrdering;
 		if (eNotificationRequired())
@@ -299,8 +321,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_STORE__VALUE:
 				return basicSetValue(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_STORE__POINTER:
@@ -317,8 +341,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_STORE__VALUE:
 				return getValue();
 			case LLVM_IRPackage.INSTRUCTION_STORE__POINTER:
@@ -339,8 +365,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_STORE__VALUE:
 				setValue((TypedValue)newValue);
 				return;
@@ -366,8 +394,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_STORE__VALUE:
 				setValue((TypedValue)null);
 				return;
@@ -393,8 +423,10 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_STORE__VALUE:
 				return value != null;
 			case LLVM_IRPackage.INSTRUCTION_STORE__POINTER:
@@ -415,7 +447,8 @@ public class Instruction_storeImpl extends MiddleInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

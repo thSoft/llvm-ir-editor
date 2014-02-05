@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_resume extends TerminatorInstruction {
+public interface Instruction_resume extends TerminatorInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

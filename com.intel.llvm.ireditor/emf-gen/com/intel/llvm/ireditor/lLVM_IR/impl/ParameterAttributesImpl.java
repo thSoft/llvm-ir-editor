@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implements ParameterAttributes {
+public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implements ParameterAttributes
+{
 	/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -44,7 +45,8 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterAttributesImpl() {
+	protected ParameterAttributesImpl()
+	{
 		super();
 	}
 
@@ -54,7 +56,8 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getParameterAttributes();
 	}
 
@@ -63,8 +66,10 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getAttributes() {
-		if (attributes == null) {
+	public EList<String> getAttributes()
+	{
+		if (attributes == null)
+		{
 			attributes = new EDataTypeEList<String>(String.class, this, LLVM_IRPackage.PARAMETER_ATTRIBUTES__ATTRIBUTES);
 		}
 		return attributes;
@@ -76,8 +81,10 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETER_ATTRIBUTES__ATTRIBUTES:
 				return getAttributes();
 		}
@@ -91,8 +98,10 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETER_ATTRIBUTES__ATTRIBUTES:
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends String>)newValue);
@@ -107,8 +116,10 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETER_ATTRIBUTES__ATTRIBUTES:
 				getAttributes().clear();
 				return;
@@ -122,8 +133,10 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.PARAMETER_ATTRIBUTES__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
 		}
@@ -136,7 +149,8 @@ public class ParameterAttributesImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

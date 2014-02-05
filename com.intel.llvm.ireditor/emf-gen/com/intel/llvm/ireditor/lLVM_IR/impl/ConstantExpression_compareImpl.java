@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ConstantExpression_compareImpl extends ConstantExpressionImpl implements ConstantExpression_compare {
+public class ConstantExpression_compareImpl extends ConstantExpressionImpl implements ConstantExpression_compare
+{
 	/**
 	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -75,7 +76,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantExpression_compareImpl() {
+	protected ConstantExpression_compareImpl()
+	{
 		super();
 	}
 
@@ -85,7 +87,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantExpression_compare();
 	}
 
@@ -94,7 +97,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondition() {
+	public String getCondition()
+	{
 		return condition;
 	}
 
@@ -103,7 +107,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(String newCondition) {
+	public void setCondition(String newCondition)
+	{
 		String oldCondition = condition;
 		condition = newCondition;
 		if (eNotificationRequired())
@@ -115,7 +120,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getOp1() {
+	public TypedValue getOp1()
+	{
 		return op1;
 	}
 
@@ -124,10 +130,12 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOp1(TypedValue newOp1, NotificationChain msgs) {
+	public NotificationChain basicSetOp1(TypedValue newOp1, NotificationChain msgs)
+	{
 		TypedValue oldOp1 = op1;
 		op1 = newOp1;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP1, oldOp1, newOp1);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -139,8 +147,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOp1(TypedValue newOp1) {
-		if (newOp1 != op1) {
+	public void setOp1(TypedValue newOp1)
+	{
+		if (newOp1 != op1)
+		{
 			NotificationChain msgs = null;
 			if (op1 != null)
 				msgs = ((InternalEObject)op1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP1, null, msgs);
@@ -158,7 +168,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getOp2() {
+	public TypedValue getOp2()
+	{
 		return op2;
 	}
 
@@ -167,10 +178,12 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOp2(TypedValue newOp2, NotificationChain msgs) {
+	public NotificationChain basicSetOp2(TypedValue newOp2, NotificationChain msgs)
+	{
 		TypedValue oldOp2 = op2;
 		op2 = newOp2;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP2, oldOp2, newOp2);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -182,8 +195,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOp2(TypedValue newOp2) {
-		if (newOp2 != op2) {
+	public void setOp2(TypedValue newOp2)
+	{
+		if (newOp2 != op2)
+		{
 			NotificationChain msgs = null;
 			if (op2 != null)
 				msgs = ((InternalEObject)op2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP2, null, msgs);
@@ -202,8 +217,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP1:
 				return basicSetOp1(null, msgs);
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP2:
@@ -218,8 +235,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__CONDITION:
 				return getCondition();
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP1:
@@ -236,8 +255,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__CONDITION:
 				setCondition((String)newValue);
 				return;
@@ -257,8 +278,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__CONDITION:
 				setCondition(CONDITION_EDEFAULT);
 				return;
@@ -278,8 +301,10 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__CONDITION:
 				return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE__OP1:
@@ -296,7 +321,8 @@ public class ConstantExpression_compareImpl extends ConstantExpressionImpl imple
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface GlobalValueRef extends ValueRef {
+public interface GlobalValueRef extends ValueRef
+{
 	/**
 	 * Returns the value of the '<em><b>Constant</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

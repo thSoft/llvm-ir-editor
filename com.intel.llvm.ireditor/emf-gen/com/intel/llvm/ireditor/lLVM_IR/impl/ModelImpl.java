@@ -33,7 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
+public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+{
 	/**
 	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -49,7 +50,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModelImpl() {
+	protected ModelImpl()
+	{
 		super();
 	}
 
@@ -59,7 +61,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getModel();
 	}
 
@@ -68,8 +71,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TopLevelElement> getElements() {
-		if (elements == null) {
+	public EList<TopLevelElement> getElements()
+	{
+		if (elements == null)
+		{
 			elements = new EObjectContainmentEList<TopLevelElement>(TopLevelElement.class, this, LLVM_IRPackage.MODEL__ELEMENTS);
 		}
 		return elements;
@@ -81,8 +86,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.MODEL__ELEMENTS:
 				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
 		}
@@ -95,8 +102,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.MODEL__ELEMENTS:
 				return getElements();
 		}
@@ -110,8 +119,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.MODEL__ELEMENTS:
 				getElements().clear();
 				getElements().addAll((Collection<? extends TopLevelElement>)newValue);
@@ -126,8 +137,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.MODEL__ELEMENTS:
 				getElements().clear();
 				return;
@@ -141,8 +154,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.MODEL__ELEMENTS:
 				return elements != null && !elements.isEmpty();
 		}

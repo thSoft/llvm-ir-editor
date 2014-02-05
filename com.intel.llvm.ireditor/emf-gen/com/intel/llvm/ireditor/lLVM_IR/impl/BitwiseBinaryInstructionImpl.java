@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl implements BitwiseBinaryInstruction {
+public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl implements BitwiseBinaryInstruction
+{
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -66,7 +67,8 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BitwiseBinaryInstructionImpl() {
+	protected BitwiseBinaryInstructionImpl()
+	{
 		super();
 	}
 
@@ -76,7 +78,8 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction();
 	}
 
@@ -85,7 +88,8 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
+	public Type getType()
+	{
 		return type;
 	}
 
@@ -94,10 +98,12 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs)
+	{
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -109,8 +115,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
+	public void setType(Type newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE, null, msgs);
@@ -128,7 +136,8 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueRef getOp1() {
+	public ValueRef getOp1()
+	{
 		return op1;
 	}
 
@@ -137,10 +146,12 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOp1(ValueRef newOp1, NotificationChain msgs) {
+	public NotificationChain basicSetOp1(ValueRef newOp1, NotificationChain msgs)
+	{
 		ValueRef oldOp1 = op1;
 		op1 = newOp1;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP1, oldOp1, newOp1);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -152,8 +163,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOp1(ValueRef newOp1) {
-		if (newOp1 != op1) {
+	public void setOp1(ValueRef newOp1)
+	{
+		if (newOp1 != op1)
+		{
 			NotificationChain msgs = null;
 			if (op1 != null)
 				msgs = ((InternalEObject)op1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP1, null, msgs);
@@ -171,7 +184,8 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueRef getOp2() {
+	public ValueRef getOp2()
+	{
 		return op2;
 	}
 
@@ -180,10 +194,12 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOp2(ValueRef newOp2, NotificationChain msgs) {
+	public NotificationChain basicSetOp2(ValueRef newOp2, NotificationChain msgs)
+	{
 		ValueRef oldOp2 = op2;
 		op2 = newOp2;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP2, oldOp2, newOp2);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -195,8 +211,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOp2(ValueRef newOp2) {
-		if (newOp2 != op2) {
+	public void setOp2(ValueRef newOp2)
+	{
+		if (newOp2 != op2)
+		{
 			NotificationChain msgs = null;
 			if (op2 != null)
 				msgs = ((InternalEObject)op2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP2, null, msgs);
@@ -215,8 +233,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE:
 				return basicSetType(null, msgs);
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP1:
@@ -233,8 +253,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE:
 				return getType();
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP1:
@@ -251,8 +273,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE:
 				setType((Type)newValue);
 				return;
@@ -272,8 +296,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE:
 				setType((Type)null);
 				return;
@@ -293,8 +319,10 @@ public class BitwiseBinaryInstructionImpl extends NamedMiddleInstructionImpl imp
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__TYPE:
 				return type != null;
 			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION__OP1:

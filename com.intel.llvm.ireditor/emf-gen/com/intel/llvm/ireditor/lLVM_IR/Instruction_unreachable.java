@@ -13,5 +13,6 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_unreachable extends TerminatorInstruction {
+public interface Instruction_unreachable extends TerminatorInstruction
+{
 } // Instruction_unreachable

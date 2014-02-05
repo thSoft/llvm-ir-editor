@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements FunctionPrefix {
+public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements FunctionPrefix
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -44,7 +45,8 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionPrefixImpl() {
+	protected FunctionPrefixImpl()
+	{
 		super();
 	}
 
@@ -54,7 +56,8 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFunctionPrefix();
 	}
 
@@ -63,7 +66,8 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedConstant getValue() {
+	public TypedConstant getValue()
+	{
 		return value;
 	}
 
@@ -72,10 +76,12 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(TypedConstant newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(TypedConstant newValue, NotificationChain msgs)
+	{
 		TypedConstant oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_PREFIX__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -87,8 +93,10 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(TypedConstant newValue) {
-		if (newValue != value) {
+	public void setValue(TypedConstant newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_PREFIX__VALUE, null, msgs);
@@ -107,8 +115,10 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_PREFIX__VALUE:
 				return basicSetValue(null, msgs);
 		}
@@ -121,8 +131,10 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_PREFIX__VALUE:
 				return getValue();
 		}
@@ -135,8 +147,10 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_PREFIX__VALUE:
 				setValue((TypedConstant)newValue);
 				return;
@@ -150,8 +164,10 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_PREFIX__VALUE:
 				setValue((TypedConstant)null);
 				return;
@@ -165,8 +181,10 @@ public class FunctionPrefixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_PREFIX__VALUE:
 				return value != null;
 		}

@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_shlImpl extends BitwiseBinaryInstructionImpl implements Instruction_shl {
+public class Instruction_shlImpl extends BitwiseBinaryInstructionImpl implements Instruction_shl
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_shlImpl() {
+	protected Instruction_shlImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_shlImpl extends BitwiseBinaryInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_shl();
 	}
 

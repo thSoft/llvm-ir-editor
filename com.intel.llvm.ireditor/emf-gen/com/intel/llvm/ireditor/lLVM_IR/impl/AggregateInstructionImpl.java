@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class AggregateInstructionImpl extends NamedMiddleInstructionImpl implements AggregateInstruction {
+public class AggregateInstructionImpl extends NamedMiddleInstructionImpl implements AggregateInstruction
+{
 	/**
 	 * The cached value of the '{@link #getAggregate() <em>Aggregate</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -62,7 +63,8 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AggregateInstructionImpl() {
+	protected AggregateInstructionImpl()
+	{
 		super();
 	}
 
@@ -72,7 +74,8 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getAggregateInstruction();
 	}
 
@@ -81,7 +84,8 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getAggregate() {
+	public TypedValue getAggregate()
+	{
 		return aggregate;
 	}
 
@@ -90,10 +94,12 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAggregate(TypedValue newAggregate, NotificationChain msgs) {
+	public NotificationChain basicSetAggregate(TypedValue newAggregate, NotificationChain msgs)
+	{
 		TypedValue oldAggregate = aggregate;
 		aggregate = newAggregate;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE, oldAggregate, newAggregate);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -105,8 +111,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAggregate(TypedValue newAggregate) {
-		if (newAggregate != aggregate) {
+	public void setAggregate(TypedValue newAggregate)
+	{
+		if (newAggregate != aggregate)
+		{
 			NotificationChain msgs = null;
 			if (aggregate != null)
 				msgs = ((InternalEObject)aggregate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE, null, msgs);
@@ -124,8 +132,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Constant> getIndices() {
-		if (indices == null) {
+	public EList<Constant> getIndices()
+	{
+		if (indices == null)
+		{
 			indices = new EObjectContainmentEList<Constant>(Constant.class, this, LLVM_IRPackage.AGGREGATE_INSTRUCTION__INDICES);
 		}
 		return indices;
@@ -137,8 +147,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE:
 				return basicSetAggregate(null, msgs);
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__INDICES:
@@ -153,8 +165,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE:
 				return getAggregate();
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__INDICES:
@@ -170,8 +184,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE:
 				setAggregate((TypedValue)newValue);
 				return;
@@ -189,8 +205,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE:
 				setAggregate((TypedValue)null);
 				return;
@@ -207,8 +225,10 @@ public class AggregateInstructionImpl extends NamedMiddleInstructionImpl impleme
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__AGGREGATE:
 				return aggregate != null;
 			case LLVM_IRPackage.AGGREGATE_INSTRUCTION__INDICES:

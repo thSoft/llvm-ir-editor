@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_extractvalueImpl extends AggregateInstructionImpl implements Instruction_extractvalue {
+public class Instruction_extractvalueImpl extends AggregateInstructionImpl implements Instruction_extractvalue
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_extractvalueImpl() {
+	protected Instruction_extractvalueImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_extractvalueImpl extends AggregateInstructionImpl imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_extractvalue();
 	}
 

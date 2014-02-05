@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee {
+public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
+{
 	/**
 	 * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +57,8 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AliaseeImpl() {
+	protected AliaseeImpl()
+	{
 		super();
 	}
 
@@ -66,7 +68,8 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getAliasee();
 	}
 
@@ -75,11 +78,14 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValueDef getRef() {
-		if (ref != null && ref.eIsProxy()) {
+	public GlobalValueDef getRef()
+	{
+		if (ref != null && ref.eIsProxy())
+		{
 			InternalEObject oldRef = (InternalEObject)ref;
 			ref = (GlobalValueDef)eResolveProxy(oldRef);
-			if (ref != oldRef) {
+			if (ref != oldRef)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LLVM_IRPackage.ALIASEE__REF, oldRef, ref));
 			}
@@ -92,7 +98,8 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValueDef basicGetRef() {
+	public GlobalValueDef basicGetRef()
+	{
 		return ref;
 	}
 
@@ -101,7 +108,8 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRef(GlobalValueDef newRef) {
+	public void setRef(GlobalValueDef newRef)
+	{
 		GlobalValueDef oldRef = ref;
 		ref = newRef;
 		if (eNotificationRequired())
@@ -113,7 +121,8 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_convert getBitcast() {
+	public ConstantExpression_convert getBitcast()
+	{
 		return bitcast;
 	}
 
@@ -122,10 +131,12 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBitcast(ConstantExpression_convert newBitcast, NotificationChain msgs) {
+	public NotificationChain basicSetBitcast(ConstantExpression_convert newBitcast, NotificationChain msgs)
+	{
 		ConstantExpression_convert oldBitcast = bitcast;
 		bitcast = newBitcast;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.ALIASEE__BITCAST, oldBitcast, newBitcast);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -137,8 +148,10 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBitcast(ConstantExpression_convert newBitcast) {
-		if (newBitcast != bitcast) {
+	public void setBitcast(ConstantExpression_convert newBitcast)
+	{
+		if (newBitcast != bitcast)
+		{
 			NotificationChain msgs = null;
 			if (bitcast != null)
 				msgs = ((InternalEObject)bitcast).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.ALIASEE__BITCAST, null, msgs);
@@ -157,8 +170,10 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIASEE__BITCAST:
 				return basicSetBitcast(null, msgs);
 		}
@@ -171,8 +186,10 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIASEE__REF:
 				if (resolve) return getRef();
 				return basicGetRef();
@@ -188,8 +205,10 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIASEE__REF:
 				setRef((GlobalValueDef)newValue);
 				return;
@@ -206,8 +225,10 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIASEE__REF:
 				setRef((GlobalValueDef)null);
 				return;
@@ -224,8 +245,10 @@ public class AliaseeImpl extends MinimalEObjectImpl.Container implements Aliasee
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIASEE__REF:
 				return ref != null;
 			case LLVM_IRPackage.ALIASEE__BITCAST:

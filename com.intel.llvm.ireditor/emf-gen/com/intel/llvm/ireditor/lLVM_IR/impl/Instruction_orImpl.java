@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_orImpl extends BitwiseBinaryInstructionImpl implements Instruction_or {
+public class Instruction_orImpl extends BitwiseBinaryInstructionImpl implements Instruction_or
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_orImpl() {
+	protected Instruction_orImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_orImpl extends BitwiseBinaryInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_or();
 	}
 

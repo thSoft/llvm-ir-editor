@@ -34,7 +34,8 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl implements ConstantExpression_extractvalue {
+public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl implements ConstantExpression_extractvalue
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -60,7 +61,8 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantExpression_extractvalueImpl() {
+	protected ConstantExpression_extractvalueImpl()
+	{
 		super();
 	}
 
@@ -70,7 +72,8 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantExpression_extractvalue();
 	}
 
@@ -79,7 +82,8 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getValue() {
+	public TypedValue getValue()
+	{
 		return value;
 	}
 
@@ -88,10 +92,12 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs)
+	{
 		TypedValue oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -103,8 +109,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(TypedValue newValue) {
-		if (newValue != value) {
+	public void setValue(TypedValue newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE, null, msgs);
@@ -122,8 +130,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getIndices() {
-		if (indices == null) {
+	public EList<String> getIndices()
+	{
+		if (indices == null)
+		{
 			indices = new EDataTypeEList<String>(String.class, this, LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__INDICES);
 		}
 		return indices;
@@ -135,8 +145,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE:
 				return basicSetValue(null, msgs);
 		}
@@ -149,8 +161,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE:
 				return getValue();
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__INDICES:
@@ -166,8 +180,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE:
 				setValue((TypedValue)newValue);
 				return;
@@ -185,8 +201,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE:
 				setValue((TypedValue)null);
 				return;
@@ -203,8 +221,10 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__VALUE:
 				return value != null;
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE__INDICES:
@@ -219,7 +239,8 @@ public class ConstantExpression_extractvalueImpl extends ConstantExpressionImpl 
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

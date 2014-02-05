@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ValueRefImpl extends CalleeImpl implements ValueRef {
+public class ValueRefImpl extends CalleeImpl implements ValueRef
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ValueRefImpl() {
+	protected ValueRefImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class ValueRefImpl extends CalleeImpl implements ValueRef {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getValueRef();
 	}
 

@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
+public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef
+{
 	/**
 	 * The cached value of the '{@link #getConstant() <em>Constant</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -55,7 +56,8 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GlobalValueRefImpl() {
+	protected GlobalValueRefImpl()
+	{
 		super();
 	}
 
@@ -65,7 +67,8 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getGlobalValueRef();
 	}
 
@@ -74,7 +77,8 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constant getConstant() {
+	public Constant getConstant()
+	{
 		return constant;
 	}
 
@@ -83,10 +87,12 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstant(Constant newConstant, NotificationChain msgs) {
+	public NotificationChain basicSetConstant(Constant newConstant, NotificationChain msgs)
+	{
 		Constant oldConstant = constant;
 		constant = newConstant;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT, oldConstant, newConstant);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -98,8 +104,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstant(Constant newConstant) {
-		if (newConstant != constant) {
+	public void setConstant(Constant newConstant)
+	{
+		if (newConstant != constant)
+		{
 			NotificationChain msgs = null;
 			if (constant != null)
 				msgs = ((InternalEObject)constant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT, null, msgs);
@@ -117,7 +125,8 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef getMetadata() {
+	public MetadataRef getMetadata()
+	{
 		return metadata;
 	}
 
@@ -126,10 +135,12 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMetadata(MetadataRef newMetadata, NotificationChain msgs) {
+	public NotificationChain basicSetMetadata(MetadataRef newMetadata, NotificationChain msgs)
+	{
 		MetadataRef oldMetadata = metadata;
 		metadata = newMetadata;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VALUE_REF__METADATA, oldMetadata, newMetadata);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -141,8 +152,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMetadata(MetadataRef newMetadata) {
-		if (newMetadata != metadata) {
+	public void setMetadata(MetadataRef newMetadata)
+	{
+		if (newMetadata != metadata)
+		{
 			NotificationChain msgs = null;
 			if (metadata != null)
 				msgs = ((InternalEObject)metadata).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.GLOBAL_VALUE_REF__METADATA, null, msgs);
@@ -161,8 +174,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT:
 				return basicSetConstant(null, msgs);
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__METADATA:
@@ -177,8 +192,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT:
 				return getConstant();
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__METADATA:
@@ -193,8 +210,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT:
 				setConstant((Constant)newValue);
 				return;
@@ -211,8 +230,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT:
 				setConstant((Constant)null);
 				return;
@@ -229,8 +250,10 @@ public class GlobalValueRefImpl extends ValueRefImpl implements GlobalValueRef {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__CONSTANT:
 				return constant != null;
 			case LLVM_IRPackage.GLOBAL_VALUE_REF__METADATA:

@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface TopLevelElement extends EObject {
+public interface TopLevelElement extends EObject
+{
 } // TopLevelElement

@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
+public class VectorConstantImpl extends ConstantImpl implements VectorConstant
+{
 	/**
 	 * The cached value of the '{@link #getList() <em>List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VectorConstantImpl() {
+	protected VectorConstantImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getVectorConstant();
 	}
 
@@ -62,7 +65,8 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantList getList() {
+	public ConstantList getList()
+	{
 		return list;
 	}
 
@@ -71,10 +75,12 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetList(ConstantList newList, NotificationChain msgs) {
+	public NotificationChain basicSetList(ConstantList newList, NotificationChain msgs)
+	{
 		ConstantList oldList = list;
 		list = newList;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.VECTOR_CONSTANT__LIST, oldList, newList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -86,8 +92,10 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setList(ConstantList newList) {
-		if (newList != list) {
+	public void setList(ConstantList newList)
+	{
+		if (newList != list)
+		{
 			NotificationChain msgs = null;
 			if (list != null)
 				msgs = ((InternalEObject)list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.VECTOR_CONSTANT__LIST, null, msgs);
@@ -106,8 +114,10 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_CONSTANT__LIST:
 				return basicSetList(null, msgs);
 		}
@@ -120,8 +130,10 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_CONSTANT__LIST:
 				return getList();
 		}
@@ -134,8 +146,10 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_CONSTANT__LIST:
 				setList((ConstantList)newValue);
 				return;
@@ -149,8 +163,10 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_CONSTANT__LIST:
 				setList((ConstantList)null);
 				return;
@@ -164,8 +180,10 @@ public class VectorConstantImpl extends ConstantImpl implements VectorConstant {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_CONSTANT__LIST:
 				return list != null;
 		}

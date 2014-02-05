@@ -20,7 +20,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_fdiv extends BinaryInstruction {
+public interface Instruction_fdiv extends BinaryInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Fast Math Flags</b></em>' containment reference list.
 	 * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.FastMathFlag}.

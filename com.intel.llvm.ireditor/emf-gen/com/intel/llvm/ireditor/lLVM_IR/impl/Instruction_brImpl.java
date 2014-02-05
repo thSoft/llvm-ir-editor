@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_brImpl extends TerminatorInstructionImpl implements Instruction_br {
+public class Instruction_brImpl extends TerminatorInstructionImpl implements Instruction_br
+{
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -77,7 +78,8 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_brImpl() {
+	protected Instruction_brImpl()
+	{
 		super();
 	}
 
@@ -87,7 +89,8 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_br();
 	}
 
@@ -96,7 +99,8 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getCondition() {
+	public TypedValue getCondition()
+	{
 		return condition;
 	}
 
@@ -105,10 +109,12 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCondition(TypedValue newCondition, NotificationChain msgs) {
+	public NotificationChain basicSetCondition(TypedValue newCondition, NotificationChain msgs)
+	{
 		TypedValue oldCondition = condition;
 		condition = newCondition;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_BR__CONDITION, oldCondition, newCondition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -120,8 +126,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(TypedValue newCondition) {
-		if (newCondition != condition) {
+	public void setCondition(TypedValue newCondition)
+	{
+		if (newCondition != condition)
+		{
 			NotificationChain msgs = null;
 			if (condition != null)
 				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_BR__CONDITION, null, msgs);
@@ -139,7 +147,8 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getTrue() {
+	public BasicBlockRef getTrue()
+	{
 		return true_;
 	}
 
@@ -148,10 +157,12 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTrue(BasicBlockRef newTrue, NotificationChain msgs) {
+	public NotificationChain basicSetTrue(BasicBlockRef newTrue, NotificationChain msgs)
+	{
 		BasicBlockRef oldTrue = true_;
 		true_ = newTrue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_BR__TRUE, oldTrue, newTrue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -163,8 +174,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTrue(BasicBlockRef newTrue) {
-		if (newTrue != true_) {
+	public void setTrue(BasicBlockRef newTrue)
+	{
+		if (newTrue != true_)
+		{
 			NotificationChain msgs = null;
 			if (true_ != null)
 				msgs = ((InternalEObject)true_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_BR__TRUE, null, msgs);
@@ -182,7 +195,8 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getFalse() {
+	public BasicBlockRef getFalse()
+	{
 		return false_;
 	}
 
@@ -191,10 +205,12 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFalse(BasicBlockRef newFalse, NotificationChain msgs) {
+	public NotificationChain basicSetFalse(BasicBlockRef newFalse, NotificationChain msgs)
+	{
 		BasicBlockRef oldFalse = false_;
 		false_ = newFalse;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_BR__FALSE, oldFalse, newFalse);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -206,8 +222,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFalse(BasicBlockRef newFalse) {
-		if (newFalse != false_) {
+	public void setFalse(BasicBlockRef newFalse)
+	{
+		if (newFalse != false_)
+		{
 			NotificationChain msgs = null;
 			if (false_ != null)
 				msgs = ((InternalEObject)false_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_BR__FALSE, null, msgs);
@@ -225,7 +243,8 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getUnconditional() {
+	public BasicBlockRef getUnconditional()
+	{
 		return unconditional;
 	}
 
@@ -234,10 +253,12 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetUnconditional(BasicBlockRef newUnconditional, NotificationChain msgs) {
+	public NotificationChain basicSetUnconditional(BasicBlockRef newUnconditional, NotificationChain msgs)
+	{
 		BasicBlockRef oldUnconditional = unconditional;
 		unconditional = newUnconditional;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_BR__UNCONDITIONAL, oldUnconditional, newUnconditional);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -249,8 +270,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnconditional(BasicBlockRef newUnconditional) {
-		if (newUnconditional != unconditional) {
+	public void setUnconditional(BasicBlockRef newUnconditional)
+	{
+		if (newUnconditional != unconditional)
+		{
 			NotificationChain msgs = null;
 			if (unconditional != null)
 				msgs = ((InternalEObject)unconditional).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_BR__UNCONDITIONAL, null, msgs);
@@ -269,8 +292,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_BR__CONDITION:
 				return basicSetCondition(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_BR__TRUE:
@@ -289,8 +314,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_BR__CONDITION:
 				return getCondition();
 			case LLVM_IRPackage.INSTRUCTION_BR__TRUE:
@@ -309,8 +336,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_BR__CONDITION:
 				setCondition((TypedValue)newValue);
 				return;
@@ -333,8 +362,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_BR__CONDITION:
 				setCondition((TypedValue)null);
 				return;
@@ -357,8 +388,10 @@ public class Instruction_brImpl extends TerminatorInstructionImpl implements Ins
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_BR__CONDITION:
 				return condition != null;
 			case LLVM_IRPackage.INSTRUCTION_BR__TRUE:

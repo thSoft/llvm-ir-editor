@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetadata {
+public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetadata
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -64,7 +65,8 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamedMetadataImpl() {
+	protected NamedMetadataImpl()
+	{
 		super();
 	}
 
@@ -74,7 +76,8 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getNamedMetadata();
 	}
 
@@ -83,7 +86,8 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -92,7 +96,8 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -104,7 +109,8 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataNode getNode() {
+	public MetadataNode getNode()
+	{
 		return node;
 	}
 
@@ -113,10 +119,12 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNode(MetadataNode newNode, NotificationChain msgs) {
+	public NotificationChain basicSetNode(MetadataNode newNode, NotificationChain msgs)
+	{
 		MetadataNode oldNode = node;
 		node = newNode;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.NAMED_METADATA__NODE, oldNode, newNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -128,8 +136,10 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNode(MetadataNode newNode) {
-		if (newNode != node) {
+	public void setNode(MetadataNode newNode)
+	{
+		if (newNode != node)
+		{
 			NotificationChain msgs = null;
 			if (node != null)
 				msgs = ((InternalEObject)node).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.NAMED_METADATA__NODE, null, msgs);
@@ -148,8 +158,10 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_METADATA__NODE:
 				return basicSetNode(null, msgs);
 		}
@@ -162,8 +174,10 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_METADATA__NAME:
 				return getName();
 			case LLVM_IRPackage.NAMED_METADATA__NODE:
@@ -178,8 +192,10 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_METADATA__NAME:
 				setName((String)newValue);
 				return;
@@ -196,8 +212,10 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_METADATA__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -214,8 +232,10 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NAMED_METADATA__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.NAMED_METADATA__NODE:
@@ -230,7 +250,8 @@ public class NamedMetadataImpl extends TopLevelElementImpl implements NamedMetad
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

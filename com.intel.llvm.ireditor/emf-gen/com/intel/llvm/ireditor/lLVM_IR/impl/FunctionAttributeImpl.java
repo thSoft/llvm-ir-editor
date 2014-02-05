@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implements FunctionAttribute {
+public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implements FunctionAttribute
+{
 	/**
 	 * The default value of the '{@link #getAttribute() <em>Attribute</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +52,8 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionAttributeImpl() {
+	protected FunctionAttributeImpl()
+	{
 		super();
 	}
 
@@ -61,7 +63,8 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFunctionAttribute();
 	}
 
@@ -70,7 +73,8 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAttribute() {
+	public String getAttribute()
+	{
 		return attribute;
 	}
 
@@ -79,7 +83,8 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttribute(String newAttribute) {
+	public void setAttribute(String newAttribute)
+	{
 		String oldAttribute = attribute;
 		attribute = newAttribute;
 		if (eNotificationRequired())
@@ -92,8 +97,10 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTE__ATTRIBUTE:
 				return getAttribute();
 		}
@@ -106,8 +113,10 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTE__ATTRIBUTE:
 				setAttribute((String)newValue);
 				return;
@@ -121,8 +130,10 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTE__ATTRIBUTE:
 				setAttribute(ATTRIBUTE_EDEFAULT);
 				return;
@@ -136,8 +147,10 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTE__ATTRIBUTE:
 				return ATTRIBUTE_EDEFAULT == null ? attribute != null : !ATTRIBUTE_EDEFAULT.equals(attribute);
 		}
@@ -150,7 +163,8 @@ public class FunctionAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

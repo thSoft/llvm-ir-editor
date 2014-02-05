@@ -21,7 +21,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_shufflevector extends VectorInstructions {
+public interface Instruction_shufflevector extends VectorInstructions
+{
 	/**
 	 * Returns the value of the '<em><b>Vector1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

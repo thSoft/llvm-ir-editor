@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface StructureConstant extends Constant {
+public interface StructureConstant extends Constant
+{
 	/**
 	 * Returns the value of the '<em><b>List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

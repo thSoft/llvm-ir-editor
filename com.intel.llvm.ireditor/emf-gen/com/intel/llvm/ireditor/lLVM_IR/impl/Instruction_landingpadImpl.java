@@ -38,7 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Instruction_landingpadImpl extends OtherInstructionImpl implements Instruction_landingpad {
+public class Instruction_landingpadImpl extends OtherInstructionImpl implements Instruction_landingpad
+{
 	/**
 	 * The cached value of the '{@link #getResultType() <em>Result Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -74,7 +75,8 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_landingpadImpl() {
+	protected Instruction_landingpadImpl()
+	{
 		super();
 	}
 
@@ -84,7 +86,8 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_landingpad();
 	}
 
@@ -93,7 +96,8 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getResultType() {
+	public Type getResultType()
+	{
 		return resultType;
 	}
 
@@ -102,10 +106,12 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetResultType(Type newResultType, NotificationChain msgs) {
+	public NotificationChain basicSetResultType(Type newResultType, NotificationChain msgs)
+	{
 		Type oldResultType = resultType;
 		resultType = newResultType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE, oldResultType, newResultType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -117,8 +123,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResultType(Type newResultType) {
-		if (newResultType != resultType) {
+	public void setResultType(Type newResultType)
+	{
+		if (newResultType != resultType)
+		{
 			NotificationChain msgs = null;
 			if (resultType != null)
 				msgs = ((InternalEObject)resultType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE, null, msgs);
@@ -136,7 +144,8 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getPersonality() {
+	public TypedValue getPersonality()
+	{
 		return personality;
 	}
 
@@ -145,10 +154,12 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPersonality(TypedValue newPersonality, NotificationChain msgs) {
+	public NotificationChain basicSetPersonality(TypedValue newPersonality, NotificationChain msgs)
+	{
 		TypedValue oldPersonality = personality;
 		personality = newPersonality;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_LANDINGPAD__PERSONALITY, oldPersonality, newPersonality);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -160,8 +171,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPersonality(TypedValue newPersonality) {
-		if (newPersonality != personality) {
+	public void setPersonality(TypedValue newPersonality)
+	{
+		if (newPersonality != personality)
+		{
 			NotificationChain msgs = null;
 			if (personality != null)
 				msgs = ((InternalEObject)personality).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_LANDINGPAD__PERSONALITY, null, msgs);
@@ -179,8 +192,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LandingpadClause> getClauses() {
-		if (clauses == null) {
+	public EList<LandingpadClause> getClauses()
+	{
+		if (clauses == null)
+		{
 			clauses = new EObjectContainmentEList<LandingpadClause>(LandingpadClause.class, this, LLVM_IRPackage.INSTRUCTION_LANDINGPAD__CLAUSES);
 		}
 		return clauses;
@@ -192,8 +207,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE:
 				return basicSetResultType(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__PERSONALITY:
@@ -210,8 +227,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE:
 				return getResultType();
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__PERSONALITY:
@@ -229,8 +248,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE:
 				setResultType((Type)newValue);
 				return;
@@ -251,8 +272,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE:
 				setResultType((Type)null);
 				return;
@@ -272,8 +295,10 @@ public class Instruction_landingpadImpl extends OtherInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__RESULT_TYPE:
 				return resultType != null;
 			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD__PERSONALITY:

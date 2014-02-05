@@ -32,7 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AliasImpl extends GlobalValueImpl implements Alias {
+public class AliasImpl extends GlobalValueImpl implements Alias
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -118,7 +119,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AliasImpl() {
+	protected AliasImpl()
+	{
 		super();
 	}
 
@@ -128,7 +130,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getAlias();
 	}
 
@@ -137,7 +140,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -146,7 +150,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -158,7 +163,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLinkage() {
+	public String getLinkage()
+	{
 		return linkage;
 	}
 
@@ -167,7 +173,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinkage(String newLinkage) {
+	public void setLinkage(String newLinkage)
+	{
 		String oldLinkage = linkage;
 		linkage = newLinkage;
 		if (eNotificationRequired())
@@ -179,7 +186,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVisibility() {
+	public String getVisibility()
+	{
 		return visibility;
 	}
 
@@ -188,7 +196,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisibility(String newVisibility) {
+	public void setVisibility(String newVisibility)
+	{
 		String oldVisibility = visibility;
 		visibility = newVisibility;
 		if (eNotificationRequired())
@@ -200,7 +209,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
+	public Type getType()
+	{
 		return type;
 	}
 
@@ -209,10 +219,12 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs)
+	{
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.ALIAS__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -224,8 +236,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
+	public void setType(Type newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.ALIAS__TYPE, null, msgs);
@@ -243,7 +257,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Aliasee getAliasee() {
+	public Aliasee getAliasee()
+	{
 		return aliasee;
 	}
 
@@ -252,10 +267,12 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAliasee(Aliasee newAliasee, NotificationChain msgs) {
+	public NotificationChain basicSetAliasee(Aliasee newAliasee, NotificationChain msgs)
+	{
 		Aliasee oldAliasee = aliasee;
 		aliasee = newAliasee;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.ALIAS__ALIASEE, oldAliasee, newAliasee);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -267,8 +284,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAliasee(Aliasee newAliasee) {
-		if (newAliasee != aliasee) {
+	public void setAliasee(Aliasee newAliasee)
+	{
+		if (newAliasee != aliasee)
+		{
 			NotificationChain msgs = null;
 			if (aliasee != null)
 				msgs = ((InternalEObject)aliasee).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.ALIAS__ALIASEE, null, msgs);
@@ -287,8 +306,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIAS__TYPE:
 				return basicSetType(null, msgs);
 			case LLVM_IRPackage.ALIAS__ALIASEE:
@@ -303,8 +324,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIAS__NAME:
 				return getName();
 			case LLVM_IRPackage.ALIAS__LINKAGE:
@@ -325,8 +348,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIAS__NAME:
 				setName((String)newValue);
 				return;
@@ -352,8 +377,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIAS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -379,8 +406,10 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ALIAS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.ALIAS__LINKAGE:
@@ -401,7 +430,8 @@ public class AliasImpl extends GlobalValueImpl implements Alias {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

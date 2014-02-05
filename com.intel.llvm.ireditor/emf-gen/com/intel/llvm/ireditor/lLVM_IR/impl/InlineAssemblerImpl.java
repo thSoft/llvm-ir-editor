@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
+public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler
+{
 	/**
 	 * The default value of the '{@link #getAssembler() <em>Assembler</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,7 +72,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InlineAssemblerImpl() {
+	protected InlineAssemblerImpl()
+	{
 		super();
 	}
 
@@ -81,7 +83,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInlineAssembler();
 	}
 
@@ -90,7 +93,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAssembler() {
+	public String getAssembler()
+	{
 		return assembler;
 	}
 
@@ -99,7 +103,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssembler(String newAssembler) {
+	public void setAssembler(String newAssembler)
+	{
 		String oldAssembler = assembler;
 		assembler = newAssembler;
 		if (eNotificationRequired())
@@ -111,7 +116,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFlags() {
+	public String getFlags()
+	{
 		return flags;
 	}
 
@@ -120,7 +126,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFlags(String newFlags) {
+	public void setFlags(String newFlags)
+	{
 		String oldFlags = flags;
 		flags = newFlags;
 		if (eNotificationRequired())
@@ -133,8 +140,10 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASSEMBLER__ASSEMBLER:
 				return getAssembler();
 			case LLVM_IRPackage.INLINE_ASSEMBLER__FLAGS:
@@ -149,8 +158,10 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASSEMBLER__ASSEMBLER:
 				setAssembler((String)newValue);
 				return;
@@ -167,8 +178,10 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASSEMBLER__ASSEMBLER:
 				setAssembler(ASSEMBLER_EDEFAULT);
 				return;
@@ -185,8 +198,10 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INLINE_ASSEMBLER__ASSEMBLER:
 				return ASSEMBLER_EDEFAULT == null ? assembler != null : !ASSEMBLER_EDEFAULT.equals(assembler);
 			case LLVM_IRPackage.INLINE_ASSEMBLER__FLAGS:
@@ -201,7 +216,8 @@ public class InlineAssemblerImpl extends CalleeImpl implements InlineAssembler {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

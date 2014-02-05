@@ -32,7 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements Instruction_load {
+public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements Instruction_load
+{
 	/**
 	 * The cached value of the '{@link #getPointer() <em>Pointer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -108,7 +109,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_loadImpl() {
+	protected Instruction_loadImpl()
+	{
 		super();
 	}
 
@@ -118,7 +120,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_load();
 	}
 
@@ -127,7 +130,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getPointer() {
+	public TypedValue getPointer()
+	{
 		return pointer;
 	}
 
@@ -136,10 +140,12 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPointer(TypedValue newPointer, NotificationChain msgs) {
+	public NotificationChain basicSetPointer(TypedValue newPointer, NotificationChain msgs)
+	{
 		TypedValue oldPointer = pointer;
 		pointer = newPointer;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_LOAD__POINTER, oldPointer, newPointer);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -151,8 +157,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointer(TypedValue newPointer) {
-		if (newPointer != pointer) {
+	public void setPointer(TypedValue newPointer)
+	{
+		if (newPointer != pointer)
+		{
 			NotificationChain msgs = null;
 			if (pointer != null)
 				msgs = ((InternalEObject)pointer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_LOAD__POINTER, null, msgs);
@@ -170,7 +178,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAlignment() {
+	public String getAlignment()
+	{
 		return alignment;
 	}
 
@@ -179,7 +188,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlignment(String newAlignment) {
+	public void setAlignment(String newAlignment)
+	{
 		String oldAlignment = alignment;
 		alignment = newAlignment;
 		if (eNotificationRequired())
@@ -191,7 +201,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef getNontemporalIndex() {
+	public MetadataRef getNontemporalIndex()
+	{
 		return nontemporalIndex;
 	}
 
@@ -200,10 +211,12 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNontemporalIndex(MetadataRef newNontemporalIndex, NotificationChain msgs) {
+	public NotificationChain basicSetNontemporalIndex(MetadataRef newNontemporalIndex, NotificationChain msgs)
+	{
 		MetadataRef oldNontemporalIndex = nontemporalIndex;
 		nontemporalIndex = newNontemporalIndex;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_LOAD__NONTEMPORAL_INDEX, oldNontemporalIndex, newNontemporalIndex);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -215,8 +228,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNontemporalIndex(MetadataRef newNontemporalIndex) {
-		if (newNontemporalIndex != nontemporalIndex) {
+	public void setNontemporalIndex(MetadataRef newNontemporalIndex)
+	{
+		if (newNontemporalIndex != nontemporalIndex)
+		{
 			NotificationChain msgs = null;
 			if (nontemporalIndex != null)
 				msgs = ((InternalEObject)nontemporalIndex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_LOAD__NONTEMPORAL_INDEX, null, msgs);
@@ -234,7 +249,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef getInvariantLoadIndex() {
+	public MetadataRef getInvariantLoadIndex()
+	{
 		return invariantLoadIndex;
 	}
 
@@ -243,10 +259,12 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInvariantLoadIndex(MetadataRef newInvariantLoadIndex, NotificationChain msgs) {
+	public NotificationChain basicSetInvariantLoadIndex(MetadataRef newInvariantLoadIndex, NotificationChain msgs)
+	{
 		MetadataRef oldInvariantLoadIndex = invariantLoadIndex;
 		invariantLoadIndex = newInvariantLoadIndex;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_LOAD__INVARIANT_LOAD_INDEX, oldInvariantLoadIndex, newInvariantLoadIndex);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -258,8 +276,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInvariantLoadIndex(MetadataRef newInvariantLoadIndex) {
-		if (newInvariantLoadIndex != invariantLoadIndex) {
+	public void setInvariantLoadIndex(MetadataRef newInvariantLoadIndex)
+	{
+		if (newInvariantLoadIndex != invariantLoadIndex)
+		{
 			NotificationChain msgs = null;
 			if (invariantLoadIndex != null)
 				msgs = ((InternalEObject)invariantLoadIndex).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_LOAD__INVARIANT_LOAD_INDEX, null, msgs);
@@ -277,7 +297,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOrdering() {
+	public String getOrdering()
+	{
 		return ordering;
 	}
 
@@ -286,7 +307,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrdering(String newOrdering) {
+	public void setOrdering(String newOrdering)
+	{
 		String oldOrdering = ordering;
 		ordering = newOrdering;
 		if (eNotificationRequired())
@@ -299,8 +321,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LOAD__POINTER:
 				return basicSetPointer(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_LOAD__NONTEMPORAL_INDEX:
@@ -317,8 +341,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LOAD__POINTER:
 				return getPointer();
 			case LLVM_IRPackage.INSTRUCTION_LOAD__ALIGNMENT:
@@ -339,8 +365,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LOAD__POINTER:
 				setPointer((TypedValue)newValue);
 				return;
@@ -366,8 +394,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LOAD__POINTER:
 				setPointer((TypedValue)null);
 				return;
@@ -393,8 +423,10 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_LOAD__POINTER:
 				return pointer != null;
 			case LLVM_IRPackage.INSTRUCTION_LOAD__ALIGNMENT:
@@ -415,7 +447,8 @@ public class Instruction_loadImpl extends NamedMiddleInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

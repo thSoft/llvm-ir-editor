@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface X86mmxType extends EObject {
+public interface X86mmxType extends EObject
+{
 } // X86mmxType

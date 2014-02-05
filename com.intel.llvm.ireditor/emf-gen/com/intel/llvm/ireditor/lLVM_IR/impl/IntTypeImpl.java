@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class IntTypeImpl extends MinimalEObjectImpl.Container implements IntType {
+public class IntTypeImpl extends MinimalEObjectImpl.Container implements IntType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntTypeImpl() {
+	protected IntTypeImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class IntTypeImpl extends MinimalEObjectImpl.Container implements IntType
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getIntType();
 	}
 

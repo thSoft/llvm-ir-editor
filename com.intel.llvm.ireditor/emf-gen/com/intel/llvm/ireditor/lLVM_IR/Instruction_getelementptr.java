@@ -21,7 +21,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_getelementptr extends NamedMiddleInstruction {
+public interface Instruction_getelementptr extends NamedMiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Base</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

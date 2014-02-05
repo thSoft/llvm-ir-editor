@@ -23,7 +23,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_switch extends TerminatorInstruction {
+public interface Instruction_switch extends TerminatorInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Comparison Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

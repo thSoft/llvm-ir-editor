@@ -4,11 +4,11 @@
 <plugin>
 
   <extension point="org.eclipse.emf.ecore.generated_package">
-    <package 
-       uri = "http://www.intel.com/llvm/ireditor" 
+    <package
+       uri = "http://www.intel.com/llvm/ireditor"
        class = "com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage"
-       genModel = "com/intel/llvm/ireditor/LLVM_IR.genmodel" /> 
-	
+       genModel = "model/LLVM_IR.genmodel" />
+
   </extension>
 
 

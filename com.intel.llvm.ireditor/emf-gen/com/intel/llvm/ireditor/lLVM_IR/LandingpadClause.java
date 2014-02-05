@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface LandingpadClause extends EObject {
+public interface LandingpadClause extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Landing Pad Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->

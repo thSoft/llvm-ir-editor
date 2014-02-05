@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface AlignStack extends EObject {
+public interface AlignStack extends EObject
+{
 } // AlignStack

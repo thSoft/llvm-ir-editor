@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FunctionAttributes extends EObject {
+public interface FunctionAttributes extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Function Attributes</b></em>' containment reference list.
 	 * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.FunctionAttribute}.

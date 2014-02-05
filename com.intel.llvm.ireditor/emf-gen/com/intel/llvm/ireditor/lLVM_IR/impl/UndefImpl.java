@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class UndefImpl extends ConstantImpl implements Undef {
+public class UndefImpl extends ConstantImpl implements Undef
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UndefImpl() {
+	protected UndefImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class UndefImpl extends ConstantImpl implements Undef {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getUndef();
 	}
 

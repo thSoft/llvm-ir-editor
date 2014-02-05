@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface VectorConstant extends Constant {
+public interface VectorConstant extends Constant
+{
 	/**
 	 * Returns the value of the '<em><b>List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

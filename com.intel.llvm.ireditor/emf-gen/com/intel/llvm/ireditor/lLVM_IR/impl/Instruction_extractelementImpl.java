@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_extractelementImpl extends VectorInstructionsImpl implements Instruction_extractelement {
+public class Instruction_extractelementImpl extends VectorInstructionsImpl implements Instruction_extractelement
+{
 	/**
 	 * The cached value of the '{@link #getVector() <em>Vector</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +55,8 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_extractelementImpl() {
+	protected Instruction_extractelementImpl()
+	{
 		super();
 	}
 
@@ -64,7 +66,8 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_extractelement();
 	}
 
@@ -73,7 +76,8 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getVector() {
+	public TypedValue getVector()
+	{
 		return vector;
 	}
 
@@ -82,10 +86,12 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVector(TypedValue newVector, NotificationChain msgs) {
+	public NotificationChain basicSetVector(TypedValue newVector, NotificationChain msgs)
+	{
 		TypedValue oldVector = vector;
 		vector = newVector;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR, oldVector, newVector);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -97,8 +103,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVector(TypedValue newVector) {
-		if (newVector != vector) {
+	public void setVector(TypedValue newVector)
+	{
+		if (newVector != vector)
+		{
 			NotificationChain msgs = null;
 			if (vector != null)
 				msgs = ((InternalEObject)vector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR, null, msgs);
@@ -116,7 +124,8 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getIndex() {
+	public TypedValue getIndex()
+	{
 		return index;
 	}
 
@@ -125,10 +134,12 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIndex(TypedValue newIndex, NotificationChain msgs) {
+	public NotificationChain basicSetIndex(TypedValue newIndex, NotificationChain msgs)
+	{
 		TypedValue oldIndex = index;
 		index = newIndex;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__INDEX, oldIndex, newIndex);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -140,8 +151,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIndex(TypedValue newIndex) {
-		if (newIndex != index) {
+	public void setIndex(TypedValue newIndex)
+	{
+		if (newIndex != index)
+		{
 			NotificationChain msgs = null;
 			if (index != null)
 				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__INDEX, null, msgs);
@@ -160,8 +173,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR:
 				return basicSetVector(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__INDEX:
@@ -176,8 +191,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR:
 				return getVector();
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__INDEX:
@@ -192,8 +209,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR:
 				setVector((TypedValue)newValue);
 				return;
@@ -210,8 +229,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR:
 				setVector((TypedValue)null);
 				return;
@@ -228,8 +249,10 @@ public class Instruction_extractelementImpl extends VectorInstructionsImpl imple
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__VECTOR:
 				return vector != null;
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT__INDEX:

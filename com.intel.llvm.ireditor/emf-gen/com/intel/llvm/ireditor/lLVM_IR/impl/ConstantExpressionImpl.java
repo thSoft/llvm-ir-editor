@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpression {
+public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpression
+{
 	/**
 	 * The default value of the '{@link #getOpcode() <em>Opcode</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantExpressionImpl() {
+	protected ConstantExpressionImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantExpression();
 	}
 
@@ -69,7 +72,8 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOpcode() {
+	public String getOpcode()
+	{
 		return opcode;
 	}
 
@@ -78,7 +82,8 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOpcode(String newOpcode) {
+	public void setOpcode(String newOpcode)
+	{
 		String oldOpcode = opcode;
 		opcode = newOpcode;
 		if (eNotificationRequired())
@@ -91,8 +96,10 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION__OPCODE:
 				return getOpcode();
 		}
@@ -105,8 +112,10 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION__OPCODE:
 				setOpcode((String)newValue);
 				return;
@@ -120,8 +129,10 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION__OPCODE:
 				setOpcode(OPCODE_EDEFAULT);
 				return;
@@ -135,8 +146,10 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION__OPCODE:
 				return OPCODE_EDEFAULT == null ? opcode != null : !OPCODE_EDEFAULT.equals(opcode);
 		}
@@ -149,7 +162,8 @@ public class ConstantExpressionImpl extends ConstantImpl implements ConstantExpr
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

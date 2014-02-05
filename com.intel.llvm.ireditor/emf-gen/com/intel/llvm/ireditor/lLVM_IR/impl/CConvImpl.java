@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
+public class CConvImpl extends MinimalEObjectImpl.Container implements CConv
+{
 	/**
 	 * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CConvImpl() {
+	protected CConvImpl()
+	{
 		super();
 	}
 
@@ -82,7 +84,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getCConv();
 	}
 
@@ -91,7 +94,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVal() {
+	public String getVal()
+	{
 		return val;
 	}
 
@@ -100,7 +104,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVal(String newVal) {
+	public void setVal(String newVal)
+	{
 		String oldVal = val;
 		val = newVal;
 		if (eNotificationRequired())
@@ -112,7 +117,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCustomNumber() {
+	public String getCustomNumber()
+	{
 		return customNumber;
 	}
 
@@ -121,7 +127,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCustomNumber(String newCustomNumber) {
+	public void setCustomNumber(String newCustomNumber)
+	{
 		String oldCustomNumber = customNumber;
 		customNumber = newCustomNumber;
 		if (eNotificationRequired())
@@ -134,8 +141,10 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CCONV__VAL:
 				return getVal();
 			case LLVM_IRPackage.CCONV__CUSTOM_NUMBER:
@@ -150,8 +159,10 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CCONV__VAL:
 				setVal((String)newValue);
 				return;
@@ -168,8 +179,10 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CCONV__VAL:
 				setVal(VAL_EDEFAULT);
 				return;
@@ -186,8 +199,10 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CCONV__VAL:
 				return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
 			case LLVM_IRPackage.CCONV__CUSTOM_NUMBER:
@@ -202,7 +217,8 @@ public class CConvImpl extends MinimalEObjectImpl.Container implements CConv {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

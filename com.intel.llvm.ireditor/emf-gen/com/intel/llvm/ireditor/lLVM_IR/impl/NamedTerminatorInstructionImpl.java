@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class NamedTerminatorInstructionImpl extends NamedInstructionImpl implements NamedTerminatorInstruction {
+public class NamedTerminatorInstructionImpl extends NamedInstructionImpl implements NamedTerminatorInstruction
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamedTerminatorInstructionImpl() {
+	protected NamedTerminatorInstructionImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class NamedTerminatorInstructionImpl extends NamedInstructionImpl impleme
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getNamedTerminatorInstruction();
 	}
 

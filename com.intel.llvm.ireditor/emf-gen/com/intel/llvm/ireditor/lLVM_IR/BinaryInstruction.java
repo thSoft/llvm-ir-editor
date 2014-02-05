@@ -21,7 +21,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface BinaryInstruction extends NamedMiddleInstruction {
+public interface BinaryInstruction extends NamedMiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

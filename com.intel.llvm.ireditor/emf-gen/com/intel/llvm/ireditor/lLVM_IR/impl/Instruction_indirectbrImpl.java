@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implements Instruction_indirectbr {
+public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implements Instruction_indirectbr
+{
 	/**
 	 * The cached value of the '{@link #getAddress() <em>Address</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -62,7 +63,8 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_indirectbrImpl() {
+	protected Instruction_indirectbrImpl()
+	{
 		super();
 	}
 
@@ -72,7 +74,8 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_indirectbr();
 	}
 
@@ -81,7 +84,8 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getAddress() {
+	public TypedValue getAddress()
+	{
 		return address;
 	}
 
@@ -90,10 +94,12 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAddress(TypedValue newAddress, NotificationChain msgs) {
+	public NotificationChain basicSetAddress(TypedValue newAddress, NotificationChain msgs)
+	{
 		TypedValue oldAddress = address;
 		address = newAddress;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS, oldAddress, newAddress);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -105,8 +111,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAddress(TypedValue newAddress) {
-		if (newAddress != address) {
+	public void setAddress(TypedValue newAddress)
+	{
+		if (newAddress != address)
+		{
 			NotificationChain msgs = null;
 			if (address != null)
 				msgs = ((InternalEObject)address).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS, null, msgs);
@@ -124,8 +132,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BasicBlockRef> getDestinations() {
-		if (destinations == null) {
+	public EList<BasicBlockRef> getDestinations()
+	{
+		if (destinations == null)
+		{
 			destinations = new EObjectContainmentEList<BasicBlockRef>(BasicBlockRef.class, this, LLVM_IRPackage.INSTRUCTION_INDIRECTBR__DESTINATIONS);
 		}
 		return destinations;
@@ -137,8 +147,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS:
 				return basicSetAddress(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__DESTINATIONS:
@@ -153,8 +165,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS:
 				return getAddress();
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__DESTINATIONS:
@@ -170,8 +184,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS:
 				setAddress((TypedValue)newValue);
 				return;
@@ -189,8 +205,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS:
 				setAddress((TypedValue)null);
 				return;
@@ -207,8 +225,10 @@ public class Instruction_indirectbrImpl extends TerminatorInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__ADDRESS:
 				return address != null;
 			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR__DESTINATIONS:

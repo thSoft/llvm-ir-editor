@@ -23,7 +23,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_load extends NamedMiddleInstruction {
+public interface Instruction_load extends NamedMiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Pointer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface BlockAddress extends Constant {
+public interface BlockAddress extends Constant
+{
 	/**
 	 * Returns the value of the '<em><b>Function</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

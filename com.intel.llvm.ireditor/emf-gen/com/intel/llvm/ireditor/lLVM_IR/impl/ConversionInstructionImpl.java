@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implements ConversionInstruction {
+public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implements ConversionInstruction
+{
 	/**
 	 * The cached value of the '{@link #getFromType() <em>From Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -66,7 +67,8 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConversionInstructionImpl() {
+	protected ConversionInstructionImpl()
+	{
 		super();
 	}
 
@@ -76,7 +78,8 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConversionInstruction();
 	}
 
@@ -85,7 +88,8 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getFromType() {
+	public Type getFromType()
+	{
 		return fromType;
 	}
 
@@ -94,10 +98,12 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFromType(Type newFromType, NotificationChain msgs) {
+	public NotificationChain basicSetFromType(Type newFromType, NotificationChain msgs)
+	{
 		Type oldFromType = fromType;
 		fromType = newFromType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE, oldFromType, newFromType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -109,8 +115,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFromType(Type newFromType) {
-		if (newFromType != fromType) {
+	public void setFromType(Type newFromType)
+	{
+		if (newFromType != fromType)
+		{
 			NotificationChain msgs = null;
 			if (fromType != null)
 				msgs = ((InternalEObject)fromType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE, null, msgs);
@@ -128,7 +136,8 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueRef getValue() {
+	public ValueRef getValue()
+	{
 		return value;
 	}
 
@@ -137,10 +146,12 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(ValueRef newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(ValueRef newValue, NotificationChain msgs)
+	{
 		ValueRef oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONVERSION_INSTRUCTION__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -152,8 +163,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(ValueRef newValue) {
-		if (newValue != value) {
+	public void setValue(ValueRef newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONVERSION_INSTRUCTION__VALUE, null, msgs);
@@ -171,7 +184,8 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getTargetType() {
+	public Type getTargetType()
+	{
 		return targetType;
 	}
 
@@ -180,10 +194,12 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTargetType(Type newTargetType, NotificationChain msgs) {
+	public NotificationChain basicSetTargetType(Type newTargetType, NotificationChain msgs)
+	{
 		Type oldTargetType = targetType;
 		targetType = newTargetType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONVERSION_INSTRUCTION__TARGET_TYPE, oldTargetType, newTargetType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -195,8 +211,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTargetType(Type newTargetType) {
-		if (newTargetType != targetType) {
+	public void setTargetType(Type newTargetType)
+	{
+		if (newTargetType != targetType)
+		{
 			NotificationChain msgs = null;
 			if (targetType != null)
 				msgs = ((InternalEObject)targetType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONVERSION_INSTRUCTION__TARGET_TYPE, null, msgs);
@@ -215,8 +233,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE:
 				return basicSetFromType(null, msgs);
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__VALUE:
@@ -233,8 +253,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE:
 				return getFromType();
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__VALUE:
@@ -251,8 +273,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE:
 				setFromType((Type)newValue);
 				return;
@@ -272,8 +296,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE:
 				setFromType((Type)null);
 				return;
@@ -293,8 +319,10 @@ public class ConversionInstructionImpl extends NamedMiddleInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__FROM_TYPE:
 				return fromType != null;
 			case LLVM_IRPackage.CONVERSION_INSTRUCTION__VALUE:

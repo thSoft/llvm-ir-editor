@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class StartingInstructionImpl extends NamedInstructionImpl implements StartingInstruction {
+public class StartingInstructionImpl extends NamedInstructionImpl implements StartingInstruction
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StartingInstructionImpl() {
+	protected StartingInstructionImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class StartingInstructionImpl extends NamedInstructionImpl implements Sta
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getStartingInstruction();
 	}
 

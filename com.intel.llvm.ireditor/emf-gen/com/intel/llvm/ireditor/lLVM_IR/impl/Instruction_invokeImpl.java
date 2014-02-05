@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_invokeImpl extends TerminatorInstructionImpl implements Instruction_invoke {
+public class Instruction_invokeImpl extends TerminatorInstructionImpl implements Instruction_invoke
+{
 	/**
 	 * The cached value of the '{@link #getCconv() <em>Cconv</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -102,7 +103,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_invokeImpl() {
+	protected Instruction_invokeImpl()
+	{
 		super();
 	}
 
@@ -112,7 +114,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_invoke();
 	}
 
@@ -121,7 +124,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CConv getCconv() {
+	public CConv getCconv()
+	{
 		return cconv;
 	}
 
@@ -130,10 +134,12 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs) {
+	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs)
+	{
 		CConv oldCconv = cconv;
 		cconv = newCconv;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV, oldCconv, newCconv);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -145,8 +151,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCconv(CConv newCconv) {
-		if (newCconv != cconv) {
+	public void setCconv(CConv newCconv)
+	{
+		if (newCconv != cconv)
+		{
 			NotificationChain msgs = null;
 			if (cconv != null)
 				msgs = ((InternalEObject)cconv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV, null, msgs);
@@ -164,7 +172,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Callee getCallee() {
+	public Callee getCallee()
+	{
 		return callee;
 	}
 
@@ -173,10 +182,12 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCallee(Callee newCallee, NotificationChain msgs) {
+	public NotificationChain basicSetCallee(Callee newCallee, NotificationChain msgs)
+	{
 		Callee oldCallee = callee;
 		callee = newCallee;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE__CALLEE, oldCallee, newCallee);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -188,8 +199,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCallee(Callee newCallee) {
-		if (newCallee != callee) {
+	public void setCallee(Callee newCallee)
+	{
+		if (newCallee != callee)
+		{
 			NotificationChain msgs = null;
 			if (callee != null)
 				msgs = ((InternalEObject)callee).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE__CALLEE, null, msgs);
@@ -207,7 +220,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArgList getArgs() {
+	public ArgList getArgs()
+	{
 		return args;
 	}
 
@@ -216,10 +230,12 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetArgs(ArgList newArgs, NotificationChain msgs) {
+	public NotificationChain basicSetArgs(ArgList newArgs, NotificationChain msgs)
+	{
 		ArgList oldArgs = args;
 		args = newArgs;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE__ARGS, oldArgs, newArgs);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -231,8 +247,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArgs(ArgList newArgs) {
-		if (newArgs != args) {
+	public void setArgs(ArgList newArgs)
+	{
+		if (newArgs != args)
+		{
 			NotificationChain msgs = null;
 			if (args != null)
 				msgs = ((InternalEObject)args).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE__ARGS, null, msgs);
@@ -250,7 +268,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionAttributes getAttributes() {
+	public FunctionAttributes getAttributes()
+	{
 		return attributes;
 	}
 
@@ -259,10 +278,12 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttributes(FunctionAttributes newAttributes, NotificationChain msgs) {
+	public NotificationChain basicSetAttributes(FunctionAttributes newAttributes, NotificationChain msgs)
+	{
 		FunctionAttributes oldAttributes = attributes;
 		attributes = newAttributes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE__ATTRIBUTES, oldAttributes, newAttributes);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -274,8 +295,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttributes(FunctionAttributes newAttributes) {
-		if (newAttributes != attributes) {
+	public void setAttributes(FunctionAttributes newAttributes)
+	{
+		if (newAttributes != attributes)
+		{
 			NotificationChain msgs = null;
 			if (attributes != null)
 				msgs = ((InternalEObject)attributes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE__ATTRIBUTES, null, msgs);
@@ -293,7 +316,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getToLabel() {
+	public BasicBlockRef getToLabel()
+	{
 		return toLabel;
 	}
 
@@ -302,10 +326,12 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetToLabel(BasicBlockRef newToLabel, NotificationChain msgs) {
+	public NotificationChain basicSetToLabel(BasicBlockRef newToLabel, NotificationChain msgs)
+	{
 		BasicBlockRef oldToLabel = toLabel;
 		toLabel = newToLabel;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE__TO_LABEL, oldToLabel, newToLabel);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -317,8 +343,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToLabel(BasicBlockRef newToLabel) {
-		if (newToLabel != toLabel) {
+	public void setToLabel(BasicBlockRef newToLabel)
+	{
+		if (newToLabel != toLabel)
+		{
 			NotificationChain msgs = null;
 			if (toLabel != null)
 				msgs = ((InternalEObject)toLabel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE__TO_LABEL, null, msgs);
@@ -336,7 +364,8 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getExceptionLabel() {
+	public BasicBlockRef getExceptionLabel()
+	{
 		return exceptionLabel;
 	}
 
@@ -345,10 +374,12 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExceptionLabel(BasicBlockRef newExceptionLabel, NotificationChain msgs) {
+	public NotificationChain basicSetExceptionLabel(BasicBlockRef newExceptionLabel, NotificationChain msgs)
+	{
 		BasicBlockRef oldExceptionLabel = exceptionLabel;
 		exceptionLabel = newExceptionLabel;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE__EXCEPTION_LABEL, oldExceptionLabel, newExceptionLabel);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -360,8 +391,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExceptionLabel(BasicBlockRef newExceptionLabel) {
-		if (newExceptionLabel != exceptionLabel) {
+	public void setExceptionLabel(BasicBlockRef newExceptionLabel)
+	{
+		if (newExceptionLabel != exceptionLabel)
+		{
 			NotificationChain msgs = null;
 			if (exceptionLabel != null)
 				msgs = ((InternalEObject)exceptionLabel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE__EXCEPTION_LABEL, null, msgs);
@@ -380,8 +413,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV:
 				return basicSetCconv(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CALLEE:
@@ -404,8 +439,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV:
 				return getCconv();
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CALLEE:
@@ -428,8 +465,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV:
 				setCconv((CConv)newValue);
 				return;
@@ -458,8 +497,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV:
 				setCconv((CConv)null);
 				return;
@@ -488,8 +529,10 @@ public class Instruction_invokeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CCONV:
 				return cconv != null;
 			case LLVM_IRPackage.INSTRUCTION_INVOKE__CALLEE:

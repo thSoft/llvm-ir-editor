@@ -38,7 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Instruction_phiImpl extends StartingInstructionImpl implements Instruction_phi {
+public class Instruction_phiImpl extends StartingInstructionImpl implements Instruction_phi
+{
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -74,7 +75,8 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_phiImpl() {
+	protected Instruction_phiImpl()
+	{
 		super();
 	}
 
@@ -84,7 +86,8 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_phi();
 	}
 
@@ -93,7 +96,8 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
+	public Type getType()
+	{
 		return type;
 	}
 
@@ -102,10 +106,12 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs)
+	{
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_PHI__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -117,8 +123,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
+	public void setType(Type newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_PHI__TYPE, null, msgs);
@@ -136,8 +144,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ValueRef> getValues() {
-		if (values == null) {
+	public EList<ValueRef> getValues()
+	{
+		if (values == null)
+		{
 			values = new EObjectContainmentEList<ValueRef>(ValueRef.class, this, LLVM_IRPackage.INSTRUCTION_PHI__VALUES);
 		}
 		return values;
@@ -148,8 +158,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BasicBlockRef> getLabels() {
-		if (labels == null) {
+	public EList<BasicBlockRef> getLabels()
+	{
+		if (labels == null)
+		{
 			labels = new EObjectContainmentEList<BasicBlockRef>(BasicBlockRef.class, this, LLVM_IRPackage.INSTRUCTION_PHI__LABELS);
 		}
 		return labels;
@@ -161,8 +173,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_PHI__TYPE:
 				return basicSetType(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_PHI__VALUES:
@@ -179,8 +193,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_PHI__TYPE:
 				return getType();
 			case LLVM_IRPackage.INSTRUCTION_PHI__VALUES:
@@ -198,8 +214,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_PHI__TYPE:
 				setType((Type)newValue);
 				return;
@@ -221,8 +239,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_PHI__TYPE:
 				setType((Type)null);
 				return;
@@ -242,8 +262,10 @@ public class Instruction_phiImpl extends StartingInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_PHI__TYPE:
 				return type != null;
 			case LLVM_IRPackage.INSTRUCTION_PHI__VALUES:

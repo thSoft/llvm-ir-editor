@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ParameterAttributes extends EObject {
+public interface ParameterAttributes extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.

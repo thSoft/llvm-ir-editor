@@ -23,7 +23,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_store extends MiddleInstruction {
+public interface Instruction_store extends MiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

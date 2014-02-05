@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class BasicBlockImpl extends MinimalEObjectImpl.Container implements BasicBlock {
+public class BasicBlockImpl extends MinimalEObjectImpl.Container implements BasicBlock
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,8 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BasicBlockImpl() {
+	protected BasicBlockImpl()
+	{
 		super();
 	}
 
@@ -82,7 +84,8 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getBasicBlock();
 	}
 
@@ -91,7 +94,8 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -100,7 +104,8 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -112,8 +117,10 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Instruction> getInstructions() {
-		if (instructions == null) {
+	public EList<Instruction> getInstructions()
+	{
+		if (instructions == null)
+		{
 			instructions = new EObjectContainmentEList<Instruction>(Instruction.class, this, LLVM_IRPackage.BASIC_BLOCK__INSTRUCTIONS);
 		}
 		return instructions;
@@ -125,8 +132,10 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK__INSTRUCTIONS:
 				return ((InternalEList<?>)getInstructions()).basicRemove(otherEnd, msgs);
 		}
@@ -139,8 +148,10 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK__NAME:
 				return getName();
 			case LLVM_IRPackage.BASIC_BLOCK__INSTRUCTIONS:
@@ -156,8 +167,10 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK__NAME:
 				setName((String)newValue);
 				return;
@@ -175,8 +188,10 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -193,8 +208,10 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.BASIC_BLOCK__INSTRUCTIONS:
@@ -209,7 +226,8 @@ public class BasicBlockImpl extends MinimalEObjectImpl.Container implements Basi
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

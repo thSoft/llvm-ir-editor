@@ -28,7 +28,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface GlobalVariable extends GlobalValue, GlobalValueDef {
+public interface GlobalVariable extends GlobalValue, GlobalValueDef
+{
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

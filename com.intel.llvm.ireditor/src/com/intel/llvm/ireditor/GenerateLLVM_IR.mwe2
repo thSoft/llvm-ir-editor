@@ -24,12 +24,12 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
 module com.intel.llvm.ireditor.GenerateLLVM_IR
 
 import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
+import org.eclipse.emf.mwe2.ecore.*
 
 var grammarURI = "classpath:/com/intel/llvm/ireditor/LLVM_IR.xtext"
 var file.extensions = "ll"
@@ -37,139 +37,120 @@ var projectName = "com.intel.llvm.ireditor"
 var runtimeProject = "../${projectName}"
 
 Workflow {
-    bean = StandaloneSetup {
-            scanClassPath = true
-            platformUri = "${runtimeProject}/.."
-            // The following two lines can be removed, if Xbase is not used.
-            registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
-            registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
-        }
+	bean = StandaloneSetup {
+		scanClassPath = true
+		platformUri = "${runtimeProject}/.."
+	}
 
-        component = DirectoryCleaner {
-            directory = "${runtimeProject}/src-gen"
-        }
+	component = DirectoryCleaner {
+		directory = "${runtimeProject}/src-gen"
+	}
 
-        component = DirectoryCleaner {
-            directory = "${runtimeProject}.ui/src-gen"
-        }
+	component = DirectoryCleaner {
+		directory = "${runtimeProject}/emf-gen"
+	}
 
-        component = Generator {
-            pathRtProject = runtimeProject
-            pathUiProject = "${runtimeProject}.ui"
-            pathTestProject = "${runtimeProject}.tests"
-            projectNameRt = projectName
-            projectNameUi = "${projectName}.ui"
-            language = {
-            	loadedResource = "platform:/resource/com.intel.llvm.ireditor/model/LLVM_IR.ecore"
-            	loadedResource = "platform:/resource/com.intel.llvm.ireditor/model/LLVM_IR.genmodel"
-                uri = grammarURI
-                fileExtensions = file.extensions
+	component = DirectoryCleaner {
+		directory = "${runtimeProject}.ui/src-gen"
+	}
 
-                // Java API to access grammar elements (required by several other fragments)
-                fragment = grammarAccess.GrammarAccessFragment {}
+	component = EcoreGenerator {
+		genModel = "platform:/resource/${projectName}/model/LLVM_IR.genmodel"
+		srcPath = "platform:/resource/${projectName}/src"
+	}
 
-                // generates Java API for the generated EPackages
-//                fragment = ecore.EMFGeneratorFragment {
-                // referencedGenModels = "
-                //  platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel,
-                //  platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel
-                // "
-//                }
+	component = Generator {
+		pathRtProject = runtimeProject
+		pathUiProject = "${runtimeProject}.ui"
+		pathTestProject = "${runtimeProject}.tests"
+		projectNameRt = projectName
+		projectNameUi = "${projectName}.ui"
+		language = {
+			loadedResource = "platform:/resource/${projectName}/model/LLVM_IR.ecore"
+			uri = grammarURI
+			fileExtensions = file.extensions
 
-                // Serializer 2.0
-                fragment = serializer.SerializerFragment {
-                	generateStub = false
-                }
+			// Java API to access grammar elements (required by several other fragments)
+			fragment = grammarAccess.GrammarAccessFragment {}
 
-                // the serialization component (1.0)
-                // fragment = parseTreeConstructor.ParseTreeConstructorFragment {}
+			// Serializer 2.0
+			fragment = serializer.SerializerFragment {
+				generateStub = false
+			}
 
-                // a custom ResourceFactory for use with EMF
-                fragment = resourceFactory.ResourceFactoryFragment {
-                    fileExtensions = file.extensions
-                }
+			// a custom ResourceFactory for use with EMF
+			fragment = resourceFactory.ResourceFactoryFragment {
+				fileExtensions = file.extensions
+			}
 
-                // The antlr parser generator fragment.
-                fragment = parser.antlr.XtextAntlrGeneratorFragment {
-                    options = {
-                //      backtrack = true
-                        classSplitting= true
-	                    fieldsPerClass = "500"
-				    }
-                }
+			// The antlr parser generator fragment.
+			fragment = parser.antlr.XtextAntlrGeneratorFragment {
+				options = {
+					classSplitting = true
+					fieldsPerClass = "500"
+				}
+			}
 
-                // java-based API for validation
-                fragment = validation.JavaValidatorFragment {
-                //    composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
-                //    composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-                }
+			// java-based API for validation
+			fragment = validation.JavaValidatorFragment {
+			}
 
-                // scoping and exporting API
-                // fragment = scoping.ImportURIScopingFragment {}
-                // fragment = exporting.SimpleNamesFragment {}
+			// scoping and exporting API
+			fragment = scoping.ImportNamespacesScopingFragment {}
+			fragment = exporting.QualifiedNamesFragment {}
+			fragment = builder.BuilderIntegrationFragment {}
 
-                // scoping and exporting API
-                fragment = scoping.ImportNamespacesScopingFragment {}
-                fragment = exporting.QualifiedNamesFragment {}
-                fragment = builder.BuilderIntegrationFragment {}
+			// generator API
+			fragment = generator.GeneratorFragment {
+				generateMwe = false
+				generateJavaMain = false
+			}
 
-                // generator API
-                fragment = generator.GeneratorFragment {
-                    generateMwe = false
-                    generateJavaMain = false
-                }
+			// formatter API
+			fragment = formatting.FormatterFragment {}
 
-                // formatter API
-                fragment = formatting.FormatterFragment {}
+			// labeling API
+			fragment = labeling.LabelProviderFragment {}
 
-                // labeling API
-                fragment = labeling.LabelProviderFragment {}
+			// outline API
+			fragment = outline.OutlineTreeProviderFragment {}
+			fragment = outline.QuickOutlineFragment {}
 
-                // outline API
-                fragment = outline.OutlineTreeProviderFragment {}
-                fragment = outline.QuickOutlineFragment {}
+			// quickfix API
+			fragment = quickfix.QuickfixProviderFragment {}
 
-                // quickfix API
-                fragment = quickfix.QuickfixProviderFragment {}
+			// content assist API
+			fragment = contentAssist.JavaBasedContentAssistFragment {}
 
-                // content assist API
-                fragment = contentAssist.JavaBasedContentAssistFragment {}
+			// generates a more lightweight Antlr parser and lexer tailored for content assist
+			fragment = parser.antlr.XtextAntlrUiGeneratorFragment {
+				options = {
+					classSplitting = true
+					fieldsPerClass = "500"
+				}
+			}
 
-                // generates a more lightweight Antlr parser and lexer tailored for content assist
-                fragment = parser.antlr.XtextAntlrUiGeneratorFragment {
-                	options = {
-                        classSplitting= true
-	                    fieldsPerClass = "500"
-				    }
-                }
+			// generates junit test support classes into Generator#pathTestProject
+			fragment = junit.Junit4Fragment {}
 
-                // generates junit test support classes into Generator#pathTestProject
-                fragment = junit.Junit4Fragment {}
+			// rename refactoring
+			fragment = refactoring.RefactorElementNameFragment {}
 
-                // project wizard (optional)
-                // fragment = projectWizard.SimpleProjectWizardFragment {
-                //      generatorProjectName = "${projectName}"
-                //      modelFileExtension = file.extensions
-                // }
+			// provides the necessary bindings for java types integration
+			fragment = types.TypesGeneratorFragment {}
 
-                // rename refactoring
-                fragment = refactoring.RefactorElementNameFragment {}
+			// generates the required bindings only if the grammar inherits from Xbase
+			fragment = xbase.XbaseGeneratorFragment {}
 
-                // provides the necessary bindings for java types integration
-                fragment = types.TypesGeneratorFragment {}
+			// provides a preference page for template proposals
+			fragment = templates.CodetemplatesGeneratorFragment {}
 
-                // generates the required bindings only if the grammar inherits from Xbase
-                fragment = xbase.XbaseGeneratorFragment {}
+			// provides a compare view
+			fragment = compare.CompareFragment {
+				fileExtensions = file.extensions
+			}
 
-                // provides a preference page for template proposals
-                fragment = templates.CodetemplatesGeneratorFragment {}
-
-                // provides a compare view
-                fragment = compare.CompareFragment {
-                     fileExtensions = file.extensions
-                }
-
-            }
-        }
+		}
+	}
 }
 

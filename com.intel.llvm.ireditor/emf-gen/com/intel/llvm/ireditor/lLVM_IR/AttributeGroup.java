@@ -24,7 +24,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface AttributeGroup extends TopLevelElement {
+public interface AttributeGroup extends TopLevelElement
+{
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

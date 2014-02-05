@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
+public class MetadataNodeImpl extends ConstantImpl implements MetadataNode
+{
 	/**
 	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MetadataNodeImpl() {
+	protected MetadataNodeImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getMetadataNode();
 	}
 
@@ -66,8 +69,10 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MetadataNodeElement> getElements() {
-		if (elements == null) {
+	public EList<MetadataNodeElement> getElements()
+	{
+		if (elements == null)
+		{
 			elements = new EObjectContainmentEList<MetadataNodeElement>(MetadataNodeElement.class, this, LLVM_IRPackage.METADATA_NODE__ELEMENTS);
 		}
 		return elements;
@@ -79,8 +84,10 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE__ELEMENTS:
 				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
 		}
@@ -93,8 +100,10 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE__ELEMENTS:
 				return getElements();
 		}
@@ -108,8 +117,10 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE__ELEMENTS:
 				getElements().clear();
 				getElements().addAll((Collection<? extends MetadataNodeElement>)newValue);
@@ -124,8 +135,10 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE__ELEMENTS:
 				getElements().clear();
 				return;
@@ -139,8 +152,10 @@ public class MetadataNodeImpl extends ConstantImpl implements MetadataNode {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE__ELEMENTS:
 				return elements != null && !elements.isEmpty();
 		}

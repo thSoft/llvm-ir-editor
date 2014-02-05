@@ -38,7 +38,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariable {
+public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariable
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -214,7 +215,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GlobalVariableImpl() {
+	protected GlobalVariableImpl()
+	{
 		super();
 	}
 
@@ -224,7 +226,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getGlobalVariable();
 	}
 
@@ -233,7 +236,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -242,7 +246,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -254,7 +259,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLinkage() {
+	public String getLinkage()
+	{
 		return linkage;
 	}
 
@@ -263,7 +269,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinkage(String newLinkage) {
+	public void setLinkage(String newLinkage)
+	{
 		String oldLinkage = linkage;
 		linkage = newLinkage;
 		if (eNotificationRequired())
@@ -275,7 +282,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AddressSpace getAddrspace() {
+	public AddressSpace getAddrspace()
+	{
 		return addrspace;
 	}
 
@@ -284,10 +292,12 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAddrspace(AddressSpace newAddrspace, NotificationChain msgs) {
+	public NotificationChain basicSetAddrspace(AddressSpace newAddrspace, NotificationChain msgs)
+	{
 		AddressSpace oldAddrspace = addrspace;
 		addrspace = newAddrspace;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VARIABLE__ADDRSPACE, oldAddrspace, newAddrspace);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -299,8 +309,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAddrspace(AddressSpace newAddrspace) {
-		if (newAddrspace != addrspace) {
+	public void setAddrspace(AddressSpace newAddrspace)
+	{
+		if (newAddrspace != addrspace)
+		{
 			NotificationChain msgs = null;
 			if (addrspace != null)
 				msgs = ((InternalEObject)addrspace).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.GLOBAL_VARIABLE__ADDRSPACE, null, msgs);
@@ -318,7 +330,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTlsModel() {
+	public String getTlsModel()
+	{
 		return tlsModel;
 	}
 
@@ -327,7 +340,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTlsModel(String newTlsModel) {
+	public void setTlsModel(String newTlsModel)
+	{
 		String oldTlsModel = tlsModel;
 		tlsModel = newTlsModel;
 		if (eNotificationRequired())
@@ -339,7 +353,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isUnsignificantAddress() {
+	public boolean isUnsignificantAddress()
+	{
 		return unsignificantAddress;
 	}
 
@@ -348,7 +363,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnsignificantAddress(boolean newUnsignificantAddress) {
+	public void setUnsignificantAddress(boolean newUnsignificantAddress)
+	{
 		boolean oldUnsignificantAddress = unsignificantAddress;
 		unsignificantAddress = newUnsignificantAddress;
 		if (eNotificationRequired())
@@ -360,7 +376,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isConstant() {
+	public boolean isConstant()
+	{
 		return constant;
 	}
 
@@ -369,7 +386,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstant(boolean newConstant) {
+	public void setConstant(boolean newConstant)
+	{
 		boolean oldConstant = constant;
 		constant = newConstant;
 		if (eNotificationRequired())
@@ -381,7 +399,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
+	public Type getType()
+	{
 		return type;
 	}
 
@@ -390,10 +409,12 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs)
+	{
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VARIABLE__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -405,8 +426,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
+	public void setType(Type newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.GLOBAL_VARIABLE__TYPE, null, msgs);
@@ -424,7 +447,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constant getInitialValue() {
+	public Constant getInitialValue()
+	{
 		return initialValue;
 	}
 
@@ -433,10 +457,12 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInitialValue(Constant newInitialValue, NotificationChain msgs) {
+	public NotificationChain basicSetInitialValue(Constant newInitialValue, NotificationChain msgs)
+	{
 		Constant oldInitialValue = initialValue;
 		initialValue = newInitialValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.GLOBAL_VARIABLE__INITIAL_VALUE, oldInitialValue, newInitialValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -448,8 +474,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInitialValue(Constant newInitialValue) {
-		if (newInitialValue != initialValue) {
+	public void setInitialValue(Constant newInitialValue)
+	{
+		if (newInitialValue != initialValue)
+		{
 			NotificationChain msgs = null;
 			if (initialValue != null)
 				msgs = ((InternalEObject)initialValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.GLOBAL_VARIABLE__INITIAL_VALUE, null, msgs);
@@ -467,7 +495,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSection() {
+	public String getSection()
+	{
 		return section;
 	}
 
@@ -476,7 +505,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSection(String newSection) {
+	public void setSection(String newSection)
+	{
 		String oldSection = section;
 		section = newSection;
 		if (eNotificationRequired())
@@ -488,7 +518,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAlign() {
+	public String getAlign()
+	{
 		return align;
 	}
 
@@ -497,7 +528,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(String newAlign) {
+	public void setAlign(String newAlign)
+	{
 		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
@@ -510,8 +542,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VARIABLE__ADDRSPACE:
 				return basicSetAddrspace(null, msgs);
 			case LLVM_IRPackage.GLOBAL_VARIABLE__TYPE:
@@ -528,8 +562,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VARIABLE__NAME:
 				return getName();
 			case LLVM_IRPackage.GLOBAL_VARIABLE__LINKAGE:
@@ -560,8 +596,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VARIABLE__NAME:
 				setName((String)newValue);
 				return;
@@ -602,8 +640,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -644,8 +684,10 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.GLOBAL_VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.GLOBAL_VARIABLE__LINKAGE:
@@ -676,7 +718,8 @@ public class GlobalVariableImpl extends GlobalValueImpl implements GlobalVariabl
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

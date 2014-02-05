@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class TerminatorInstructionImpl extends InstructionImpl implements TerminatorInstruction {
+public class TerminatorInstructionImpl extends InstructionImpl implements TerminatorInstruction
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TerminatorInstructionImpl() {
+	protected TerminatorInstructionImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class TerminatorInstructionImpl extends InstructionImpl implements Termin
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getTerminatorInstruction();
 	}
 

@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage
  * @generated
  */
-public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
+public class LLVM_IRAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -34,8 +35,10 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LLVM_IRAdapterFactory() {
-		if (modelPackage == null) {
+	public LLVM_IRAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = LLVM_IRPackage.eINSTANCE;
 		}
 	}
@@ -49,11 +52,14 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -66,577 +72,721 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected LLVM_IRSwitch<Adapter> modelSwitch =
-		new LLVM_IRSwitch<Adapter>() {
+		new LLVM_IRSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseModel(Model object) {
+			public Adapter caseModel(Model object)
+			{
 				return createModelAdapter();
 			}
 			@Override
-			public Adapter caseTopLevelElement(TopLevelElement object) {
+			public Adapter caseTopLevelElement(TopLevelElement object)
+			{
 				return createTopLevelElementAdapter();
 			}
 			@Override
-			public Adapter caseAttributeGroup(AttributeGroup object) {
+			public Adapter caseAttributeGroup(AttributeGroup object)
+			{
 				return createAttributeGroupAdapter();
 			}
 			@Override
-			public Adapter caseTargetSpecificAttribute(TargetSpecificAttribute object) {
+			public Adapter caseTargetSpecificAttribute(TargetSpecificAttribute object)
+			{
 				return createTargetSpecificAttributeAdapter();
 			}
 			@Override
-			public Adapter caseNamedMetadata(NamedMetadata object) {
+			public Adapter caseNamedMetadata(NamedMetadata object)
+			{
 				return createNamedMetadataAdapter();
 			}
 			@Override
-			public Adapter caseMetadataRef(MetadataRef object) {
+			public Adapter caseMetadataRef(MetadataRef object)
+			{
 				return createMetadataRefAdapter();
 			}
 			@Override
-			public Adapter caseValueRef(ValueRef object) {
+			public Adapter caseValueRef(ValueRef object)
+			{
 				return createValueRefAdapter();
 			}
 			@Override
-			public Adapter caseGlobalValueRef(GlobalValueRef object) {
+			public Adapter caseGlobalValueRef(GlobalValueRef object)
+			{
 				return createGlobalValueRefAdapter();
 			}
 			@Override
-			public Adapter caseLocalValueRef(LocalValueRef object) {
+			public Adapter caseLocalValueRef(LocalValueRef object)
+			{
 				return createLocalValueRefAdapter();
 			}
 			@Override
-			public Adapter caseGlobalValue(GlobalValue object) {
+			public Adapter caseGlobalValue(GlobalValue object)
+			{
 				return createGlobalValueAdapter();
 			}
 			@Override
-			public Adapter caseGlobalValueDef(GlobalValueDef object) {
+			public Adapter caseGlobalValueDef(GlobalValueDef object)
+			{
 				return createGlobalValueDefAdapter();
 			}
 			@Override
-			public Adapter caseLocalValue(LocalValue object) {
+			public Adapter caseLocalValue(LocalValue object)
+			{
 				return createLocalValueAdapter();
 			}
 			@Override
-			public Adapter caseNamedInstruction(NamedInstruction object) {
+			public Adapter caseNamedInstruction(NamedInstruction object)
+			{
 				return createNamedInstructionAdapter();
 			}
 			@Override
-			public Adapter caseInstruction(Instruction object) {
+			public Adapter caseInstruction(Instruction object)
+			{
 				return createInstructionAdapter();
 			}
 			@Override
-			public Adapter caseAlias(Alias object) {
+			public Adapter caseAlias(Alias object)
+			{
 				return createAliasAdapter();
 			}
 			@Override
-			public Adapter caseAliasee(Aliasee object) {
+			public Adapter caseAliasee(Aliasee object)
+			{
 				return createAliaseeAdapter();
 			}
 			@Override
-			public Adapter caseTargetInfo(TargetInfo object) {
+			public Adapter caseTargetInfo(TargetInfo object)
+			{
 				return createTargetInfoAdapter();
 			}
 			@Override
-			public Adapter caseInlineAsm(InlineAsm object) {
+			public Adapter caseInlineAsm(InlineAsm object)
+			{
 				return createInlineAsmAdapter();
 			}
 			@Override
-			public Adapter caseGlobalVariable(GlobalVariable object) {
+			public Adapter caseGlobalVariable(GlobalVariable object)
+			{
 				return createGlobalVariableAdapter();
 			}
 			@Override
-			public Adapter caseConstant(Constant object) {
+			public Adapter caseConstant(Constant object)
+			{
 				return createConstantAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression(ConstantExpression object) {
+			public Adapter caseConstantExpression(ConstantExpression object)
+			{
 				return createConstantExpressionAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_convert(ConstantExpression_convert object) {
+			public Adapter caseConstantExpression_convert(ConstantExpression_convert object)
+			{
 				return createConstantExpression_convertAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_getelementptr(ConstantExpression_getelementptr object) {
+			public Adapter caseConstantExpression_getelementptr(ConstantExpression_getelementptr object)
+			{
 				return createConstantExpression_getelementptrAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_select(ConstantExpression_select object) {
+			public Adapter caseConstantExpression_select(ConstantExpression_select object)
+			{
 				return createConstantExpression_selectAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_compare(ConstantExpression_compare object) {
+			public Adapter caseConstantExpression_compare(ConstantExpression_compare object)
+			{
 				return createConstantExpression_compareAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_extractelement(ConstantExpression_extractelement object) {
+			public Adapter caseConstantExpression_extractelement(ConstantExpression_extractelement object)
+			{
 				return createConstantExpression_extractelementAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_insertelement(ConstantExpression_insertelement object) {
+			public Adapter caseConstantExpression_insertelement(ConstantExpression_insertelement object)
+			{
 				return createConstantExpression_insertelementAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_shufflevector(ConstantExpression_shufflevector object) {
+			public Adapter caseConstantExpression_shufflevector(ConstantExpression_shufflevector object)
+			{
 				return createConstantExpression_shufflevectorAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_extractvalue(ConstantExpression_extractvalue object) {
+			public Adapter caseConstantExpression_extractvalue(ConstantExpression_extractvalue object)
+			{
 				return createConstantExpression_extractvalueAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_insertvalue(ConstantExpression_insertvalue object) {
+			public Adapter caseConstantExpression_insertvalue(ConstantExpression_insertvalue object)
+			{
 				return createConstantExpression_insertvalueAdapter();
 			}
 			@Override
-			public Adapter caseConstantExpression_binary(ConstantExpression_binary object) {
+			public Adapter caseConstantExpression_binary(ConstantExpression_binary object)
+			{
 				return createConstantExpression_binaryAdapter();
 			}
 			@Override
-			public Adapter caseUndef(Undef object) {
+			public Adapter caseUndef(Undef object)
+			{
 				return createUndefAdapter();
 			}
 			@Override
-			public Adapter caseBlockAddress(BlockAddress object) {
+			public Adapter caseBlockAddress(BlockAddress object)
+			{
 				return createBlockAddressAdapter();
 			}
 			@Override
-			public Adapter caseZeroInitializer(ZeroInitializer object) {
+			public Adapter caseZeroInitializer(ZeroInitializer object)
+			{
 				return createZeroInitializerAdapter();
 			}
 			@Override
-			public Adapter caseStructureConstant(StructureConstant object) {
+			public Adapter caseStructureConstant(StructureConstant object)
+			{
 				return createStructureConstantAdapter();
 			}
 			@Override
-			public Adapter caseArrayConstant(ArrayConstant object) {
+			public Adapter caseArrayConstant(ArrayConstant object)
+			{
 				return createArrayConstantAdapter();
 			}
 			@Override
-			public Adapter caseVectorConstant(VectorConstant object) {
+			public Adapter caseVectorConstant(VectorConstant object)
+			{
 				return createVectorConstantAdapter();
 			}
 			@Override
-			public Adapter caseConstantList(ConstantList object) {
+			public Adapter caseConstantList(ConstantList object)
+			{
 				return createConstantListAdapter();
 			}
 			@Override
-			public Adapter caseTypedConstant(TypedConstant object) {
+			public Adapter caseTypedConstant(TypedConstant object)
+			{
 				return createTypedConstantAdapter();
 			}
 			@Override
-			public Adapter caseSimpleConstant(SimpleConstant object) {
+			public Adapter caseSimpleConstant(SimpleConstant object)
+			{
 				return createSimpleConstantAdapter();
 			}
 			@Override
-			public Adapter caseMetadataNode(MetadataNode object) {
+			public Adapter caseMetadataNode(MetadataNode object)
+			{
 				return createMetadataNodeAdapter();
 			}
 			@Override
-			public Adapter caseMetadataNodeElement(MetadataNodeElement object) {
+			public Adapter caseMetadataNodeElement(MetadataNodeElement object)
+			{
 				return createMetadataNodeElementAdapter();
 			}
 			@Override
-			public Adapter caseMetadataString(MetadataString object) {
+			public Adapter caseMetadataString(MetadataString object)
+			{
 				return createMetadataStringAdapter();
 			}
 			@Override
-			public Adapter caseAddressSpace(AddressSpace object) {
+			public Adapter caseAddressSpace(AddressSpace object)
+			{
 				return createAddressSpaceAdapter();
 			}
 			@Override
-			public Adapter caseFunction(Function object) {
+			public Adapter caseFunction(Function object)
+			{
 				return createFunctionAdapter();
 			}
 			@Override
-			public Adapter caseFunctionDef(FunctionDef object) {
+			public Adapter caseFunctionDef(FunctionDef object)
+			{
 				return createFunctionDefAdapter();
 			}
 			@Override
-			public Adapter caseFunctionDecl(FunctionDecl object) {
+			public Adapter caseFunctionDecl(FunctionDecl object)
+			{
 				return createFunctionDeclAdapter();
 			}
 			@Override
-			public Adapter caseFunctionHeader(FunctionHeader object) {
+			public Adapter caseFunctionHeader(FunctionHeader object)
+			{
 				return createFunctionHeaderAdapter();
 			}
 			@Override
-			public Adapter caseFunctionPrefix(FunctionPrefix object) {
+			public Adapter caseFunctionPrefix(FunctionPrefix object)
+			{
 				return createFunctionPrefixAdapter();
 			}
 			@Override
-			public Adapter caseParameters(Parameters object) {
+			public Adapter caseParameters(Parameters object)
+			{
 				return createParametersAdapter();
 			}
 			@Override
-			public Adapter caseFunctionAttributes(FunctionAttributes object) {
+			public Adapter caseFunctionAttributes(FunctionAttributes object)
+			{
 				return createFunctionAttributesAdapter();
 			}
 			@Override
-			public Adapter caseAlignStack(AlignStack object) {
+			public Adapter caseAlignStack(AlignStack object)
+			{
 				return createAlignStackAdapter();
 			}
 			@Override
-			public Adapter caseFunctionAttribute(FunctionAttribute object) {
+			public Adapter caseFunctionAttribute(FunctionAttribute object)
+			{
 				return createFunctionAttributeAdapter();
 			}
 			@Override
-			public Adapter caseBasicBlock(BasicBlock object) {
+			public Adapter caseBasicBlock(BasicBlock object)
+			{
 				return createBasicBlockAdapter();
 			}
 			@Override
-			public Adapter caseMetadataSuffix(MetadataSuffix object) {
+			public Adapter caseMetadataSuffix(MetadataSuffix object)
+			{
 				return createMetadataSuffixAdapter();
 			}
 			@Override
-			public Adapter caseStartingInstruction(StartingInstruction object) {
+			public Adapter caseStartingInstruction(StartingInstruction object)
+			{
 				return createStartingInstructionAdapter();
 			}
 			@Override
-			public Adapter caseMiddleInstruction(MiddleInstruction object) {
+			public Adapter caseMiddleInstruction(MiddleInstruction object)
+			{
 				return createMiddleInstructionAdapter();
 			}
 			@Override
-			public Adapter caseNamedMiddleInstruction(NamedMiddleInstruction object) {
+			public Adapter caseNamedMiddleInstruction(NamedMiddleInstruction object)
+			{
 				return createNamedMiddleInstructionAdapter();
 			}
 			@Override
-			public Adapter caseTerminatorInstruction(TerminatorInstruction object) {
+			public Adapter caseTerminatorInstruction(TerminatorInstruction object)
+			{
 				return createTerminatorInstructionAdapter();
 			}
 			@Override
-			public Adapter caseNamedTerminatorInstruction(NamedTerminatorInstruction object) {
+			public Adapter caseNamedTerminatorInstruction(NamedTerminatorInstruction object)
+			{
 				return createNamedTerminatorInstructionAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_ret(Instruction_ret object) {
+			public Adapter caseInstruction_ret(Instruction_ret object)
+			{
 				return createInstruction_retAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_br(Instruction_br object) {
+			public Adapter caseInstruction_br(Instruction_br object)
+			{
 				return createInstruction_brAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_switch(Instruction_switch object) {
+			public Adapter caseInstruction_switch(Instruction_switch object)
+			{
 				return createInstruction_switchAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_indirectbr(Instruction_indirectbr object) {
+			public Adapter caseInstruction_indirectbr(Instruction_indirectbr object)
+			{
 				return createInstruction_indirectbrAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_invoke_void(Instruction_invoke_void object) {
+			public Adapter caseInstruction_invoke_void(Instruction_invoke_void object)
+			{
 				return createInstruction_invoke_voidAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_invoke_nonVoid(Instruction_invoke_nonVoid object) {
+			public Adapter caseInstruction_invoke_nonVoid(Instruction_invoke_nonVoid object)
+			{
 				return createInstruction_invoke_nonVoidAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_resume(Instruction_resume object) {
+			public Adapter caseInstruction_resume(Instruction_resume object)
+			{
 				return createInstruction_resumeAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_unreachable(Instruction_unreachable object) {
+			public Adapter caseInstruction_unreachable(Instruction_unreachable object)
+			{
 				return createInstruction_unreachableAdapter();
 			}
 			@Override
-			public Adapter caseBasicBlockRef(BasicBlockRef object) {
+			public Adapter caseBasicBlockRef(BasicBlockRef object)
+			{
 				return createBasicBlockRefAdapter();
 			}
 			@Override
-			public Adapter caseBinaryInstruction(BinaryInstruction object) {
+			public Adapter caseBinaryInstruction(BinaryInstruction object)
+			{
 				return createBinaryInstructionAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_add(Instruction_add object) {
+			public Adapter caseInstruction_add(Instruction_add object)
+			{
 				return createInstruction_addAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_fadd(Instruction_fadd object) {
+			public Adapter caseInstruction_fadd(Instruction_fadd object)
+			{
 				return createInstruction_faddAdapter();
 			}
 			@Override
-			public Adapter caseFastMathFlag(FastMathFlag object) {
+			public Adapter caseFastMathFlag(FastMathFlag object)
+			{
 				return createFastMathFlagAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_sub(Instruction_sub object) {
+			public Adapter caseInstruction_sub(Instruction_sub object)
+			{
 				return createInstruction_subAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_fsub(Instruction_fsub object) {
+			public Adapter caseInstruction_fsub(Instruction_fsub object)
+			{
 				return createInstruction_fsubAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_mul(Instruction_mul object) {
+			public Adapter caseInstruction_mul(Instruction_mul object)
+			{
 				return createInstruction_mulAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_fmul(Instruction_fmul object) {
+			public Adapter caseInstruction_fmul(Instruction_fmul object)
+			{
 				return createInstruction_fmulAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_udiv(Instruction_udiv object) {
+			public Adapter caseInstruction_udiv(Instruction_udiv object)
+			{
 				return createInstruction_udivAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_sdiv(Instruction_sdiv object) {
+			public Adapter caseInstruction_sdiv(Instruction_sdiv object)
+			{
 				return createInstruction_sdivAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_fdiv(Instruction_fdiv object) {
+			public Adapter caseInstruction_fdiv(Instruction_fdiv object)
+			{
 				return createInstruction_fdivAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_urem(Instruction_urem object) {
+			public Adapter caseInstruction_urem(Instruction_urem object)
+			{
 				return createInstruction_uremAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_srem(Instruction_srem object) {
+			public Adapter caseInstruction_srem(Instruction_srem object)
+			{
 				return createInstruction_sremAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_frem(Instruction_frem object) {
+			public Adapter caseInstruction_frem(Instruction_frem object)
+			{
 				return createInstruction_fremAdapter();
 			}
 			@Override
-			public Adapter caseBitwiseBinaryInstruction(BitwiseBinaryInstruction object) {
+			public Adapter caseBitwiseBinaryInstruction(BitwiseBinaryInstruction object)
+			{
 				return createBitwiseBinaryInstructionAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_shl(Instruction_shl object) {
+			public Adapter caseInstruction_shl(Instruction_shl object)
+			{
 				return createInstruction_shlAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_lshr(Instruction_lshr object) {
+			public Adapter caseInstruction_lshr(Instruction_lshr object)
+			{
 				return createInstruction_lshrAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_ashr(Instruction_ashr object) {
+			public Adapter caseInstruction_ashr(Instruction_ashr object)
+			{
 				return createInstruction_ashrAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_and(Instruction_and object) {
+			public Adapter caseInstruction_and(Instruction_and object)
+			{
 				return createInstruction_andAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_or(Instruction_or object) {
+			public Adapter caseInstruction_or(Instruction_or object)
+			{
 				return createInstruction_orAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_xor(Instruction_xor object) {
+			public Adapter caseInstruction_xor(Instruction_xor object)
+			{
 				return createInstruction_xorAdapter();
 			}
 			@Override
-			public Adapter caseVectorInstructions(VectorInstructions object) {
+			public Adapter caseVectorInstructions(VectorInstructions object)
+			{
 				return createVectorInstructionsAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_extractelement(Instruction_extractelement object) {
+			public Adapter caseInstruction_extractelement(Instruction_extractelement object)
+			{
 				return createInstruction_extractelementAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_insertelement(Instruction_insertelement object) {
+			public Adapter caseInstruction_insertelement(Instruction_insertelement object)
+			{
 				return createInstruction_insertelementAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_shufflevector(Instruction_shufflevector object) {
+			public Adapter caseInstruction_shufflevector(Instruction_shufflevector object)
+			{
 				return createInstruction_shufflevectorAdapter();
 			}
 			@Override
-			public Adapter caseAggregateInstruction(AggregateInstruction object) {
+			public Adapter caseAggregateInstruction(AggregateInstruction object)
+			{
 				return createAggregateInstructionAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_extractvalue(Instruction_extractvalue object) {
+			public Adapter caseInstruction_extractvalue(Instruction_extractvalue object)
+			{
 				return createInstruction_extractvalueAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_insertvalue(Instruction_insertvalue object) {
+			public Adapter caseInstruction_insertvalue(Instruction_insertvalue object)
+			{
 				return createInstruction_insertvalueAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_alloca(Instruction_alloca object) {
+			public Adapter caseInstruction_alloca(Instruction_alloca object)
+			{
 				return createInstruction_allocaAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_load(Instruction_load object) {
+			public Adapter caseInstruction_load(Instruction_load object)
+			{
 				return createInstruction_loadAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_store(Instruction_store object) {
+			public Adapter caseInstruction_store(Instruction_store object)
+			{
 				return createInstruction_storeAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_fence(Instruction_fence object) {
+			public Adapter caseInstruction_fence(Instruction_fence object)
+			{
 				return createInstruction_fenceAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_cmpxchg(Instruction_cmpxchg object) {
+			public Adapter caseInstruction_cmpxchg(Instruction_cmpxchg object)
+			{
 				return createInstruction_cmpxchgAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_atomicrmw(Instruction_atomicrmw object) {
+			public Adapter caseInstruction_atomicrmw(Instruction_atomicrmw object)
+			{
 				return createInstruction_atomicrmwAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_getelementptr(Instruction_getelementptr object) {
+			public Adapter caseInstruction_getelementptr(Instruction_getelementptr object)
+			{
 				return createInstruction_getelementptrAdapter();
 			}
 			@Override
-			public Adapter caseConversionInstruction(ConversionInstruction object) {
+			public Adapter caseConversionInstruction(ConversionInstruction object)
+			{
 				return createConversionInstructionAdapter();
 			}
 			@Override
-			public Adapter caseOtherInstruction(OtherInstruction object) {
+			public Adapter caseOtherInstruction(OtherInstruction object)
+			{
 				return createOtherInstructionAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_icmp(Instruction_icmp object) {
+			public Adapter caseInstruction_icmp(Instruction_icmp object)
+			{
 				return createInstruction_icmpAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_fcmp(Instruction_fcmp object) {
+			public Adapter caseInstruction_fcmp(Instruction_fcmp object)
+			{
 				return createInstruction_fcmpAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_phi(Instruction_phi object) {
+			public Adapter caseInstruction_phi(Instruction_phi object)
+			{
 				return createInstruction_phiAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_select(Instruction_select object) {
+			public Adapter caseInstruction_select(Instruction_select object)
+			{
 				return createInstruction_selectAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_call(Instruction_call object) {
+			public Adapter caseInstruction_call(Instruction_call object)
+			{
 				return createInstruction_callAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_call_nonVoid(Instruction_call_nonVoid object) {
+			public Adapter caseInstruction_call_nonVoid(Instruction_call_nonVoid object)
+			{
 				return createInstruction_call_nonVoidAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_call_void(Instruction_call_void object) {
+			public Adapter caseInstruction_call_void(Instruction_call_void object)
+			{
 				return createInstruction_call_voidAdapter();
 			}
 			@Override
-			public Adapter caseArgList(ArgList object) {
+			public Adapter caseArgList(ArgList object)
+			{
 				return createArgListAdapter();
 			}
 			@Override
-			public Adapter caseCallee(Callee object) {
+			public Adapter caseCallee(Callee object)
+			{
 				return createCalleeAdapter();
 			}
 			@Override
-			public Adapter caseInlineAssembler(InlineAssembler object) {
+			public Adapter caseInlineAssembler(InlineAssembler object)
+			{
 				return createInlineAssemblerAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_va_arg(Instruction_va_arg object) {
+			public Adapter caseInstruction_va_arg(Instruction_va_arg object)
+			{
 				return createInstruction_va_argAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_landingpad(Instruction_landingpad object) {
+			public Adapter caseInstruction_landingpad(Instruction_landingpad object)
+			{
 				return createInstruction_landingpadAdapter();
 			}
 			@Override
-			public Adapter caseLandingpadClause(LandingpadClause object) {
+			public Adapter caseLandingpadClause(LandingpadClause object)
+			{
 				return createLandingpadClauseAdapter();
 			}
 			@Override
-			public Adapter caseTypedValue(TypedValue object) {
+			public Adapter caseTypedValue(TypedValue object)
+			{
 				return createTypedValueAdapter();
 			}
 			@Override
-			public Adapter caseParameterType(ParameterType object) {
+			public Adapter caseParameterType(ParameterType object)
+			{
 				return createParameterTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterAttributes(ParameterAttributes object) {
+			public Adapter caseParameterAttributes(ParameterAttributes object)
+			{
 				return createParameterAttributesAdapter();
 			}
 			@Override
-			public Adapter caseArgument(Argument object) {
+			public Adapter caseArgument(Argument object)
+			{
 				return createArgumentAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
+			public Adapter caseParameter(Parameter object)
+			{
 				return createParameterAdapter();
 			}
 			@Override
-			public Adapter caseNonVoidType(NonVoidType object) {
+			public Adapter caseNonVoidType(NonVoidType object)
+			{
 				return createNonVoidTypeAdapter();
 			}
 			@Override
-			public Adapter caseStar(Star object) {
+			public Adapter caseStar(Star object)
+			{
 				return createStarAdapter();
 			}
 			@Override
-			public Adapter caseType(Type object) {
+			public Adapter caseType(Type object)
+			{
 				return createTypeAdapter();
 			}
 			@Override
-			public Adapter caseTypeSuffix(TypeSuffix object) {
+			public Adapter caseTypeSuffix(TypeSuffix object)
+			{
 				return createTypeSuffixAdapter();
 			}
 			@Override
-			public Adapter caseNonLeftRecursiveType(NonLeftRecursiveType object) {
+			public Adapter caseNonLeftRecursiveType(NonLeftRecursiveType object)
+			{
 				return createNonLeftRecursiveTypeAdapter();
 			}
 			@Override
-			public Adapter caseNonLeftRecursiveNonVoidType(NonLeftRecursiveNonVoidType object) {
+			public Adapter caseNonLeftRecursiveNonVoidType(NonLeftRecursiveNonVoidType object)
+			{
 				return createNonLeftRecursiveNonVoidTypeAdapter();
 			}
 			@Override
-			public Adapter caseTypeDef(TypeDef object) {
+			public Adapter caseTypeDef(TypeDef object)
+			{
 				return createTypeDefAdapter();
 			}
 			@Override
-			public Adapter caseIntType(IntType object) {
+			public Adapter caseIntType(IntType object)
+			{
 				return createIntTypeAdapter();
 			}
 			@Override
-			public Adapter caseOpaqueType(OpaqueType object) {
+			public Adapter caseOpaqueType(OpaqueType object)
+			{
 				return createOpaqueTypeAdapter();
 			}
 			@Override
-			public Adapter caseStructType(StructType object) {
+			public Adapter caseStructType(StructType object)
+			{
 				return createStructTypeAdapter();
 			}
 			@Override
-			public Adapter caseVectorType(VectorType object) {
+			public Adapter caseVectorType(VectorType object)
+			{
 				return createVectorTypeAdapter();
 			}
 			@Override
-			public Adapter caseArrayType(ArrayType object) {
+			public Adapter caseArrayType(ArrayType object)
+			{
 				return createArrayTypeAdapter();
 			}
 			@Override
-			public Adapter caseX86mmxType(X86mmxType object) {
+			public Adapter caseX86mmxType(X86mmxType object)
+			{
 				return createX86mmxTypeAdapter();
 			}
 			@Override
-			public Adapter caseVoidType(VoidType object) {
+			public Adapter caseVoidType(VoidType object)
+			{
 				return createVoidTypeAdapter();
 			}
 			@Override
-			public Adapter caseMetadataType(MetadataType object) {
+			public Adapter caseMetadataType(MetadataType object)
+			{
 				return createMetadataTypeAdapter();
 			}
 			@Override
-			public Adapter caseFloatingType(FloatingType object) {
+			public Adapter caseFloatingType(FloatingType object)
+			{
 				return createFloatingTypeAdapter();
 			}
 			@Override
-			public Adapter caseCConv(CConv object) {
+			public Adapter caseCConv(CConv object)
+			{
 				return createCConvAdapter();
 			}
 			@Override
-			public Adapter caseInstruction_invoke(Instruction_invoke object) {
+			public Adapter caseInstruction_invoke(Instruction_invoke object)
+			{
 				return createInstruction_invokeAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -650,7 +800,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -665,7 +816,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Model
 	 * @generated
 	 */
-	public Adapter createModelAdapter() {
+	public Adapter createModelAdapter()
+	{
 		return null;
 	}
 
@@ -679,7 +831,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TopLevelElement
 	 * @generated
 	 */
-	public Adapter createTopLevelElementAdapter() {
+	public Adapter createTopLevelElementAdapter()
+	{
 		return null;
 	}
 
@@ -693,7 +846,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.AttributeGroup
 	 * @generated
 	 */
-	public Adapter createAttributeGroupAdapter() {
+	public Adapter createAttributeGroupAdapter()
+	{
 		return null;
 	}
 
@@ -707,7 +861,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TargetSpecificAttribute
 	 * @generated
 	 */
-	public Adapter createTargetSpecificAttributeAdapter() {
+	public Adapter createTargetSpecificAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -721,7 +876,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NamedMetadata
 	 * @generated
 	 */
-	public Adapter createNamedMetadataAdapter() {
+	public Adapter createNamedMetadataAdapter()
+	{
 		return null;
 	}
 
@@ -735,7 +891,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MetadataRef
 	 * @generated
 	 */
-	public Adapter createMetadataRefAdapter() {
+	public Adapter createMetadataRefAdapter()
+	{
 		return null;
 	}
 
@@ -749,7 +906,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ValueRef
 	 * @generated
 	 */
-	public Adapter createValueRefAdapter() {
+	public Adapter createValueRefAdapter()
+	{
 		return null;
 	}
 
@@ -763,7 +921,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.GlobalValueRef
 	 * @generated
 	 */
-	public Adapter createGlobalValueRefAdapter() {
+	public Adapter createGlobalValueRefAdapter()
+	{
 		return null;
 	}
 
@@ -777,7 +936,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.LocalValueRef
 	 * @generated
 	 */
-	public Adapter createLocalValueRefAdapter() {
+	public Adapter createLocalValueRefAdapter()
+	{
 		return null;
 	}
 
@@ -791,7 +951,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.GlobalValue
 	 * @generated
 	 */
-	public Adapter createGlobalValueAdapter() {
+	public Adapter createGlobalValueAdapter()
+	{
 		return null;
 	}
 
@@ -805,7 +966,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.GlobalValueDef
 	 * @generated
 	 */
-	public Adapter createGlobalValueDefAdapter() {
+	public Adapter createGlobalValueDefAdapter()
+	{
 		return null;
 	}
 
@@ -819,7 +981,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.LocalValue
 	 * @generated
 	 */
-	public Adapter createLocalValueAdapter() {
+	public Adapter createLocalValueAdapter()
+	{
 		return null;
 	}
 
@@ -833,7 +996,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NamedInstruction
 	 * @generated
 	 */
-	public Adapter createNamedInstructionAdapter() {
+	public Adapter createNamedInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -847,7 +1011,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction
 	 * @generated
 	 */
-	public Adapter createInstructionAdapter() {
+	public Adapter createInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -861,7 +1026,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Alias
 	 * @generated
 	 */
-	public Adapter createAliasAdapter() {
+	public Adapter createAliasAdapter()
+	{
 		return null;
 	}
 
@@ -875,7 +1041,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Aliasee
 	 * @generated
 	 */
-	public Adapter createAliaseeAdapter() {
+	public Adapter createAliaseeAdapter()
+	{
 		return null;
 	}
 
@@ -889,7 +1056,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TargetInfo
 	 * @generated
 	 */
-	public Adapter createTargetInfoAdapter() {
+	public Adapter createTargetInfoAdapter()
+	{
 		return null;
 	}
 
@@ -903,7 +1071,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.InlineAsm
 	 * @generated
 	 */
-	public Adapter createInlineAsmAdapter() {
+	public Adapter createInlineAsmAdapter()
+	{
 		return null;
 	}
 
@@ -917,7 +1086,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.GlobalVariable
 	 * @generated
 	 */
-	public Adapter createGlobalVariableAdapter() {
+	public Adapter createGlobalVariableAdapter()
+	{
 		return null;
 	}
 
@@ -931,7 +1101,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Constant
 	 * @generated
 	 */
-	public Adapter createConstantAdapter() {
+	public Adapter createConstantAdapter()
+	{
 		return null;
 	}
 
@@ -945,7 +1116,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression
 	 * @generated
 	 */
-	public Adapter createConstantExpressionAdapter() {
+	public Adapter createConstantExpressionAdapter()
+	{
 		return null;
 	}
 
@@ -959,7 +1131,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_convert
 	 * @generated
 	 */
-	public Adapter createConstantExpression_convertAdapter() {
+	public Adapter createConstantExpression_convertAdapter()
+	{
 		return null;
 	}
 
@@ -973,7 +1146,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_getelementptr
 	 * @generated
 	 */
-	public Adapter createConstantExpression_getelementptrAdapter() {
+	public Adapter createConstantExpression_getelementptrAdapter()
+	{
 		return null;
 	}
 
@@ -987,7 +1161,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_select
 	 * @generated
 	 */
-	public Adapter createConstantExpression_selectAdapter() {
+	public Adapter createConstantExpression_selectAdapter()
+	{
 		return null;
 	}
 
@@ -1001,7 +1176,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_compare
 	 * @generated
 	 */
-	public Adapter createConstantExpression_compareAdapter() {
+	public Adapter createConstantExpression_compareAdapter()
+	{
 		return null;
 	}
 
@@ -1015,7 +1191,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_extractelement
 	 * @generated
 	 */
-	public Adapter createConstantExpression_extractelementAdapter() {
+	public Adapter createConstantExpression_extractelementAdapter()
+	{
 		return null;
 	}
 
@@ -1029,7 +1206,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_insertelement
 	 * @generated
 	 */
-	public Adapter createConstantExpression_insertelementAdapter() {
+	public Adapter createConstantExpression_insertelementAdapter()
+	{
 		return null;
 	}
 
@@ -1043,7 +1221,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_shufflevector
 	 * @generated
 	 */
-	public Adapter createConstantExpression_shufflevectorAdapter() {
+	public Adapter createConstantExpression_shufflevectorAdapter()
+	{
 		return null;
 	}
 
@@ -1057,7 +1236,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_extractvalue
 	 * @generated
 	 */
-	public Adapter createConstantExpression_extractvalueAdapter() {
+	public Adapter createConstantExpression_extractvalueAdapter()
+	{
 		return null;
 	}
 
@@ -1071,7 +1251,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_insertvalue
 	 * @generated
 	 */
-	public Adapter createConstantExpression_insertvalueAdapter() {
+	public Adapter createConstantExpression_insertvalueAdapter()
+	{
 		return null;
 	}
 
@@ -1085,7 +1266,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_binary
 	 * @generated
 	 */
-	public Adapter createConstantExpression_binaryAdapter() {
+	public Adapter createConstantExpression_binaryAdapter()
+	{
 		return null;
 	}
 
@@ -1099,7 +1281,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Undef
 	 * @generated
 	 */
-	public Adapter createUndefAdapter() {
+	public Adapter createUndefAdapter()
+	{
 		return null;
 	}
 
@@ -1113,7 +1296,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.BlockAddress
 	 * @generated
 	 */
-	public Adapter createBlockAddressAdapter() {
+	public Adapter createBlockAddressAdapter()
+	{
 		return null;
 	}
 
@@ -1127,7 +1311,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ZeroInitializer
 	 * @generated
 	 */
-	public Adapter createZeroInitializerAdapter() {
+	public Adapter createZeroInitializerAdapter()
+	{
 		return null;
 	}
 
@@ -1141,7 +1326,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.StructureConstant
 	 * @generated
 	 */
-	public Adapter createStructureConstantAdapter() {
+	public Adapter createStructureConstantAdapter()
+	{
 		return null;
 	}
 
@@ -1155,7 +1341,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ArrayConstant
 	 * @generated
 	 */
-	public Adapter createArrayConstantAdapter() {
+	public Adapter createArrayConstantAdapter()
+	{
 		return null;
 	}
 
@@ -1169,7 +1356,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorConstant
 	 * @generated
 	 */
-	public Adapter createVectorConstantAdapter() {
+	public Adapter createVectorConstantAdapter()
+	{
 		return null;
 	}
 
@@ -1183,7 +1371,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConstantList
 	 * @generated
 	 */
-	public Adapter createConstantListAdapter() {
+	public Adapter createConstantListAdapter()
+	{
 		return null;
 	}
 
@@ -1197,7 +1386,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TypedConstant
 	 * @generated
 	 */
-	public Adapter createTypedConstantAdapter() {
+	public Adapter createTypedConstantAdapter()
+	{
 		return null;
 	}
 
@@ -1211,7 +1401,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.SimpleConstant
 	 * @generated
 	 */
-	public Adapter createSimpleConstantAdapter() {
+	public Adapter createSimpleConstantAdapter()
+	{
 		return null;
 	}
 
@@ -1225,7 +1416,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MetadataNode
 	 * @generated
 	 */
-	public Adapter createMetadataNodeAdapter() {
+	public Adapter createMetadataNodeAdapter()
+	{
 		return null;
 	}
 
@@ -1239,7 +1431,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MetadataNodeElement
 	 * @generated
 	 */
-	public Adapter createMetadataNodeElementAdapter() {
+	public Adapter createMetadataNodeElementAdapter()
+	{
 		return null;
 	}
 
@@ -1253,7 +1446,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MetadataString
 	 * @generated
 	 */
-	public Adapter createMetadataStringAdapter() {
+	public Adapter createMetadataStringAdapter()
+	{
 		return null;
 	}
 
@@ -1267,7 +1461,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.AddressSpace
 	 * @generated
 	 */
-	public Adapter createAddressSpaceAdapter() {
+	public Adapter createAddressSpaceAdapter()
+	{
 		return null;
 	}
 
@@ -1281,7 +1476,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Function
 	 * @generated
 	 */
-	public Adapter createFunctionAdapter() {
+	public Adapter createFunctionAdapter()
+	{
 		return null;
 	}
 
@@ -1295,7 +1491,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FunctionDef
 	 * @generated
 	 */
-	public Adapter createFunctionDefAdapter() {
+	public Adapter createFunctionDefAdapter()
+	{
 		return null;
 	}
 
@@ -1309,7 +1506,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FunctionDecl
 	 * @generated
 	 */
-	public Adapter createFunctionDeclAdapter() {
+	public Adapter createFunctionDeclAdapter()
+	{
 		return null;
 	}
 
@@ -1323,7 +1521,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FunctionHeader
 	 * @generated
 	 */
-	public Adapter createFunctionHeaderAdapter() {
+	public Adapter createFunctionHeaderAdapter()
+	{
 		return null;
 	}
 
@@ -1337,7 +1536,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FunctionPrefix
 	 * @generated
 	 */
-	public Adapter createFunctionPrefixAdapter() {
+	public Adapter createFunctionPrefixAdapter()
+	{
 		return null;
 	}
 
@@ -1351,7 +1551,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Parameters
 	 * @generated
 	 */
-	public Adapter createParametersAdapter() {
+	public Adapter createParametersAdapter()
+	{
 		return null;
 	}
 
@@ -1365,7 +1566,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FunctionAttributes
 	 * @generated
 	 */
-	public Adapter createFunctionAttributesAdapter() {
+	public Adapter createFunctionAttributesAdapter()
+	{
 		return null;
 	}
 
@@ -1379,7 +1581,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.AlignStack
 	 * @generated
 	 */
-	public Adapter createAlignStackAdapter() {
+	public Adapter createAlignStackAdapter()
+	{
 		return null;
 	}
 
@@ -1393,7 +1596,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FunctionAttribute
 	 * @generated
 	 */
-	public Adapter createFunctionAttributeAdapter() {
+	public Adapter createFunctionAttributeAdapter()
+	{
 		return null;
 	}
 
@@ -1407,7 +1611,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.BasicBlock
 	 * @generated
 	 */
-	public Adapter createBasicBlockAdapter() {
+	public Adapter createBasicBlockAdapter()
+	{
 		return null;
 	}
 
@@ -1421,7 +1626,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MetadataSuffix
 	 * @generated
 	 */
-	public Adapter createMetadataSuffixAdapter() {
+	public Adapter createMetadataSuffixAdapter()
+	{
 		return null;
 	}
 
@@ -1435,7 +1641,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.StartingInstruction
 	 * @generated
 	 */
-	public Adapter createStartingInstructionAdapter() {
+	public Adapter createStartingInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1449,7 +1656,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MiddleInstruction
 	 * @generated
 	 */
-	public Adapter createMiddleInstructionAdapter() {
+	public Adapter createMiddleInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1463,7 +1671,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NamedMiddleInstruction
 	 * @generated
 	 */
-	public Adapter createNamedMiddleInstructionAdapter() {
+	public Adapter createNamedMiddleInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1477,7 +1686,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TerminatorInstruction
 	 * @generated
 	 */
-	public Adapter createTerminatorInstructionAdapter() {
+	public Adapter createTerminatorInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1491,7 +1701,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NamedTerminatorInstruction
 	 * @generated
 	 */
-	public Adapter createNamedTerminatorInstructionAdapter() {
+	public Adapter createNamedTerminatorInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1505,7 +1716,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_ret
 	 * @generated
 	 */
-	public Adapter createInstruction_retAdapter() {
+	public Adapter createInstruction_retAdapter()
+	{
 		return null;
 	}
 
@@ -1519,7 +1731,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_br
 	 * @generated
 	 */
-	public Adapter createInstruction_brAdapter() {
+	public Adapter createInstruction_brAdapter()
+	{
 		return null;
 	}
 
@@ -1533,7 +1746,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_switch
 	 * @generated
 	 */
-	public Adapter createInstruction_switchAdapter() {
+	public Adapter createInstruction_switchAdapter()
+	{
 		return null;
 	}
 
@@ -1547,7 +1761,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_indirectbr
 	 * @generated
 	 */
-	public Adapter createInstruction_indirectbrAdapter() {
+	public Adapter createInstruction_indirectbrAdapter()
+	{
 		return null;
 	}
 
@@ -1561,7 +1776,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void
 	 * @generated
 	 */
-	public Adapter createInstruction_invoke_voidAdapter() {
+	public Adapter createInstruction_invoke_voidAdapter()
+	{
 		return null;
 	}
 
@@ -1575,7 +1791,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid
 	 * @generated
 	 */
-	public Adapter createInstruction_invoke_nonVoidAdapter() {
+	public Adapter createInstruction_invoke_nonVoidAdapter()
+	{
 		return null;
 	}
 
@@ -1589,7 +1806,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_resume
 	 * @generated
 	 */
-	public Adapter createInstruction_resumeAdapter() {
+	public Adapter createInstruction_resumeAdapter()
+	{
 		return null;
 	}
 
@@ -1603,7 +1821,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_unreachable
 	 * @generated
 	 */
-	public Adapter createInstruction_unreachableAdapter() {
+	public Adapter createInstruction_unreachableAdapter()
+	{
 		return null;
 	}
 
@@ -1617,7 +1836,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.BasicBlockRef
 	 * @generated
 	 */
-	public Adapter createBasicBlockRefAdapter() {
+	public Adapter createBasicBlockRefAdapter()
+	{
 		return null;
 	}
 
@@ -1631,7 +1851,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.BinaryInstruction
 	 * @generated
 	 */
-	public Adapter createBinaryInstructionAdapter() {
+	public Adapter createBinaryInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1645,7 +1866,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_add
 	 * @generated
 	 */
-	public Adapter createInstruction_addAdapter() {
+	public Adapter createInstruction_addAdapter()
+	{
 		return null;
 	}
 
@@ -1659,7 +1881,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_fadd
 	 * @generated
 	 */
-	public Adapter createInstruction_faddAdapter() {
+	public Adapter createInstruction_faddAdapter()
+	{
 		return null;
 	}
 
@@ -1673,7 +1896,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FastMathFlag
 	 * @generated
 	 */
-	public Adapter createFastMathFlagAdapter() {
+	public Adapter createFastMathFlagAdapter()
+	{
 		return null;
 	}
 
@@ -1687,7 +1911,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_sub
 	 * @generated
 	 */
-	public Adapter createInstruction_subAdapter() {
+	public Adapter createInstruction_subAdapter()
+	{
 		return null;
 	}
 
@@ -1701,7 +1926,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_fsub
 	 * @generated
 	 */
-	public Adapter createInstruction_fsubAdapter() {
+	public Adapter createInstruction_fsubAdapter()
+	{
 		return null;
 	}
 
@@ -1715,7 +1941,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_mul
 	 * @generated
 	 */
-	public Adapter createInstruction_mulAdapter() {
+	public Adapter createInstruction_mulAdapter()
+	{
 		return null;
 	}
 
@@ -1729,7 +1956,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_fmul
 	 * @generated
 	 */
-	public Adapter createInstruction_fmulAdapter() {
+	public Adapter createInstruction_fmulAdapter()
+	{
 		return null;
 	}
 
@@ -1743,7 +1971,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_udiv
 	 * @generated
 	 */
-	public Adapter createInstruction_udivAdapter() {
+	public Adapter createInstruction_udivAdapter()
+	{
 		return null;
 	}
 
@@ -1757,7 +1986,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_sdiv
 	 * @generated
 	 */
-	public Adapter createInstruction_sdivAdapter() {
+	public Adapter createInstruction_sdivAdapter()
+	{
 		return null;
 	}
 
@@ -1771,7 +2001,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_fdiv
 	 * @generated
 	 */
-	public Adapter createInstruction_fdivAdapter() {
+	public Adapter createInstruction_fdivAdapter()
+	{
 		return null;
 	}
 
@@ -1785,7 +2016,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_urem
 	 * @generated
 	 */
-	public Adapter createInstruction_uremAdapter() {
+	public Adapter createInstruction_uremAdapter()
+	{
 		return null;
 	}
 
@@ -1799,7 +2031,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_srem
 	 * @generated
 	 */
-	public Adapter createInstruction_sremAdapter() {
+	public Adapter createInstruction_sremAdapter()
+	{
 		return null;
 	}
 
@@ -1813,7 +2046,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_frem
 	 * @generated
 	 */
-	public Adapter createInstruction_fremAdapter() {
+	public Adapter createInstruction_fremAdapter()
+	{
 		return null;
 	}
 
@@ -1827,7 +2061,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction
 	 * @generated
 	 */
-	public Adapter createBitwiseBinaryInstructionAdapter() {
+	public Adapter createBitwiseBinaryInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1841,7 +2076,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_shl
 	 * @generated
 	 */
-	public Adapter createInstruction_shlAdapter() {
+	public Adapter createInstruction_shlAdapter()
+	{
 		return null;
 	}
 
@@ -1855,7 +2091,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_lshr
 	 * @generated
 	 */
-	public Adapter createInstruction_lshrAdapter() {
+	public Adapter createInstruction_lshrAdapter()
+	{
 		return null;
 	}
 
@@ -1869,7 +2106,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_ashr
 	 * @generated
 	 */
-	public Adapter createInstruction_ashrAdapter() {
+	public Adapter createInstruction_ashrAdapter()
+	{
 		return null;
 	}
 
@@ -1883,7 +2121,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_and
 	 * @generated
 	 */
-	public Adapter createInstruction_andAdapter() {
+	public Adapter createInstruction_andAdapter()
+	{
 		return null;
 	}
 
@@ -1897,7 +2136,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_or
 	 * @generated
 	 */
-	public Adapter createInstruction_orAdapter() {
+	public Adapter createInstruction_orAdapter()
+	{
 		return null;
 	}
 
@@ -1911,7 +2151,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_xor
 	 * @generated
 	 */
-	public Adapter createInstruction_xorAdapter() {
+	public Adapter createInstruction_xorAdapter()
+	{
 		return null;
 	}
 
@@ -1925,7 +2166,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorInstructions
 	 * @generated
 	 */
-	public Adapter createVectorInstructionsAdapter() {
+	public Adapter createVectorInstructionsAdapter()
+	{
 		return null;
 	}
 
@@ -1939,7 +2181,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_extractelement
 	 * @generated
 	 */
-	public Adapter createInstruction_extractelementAdapter() {
+	public Adapter createInstruction_extractelementAdapter()
+	{
 		return null;
 	}
 
@@ -1953,7 +2196,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_insertelement
 	 * @generated
 	 */
-	public Adapter createInstruction_insertelementAdapter() {
+	public Adapter createInstruction_insertelementAdapter()
+	{
 		return null;
 	}
 
@@ -1967,7 +2211,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_shufflevector
 	 * @generated
 	 */
-	public Adapter createInstruction_shufflevectorAdapter() {
+	public Adapter createInstruction_shufflevectorAdapter()
+	{
 		return null;
 	}
 
@@ -1981,7 +2226,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.AggregateInstruction
 	 * @generated
 	 */
-	public Adapter createAggregateInstructionAdapter() {
+	public Adapter createAggregateInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -1995,7 +2241,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_extractvalue
 	 * @generated
 	 */
-	public Adapter createInstruction_extractvalueAdapter() {
+	public Adapter createInstruction_extractvalueAdapter()
+	{
 		return null;
 	}
 
@@ -2009,7 +2256,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_insertvalue
 	 * @generated
 	 */
-	public Adapter createInstruction_insertvalueAdapter() {
+	public Adapter createInstruction_insertvalueAdapter()
+	{
 		return null;
 	}
 
@@ -2023,7 +2271,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_alloca
 	 * @generated
 	 */
-	public Adapter createInstruction_allocaAdapter() {
+	public Adapter createInstruction_allocaAdapter()
+	{
 		return null;
 	}
 
@@ -2037,7 +2286,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_load
 	 * @generated
 	 */
-	public Adapter createInstruction_loadAdapter() {
+	public Adapter createInstruction_loadAdapter()
+	{
 		return null;
 	}
 
@@ -2051,7 +2301,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_store
 	 * @generated
 	 */
-	public Adapter createInstruction_storeAdapter() {
+	public Adapter createInstruction_storeAdapter()
+	{
 		return null;
 	}
 
@@ -2065,7 +2316,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_fence
 	 * @generated
 	 */
-	public Adapter createInstruction_fenceAdapter() {
+	public Adapter createInstruction_fenceAdapter()
+	{
 		return null;
 	}
 
@@ -2079,7 +2331,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_cmpxchg
 	 * @generated
 	 */
-	public Adapter createInstruction_cmpxchgAdapter() {
+	public Adapter createInstruction_cmpxchgAdapter()
+	{
 		return null;
 	}
 
@@ -2093,7 +2346,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_atomicrmw
 	 * @generated
 	 */
-	public Adapter createInstruction_atomicrmwAdapter() {
+	public Adapter createInstruction_atomicrmwAdapter()
+	{
 		return null;
 	}
 
@@ -2107,7 +2361,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_getelementptr
 	 * @generated
 	 */
-	public Adapter createInstruction_getelementptrAdapter() {
+	public Adapter createInstruction_getelementptrAdapter()
+	{
 		return null;
 	}
 
@@ -2121,7 +2376,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ConversionInstruction
 	 * @generated
 	 */
-	public Adapter createConversionInstructionAdapter() {
+	public Adapter createConversionInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -2135,7 +2391,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.OtherInstruction
 	 * @generated
 	 */
-	public Adapter createOtherInstructionAdapter() {
+	public Adapter createOtherInstructionAdapter()
+	{
 		return null;
 	}
 
@@ -2149,7 +2406,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_icmp
 	 * @generated
 	 */
-	public Adapter createInstruction_icmpAdapter() {
+	public Adapter createInstruction_icmpAdapter()
+	{
 		return null;
 	}
 
@@ -2163,7 +2421,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_fcmp
 	 * @generated
 	 */
-	public Adapter createInstruction_fcmpAdapter() {
+	public Adapter createInstruction_fcmpAdapter()
+	{
 		return null;
 	}
 
@@ -2177,7 +2436,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_phi
 	 * @generated
 	 */
-	public Adapter createInstruction_phiAdapter() {
+	public Adapter createInstruction_phiAdapter()
+	{
 		return null;
 	}
 
@@ -2191,7 +2451,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_select
 	 * @generated
 	 */
-	public Adapter createInstruction_selectAdapter() {
+	public Adapter createInstruction_selectAdapter()
+	{
 		return null;
 	}
 
@@ -2205,7 +2466,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call
 	 * @generated
 	 */
-	public Adapter createInstruction_callAdapter() {
+	public Adapter createInstruction_callAdapter()
+	{
 		return null;
 	}
 
@@ -2219,7 +2481,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call_nonVoid
 	 * @generated
 	 */
-	public Adapter createInstruction_call_nonVoidAdapter() {
+	public Adapter createInstruction_call_nonVoidAdapter()
+	{
 		return null;
 	}
 
@@ -2233,7 +2496,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call_void
 	 * @generated
 	 */
-	public Adapter createInstruction_call_voidAdapter() {
+	public Adapter createInstruction_call_voidAdapter()
+	{
 		return null;
 	}
 
@@ -2247,7 +2511,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ArgList
 	 * @generated
 	 */
-	public Adapter createArgListAdapter() {
+	public Adapter createArgListAdapter()
+	{
 		return null;
 	}
 
@@ -2261,7 +2526,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Callee
 	 * @generated
 	 */
-	public Adapter createCalleeAdapter() {
+	public Adapter createCalleeAdapter()
+	{
 		return null;
 	}
 
@@ -2275,7 +2541,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.InlineAssembler
 	 * @generated
 	 */
-	public Adapter createInlineAssemblerAdapter() {
+	public Adapter createInlineAssemblerAdapter()
+	{
 		return null;
 	}
 
@@ -2289,7 +2556,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_va_arg
 	 * @generated
 	 */
-	public Adapter createInstruction_va_argAdapter() {
+	public Adapter createInstruction_va_argAdapter()
+	{
 		return null;
 	}
 
@@ -2303,7 +2571,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_landingpad
 	 * @generated
 	 */
-	public Adapter createInstruction_landingpadAdapter() {
+	public Adapter createInstruction_landingpadAdapter()
+	{
 		return null;
 	}
 
@@ -2317,7 +2586,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.LandingpadClause
 	 * @generated
 	 */
-	public Adapter createLandingpadClauseAdapter() {
+	public Adapter createLandingpadClauseAdapter()
+	{
 		return null;
 	}
 
@@ -2331,7 +2601,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TypedValue
 	 * @generated
 	 */
-	public Adapter createTypedValueAdapter() {
+	public Adapter createTypedValueAdapter()
+	{
 		return null;
 	}
 
@@ -2345,7 +2616,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ParameterType
 	 * @generated
 	 */
-	public Adapter createParameterTypeAdapter() {
+	public Adapter createParameterTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2359,7 +2631,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ParameterAttributes
 	 * @generated
 	 */
-	public Adapter createParameterAttributesAdapter() {
+	public Adapter createParameterAttributesAdapter()
+	{
 		return null;
 	}
 
@@ -2373,7 +2646,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Argument
 	 * @generated
 	 */
-	public Adapter createArgumentAdapter() {
+	public Adapter createArgumentAdapter()
+	{
 		return null;
 	}
 
@@ -2387,7 +2661,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Parameter
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
+	public Adapter createParameterAdapter()
+	{
 		return null;
 	}
 
@@ -2401,7 +2676,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NonVoidType
 	 * @generated
 	 */
-	public Adapter createNonVoidTypeAdapter() {
+	public Adapter createNonVoidTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2415,7 +2691,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Star
 	 * @generated
 	 */
-	public Adapter createStarAdapter() {
+	public Adapter createStarAdapter()
+	{
 		return null;
 	}
 
@@ -2429,7 +2706,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Type
 	 * @generated
 	 */
-	public Adapter createTypeAdapter() {
+	public Adapter createTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2443,7 +2721,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TypeSuffix
 	 * @generated
 	 */
-	public Adapter createTypeSuffixAdapter() {
+	public Adapter createTypeSuffixAdapter()
+	{
 		return null;
 	}
 
@@ -2457,7 +2736,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NonLeftRecursiveType
 	 * @generated
 	 */
-	public Adapter createNonLeftRecursiveTypeAdapter() {
+	public Adapter createNonLeftRecursiveTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2471,7 +2751,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.NonLeftRecursiveNonVoidType
 	 * @generated
 	 */
-	public Adapter createNonLeftRecursiveNonVoidTypeAdapter() {
+	public Adapter createNonLeftRecursiveNonVoidTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2485,7 +2766,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.TypeDef
 	 * @generated
 	 */
-	public Adapter createTypeDefAdapter() {
+	public Adapter createTypeDefAdapter()
+	{
 		return null;
 	}
 
@@ -2499,7 +2781,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.IntType
 	 * @generated
 	 */
-	public Adapter createIntTypeAdapter() {
+	public Adapter createIntTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2513,7 +2796,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.OpaqueType
 	 * @generated
 	 */
-	public Adapter createOpaqueTypeAdapter() {
+	public Adapter createOpaqueTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2527,7 +2811,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.StructType
 	 * @generated
 	 */
-	public Adapter createStructTypeAdapter() {
+	public Adapter createStructTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2541,7 +2826,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorType
 	 * @generated
 	 */
-	public Adapter createVectorTypeAdapter() {
+	public Adapter createVectorTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2555,7 +2841,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.ArrayType
 	 * @generated
 	 */
-	public Adapter createArrayTypeAdapter() {
+	public Adapter createArrayTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2569,7 +2856,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.X86mmxType
 	 * @generated
 	 */
-	public Adapter createX86mmxTypeAdapter() {
+	public Adapter createX86mmxTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2583,7 +2871,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.VoidType
 	 * @generated
 	 */
-	public Adapter createVoidTypeAdapter() {
+	public Adapter createVoidTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2597,7 +2886,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.MetadataType
 	 * @generated
 	 */
-	public Adapter createMetadataTypeAdapter() {
+	public Adapter createMetadataTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2611,7 +2901,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.FloatingType
 	 * @generated
 	 */
-	public Adapter createFloatingTypeAdapter() {
+	public Adapter createFloatingTypeAdapter()
+	{
 		return null;
 	}
 
@@ -2625,7 +2916,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.CConv
 	 * @generated
 	 */
-	public Adapter createCConvAdapter() {
+	public Adapter createCConvAdapter()
+	{
 		return null;
 	}
 
@@ -2639,7 +2931,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke
 	 * @generated
 	 */
-	public Adapter createInstruction_invokeAdapter() {
+	public Adapter createInstruction_invokeAdapter()
+	{
 		return null;
 	}
 
@@ -2651,7 +2944,8 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

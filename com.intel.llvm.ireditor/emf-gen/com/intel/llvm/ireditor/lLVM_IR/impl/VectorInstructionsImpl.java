@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VectorInstructionsImpl extends NamedMiddleInstructionImpl implements VectorInstructions {
+public class VectorInstructionsImpl extends NamedMiddleInstructionImpl implements VectorInstructions
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VectorInstructionsImpl() {
+	protected VectorInstructionsImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class VectorInstructionsImpl extends NamedMiddleInstructionImpl implement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getVectorInstructions();
 	}
 

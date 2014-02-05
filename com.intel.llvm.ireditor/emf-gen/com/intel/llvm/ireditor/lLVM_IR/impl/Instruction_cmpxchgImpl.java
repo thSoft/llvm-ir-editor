@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implements Instruction_cmpxchg {
+public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implements Instruction_cmpxchg
+{
 	/**
 	 * The cached value of the '{@link #getPointer() <em>Pointer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -86,7 +87,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_cmpxchgImpl() {
+	protected Instruction_cmpxchgImpl()
+	{
 		super();
 	}
 
@@ -96,7 +98,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_cmpxchg();
 	}
 
@@ -105,7 +108,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getPointer() {
+	public TypedValue getPointer()
+	{
 		return pointer;
 	}
 
@@ -114,10 +118,12 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPointer(TypedValue newPointer, NotificationChain msgs) {
+	public NotificationChain basicSetPointer(TypedValue newPointer, NotificationChain msgs)
+	{
 		TypedValue oldPointer = pointer;
 		pointer = newPointer;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER, oldPointer, newPointer);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -129,8 +135,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPointer(TypedValue newPointer) {
-		if (newPointer != pointer) {
+	public void setPointer(TypedValue newPointer)
+	{
+		if (newPointer != pointer)
+		{
 			NotificationChain msgs = null;
 			if (pointer != null)
 				msgs = ((InternalEObject)pointer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER, null, msgs);
@@ -148,7 +156,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getComparedWith() {
+	public TypedValue getComparedWith()
+	{
 		return comparedWith;
 	}
 
@@ -157,10 +166,12 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetComparedWith(TypedValue newComparedWith, NotificationChain msgs) {
+	public NotificationChain basicSetComparedWith(TypedValue newComparedWith, NotificationChain msgs)
+	{
 		TypedValue oldComparedWith = comparedWith;
 		comparedWith = newComparedWith;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CMPXCHG__COMPARED_WITH, oldComparedWith, newComparedWith);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -172,8 +183,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComparedWith(TypedValue newComparedWith) {
-		if (newComparedWith != comparedWith) {
+	public void setComparedWith(TypedValue newComparedWith)
+	{
+		if (newComparedWith != comparedWith)
+		{
 			NotificationChain msgs = null;
 			if (comparedWith != null)
 				msgs = ((InternalEObject)comparedWith).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CMPXCHG__COMPARED_WITH, null, msgs);
@@ -191,7 +204,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getNewValue() {
+	public TypedValue getNewValue()
+	{
 		return newValue;
 	}
 
@@ -200,10 +214,12 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNewValue(TypedValue newNewValue, NotificationChain msgs) {
+	public NotificationChain basicSetNewValue(TypedValue newNewValue, NotificationChain msgs)
+	{
 		TypedValue oldNewValue = newValue;
 		newValue = newNewValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CMPXCHG__NEW_VALUE, oldNewValue, newNewValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -215,8 +231,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNewValue(TypedValue newNewValue) {
-		if (newNewValue != newValue) {
+	public void setNewValue(TypedValue newNewValue)
+	{
+		if (newNewValue != newValue)
+		{
 			NotificationChain msgs = null;
 			if (newValue != null)
 				msgs = ((InternalEObject)newValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CMPXCHG__NEW_VALUE, null, msgs);
@@ -234,7 +252,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOrdering() {
+	public String getOrdering()
+	{
 		return ordering;
 	}
 
@@ -243,7 +262,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrdering(String newOrdering) {
+	public void setOrdering(String newOrdering)
+	{
 		String oldOrdering = ordering;
 		ordering = newOrdering;
 		if (eNotificationRequired())
@@ -256,8 +276,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER:
 				return basicSetPointer(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__COMPARED_WITH:
@@ -274,8 +296,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER:
 				return getPointer();
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__COMPARED_WITH:
@@ -294,8 +318,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER:
 				setPointer((TypedValue)newValue);
 				return;
@@ -318,8 +344,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER:
 				setPointer((TypedValue)null);
 				return;
@@ -342,8 +370,10 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__POINTER:
 				return pointer != null;
 			case LLVM_IRPackage.INSTRUCTION_CMPXCHG__COMPARED_WITH:
@@ -362,7 +392,8 @@ public class Instruction_cmpxchgImpl extends NamedMiddleInstructionImpl implemen
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

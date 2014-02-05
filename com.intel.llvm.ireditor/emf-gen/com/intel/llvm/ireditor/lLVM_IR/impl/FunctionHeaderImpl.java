@@ -43,7 +43,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHeader {
+public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHeader
+{
 	/**
 	 * The default value of the '{@link #getLinkage() <em>Linkage</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -229,7 +230,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionHeaderImpl() {
+	protected FunctionHeaderImpl()
+	{
 		super();
 	}
 
@@ -239,7 +241,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFunctionHeader();
 	}
 
@@ -248,7 +251,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLinkage() {
+	public String getLinkage()
+	{
 		return linkage;
 	}
 
@@ -257,7 +261,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinkage(String newLinkage) {
+	public void setLinkage(String newLinkage)
+	{
 		String oldLinkage = linkage;
 		linkage = newLinkage;
 		if (eNotificationRequired())
@@ -269,7 +274,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVisibility() {
+	public String getVisibility()
+	{
 		return visibility;
 	}
 
@@ -278,7 +284,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisibility(String newVisibility) {
+	public void setVisibility(String newVisibility)
+	{
 		String oldVisibility = visibility;
 		visibility = newVisibility;
 		if (eNotificationRequired())
@@ -290,7 +297,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CConv getCconv() {
+	public CConv getCconv()
+	{
 		return cconv;
 	}
 
@@ -299,10 +307,12 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs) {
+	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs)
+	{
 		CConv oldCconv = cconv;
 		cconv = newCconv;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__CCONV, oldCconv, newCconv);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -314,8 +324,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCconv(CConv newCconv) {
-		if (newCconv != cconv) {
+	public void setCconv(CConv newCconv)
+	{
+		if (newCconv != cconv)
+		{
 			NotificationChain msgs = null;
 			if (cconv != null)
 				msgs = ((InternalEObject)cconv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__CCONV, null, msgs);
@@ -333,7 +345,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterAttributes getRettypeAttrs() {
+	public ParameterAttributes getRettypeAttrs()
+	{
 		return rettypeAttrs;
 	}
 
@@ -342,10 +355,12 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRettypeAttrs(ParameterAttributes newRettypeAttrs, NotificationChain msgs) {
+	public NotificationChain basicSetRettypeAttrs(ParameterAttributes newRettypeAttrs, NotificationChain msgs)
+	{
 		ParameterAttributes oldRettypeAttrs = rettypeAttrs;
 		rettypeAttrs = newRettypeAttrs;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, oldRettypeAttrs, newRettypeAttrs);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -357,8 +372,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRettypeAttrs(ParameterAttributes newRettypeAttrs) {
-		if (newRettypeAttrs != rettypeAttrs) {
+	public void setRettypeAttrs(ParameterAttributes newRettypeAttrs)
+	{
+		if (newRettypeAttrs != rettypeAttrs)
+		{
 			NotificationChain msgs = null;
 			if (rettypeAttrs != null)
 				msgs = ((InternalEObject)rettypeAttrs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS, null, msgs);
@@ -376,7 +393,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getRettype() {
+	public Type getRettype()
+	{
 		return rettype;
 	}
 
@@ -385,10 +403,12 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRettype(Type newRettype, NotificationChain msgs) {
+	public NotificationChain basicSetRettype(Type newRettype, NotificationChain msgs)
+	{
 		Type oldRettype = rettype;
 		rettype = newRettype;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, oldRettype, newRettype);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -400,8 +420,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRettype(Type newRettype) {
-		if (newRettype != rettype) {
+	public void setRettype(Type newRettype)
+	{
+		if (newRettype != rettype)
+		{
 			NotificationChain msgs = null;
 			if (rettype != null)
 				msgs = ((InternalEObject)rettype).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__RETTYPE, null, msgs);
@@ -419,7 +441,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -428,7 +451,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -440,7 +464,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameters getParameters() {
+	public Parameters getParameters()
+	{
 		return parameters;
 	}
 
@@ -449,10 +474,12 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParameters(Parameters newParameters, NotificationChain msgs) {
+	public NotificationChain basicSetParameters(Parameters newParameters, NotificationChain msgs)
+	{
 		Parameters oldParameters = parameters;
 		parameters = newParameters;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, oldParameters, newParameters);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -464,8 +491,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParameters(Parameters newParameters) {
-		if (newParameters != parameters) {
+	public void setParameters(Parameters newParameters)
+	{
+		if (newParameters != parameters)
+		{
 			NotificationChain msgs = null;
 			if (parameters != null)
 				msgs = ((InternalEObject)parameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__PARAMETERS, null, msgs);
@@ -483,7 +512,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionAttributes getAttrs() {
+	public FunctionAttributes getAttrs()
+	{
 		return attrs;
 	}
 
@@ -492,10 +522,12 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttrs(FunctionAttributes newAttrs, NotificationChain msgs) {
+	public NotificationChain basicSetAttrs(FunctionAttributes newAttrs, NotificationChain msgs)
+	{
 		FunctionAttributes oldAttrs = attrs;
 		attrs = newAttrs;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__ATTRS, oldAttrs, newAttrs);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -507,8 +539,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttrs(FunctionAttributes newAttrs) {
-		if (newAttrs != attrs) {
+	public void setAttrs(FunctionAttributes newAttrs)
+	{
+		if (newAttrs != attrs)
+		{
 			NotificationChain msgs = null;
 			if (attrs != null)
 				msgs = ((InternalEObject)attrs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__ATTRS, null, msgs);
@@ -526,7 +560,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSection() {
+	public String getSection()
+	{
 		return section;
 	}
 
@@ -535,7 +570,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSection(String newSection) {
+	public void setSection(String newSection)
+	{
 		String oldSection = section;
 		section = newSection;
 		if (eNotificationRequired())
@@ -547,7 +583,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAlign() {
+	public String getAlign()
+	{
 		return align;
 	}
 
@@ -556,7 +593,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAlign(String newAlign) {
+	public void setAlign(String newAlign)
+	{
 		String oldAlign = align;
 		align = newAlign;
 		if (eNotificationRequired())
@@ -568,7 +606,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getGc() {
+	public String getGc()
+	{
 		return gc;
 	}
 
@@ -577,7 +616,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGc(String newGc) {
+	public void setGc(String newGc)
+	{
 		String oldGc = gc;
 		gc = newGc;
 		if (eNotificationRequired())
@@ -589,7 +629,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionPrefix getFunctionPrefix() {
+	public FunctionPrefix getFunctionPrefix()
+	{
 		return functionPrefix;
 	}
 
@@ -598,10 +639,12 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFunctionPrefix(FunctionPrefix newFunctionPrefix, NotificationChain msgs) {
+	public NotificationChain basicSetFunctionPrefix(FunctionPrefix newFunctionPrefix, NotificationChain msgs)
+	{
 		FunctionPrefix oldFunctionPrefix = functionPrefix;
 		functionPrefix = newFunctionPrefix;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, oldFunctionPrefix, newFunctionPrefix);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -613,8 +656,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFunctionPrefix(FunctionPrefix newFunctionPrefix) {
-		if (newFunctionPrefix != functionPrefix) {
+	public void setFunctionPrefix(FunctionPrefix newFunctionPrefix)
+	{
+		if (newFunctionPrefix != functionPrefix)
+		{
 			NotificationChain msgs = null;
 			if (functionPrefix != null)
 				msgs = ((InternalEObject)functionPrefix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION_HEADER__FUNCTION_PREFIX, null, msgs);
@@ -633,8 +678,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_HEADER__CCONV:
 				return basicSetCconv(null, msgs);
 			case LLVM_IRPackage.FUNCTION_HEADER__RETTYPE_ATTRS:
@@ -657,8 +704,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
 				return getLinkage();
 			case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
@@ -693,8 +742,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
 				setLinkage((String)newValue);
 				return;
@@ -741,8 +792,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
 				setLinkage(LINKAGE_EDEFAULT);
 				return;
@@ -789,8 +842,10 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_HEADER__LINKAGE:
 				return LINKAGE_EDEFAULT == null ? linkage != null : !LINKAGE_EDEFAULT.equals(linkage);
 			case LLVM_IRPackage.FUNCTION_HEADER__VISIBILITY:
@@ -825,7 +880,8 @@ public class FunctionHeaderImpl extends GlobalValueDefImpl implements FunctionHe
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

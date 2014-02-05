@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implements MetadataNodeElement {
+public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implements MetadataNodeElement
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -77,7 +78,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MetadataNodeElementImpl() {
+	protected MetadataNodeElementImpl()
+	{
 		super();
 	}
 
@@ -87,7 +89,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getMetadataNodeElement();
 	}
 
@@ -96,7 +99,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getValue() {
+	public TypedValue getValue()
+	{
 		return value;
 	}
 
@@ -105,10 +109,12 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs)
+	{
 		TypedValue oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -120,8 +126,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(TypedValue newValue) {
-		if (newValue != value) {
+	public void setValue(TypedValue newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE, null, msgs);
@@ -139,7 +147,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef getMetadataRef() {
+	public MetadataRef getMetadataRef()
+	{
 		return metadataRef;
 	}
 
@@ -148,10 +157,12 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMetadataRef(MetadataRef newMetadataRef, NotificationChain msgs) {
+	public NotificationChain basicSetMetadataRef(MetadataRef newMetadataRef, NotificationChain msgs)
+	{
 		MetadataRef oldMetadataRef = metadataRef;
 		metadataRef = newMetadataRef;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.METADATA_NODE_ELEMENT__METADATA_REF, oldMetadataRef, newMetadataRef);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -163,8 +174,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMetadataRef(MetadataRef newMetadataRef) {
-		if (newMetadataRef != metadataRef) {
+	public void setMetadataRef(MetadataRef newMetadataRef)
+	{
+		if (newMetadataRef != metadataRef)
+		{
 			NotificationChain msgs = null;
 			if (metadataRef != null)
 				msgs = ((InternalEObject)metadataRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.METADATA_NODE_ELEMENT__METADATA_REF, null, msgs);
@@ -182,7 +195,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNull() {
+	public String getNull()
+	{
 		return null_;
 	}
 
@@ -191,7 +205,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNull(String newNull) {
+	public void setNull(String newNull)
+	{
 		String oldNull = null_;
 		null_ = newNull;
 		if (eNotificationRequired())
@@ -204,8 +219,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE:
 				return basicSetValue(null, msgs);
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__METADATA_REF:
@@ -220,8 +237,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE:
 				return getValue();
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__METADATA_REF:
@@ -238,8 +257,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE:
 				setValue((TypedValue)newValue);
 				return;
@@ -259,8 +280,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE:
 				setValue((TypedValue)null);
 				return;
@@ -280,8 +303,10 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__VALUE:
 				return value != null;
 			case LLVM_IRPackage.METADATA_NODE_ELEMENT__METADATA_REF:
@@ -298,7 +323,8 @@ public class MetadataNodeElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

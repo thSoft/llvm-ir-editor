@@ -13,5 +13,6 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface NamedInstruction extends LocalValue, Instruction {
+public interface NamedInstruction extends LocalValue, Instruction
+{
 } // NamedInstruction

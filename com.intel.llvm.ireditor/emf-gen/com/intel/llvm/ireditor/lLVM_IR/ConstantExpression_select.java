@@ -21,7 +21,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface ConstantExpression_select extends ConstantExpression {
+public interface ConstantExpression_select extends ConstantExpression
+{
 	/**
 	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

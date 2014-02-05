@@ -38,7 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements TypeSuffix {
+public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements TypeSuffix
+{
 	/**
 	 * The cached value of the '{@link #getContainedTypes() <em>Contained Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -84,7 +85,8 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypeSuffixImpl() {
+	protected TypeSuffixImpl()
+	{
 		super();
 	}
 
@@ -94,7 +96,8 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getTypeSuffix();
 	}
 
@@ -103,8 +106,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ParameterType> getContainedTypes() {
-		if (containedTypes == null) {
+	public EList<ParameterType> getContainedTypes()
+	{
+		if (containedTypes == null)
+		{
 			containedTypes = new EObjectContainmentEList<ParameterType>(ParameterType.class, this, LLVM_IRPackage.TYPE_SUFFIX__CONTAINED_TYPES);
 		}
 		return containedTypes;
@@ -115,7 +120,8 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVararg() {
+	public String getVararg()
+	{
 		return vararg;
 	}
 
@@ -124,7 +130,8 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVararg(String newVararg) {
+	public void setVararg(String newVararg)
+	{
 		String oldVararg = vararg;
 		vararg = newVararg;
 		if (eNotificationRequired())
@@ -136,8 +143,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Star> getStars() {
-		if (stars == null) {
+	public EList<Star> getStars()
+	{
+		if (stars == null)
+		{
 			stars = new EObjectContainmentEList<Star>(Star.class, this, LLVM_IRPackage.TYPE_SUFFIX__STARS);
 		}
 		return stars;
@@ -149,8 +158,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_SUFFIX__CONTAINED_TYPES:
 				return ((InternalEList<?>)getContainedTypes()).basicRemove(otherEnd, msgs);
 			case LLVM_IRPackage.TYPE_SUFFIX__STARS:
@@ -165,8 +176,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_SUFFIX__CONTAINED_TYPES:
 				return getContainedTypes();
 			case LLVM_IRPackage.TYPE_SUFFIX__VARARG:
@@ -184,8 +197,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_SUFFIX__CONTAINED_TYPES:
 				getContainedTypes().clear();
 				getContainedTypes().addAll((Collection<? extends ParameterType>)newValue);
@@ -207,8 +222,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_SUFFIX__CONTAINED_TYPES:
 				getContainedTypes().clear();
 				return;
@@ -228,8 +245,10 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_SUFFIX__CONTAINED_TYPES:
 				return containedTypes != null && !containedTypes.isEmpty();
 			case LLVM_IRPackage.TYPE_SUFFIX__VARARG:
@@ -246,7 +265,8 @@ public class TypeSuffixImpl extends MinimalEObjectImpl.Container implements Type
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

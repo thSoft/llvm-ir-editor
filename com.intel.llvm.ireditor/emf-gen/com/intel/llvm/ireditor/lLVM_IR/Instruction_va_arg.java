@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_va_arg extends OtherInstruction {
+public interface Instruction_va_arg extends OtherInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Arglist</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

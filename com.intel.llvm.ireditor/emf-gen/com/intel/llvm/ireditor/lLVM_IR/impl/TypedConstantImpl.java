@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TypedConstantImpl extends MinimalEObjectImpl.Container implements TypedConstant {
+public class TypedConstantImpl extends MinimalEObjectImpl.Container implements TypedConstant
+{
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +57,8 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypedConstantImpl() {
+	protected TypedConstantImpl()
+	{
 		super();
 	}
 
@@ -66,7 +68,8 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getTypedConstant();
 	}
 
@@ -75,7 +78,8 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
+	public Type getType()
+	{
 		return type;
 	}
 
@@ -84,10 +88,12 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs)
+	{
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.TYPED_CONSTANT__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -99,8 +105,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
+	public void setType(Type newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.TYPED_CONSTANT__TYPE, null, msgs);
@@ -118,7 +126,8 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constant getValue() {
+	public Constant getValue()
+	{
 		return value;
 	}
 
@@ -127,10 +136,12 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(Constant newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(Constant newValue, NotificationChain msgs)
+	{
 		Constant oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.TYPED_CONSTANT__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -142,8 +153,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Constant newValue) {
-		if (newValue != value) {
+	public void setValue(Constant newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.TYPED_CONSTANT__VALUE, null, msgs);
@@ -162,8 +175,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPED_CONSTANT__TYPE:
 				return basicSetType(null, msgs);
 			case LLVM_IRPackage.TYPED_CONSTANT__VALUE:
@@ -178,8 +193,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPED_CONSTANT__TYPE:
 				return getType();
 			case LLVM_IRPackage.TYPED_CONSTANT__VALUE:
@@ -194,8 +211,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPED_CONSTANT__TYPE:
 				setType((Type)newValue);
 				return;
@@ -212,8 +231,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPED_CONSTANT__TYPE:
 				setType((Type)null);
 				return;
@@ -230,8 +251,10 @@ public class TypedConstantImpl extends MinimalEObjectImpl.Container implements T
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPED_CONSTANT__TYPE:
 				return type != null;
 			case LLVM_IRPackage.TYPED_CONSTANT__VALUE:

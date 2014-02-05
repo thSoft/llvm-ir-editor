@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MetadataRefImpl extends MinimalEObjectImpl.Container implements MetadataRef {
+public class MetadataRefImpl extends MinimalEObjectImpl.Container implements MetadataRef
+{
 	/**
 	 * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MetadataRefImpl() {
+	protected MetadataRefImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getMetadataRef();
 	}
 
@@ -62,11 +65,14 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedMetadata getRef() {
-		if (ref != null && ref.eIsProxy()) {
+	public NamedMetadata getRef()
+	{
+		if (ref != null && ref.eIsProxy())
+		{
 			InternalEObject oldRef = (InternalEObject)ref;
 			ref = (NamedMetadata)eResolveProxy(oldRef);
-			if (ref != oldRef) {
+			if (ref != oldRef)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LLVM_IRPackage.METADATA_REF__REF, oldRef, ref));
 			}
@@ -79,7 +85,8 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedMetadata basicGetRef() {
+	public NamedMetadata basicGetRef()
+	{
 		return ref;
 	}
 
@@ -88,7 +95,8 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRef(NamedMetadata newRef) {
+	public void setRef(NamedMetadata newRef)
+	{
 		NamedMetadata oldRef = ref;
 		ref = newRef;
 		if (eNotificationRequired())
@@ -101,8 +109,10 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_REF__REF:
 				if (resolve) return getRef();
 				return basicGetRef();
@@ -116,8 +126,10 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_REF__REF:
 				setRef((NamedMetadata)newValue);
 				return;
@@ -131,8 +143,10 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_REF__REF:
 				setRef((NamedMetadata)null);
 				return;
@@ -146,8 +160,10 @@ public class MetadataRefImpl extends MinimalEObjectImpl.Container implements Met
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_REF__REF:
 				return ref != null;
 		}

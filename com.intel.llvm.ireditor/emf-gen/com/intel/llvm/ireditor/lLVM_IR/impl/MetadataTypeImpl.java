@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MetadataTypeImpl extends MinimalEObjectImpl.Container implements MetadataType {
+public class MetadataTypeImpl extends MinimalEObjectImpl.Container implements MetadataType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MetadataTypeImpl() {
+	protected MetadataTypeImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class MetadataTypeImpl extends MinimalEObjectImpl.Container implements Me
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getMetadataType();
 	}
 

@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FastMathFlag extends EObject {
+public interface FastMathFlag extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Kind</b></em>' attribute.
 	 * <!-- begin-user-doc -->

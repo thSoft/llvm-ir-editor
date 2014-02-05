@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_call_void extends Instruction_call {
+public interface Instruction_call_void extends Instruction_call
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

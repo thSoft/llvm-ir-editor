@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implements Instruction_shufflevector {
+public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implements Instruction_shufflevector
+{
 	/**
 	 * The cached value of the '{@link #getVector1() <em>Vector1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_shufflevectorImpl() {
+	protected Instruction_shufflevectorImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_shufflevector();
 	}
 
@@ -84,7 +87,8 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getVector1() {
+	public TypedValue getVector1()
+	{
 		return vector1;
 	}
 
@@ -93,10 +97,12 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVector1(TypedValue newVector1, NotificationChain msgs) {
+	public NotificationChain basicSetVector1(TypedValue newVector1, NotificationChain msgs)
+	{
 		TypedValue oldVector1 = vector1;
 		vector1 = newVector1;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1, oldVector1, newVector1);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -108,8 +114,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVector1(TypedValue newVector1) {
-		if (newVector1 != vector1) {
+	public void setVector1(TypedValue newVector1)
+	{
+		if (newVector1 != vector1)
+		{
 			NotificationChain msgs = null;
 			if (vector1 != null)
 				msgs = ((InternalEObject)vector1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1, null, msgs);
@@ -127,7 +135,8 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getVector2() {
+	public TypedValue getVector2()
+	{
 		return vector2;
 	}
 
@@ -136,10 +145,12 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVector2(TypedValue newVector2, NotificationChain msgs) {
+	public NotificationChain basicSetVector2(TypedValue newVector2, NotificationChain msgs)
+	{
 		TypedValue oldVector2 = vector2;
 		vector2 = newVector2;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR2, oldVector2, newVector2);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -151,8 +162,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVector2(TypedValue newVector2) {
-		if (newVector2 != vector2) {
+	public void setVector2(TypedValue newVector2)
+	{
+		if (newVector2 != vector2)
+		{
 			NotificationChain msgs = null;
 			if (vector2 != null)
 				msgs = ((InternalEObject)vector2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR2, null, msgs);
@@ -170,7 +183,8 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getMask() {
+	public TypedValue getMask()
+	{
 		return mask;
 	}
 
@@ -179,10 +193,12 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMask(TypedValue newMask, NotificationChain msgs) {
+	public NotificationChain basicSetMask(TypedValue newMask, NotificationChain msgs)
+	{
 		TypedValue oldMask = mask;
 		mask = newMask;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__MASK, oldMask, newMask);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -194,8 +210,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMask(TypedValue newMask) {
-		if (newMask != mask) {
+	public void setMask(TypedValue newMask)
+	{
+		if (newMask != mask)
+		{
 			NotificationChain msgs = null;
 			if (mask != null)
 				msgs = ((InternalEObject)mask).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__MASK, null, msgs);
@@ -214,8 +232,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1:
 				return basicSetVector1(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR2:
@@ -232,8 +252,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1:
 				return getVector1();
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR2:
@@ -250,8 +272,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1:
 				setVector1((TypedValue)newValue);
 				return;
@@ -271,8 +295,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1:
 				setVector1((TypedValue)null);
 				return;
@@ -292,8 +318,10 @@ public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR1:
 				return vector1 != null;
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR__VECTOR2:

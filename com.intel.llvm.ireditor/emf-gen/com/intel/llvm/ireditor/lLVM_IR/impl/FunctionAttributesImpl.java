@@ -40,7 +40,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FunctionAttributesImpl extends MinimalEObjectImpl.Container implements FunctionAttributes {
+public class FunctionAttributesImpl extends MinimalEObjectImpl.Container implements FunctionAttributes
+{
 	/**
 	 * The cached value of the '{@link #getFunctionAttributes() <em>Function Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -86,7 +87,8 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionAttributesImpl() {
+	protected FunctionAttributesImpl()
+	{
 		super();
 	}
 
@@ -96,7 +98,8 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFunctionAttributes();
 	}
 
@@ -105,8 +108,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionAttribute> getFunctionAttributes() {
-		if (functionAttributes == null) {
+	public EList<FunctionAttribute> getFunctionAttributes()
+	{
+		if (functionAttributes == null)
+		{
 			functionAttributes = new EObjectContainmentEList<FunctionAttribute>(FunctionAttribute.class, this, LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES);
 		}
 		return functionAttributes;
@@ -117,8 +122,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AlignStack> getAlignstack() {
-		if (alignstack == null) {
+	public EList<AlignStack> getAlignstack()
+	{
+		if (alignstack == null)
+		{
 			alignstack = new EObjectContainmentEList<AlignStack>(AlignStack.class, this, LLVM_IRPackage.FUNCTION_ATTRIBUTES__ALIGNSTACK);
 		}
 		return alignstack;
@@ -129,8 +136,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getAlignstackValue() {
-		if (alignstackValue == null) {
+	public EList<String> getAlignstackValue()
+	{
+		if (alignstackValue == null)
+		{
 			alignstackValue = new EDataTypeEList<String>(String.class, this, LLVM_IRPackage.FUNCTION_ATTRIBUTES__ALIGNSTACK_VALUE);
 		}
 		return alignstackValue;
@@ -141,8 +150,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AttributeGroup> getFunctionAttributeGroupRefs() {
-		if (functionAttributeGroupRefs == null) {
+	public EList<AttributeGroup> getFunctionAttributeGroupRefs()
+	{
+		if (functionAttributeGroupRefs == null)
+		{
 			functionAttributeGroupRefs = new EObjectResolvingEList<AttributeGroup>(AttributeGroup.class, this, LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTE_GROUP_REFS);
 		}
 		return functionAttributeGroupRefs;
@@ -154,8 +165,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES:
 				return ((InternalEList<?>)getFunctionAttributes()).basicRemove(otherEnd, msgs);
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__ALIGNSTACK:
@@ -170,8 +183,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES:
 				return getFunctionAttributes();
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__ALIGNSTACK:
@@ -191,8 +206,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES:
 				getFunctionAttributes().clear();
 				getFunctionAttributes().addAll((Collection<? extends FunctionAttribute>)newValue);
@@ -219,8 +236,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES:
 				getFunctionAttributes().clear();
 				return;
@@ -243,8 +262,10 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__FUNCTION_ATTRIBUTES:
 				return functionAttributes != null && !functionAttributes.isEmpty();
 			case LLVM_IRPackage.FUNCTION_ATTRIBUTES__ALIGNSTACK:
@@ -263,7 +284,8 @@ public class FunctionAttributesImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

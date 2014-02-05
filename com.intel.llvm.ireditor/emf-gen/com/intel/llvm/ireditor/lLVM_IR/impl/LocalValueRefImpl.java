@@ -26,7 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
+public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef
+{
 	/**
 	 * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +43,8 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocalValueRefImpl() {
+	protected LocalValueRefImpl()
+	{
 		super();
 	}
 
@@ -52,7 +54,8 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getLocalValueRef();
 	}
 
@@ -61,11 +64,14 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalValue getRef() {
-		if (ref != null && ref.eIsProxy()) {
+	public LocalValue getRef()
+	{
+		if (ref != null && ref.eIsProxy())
+		{
 			InternalEObject oldRef = (InternalEObject)ref;
 			ref = (LocalValue)eResolveProxy(oldRef);
-			if (ref != oldRef) {
+			if (ref != oldRef)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LLVM_IRPackage.LOCAL_VALUE_REF__REF, oldRef, ref));
 			}
@@ -78,7 +84,8 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalValue basicGetRef() {
+	public LocalValue basicGetRef()
+	{
 		return ref;
 	}
 
@@ -87,7 +94,8 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRef(LocalValue newRef) {
+	public void setRef(LocalValue newRef)
+	{
 		LocalValue oldRef = ref;
 		ref = newRef;
 		if (eNotificationRequired())
@@ -100,8 +108,10 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE_REF__REF:
 				if (resolve) return getRef();
 				return basicGetRef();
@@ -115,8 +125,10 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE_REF__REF:
 				setRef((LocalValue)newValue);
 				return;
@@ -130,8 +142,10 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE_REF__REF:
 				setRef((LocalValue)null);
 				return;
@@ -145,8 +159,10 @@ public class LocalValueRefImpl extends ValueRefImpl implements LocalValueRef {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE_REF__REF:
 				return ref != null;
 		}

@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_retImpl extends TerminatorInstructionImpl implements Instruction_ret {
+public class Instruction_retImpl extends TerminatorInstructionImpl implements Instruction_ret
+{
 	/**
 	 * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_retImpl() {
+	protected Instruction_retImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_ret();
 	}
 
@@ -62,7 +65,8 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getVal() {
+	public TypedValue getVal()
+	{
 		return val;
 	}
 
@@ -71,10 +75,12 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVal(TypedValue newVal, NotificationChain msgs) {
+	public NotificationChain basicSetVal(TypedValue newVal, NotificationChain msgs)
+	{
 		TypedValue oldVal = val;
 		val = newVal;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_RET__VAL, oldVal, newVal);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -86,8 +92,10 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVal(TypedValue newVal) {
-		if (newVal != val) {
+	public void setVal(TypedValue newVal)
+	{
+		if (newVal != val)
+		{
 			NotificationChain msgs = null;
 			if (val != null)
 				msgs = ((InternalEObject)val).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_RET__VAL, null, msgs);
@@ -106,8 +114,10 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RET__VAL:
 				return basicSetVal(null, msgs);
 		}
@@ -120,8 +130,10 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RET__VAL:
 				return getVal();
 		}
@@ -134,8 +146,10 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RET__VAL:
 				setVal((TypedValue)newValue);
 				return;
@@ -149,8 +163,10 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RET__VAL:
 				setVal((TypedValue)null);
 				return;
@@ -164,8 +180,10 @@ public class Instruction_retImpl extends TerminatorInstructionImpl implements In
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RET__VAL:
 				return val != null;
 		}

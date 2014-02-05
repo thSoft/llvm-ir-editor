@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_sdivImpl extends BinaryInstructionImpl implements Instruction_sdiv {
+public class Instruction_sdivImpl extends BinaryInstructionImpl implements Instruction_sdiv
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_sdivImpl() {
+	protected Instruction_sdivImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_sdivImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_sdiv();
 	}
 

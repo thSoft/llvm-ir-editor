@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_selectImpl extends OtherInstructionImpl implements Instruction_select {
+public class Instruction_selectImpl extends OtherInstructionImpl implements Instruction_select
+{
 	/**
 	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_selectImpl() {
+	protected Instruction_selectImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_select();
 	}
 
@@ -84,7 +87,8 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getCondition() {
+	public TypedValue getCondition()
+	{
 		return condition;
 	}
 
@@ -93,10 +97,12 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCondition(TypedValue newCondition, NotificationChain msgs) {
+	public NotificationChain basicSetCondition(TypedValue newCondition, NotificationChain msgs)
+	{
 		TypedValue oldCondition = condition;
 		condition = newCondition;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION, oldCondition, newCondition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -108,8 +114,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(TypedValue newCondition) {
-		if (newCondition != condition) {
+	public void setCondition(TypedValue newCondition)
+	{
+		if (newCondition != condition)
+		{
 			NotificationChain msgs = null;
 			if (condition != null)
 				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION, null, msgs);
@@ -127,7 +135,8 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getValue1() {
+	public TypedValue getValue1()
+	{
 		return value1;
 	}
 
@@ -136,10 +145,12 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue1(TypedValue newValue1, NotificationChain msgs) {
+	public NotificationChain basicSetValue1(TypedValue newValue1, NotificationChain msgs)
+	{
 		TypedValue oldValue1 = value1;
 		value1 = newValue1;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SELECT__VALUE1, oldValue1, newValue1);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -151,8 +162,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue1(TypedValue newValue1) {
-		if (newValue1 != value1) {
+	public void setValue1(TypedValue newValue1)
+	{
+		if (newValue1 != value1)
+		{
 			NotificationChain msgs = null;
 			if (value1 != null)
 				msgs = ((InternalEObject)value1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SELECT__VALUE1, null, msgs);
@@ -170,7 +183,8 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getValue2() {
+	public TypedValue getValue2()
+	{
 		return value2;
 	}
 
@@ -179,10 +193,12 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue2(TypedValue newValue2, NotificationChain msgs) {
+	public NotificationChain basicSetValue2(TypedValue newValue2, NotificationChain msgs)
+	{
 		TypedValue oldValue2 = value2;
 		value2 = newValue2;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SELECT__VALUE2, oldValue2, newValue2);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -194,8 +210,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue2(TypedValue newValue2) {
-		if (newValue2 != value2) {
+	public void setValue2(TypedValue newValue2)
+	{
+		if (newValue2 != value2)
+		{
 			NotificationChain msgs = null;
 			if (value2 != null)
 				msgs = ((InternalEObject)value2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SELECT__VALUE2, null, msgs);
@@ -214,8 +232,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION:
 				return basicSetCondition(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_SELECT__VALUE1:
@@ -232,8 +252,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION:
 				return getCondition();
 			case LLVM_IRPackage.INSTRUCTION_SELECT__VALUE1:
@@ -250,8 +272,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION:
 				setCondition((TypedValue)newValue);
 				return;
@@ -271,8 +295,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION:
 				setCondition((TypedValue)null);
 				return;
@@ -292,8 +318,10 @@ public class Instruction_selectImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SELECT__CONDITION:
 				return condition != null;
 			case LLVM_IRPackage.INSTRUCTION_SELECT__VALUE1:

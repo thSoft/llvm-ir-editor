@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
+public class TypeDefImpl extends TopLevelElementImpl implements TypeDef
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -64,7 +65,8 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypeDefImpl() {
+	protected TypeDefImpl()
+	{
 		super();
 	}
 
@@ -74,7 +76,8 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getTypeDef();
 	}
 
@@ -83,7 +86,8 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -92,7 +96,8 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -104,7 +109,8 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NonVoidType getType() {
+	public NonVoidType getType()
+	{
 		return type;
 	}
 
@@ -113,10 +119,12 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(NonVoidType newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(NonVoidType newType, NotificationChain msgs)
+	{
 		NonVoidType oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.TYPE_DEF__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -128,8 +136,10 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(NonVoidType newType) {
-		if (newType != type) {
+	public void setType(NonVoidType newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.TYPE_DEF__TYPE, null, msgs);
@@ -148,8 +158,10 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_DEF__TYPE:
 				return basicSetType(null, msgs);
 		}
@@ -162,8 +174,10 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_DEF__NAME:
 				return getName();
 			case LLVM_IRPackage.TYPE_DEF__TYPE:
@@ -178,8 +192,10 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_DEF__NAME:
 				setName((String)newValue);
 				return;
@@ -196,8 +212,10 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_DEF__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -214,8 +232,10 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TYPE_DEF__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.TYPE_DEF__TYPE:
@@ -230,7 +250,8 @@ public class TypeDefImpl extends TopLevelElementImpl implements TypeDef {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

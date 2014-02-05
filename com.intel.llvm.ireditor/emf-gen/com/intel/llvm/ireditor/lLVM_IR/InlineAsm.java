@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface InlineAsm extends TopLevelElement {
+public interface InlineAsm extends TopLevelElement
+{
 	/**
 	 * Returns the value of the '<em><b>Asm Line</b></em>' attribute.
 	 * <!-- begin-user-doc -->

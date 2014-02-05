@@ -22,7 +22,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConstantExpression_insertvalue extends ConstantExpression {
+public interface ConstantExpression_insertvalue extends ConstantExpression
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

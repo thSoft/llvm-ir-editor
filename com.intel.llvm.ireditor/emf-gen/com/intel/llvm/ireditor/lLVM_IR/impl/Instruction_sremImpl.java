@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_sremImpl extends BinaryInstructionImpl implements Instruction_srem {
+public class Instruction_sremImpl extends BinaryInstructionImpl implements Instruction_srem
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_sremImpl() {
+	protected Instruction_sremImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_sremImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_srem();
 	}
 

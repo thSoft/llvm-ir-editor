@@ -41,7 +41,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class AttributeGroupImpl extends TopLevelElementImpl implements AttributeGroup {
+public class AttributeGroupImpl extends TopLevelElementImpl implements AttributeGroup
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -107,7 +108,8 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeGroupImpl() {
+	protected AttributeGroupImpl()
+	{
 		super();
 	}
 
@@ -117,7 +119,8 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getAttributeGroup();
 	}
 
@@ -126,7 +129,8 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -135,7 +139,8 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -147,8 +152,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionAttribute> getAttributes() {
-		if (attributes == null) {
+	public EList<FunctionAttribute> getAttributes()
+	{
+		if (attributes == null)
+		{
 			attributes = new EObjectContainmentEList<FunctionAttribute>(FunctionAttribute.class, this, LLVM_IRPackage.ATTRIBUTE_GROUP__ATTRIBUTES);
 		}
 		return attributes;
@@ -159,8 +166,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AlignStack> getAlignstack() {
-		if (alignstack == null) {
+	public EList<AlignStack> getAlignstack()
+	{
+		if (alignstack == null)
+		{
 			alignstack = new EObjectContainmentEList<AlignStack>(AlignStack.class, this, LLVM_IRPackage.ATTRIBUTE_GROUP__ALIGNSTACK);
 		}
 		return alignstack;
@@ -171,8 +180,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getAlignstackValue() {
-		if (alignstackValue == null) {
+	public EList<String> getAlignstackValue()
+	{
+		if (alignstackValue == null)
+		{
 			alignstackValue = new EDataTypeEList<String>(String.class, this, LLVM_IRPackage.ATTRIBUTE_GROUP__ALIGNSTACK_VALUE);
 		}
 		return alignstackValue;
@@ -183,8 +194,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TargetSpecificAttribute> getTargetSpecificAttributes() {
-		if (targetSpecificAttributes == null) {
+	public EList<TargetSpecificAttribute> getTargetSpecificAttributes()
+	{
+		if (targetSpecificAttributes == null)
+		{
 			targetSpecificAttributes = new EObjectContainmentEList<TargetSpecificAttribute>(TargetSpecificAttribute.class, this, LLVM_IRPackage.ATTRIBUTE_GROUP__TARGET_SPECIFIC_ATTRIBUTES);
 		}
 		return targetSpecificAttributes;
@@ -196,8 +209,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__ALIGNSTACK:
@@ -214,8 +229,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__NAME:
 				return getName();
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__ATTRIBUTES:
@@ -237,8 +254,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__NAME:
 				setName((String)newValue);
 				return;
@@ -268,8 +287,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -295,8 +316,10 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.ATTRIBUTE_GROUP__ATTRIBUTES:
@@ -317,7 +340,8 @@ public class AttributeGroupImpl extends TopLevelElementImpl implements Attribute
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

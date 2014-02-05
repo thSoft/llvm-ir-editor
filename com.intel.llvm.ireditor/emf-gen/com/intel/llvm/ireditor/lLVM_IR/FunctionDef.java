@@ -20,7 +20,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface FunctionDef extends Function {
+public interface FunctionDef extends Function
+{
 	/**
 	 * Returns the value of the '<em><b>Basic Blocks</b></em>' containment reference list.
 	 * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.BasicBlock}.

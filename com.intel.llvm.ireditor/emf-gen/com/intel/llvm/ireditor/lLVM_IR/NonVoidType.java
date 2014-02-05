@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface NonVoidType extends EObject {
+public interface NonVoidType extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Base Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

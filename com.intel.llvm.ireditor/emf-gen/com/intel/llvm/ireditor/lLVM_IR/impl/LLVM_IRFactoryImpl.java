@@ -18,21 +18,26 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
+public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static LLVM_IRFactory init() {
-		try {
+	public static LLVM_IRFactory init()
+	{
+		try
+		{
 			LLVM_IRFactory theLLVM_IRFactory = (LLVM_IRFactory)EPackage.Registry.INSTANCE.getEFactory(LLVM_IRPackage.eNS_URI);
-			if (theLLVM_IRFactory != null) {
+			if (theLLVM_IRFactory != null)
+			{
 				return theLLVM_IRFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new LLVM_IRFactoryImpl();
@@ -44,7 +49,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LLVM_IRFactoryImpl() {
+	public LLVM_IRFactoryImpl()
+	{
 		super();
 	}
 
@@ -54,8 +60,10 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case LLVM_IRPackage.MODEL: return createModel();
 			case LLVM_IRPackage.TOP_LEVEL_ELEMENT: return createTopLevelElement();
 			case LLVM_IRPackage.ATTRIBUTE_GROUP: return createAttributeGroup();
@@ -208,7 +216,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Model createModel() {
+	public Model createModel()
+	{
 		ModelImpl model = new ModelImpl();
 		return model;
 	}
@@ -218,7 +227,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TopLevelElement createTopLevelElement() {
+	public TopLevelElement createTopLevelElement()
+	{
 		TopLevelElementImpl topLevelElement = new TopLevelElementImpl();
 		return topLevelElement;
 	}
@@ -228,7 +238,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttributeGroup createAttributeGroup() {
+	public AttributeGroup createAttributeGroup()
+	{
 		AttributeGroupImpl attributeGroup = new AttributeGroupImpl();
 		return attributeGroup;
 	}
@@ -238,7 +249,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TargetSpecificAttribute createTargetSpecificAttribute() {
+	public TargetSpecificAttribute createTargetSpecificAttribute()
+	{
 		TargetSpecificAttributeImpl targetSpecificAttribute = new TargetSpecificAttributeImpl();
 		return targetSpecificAttribute;
 	}
@@ -248,7 +260,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedMetadata createNamedMetadata() {
+	public NamedMetadata createNamedMetadata()
+	{
 		NamedMetadataImpl namedMetadata = new NamedMetadataImpl();
 		return namedMetadata;
 	}
@@ -258,7 +271,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef createMetadataRef() {
+	public MetadataRef createMetadataRef()
+	{
 		MetadataRefImpl metadataRef = new MetadataRefImpl();
 		return metadataRef;
 	}
@@ -268,7 +282,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueRef createValueRef() {
+	public ValueRef createValueRef()
+	{
 		ValueRefImpl valueRef = new ValueRefImpl();
 		return valueRef;
 	}
@@ -278,7 +293,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValueRef createGlobalValueRef() {
+	public GlobalValueRef createGlobalValueRef()
+	{
 		GlobalValueRefImpl globalValueRef = new GlobalValueRefImpl();
 		return globalValueRef;
 	}
@@ -288,7 +304,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalValueRef createLocalValueRef() {
+	public LocalValueRef createLocalValueRef()
+	{
 		LocalValueRefImpl localValueRef = new LocalValueRefImpl();
 		return localValueRef;
 	}
@@ -298,7 +315,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValue createGlobalValue() {
+	public GlobalValue createGlobalValue()
+	{
 		GlobalValueImpl globalValue = new GlobalValueImpl();
 		return globalValue;
 	}
@@ -308,7 +326,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValueDef createGlobalValueDef() {
+	public GlobalValueDef createGlobalValueDef()
+	{
 		GlobalValueDefImpl globalValueDef = new GlobalValueDefImpl();
 		return globalValueDef;
 	}
@@ -318,7 +337,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocalValue createLocalValue() {
+	public LocalValue createLocalValue()
+	{
 		LocalValueImpl localValue = new LocalValueImpl();
 		return localValue;
 	}
@@ -328,7 +348,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedInstruction createNamedInstruction() {
+	public NamedInstruction createNamedInstruction()
+	{
 		NamedInstructionImpl namedInstruction = new NamedInstructionImpl();
 		return namedInstruction;
 	}
@@ -338,7 +359,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction createInstruction() {
+	public Instruction createInstruction()
+	{
 		InstructionImpl instruction = new InstructionImpl();
 		return instruction;
 	}
@@ -348,7 +370,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Alias createAlias() {
+	public Alias createAlias()
+	{
 		AliasImpl alias = new AliasImpl();
 		return alias;
 	}
@@ -358,7 +381,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Aliasee createAliasee() {
+	public Aliasee createAliasee()
+	{
 		AliaseeImpl aliasee = new AliaseeImpl();
 		return aliasee;
 	}
@@ -368,7 +392,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TargetInfo createTargetInfo() {
+	public TargetInfo createTargetInfo()
+	{
 		TargetInfoImpl targetInfo = new TargetInfoImpl();
 		return targetInfo;
 	}
@@ -378,7 +403,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InlineAsm createInlineAsm() {
+	public InlineAsm createInlineAsm()
+	{
 		InlineAsmImpl inlineAsm = new InlineAsmImpl();
 		return inlineAsm;
 	}
@@ -388,7 +414,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalVariable createGlobalVariable() {
+	public GlobalVariable createGlobalVariable()
+	{
 		GlobalVariableImpl globalVariable = new GlobalVariableImpl();
 		return globalVariable;
 	}
@@ -398,7 +425,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constant createConstant() {
+	public Constant createConstant()
+	{
 		ConstantImpl constant = new ConstantImpl();
 		return constant;
 	}
@@ -408,7 +436,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression createConstantExpression() {
+	public ConstantExpression createConstantExpression()
+	{
 		ConstantExpressionImpl constantExpression = new ConstantExpressionImpl();
 		return constantExpression;
 	}
@@ -418,7 +447,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_convert createConstantExpression_convert() {
+	public ConstantExpression_convert createConstantExpression_convert()
+	{
 		ConstantExpression_convertImpl constantExpression_convert = new ConstantExpression_convertImpl();
 		return constantExpression_convert;
 	}
@@ -428,7 +458,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_getelementptr createConstantExpression_getelementptr() {
+	public ConstantExpression_getelementptr createConstantExpression_getelementptr()
+	{
 		ConstantExpression_getelementptrImpl constantExpression_getelementptr = new ConstantExpression_getelementptrImpl();
 		return constantExpression_getelementptr;
 	}
@@ -438,7 +469,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_select createConstantExpression_select() {
+	public ConstantExpression_select createConstantExpression_select()
+	{
 		ConstantExpression_selectImpl constantExpression_select = new ConstantExpression_selectImpl();
 		return constantExpression_select;
 	}
@@ -448,7 +480,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_compare createConstantExpression_compare() {
+	public ConstantExpression_compare createConstantExpression_compare()
+	{
 		ConstantExpression_compareImpl constantExpression_compare = new ConstantExpression_compareImpl();
 		return constantExpression_compare;
 	}
@@ -458,7 +491,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_extractelement createConstantExpression_extractelement() {
+	public ConstantExpression_extractelement createConstantExpression_extractelement()
+	{
 		ConstantExpression_extractelementImpl constantExpression_extractelement = new ConstantExpression_extractelementImpl();
 		return constantExpression_extractelement;
 	}
@@ -468,7 +502,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_insertelement createConstantExpression_insertelement() {
+	public ConstantExpression_insertelement createConstantExpression_insertelement()
+	{
 		ConstantExpression_insertelementImpl constantExpression_insertelement = new ConstantExpression_insertelementImpl();
 		return constantExpression_insertelement;
 	}
@@ -478,7 +513,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_shufflevector createConstantExpression_shufflevector() {
+	public ConstantExpression_shufflevector createConstantExpression_shufflevector()
+	{
 		ConstantExpression_shufflevectorImpl constantExpression_shufflevector = new ConstantExpression_shufflevectorImpl();
 		return constantExpression_shufflevector;
 	}
@@ -488,7 +524,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_extractvalue createConstantExpression_extractvalue() {
+	public ConstantExpression_extractvalue createConstantExpression_extractvalue()
+	{
 		ConstantExpression_extractvalueImpl constantExpression_extractvalue = new ConstantExpression_extractvalueImpl();
 		return constantExpression_extractvalue;
 	}
@@ -498,7 +535,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_insertvalue createConstantExpression_insertvalue() {
+	public ConstantExpression_insertvalue createConstantExpression_insertvalue()
+	{
 		ConstantExpression_insertvalueImpl constantExpression_insertvalue = new ConstantExpression_insertvalueImpl();
 		return constantExpression_insertvalue;
 	}
@@ -508,7 +546,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantExpression_binary createConstantExpression_binary() {
+	public ConstantExpression_binary createConstantExpression_binary()
+	{
 		ConstantExpression_binaryImpl constantExpression_binary = new ConstantExpression_binaryImpl();
 		return constantExpression_binary;
 	}
@@ -518,7 +557,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Undef createUndef() {
+	public Undef createUndef()
+	{
 		UndefImpl undef = new UndefImpl();
 		return undef;
 	}
@@ -528,7 +568,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BlockAddress createBlockAddress() {
+	public BlockAddress createBlockAddress()
+	{
 		BlockAddressImpl blockAddress = new BlockAddressImpl();
 		return blockAddress;
 	}
@@ -538,7 +579,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ZeroInitializer createZeroInitializer() {
+	public ZeroInitializer createZeroInitializer()
+	{
 		ZeroInitializerImpl zeroInitializer = new ZeroInitializerImpl();
 		return zeroInitializer;
 	}
@@ -548,7 +590,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructureConstant createStructureConstant() {
+	public StructureConstant createStructureConstant()
+	{
 		StructureConstantImpl structureConstant = new StructureConstantImpl();
 		return structureConstant;
 	}
@@ -558,7 +601,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArrayConstant createArrayConstant() {
+	public ArrayConstant createArrayConstant()
+	{
 		ArrayConstantImpl arrayConstant = new ArrayConstantImpl();
 		return arrayConstant;
 	}
@@ -568,7 +612,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VectorConstant createVectorConstant() {
+	public VectorConstant createVectorConstant()
+	{
 		VectorConstantImpl vectorConstant = new VectorConstantImpl();
 		return vectorConstant;
 	}
@@ -578,7 +623,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantList createConstantList() {
+	public ConstantList createConstantList()
+	{
 		ConstantListImpl constantList = new ConstantListImpl();
 		return constantList;
 	}
@@ -588,7 +634,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedConstant createTypedConstant() {
+	public TypedConstant createTypedConstant()
+	{
 		TypedConstantImpl typedConstant = new TypedConstantImpl();
 		return typedConstant;
 	}
@@ -598,7 +645,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleConstant createSimpleConstant() {
+	public SimpleConstant createSimpleConstant()
+	{
 		SimpleConstantImpl simpleConstant = new SimpleConstantImpl();
 		return simpleConstant;
 	}
@@ -608,7 +656,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataNode createMetadataNode() {
+	public MetadataNode createMetadataNode()
+	{
 		MetadataNodeImpl metadataNode = new MetadataNodeImpl();
 		return metadataNode;
 	}
@@ -618,7 +667,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataNodeElement createMetadataNodeElement() {
+	public MetadataNodeElement createMetadataNodeElement()
+	{
 		MetadataNodeElementImpl metadataNodeElement = new MetadataNodeElementImpl();
 		return metadataNodeElement;
 	}
@@ -628,7 +678,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataString createMetadataString() {
+	public MetadataString createMetadataString()
+	{
 		MetadataStringImpl metadataString = new MetadataStringImpl();
 		return metadataString;
 	}
@@ -638,7 +689,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AddressSpace createAddressSpace() {
+	public AddressSpace createAddressSpace()
+	{
 		AddressSpaceImpl addressSpace = new AddressSpaceImpl();
 		return addressSpace;
 	}
@@ -648,7 +700,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function createFunction() {
+	public Function createFunction()
+	{
 		FunctionImpl function = new FunctionImpl();
 		return function;
 	}
@@ -658,7 +711,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionDef createFunctionDef() {
+	public FunctionDef createFunctionDef()
+	{
 		FunctionDefImpl functionDef = new FunctionDefImpl();
 		return functionDef;
 	}
@@ -668,7 +722,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionDecl createFunctionDecl() {
+	public FunctionDecl createFunctionDecl()
+	{
 		FunctionDeclImpl functionDecl = new FunctionDeclImpl();
 		return functionDecl;
 	}
@@ -678,7 +733,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionHeader createFunctionHeader() {
+	public FunctionHeader createFunctionHeader()
+	{
 		FunctionHeaderImpl functionHeader = new FunctionHeaderImpl();
 		return functionHeader;
 	}
@@ -688,7 +744,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionPrefix createFunctionPrefix() {
+	public FunctionPrefix createFunctionPrefix()
+	{
 		FunctionPrefixImpl functionPrefix = new FunctionPrefixImpl();
 		return functionPrefix;
 	}
@@ -698,7 +755,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameters createParameters() {
+	public Parameters createParameters()
+	{
 		ParametersImpl parameters = new ParametersImpl();
 		return parameters;
 	}
@@ -708,7 +766,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionAttributes createFunctionAttributes() {
+	public FunctionAttributes createFunctionAttributes()
+	{
 		FunctionAttributesImpl functionAttributes = new FunctionAttributesImpl();
 		return functionAttributes;
 	}
@@ -718,7 +777,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AlignStack createAlignStack() {
+	public AlignStack createAlignStack()
+	{
 		AlignStackImpl alignStack = new AlignStackImpl();
 		return alignStack;
 	}
@@ -728,7 +788,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionAttribute createFunctionAttribute() {
+	public FunctionAttribute createFunctionAttribute()
+	{
 		FunctionAttributeImpl functionAttribute = new FunctionAttributeImpl();
 		return functionAttribute;
 	}
@@ -738,7 +799,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlock createBasicBlock() {
+	public BasicBlock createBasicBlock()
+	{
 		BasicBlockImpl basicBlock = new BasicBlockImpl();
 		return basicBlock;
 	}
@@ -748,7 +810,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataSuffix createMetadataSuffix() {
+	public MetadataSuffix createMetadataSuffix()
+	{
 		MetadataSuffixImpl metadataSuffix = new MetadataSuffixImpl();
 		return metadataSuffix;
 	}
@@ -758,7 +821,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StartingInstruction createStartingInstruction() {
+	public StartingInstruction createStartingInstruction()
+	{
 		StartingInstructionImpl startingInstruction = new StartingInstructionImpl();
 		return startingInstruction;
 	}
@@ -768,7 +832,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MiddleInstruction createMiddleInstruction() {
+	public MiddleInstruction createMiddleInstruction()
+	{
 		MiddleInstructionImpl middleInstruction = new MiddleInstructionImpl();
 		return middleInstruction;
 	}
@@ -778,7 +843,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedMiddleInstruction createNamedMiddleInstruction() {
+	public NamedMiddleInstruction createNamedMiddleInstruction()
+	{
 		NamedMiddleInstructionImpl namedMiddleInstruction = new NamedMiddleInstructionImpl();
 		return namedMiddleInstruction;
 	}
@@ -788,7 +854,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TerminatorInstruction createTerminatorInstruction() {
+	public TerminatorInstruction createTerminatorInstruction()
+	{
 		TerminatorInstructionImpl terminatorInstruction = new TerminatorInstructionImpl();
 		return terminatorInstruction;
 	}
@@ -798,7 +865,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NamedTerminatorInstruction createNamedTerminatorInstruction() {
+	public NamedTerminatorInstruction createNamedTerminatorInstruction()
+	{
 		NamedTerminatorInstructionImpl namedTerminatorInstruction = new NamedTerminatorInstructionImpl();
 		return namedTerminatorInstruction;
 	}
@@ -808,7 +876,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_ret createInstruction_ret() {
+	public Instruction_ret createInstruction_ret()
+	{
 		Instruction_retImpl instruction_ret = new Instruction_retImpl();
 		return instruction_ret;
 	}
@@ -818,7 +887,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_br createInstruction_br() {
+	public Instruction_br createInstruction_br()
+	{
 		Instruction_brImpl instruction_br = new Instruction_brImpl();
 		return instruction_br;
 	}
@@ -828,7 +898,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_switch createInstruction_switch() {
+	public Instruction_switch createInstruction_switch()
+	{
 		Instruction_switchImpl instruction_switch = new Instruction_switchImpl();
 		return instruction_switch;
 	}
@@ -838,7 +909,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_indirectbr createInstruction_indirectbr() {
+	public Instruction_indirectbr createInstruction_indirectbr()
+	{
 		Instruction_indirectbrImpl instruction_indirectbr = new Instruction_indirectbrImpl();
 		return instruction_indirectbr;
 	}
@@ -848,7 +920,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_invoke_void createInstruction_invoke_void() {
+	public Instruction_invoke_void createInstruction_invoke_void()
+	{
 		Instruction_invoke_voidImpl instruction_invoke_void = new Instruction_invoke_voidImpl();
 		return instruction_invoke_void;
 	}
@@ -858,7 +931,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_invoke_nonVoid createInstruction_invoke_nonVoid() {
+	public Instruction_invoke_nonVoid createInstruction_invoke_nonVoid()
+	{
 		Instruction_invoke_nonVoidImpl instruction_invoke_nonVoid = new Instruction_invoke_nonVoidImpl();
 		return instruction_invoke_nonVoid;
 	}
@@ -868,7 +942,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_resume createInstruction_resume() {
+	public Instruction_resume createInstruction_resume()
+	{
 		Instruction_resumeImpl instruction_resume = new Instruction_resumeImpl();
 		return instruction_resume;
 	}
@@ -878,7 +953,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_unreachable createInstruction_unreachable() {
+	public Instruction_unreachable createInstruction_unreachable()
+	{
 		Instruction_unreachableImpl instruction_unreachable = new Instruction_unreachableImpl();
 		return instruction_unreachable;
 	}
@@ -888,7 +964,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef createBasicBlockRef() {
+	public BasicBlockRef createBasicBlockRef()
+	{
 		BasicBlockRefImpl basicBlockRef = new BasicBlockRefImpl();
 		return basicBlockRef;
 	}
@@ -898,7 +975,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BinaryInstruction createBinaryInstruction() {
+	public BinaryInstruction createBinaryInstruction()
+	{
 		BinaryInstructionImpl binaryInstruction = new BinaryInstructionImpl();
 		return binaryInstruction;
 	}
@@ -908,7 +986,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_add createInstruction_add() {
+	public Instruction_add createInstruction_add()
+	{
 		Instruction_addImpl instruction_add = new Instruction_addImpl();
 		return instruction_add;
 	}
@@ -918,7 +997,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_fadd createInstruction_fadd() {
+	public Instruction_fadd createInstruction_fadd()
+	{
 		Instruction_faddImpl instruction_fadd = new Instruction_faddImpl();
 		return instruction_fadd;
 	}
@@ -928,7 +1008,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FastMathFlag createFastMathFlag() {
+	public FastMathFlag createFastMathFlag()
+	{
 		FastMathFlagImpl fastMathFlag = new FastMathFlagImpl();
 		return fastMathFlag;
 	}
@@ -938,7 +1019,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_sub createInstruction_sub() {
+	public Instruction_sub createInstruction_sub()
+	{
 		Instruction_subImpl instruction_sub = new Instruction_subImpl();
 		return instruction_sub;
 	}
@@ -948,7 +1030,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_fsub createInstruction_fsub() {
+	public Instruction_fsub createInstruction_fsub()
+	{
 		Instruction_fsubImpl instruction_fsub = new Instruction_fsubImpl();
 		return instruction_fsub;
 	}
@@ -958,7 +1041,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_mul createInstruction_mul() {
+	public Instruction_mul createInstruction_mul()
+	{
 		Instruction_mulImpl instruction_mul = new Instruction_mulImpl();
 		return instruction_mul;
 	}
@@ -968,7 +1052,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_fmul createInstruction_fmul() {
+	public Instruction_fmul createInstruction_fmul()
+	{
 		Instruction_fmulImpl instruction_fmul = new Instruction_fmulImpl();
 		return instruction_fmul;
 	}
@@ -978,7 +1063,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_udiv createInstruction_udiv() {
+	public Instruction_udiv createInstruction_udiv()
+	{
 		Instruction_udivImpl instruction_udiv = new Instruction_udivImpl();
 		return instruction_udiv;
 	}
@@ -988,7 +1074,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_sdiv createInstruction_sdiv() {
+	public Instruction_sdiv createInstruction_sdiv()
+	{
 		Instruction_sdivImpl instruction_sdiv = new Instruction_sdivImpl();
 		return instruction_sdiv;
 	}
@@ -998,7 +1085,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_fdiv createInstruction_fdiv() {
+	public Instruction_fdiv createInstruction_fdiv()
+	{
 		Instruction_fdivImpl instruction_fdiv = new Instruction_fdivImpl();
 		return instruction_fdiv;
 	}
@@ -1008,7 +1096,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_urem createInstruction_urem() {
+	public Instruction_urem createInstruction_urem()
+	{
 		Instruction_uremImpl instruction_urem = new Instruction_uremImpl();
 		return instruction_urem;
 	}
@@ -1018,7 +1107,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_srem createInstruction_srem() {
+	public Instruction_srem createInstruction_srem()
+	{
 		Instruction_sremImpl instruction_srem = new Instruction_sremImpl();
 		return instruction_srem;
 	}
@@ -1028,7 +1118,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_frem createInstruction_frem() {
+	public Instruction_frem createInstruction_frem()
+	{
 		Instruction_fremImpl instruction_frem = new Instruction_fremImpl();
 		return instruction_frem;
 	}
@@ -1038,7 +1129,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BitwiseBinaryInstruction createBitwiseBinaryInstruction() {
+	public BitwiseBinaryInstruction createBitwiseBinaryInstruction()
+	{
 		BitwiseBinaryInstructionImpl bitwiseBinaryInstruction = new BitwiseBinaryInstructionImpl();
 		return bitwiseBinaryInstruction;
 	}
@@ -1048,7 +1140,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_shl createInstruction_shl() {
+	public Instruction_shl createInstruction_shl()
+	{
 		Instruction_shlImpl instruction_shl = new Instruction_shlImpl();
 		return instruction_shl;
 	}
@@ -1058,7 +1151,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_lshr createInstruction_lshr() {
+	public Instruction_lshr createInstruction_lshr()
+	{
 		Instruction_lshrImpl instruction_lshr = new Instruction_lshrImpl();
 		return instruction_lshr;
 	}
@@ -1068,7 +1162,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_ashr createInstruction_ashr() {
+	public Instruction_ashr createInstruction_ashr()
+	{
 		Instruction_ashrImpl instruction_ashr = new Instruction_ashrImpl();
 		return instruction_ashr;
 	}
@@ -1078,7 +1173,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_and createInstruction_and() {
+	public Instruction_and createInstruction_and()
+	{
 		Instruction_andImpl instruction_and = new Instruction_andImpl();
 		return instruction_and;
 	}
@@ -1088,7 +1184,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_or createInstruction_or() {
+	public Instruction_or createInstruction_or()
+	{
 		Instruction_orImpl instruction_or = new Instruction_orImpl();
 		return instruction_or;
 	}
@@ -1098,7 +1195,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_xor createInstruction_xor() {
+	public Instruction_xor createInstruction_xor()
+	{
 		Instruction_xorImpl instruction_xor = new Instruction_xorImpl();
 		return instruction_xor;
 	}
@@ -1108,7 +1206,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VectorInstructions createVectorInstructions() {
+	public VectorInstructions createVectorInstructions()
+	{
 		VectorInstructionsImpl vectorInstructions = new VectorInstructionsImpl();
 		return vectorInstructions;
 	}
@@ -1118,7 +1217,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_extractelement createInstruction_extractelement() {
+	public Instruction_extractelement createInstruction_extractelement()
+	{
 		Instruction_extractelementImpl instruction_extractelement = new Instruction_extractelementImpl();
 		return instruction_extractelement;
 	}
@@ -1128,7 +1228,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_insertelement createInstruction_insertelement() {
+	public Instruction_insertelement createInstruction_insertelement()
+	{
 		Instruction_insertelementImpl instruction_insertelement = new Instruction_insertelementImpl();
 		return instruction_insertelement;
 	}
@@ -1138,7 +1239,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_shufflevector createInstruction_shufflevector() {
+	public Instruction_shufflevector createInstruction_shufflevector()
+	{
 		Instruction_shufflevectorImpl instruction_shufflevector = new Instruction_shufflevectorImpl();
 		return instruction_shufflevector;
 	}
@@ -1148,7 +1250,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AggregateInstruction createAggregateInstruction() {
+	public AggregateInstruction createAggregateInstruction()
+	{
 		AggregateInstructionImpl aggregateInstruction = new AggregateInstructionImpl();
 		return aggregateInstruction;
 	}
@@ -1158,7 +1261,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_extractvalue createInstruction_extractvalue() {
+	public Instruction_extractvalue createInstruction_extractvalue()
+	{
 		Instruction_extractvalueImpl instruction_extractvalue = new Instruction_extractvalueImpl();
 		return instruction_extractvalue;
 	}
@@ -1168,7 +1272,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_insertvalue createInstruction_insertvalue() {
+	public Instruction_insertvalue createInstruction_insertvalue()
+	{
 		Instruction_insertvalueImpl instruction_insertvalue = new Instruction_insertvalueImpl();
 		return instruction_insertvalue;
 	}
@@ -1178,7 +1283,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_alloca createInstruction_alloca() {
+	public Instruction_alloca createInstruction_alloca()
+	{
 		Instruction_allocaImpl instruction_alloca = new Instruction_allocaImpl();
 		return instruction_alloca;
 	}
@@ -1188,7 +1294,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_load createInstruction_load() {
+	public Instruction_load createInstruction_load()
+	{
 		Instruction_loadImpl instruction_load = new Instruction_loadImpl();
 		return instruction_load;
 	}
@@ -1198,7 +1305,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_store createInstruction_store() {
+	public Instruction_store createInstruction_store()
+	{
 		Instruction_storeImpl instruction_store = new Instruction_storeImpl();
 		return instruction_store;
 	}
@@ -1208,7 +1316,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_fence createInstruction_fence() {
+	public Instruction_fence createInstruction_fence()
+	{
 		Instruction_fenceImpl instruction_fence = new Instruction_fenceImpl();
 		return instruction_fence;
 	}
@@ -1218,7 +1327,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_cmpxchg createInstruction_cmpxchg() {
+	public Instruction_cmpxchg createInstruction_cmpxchg()
+	{
 		Instruction_cmpxchgImpl instruction_cmpxchg = new Instruction_cmpxchgImpl();
 		return instruction_cmpxchg;
 	}
@@ -1228,7 +1338,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_atomicrmw createInstruction_atomicrmw() {
+	public Instruction_atomicrmw createInstruction_atomicrmw()
+	{
 		Instruction_atomicrmwImpl instruction_atomicrmw = new Instruction_atomicrmwImpl();
 		return instruction_atomicrmw;
 	}
@@ -1238,7 +1349,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_getelementptr createInstruction_getelementptr() {
+	public Instruction_getelementptr createInstruction_getelementptr()
+	{
 		Instruction_getelementptrImpl instruction_getelementptr = new Instruction_getelementptrImpl();
 		return instruction_getelementptr;
 	}
@@ -1248,7 +1360,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConversionInstruction createConversionInstruction() {
+	public ConversionInstruction createConversionInstruction()
+	{
 		ConversionInstructionImpl conversionInstruction = new ConversionInstructionImpl();
 		return conversionInstruction;
 	}
@@ -1258,7 +1371,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OtherInstruction createOtherInstruction() {
+	public OtherInstruction createOtherInstruction()
+	{
 		OtherInstructionImpl otherInstruction = new OtherInstructionImpl();
 		return otherInstruction;
 	}
@@ -1268,7 +1382,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_icmp createInstruction_icmp() {
+	public Instruction_icmp createInstruction_icmp()
+	{
 		Instruction_icmpImpl instruction_icmp = new Instruction_icmpImpl();
 		return instruction_icmp;
 	}
@@ -1278,7 +1393,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_fcmp createInstruction_fcmp() {
+	public Instruction_fcmp createInstruction_fcmp()
+	{
 		Instruction_fcmpImpl instruction_fcmp = new Instruction_fcmpImpl();
 		return instruction_fcmp;
 	}
@@ -1288,7 +1404,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_phi createInstruction_phi() {
+	public Instruction_phi createInstruction_phi()
+	{
 		Instruction_phiImpl instruction_phi = new Instruction_phiImpl();
 		return instruction_phi;
 	}
@@ -1298,7 +1415,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_select createInstruction_select() {
+	public Instruction_select createInstruction_select()
+	{
 		Instruction_selectImpl instruction_select = new Instruction_selectImpl();
 		return instruction_select;
 	}
@@ -1308,7 +1426,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_call createInstruction_call() {
+	public Instruction_call createInstruction_call()
+	{
 		Instruction_callImpl instruction_call = new Instruction_callImpl();
 		return instruction_call;
 	}
@@ -1318,7 +1437,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_call_nonVoid createInstruction_call_nonVoid() {
+	public Instruction_call_nonVoid createInstruction_call_nonVoid()
+	{
 		Instruction_call_nonVoidImpl instruction_call_nonVoid = new Instruction_call_nonVoidImpl();
 		return instruction_call_nonVoid;
 	}
@@ -1328,7 +1448,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_call_void createInstruction_call_void() {
+	public Instruction_call_void createInstruction_call_void()
+	{
 		Instruction_call_voidImpl instruction_call_void = new Instruction_call_voidImpl();
 		return instruction_call_void;
 	}
@@ -1338,7 +1459,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArgList createArgList() {
+	public ArgList createArgList()
+	{
 		ArgListImpl argList = new ArgListImpl();
 		return argList;
 	}
@@ -1348,7 +1470,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Callee createCallee() {
+	public Callee createCallee()
+	{
 		CalleeImpl callee = new CalleeImpl();
 		return callee;
 	}
@@ -1358,7 +1481,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InlineAssembler createInlineAssembler() {
+	public InlineAssembler createInlineAssembler()
+	{
 		InlineAssemblerImpl inlineAssembler = new InlineAssemblerImpl();
 		return inlineAssembler;
 	}
@@ -1368,7 +1492,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_va_arg createInstruction_va_arg() {
+	public Instruction_va_arg createInstruction_va_arg()
+	{
 		Instruction_va_argImpl instruction_va_arg = new Instruction_va_argImpl();
 		return instruction_va_arg;
 	}
@@ -1378,7 +1503,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_landingpad createInstruction_landingpad() {
+	public Instruction_landingpad createInstruction_landingpad()
+	{
 		Instruction_landingpadImpl instruction_landingpad = new Instruction_landingpadImpl();
 		return instruction_landingpad;
 	}
@@ -1388,7 +1514,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LandingpadClause createLandingpadClause() {
+	public LandingpadClause createLandingpadClause()
+	{
 		LandingpadClauseImpl landingpadClause = new LandingpadClauseImpl();
 		return landingpadClause;
 	}
@@ -1398,7 +1525,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue createTypedValue() {
+	public TypedValue createTypedValue()
+	{
 		TypedValueImpl typedValue = new TypedValueImpl();
 		return typedValue;
 	}
@@ -1408,7 +1536,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterType createParameterType() {
+	public ParameterType createParameterType()
+	{
 		ParameterTypeImpl parameterType = new ParameterTypeImpl();
 		return parameterType;
 	}
@@ -1418,7 +1547,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterAttributes createParameterAttributes() {
+	public ParameterAttributes createParameterAttributes()
+	{
 		ParameterAttributesImpl parameterAttributes = new ParameterAttributesImpl();
 		return parameterAttributes;
 	}
@@ -1428,7 +1558,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Argument createArgument() {
+	public Argument createArgument()
+	{
 		ArgumentImpl argument = new ArgumentImpl();
 		return argument;
 	}
@@ -1438,7 +1569,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter createParameter() {
+	public Parameter createParameter()
+	{
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
 	}
@@ -1448,7 +1580,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NonVoidType createNonVoidType() {
+	public NonVoidType createNonVoidType()
+	{
 		NonVoidTypeImpl nonVoidType = new NonVoidTypeImpl();
 		return nonVoidType;
 	}
@@ -1458,7 +1591,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Star createStar() {
+	public Star createStar()
+	{
 		StarImpl star = new StarImpl();
 		return star;
 	}
@@ -1468,7 +1602,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type createType() {
+	public Type createType()
+	{
 		TypeImpl type = new TypeImpl();
 		return type;
 	}
@@ -1478,7 +1613,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeSuffix createTypeSuffix() {
+	public TypeSuffix createTypeSuffix()
+	{
 		TypeSuffixImpl typeSuffix = new TypeSuffixImpl();
 		return typeSuffix;
 	}
@@ -1488,7 +1624,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NonLeftRecursiveType createNonLeftRecursiveType() {
+	public NonLeftRecursiveType createNonLeftRecursiveType()
+	{
 		NonLeftRecursiveTypeImpl nonLeftRecursiveType = new NonLeftRecursiveTypeImpl();
 		return nonLeftRecursiveType;
 	}
@@ -1498,7 +1635,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NonLeftRecursiveNonVoidType createNonLeftRecursiveNonVoidType() {
+	public NonLeftRecursiveNonVoidType createNonLeftRecursiveNonVoidType()
+	{
 		NonLeftRecursiveNonVoidTypeImpl nonLeftRecursiveNonVoidType = new NonLeftRecursiveNonVoidTypeImpl();
 		return nonLeftRecursiveNonVoidType;
 	}
@@ -1508,7 +1646,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeDef createTypeDef() {
+	public TypeDef createTypeDef()
+	{
 		TypeDefImpl typeDef = new TypeDefImpl();
 		return typeDef;
 	}
@@ -1518,7 +1657,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntType createIntType() {
+	public IntType createIntType()
+	{
 		IntTypeImpl intType = new IntTypeImpl();
 		return intType;
 	}
@@ -1528,7 +1668,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OpaqueType createOpaqueType() {
+	public OpaqueType createOpaqueType()
+	{
 		OpaqueTypeImpl opaqueType = new OpaqueTypeImpl();
 		return opaqueType;
 	}
@@ -1538,7 +1679,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StructType createStructType() {
+	public StructType createStructType()
+	{
 		StructTypeImpl structType = new StructTypeImpl();
 		return structType;
 	}
@@ -1548,7 +1690,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VectorType createVectorType() {
+	public VectorType createVectorType()
+	{
 		VectorTypeImpl vectorType = new VectorTypeImpl();
 		return vectorType;
 	}
@@ -1558,7 +1701,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArrayType createArrayType() {
+	public ArrayType createArrayType()
+	{
 		ArrayTypeImpl arrayType = new ArrayTypeImpl();
 		return arrayType;
 	}
@@ -1568,7 +1712,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public X86mmxType createX86mmxType() {
+	public X86mmxType createX86mmxType()
+	{
 		X86mmxTypeImpl x86mmxType = new X86mmxTypeImpl();
 		return x86mmxType;
 	}
@@ -1578,7 +1723,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VoidType createVoidType() {
+	public VoidType createVoidType()
+	{
 		VoidTypeImpl voidType = new VoidTypeImpl();
 		return voidType;
 	}
@@ -1588,7 +1734,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataType createMetadataType() {
+	public MetadataType createMetadataType()
+	{
 		MetadataTypeImpl metadataType = new MetadataTypeImpl();
 		return metadataType;
 	}
@@ -1598,7 +1745,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FloatingType createFloatingType() {
+	public FloatingType createFloatingType()
+	{
 		FloatingTypeImpl floatingType = new FloatingTypeImpl();
 		return floatingType;
 	}
@@ -1608,7 +1756,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CConv createCConv() {
+	public CConv createCConv()
+	{
 		CConvImpl cConv = new CConvImpl();
 		return cConv;
 	}
@@ -1618,7 +1767,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Instruction_invoke createInstruction_invoke() {
+	public Instruction_invoke createInstruction_invoke()
+	{
 		Instruction_invokeImpl instruction_invoke = new Instruction_invokeImpl();
 		return instruction_invoke;
 	}
@@ -1628,7 +1778,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LLVM_IRPackage getLLVM_IRPackage() {
+	public LLVM_IRPackage getLLVM_IRPackage()
+	{
 		return (LLVM_IRPackage)getEPackage();
 	}
 
@@ -1639,7 +1790,8 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static LLVM_IRPackage getPackage() {
+	public static LLVM_IRPackage getPackage()
+	{
 		return LLVM_IRPackage.eINSTANCE;
 	}
 

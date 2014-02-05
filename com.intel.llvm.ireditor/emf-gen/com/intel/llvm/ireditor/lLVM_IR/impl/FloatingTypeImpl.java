@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class FloatingTypeImpl extends MinimalEObjectImpl.Container implements FloatingType {
+public class FloatingTypeImpl extends MinimalEObjectImpl.Container implements FloatingType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FloatingTypeImpl() {
+	protected FloatingTypeImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class FloatingTypeImpl extends MinimalEObjectImpl.Container implements Fl
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFloatingType();
 	}
 

@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class LocalValueImpl extends MinimalEObjectImpl.Container implements LocalValue {
+public class LocalValueImpl extends MinimalEObjectImpl.Container implements LocalValue
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +52,8 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocalValueImpl() {
+	protected LocalValueImpl()
+	{
 		super();
 	}
 
@@ -61,7 +63,8 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getLocalValue();
 	}
 
@@ -70,7 +73,8 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -79,7 +83,8 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -92,8 +97,10 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE__NAME:
 				return getName();
 		}
@@ -106,8 +113,10 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE__NAME:
 				setName((String)newValue);
 				return;
@@ -121,8 +130,10 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -136,8 +147,10 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LOCAL_VALUE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -150,7 +163,8 @@ public class LocalValueImpl extends MinimalEObjectImpl.Container implements Loca
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

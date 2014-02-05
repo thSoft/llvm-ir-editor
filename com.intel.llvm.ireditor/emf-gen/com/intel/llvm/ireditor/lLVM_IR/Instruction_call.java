@@ -24,7 +24,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_call extends MiddleInstruction {
+public interface Instruction_call extends MiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Is Tail</b></em>' attribute.
 	 * <!-- begin-user-doc -->

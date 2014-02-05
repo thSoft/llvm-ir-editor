@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
+public class BlockAddressImpl extends ConstantImpl implements BlockAddress
+{
 	/**
 	 * The cached value of the '{@link #getFunction() <em>Function</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -55,7 +56,8 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BlockAddressImpl() {
+	protected BlockAddressImpl()
+	{
 		super();
 	}
 
@@ -65,7 +67,8 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getBlockAddress();
 	}
 
@@ -74,7 +77,8 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValueRef getFunction() {
+	public GlobalValueRef getFunction()
+	{
 		return function;
 	}
 
@@ -83,10 +87,12 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFunction(GlobalValueRef newFunction, NotificationChain msgs) {
+	public NotificationChain basicSetFunction(GlobalValueRef newFunction, NotificationChain msgs)
+	{
 		GlobalValueRef oldFunction = function;
 		function = newFunction;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION, oldFunction, newFunction);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -98,8 +104,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFunction(GlobalValueRef newFunction) {
-		if (newFunction != function) {
+	public void setFunction(GlobalValueRef newFunction)
+	{
+		if (newFunction != function)
+		{
 			NotificationChain msgs = null;
 			if (function != null)
 				msgs = ((InternalEObject)function).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION, null, msgs);
@@ -117,7 +125,8 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getBasicBlock() {
+	public BasicBlockRef getBasicBlock()
+	{
 		return basicBlock;
 	}
 
@@ -126,10 +135,12 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBasicBlock(BasicBlockRef newBasicBlock, NotificationChain msgs) {
+	public NotificationChain basicSetBasicBlock(BasicBlockRef newBasicBlock, NotificationChain msgs)
+	{
 		BasicBlockRef oldBasicBlock = basicBlock;
 		basicBlock = newBasicBlock;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.BLOCK_ADDRESS__BASIC_BLOCK, oldBasicBlock, newBasicBlock);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -141,8 +152,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBasicBlock(BasicBlockRef newBasicBlock) {
-		if (newBasicBlock != basicBlock) {
+	public void setBasicBlock(BasicBlockRef newBasicBlock)
+	{
+		if (newBasicBlock != basicBlock)
+		{
 			NotificationChain msgs = null;
 			if (basicBlock != null)
 				msgs = ((InternalEObject)basicBlock).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.BLOCK_ADDRESS__BASIC_BLOCK, null, msgs);
@@ -161,8 +174,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION:
 				return basicSetFunction(null, msgs);
 			case LLVM_IRPackage.BLOCK_ADDRESS__BASIC_BLOCK:
@@ -177,8 +192,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION:
 				return getFunction();
 			case LLVM_IRPackage.BLOCK_ADDRESS__BASIC_BLOCK:
@@ -193,8 +210,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION:
 				setFunction((GlobalValueRef)newValue);
 				return;
@@ -211,8 +230,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION:
 				setFunction((GlobalValueRef)null);
 				return;
@@ -229,8 +250,10 @@ public class BlockAddressImpl extends ConstantImpl implements BlockAddress {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BLOCK_ADDRESS__FUNCTION:
 				return function != null;
 			case LLVM_IRPackage.BLOCK_ADDRESS__BASIC_BLOCK:

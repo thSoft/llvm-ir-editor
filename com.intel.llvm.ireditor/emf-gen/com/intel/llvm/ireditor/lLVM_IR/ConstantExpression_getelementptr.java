@@ -23,7 +23,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConstantExpression_getelementptr extends ConstantExpression {
+public interface ConstantExpression_getelementptr extends ConstantExpression
+{
 	/**
 	 * Returns the value of the '<em><b>Constant Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

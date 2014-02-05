@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class OpaqueTypeImpl extends MinimalEObjectImpl.Container implements OpaqueType {
+public class OpaqueTypeImpl extends MinimalEObjectImpl.Container implements OpaqueType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OpaqueTypeImpl() {
+	protected OpaqueTypeImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class OpaqueTypeImpl extends MinimalEObjectImpl.Container implements Opaq
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getOpaqueType();
 	}
 

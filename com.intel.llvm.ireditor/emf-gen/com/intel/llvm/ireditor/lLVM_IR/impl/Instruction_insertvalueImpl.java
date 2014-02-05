@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_insertvalueImpl extends AggregateInstructionImpl implements Instruction_insertvalue {
+public class Instruction_insertvalueImpl extends AggregateInstructionImpl implements Instruction_insertvalue
+{
 	/**
 	 * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_insertvalueImpl() {
+	protected Instruction_insertvalueImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_insertvalue();
 	}
 
@@ -62,7 +65,8 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getElement() {
+	public TypedValue getElement()
+	{
 		return element;
 	}
 
@@ -71,10 +75,12 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElement(TypedValue newElement, NotificationChain msgs) {
+	public NotificationChain basicSetElement(TypedValue newElement, NotificationChain msgs)
+	{
 		TypedValue oldElement = element;
 		element = newElement;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT, oldElement, newElement);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -86,8 +92,10 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElement(TypedValue newElement) {
-		if (newElement != element) {
+	public void setElement(TypedValue newElement)
+	{
+		if (newElement != element)
+		{
 			NotificationChain msgs = null;
 			if (element != null)
 				msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT, null, msgs);
@@ -106,8 +114,10 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT:
 				return basicSetElement(null, msgs);
 		}
@@ -120,8 +130,10 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT:
 				return getElement();
 		}
@@ -134,8 +146,10 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT:
 				setElement((TypedValue)newValue);
 				return;
@@ -149,8 +163,10 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT:
 				setElement((TypedValue)null);
 				return;
@@ -164,8 +180,10 @@ public class Instruction_insertvalueImpl extends AggregateInstructionImpl implem
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE__ELEMENT:
 				return element != null;
 		}

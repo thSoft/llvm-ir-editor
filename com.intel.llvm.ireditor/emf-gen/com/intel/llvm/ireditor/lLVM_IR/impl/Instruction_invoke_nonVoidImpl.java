@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl implements Instruction_invoke_nonVoid {
+public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl implements Instruction_invoke_nonVoid
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,7 +68,8 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_invoke_nonVoidImpl() {
+	protected Instruction_invoke_nonVoidImpl()
+	{
 		super();
 	}
 
@@ -77,7 +79,8 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_invoke_nonVoid();
 	}
 
@@ -86,7 +89,8 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -95,7 +99,8 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -107,7 +112,8 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NonVoidType getType() {
+	public NonVoidType getType()
+	{
 		return type;
 	}
 
@@ -116,10 +122,12 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(NonVoidType newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(NonVoidType newType, NotificationChain msgs)
+	{
 		NonVoidType oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -131,8 +139,10 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(NonVoidType newType) {
-		if (newType != type) {
+	public void setType(NonVoidType newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__TYPE, null, msgs);
@@ -151,8 +161,10 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__TYPE:
 				return basicSetType(null, msgs);
 		}
@@ -165,8 +177,10 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__NAME:
 				return getName();
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__TYPE:
@@ -181,8 +195,10 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__NAME:
 				setName((String)newValue);
 				return;
@@ -199,8 +215,10 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -217,8 +235,10 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__TYPE:
@@ -233,20 +253,27 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == LocalValue.class) {
-			switch (derivedFeatureID) {
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == LocalValue.class)
+		{
+			switch (derivedFeatureID)
+			{
 				case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__NAME: return LLVM_IRPackage.LOCAL_VALUE__NAME;
 				default: return -1;
 			}
 		}
-		if (baseClass == NamedInstruction.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == NamedInstruction.class)
+		{
+			switch (derivedFeatureID)
+			{
 				default: return -1;
 			}
 		}
-		if (baseClass == NamedTerminatorInstruction.class) {
-			switch (derivedFeatureID) {
+		if (baseClass == NamedTerminatorInstruction.class)
+		{
+			switch (derivedFeatureID)
+			{
 				default: return -1;
 			}
 		}
@@ -259,20 +286,27 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == LocalValue.class) {
-			switch (baseFeatureID) {
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+	{
+		if (baseClass == LocalValue.class)
+		{
+			switch (baseFeatureID)
+			{
 				case LLVM_IRPackage.LOCAL_VALUE__NAME: return LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID__NAME;
 				default: return -1;
 			}
 		}
-		if (baseClass == NamedInstruction.class) {
-			switch (baseFeatureID) {
+		if (baseClass == NamedInstruction.class)
+		{
+			switch (baseFeatureID)
+			{
 				default: return -1;
 			}
 		}
-		if (baseClass == NamedTerminatorInstruction.class) {
-			switch (baseFeatureID) {
+		if (baseClass == NamedTerminatorInstruction.class)
+		{
+			switch (baseFeatureID)
+			{
 				default: return -1;
 			}
 		}
@@ -285,7 +319,8 @@ public class Instruction_invoke_nonVoidImpl extends Instruction_invokeImpl imple
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

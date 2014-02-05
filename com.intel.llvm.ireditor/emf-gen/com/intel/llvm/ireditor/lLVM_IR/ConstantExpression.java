@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface ConstantExpression extends Constant {
+public interface ConstantExpression extends Constant
+{
 	/**
 	 * Returns the value of the '<em><b>Opcode</b></em>' attribute.
 	 * <!-- begin-user-doc -->

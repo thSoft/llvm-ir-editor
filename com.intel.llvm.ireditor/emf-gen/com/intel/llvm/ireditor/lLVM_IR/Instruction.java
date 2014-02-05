@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Instruction extends EObject {
+public interface Instruction extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Metadata</b></em>' containment reference list.
 	 * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.MetadataSuffix}.

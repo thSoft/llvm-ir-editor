@@ -30,7 +30,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface FunctionHeader extends GlobalValueDef {
+public interface FunctionHeader extends GlobalValueDef
+{
 	/**
 	 * Returns the value of the '<em><b>Linkage</b></em>' attribute.
 	 * <!-- begin-user-doc -->

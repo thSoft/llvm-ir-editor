@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
+public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo
+{
 	/**
 	 * The default value of the '{@link #getInfoType() <em>Info Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,7 +72,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TargetInfoImpl() {
+	protected TargetInfoImpl()
+	{
 		super();
 	}
 
@@ -81,7 +83,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getTargetInfo();
 	}
 
@@ -90,7 +93,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInfoType() {
+	public String getInfoType()
+	{
 		return infoType;
 	}
 
@@ -99,7 +103,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInfoType(String newInfoType) {
+	public void setInfoType(String newInfoType)
+	{
 		String oldInfoType = infoType;
 		infoType = newInfoType;
 		if (eNotificationRequired())
@@ -111,7 +116,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLayout() {
+	public String getLayout()
+	{
 		return layout;
 	}
 
@@ -120,7 +126,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLayout(String newLayout) {
+	public void setLayout(String newLayout)
+	{
 		String oldLayout = layout;
 		layout = newLayout;
 		if (eNotificationRequired())
@@ -133,8 +140,10 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TARGET_INFO__INFO_TYPE:
 				return getInfoType();
 			case LLVM_IRPackage.TARGET_INFO__LAYOUT:
@@ -149,8 +158,10 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TARGET_INFO__INFO_TYPE:
 				setInfoType((String)newValue);
 				return;
@@ -167,8 +178,10 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TARGET_INFO__INFO_TYPE:
 				setInfoType(INFO_TYPE_EDEFAULT);
 				return;
@@ -185,8 +198,10 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.TARGET_INFO__INFO_TYPE:
 				return INFO_TYPE_EDEFAULT == null ? infoType != null : !INFO_TYPE_EDEFAULT.equals(infoType);
 			case LLVM_IRPackage.TARGET_INFO__LAYOUT:
@@ -201,7 +216,8 @@ public class TargetInfoImpl extends TopLevelElementImpl implements TargetInfo {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

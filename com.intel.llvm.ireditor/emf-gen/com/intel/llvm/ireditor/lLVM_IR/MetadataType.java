@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MetadataType extends EObject {
+public interface MetadataType extends EObject
+{
 } // MetadataType

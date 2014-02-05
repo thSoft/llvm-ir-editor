@@ -22,7 +22,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_landingpad extends OtherInstruction {
+public interface Instruction_landingpad extends OtherInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Result Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

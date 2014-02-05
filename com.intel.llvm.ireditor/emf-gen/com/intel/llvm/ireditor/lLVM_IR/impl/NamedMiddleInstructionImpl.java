@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class NamedMiddleInstructionImpl extends NamedInstructionImpl implements NamedMiddleInstruction {
+public class NamedMiddleInstructionImpl extends NamedInstructionImpl implements NamedMiddleInstruction
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamedMiddleInstructionImpl() {
+	protected NamedMiddleInstructionImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class NamedMiddleInstructionImpl extends NamedInstructionImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getNamedMiddleInstruction();
 	}
 

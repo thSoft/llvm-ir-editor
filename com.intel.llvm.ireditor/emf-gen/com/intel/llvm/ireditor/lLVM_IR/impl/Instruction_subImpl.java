@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_subImpl extends BinaryInstructionImpl implements Instruction_sub {
+public class Instruction_subImpl extends BinaryInstructionImpl implements Instruction_sub
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_subImpl() {
+	protected Instruction_subImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_subImpl extends BinaryInstructionImpl implements Instru
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_sub();
 	}
 

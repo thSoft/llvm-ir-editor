@@ -23,7 +23,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Alias extends GlobalValue, GlobalValueDef {
+public interface Alias extends GlobalValue, GlobalValueDef
+{
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

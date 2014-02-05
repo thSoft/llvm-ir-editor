@@ -38,7 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Instruction_switchImpl extends TerminatorInstructionImpl implements Instruction_switch {
+public class Instruction_switchImpl extends TerminatorInstructionImpl implements Instruction_switch
+{
 	/**
 	 * The cached value of the '{@link #getComparisonValue() <em>Comparison Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -84,7 +85,8 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_switchImpl() {
+	protected Instruction_switchImpl()
+	{
 		super();
 	}
 
@@ -94,7 +96,8 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_switch();
 	}
 
@@ -103,7 +106,8 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getComparisonValue() {
+	public TypedValue getComparisonValue()
+	{
 		return comparisonValue;
 	}
 
@@ -112,10 +116,12 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetComparisonValue(TypedValue newComparisonValue, NotificationChain msgs) {
+	public NotificationChain basicSetComparisonValue(TypedValue newComparisonValue, NotificationChain msgs)
+	{
 		TypedValue oldComparisonValue = comparisonValue;
 		comparisonValue = newComparisonValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE, oldComparisonValue, newComparisonValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -127,8 +133,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComparisonValue(TypedValue newComparisonValue) {
-		if (newComparisonValue != comparisonValue) {
+	public void setComparisonValue(TypedValue newComparisonValue)
+	{
+		if (newComparisonValue != comparisonValue)
+		{
 			NotificationChain msgs = null;
 			if (comparisonValue != null)
 				msgs = ((InternalEObject)comparisonValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE, null, msgs);
@@ -146,7 +154,8 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlockRef getDefaultDest() {
+	public BasicBlockRef getDefaultDest()
+	{
 		return defaultDest;
 	}
 
@@ -155,10 +164,12 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefaultDest(BasicBlockRef newDefaultDest, NotificationChain msgs) {
+	public NotificationChain basicSetDefaultDest(BasicBlockRef newDefaultDest, NotificationChain msgs)
+	{
 		BasicBlockRef oldDefaultDest = defaultDest;
 		defaultDest = newDefaultDest;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_SWITCH__DEFAULT_DEST, oldDefaultDest, newDefaultDest);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -170,8 +181,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefaultDest(BasicBlockRef newDefaultDest) {
-		if (newDefaultDest != defaultDest) {
+	public void setDefaultDest(BasicBlockRef newDefaultDest)
+	{
+		if (newDefaultDest != defaultDest)
+		{
 			NotificationChain msgs = null;
 			if (defaultDest != null)
 				msgs = ((InternalEObject)defaultDest).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_SWITCH__DEFAULT_DEST, null, msgs);
@@ -189,8 +202,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TypedValue> getCaseConditions() {
-		if (caseConditions == null) {
+	public EList<TypedValue> getCaseConditions()
+	{
+		if (caseConditions == null)
+		{
 			caseConditions = new EObjectContainmentEList<TypedValue>(TypedValue.class, this, LLVM_IRPackage.INSTRUCTION_SWITCH__CASE_CONDITIONS);
 		}
 		return caseConditions;
@@ -201,8 +216,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BasicBlockRef> getDestinations() {
-		if (destinations == null) {
+	public EList<BasicBlockRef> getDestinations()
+	{
+		if (destinations == null)
+		{
 			destinations = new EObjectContainmentEList<BasicBlockRef>(BasicBlockRef.class, this, LLVM_IRPackage.INSTRUCTION_SWITCH__DESTINATIONS);
 		}
 		return destinations;
@@ -214,8 +231,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE:
 				return basicSetComparisonValue(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__DEFAULT_DEST:
@@ -234,8 +253,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE:
 				return getComparisonValue();
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__DEFAULT_DEST:
@@ -255,8 +276,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE:
 				setComparisonValue((TypedValue)newValue);
 				return;
@@ -281,8 +304,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE:
 				setComparisonValue((TypedValue)null);
 				return;
@@ -305,8 +330,10 @@ public class Instruction_switchImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__COMPARISON_VALUE:
 				return comparisonValue != null;
 			case LLVM_IRPackage.INSTRUCTION_SWITCH__DEFAULT_DEST:

@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface InlineAssembler extends Callee {
+public interface InlineAssembler extends Callee
+{
 	/**
 	 * Returns the value of the '<em><b>Assembler</b></em>' attribute.
 	 * <!-- begin-user-doc -->

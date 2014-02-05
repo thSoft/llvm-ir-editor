@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Star extends EObject {
+public interface Star extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Address Space</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

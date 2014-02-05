@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MetadataNodeElement extends EObject {
+public interface MetadataNodeElement extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

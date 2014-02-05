@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_insertvalue extends AggregateInstruction {
+public interface Instruction_insertvalue extends AggregateInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Element</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

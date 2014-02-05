@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_unreachableImpl extends TerminatorInstructionImpl implements Instruction_unreachable {
+public class Instruction_unreachableImpl extends TerminatorInstructionImpl implements Instruction_unreachable
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_unreachableImpl() {
+	protected Instruction_unreachableImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_unreachableImpl extends TerminatorInstructionImpl imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_unreachable();
 	}
 

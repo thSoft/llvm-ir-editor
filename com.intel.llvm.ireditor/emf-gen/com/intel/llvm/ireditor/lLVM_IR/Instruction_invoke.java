@@ -24,7 +24,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_invoke extends TerminatorInstruction {
+public interface Instruction_invoke extends TerminatorInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Cconv</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

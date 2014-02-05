@@ -39,7 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl implements ConstantExpression_getelementptr {
+public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl implements ConstantExpression_getelementptr
+{
 	/**
 	 * The cached value of the '{@link #getConstantType() <em>Constant Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -85,7 +86,8 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantExpression_getelementptrImpl() {
+	protected ConstantExpression_getelementptrImpl()
+	{
 		super();
 	}
 
@@ -95,7 +97,8 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantExpression_getelementptr();
 	}
 
@@ -104,7 +107,8 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getConstantType() {
+	public Type getConstantType()
+	{
 		return constantType;
 	}
 
@@ -113,10 +117,12 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstantType(Type newConstantType, NotificationChain msgs) {
+	public NotificationChain basicSetConstantType(Type newConstantType, NotificationChain msgs)
+	{
 		Type oldConstantType = constantType;
 		constantType = newConstantType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE, oldConstantType, newConstantType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -128,8 +134,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstantType(Type newConstantType) {
-		if (newConstantType != constantType) {
+	public void setConstantType(Type newConstantType)
+	{
+		if (newConstantType != constantType)
+		{
 			NotificationChain msgs = null;
 			if (constantType != null)
 				msgs = ((InternalEObject)constantType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE, null, msgs);
@@ -147,7 +155,8 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GlobalValueRef getConstant() {
+	public GlobalValueRef getConstant()
+	{
 		return constant;
 	}
 
@@ -156,10 +165,12 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetConstant(GlobalValueRef newConstant, NotificationChain msgs) {
+	public NotificationChain basicSetConstant(GlobalValueRef newConstant, NotificationChain msgs)
+	{
 		GlobalValueRef oldConstant = constant;
 		constant = newConstant;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT, oldConstant, newConstant);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -171,8 +182,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstant(GlobalValueRef newConstant) {
-		if (newConstant != constant) {
+	public void setConstant(GlobalValueRef newConstant)
+	{
+		if (newConstant != constant)
+		{
 			NotificationChain msgs = null;
 			if (constant != null)
 				msgs = ((InternalEObject)constant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT, null, msgs);
@@ -190,8 +203,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Type> getIndexTypes() {
-		if (indexTypes == null) {
+	public EList<Type> getIndexTypes()
+	{
+		if (indexTypes == null)
+		{
 			indexTypes = new EObjectContainmentEList<Type>(Type.class, this, LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__INDEX_TYPES);
 		}
 		return indexTypes;
@@ -202,8 +217,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Constant> getIndices() {
-		if (indices == null) {
+	public EList<Constant> getIndices()
+	{
+		if (indices == null)
+		{
 			indices = new EObjectContainmentEList<Constant>(Constant.class, this, LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__INDICES);
 		}
 		return indices;
@@ -215,8 +232,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE:
 				return basicSetConstantType(null, msgs);
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT:
@@ -235,8 +254,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE:
 				return getConstantType();
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT:
@@ -256,8 +277,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE:
 				setConstantType((Type)newValue);
 				return;
@@ -282,8 +305,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE:
 				setConstantType((Type)null);
 				return;
@@ -306,8 +331,10 @@ public class ConstantExpression_getelementptrImpl extends ConstantExpressionImpl
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT_TYPE:
 				return constantType != null;
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR__CONSTANT:

@@ -20,7 +20,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MetadataNode extends Constant {
+public interface MetadataNode extends Constant
+{
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link com.intel.llvm.ireditor.lLVM_IR.MetadataNodeElement}.

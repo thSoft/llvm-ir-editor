@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface ConstantExpression_extractelement extends ConstantExpression {
+public interface ConstantExpression_extractelement extends ConstantExpression
+{
 	/**
 	 * Returns the value of the '<em><b>Vector</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -33,7 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ConstantListImpl extends MinimalEObjectImpl.Container implements ConstantList {
+public class ConstantListImpl extends MinimalEObjectImpl.Container implements ConstantList
+{
 	/**
 	 * The cached value of the '{@link #getTypedConstants() <em>Typed Constants</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -49,7 +50,8 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstantListImpl() {
+	protected ConstantListImpl()
+	{
 		super();
 	}
 
@@ -59,7 +61,8 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getConstantList();
 	}
 
@@ -68,8 +71,10 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TypedConstant> getTypedConstants() {
-		if (typedConstants == null) {
+	public EList<TypedConstant> getTypedConstants()
+	{
+		if (typedConstants == null)
+		{
 			typedConstants = new EObjectContainmentEList<TypedConstant>(TypedConstant.class, this, LLVM_IRPackage.CONSTANT_LIST__TYPED_CONSTANTS);
 		}
 		return typedConstants;
@@ -81,8 +86,10 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_LIST__TYPED_CONSTANTS:
 				return ((InternalEList<?>)getTypedConstants()).basicRemove(otherEnd, msgs);
 		}
@@ -95,8 +102,10 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_LIST__TYPED_CONSTANTS:
 				return getTypedConstants();
 		}
@@ -110,8 +119,10 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_LIST__TYPED_CONSTANTS:
 				getTypedConstants().clear();
 				getTypedConstants().addAll((Collection<? extends TypedConstant>)newValue);
@@ -126,8 +137,10 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_LIST__TYPED_CONSTANTS:
 				getTypedConstants().clear();
 				return;
@@ -141,8 +154,10 @@ public class ConstantListImpl extends MinimalEObjectImpl.Container implements Co
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.CONSTANT_LIST__TYPED_CONSTANTS:
 				return typedConstants != null && !typedConstants.isEmpty();
 		}

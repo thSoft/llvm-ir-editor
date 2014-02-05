@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
+public class FunctionDefImpl extends FunctionImpl implements FunctionDef
+{
 	/**
 	 * The cached value of the '{@link #getBasicBlocks() <em>Basic Blocks</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionDefImpl() {
+	protected FunctionDefImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFunctionDef();
 	}
 
@@ -66,8 +69,10 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BasicBlock> getBasicBlocks() {
-		if (basicBlocks == null) {
+	public EList<BasicBlock> getBasicBlocks()
+	{
+		if (basicBlocks == null)
+		{
 			basicBlocks = new EObjectContainmentEList<BasicBlock>(BasicBlock.class, this, LLVM_IRPackage.FUNCTION_DEF__BASIC_BLOCKS);
 		}
 		return basicBlocks;
@@ -79,8 +84,10 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_DEF__BASIC_BLOCKS:
 				return ((InternalEList<?>)getBasicBlocks()).basicRemove(otherEnd, msgs);
 		}
@@ -93,8 +100,10 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_DEF__BASIC_BLOCKS:
 				return getBasicBlocks();
 		}
@@ -108,8 +117,10 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_DEF__BASIC_BLOCKS:
 				getBasicBlocks().clear();
 				getBasicBlocks().addAll((Collection<? extends BasicBlock>)newValue);
@@ -124,8 +135,10 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_DEF__BASIC_BLOCKS:
 				getBasicBlocks().clear();
 				return;
@@ -139,8 +152,10 @@ public class FunctionDefImpl extends FunctionImpl implements FunctionDef {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION_DEF__BASIC_BLOCKS:
 				return basicBlocks != null && !basicBlocks.isEmpty();
 		}

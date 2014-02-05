@@ -13,5 +13,6 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface NamedTerminatorInstruction extends NamedInstruction, TerminatorInstruction {
+public interface NamedTerminatorInstruction extends NamedInstruction, TerminatorInstruction
+{
 } // NamedTerminatorInstruction

@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class VoidTypeImpl extends MinimalEObjectImpl.Container implements VoidType {
+public class VoidTypeImpl extends MinimalEObjectImpl.Container implements VoidType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VoidTypeImpl() {
+	protected VoidTypeImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class VoidTypeImpl extends MinimalEObjectImpl.Container implements VoidTy
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getVoidType();
 	}
 

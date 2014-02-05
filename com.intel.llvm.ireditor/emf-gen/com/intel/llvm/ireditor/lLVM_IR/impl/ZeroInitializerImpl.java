@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ZeroInitializerImpl extends ConstantImpl implements ZeroInitializer {
+public class ZeroInitializerImpl extends ConstantImpl implements ZeroInitializer
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ZeroInitializerImpl() {
+	protected ZeroInitializerImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class ZeroInitializerImpl extends ConstantImpl implements ZeroInitializer
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getZeroInitializer();
 	}
 

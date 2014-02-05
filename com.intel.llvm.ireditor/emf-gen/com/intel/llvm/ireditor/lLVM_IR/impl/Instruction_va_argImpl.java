@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_va_argImpl extends OtherInstructionImpl implements Instruction_va_arg {
+public class Instruction_va_argImpl extends OtherInstructionImpl implements Instruction_va_arg
+{
 	/**
 	 * The cached value of the '{@link #getArglist() <em>Arglist</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -55,7 +56,8 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_va_argImpl() {
+	protected Instruction_va_argImpl()
+	{
 		super();
 	}
 
@@ -65,7 +67,8 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_va_arg();
 	}
 
@@ -74,7 +77,8 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getArglist() {
+	public TypedValue getArglist()
+	{
 		return arglist;
 	}
 
@@ -83,10 +87,12 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetArglist(TypedValue newArglist, NotificationChain msgs) {
+	public NotificationChain basicSetArglist(TypedValue newArglist, NotificationChain msgs)
+	{
 		TypedValue oldArglist = arglist;
 		arglist = newArglist;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST, oldArglist, newArglist);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -98,8 +104,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArglist(TypedValue newArglist) {
-		if (newArglist != arglist) {
+	public void setArglist(TypedValue newArglist)
+	{
+		if (newArglist != arglist)
+		{
 			NotificationChain msgs = null;
 			if (arglist != null)
 				msgs = ((InternalEObject)arglist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST, null, msgs);
@@ -117,7 +125,8 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
+	public Type getType()
+	{
 		return type;
 	}
 
@@ -126,10 +135,12 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs)
+	{
 		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_VA_ARG__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -141,8 +152,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
+	public void setType(Type newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_VA_ARG__TYPE, null, msgs);
@@ -161,8 +174,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST:
 				return basicSetArglist(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__TYPE:
@@ -177,8 +192,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST:
 				return getArglist();
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__TYPE:
@@ -193,8 +210,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST:
 				setArglist((TypedValue)newValue);
 				return;
@@ -211,8 +230,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST:
 				setArglist((TypedValue)null);
 				return;
@@ -229,8 +250,10 @@ public class Instruction_va_argImpl extends OtherInstructionImpl implements Inst
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__ARGLIST:
 				return arglist != null;
 			case LLVM_IRPackage.INSTRUCTION_VA_ARG__TYPE:

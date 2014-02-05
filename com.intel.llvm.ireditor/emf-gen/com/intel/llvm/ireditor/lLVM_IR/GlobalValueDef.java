@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface GlobalValueDef extends EObject {
+public interface GlobalValueDef extends EObject
+{
 } // GlobalValueDef

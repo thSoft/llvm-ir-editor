@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class Instruction_fremImpl extends BinaryInstructionImpl implements Instruction_frem {
+public class Instruction_fremImpl extends BinaryInstructionImpl implements Instruction_frem
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_fremImpl() {
+	protected Instruction_fremImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class Instruction_fremImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_frem();
 	}
 

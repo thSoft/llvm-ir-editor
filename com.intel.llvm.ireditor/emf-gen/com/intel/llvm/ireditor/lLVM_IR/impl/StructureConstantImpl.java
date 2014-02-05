@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class StructureConstantImpl extends ConstantImpl implements StructureConstant {
+public class StructureConstantImpl extends ConstantImpl implements StructureConstant
+{
 	/**
 	 * The cached value of the '{@link #getList() <em>List</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -64,7 +65,8 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StructureConstantImpl() {
+	protected StructureConstantImpl()
+	{
 		super();
 	}
 
@@ -74,7 +76,8 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getStructureConstant();
 	}
 
@@ -83,7 +86,8 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstantList getList() {
+	public ConstantList getList()
+	{
 		return list;
 	}
 
@@ -92,10 +96,12 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetList(ConstantList newList, NotificationChain msgs) {
+	public NotificationChain basicSetList(ConstantList newList, NotificationChain msgs)
+	{
 		ConstantList oldList = list;
 		list = newList;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.STRUCTURE_CONSTANT__LIST, oldList, newList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -107,8 +113,10 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setList(ConstantList newList) {
-		if (newList != list) {
+	public void setList(ConstantList newList)
+	{
+		if (newList != list)
+		{
 			NotificationChain msgs = null;
 			if (list != null)
 				msgs = ((InternalEObject)list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.STRUCTURE_CONSTANT__LIST, null, msgs);
@@ -126,7 +134,8 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPacked() {
+	public String getPacked()
+	{
 		return packed;
 	}
 
@@ -135,7 +144,8 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPacked(String newPacked) {
+	public void setPacked(String newPacked)
+	{
 		String oldPacked = packed;
 		packed = newPacked;
 		if (eNotificationRequired())
@@ -148,8 +158,10 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__LIST:
 				return basicSetList(null, msgs);
 		}
@@ -162,8 +174,10 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__LIST:
 				return getList();
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__PACKED:
@@ -178,8 +192,10 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__LIST:
 				setList((ConstantList)newValue);
 				return;
@@ -196,8 +212,10 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__LIST:
 				setList((ConstantList)null);
 				return;
@@ -214,8 +232,10 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__LIST:
 				return list != null;
 			case LLVM_IRPackage.STRUCTURE_CONSTANT__PACKED:
@@ -230,7 +250,8 @@ public class StructureConstantImpl extends ConstantImpl implements StructureCons
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

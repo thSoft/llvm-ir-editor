@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class GlobalValueImpl extends TopLevelElementImpl implements GlobalValue {
+public class GlobalValueImpl extends TopLevelElementImpl implements GlobalValue
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GlobalValueImpl() {
+	protected GlobalValueImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class GlobalValueImpl extends TopLevelElementImpl implements GlobalValue 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getGlobalValue();
 	}
 

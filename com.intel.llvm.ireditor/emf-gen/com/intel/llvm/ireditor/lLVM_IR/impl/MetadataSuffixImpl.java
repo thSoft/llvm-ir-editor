@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements MetadataSuffix {
+public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements MetadataSuffix
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MetadataSuffixImpl() {
+	protected MetadataSuffixImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getMetadataSuffix();
 	}
 
@@ -84,7 +87,8 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -93,7 +97,8 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -105,7 +110,8 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetadataRef getValue() {
+	public MetadataRef getValue()
+	{
 		return value;
 	}
 
@@ -114,10 +120,12 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(MetadataRef newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(MetadataRef newValue, NotificationChain msgs)
+	{
 		MetadataRef oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.METADATA_SUFFIX__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -129,8 +137,10 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(MetadataRef newValue) {
-		if (newValue != value) {
+	public void setValue(MetadataRef newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.METADATA_SUFFIX__VALUE, null, msgs);
@@ -149,8 +159,10 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_SUFFIX__VALUE:
 				return basicSetValue(null, msgs);
 		}
@@ -163,8 +175,10 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_SUFFIX__NAME:
 				return getName();
 			case LLVM_IRPackage.METADATA_SUFFIX__VALUE:
@@ -179,8 +193,10 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_SUFFIX__NAME:
 				setName((String)newValue);
 				return;
@@ -197,8 +213,10 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_SUFFIX__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -215,8 +233,10 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_SUFFIX__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case LLVM_IRPackage.METADATA_SUFFIX__VALUE:
@@ -231,7 +251,8 @@ public class MetadataSuffixImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

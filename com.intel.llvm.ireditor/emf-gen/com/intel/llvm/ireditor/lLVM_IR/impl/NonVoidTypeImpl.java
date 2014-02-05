@@ -39,7 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements NonVoidType {
+public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements NonVoidType
+{
 	/**
 	 * The cached value of the '{@link #getBaseType() <em>Base Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -75,7 +76,8 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NonVoidTypeImpl() {
+	protected NonVoidTypeImpl()
+	{
 		super();
 	}
 
@@ -85,7 +87,8 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getNonVoidType();
 	}
 
@@ -94,7 +97,8 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getBaseType() {
+	public EObject getBaseType()
+	{
 		return baseType;
 	}
 
@@ -103,10 +107,12 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBaseType(EObject newBaseType, NotificationChain msgs) {
+	public NotificationChain basicSetBaseType(EObject newBaseType, NotificationChain msgs)
+	{
 		EObject oldBaseType = baseType;
 		baseType = newBaseType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE, oldBaseType, newBaseType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -118,8 +124,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBaseType(EObject newBaseType) {
-		if (newBaseType != baseType) {
+	public void setBaseType(EObject newBaseType)
+	{
+		if (newBaseType != baseType)
+		{
 			NotificationChain msgs = null;
 			if (baseType != null)
 				msgs = ((InternalEObject)baseType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE, null, msgs);
@@ -137,8 +145,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TypeSuffix> getSuffixes() {
-		if (suffixes == null) {
+	public EList<TypeSuffix> getSuffixes()
+	{
+		if (suffixes == null)
+		{
 			suffixes = new EObjectContainmentEList<TypeSuffix>(TypeSuffix.class, this, LLVM_IRPackage.NON_VOID_TYPE__SUFFIXES);
 		}
 		return suffixes;
@@ -149,8 +159,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Star> getStars() {
-		if (stars == null) {
+	public EList<Star> getStars()
+	{
+		if (stars == null)
+		{
 			stars = new EObjectContainmentEList<Star>(Star.class, this, LLVM_IRPackage.NON_VOID_TYPE__STARS);
 		}
 		return stars;
@@ -162,8 +174,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE:
 				return basicSetBaseType(null, msgs);
 			case LLVM_IRPackage.NON_VOID_TYPE__SUFFIXES:
@@ -180,8 +194,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE:
 				return getBaseType();
 			case LLVM_IRPackage.NON_VOID_TYPE__SUFFIXES:
@@ -199,8 +215,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE:
 				setBaseType((EObject)newValue);
 				return;
@@ -222,8 +240,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE:
 				setBaseType((EObject)null);
 				return;
@@ -243,8 +263,10 @@ public class NonVoidTypeImpl extends MinimalEObjectImpl.Container implements Non
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_VOID_TYPE__BASE_TYPE:
 				return baseType != null;
 			case LLVM_IRPackage.NON_VOID_TYPE__SUFFIXES:

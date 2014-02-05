@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_callImpl extends MiddleInstructionImpl implements Instruction_call {
+public class Instruction_callImpl extends MiddleInstructionImpl implements Instruction_call
+{
 	/**
 	 * The default value of the '{@link #isIsTail() <em>Is Tail</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -112,7 +113,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_callImpl() {
+	protected Instruction_callImpl()
+	{
 		super();
 	}
 
@@ -122,7 +124,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_call();
 	}
 
@@ -131,7 +134,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsTail() {
+	public boolean isIsTail()
+	{
 		return isTail;
 	}
 
@@ -140,7 +144,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsTail(boolean newIsTail) {
+	public void setIsTail(boolean newIsTail)
+	{
 		boolean oldIsTail = isTail;
 		isTail = newIsTail;
 		if (eNotificationRequired())
@@ -152,7 +157,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CConv getCconv() {
+	public CConv getCconv()
+	{
 		return cconv;
 	}
 
@@ -161,10 +167,12 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs) {
+	public NotificationChain basicSetCconv(CConv newCconv, NotificationChain msgs)
+	{
 		CConv oldCconv = cconv;
 		cconv = newCconv;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CALL__CCONV, oldCconv, newCconv);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -176,8 +184,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCconv(CConv newCconv) {
-		if (newCconv != cconv) {
+	public void setCconv(CConv newCconv)
+	{
+		if (newCconv != cconv)
+		{
 			NotificationChain msgs = null;
 			if (cconv != null)
 				msgs = ((InternalEObject)cconv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CALL__CCONV, null, msgs);
@@ -195,7 +205,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterAttributes getReturnAttributes() {
+	public ParameterAttributes getReturnAttributes()
+	{
 		return returnAttributes;
 	}
 
@@ -204,10 +215,12 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReturnAttributes(ParameterAttributes newReturnAttributes, NotificationChain msgs) {
+	public NotificationChain basicSetReturnAttributes(ParameterAttributes newReturnAttributes, NotificationChain msgs)
+	{
 		ParameterAttributes oldReturnAttributes = returnAttributes;
 		returnAttributes = newReturnAttributes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CALL__RETURN_ATTRIBUTES, oldReturnAttributes, newReturnAttributes);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -219,8 +232,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReturnAttributes(ParameterAttributes newReturnAttributes) {
-		if (newReturnAttributes != returnAttributes) {
+	public void setReturnAttributes(ParameterAttributes newReturnAttributes)
+	{
+		if (newReturnAttributes != returnAttributes)
+		{
 			NotificationChain msgs = null;
 			if (returnAttributes != null)
 				msgs = ((InternalEObject)returnAttributes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CALL__RETURN_ATTRIBUTES, null, msgs);
@@ -238,7 +253,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Callee getCallee() {
+	public Callee getCallee()
+	{
 		return callee;
 	}
 
@@ -247,10 +263,12 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCallee(Callee newCallee, NotificationChain msgs) {
+	public NotificationChain basicSetCallee(Callee newCallee, NotificationChain msgs)
+	{
 		Callee oldCallee = callee;
 		callee = newCallee;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CALL__CALLEE, oldCallee, newCallee);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -262,8 +280,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCallee(Callee newCallee) {
-		if (newCallee != callee) {
+	public void setCallee(Callee newCallee)
+	{
+		if (newCallee != callee)
+		{
 			NotificationChain msgs = null;
 			if (callee != null)
 				msgs = ((InternalEObject)callee).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CALL__CALLEE, null, msgs);
@@ -281,7 +301,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArgList getArgs() {
+	public ArgList getArgs()
+	{
 		return args;
 	}
 
@@ -290,10 +311,12 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetArgs(ArgList newArgs, NotificationChain msgs) {
+	public NotificationChain basicSetArgs(ArgList newArgs, NotificationChain msgs)
+	{
 		ArgList oldArgs = args;
 		args = newArgs;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CALL__ARGS, oldArgs, newArgs);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -305,8 +328,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArgs(ArgList newArgs) {
-		if (newArgs != args) {
+	public void setArgs(ArgList newArgs)
+	{
+		if (newArgs != args)
+		{
 			NotificationChain msgs = null;
 			if (args != null)
 				msgs = ((InternalEObject)args).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CALL__ARGS, null, msgs);
@@ -324,7 +349,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionAttributes getFunctionAttributes() {
+	public FunctionAttributes getFunctionAttributes()
+	{
 		return functionAttributes;
 	}
 
@@ -333,10 +359,12 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFunctionAttributes(FunctionAttributes newFunctionAttributes, NotificationChain msgs) {
+	public NotificationChain basicSetFunctionAttributes(FunctionAttributes newFunctionAttributes, NotificationChain msgs)
+	{
 		FunctionAttributes oldFunctionAttributes = functionAttributes;
 		functionAttributes = newFunctionAttributes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_CALL__FUNCTION_ATTRIBUTES, oldFunctionAttributes, newFunctionAttributes);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -348,8 +376,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFunctionAttributes(FunctionAttributes newFunctionAttributes) {
-		if (newFunctionAttributes != functionAttributes) {
+	public void setFunctionAttributes(FunctionAttributes newFunctionAttributes)
+	{
+		if (newFunctionAttributes != functionAttributes)
+		{
 			NotificationChain msgs = null;
 			if (functionAttributes != null)
 				msgs = ((InternalEObject)functionAttributes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_CALL__FUNCTION_ATTRIBUTES, null, msgs);
@@ -368,8 +398,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CALL__CCONV:
 				return basicSetCconv(null, msgs);
 			case LLVM_IRPackage.INSTRUCTION_CALL__RETURN_ATTRIBUTES:
@@ -390,8 +422,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CALL__IS_TAIL:
 				return isIsTail();
 			case LLVM_IRPackage.INSTRUCTION_CALL__CCONV:
@@ -414,8 +448,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CALL__IS_TAIL:
 				setIsTail((Boolean)newValue);
 				return;
@@ -444,8 +480,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CALL__IS_TAIL:
 				setIsTail(IS_TAIL_EDEFAULT);
 				return;
@@ -474,8 +512,10 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_CALL__IS_TAIL:
 				return isTail != IS_TAIL_EDEFAULT;
 			case LLVM_IRPackage.INSTRUCTION_CALL__CCONV:
@@ -498,7 +538,8 @@ public class Instruction_callImpl extends MiddleInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

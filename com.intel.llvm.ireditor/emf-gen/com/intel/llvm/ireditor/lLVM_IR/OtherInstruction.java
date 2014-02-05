@@ -13,5 +13,6 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface OtherInstruction extends NamedMiddleInstruction {
+public interface OtherInstruction extends NamedMiddleInstruction
+{
 } // OtherInstruction

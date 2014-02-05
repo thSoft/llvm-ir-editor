@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FunctionImpl extends GlobalValueImpl implements Function {
+public class FunctionImpl extends GlobalValueImpl implements Function
+{
 	/**
 	 * The cached value of the '{@link #getHeader() <em>Header</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionImpl() {
+	protected FunctionImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFunction();
 	}
 
@@ -62,7 +65,8 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionHeader getHeader() {
+	public FunctionHeader getHeader()
+	{
 		return header;
 	}
 
@@ -71,10 +75,12 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetHeader(FunctionHeader newHeader, NotificationChain msgs) {
+	public NotificationChain basicSetHeader(FunctionHeader newHeader, NotificationChain msgs)
+	{
 		FunctionHeader oldHeader = header;
 		header = newHeader;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.FUNCTION__HEADER, oldHeader, newHeader);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -86,8 +92,10 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeader(FunctionHeader newHeader) {
-		if (newHeader != header) {
+	public void setHeader(FunctionHeader newHeader)
+	{
+		if (newHeader != header)
+		{
 			NotificationChain msgs = null;
 			if (header != null)
 				msgs = ((InternalEObject)header).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.FUNCTION__HEADER, null, msgs);
@@ -106,8 +114,10 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION__HEADER:
 				return basicSetHeader(null, msgs);
 		}
@@ -120,8 +130,10 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION__HEADER:
 				return getHeader();
 		}
@@ -134,8 +146,10 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION__HEADER:
 				setHeader((FunctionHeader)newValue);
 				return;
@@ -149,8 +163,10 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION__HEADER:
 				setHeader((FunctionHeader)null);
 				return;
@@ -164,8 +180,10 @@ public class FunctionImpl extends GlobalValueImpl implements Function {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FUNCTION__HEADER:
 				return header != null;
 		}

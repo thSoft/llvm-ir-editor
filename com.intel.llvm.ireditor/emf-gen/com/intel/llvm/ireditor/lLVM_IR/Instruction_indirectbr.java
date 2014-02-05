@@ -21,7 +21,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Instruction_indirectbr extends TerminatorInstruction {
+public interface Instruction_indirectbr extends TerminatorInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Address</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

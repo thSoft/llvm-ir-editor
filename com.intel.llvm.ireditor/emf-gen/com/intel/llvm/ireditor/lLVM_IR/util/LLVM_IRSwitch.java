@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.util.Switch;
  * @see com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage
  * @generated
  */
-public class LLVM_IRSwitch<T> extends Switch<T> {
+public class LLVM_IRSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -37,8 +38,10 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LLVM_IRSwitch() {
-		if (modelPackage == null) {
+	public LLVM_IRSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = LLVM_IRPackage.eINSTANCE;
 		}
 	}
@@ -52,7 +55,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -64,54 +68,64 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case LLVM_IRPackage.MODEL: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case LLVM_IRPackage.MODEL:
+			{
 				Model model = (Model)theEObject;
 				T result = caseModel(model);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TOP_LEVEL_ELEMENT: {
+			case LLVM_IRPackage.TOP_LEVEL_ELEMENT:
+			{
 				TopLevelElement topLevelElement = (TopLevelElement)theEObject;
 				T result = caseTopLevelElement(topLevelElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ATTRIBUTE_GROUP: {
+			case LLVM_IRPackage.ATTRIBUTE_GROUP:
+			{
 				AttributeGroup attributeGroup = (AttributeGroup)theEObject;
 				T result = caseAttributeGroup(attributeGroup);
 				if (result == null) result = caseTopLevelElement(attributeGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TARGET_SPECIFIC_ATTRIBUTE: {
+			case LLVM_IRPackage.TARGET_SPECIFIC_ATTRIBUTE:
+			{
 				TargetSpecificAttribute targetSpecificAttribute = (TargetSpecificAttribute)theEObject;
 				T result = caseTargetSpecificAttribute(targetSpecificAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NAMED_METADATA: {
+			case LLVM_IRPackage.NAMED_METADATA:
+			{
 				NamedMetadata namedMetadata = (NamedMetadata)theEObject;
 				T result = caseNamedMetadata(namedMetadata);
 				if (result == null) result = caseTopLevelElement(namedMetadata);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.METADATA_REF: {
+			case LLVM_IRPackage.METADATA_REF:
+			{
 				MetadataRef metadataRef = (MetadataRef)theEObject;
 				T result = caseMetadataRef(metadataRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.VALUE_REF: {
+			case LLVM_IRPackage.VALUE_REF:
+			{
 				ValueRef valueRef = (ValueRef)theEObject;
 				T result = caseValueRef(valueRef);
 				if (result == null) result = caseCallee(valueRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.GLOBAL_VALUE_REF: {
+			case LLVM_IRPackage.GLOBAL_VALUE_REF:
+			{
 				GlobalValueRef globalValueRef = (GlobalValueRef)theEObject;
 				T result = caseGlobalValueRef(globalValueRef);
 				if (result == null) result = caseValueRef(globalValueRef);
@@ -119,7 +133,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.LOCAL_VALUE_REF: {
+			case LLVM_IRPackage.LOCAL_VALUE_REF:
+			{
 				LocalValueRef localValueRef = (LocalValueRef)theEObject;
 				T result = caseLocalValueRef(localValueRef);
 				if (result == null) result = caseValueRef(localValueRef);
@@ -127,26 +142,30 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.GLOBAL_VALUE: {
+			case LLVM_IRPackage.GLOBAL_VALUE:
+			{
 				GlobalValue globalValue = (GlobalValue)theEObject;
 				T result = caseGlobalValue(globalValue);
 				if (result == null) result = caseTopLevelElement(globalValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.GLOBAL_VALUE_DEF: {
+			case LLVM_IRPackage.GLOBAL_VALUE_DEF:
+			{
 				GlobalValueDef globalValueDef = (GlobalValueDef)theEObject;
 				T result = caseGlobalValueDef(globalValueDef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.LOCAL_VALUE: {
+			case LLVM_IRPackage.LOCAL_VALUE:
+			{
 				LocalValue localValue = (LocalValue)theEObject;
 				T result = caseLocalValue(localValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NAMED_INSTRUCTION: {
+			case LLVM_IRPackage.NAMED_INSTRUCTION:
+			{
 				NamedInstruction namedInstruction = (NamedInstruction)theEObject;
 				T result = caseNamedInstruction(namedInstruction);
 				if (result == null) result = caseLocalValue(namedInstruction);
@@ -154,13 +173,15 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION: {
+			case LLVM_IRPackage.INSTRUCTION:
+			{
 				Instruction instruction = (Instruction)theEObject;
 				T result = caseInstruction(instruction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ALIAS: {
+			case LLVM_IRPackage.ALIAS:
+			{
 				Alias alias = (Alias)theEObject;
 				T result = caseAlias(alias);
 				if (result == null) result = caseGlobalValue(alias);
@@ -169,27 +190,31 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ALIASEE: {
+			case LLVM_IRPackage.ALIASEE:
+			{
 				Aliasee aliasee = (Aliasee)theEObject;
 				T result = caseAliasee(aliasee);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TARGET_INFO: {
+			case LLVM_IRPackage.TARGET_INFO:
+			{
 				TargetInfo targetInfo = (TargetInfo)theEObject;
 				T result = caseTargetInfo(targetInfo);
 				if (result == null) result = caseTopLevelElement(targetInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INLINE_ASM: {
+			case LLVM_IRPackage.INLINE_ASM:
+			{
 				InlineAsm inlineAsm = (InlineAsm)theEObject;
 				T result = caseInlineAsm(inlineAsm);
 				if (result == null) result = caseTopLevelElement(inlineAsm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.GLOBAL_VARIABLE: {
+			case LLVM_IRPackage.GLOBAL_VARIABLE:
+			{
 				GlobalVariable globalVariable = (GlobalVariable)theEObject;
 				T result = caseGlobalVariable(globalVariable);
 				if (result == null) result = caseGlobalValue(globalVariable);
@@ -198,20 +223,23 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT: {
+			case LLVM_IRPackage.CONSTANT:
+			{
 				Constant constant = (Constant)theEObject;
 				T result = caseConstant(constant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION:
+			{
 				ConstantExpression constantExpression = (ConstantExpression)theEObject;
 				T result = caseConstantExpression(constantExpression);
 				if (result == null) result = caseConstant(constantExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_CONVERT: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_CONVERT:
+			{
 				ConstantExpression_convert constantExpression_convert = (ConstantExpression_convert)theEObject;
 				T result = caseConstantExpression_convert(constantExpression_convert);
 				if (result == null) result = caseConstantExpression(constantExpression_convert);
@@ -219,7 +247,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_GETELEMENTPTR:
+			{
 				ConstantExpression_getelementptr constantExpression_getelementptr = (ConstantExpression_getelementptr)theEObject;
 				T result = caseConstantExpression_getelementptr(constantExpression_getelementptr);
 				if (result == null) result = caseConstantExpression(constantExpression_getelementptr);
@@ -227,7 +256,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_SELECT:
+			{
 				ConstantExpression_select constantExpression_select = (ConstantExpression_select)theEObject;
 				T result = caseConstantExpression_select(constantExpression_select);
 				if (result == null) result = caseConstantExpression(constantExpression_select);
@@ -235,7 +265,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_COMPARE:
+			{
 				ConstantExpression_compare constantExpression_compare = (ConstantExpression_compare)theEObject;
 				T result = caseConstantExpression_compare(constantExpression_compare);
 				if (result == null) result = caseConstantExpression(constantExpression_compare);
@@ -243,7 +274,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTELEMENT: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTELEMENT:
+			{
 				ConstantExpression_extractelement constantExpression_extractelement = (ConstantExpression_extractelement)theEObject;
 				T result = caseConstantExpression_extractelement(constantExpression_extractelement);
 				if (result == null) result = caseConstantExpression(constantExpression_extractelement);
@@ -251,7 +283,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTELEMENT:
+			{
 				ConstantExpression_insertelement constantExpression_insertelement = (ConstantExpression_insertelement)theEObject;
 				T result = caseConstantExpression_insertelement(constantExpression_insertelement);
 				if (result == null) result = caseConstantExpression(constantExpression_insertelement);
@@ -259,7 +292,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_SHUFFLEVECTOR: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_SHUFFLEVECTOR:
+			{
 				ConstantExpression_shufflevector constantExpression_shufflevector = (ConstantExpression_shufflevector)theEObject;
 				T result = caseConstantExpression_shufflevector(constantExpression_shufflevector);
 				if (result == null) result = caseConstantExpression(constantExpression_shufflevector);
@@ -267,7 +301,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_EXTRACTVALUE:
+			{
 				ConstantExpression_extractvalue constantExpression_extractvalue = (ConstantExpression_extractvalue)theEObject;
 				T result = caseConstantExpression_extractvalue(constantExpression_extractvalue);
 				if (result == null) result = caseConstantExpression(constantExpression_extractvalue);
@@ -275,7 +310,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTVALUE: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_INSERTVALUE:
+			{
 				ConstantExpression_insertvalue constantExpression_insertvalue = (ConstantExpression_insertvalue)theEObject;
 				T result = caseConstantExpression_insertvalue(constantExpression_insertvalue);
 				if (result == null) result = caseConstantExpression(constantExpression_insertvalue);
@@ -283,7 +319,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_EXPRESSION_BINARY: {
+			case LLVM_IRPackage.CONSTANT_EXPRESSION_BINARY:
+			{
 				ConstantExpression_binary constantExpression_binary = (ConstantExpression_binary)theEObject;
 				T result = caseConstantExpression_binary(constantExpression_binary);
 				if (result == null) result = caseConstantExpression(constantExpression_binary);
@@ -291,94 +328,108 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.UNDEF: {
+			case LLVM_IRPackage.UNDEF:
+			{
 				Undef undef = (Undef)theEObject;
 				T result = caseUndef(undef);
 				if (result == null) result = caseConstant(undef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.BLOCK_ADDRESS: {
+			case LLVM_IRPackage.BLOCK_ADDRESS:
+			{
 				BlockAddress blockAddress = (BlockAddress)theEObject;
 				T result = caseBlockAddress(blockAddress);
 				if (result == null) result = caseConstant(blockAddress);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ZERO_INITIALIZER: {
+			case LLVM_IRPackage.ZERO_INITIALIZER:
+			{
 				ZeroInitializer zeroInitializer = (ZeroInitializer)theEObject;
 				T result = caseZeroInitializer(zeroInitializer);
 				if (result == null) result = caseConstant(zeroInitializer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.STRUCTURE_CONSTANT: {
+			case LLVM_IRPackage.STRUCTURE_CONSTANT:
+			{
 				StructureConstant structureConstant = (StructureConstant)theEObject;
 				T result = caseStructureConstant(structureConstant);
 				if (result == null) result = caseConstant(structureConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ARRAY_CONSTANT: {
+			case LLVM_IRPackage.ARRAY_CONSTANT:
+			{
 				ArrayConstant arrayConstant = (ArrayConstant)theEObject;
 				T result = caseArrayConstant(arrayConstant);
 				if (result == null) result = caseConstant(arrayConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.VECTOR_CONSTANT: {
+			case LLVM_IRPackage.VECTOR_CONSTANT:
+			{
 				VectorConstant vectorConstant = (VectorConstant)theEObject;
 				T result = caseVectorConstant(vectorConstant);
 				if (result == null) result = caseConstant(vectorConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONSTANT_LIST: {
+			case LLVM_IRPackage.CONSTANT_LIST:
+			{
 				ConstantList constantList = (ConstantList)theEObject;
 				T result = caseConstantList(constantList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TYPED_CONSTANT: {
+			case LLVM_IRPackage.TYPED_CONSTANT:
+			{
 				TypedConstant typedConstant = (TypedConstant)theEObject;
 				T result = caseTypedConstant(typedConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.SIMPLE_CONSTANT: {
+			case LLVM_IRPackage.SIMPLE_CONSTANT:
+			{
 				SimpleConstant simpleConstant = (SimpleConstant)theEObject;
 				T result = caseSimpleConstant(simpleConstant);
 				if (result == null) result = caseConstant(simpleConstant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.METADATA_NODE: {
+			case LLVM_IRPackage.METADATA_NODE:
+			{
 				MetadataNode metadataNode = (MetadataNode)theEObject;
 				T result = caseMetadataNode(metadataNode);
 				if (result == null) result = caseConstant(metadataNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.METADATA_NODE_ELEMENT: {
+			case LLVM_IRPackage.METADATA_NODE_ELEMENT:
+			{
 				MetadataNodeElement metadataNodeElement = (MetadataNodeElement)theEObject;
 				T result = caseMetadataNodeElement(metadataNodeElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.METADATA_STRING: {
+			case LLVM_IRPackage.METADATA_STRING:
+			{
 				MetadataString metadataString = (MetadataString)theEObject;
 				T result = caseMetadataString(metadataString);
 				if (result == null) result = caseConstant(metadataString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ADDRESS_SPACE: {
+			case LLVM_IRPackage.ADDRESS_SPACE:
+			{
 				AddressSpace addressSpace = (AddressSpace)theEObject;
 				T result = caseAddressSpace(addressSpace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION: {
+			case LLVM_IRPackage.FUNCTION:
+			{
 				Function function = (Function)theEObject;
 				T result = caseFunction(function);
 				if (result == null) result = caseGlobalValue(function);
@@ -386,7 +437,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION_DEF: {
+			case LLVM_IRPackage.FUNCTION_DEF:
+			{
 				FunctionDef functionDef = (FunctionDef)theEObject;
 				T result = caseFunctionDef(functionDef);
 				if (result == null) result = caseFunction(functionDef);
@@ -395,7 +447,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION_DECL: {
+			case LLVM_IRPackage.FUNCTION_DECL:
+			{
 				FunctionDecl functionDecl = (FunctionDecl)theEObject;
 				T result = caseFunctionDecl(functionDecl);
 				if (result == null) result = caseFunction(functionDecl);
@@ -404,56 +457,65 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION_HEADER: {
+			case LLVM_IRPackage.FUNCTION_HEADER:
+			{
 				FunctionHeader functionHeader = (FunctionHeader)theEObject;
 				T result = caseFunctionHeader(functionHeader);
 				if (result == null) result = caseGlobalValueDef(functionHeader);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION_PREFIX: {
+			case LLVM_IRPackage.FUNCTION_PREFIX:
+			{
 				FunctionPrefix functionPrefix = (FunctionPrefix)theEObject;
 				T result = caseFunctionPrefix(functionPrefix);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.PARAMETERS: {
+			case LLVM_IRPackage.PARAMETERS:
+			{
 				Parameters parameters = (Parameters)theEObject;
 				T result = caseParameters(parameters);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION_ATTRIBUTES: {
+			case LLVM_IRPackage.FUNCTION_ATTRIBUTES:
+			{
 				FunctionAttributes functionAttributes = (FunctionAttributes)theEObject;
 				T result = caseFunctionAttributes(functionAttributes);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ALIGN_STACK: {
+			case LLVM_IRPackage.ALIGN_STACK:
+			{
 				AlignStack alignStack = (AlignStack)theEObject;
 				T result = caseAlignStack(alignStack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FUNCTION_ATTRIBUTE: {
+			case LLVM_IRPackage.FUNCTION_ATTRIBUTE:
+			{
 				FunctionAttribute functionAttribute = (FunctionAttribute)theEObject;
 				T result = caseFunctionAttribute(functionAttribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.BASIC_BLOCK: {
+			case LLVM_IRPackage.BASIC_BLOCK:
+			{
 				BasicBlock basicBlock = (BasicBlock)theEObject;
 				T result = caseBasicBlock(basicBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.METADATA_SUFFIX: {
+			case LLVM_IRPackage.METADATA_SUFFIX:
+			{
 				MetadataSuffix metadataSuffix = (MetadataSuffix)theEObject;
 				T result = caseMetadataSuffix(metadataSuffix);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.STARTING_INSTRUCTION: {
+			case LLVM_IRPackage.STARTING_INSTRUCTION:
+			{
 				StartingInstruction startingInstruction = (StartingInstruction)theEObject;
 				T result = caseStartingInstruction(startingInstruction);
 				if (result == null) result = caseNamedInstruction(startingInstruction);
@@ -462,14 +524,16 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.MIDDLE_INSTRUCTION: {
+			case LLVM_IRPackage.MIDDLE_INSTRUCTION:
+			{
 				MiddleInstruction middleInstruction = (MiddleInstruction)theEObject;
 				T result = caseMiddleInstruction(middleInstruction);
 				if (result == null) result = caseInstruction(middleInstruction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NAMED_MIDDLE_INSTRUCTION: {
+			case LLVM_IRPackage.NAMED_MIDDLE_INSTRUCTION:
+			{
 				NamedMiddleInstruction namedMiddleInstruction = (NamedMiddleInstruction)theEObject;
 				T result = caseNamedMiddleInstruction(namedMiddleInstruction);
 				if (result == null) result = caseNamedInstruction(namedMiddleInstruction);
@@ -479,14 +543,16 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TERMINATOR_INSTRUCTION: {
+			case LLVM_IRPackage.TERMINATOR_INSTRUCTION:
+			{
 				TerminatorInstruction terminatorInstruction = (TerminatorInstruction)theEObject;
 				T result = caseTerminatorInstruction(terminatorInstruction);
 				if (result == null) result = caseInstruction(terminatorInstruction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NAMED_TERMINATOR_INSTRUCTION: {
+			case LLVM_IRPackage.NAMED_TERMINATOR_INSTRUCTION:
+			{
 				NamedTerminatorInstruction namedTerminatorInstruction = (NamedTerminatorInstruction)theEObject;
 				T result = caseNamedTerminatorInstruction(namedTerminatorInstruction);
 				if (result == null) result = caseNamedInstruction(namedTerminatorInstruction);
@@ -496,7 +562,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_RET: {
+			case LLVM_IRPackage.INSTRUCTION_RET:
+			{
 				Instruction_ret instruction_ret = (Instruction_ret)theEObject;
 				T result = caseInstruction_ret(instruction_ret);
 				if (result == null) result = caseTerminatorInstruction(instruction_ret);
@@ -504,7 +571,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_BR: {
+			case LLVM_IRPackage.INSTRUCTION_BR:
+			{
 				Instruction_br instruction_br = (Instruction_br)theEObject;
 				T result = caseInstruction_br(instruction_br);
 				if (result == null) result = caseTerminatorInstruction(instruction_br);
@@ -512,7 +580,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SWITCH: {
+			case LLVM_IRPackage.INSTRUCTION_SWITCH:
+			{
 				Instruction_switch instruction_switch = (Instruction_switch)theEObject;
 				T result = caseInstruction_switch(instruction_switch);
 				if (result == null) result = caseTerminatorInstruction(instruction_switch);
@@ -520,7 +589,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR: {
+			case LLVM_IRPackage.INSTRUCTION_INDIRECTBR:
+			{
 				Instruction_indirectbr instruction_indirectbr = (Instruction_indirectbr)theEObject;
 				T result = caseInstruction_indirectbr(instruction_indirectbr);
 				if (result == null) result = caseTerminatorInstruction(instruction_indirectbr);
@@ -528,7 +598,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_INVOKE_VOID: {
+			case LLVM_IRPackage.INSTRUCTION_INVOKE_VOID:
+			{
 				Instruction_invoke_void instruction_invoke_void = (Instruction_invoke_void)theEObject;
 				T result = caseInstruction_invoke_void(instruction_invoke_void);
 				if (result == null) result = caseInstruction_invoke(instruction_invoke_void);
@@ -537,7 +608,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID: {
+			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID:
+			{
 				Instruction_invoke_nonVoid instruction_invoke_nonVoid = (Instruction_invoke_nonVoid)theEObject;
 				T result = caseInstruction_invoke_nonVoid(instruction_invoke_nonVoid);
 				if (result == null) result = caseInstruction_invoke(instruction_invoke_nonVoid);
@@ -549,7 +621,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_RESUME: {
+			case LLVM_IRPackage.INSTRUCTION_RESUME:
+			{
 				Instruction_resume instruction_resume = (Instruction_resume)theEObject;
 				T result = caseInstruction_resume(instruction_resume);
 				if (result == null) result = caseTerminatorInstruction(instruction_resume);
@@ -557,7 +630,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_UNREACHABLE: {
+			case LLVM_IRPackage.INSTRUCTION_UNREACHABLE:
+			{
 				Instruction_unreachable instruction_unreachable = (Instruction_unreachable)theEObject;
 				T result = caseInstruction_unreachable(instruction_unreachable);
 				if (result == null) result = caseTerminatorInstruction(instruction_unreachable);
@@ -565,13 +639,15 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.BASIC_BLOCK_REF: {
+			case LLVM_IRPackage.BASIC_BLOCK_REF:
+			{
 				BasicBlockRef basicBlockRef = (BasicBlockRef)theEObject;
 				T result = caseBasicBlockRef(basicBlockRef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.BINARY_INSTRUCTION: {
+			case LLVM_IRPackage.BINARY_INSTRUCTION:
+			{
 				BinaryInstruction binaryInstruction = (BinaryInstruction)theEObject;
 				T result = caseBinaryInstruction(binaryInstruction);
 				if (result == null) result = caseNamedMiddleInstruction(binaryInstruction);
@@ -582,7 +658,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_ADD: {
+			case LLVM_IRPackage.INSTRUCTION_ADD:
+			{
 				Instruction_add instruction_add = (Instruction_add)theEObject;
 				T result = caseInstruction_add(instruction_add);
 				if (result == null) result = caseBinaryInstruction(instruction_add);
@@ -594,7 +671,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FADD: {
+			case LLVM_IRPackage.INSTRUCTION_FADD:
+			{
 				Instruction_fadd instruction_fadd = (Instruction_fadd)theEObject;
 				T result = caseInstruction_fadd(instruction_fadd);
 				if (result == null) result = caseBinaryInstruction(instruction_fadd);
@@ -606,13 +684,15 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FAST_MATH_FLAG: {
+			case LLVM_IRPackage.FAST_MATH_FLAG:
+			{
 				FastMathFlag fastMathFlag = (FastMathFlag)theEObject;
 				T result = caseFastMathFlag(fastMathFlag);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SUB: {
+			case LLVM_IRPackage.INSTRUCTION_SUB:
+			{
 				Instruction_sub instruction_sub = (Instruction_sub)theEObject;
 				T result = caseInstruction_sub(instruction_sub);
 				if (result == null) result = caseBinaryInstruction(instruction_sub);
@@ -624,7 +704,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FSUB: {
+			case LLVM_IRPackage.INSTRUCTION_FSUB:
+			{
 				Instruction_fsub instruction_fsub = (Instruction_fsub)theEObject;
 				T result = caseInstruction_fsub(instruction_fsub);
 				if (result == null) result = caseBinaryInstruction(instruction_fsub);
@@ -636,7 +717,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_MUL: {
+			case LLVM_IRPackage.INSTRUCTION_MUL:
+			{
 				Instruction_mul instruction_mul = (Instruction_mul)theEObject;
 				T result = caseInstruction_mul(instruction_mul);
 				if (result == null) result = caseBinaryInstruction(instruction_mul);
@@ -648,7 +730,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FMUL: {
+			case LLVM_IRPackage.INSTRUCTION_FMUL:
+			{
 				Instruction_fmul instruction_fmul = (Instruction_fmul)theEObject;
 				T result = caseInstruction_fmul(instruction_fmul);
 				if (result == null) result = caseBinaryInstruction(instruction_fmul);
@@ -660,7 +743,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_UDIV: {
+			case LLVM_IRPackage.INSTRUCTION_UDIV:
+			{
 				Instruction_udiv instruction_udiv = (Instruction_udiv)theEObject;
 				T result = caseInstruction_udiv(instruction_udiv);
 				if (result == null) result = caseBinaryInstruction(instruction_udiv);
@@ -672,7 +756,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SDIV: {
+			case LLVM_IRPackage.INSTRUCTION_SDIV:
+			{
 				Instruction_sdiv instruction_sdiv = (Instruction_sdiv)theEObject;
 				T result = caseInstruction_sdiv(instruction_sdiv);
 				if (result == null) result = caseBinaryInstruction(instruction_sdiv);
@@ -684,7 +769,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FDIV: {
+			case LLVM_IRPackage.INSTRUCTION_FDIV:
+			{
 				Instruction_fdiv instruction_fdiv = (Instruction_fdiv)theEObject;
 				T result = caseInstruction_fdiv(instruction_fdiv);
 				if (result == null) result = caseBinaryInstruction(instruction_fdiv);
@@ -696,7 +782,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_UREM: {
+			case LLVM_IRPackage.INSTRUCTION_UREM:
+			{
 				Instruction_urem instruction_urem = (Instruction_urem)theEObject;
 				T result = caseInstruction_urem(instruction_urem);
 				if (result == null) result = caseBinaryInstruction(instruction_urem);
@@ -708,7 +795,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SREM: {
+			case LLVM_IRPackage.INSTRUCTION_SREM:
+			{
 				Instruction_srem instruction_srem = (Instruction_srem)theEObject;
 				T result = caseInstruction_srem(instruction_srem);
 				if (result == null) result = caseBinaryInstruction(instruction_srem);
@@ -720,7 +808,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FREM: {
+			case LLVM_IRPackage.INSTRUCTION_FREM:
+			{
 				Instruction_frem instruction_frem = (Instruction_frem)theEObject;
 				T result = caseInstruction_frem(instruction_frem);
 				if (result == null) result = caseBinaryInstruction(instruction_frem);
@@ -732,7 +821,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION: {
+			case LLVM_IRPackage.BITWISE_BINARY_INSTRUCTION:
+			{
 				BitwiseBinaryInstruction bitwiseBinaryInstruction = (BitwiseBinaryInstruction)theEObject;
 				T result = caseBitwiseBinaryInstruction(bitwiseBinaryInstruction);
 				if (result == null) result = caseNamedMiddleInstruction(bitwiseBinaryInstruction);
@@ -743,7 +833,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SHL: {
+			case LLVM_IRPackage.INSTRUCTION_SHL:
+			{
 				Instruction_shl instruction_shl = (Instruction_shl)theEObject;
 				T result = caseInstruction_shl(instruction_shl);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_shl);
@@ -755,7 +846,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_LSHR: {
+			case LLVM_IRPackage.INSTRUCTION_LSHR:
+			{
 				Instruction_lshr instruction_lshr = (Instruction_lshr)theEObject;
 				T result = caseInstruction_lshr(instruction_lshr);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_lshr);
@@ -767,7 +859,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_ASHR: {
+			case LLVM_IRPackage.INSTRUCTION_ASHR:
+			{
 				Instruction_ashr instruction_ashr = (Instruction_ashr)theEObject;
 				T result = caseInstruction_ashr(instruction_ashr);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_ashr);
@@ -779,7 +872,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_AND: {
+			case LLVM_IRPackage.INSTRUCTION_AND:
+			{
 				Instruction_and instruction_and = (Instruction_and)theEObject;
 				T result = caseInstruction_and(instruction_and);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_and);
@@ -791,7 +885,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_OR: {
+			case LLVM_IRPackage.INSTRUCTION_OR:
+			{
 				Instruction_or instruction_or = (Instruction_or)theEObject;
 				T result = caseInstruction_or(instruction_or);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_or);
@@ -803,7 +898,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_XOR: {
+			case LLVM_IRPackage.INSTRUCTION_XOR:
+			{
 				Instruction_xor instruction_xor = (Instruction_xor)theEObject;
 				T result = caseInstruction_xor(instruction_xor);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_xor);
@@ -815,7 +911,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.VECTOR_INSTRUCTIONS: {
+			case LLVM_IRPackage.VECTOR_INSTRUCTIONS:
+			{
 				VectorInstructions vectorInstructions = (VectorInstructions)theEObject;
 				T result = caseVectorInstructions(vectorInstructions);
 				if (result == null) result = caseNamedMiddleInstruction(vectorInstructions);
@@ -826,7 +923,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT: {
+			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT:
+			{
 				Instruction_extractelement instruction_extractelement = (Instruction_extractelement)theEObject;
 				T result = caseInstruction_extractelement(instruction_extractelement);
 				if (result == null) result = caseVectorInstructions(instruction_extractelement);
@@ -838,7 +936,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT: {
+			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT:
+			{
 				Instruction_insertelement instruction_insertelement = (Instruction_insertelement)theEObject;
 				T result = caseInstruction_insertelement(instruction_insertelement);
 				if (result == null) result = caseVectorInstructions(instruction_insertelement);
@@ -850,7 +949,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR: {
+			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR:
+			{
 				Instruction_shufflevector instruction_shufflevector = (Instruction_shufflevector)theEObject;
 				T result = caseInstruction_shufflevector(instruction_shufflevector);
 				if (result == null) result = caseVectorInstructions(instruction_shufflevector);
@@ -862,7 +962,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.AGGREGATE_INSTRUCTION: {
+			case LLVM_IRPackage.AGGREGATE_INSTRUCTION:
+			{
 				AggregateInstruction aggregateInstruction = (AggregateInstruction)theEObject;
 				T result = caseAggregateInstruction(aggregateInstruction);
 				if (result == null) result = caseNamedMiddleInstruction(aggregateInstruction);
@@ -873,7 +974,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_EXTRACTVALUE: {
+			case LLVM_IRPackage.INSTRUCTION_EXTRACTVALUE:
+			{
 				Instruction_extractvalue instruction_extractvalue = (Instruction_extractvalue)theEObject;
 				T result = caseInstruction_extractvalue(instruction_extractvalue);
 				if (result == null) result = caseAggregateInstruction(instruction_extractvalue);
@@ -885,7 +987,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE: {
+			case LLVM_IRPackage.INSTRUCTION_INSERTVALUE:
+			{
 				Instruction_insertvalue instruction_insertvalue = (Instruction_insertvalue)theEObject;
 				T result = caseInstruction_insertvalue(instruction_insertvalue);
 				if (result == null) result = caseAggregateInstruction(instruction_insertvalue);
@@ -897,7 +1000,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_ALLOCA: {
+			case LLVM_IRPackage.INSTRUCTION_ALLOCA:
+			{
 				Instruction_alloca instruction_alloca = (Instruction_alloca)theEObject;
 				T result = caseInstruction_alloca(instruction_alloca);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_alloca);
@@ -908,7 +1012,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_LOAD: {
+			case LLVM_IRPackage.INSTRUCTION_LOAD:
+			{
 				Instruction_load instruction_load = (Instruction_load)theEObject;
 				T result = caseInstruction_load(instruction_load);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_load);
@@ -919,7 +1024,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_STORE: {
+			case LLVM_IRPackage.INSTRUCTION_STORE:
+			{
 				Instruction_store instruction_store = (Instruction_store)theEObject;
 				T result = caseInstruction_store(instruction_store);
 				if (result == null) result = caseMiddleInstruction(instruction_store);
@@ -927,7 +1033,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FENCE: {
+			case LLVM_IRPackage.INSTRUCTION_FENCE:
+			{
 				Instruction_fence instruction_fence = (Instruction_fence)theEObject;
 				T result = caseInstruction_fence(instruction_fence);
 				if (result == null) result = caseMiddleInstruction(instruction_fence);
@@ -935,7 +1042,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_CMPXCHG: {
+			case LLVM_IRPackage.INSTRUCTION_CMPXCHG:
+			{
 				Instruction_cmpxchg instruction_cmpxchg = (Instruction_cmpxchg)theEObject;
 				T result = caseInstruction_cmpxchg(instruction_cmpxchg);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_cmpxchg);
@@ -946,7 +1054,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_ATOMICRMW: {
+			case LLVM_IRPackage.INSTRUCTION_ATOMICRMW:
+			{
 				Instruction_atomicrmw instruction_atomicrmw = (Instruction_atomicrmw)theEObject;
 				T result = caseInstruction_atomicrmw(instruction_atomicrmw);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_atomicrmw);
@@ -957,7 +1066,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR: {
+			case LLVM_IRPackage.INSTRUCTION_GETELEMENTPTR:
+			{
 				Instruction_getelementptr instruction_getelementptr = (Instruction_getelementptr)theEObject;
 				T result = caseInstruction_getelementptr(instruction_getelementptr);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_getelementptr);
@@ -968,7 +1078,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CONVERSION_INSTRUCTION: {
+			case LLVM_IRPackage.CONVERSION_INSTRUCTION:
+			{
 				ConversionInstruction conversionInstruction = (ConversionInstruction)theEObject;
 				T result = caseConversionInstruction(conversionInstruction);
 				if (result == null) result = caseNamedMiddleInstruction(conversionInstruction);
@@ -979,7 +1090,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.OTHER_INSTRUCTION: {
+			case LLVM_IRPackage.OTHER_INSTRUCTION:
+			{
 				OtherInstruction otherInstruction = (OtherInstruction)theEObject;
 				T result = caseOtherInstruction(otherInstruction);
 				if (result == null) result = caseNamedMiddleInstruction(otherInstruction);
@@ -990,7 +1102,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_ICMP: {
+			case LLVM_IRPackage.INSTRUCTION_ICMP:
+			{
 				Instruction_icmp instruction_icmp = (Instruction_icmp)theEObject;
 				T result = caseInstruction_icmp(instruction_icmp);
 				if (result == null) result = caseOtherInstruction(instruction_icmp);
@@ -1002,7 +1115,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_FCMP: {
+			case LLVM_IRPackage.INSTRUCTION_FCMP:
+			{
 				Instruction_fcmp instruction_fcmp = (Instruction_fcmp)theEObject;
 				T result = caseInstruction_fcmp(instruction_fcmp);
 				if (result == null) result = caseOtherInstruction(instruction_fcmp);
@@ -1014,7 +1128,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_PHI: {
+			case LLVM_IRPackage.INSTRUCTION_PHI:
+			{
 				Instruction_phi instruction_phi = (Instruction_phi)theEObject;
 				T result = caseInstruction_phi(instruction_phi);
 				if (result == null) result = caseStartingInstruction(instruction_phi);
@@ -1024,7 +1139,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_SELECT: {
+			case LLVM_IRPackage.INSTRUCTION_SELECT:
+			{
 				Instruction_select instruction_select = (Instruction_select)theEObject;
 				T result = caseInstruction_select(instruction_select);
 				if (result == null) result = caseOtherInstruction(instruction_select);
@@ -1036,7 +1152,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_CALL: {
+			case LLVM_IRPackage.INSTRUCTION_CALL:
+			{
 				Instruction_call instruction_call = (Instruction_call)theEObject;
 				T result = caseInstruction_call(instruction_call);
 				if (result == null) result = caseMiddleInstruction(instruction_call);
@@ -1044,7 +1161,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_CALL_NON_VOID: {
+			case LLVM_IRPackage.INSTRUCTION_CALL_NON_VOID:
+			{
 				Instruction_call_nonVoid instruction_call_nonVoid = (Instruction_call_nonVoid)theEObject;
 				T result = caseInstruction_call_nonVoid(instruction_call_nonVoid);
 				if (result == null) result = caseInstruction_call(instruction_call_nonVoid);
@@ -1056,7 +1174,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_CALL_VOID: {
+			case LLVM_IRPackage.INSTRUCTION_CALL_VOID:
+			{
 				Instruction_call_void instruction_call_void = (Instruction_call_void)theEObject;
 				T result = caseInstruction_call_void(instruction_call_void);
 				if (result == null) result = caseInstruction_call(instruction_call_void);
@@ -1065,26 +1184,30 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ARG_LIST: {
+			case LLVM_IRPackage.ARG_LIST:
+			{
 				ArgList argList = (ArgList)theEObject;
 				T result = caseArgList(argList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CALLEE: {
+			case LLVM_IRPackage.CALLEE:
+			{
 				Callee callee = (Callee)theEObject;
 				T result = caseCallee(callee);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INLINE_ASSEMBLER: {
+			case LLVM_IRPackage.INLINE_ASSEMBLER:
+			{
 				InlineAssembler inlineAssembler = (InlineAssembler)theEObject;
 				T result = caseInlineAssembler(inlineAssembler);
 				if (result == null) result = caseCallee(inlineAssembler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_VA_ARG: {
+			case LLVM_IRPackage.INSTRUCTION_VA_ARG:
+			{
 				Instruction_va_arg instruction_va_arg = (Instruction_va_arg)theEObject;
 				T result = caseInstruction_va_arg(instruction_va_arg);
 				if (result == null) result = caseOtherInstruction(instruction_va_arg);
@@ -1096,7 +1219,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD: {
+			case LLVM_IRPackage.INSTRUCTION_LANDINGPAD:
+			{
 				Instruction_landingpad instruction_landingpad = (Instruction_landingpad)theEObject;
 				T result = caseInstruction_landingpad(instruction_landingpad);
 				if (result == null) result = caseOtherInstruction(instruction_landingpad);
@@ -1108,147 +1232,171 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.LANDINGPAD_CLAUSE: {
+			case LLVM_IRPackage.LANDINGPAD_CLAUSE:
+			{
 				LandingpadClause landingpadClause = (LandingpadClause)theEObject;
 				T result = caseLandingpadClause(landingpadClause);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TYPED_VALUE: {
+			case LLVM_IRPackage.TYPED_VALUE:
+			{
 				TypedValue typedValue = (TypedValue)theEObject;
 				T result = caseTypedValue(typedValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.PARAMETER_TYPE: {
+			case LLVM_IRPackage.PARAMETER_TYPE:
+			{
 				ParameterType parameterType = (ParameterType)theEObject;
 				T result = caseParameterType(parameterType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.PARAMETER_ATTRIBUTES: {
+			case LLVM_IRPackage.PARAMETER_ATTRIBUTES:
+			{
 				ParameterAttributes parameterAttributes = (ParameterAttributes)theEObject;
 				T result = caseParameterAttributes(parameterAttributes);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ARGUMENT: {
+			case LLVM_IRPackage.ARGUMENT:
+			{
 				Argument argument = (Argument)theEObject;
 				T result = caseArgument(argument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.PARAMETER: {
+			case LLVM_IRPackage.PARAMETER:
+			{
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
 				if (result == null) result = caseLocalValue(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NON_VOID_TYPE: {
+			case LLVM_IRPackage.NON_VOID_TYPE:
+			{
 				NonVoidType nonVoidType = (NonVoidType)theEObject;
 				T result = caseNonVoidType(nonVoidType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.STAR: {
+			case LLVM_IRPackage.STAR:
+			{
 				Star star = (Star)theEObject;
 				T result = caseStar(star);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TYPE: {
+			case LLVM_IRPackage.TYPE:
+			{
 				Type type = (Type)theEObject;
 				T result = caseType(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TYPE_SUFFIX: {
+			case LLVM_IRPackage.TYPE_SUFFIX:
+			{
 				TypeSuffix typeSuffix = (TypeSuffix)theEObject;
 				T result = caseTypeSuffix(typeSuffix);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE: {
+			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE:
+			{
 				NonLeftRecursiveType nonLeftRecursiveType = (NonLeftRecursiveType)theEObject;
 				T result = caseNonLeftRecursiveType(nonLeftRecursiveType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.NON_LEFT_RECURSIVE_NON_VOID_TYPE: {
+			case LLVM_IRPackage.NON_LEFT_RECURSIVE_NON_VOID_TYPE:
+			{
 				NonLeftRecursiveNonVoidType nonLeftRecursiveNonVoidType = (NonLeftRecursiveNonVoidType)theEObject;
 				T result = caseNonLeftRecursiveNonVoidType(nonLeftRecursiveNonVoidType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.TYPE_DEF: {
+			case LLVM_IRPackage.TYPE_DEF:
+			{
 				TypeDef typeDef = (TypeDef)theEObject;
 				T result = caseTypeDef(typeDef);
 				if (result == null) result = caseTopLevelElement(typeDef);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INT_TYPE: {
+			case LLVM_IRPackage.INT_TYPE:
+			{
 				IntType intType = (IntType)theEObject;
 				T result = caseIntType(intType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.OPAQUE_TYPE: {
+			case LLVM_IRPackage.OPAQUE_TYPE:
+			{
 				OpaqueType opaqueType = (OpaqueType)theEObject;
 				T result = caseOpaqueType(opaqueType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.STRUCT_TYPE: {
+			case LLVM_IRPackage.STRUCT_TYPE:
+			{
 				StructType structType = (StructType)theEObject;
 				T result = caseStructType(structType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.VECTOR_TYPE: {
+			case LLVM_IRPackage.VECTOR_TYPE:
+			{
 				VectorType vectorType = (VectorType)theEObject;
 				T result = caseVectorType(vectorType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.ARRAY_TYPE: {
+			case LLVM_IRPackage.ARRAY_TYPE:
+			{
 				ArrayType arrayType = (ArrayType)theEObject;
 				T result = caseArrayType(arrayType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.X8_6MMX_TYPE: {
+			case LLVM_IRPackage.X8_6MMX_TYPE:
+			{
 				X86mmxType x86mmxType = (X86mmxType)theEObject;
 				T result = caseX86mmxType(x86mmxType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.VOID_TYPE: {
+			case LLVM_IRPackage.VOID_TYPE:
+			{
 				VoidType voidType = (VoidType)theEObject;
 				T result = caseVoidType(voidType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.METADATA_TYPE: {
+			case LLVM_IRPackage.METADATA_TYPE:
+			{
 				MetadataType metadataType = (MetadataType)theEObject;
 				T result = caseMetadataType(metadataType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.FLOATING_TYPE: {
+			case LLVM_IRPackage.FLOATING_TYPE:
+			{
 				FloatingType floatingType = (FloatingType)theEObject;
 				T result = caseFloatingType(floatingType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.CCONV: {
+			case LLVM_IRPackage.CCONV:
+			{
 				CConv cConv = (CConv)theEObject;
 				T result = caseCConv(cConv);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.INSTRUCTION_INVOKE: {
+			case LLVM_IRPackage.INSTRUCTION_INVOKE:
+			{
 				Instruction_invoke instruction_invoke = (Instruction_invoke)theEObject;
 				T result = caseInstruction_invoke(instruction_invoke);
 				if (result == null) result = caseTerminatorInstruction(instruction_invoke);
@@ -1271,7 +1419,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseModel(Model object) {
+	public T caseModel(Model object)
+	{
 		return null;
 	}
 
@@ -1286,7 +1435,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTopLevelElement(TopLevelElement object) {
+	public T caseTopLevelElement(TopLevelElement object)
+	{
 		return null;
 	}
 
@@ -1301,7 +1451,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttributeGroup(AttributeGroup object) {
+	public T caseAttributeGroup(AttributeGroup object)
+	{
 		return null;
 	}
 
@@ -1316,7 +1467,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTargetSpecificAttribute(TargetSpecificAttribute object) {
+	public T caseTargetSpecificAttribute(TargetSpecificAttribute object)
+	{
 		return null;
 	}
 
@@ -1331,7 +1483,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedMetadata(NamedMetadata object) {
+	public T caseNamedMetadata(NamedMetadata object)
+	{
 		return null;
 	}
 
@@ -1346,7 +1499,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetadataRef(MetadataRef object) {
+	public T caseMetadataRef(MetadataRef object)
+	{
 		return null;
 	}
 
@@ -1361,7 +1515,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValueRef(ValueRef object) {
+	public T caseValueRef(ValueRef object)
+	{
 		return null;
 	}
 
@@ -1376,7 +1531,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGlobalValueRef(GlobalValueRef object) {
+	public T caseGlobalValueRef(GlobalValueRef object)
+	{
 		return null;
 	}
 
@@ -1391,7 +1547,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLocalValueRef(LocalValueRef object) {
+	public T caseLocalValueRef(LocalValueRef object)
+	{
 		return null;
 	}
 
@@ -1406,7 +1563,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGlobalValue(GlobalValue object) {
+	public T caseGlobalValue(GlobalValue object)
+	{
 		return null;
 	}
 
@@ -1421,7 +1579,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGlobalValueDef(GlobalValueDef object) {
+	public T caseGlobalValueDef(GlobalValueDef object)
+	{
 		return null;
 	}
 
@@ -1436,7 +1595,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLocalValue(LocalValue object) {
+	public T caseLocalValue(LocalValue object)
+	{
 		return null;
 	}
 
@@ -1451,7 +1611,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedInstruction(NamedInstruction object) {
+	public T caseNamedInstruction(NamedInstruction object)
+	{
 		return null;
 	}
 
@@ -1466,7 +1627,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction(Instruction object) {
+	public T caseInstruction(Instruction object)
+	{
 		return null;
 	}
 
@@ -1481,7 +1643,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAlias(Alias object) {
+	public T caseAlias(Alias object)
+	{
 		return null;
 	}
 
@@ -1496,7 +1659,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAliasee(Aliasee object) {
+	public T caseAliasee(Aliasee object)
+	{
 		return null;
 	}
 
@@ -1511,7 +1675,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTargetInfo(TargetInfo object) {
+	public T caseTargetInfo(TargetInfo object)
+	{
 		return null;
 	}
 
@@ -1526,7 +1691,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInlineAsm(InlineAsm object) {
+	public T caseInlineAsm(InlineAsm object)
+	{
 		return null;
 	}
 
@@ -1541,7 +1707,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGlobalVariable(GlobalVariable object) {
+	public T caseGlobalVariable(GlobalVariable object)
+	{
 		return null;
 	}
 
@@ -1556,7 +1723,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstant(Constant object) {
+	public T caseConstant(Constant object)
+	{
 		return null;
 	}
 
@@ -1571,7 +1739,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression(ConstantExpression object) {
+	public T caseConstantExpression(ConstantExpression object)
+	{
 		return null;
 	}
 
@@ -1586,7 +1755,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_convert(ConstantExpression_convert object) {
+	public T caseConstantExpression_convert(ConstantExpression_convert object)
+	{
 		return null;
 	}
 
@@ -1601,7 +1771,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_getelementptr(ConstantExpression_getelementptr object) {
+	public T caseConstantExpression_getelementptr(ConstantExpression_getelementptr object)
+	{
 		return null;
 	}
 
@@ -1616,7 +1787,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_select(ConstantExpression_select object) {
+	public T caseConstantExpression_select(ConstantExpression_select object)
+	{
 		return null;
 	}
 
@@ -1631,7 +1803,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_compare(ConstantExpression_compare object) {
+	public T caseConstantExpression_compare(ConstantExpression_compare object)
+	{
 		return null;
 	}
 
@@ -1646,7 +1819,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_extractelement(ConstantExpression_extractelement object) {
+	public T caseConstantExpression_extractelement(ConstantExpression_extractelement object)
+	{
 		return null;
 	}
 
@@ -1661,7 +1835,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_insertelement(ConstantExpression_insertelement object) {
+	public T caseConstantExpression_insertelement(ConstantExpression_insertelement object)
+	{
 		return null;
 	}
 
@@ -1676,7 +1851,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_shufflevector(ConstantExpression_shufflevector object) {
+	public T caseConstantExpression_shufflevector(ConstantExpression_shufflevector object)
+	{
 		return null;
 	}
 
@@ -1691,7 +1867,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_extractvalue(ConstantExpression_extractvalue object) {
+	public T caseConstantExpression_extractvalue(ConstantExpression_extractvalue object)
+	{
 		return null;
 	}
 
@@ -1706,7 +1883,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_insertvalue(ConstantExpression_insertvalue object) {
+	public T caseConstantExpression_insertvalue(ConstantExpression_insertvalue object)
+	{
 		return null;
 	}
 
@@ -1721,7 +1899,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantExpression_binary(ConstantExpression_binary object) {
+	public T caseConstantExpression_binary(ConstantExpression_binary object)
+	{
 		return null;
 	}
 
@@ -1736,7 +1915,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUndef(Undef object) {
+	public T caseUndef(Undef object)
+	{
 		return null;
 	}
 
@@ -1751,7 +1931,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBlockAddress(BlockAddress object) {
+	public T caseBlockAddress(BlockAddress object)
+	{
 		return null;
 	}
 
@@ -1766,7 +1947,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseZeroInitializer(ZeroInitializer object) {
+	public T caseZeroInitializer(ZeroInitializer object)
+	{
 		return null;
 	}
 
@@ -1781,7 +1963,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStructureConstant(StructureConstant object) {
+	public T caseStructureConstant(StructureConstant object)
+	{
 		return null;
 	}
 
@@ -1796,7 +1979,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArrayConstant(ArrayConstant object) {
+	public T caseArrayConstant(ArrayConstant object)
+	{
 		return null;
 	}
 
@@ -1811,7 +1995,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVectorConstant(VectorConstant object) {
+	public T caseVectorConstant(VectorConstant object)
+	{
 		return null;
 	}
 
@@ -1826,7 +2011,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConstantList(ConstantList object) {
+	public T caseConstantList(ConstantList object)
+	{
 		return null;
 	}
 
@@ -1841,7 +2027,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypedConstant(TypedConstant object) {
+	public T caseTypedConstant(TypedConstant object)
+	{
 		return null;
 	}
 
@@ -1856,7 +2043,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSimpleConstant(SimpleConstant object) {
+	public T caseSimpleConstant(SimpleConstant object)
+	{
 		return null;
 	}
 
@@ -1871,7 +2059,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetadataNode(MetadataNode object) {
+	public T caseMetadataNode(MetadataNode object)
+	{
 		return null;
 	}
 
@@ -1886,7 +2075,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetadataNodeElement(MetadataNodeElement object) {
+	public T caseMetadataNodeElement(MetadataNodeElement object)
+	{
 		return null;
 	}
 
@@ -1901,7 +2091,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetadataString(MetadataString object) {
+	public T caseMetadataString(MetadataString object)
+	{
 		return null;
 	}
 
@@ -1916,7 +2107,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAddressSpace(AddressSpace object) {
+	public T caseAddressSpace(AddressSpace object)
+	{
 		return null;
 	}
 
@@ -1931,7 +2123,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunction(Function object) {
+	public T caseFunction(Function object)
+	{
 		return null;
 	}
 
@@ -1946,7 +2139,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionDef(FunctionDef object) {
+	public T caseFunctionDef(FunctionDef object)
+	{
 		return null;
 	}
 
@@ -1961,7 +2155,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionDecl(FunctionDecl object) {
+	public T caseFunctionDecl(FunctionDecl object)
+	{
 		return null;
 	}
 
@@ -1976,7 +2171,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionHeader(FunctionHeader object) {
+	public T caseFunctionHeader(FunctionHeader object)
+	{
 		return null;
 	}
 
@@ -1991,7 +2187,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionPrefix(FunctionPrefix object) {
+	public T caseFunctionPrefix(FunctionPrefix object)
+	{
 		return null;
 	}
 
@@ -2006,7 +2203,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameters(Parameters object) {
+	public T caseParameters(Parameters object)
+	{
 		return null;
 	}
 
@@ -2021,7 +2219,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionAttributes(FunctionAttributes object) {
+	public T caseFunctionAttributes(FunctionAttributes object)
+	{
 		return null;
 	}
 
@@ -2036,7 +2235,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAlignStack(AlignStack object) {
+	public T caseAlignStack(AlignStack object)
+	{
 		return null;
 	}
 
@@ -2051,7 +2251,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionAttribute(FunctionAttribute object) {
+	public T caseFunctionAttribute(FunctionAttribute object)
+	{
 		return null;
 	}
 
@@ -2066,7 +2267,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBasicBlock(BasicBlock object) {
+	public T caseBasicBlock(BasicBlock object)
+	{
 		return null;
 	}
 
@@ -2081,7 +2283,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetadataSuffix(MetadataSuffix object) {
+	public T caseMetadataSuffix(MetadataSuffix object)
+	{
 		return null;
 	}
 
@@ -2096,7 +2299,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStartingInstruction(StartingInstruction object) {
+	public T caseStartingInstruction(StartingInstruction object)
+	{
 		return null;
 	}
 
@@ -2111,7 +2315,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMiddleInstruction(MiddleInstruction object) {
+	public T caseMiddleInstruction(MiddleInstruction object)
+	{
 		return null;
 	}
 
@@ -2126,7 +2331,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedMiddleInstruction(NamedMiddleInstruction object) {
+	public T caseNamedMiddleInstruction(NamedMiddleInstruction object)
+	{
 		return null;
 	}
 
@@ -2141,7 +2347,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTerminatorInstruction(TerminatorInstruction object) {
+	public T caseTerminatorInstruction(TerminatorInstruction object)
+	{
 		return null;
 	}
 
@@ -2156,7 +2363,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedTerminatorInstruction(NamedTerminatorInstruction object) {
+	public T caseNamedTerminatorInstruction(NamedTerminatorInstruction object)
+	{
 		return null;
 	}
 
@@ -2171,7 +2379,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_ret(Instruction_ret object) {
+	public T caseInstruction_ret(Instruction_ret object)
+	{
 		return null;
 	}
 
@@ -2186,7 +2395,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_br(Instruction_br object) {
+	public T caseInstruction_br(Instruction_br object)
+	{
 		return null;
 	}
 
@@ -2201,7 +2411,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_switch(Instruction_switch object) {
+	public T caseInstruction_switch(Instruction_switch object)
+	{
 		return null;
 	}
 
@@ -2216,7 +2427,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_indirectbr(Instruction_indirectbr object) {
+	public T caseInstruction_indirectbr(Instruction_indirectbr object)
+	{
 		return null;
 	}
 
@@ -2231,7 +2443,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_invoke_void(Instruction_invoke_void object) {
+	public T caseInstruction_invoke_void(Instruction_invoke_void object)
+	{
 		return null;
 	}
 
@@ -2246,7 +2459,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_invoke_nonVoid(Instruction_invoke_nonVoid object) {
+	public T caseInstruction_invoke_nonVoid(Instruction_invoke_nonVoid object)
+	{
 		return null;
 	}
 
@@ -2261,7 +2475,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_resume(Instruction_resume object) {
+	public T caseInstruction_resume(Instruction_resume object)
+	{
 		return null;
 	}
 
@@ -2276,7 +2491,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_unreachable(Instruction_unreachable object) {
+	public T caseInstruction_unreachable(Instruction_unreachable object)
+	{
 		return null;
 	}
 
@@ -2291,7 +2507,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBasicBlockRef(BasicBlockRef object) {
+	public T caseBasicBlockRef(BasicBlockRef object)
+	{
 		return null;
 	}
 
@@ -2306,7 +2523,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBinaryInstruction(BinaryInstruction object) {
+	public T caseBinaryInstruction(BinaryInstruction object)
+	{
 		return null;
 	}
 
@@ -2321,7 +2539,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_add(Instruction_add object) {
+	public T caseInstruction_add(Instruction_add object)
+	{
 		return null;
 	}
 
@@ -2336,7 +2555,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_fadd(Instruction_fadd object) {
+	public T caseInstruction_fadd(Instruction_fadd object)
+	{
 		return null;
 	}
 
@@ -2351,7 +2571,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFastMathFlag(FastMathFlag object) {
+	public T caseFastMathFlag(FastMathFlag object)
+	{
 		return null;
 	}
 
@@ -2366,7 +2587,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_sub(Instruction_sub object) {
+	public T caseInstruction_sub(Instruction_sub object)
+	{
 		return null;
 	}
 
@@ -2381,7 +2603,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_fsub(Instruction_fsub object) {
+	public T caseInstruction_fsub(Instruction_fsub object)
+	{
 		return null;
 	}
 
@@ -2396,7 +2619,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_mul(Instruction_mul object) {
+	public T caseInstruction_mul(Instruction_mul object)
+	{
 		return null;
 	}
 
@@ -2411,7 +2635,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_fmul(Instruction_fmul object) {
+	public T caseInstruction_fmul(Instruction_fmul object)
+	{
 		return null;
 	}
 
@@ -2426,7 +2651,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_udiv(Instruction_udiv object) {
+	public T caseInstruction_udiv(Instruction_udiv object)
+	{
 		return null;
 	}
 
@@ -2441,7 +2667,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_sdiv(Instruction_sdiv object) {
+	public T caseInstruction_sdiv(Instruction_sdiv object)
+	{
 		return null;
 	}
 
@@ -2456,7 +2683,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_fdiv(Instruction_fdiv object) {
+	public T caseInstruction_fdiv(Instruction_fdiv object)
+	{
 		return null;
 	}
 
@@ -2471,7 +2699,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_urem(Instruction_urem object) {
+	public T caseInstruction_urem(Instruction_urem object)
+	{
 		return null;
 	}
 
@@ -2486,7 +2715,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_srem(Instruction_srem object) {
+	public T caseInstruction_srem(Instruction_srem object)
+	{
 		return null;
 	}
 
@@ -2501,7 +2731,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_frem(Instruction_frem object) {
+	public T caseInstruction_frem(Instruction_frem object)
+	{
 		return null;
 	}
 
@@ -2516,7 +2747,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBitwiseBinaryInstruction(BitwiseBinaryInstruction object) {
+	public T caseBitwiseBinaryInstruction(BitwiseBinaryInstruction object)
+	{
 		return null;
 	}
 
@@ -2531,7 +2763,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_shl(Instruction_shl object) {
+	public T caseInstruction_shl(Instruction_shl object)
+	{
 		return null;
 	}
 
@@ -2546,7 +2779,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_lshr(Instruction_lshr object) {
+	public T caseInstruction_lshr(Instruction_lshr object)
+	{
 		return null;
 	}
 
@@ -2561,7 +2795,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_ashr(Instruction_ashr object) {
+	public T caseInstruction_ashr(Instruction_ashr object)
+	{
 		return null;
 	}
 
@@ -2576,7 +2811,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_and(Instruction_and object) {
+	public T caseInstruction_and(Instruction_and object)
+	{
 		return null;
 	}
 
@@ -2591,7 +2827,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_or(Instruction_or object) {
+	public T caseInstruction_or(Instruction_or object)
+	{
 		return null;
 	}
 
@@ -2606,7 +2843,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_xor(Instruction_xor object) {
+	public T caseInstruction_xor(Instruction_xor object)
+	{
 		return null;
 	}
 
@@ -2621,7 +2859,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVectorInstructions(VectorInstructions object) {
+	public T caseVectorInstructions(VectorInstructions object)
+	{
 		return null;
 	}
 
@@ -2636,7 +2875,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_extractelement(Instruction_extractelement object) {
+	public T caseInstruction_extractelement(Instruction_extractelement object)
+	{
 		return null;
 	}
 
@@ -2651,7 +2891,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_insertelement(Instruction_insertelement object) {
+	public T caseInstruction_insertelement(Instruction_insertelement object)
+	{
 		return null;
 	}
 
@@ -2666,7 +2907,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_shufflevector(Instruction_shufflevector object) {
+	public T caseInstruction_shufflevector(Instruction_shufflevector object)
+	{
 		return null;
 	}
 
@@ -2681,7 +2923,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAggregateInstruction(AggregateInstruction object) {
+	public T caseAggregateInstruction(AggregateInstruction object)
+	{
 		return null;
 	}
 
@@ -2696,7 +2939,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_extractvalue(Instruction_extractvalue object) {
+	public T caseInstruction_extractvalue(Instruction_extractvalue object)
+	{
 		return null;
 	}
 
@@ -2711,7 +2955,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_insertvalue(Instruction_insertvalue object) {
+	public T caseInstruction_insertvalue(Instruction_insertvalue object)
+	{
 		return null;
 	}
 
@@ -2726,7 +2971,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_alloca(Instruction_alloca object) {
+	public T caseInstruction_alloca(Instruction_alloca object)
+	{
 		return null;
 	}
 
@@ -2741,7 +2987,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_load(Instruction_load object) {
+	public T caseInstruction_load(Instruction_load object)
+	{
 		return null;
 	}
 
@@ -2756,7 +3003,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_store(Instruction_store object) {
+	public T caseInstruction_store(Instruction_store object)
+	{
 		return null;
 	}
 
@@ -2771,7 +3019,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_fence(Instruction_fence object) {
+	public T caseInstruction_fence(Instruction_fence object)
+	{
 		return null;
 	}
 
@@ -2786,7 +3035,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_cmpxchg(Instruction_cmpxchg object) {
+	public T caseInstruction_cmpxchg(Instruction_cmpxchg object)
+	{
 		return null;
 	}
 
@@ -2801,7 +3051,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_atomicrmw(Instruction_atomicrmw object) {
+	public T caseInstruction_atomicrmw(Instruction_atomicrmw object)
+	{
 		return null;
 	}
 
@@ -2816,7 +3067,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_getelementptr(Instruction_getelementptr object) {
+	public T caseInstruction_getelementptr(Instruction_getelementptr object)
+	{
 		return null;
 	}
 
@@ -2831,7 +3083,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConversionInstruction(ConversionInstruction object) {
+	public T caseConversionInstruction(ConversionInstruction object)
+	{
 		return null;
 	}
 
@@ -2846,7 +3099,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOtherInstruction(OtherInstruction object) {
+	public T caseOtherInstruction(OtherInstruction object)
+	{
 		return null;
 	}
 
@@ -2861,7 +3115,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_icmp(Instruction_icmp object) {
+	public T caseInstruction_icmp(Instruction_icmp object)
+	{
 		return null;
 	}
 
@@ -2876,7 +3131,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_fcmp(Instruction_fcmp object) {
+	public T caseInstruction_fcmp(Instruction_fcmp object)
+	{
 		return null;
 	}
 
@@ -2891,7 +3147,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_phi(Instruction_phi object) {
+	public T caseInstruction_phi(Instruction_phi object)
+	{
 		return null;
 	}
 
@@ -2906,7 +3163,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_select(Instruction_select object) {
+	public T caseInstruction_select(Instruction_select object)
+	{
 		return null;
 	}
 
@@ -2921,7 +3179,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_call(Instruction_call object) {
+	public T caseInstruction_call(Instruction_call object)
+	{
 		return null;
 	}
 
@@ -2936,7 +3195,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_call_nonVoid(Instruction_call_nonVoid object) {
+	public T caseInstruction_call_nonVoid(Instruction_call_nonVoid object)
+	{
 		return null;
 	}
 
@@ -2951,7 +3211,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_call_void(Instruction_call_void object) {
+	public T caseInstruction_call_void(Instruction_call_void object)
+	{
 		return null;
 	}
 
@@ -2966,7 +3227,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArgList(ArgList object) {
+	public T caseArgList(ArgList object)
+	{
 		return null;
 	}
 
@@ -2981,7 +3243,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCallee(Callee object) {
+	public T caseCallee(Callee object)
+	{
 		return null;
 	}
 
@@ -2996,7 +3259,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInlineAssembler(InlineAssembler object) {
+	public T caseInlineAssembler(InlineAssembler object)
+	{
 		return null;
 	}
 
@@ -3011,7 +3275,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_va_arg(Instruction_va_arg object) {
+	public T caseInstruction_va_arg(Instruction_va_arg object)
+	{
 		return null;
 	}
 
@@ -3026,7 +3291,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_landingpad(Instruction_landingpad object) {
+	public T caseInstruction_landingpad(Instruction_landingpad object)
+	{
 		return null;
 	}
 
@@ -3041,7 +3307,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLandingpadClause(LandingpadClause object) {
+	public T caseLandingpadClause(LandingpadClause object)
+	{
 		return null;
 	}
 
@@ -3056,7 +3323,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypedValue(TypedValue object) {
+	public T caseTypedValue(TypedValue object)
+	{
 		return null;
 	}
 
@@ -3071,7 +3339,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterType(ParameterType object) {
+	public T caseParameterType(ParameterType object)
+	{
 		return null;
 	}
 
@@ -3086,7 +3355,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterAttributes(ParameterAttributes object) {
+	public T caseParameterAttributes(ParameterAttributes object)
+	{
 		return null;
 	}
 
@@ -3101,7 +3371,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArgument(Argument object) {
+	public T caseArgument(Argument object)
+	{
 		return null;
 	}
 
@@ -3116,7 +3387,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T caseParameter(Parameter object)
+	{
 		return null;
 	}
 
@@ -3131,7 +3403,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNonVoidType(NonVoidType object) {
+	public T caseNonVoidType(NonVoidType object)
+	{
 		return null;
 	}
 
@@ -3146,7 +3419,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStar(Star object) {
+	public T caseStar(Star object)
+	{
 		return null;
 	}
 
@@ -3161,7 +3435,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseType(Type object) {
+	public T caseType(Type object)
+	{
 		return null;
 	}
 
@@ -3176,7 +3451,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypeSuffix(TypeSuffix object) {
+	public T caseTypeSuffix(TypeSuffix object)
+	{
 		return null;
 	}
 
@@ -3191,7 +3467,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNonLeftRecursiveType(NonLeftRecursiveType object) {
+	public T caseNonLeftRecursiveType(NonLeftRecursiveType object)
+	{
 		return null;
 	}
 
@@ -3206,7 +3483,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNonLeftRecursiveNonVoidType(NonLeftRecursiveNonVoidType object) {
+	public T caseNonLeftRecursiveNonVoidType(NonLeftRecursiveNonVoidType object)
+	{
 		return null;
 	}
 
@@ -3221,7 +3499,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypeDef(TypeDef object) {
+	public T caseTypeDef(TypeDef object)
+	{
 		return null;
 	}
 
@@ -3236,7 +3515,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntType(IntType object) {
+	public T caseIntType(IntType object)
+	{
 		return null;
 	}
 
@@ -3251,7 +3531,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOpaqueType(OpaqueType object) {
+	public T caseOpaqueType(OpaqueType object)
+	{
 		return null;
 	}
 
@@ -3266,7 +3547,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStructType(StructType object) {
+	public T caseStructType(StructType object)
+	{
 		return null;
 	}
 
@@ -3281,7 +3563,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVectorType(VectorType object) {
+	public T caseVectorType(VectorType object)
+	{
 		return null;
 	}
 
@@ -3296,7 +3579,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArrayType(ArrayType object) {
+	public T caseArrayType(ArrayType object)
+	{
 		return null;
 	}
 
@@ -3311,7 +3595,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseX86mmxType(X86mmxType object) {
+	public T caseX86mmxType(X86mmxType object)
+	{
 		return null;
 	}
 
@@ -3326,7 +3611,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVoidType(VoidType object) {
+	public T caseVoidType(VoidType object)
+	{
 		return null;
 	}
 
@@ -3341,7 +3627,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMetadataType(MetadataType object) {
+	public T caseMetadataType(MetadataType object)
+	{
 		return null;
 	}
 
@@ -3356,7 +3643,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFloatingType(FloatingType object) {
+	public T caseFloatingType(FloatingType object)
+	{
 		return null;
 	}
 
@@ -3371,7 +3659,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCConv(CConv object) {
+	public T caseCConv(CConv object)
+	{
 		return null;
 	}
 
@@ -3386,7 +3675,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstruction_invoke(Instruction_invoke object) {
+	public T caseInstruction_invoke(Instruction_invoke object)
+	{
 		return null;
 	}
 
@@ -3402,7 +3692,8 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

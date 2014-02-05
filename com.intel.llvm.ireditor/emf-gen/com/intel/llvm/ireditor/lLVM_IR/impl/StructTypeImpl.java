@@ -36,7 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class StructTypeImpl extends MinimalEObjectImpl.Container implements StructType {
+public class StructTypeImpl extends MinimalEObjectImpl.Container implements StructType
+{
 	/**
 	 * The cached value of the '{@link #getTypes() <em>Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -72,7 +73,8 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StructTypeImpl() {
+	protected StructTypeImpl()
+	{
 		super();
 	}
 
@@ -82,7 +84,8 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getStructType();
 	}
 
@@ -91,8 +94,10 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Type> getTypes() {
-		if (types == null) {
+	public EList<Type> getTypes()
+	{
+		if (types == null)
+		{
 			types = new EObjectContainmentEList<Type>(Type.class, this, LLVM_IRPackage.STRUCT_TYPE__TYPES);
 		}
 		return types;
@@ -103,7 +108,8 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPacked() {
+	public String getPacked()
+	{
 		return packed;
 	}
 
@@ -112,7 +118,8 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPacked(String newPacked) {
+	public void setPacked(String newPacked)
+	{
 		String oldPacked = packed;
 		packed = newPacked;
 		if (eNotificationRequired())
@@ -125,8 +132,10 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCT_TYPE__TYPES:
 				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
 		}
@@ -139,8 +148,10 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCT_TYPE__TYPES:
 				return getTypes();
 			case LLVM_IRPackage.STRUCT_TYPE__PACKED:
@@ -156,8 +167,10 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCT_TYPE__TYPES:
 				getTypes().clear();
 				getTypes().addAll((Collection<? extends Type>)newValue);
@@ -175,8 +188,10 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCT_TYPE__TYPES:
 				getTypes().clear();
 				return;
@@ -193,8 +208,10 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.STRUCT_TYPE__TYPES:
 				return types != null && !types.isEmpty();
 			case LLVM_IRPackage.STRUCT_TYPE__PACKED:
@@ -209,7 +226,8 @@ public class StructTypeImpl extends MinimalEObjectImpl.Container implements Stru
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

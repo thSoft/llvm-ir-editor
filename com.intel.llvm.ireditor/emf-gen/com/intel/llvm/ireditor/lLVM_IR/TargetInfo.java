@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface TargetInfo extends TopLevelElement {
+public interface TargetInfo extends TopLevelElement
+{
 	/**
 	 * Returns the value of the '<em><b>Info Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->

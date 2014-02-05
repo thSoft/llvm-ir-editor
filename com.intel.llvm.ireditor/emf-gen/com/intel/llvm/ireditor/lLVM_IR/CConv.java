@@ -21,7 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CConv extends EObject {
+public interface CConv extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Val</b></em>' attribute.
 	 * <!-- begin-user-doc -->

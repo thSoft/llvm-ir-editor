@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GlobalValueDefImpl extends MinimalEObjectImpl.Container implements GlobalValueDef {
+public class GlobalValueDefImpl extends MinimalEObjectImpl.Container implements GlobalValueDef
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GlobalValueDefImpl() {
+	protected GlobalValueDefImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class GlobalValueDefImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getGlobalValueDef();
 	}
 

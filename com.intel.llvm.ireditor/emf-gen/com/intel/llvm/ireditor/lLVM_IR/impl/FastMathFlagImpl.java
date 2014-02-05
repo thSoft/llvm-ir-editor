@@ -25,7 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements FastMathFlag {
+public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements FastMathFlag
+{
 	/**
 	 * The default value of the '{@link #getKind() <em>Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +52,8 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FastMathFlagImpl() {
+	protected FastMathFlagImpl()
+	{
 		super();
 	}
 
@@ -61,7 +63,8 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getFastMathFlag();
 	}
 
@@ -70,7 +73,8 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getKind() {
+	public String getKind()
+	{
 		return kind;
 	}
 
@@ -79,7 +83,8 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKind(String newKind) {
+	public void setKind(String newKind)
+	{
 		String oldKind = kind;
 		kind = newKind;
 		if (eNotificationRequired())
@@ -92,8 +97,10 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FAST_MATH_FLAG__KIND:
 				return getKind();
 		}
@@ -106,8 +113,10 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FAST_MATH_FLAG__KIND:
 				setKind((String)newValue);
 				return;
@@ -121,8 +130,10 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FAST_MATH_FLAG__KIND:
 				setKind(KIND_EDEFAULT);
 				return;
@@ -136,8 +147,10 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.FAST_MATH_FLAG__KIND:
 				return KIND_EDEFAULT == null ? kind != null : !KIND_EDEFAULT.equals(kind);
 		}
@@ -150,7 +163,8 @@ public class FastMathFlagImpl extends MinimalEObjectImpl.Container implements Fa
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

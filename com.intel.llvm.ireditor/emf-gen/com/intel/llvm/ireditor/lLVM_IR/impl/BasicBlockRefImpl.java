@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements BasicBlockRef {
+public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements BasicBlockRef
+{
 	/**
 	 * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BasicBlockRefImpl() {
+	protected BasicBlockRefImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getBasicBlockRef();
 	}
 
@@ -62,11 +65,14 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlock getRef() {
-		if (ref != null && ref.eIsProxy()) {
+	public BasicBlock getRef()
+	{
+		if (ref != null && ref.eIsProxy())
+		{
 			InternalEObject oldRef = (InternalEObject)ref;
 			ref = (BasicBlock)eResolveProxy(oldRef);
-			if (ref != oldRef) {
+			if (ref != oldRef)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LLVM_IRPackage.BASIC_BLOCK_REF__REF, oldRef, ref));
 			}
@@ -79,7 +85,8 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BasicBlock basicGetRef() {
+	public BasicBlock basicGetRef()
+	{
 		return ref;
 	}
 
@@ -88,7 +95,8 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRef(BasicBlock newRef) {
+	public void setRef(BasicBlock newRef)
+	{
 		BasicBlock oldRef = ref;
 		ref = newRef;
 		if (eNotificationRequired())
@@ -101,8 +109,10 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK_REF__REF:
 				if (resolve) return getRef();
 				return basicGetRef();
@@ -116,8 +126,10 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK_REF__REF:
 				setRef((BasicBlock)newValue);
 				return;
@@ -131,8 +143,10 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK_REF__REF:
 				setRef((BasicBlock)null);
 				return;
@@ -146,8 +160,10 @@ public class BasicBlockRefImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.BASIC_BLOCK_REF__REF:
 				return ref != null;
 		}

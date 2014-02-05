@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instruction_fdiv {
+public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instruction_fdiv
+{
 	/**
 	 * The cached value of the '{@link #getFastMathFlags() <em>Fast Math Flags</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_fdivImpl() {
+	protected Instruction_fdivImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_fdiv();
 	}
 
@@ -66,8 +69,10 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FastMathFlag> getFastMathFlags() {
-		if (fastMathFlags == null) {
+	public EList<FastMathFlag> getFastMathFlags()
+	{
+		if (fastMathFlags == null)
+		{
 			fastMathFlags = new EObjectContainmentEList<FastMathFlag>(FastMathFlag.class, this, LLVM_IRPackage.INSTRUCTION_FDIV__FAST_MATH_FLAGS);
 		}
 		return fastMathFlags;
@@ -79,8 +84,10 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FDIV__FAST_MATH_FLAGS:
 				return ((InternalEList<?>)getFastMathFlags()).basicRemove(otherEnd, msgs);
 		}
@@ -93,8 +100,10 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FDIV__FAST_MATH_FLAGS:
 				return getFastMathFlags();
 		}
@@ -108,8 +117,10 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FDIV__FAST_MATH_FLAGS:
 				getFastMathFlags().clear();
 				getFastMathFlags().addAll((Collection<? extends FastMathFlag>)newValue);
@@ -124,8 +135,10 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FDIV__FAST_MATH_FLAGS:
 				getFastMathFlags().clear();
 				return;
@@ -139,8 +152,10 @@ public class Instruction_fdivImpl extends BinaryInstructionImpl implements Instr
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_FDIV__FAST_MATH_FLAGS:
 				return fastMathFlags != null && !fastMathFlags.isEmpty();
 		}

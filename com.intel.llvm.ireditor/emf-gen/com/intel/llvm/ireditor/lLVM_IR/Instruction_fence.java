@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_fence extends MiddleInstruction {
+public interface Instruction_fence extends MiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Ordering</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -20,7 +20,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface ConstantExpression_binary extends ConstantExpression {
+public interface ConstantExpression_binary extends ConstantExpression
+{
 	/**
 	 * Returns the value of the '<em><b>Op1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

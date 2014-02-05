@@ -33,7 +33,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implements LandingpadClause {
+public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implements LandingpadClause
+{
 	/**
 	 * The default value of the '{@link #getLandingPadType() <em>Landing Pad Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,7 +90,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LandingpadClauseImpl() {
+	protected LandingpadClauseImpl()
+	{
 		super();
 	}
 
@@ -99,7 +101,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getLandingpadClause();
 	}
 
@@ -108,7 +111,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLandingPadType() {
+	public String getLandingPadType()
+	{
 		return landingPadType;
 	}
 
@@ -117,7 +121,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLandingPadType(String newLandingPadType) {
+	public void setLandingPadType(String newLandingPadType)
+	{
 		String oldLandingPadType = landingPadType;
 		landingPadType = newLandingPadType;
 		if (eNotificationRequired())
@@ -129,7 +134,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getCatchType() {
+	public TypedValue getCatchType()
+	{
 		return catchType;
 	}
 
@@ -138,10 +144,12 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCatchType(TypedValue newCatchType, NotificationChain msgs) {
+	public NotificationChain basicSetCatchType(TypedValue newCatchType, NotificationChain msgs)
+	{
 		TypedValue oldCatchType = catchType;
 		catchType = newCatchType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.LANDINGPAD_CLAUSE__CATCH_TYPE, oldCatchType, newCatchType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -153,8 +161,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCatchType(TypedValue newCatchType) {
-		if (newCatchType != catchType) {
+	public void setCatchType(TypedValue newCatchType)
+	{
+		if (newCatchType != catchType)
+		{
 			NotificationChain msgs = null;
 			if (catchType != null)
 				msgs = ((InternalEObject)catchType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.LANDINGPAD_CLAUSE__CATCH_TYPE, null, msgs);
@@ -172,7 +182,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArrayType getArrayType() {
+	public ArrayType getArrayType()
+	{
 		return arrayType;
 	}
 
@@ -181,10 +192,12 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetArrayType(ArrayType newArrayType, NotificationChain msgs) {
+	public NotificationChain basicSetArrayType(ArrayType newArrayType, NotificationChain msgs)
+	{
 		ArrayType oldArrayType = arrayType;
 		arrayType = newArrayType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.LANDINGPAD_CLAUSE__ARRAY_TYPE, oldArrayType, newArrayType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -196,8 +209,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArrayType(ArrayType newArrayType) {
-		if (newArrayType != arrayType) {
+	public void setArrayType(ArrayType newArrayType)
+	{
+		if (newArrayType != arrayType)
+		{
 			NotificationChain msgs = null;
 			if (arrayType != null)
 				msgs = ((InternalEObject)arrayType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.LANDINGPAD_CLAUSE__ARRAY_TYPE, null, msgs);
@@ -215,7 +230,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArrayConstant getArrayConstant() {
+	public ArrayConstant getArrayConstant()
+	{
 		return arrayConstant;
 	}
 
@@ -224,10 +240,12 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetArrayConstant(ArrayConstant newArrayConstant, NotificationChain msgs) {
+	public NotificationChain basicSetArrayConstant(ArrayConstant newArrayConstant, NotificationChain msgs)
+	{
 		ArrayConstant oldArrayConstant = arrayConstant;
 		arrayConstant = newArrayConstant;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.LANDINGPAD_CLAUSE__ARRAY_CONSTANT, oldArrayConstant, newArrayConstant);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -239,8 +257,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArrayConstant(ArrayConstant newArrayConstant) {
-		if (newArrayConstant != arrayConstant) {
+	public void setArrayConstant(ArrayConstant newArrayConstant)
+	{
+		if (newArrayConstant != arrayConstant)
+		{
 			NotificationChain msgs = null;
 			if (arrayConstant != null)
 				msgs = ((InternalEObject)arrayConstant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.LANDINGPAD_CLAUSE__ARRAY_CONSTANT, null, msgs);
@@ -259,8 +279,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__CATCH_TYPE:
 				return basicSetCatchType(null, msgs);
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__ARRAY_TYPE:
@@ -277,8 +299,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__LANDING_PAD_TYPE:
 				return getLandingPadType();
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__CATCH_TYPE:
@@ -297,8 +321,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__LANDING_PAD_TYPE:
 				setLandingPadType((String)newValue);
 				return;
@@ -321,8 +347,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__LANDING_PAD_TYPE:
 				setLandingPadType(LANDING_PAD_TYPE_EDEFAULT);
 				return;
@@ -345,8 +373,10 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__LANDING_PAD_TYPE:
 				return LANDING_PAD_TYPE_EDEFAULT == null ? landingPadType != null : !LANDING_PAD_TYPE_EDEFAULT.equals(landingPadType);
 			case LLVM_IRPackage.LANDINGPAD_CLAUSE__CATCH_TYPE:
@@ -365,7 +395,8 @@ public class LandingpadClauseImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

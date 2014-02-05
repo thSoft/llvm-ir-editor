@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_resumeImpl extends TerminatorInstructionImpl implements Instruction_resume {
+public class Instruction_resumeImpl extends TerminatorInstructionImpl implements Instruction_resume
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Instruction_resumeImpl() {
+	protected Instruction_resumeImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getInstruction_resume();
 	}
 
@@ -62,7 +65,8 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypedValue getValue() {
+	public TypedValue getValue()
+	{
 		return value;
 	}
 
@@ -71,10 +75,12 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs) {
+	public NotificationChain basicSetValue(TypedValue newValue, NotificationChain msgs)
+	{
 		TypedValue oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.INSTRUCTION_RESUME__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -86,8 +92,10 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(TypedValue newValue) {
-		if (newValue != value) {
+	public void setValue(TypedValue newValue)
+	{
+		if (newValue != value)
+		{
 			NotificationChain msgs = null;
 			if (value != null)
 				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.INSTRUCTION_RESUME__VALUE, null, msgs);
@@ -106,8 +114,10 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RESUME__VALUE:
 				return basicSetValue(null, msgs);
 		}
@@ -120,8 +130,10 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RESUME__VALUE:
 				return getValue();
 		}
@@ -134,8 +146,10 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RESUME__VALUE:
 				setValue((TypedValue)newValue);
 				return;
@@ -149,8 +163,10 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RESUME__VALUE:
 				setValue((TypedValue)null);
 				return;
@@ -164,8 +180,10 @@ public class Instruction_resumeImpl extends TerminatorInstructionImpl implements
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.INSTRUCTION_RESUME__VALUE:
 				return value != null;
 		}

@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class VectorTypeImpl extends MinimalEObjectImpl.Container implements VectorType {
+public class VectorTypeImpl extends MinimalEObjectImpl.Container implements VectorType
+{
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VectorTypeImpl() {
+	protected VectorTypeImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getVectorType();
 	}
 
@@ -84,7 +87,8 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSize() {
+	public String getSize()
+	{
 		return size;
 	}
 
@@ -93,7 +97,8 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(String newSize) {
+	public void setSize(String newSize)
+	{
 		String oldSize = size;
 		size = newSize;
 		if (eNotificationRequired())
@@ -105,7 +110,8 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getElemType() {
+	public Type getElemType()
+	{
 		return elemType;
 	}
 
@@ -114,10 +120,12 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetElemType(Type newElemType, NotificationChain msgs) {
+	public NotificationChain basicSetElemType(Type newElemType, NotificationChain msgs)
+	{
 		Type oldElemType = elemType;
 		elemType = newElemType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.VECTOR_TYPE__ELEM_TYPE, oldElemType, newElemType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -129,8 +137,10 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElemType(Type newElemType) {
-		if (newElemType != elemType) {
+	public void setElemType(Type newElemType)
+	{
+		if (newElemType != elemType)
+		{
 			NotificationChain msgs = null;
 			if (elemType != null)
 				msgs = ((InternalEObject)elemType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.VECTOR_TYPE__ELEM_TYPE, null, msgs);
@@ -149,8 +159,10 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_TYPE__ELEM_TYPE:
 				return basicSetElemType(null, msgs);
 		}
@@ -163,8 +175,10 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_TYPE__SIZE:
 				return getSize();
 			case LLVM_IRPackage.VECTOR_TYPE__ELEM_TYPE:
@@ -179,8 +193,10 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_TYPE__SIZE:
 				setSize((String)newValue);
 				return;
@@ -197,8 +213,10 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_TYPE__SIZE:
 				setSize(SIZE_EDEFAULT);
 				return;
@@ -215,8 +233,10 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.VECTOR_TYPE__SIZE:
 				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
 			case LLVM_IRPackage.VECTOR_TYPE__ELEM_TYPE:
@@ -231,7 +251,8 @@ public class VectorTypeImpl extends MinimalEObjectImpl.Container implements Vect
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

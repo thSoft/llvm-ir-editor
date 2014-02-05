@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container implements NonLeftRecursiveType {
+public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container implements NonLeftRecursiveType
+{
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +57,8 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NonLeftRecursiveTypeImpl() {
+	protected NonLeftRecursiveTypeImpl()
+	{
 		super();
 	}
 
@@ -66,7 +68,8 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getNonLeftRecursiveType();
 	}
 
@@ -75,7 +78,8 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getType() {
+	public EObject getType()
+	{
 		return type;
 	}
 
@@ -84,10 +88,12 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(EObject newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(EObject newType, NotificationChain msgs)
+	{
 		EObject oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -99,8 +105,10 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(EObject newType) {
-		if (newType != type) {
+	public void setType(EObject newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE, null, msgs);
@@ -118,11 +126,14 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeDef getTypedef() {
-		if (typedef != null && typedef.eIsProxy()) {
+	public TypeDef getTypedef()
+	{
+		if (typedef != null && typedef.eIsProxy())
+		{
 			InternalEObject oldTypedef = (InternalEObject)typedef;
 			typedef = (TypeDef)eResolveProxy(oldTypedef);
-			if (typedef != oldTypedef) {
+			if (typedef != oldTypedef)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPEDEF, oldTypedef, typedef));
 			}
@@ -135,7 +146,8 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeDef basicGetTypedef() {
+	public TypeDef basicGetTypedef()
+	{
 		return typedef;
 	}
 
@@ -144,7 +156,8 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedef(TypeDef newTypedef) {
+	public void setTypedef(TypeDef newTypedef)
+	{
 		TypeDef oldTypedef = typedef;
 		typedef = newTypedef;
 		if (eNotificationRequired())
@@ -157,8 +170,10 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE:
 				return basicSetType(null, msgs);
 		}
@@ -171,8 +186,10 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE:
 				return getType();
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPEDEF:
@@ -188,8 +205,10 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE:
 				setType((EObject)newValue);
 				return;
@@ -206,8 +225,10 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE:
 				setType((EObject)null);
 				return;
@@ -224,8 +245,10 @@ public class NonLeftRecursiveTypeImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPE:
 				return type != null;
 			case LLVM_IRPackage.NON_LEFT_RECURSIVE_TYPE__TYPEDEF:

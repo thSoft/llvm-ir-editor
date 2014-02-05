@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class MetadataStringImpl extends ConstantImpl implements MetadataString {
+public class MetadataStringImpl extends ConstantImpl implements MetadataString
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MetadataStringImpl() {
+	protected MetadataStringImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getMetadataString();
 	}
 
@@ -69,7 +72,8 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -78,7 +82,8 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -91,8 +96,10 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_STRING__NAME:
 				return getName();
 		}
@@ -105,8 +112,10 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_STRING__NAME:
 				setName((String)newValue);
 				return;
@@ -120,8 +129,10 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_STRING__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -135,8 +146,10 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.METADATA_STRING__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -149,7 +162,8 @@ public class MetadataStringImpl extends ConstantImpl implements MetadataString {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());

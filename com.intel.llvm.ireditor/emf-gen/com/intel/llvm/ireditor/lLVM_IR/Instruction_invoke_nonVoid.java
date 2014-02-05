@@ -19,7 +19,8 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_invoke_nonVoid extends Instruction_invoke, NamedTerminatorInstruction {
+public interface Instruction_invoke_nonVoid extends Instruction_invoke, NamedTerminatorInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

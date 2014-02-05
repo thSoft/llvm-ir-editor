@@ -18,13 +18,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class TopLevelElementImpl extends MinimalEObjectImpl.Container implements TopLevelElement {
+public class TopLevelElementImpl extends MinimalEObjectImpl.Container implements TopLevelElement
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopLevelElementImpl() {
+	protected TopLevelElementImpl()
+	{
 		super();
 	}
 
@@ -34,7 +36,8 @@ public class TopLevelElementImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getTopLevelElement();
 	}
 

@@ -21,7 +21,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface AggregateInstruction extends NamedMiddleInstruction {
+public interface AggregateInstruction extends NamedMiddleInstruction
+{
 	/**
 	 * Returns the value of the '<em><b>Aggregate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FunctionAttribute extends EObject {
+public interface FunctionAttribute extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Attribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->

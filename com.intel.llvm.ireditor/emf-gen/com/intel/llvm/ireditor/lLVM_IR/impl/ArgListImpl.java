@@ -33,7 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList {
+public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
+{
 	/**
 	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -49,7 +50,8 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArgListImpl() {
+	protected ArgListImpl()
+	{
 		super();
 	}
 
@@ -59,7 +61,8 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return LLVM_IRPackage.eINSTANCE.getArgList();
 	}
 
@@ -68,8 +71,10 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Argument> getArguments() {
-		if (arguments == null) {
+	public EList<Argument> getArguments()
+	{
+		if (arguments == null)
+		{
 			arguments = new EObjectContainmentEList<Argument>(Argument.class, this, LLVM_IRPackage.ARG_LIST__ARGUMENTS);
 		}
 		return arguments;
@@ -81,8 +86,10 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ARG_LIST__ARGUMENTS:
 				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
 		}
@@ -95,8 +102,10 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ARG_LIST__ARGUMENTS:
 				return getArguments();
 		}
@@ -110,8 +119,10 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ARG_LIST__ARGUMENTS:
 				getArguments().clear();
 				getArguments().addAll((Collection<? extends Argument>)newValue);
@@ -126,8 +137,10 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ARG_LIST__ARGUMENTS:
 				getArguments().clear();
 				return;
@@ -141,8 +154,10 @@ public class ArgListImpl extends MinimalEObjectImpl.Container implements ArgList
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case LLVM_IRPackage.ARG_LIST__ARGUMENTS:
 				return arguments != null && !arguments.isEmpty();
 		}

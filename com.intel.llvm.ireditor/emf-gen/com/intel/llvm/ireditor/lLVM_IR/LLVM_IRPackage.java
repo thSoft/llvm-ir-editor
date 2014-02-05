@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EReference;
  * @model kind="package"
  * @generated
  */
-public interface LLVM_IRPackage extends EPackage {
+public interface LLVM_IRPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
