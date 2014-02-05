@@ -27,10 +27,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.intel.llvm.ireditor;
 
-import com.intel.llvm.ireditor.LLVM_IRStandaloneSetupGenerated;
+import org.eclipse.emf.ecore.EPackage;
+
+import com.google.inject.Injector;
+import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage;
 
 /**
- * Initialization support for running Xtext languages 
+ * Initialization support for running Xtext languages
  * without equinox extension registry
  */
 public class LLVM_IRStandaloneSetup extends LLVM_IRStandaloneSetupGenerated{
@@ -38,5 +41,14 @@ public class LLVM_IRStandaloneSetup extends LLVM_IRStandaloneSetupGenerated{
 	public static void doSetup() {
 		new LLVM_IRStandaloneSetup().createInjectorAndDoEMFRegistration();
 	}
+
+    @Override
+    public void register(Injector injector) {
+        if (!EPackage.Registry.INSTANCE.containsKey(LLVM_IRPackage.eNS_URI)) {
+            EPackage.Registry.INSTANCE.put(LLVM_IRPackage.eNS_URI, LLVM_IRPackage.eINSTANCE);
+        }
+        super.register(injector);
+    }
+
 }
 
