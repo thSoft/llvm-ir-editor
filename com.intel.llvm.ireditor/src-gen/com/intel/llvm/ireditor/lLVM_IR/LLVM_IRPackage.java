@@ -2884,6 +2884,97 @@ public interface LLVM_IRPackage extends EPackage {
 	int INSTRUCTION_INDIRECTBR_FEATURE_COUNT = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_invokeImpl <em>Instruction invoke</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_invokeImpl
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.LLVM_IRPackageImpl#getInstruction_invoke()
+	 * @generated
+	 */
+	int INSTRUCTION_INVOKE = 141;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__METADATA = TERMINATOR_INSTRUCTION__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__OPCODE = TERMINATOR_INSTRUCTION__OPCODE;
+
+	/**
+	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__CCONV = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__CALLEE = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Args</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__ARGS = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__ATTRIBUTES = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>To Label</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__TO_LABEL = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Exception Label</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE__EXCEPTION_LABEL = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Instruction invoke</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE_FEATURE_COUNT = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 6;
+
+	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_invoke_voidImpl <em>Instruction invoke void</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2900,7 +2991,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__METADATA = TERMINATOR_INSTRUCTION__METADATA;
+	int INSTRUCTION_INVOKE_VOID__METADATA = INSTRUCTION_INVOKE__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -2909,7 +3000,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__OPCODE = TERMINATOR_INSTRUCTION__OPCODE;
+	int INSTRUCTION_INVOKE_VOID__OPCODE = INSTRUCTION_INVOKE__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
@@ -2918,16 +3009,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__CCONV = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_INVOKE_VOID__TYPE = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 1;
+	int INSTRUCTION_INVOKE_VOID__CCONV = INSTRUCTION_INVOKE__CCONV;
 
 	/**
 	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
@@ -2936,7 +3018,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__CALLEE = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 2;
+	int INSTRUCTION_INVOKE_VOID__CALLEE = INSTRUCTION_INVOKE__CALLEE;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference.
@@ -2945,7 +3027,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__ARGS = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 3;
+	int INSTRUCTION_INVOKE_VOID__ARGS = INSTRUCTION_INVOKE__ARGS;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
@@ -2954,7 +3036,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__ATTRIBUTES = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 4;
+	int INSTRUCTION_INVOKE_VOID__ATTRIBUTES = INSTRUCTION_INVOKE__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>To Label</b></em>' containment reference.
@@ -2963,7 +3045,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__TO_LABEL = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 5;
+	int INSTRUCTION_INVOKE_VOID__TO_LABEL = INSTRUCTION_INVOKE__TO_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Exception Label</b></em>' containment reference.
@@ -2972,7 +3054,16 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID__EXCEPTION_LABEL = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 6;
+	int INSTRUCTION_INVOKE_VOID__EXCEPTION_LABEL = INSTRUCTION_INVOKE__EXCEPTION_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE_VOID__TYPE = INSTRUCTION_INVOKE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Instruction invoke void</em>' class.
@@ -2981,7 +3072,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_VOID_FEATURE_COUNT = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 7;
+	int INSTRUCTION_INVOKE_VOID_FEATURE_COUNT = INSTRUCTION_INVOKE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_invoke_nonVoidImpl <em>Instruction invoke non Void</em>}' class.
@@ -2994,22 +3085,13 @@ public interface LLVM_IRPackage extends EPackage {
 	int INSTRUCTION_INVOKE_NON_VOID = 65;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_INVOKE_NON_VOID__NAME = NAMED_TERMINATOR_INSTRUCTION__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__METADATA = NAMED_TERMINATOR_INSTRUCTION__METADATA;
+	int INSTRUCTION_INVOKE_NON_VOID__METADATA = INSTRUCTION_INVOKE__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -3018,7 +3100,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__OPCODE = NAMED_TERMINATOR_INSTRUCTION__OPCODE;
+	int INSTRUCTION_INVOKE_NON_VOID__OPCODE = INSTRUCTION_INVOKE__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
@@ -3027,16 +3109,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__CCONV = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_INVOKE_NON_VOID__TYPE = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 1;
+	int INSTRUCTION_INVOKE_NON_VOID__CCONV = INSTRUCTION_INVOKE__CCONV;
 
 	/**
 	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
@@ -3045,7 +3118,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__CALLEE = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 2;
+	int INSTRUCTION_INVOKE_NON_VOID__CALLEE = INSTRUCTION_INVOKE__CALLEE;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference.
@@ -3054,7 +3127,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__ARGS = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 3;
+	int INSTRUCTION_INVOKE_NON_VOID__ARGS = INSTRUCTION_INVOKE__ARGS;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
@@ -3063,7 +3136,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__ATTRIBUTES = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 4;
+	int INSTRUCTION_INVOKE_NON_VOID__ATTRIBUTES = INSTRUCTION_INVOKE__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>To Label</b></em>' containment reference.
@@ -3072,7 +3145,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__TO_LABEL = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 5;
+	int INSTRUCTION_INVOKE_NON_VOID__TO_LABEL = INSTRUCTION_INVOKE__TO_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Exception Label</b></em>' containment reference.
@@ -3081,7 +3154,25 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID__EXCEPTION_LABEL = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 6;
+	int INSTRUCTION_INVOKE_NON_VOID__EXCEPTION_LABEL = INSTRUCTION_INVOKE__EXCEPTION_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE_NON_VOID__NAME = INSTRUCTION_INVOKE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_INVOKE_NON_VOID__TYPE = INSTRUCTION_INVOKE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Instruction invoke non Void</em>' class.
@@ -3090,7 +3181,7 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_NON_VOID_FEATURE_COUNT = NAMED_TERMINATOR_INSTRUCTION_FEATURE_COUNT + 7;
+	int INSTRUCTION_INVOKE_NON_VOID_FEATURE_COUNT = INSTRUCTION_INVOKE_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_resumeImpl <em>Instruction resume</em>}' class.
@@ -9388,17 +9479,6 @@ public interface LLVM_IRPackage extends EPackage {
 	EClass getInstruction_invoke_void();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getCconv <em>Cconv</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cconv</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getCconv()
-	 * @see #getInstruction_invoke_void()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_void_Cconv();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9408,61 +9488,6 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInstruction_invoke_void_Type();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getCallee <em>Callee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Callee</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getCallee()
-	 * @see #getInstruction_invoke_void()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_void_Callee();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getArgs <em>Args</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Args</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getArgs()
-	 * @see #getInstruction_invoke_void()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_void_Args();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Attributes</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getAttributes()
-	 * @see #getInstruction_invoke_void()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_void_Attributes();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getToLabel <em>To Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>To Label</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getToLabel()
-	 * @see #getInstruction_invoke_void()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_void_ToLabel();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getExceptionLabel <em>Exception Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Exception Label</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_void#getExceptionLabel()
-	 * @see #getInstruction_invoke_void()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_void_ExceptionLabel();
 
 	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid <em>Instruction invoke non Void</em>}'.
@@ -9475,17 +9500,6 @@ public interface LLVM_IRPackage extends EPackage {
 	EClass getInstruction_invoke_nonVoid();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getCconv <em>Cconv</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cconv</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getCconv()
-	 * @see #getInstruction_invoke_nonVoid()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_nonVoid_Cconv();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9495,61 +9509,6 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInstruction_invoke_nonVoid_Type();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getCallee <em>Callee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Callee</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getCallee()
-	 * @see #getInstruction_invoke_nonVoid()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_nonVoid_Callee();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getArgs <em>Args</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Args</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getArgs()
-	 * @see #getInstruction_invoke_nonVoid()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_nonVoid_Args();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Attributes</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getAttributes()
-	 * @see #getInstruction_invoke_nonVoid()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_nonVoid_Attributes();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getToLabel <em>To Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>To Label</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getToLabel()
-	 * @see #getInstruction_invoke_nonVoid()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_nonVoid_ToLabel();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getExceptionLabel <em>Exception Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Exception Label</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke_nonVoid#getExceptionLabel()
-	 * @see #getInstruction_invoke_nonVoid()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_nonVoid_ExceptionLabel();
 
 	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_resume <em>Instruction resume</em>}'.
@@ -11587,6 +11546,82 @@ public interface LLVM_IRPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCConv_CustomNumber();
+
+	/**
+	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke <em>Instruction invoke</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instruction invoke</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke
+	 * @generated
+	 */
+	EClass getInstruction_invoke();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCconv <em>Cconv</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cconv</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCconv()
+	 * @see #getInstruction_invoke()
+	 * @generated
+	 */
+	EReference getInstruction_invoke_Cconv();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCallee <em>Callee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Callee</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCallee()
+	 * @see #getInstruction_invoke()
+	 * @generated
+	 */
+	EReference getInstruction_invoke_Callee();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getArgs <em>Args</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Args</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getArgs()
+	 * @see #getInstruction_invoke()
+	 * @generated
+	 */
+	EReference getInstruction_invoke_Args();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Attributes</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getAttributes()
+	 * @see #getInstruction_invoke()
+	 * @generated
+	 */
+	EReference getInstruction_invoke_Attributes();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getToLabel <em>To Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>To Label</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getToLabel()
+	 * @see #getInstruction_invoke()
+	 * @generated
+	 */
+	EReference getInstruction_invoke_ToLabel();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getExceptionLabel <em>Exception Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Exception Label</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getExceptionLabel()
+	 * @see #getInstruction_invoke()
+	 * @generated
+	 */
+	EReference getInstruction_invoke_ExceptionLabel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.

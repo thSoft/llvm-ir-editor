@@ -314,36 +314,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="destinations" upperBound="-1"
         eType="#//BasicBlockRef" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Instruction_invoke_void" eSuperTypes="#//TerminatorInstruction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cconv" eType="#//CConv"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction_invoke_void" eSuperTypes="#//Instruction_invoke">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//VoidType"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="callee" eType="#//Callee"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="args" eType="#//ArgList"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" eType="#//FunctionAttributes"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toLabel" eType="#//BasicBlockRef"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exceptionLabel" eType="#//BasicBlockRef"
-        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Instruction_invoke_nonVoid" eSuperTypes="#//NamedTerminatorInstruction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cconv" eType="#//CConv"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction_invoke_nonVoid" eSuperTypes="#//Instruction_invoke #//NamedTerminatorInstruction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//NonVoidType"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="callee" eType="#//Callee"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="args" eType="#//ArgList"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" eType="#//FunctionAttributes"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toLabel" eType="#//BasicBlockRef"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exceptionLabel" eType="#//BasicBlockRef"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_resume" eSuperTypes="#//TerminatorInstruction">
@@ -669,5 +645,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="CConv">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="customNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction_invoke" eSuperTypes="#//TerminatorInstruction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cconv" eType="#//CConv"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callee" eType="#//Callee"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" eType="#//ArgList"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" eType="#//FunctionAttributes"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toLabel" eType="#//BasicBlockRef"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exceptionLabel" eType="#//BasicBlockRef"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -505,8 +505,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_CALL_NON_VOID:
-				if(context == grammarAccess.getInstruction_callRule() ||
-				   context == grammarAccess.getInstruction_call_nonVoidRule() ||
+				if(context == grammarAccess.getInstruction_call_nonVoidRule() ||
 				   context == grammarAccess.getLocalValueRule() ||
 				   context == grammarAccess.getNamedInstructionRule() ||
 				   context == grammarAccess.getNamedMiddleInstructionRule()) {
@@ -520,8 +519,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				}
 				else break;
 			case LLVM_IRPackage.INSTRUCTION_CALL_VOID:
-				if(context == grammarAccess.getInstruction_callRule() ||
-				   context == grammarAccess.getInstruction_call_voidRule()) {
+				if(context == grammarAccess.getInstruction_call_voidRule()) {
 					sequence_Instruction_call_void(context, (Instruction_call_void) semanticObject); 
 					return; 
 				}

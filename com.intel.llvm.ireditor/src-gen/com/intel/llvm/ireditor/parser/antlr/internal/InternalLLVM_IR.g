@@ -12070,8 +12070,6 @@ ruleInstruction_select returns [EObject current=null]
 
 
 
-
-
 // Entry rule entryRuleInstruction_call_nonVoid
 entryRuleInstruction_call_nonVoid returns [EObject current=null] 
 	:

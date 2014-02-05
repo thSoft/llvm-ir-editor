@@ -6535,26 +6535,6 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValue2TypedValueParserRuleCall_6_0() { return cValue2TypedValueParserRuleCall_6_0; }
 	}
 
-	public class Instruction_callElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_call");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cInstruction_call_nonVoidParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cInstruction_call_voidParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Instruction_call:
-		//	Instruction_call_nonVoid | Instruction_call_void;
-		public ParserRule getRule() { return rule; }
-
-		//Instruction_call_nonVoid | Instruction_call_void
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//Instruction_call_nonVoid
-		public RuleCall getInstruction_call_nonVoidParserRuleCall_0() { return cInstruction_call_nonVoidParserRuleCall_0; }
-
-		//Instruction_call_void
-		public RuleCall getInstruction_call_voidParserRuleCall_1() { return cInstruction_call_voidParserRuleCall_1; }
-	}
-
 	public class Instruction_call_nonVoidElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Instruction_call_nonVoid");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -8399,7 +8379,6 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	private FcmpConditionElements pFcmpCondition;
 	private Instruction_phiElements pInstruction_phi;
 	private Instruction_selectElements pInstruction_select;
-	private Instruction_callElements pInstruction_call;
 	private Instruction_call_nonVoidElements pInstruction_call_nonVoid;
 	private Instruction_call_voidElements pInstruction_call_void;
 	private ArgListElements pArgList;
@@ -9841,16 +9820,6 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getInstruction_selectRule() {
 		return getInstruction_selectAccess().getRule();
-	}
-
-	//Instruction_call:
-	//	Instruction_call_nonVoid | Instruction_call_void;
-	public Instruction_callElements getInstruction_callAccess() {
-		return (pInstruction_call != null) ? pInstruction_call : (pInstruction_call = new Instruction_callElements());
-	}
-	
-	public ParserRule getInstruction_callRule() {
-		return getInstruction_callAccess().getRule();
 	}
 
 	//// <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]

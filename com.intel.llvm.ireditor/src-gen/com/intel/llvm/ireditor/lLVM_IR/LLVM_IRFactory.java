@@ -1291,6 +1291,15 @@ public interface LLVM_IRFactory extends EFactory {
 	CConv createCConv();
 
 	/**
+	 * Returns a new object of class '<em>Instruction invoke</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instruction invoke</em>'.
+	 * @generated
+	 */
+	Instruction_invoke createInstruction_invoke();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

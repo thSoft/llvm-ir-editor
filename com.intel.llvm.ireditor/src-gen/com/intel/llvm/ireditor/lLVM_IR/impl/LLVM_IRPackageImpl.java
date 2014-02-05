@@ -1026,6 +1026,13 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage {
 	private EClass cConvEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass instruction_invokeEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -2958,62 +2965,8 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_void_Cconv() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getInstruction_invoke_void_Type() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_void_Callee() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_void_Args() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_void_Attributes() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_void_ToLabel() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_void_ExceptionLabel() {
-        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(6);
+        return (EReference)getInstruction_invoke_void().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3033,62 +2986,8 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_nonVoid_Cconv() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getInstruction_invoke_nonVoid_Type() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_nonVoid_Callee() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_nonVoid_Args() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_nonVoid_Attributes() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_nonVoid_ToLabel() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_invoke_nonVoid_ExceptionLabel() {
-        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(6);
+        return (EReference)getInstruction_invoke_nonVoid().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5042,6 +4941,72 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage {
 	 */
 	public EAttribute getCConv_CustomNumber() {
         return (EAttribute)getCConv().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInstruction_invoke() {
+		if (instruction_invokeEClass == null) {
+			instruction_invokeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(141);
+		}
+		return instruction_invokeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_invoke_Cconv() {
+        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_invoke_Callee() {
+        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_invoke_Args() {
+        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_invoke_Attributes() {
+        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_invoke_ToLabel() {
+        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_invoke_ExceptionLabel() {
+        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(5);
 	}
 
 	/**

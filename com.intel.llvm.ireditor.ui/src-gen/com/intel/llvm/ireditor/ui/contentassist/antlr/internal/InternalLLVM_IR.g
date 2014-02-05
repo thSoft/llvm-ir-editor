@@ -3458,8 +3458,6 @@ finally {
 
 
 
-
-
 // Entry rule entryRuleInstruction_call_nonVoid
 entryRuleInstruction_call_nonVoid 
 :
@@ -6482,7 +6480,6 @@ rule__FcmpCondition__Alternatives
 finally {
 	restoreStackSize(stackSize);
 }
-
 
 rule__Callee__Alternatives
     @init {

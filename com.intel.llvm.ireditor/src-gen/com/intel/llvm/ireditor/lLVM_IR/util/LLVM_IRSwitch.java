@@ -531,6 +531,7 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_VOID: {
 				Instruction_invoke_void instruction_invoke_void = (Instruction_invoke_void)theEObject;
 				T result = caseInstruction_invoke_void(instruction_invoke_void);
+				if (result == null) result = caseInstruction_invoke(instruction_invoke_void);
 				if (result == null) result = caseTerminatorInstruction(instruction_invoke_void);
 				if (result == null) result = caseInstruction(instruction_invoke_void);
 				if (result == null) result = defaultCase(theEObject);
@@ -539,11 +540,12 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 			case LLVM_IRPackage.INSTRUCTION_INVOKE_NON_VOID: {
 				Instruction_invoke_nonVoid instruction_invoke_nonVoid = (Instruction_invoke_nonVoid)theEObject;
 				T result = caseInstruction_invoke_nonVoid(instruction_invoke_nonVoid);
+				if (result == null) result = caseInstruction_invoke(instruction_invoke_nonVoid);
 				if (result == null) result = caseNamedTerminatorInstruction(instruction_invoke_nonVoid);
-				if (result == null) result = caseNamedInstruction(instruction_invoke_nonVoid);
 				if (result == null) result = caseTerminatorInstruction(instruction_invoke_nonVoid);
-				if (result == null) result = caseLocalValue(instruction_invoke_nonVoid);
+				if (result == null) result = caseNamedInstruction(instruction_invoke_nonVoid);
 				if (result == null) result = caseInstruction(instruction_invoke_nonVoid);
+				if (result == null) result = caseLocalValue(instruction_invoke_nonVoid);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1243,6 +1245,14 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 			case LLVM_IRPackage.CCONV: {
 				CConv cConv = (CConv)theEObject;
 				T result = caseCConv(cConv);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LLVM_IRPackage.INSTRUCTION_INVOKE: {
+				Instruction_invoke instruction_invoke = (Instruction_invoke)theEObject;
+				T result = caseInstruction_invoke(instruction_invoke);
+				if (result == null) result = caseTerminatorInstruction(instruction_invoke);
+				if (result == null) result = caseInstruction(instruction_invoke);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -3362,6 +3372,21 @@ public class LLVM_IRSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCConv(CConv object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instruction invoke</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instruction invoke</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstruction_invoke(Instruction_invoke object) {
 		return null;
 	}
 

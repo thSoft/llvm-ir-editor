@@ -423,7 +423,7 @@ MiddleInstruction:
 ;
 
 NamedMiddleInstruction:
-	(BinaryInstruction |
+	BinaryInstruction |
 	BitwiseBinaryInstruction |
 	VectorInstructions |
 	AggregateInstruction |
@@ -434,7 +434,7 @@ NamedMiddleInstruction:
 	Instruction_atomicrmw |
 	ConversionInstruction |
 	OtherInstruction |
-	Instruction_call_nonVoid)
+	Instruction_call_nonVoid
 ;
 
 ParamName returns ecore::EString:
@@ -901,10 +901,6 @@ Instruction_select:
 	opcode='select' condition=TypedValue
 	',' value1=TypedValue
 	',' value2=TypedValue
-;
-
-Instruction_call:
-	Instruction_call_nonVoid | Instruction_call_void
 ;
 
 // <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]

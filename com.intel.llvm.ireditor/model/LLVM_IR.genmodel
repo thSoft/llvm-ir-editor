@@ -245,22 +245,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_indirectbr/destinations"/>
     </genClasses>
     <genClasses ecoreClass="LLVM_IR.ecore#//Instruction_invoke_void">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/cconv"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/callee"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/args"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/attributes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/toLabel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_void/exceptionLabel"/>
     </genClasses>
     <genClasses ecoreClass="LLVM_IR.ecore#//Instruction_invoke_nonVoid">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/cconv"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/callee"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/args"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/attributes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/toLabel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke_nonVoid/exceptionLabel"/>
     </genClasses>
     <genClasses ecoreClass="LLVM_IR.ecore#//Instruction_resume">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_resume/value"/>
@@ -503,6 +491,14 @@
     <genClasses ecoreClass="LLVM_IR.ecore#//CConv">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LLVM_IR.ecore#//CConv/val"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LLVM_IR.ecore#//CConv/customNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="LLVM_IR.ecore#//Instruction_invoke">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke/cconv"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke/callee"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke/toLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LLVM_IR.ecore#//Instruction_invoke/exceptionLabel"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
