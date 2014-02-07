@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_shufflevectorImpl extends VectorInstructionsImpl implements Instruction_shufflevector
+public class Instruction_shufflevectorImpl extends VectorInstructionImpl implements Instruction_shufflevector
 {
 	/**
 	 * The cached value of the '{@link #getVector1() <em>Vector1</em>}' containment reference.

@@ -525,9 +525,9 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl
 				return createInstruction_xorAdapter();
 			}
 			@Override
-			public Adapter caseVectorInstructions(VectorInstructions object)
+			public Adapter caseVectorInstruction(VectorInstruction object)
 			{
-				return createVectorInstructionsAdapter();
+				return createVectorInstructionAdapter();
 			}
 			@Override
 			public Adapter caseInstruction_extractelement(Instruction_extractelement object)
@@ -2157,16 +2157,16 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.intel.llvm.ireditor.lLVM_IR.VectorInstructions <em>Vector Instructions</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.intel.llvm.ireditor.lLVM_IR.VectorInstruction <em>Vector Instruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorInstructions
+	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorInstruction
 	 * @generated
 	 */
-	public Adapter createVectorInstructionsAdapter()
+	public Adapter createVectorInstructionAdapter()
 	{
 		return null;
 	}

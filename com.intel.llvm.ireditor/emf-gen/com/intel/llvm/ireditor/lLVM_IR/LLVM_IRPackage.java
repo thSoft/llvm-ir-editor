@@ -4325,7 +4325,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION__NAME = NAMED_MIDDLE_INSTRUCTION__NAME;
+	int BITWISE_BINARY_INSTRUCTION__NAME = BINARY_INSTRUCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
@@ -4334,7 +4334,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION__METADATA = NAMED_MIDDLE_INSTRUCTION__METADATA;
+	int BITWISE_BINARY_INSTRUCTION__METADATA = BINARY_INSTRUCTION__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -4343,7 +4343,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION__OPCODE = NAMED_MIDDLE_INSTRUCTION__OPCODE;
+	int BITWISE_BINARY_INSTRUCTION__OPCODE = BINARY_INSTRUCTION__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -4352,7 +4352,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION__TYPE = NAMED_MIDDLE_INSTRUCTION_FEATURE_COUNT + 0;
+	int BITWISE_BINARY_INSTRUCTION__TYPE = BINARY_INSTRUCTION__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Op1</b></em>' containment reference.
@@ -4361,7 +4361,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION__OP1 = NAMED_MIDDLE_INSTRUCTION_FEATURE_COUNT + 1;
+	int BITWISE_BINARY_INSTRUCTION__OP1 = BINARY_INSTRUCTION__OP1;
 
 	/**
 	 * The feature id for the '<em><b>Op2</b></em>' containment reference.
@@ -4370,7 +4370,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION__OP2 = NAMED_MIDDLE_INSTRUCTION_FEATURE_COUNT + 2;
+	int BITWISE_BINARY_INSTRUCTION__OP2 = BINARY_INSTRUCTION__OP2;
 
 	/**
 	 * The number of structural features of the '<em>Bitwise Binary Instruction</em>' class.
@@ -4379,7 +4379,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BITWISE_BINARY_INSTRUCTION_FEATURE_COUNT = NAMED_MIDDLE_INSTRUCTION_FEATURE_COUNT + 3;
+	int BITWISE_BINARY_INSTRUCTION_FEATURE_COUNT = BINARY_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_shlImpl <em>Instruction shl</em>}' class.
@@ -4820,14 +4820,14 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_XOR_FEATURE_COUNT = BITWISE_BINARY_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.VectorInstructionsImpl <em>Vector Instructions</em>}' class.
+	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.VectorInstructionImpl <em>Vector Instruction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.VectorInstructionsImpl
-	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.LLVM_IRPackageImpl#getVectorInstructions()
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.VectorInstructionImpl
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.LLVM_IRPackageImpl#getVectorInstruction()
 	 * @generated
 	 */
-	int VECTOR_INSTRUCTIONS = 90;
+	int VECTOR_INSTRUCTION = 90;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4836,7 +4836,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR_INSTRUCTIONS__NAME = NAMED_MIDDLE_INSTRUCTION__NAME;
+	int VECTOR_INSTRUCTION__NAME = NAMED_MIDDLE_INSTRUCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
@@ -4845,7 +4845,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR_INSTRUCTIONS__METADATA = NAMED_MIDDLE_INSTRUCTION__METADATA;
+	int VECTOR_INSTRUCTION__METADATA = NAMED_MIDDLE_INSTRUCTION__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -4854,16 +4854,16 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR_INSTRUCTIONS__OPCODE = NAMED_MIDDLE_INSTRUCTION__OPCODE;
+	int VECTOR_INSTRUCTION__OPCODE = NAMED_MIDDLE_INSTRUCTION__OPCODE;
 
 	/**
-	 * The number of structural features of the '<em>Vector Instructions</em>' class.
+	 * The number of structural features of the '<em>Vector Instruction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VECTOR_INSTRUCTIONS_FEATURE_COUNT = NAMED_MIDDLE_INSTRUCTION_FEATURE_COUNT + 0;
+	int VECTOR_INSTRUCTION_FEATURE_COUNT = NAMED_MIDDLE_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_extractelementImpl <em>Instruction extractelement</em>}' class.
@@ -4882,7 +4882,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_EXTRACTELEMENT__NAME = VECTOR_INSTRUCTIONS__NAME;
+	int INSTRUCTION_EXTRACTELEMENT__NAME = VECTOR_INSTRUCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
@@ -4891,7 +4891,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_EXTRACTELEMENT__METADATA = VECTOR_INSTRUCTIONS__METADATA;
+	int INSTRUCTION_EXTRACTELEMENT__METADATA = VECTOR_INSTRUCTION__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -4900,7 +4900,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_EXTRACTELEMENT__OPCODE = VECTOR_INSTRUCTIONS__OPCODE;
+	int INSTRUCTION_EXTRACTELEMENT__OPCODE = VECTOR_INSTRUCTION__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Vector</b></em>' containment reference.
@@ -4909,7 +4909,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_EXTRACTELEMENT__VECTOR = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 0;
+	int INSTRUCTION_EXTRACTELEMENT__VECTOR = VECTOR_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' containment reference.
@@ -4918,7 +4918,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_EXTRACTELEMENT__INDEX = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 1;
+	int INSTRUCTION_EXTRACTELEMENT__INDEX = VECTOR_INSTRUCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Instruction extractelement</em>' class.
@@ -4927,7 +4927,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_EXTRACTELEMENT_FEATURE_COUNT = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 2;
+	int INSTRUCTION_EXTRACTELEMENT_FEATURE_COUNT = VECTOR_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_insertelementImpl <em>Instruction insertelement</em>}' class.
@@ -4946,7 +4946,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT__NAME = VECTOR_INSTRUCTIONS__NAME;
+	int INSTRUCTION_INSERTELEMENT__NAME = VECTOR_INSTRUCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
@@ -4955,7 +4955,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT__METADATA = VECTOR_INSTRUCTIONS__METADATA;
+	int INSTRUCTION_INSERTELEMENT__METADATA = VECTOR_INSTRUCTION__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -4964,7 +4964,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT__OPCODE = VECTOR_INSTRUCTIONS__OPCODE;
+	int INSTRUCTION_INSERTELEMENT__OPCODE = VECTOR_INSTRUCTION__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Vector</b></em>' containment reference.
@@ -4973,7 +4973,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT__VECTOR = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 0;
+	int INSTRUCTION_INSERTELEMENT__VECTOR = VECTOR_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' containment reference.
@@ -4982,7 +4982,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT__ELEMENT = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 1;
+	int INSTRUCTION_INSERTELEMENT__ELEMENT = VECTOR_INSTRUCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' containment reference.
@@ -4991,7 +4991,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT__INDEX = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 2;
+	int INSTRUCTION_INSERTELEMENT__INDEX = VECTOR_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Instruction insertelement</em>' class.
@@ -5000,7 +5000,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INSERTELEMENT_FEATURE_COUNT = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 3;
+	int INSTRUCTION_INSERTELEMENT_FEATURE_COUNT = VECTOR_INSTRUCTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_shufflevectorImpl <em>Instruction shufflevector</em>}' class.
@@ -5019,7 +5019,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR__NAME = VECTOR_INSTRUCTIONS__NAME;
+	int INSTRUCTION_SHUFFLEVECTOR__NAME = VECTOR_INSTRUCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
@@ -5028,7 +5028,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR__METADATA = VECTOR_INSTRUCTIONS__METADATA;
+	int INSTRUCTION_SHUFFLEVECTOR__METADATA = VECTOR_INSTRUCTION__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -5037,7 +5037,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR__OPCODE = VECTOR_INSTRUCTIONS__OPCODE;
+	int INSTRUCTION_SHUFFLEVECTOR__OPCODE = VECTOR_INSTRUCTION__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Vector1</b></em>' containment reference.
@@ -5046,7 +5046,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR__VECTOR1 = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 0;
+	int INSTRUCTION_SHUFFLEVECTOR__VECTOR1 = VECTOR_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Vector2</b></em>' containment reference.
@@ -5055,7 +5055,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR__VECTOR2 = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 1;
+	int INSTRUCTION_SHUFFLEVECTOR__VECTOR2 = VECTOR_INSTRUCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Mask</b></em>' containment reference.
@@ -5064,7 +5064,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR__MASK = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 2;
+	int INSTRUCTION_SHUFFLEVECTOR__MASK = VECTOR_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Instruction shufflevector</em>' class.
@@ -5073,7 +5073,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_SHUFFLEVECTOR_FEATURE_COUNT = VECTOR_INSTRUCTIONS_FEATURE_COUNT + 3;
+	int INSTRUCTION_SHUFFLEVECTOR_FEATURE_COUNT = VECTOR_INSTRUCTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.AggregateInstructionImpl <em>Aggregate Instruction</em>}' class.
@@ -9802,39 +9802,6 @@ public interface LLVM_IRPackage extends EPackage
 	EClass getBitwiseBinaryInstruction();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction#getType()
-	 * @see #getBitwiseBinaryInstruction()
-	 * @generated
-	 */
-	EReference getBitwiseBinaryInstruction_Type();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction#getOp1 <em>Op1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Op1</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction#getOp1()
-	 * @see #getBitwiseBinaryInstruction()
-	 * @generated
-	 */
-	EReference getBitwiseBinaryInstruction_Op1();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction#getOp2 <em>Op2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Op2</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.BitwiseBinaryInstruction#getOp2()
-	 * @see #getBitwiseBinaryInstruction()
-	 * @generated
-	 */
-	EReference getBitwiseBinaryInstruction_Op2();
-
-	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_shl <em>Instruction shl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9895,14 +9862,14 @@ public interface LLVM_IRPackage extends EPackage
 	EClass getInstruction_xor();
 
 	/**
-	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.VectorInstructions <em>Vector Instructions</em>}'.
+	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.VectorInstruction <em>Vector Instruction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vector Instructions</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorInstructions
+	 * @return the meta object for class '<em>Vector Instruction</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.VectorInstruction
 	 * @generated
 	 */
-	EClass getVectorInstructions();
+	EClass getVectorInstruction();
 
 	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_extractelement <em>Instruction extractelement</em>}'.

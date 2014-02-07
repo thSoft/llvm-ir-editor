@@ -825,6 +825,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 			{
 				BitwiseBinaryInstruction bitwiseBinaryInstruction = (BitwiseBinaryInstruction)theEObject;
 				T result = caseBitwiseBinaryInstruction(bitwiseBinaryInstruction);
+				if (result == null) result = caseBinaryInstruction(bitwiseBinaryInstruction);
 				if (result == null) result = caseNamedMiddleInstruction(bitwiseBinaryInstruction);
 				if (result == null) result = caseNamedInstruction(bitwiseBinaryInstruction);
 				if (result == null) result = caseMiddleInstruction(bitwiseBinaryInstruction);
@@ -838,6 +839,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_shl instruction_shl = (Instruction_shl)theEObject;
 				T result = caseInstruction_shl(instruction_shl);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_shl);
+				if (result == null) result = caseBinaryInstruction(instruction_shl);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_shl);
 				if (result == null) result = caseNamedInstruction(instruction_shl);
 				if (result == null) result = caseMiddleInstruction(instruction_shl);
@@ -851,6 +853,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_lshr instruction_lshr = (Instruction_lshr)theEObject;
 				T result = caseInstruction_lshr(instruction_lshr);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_lshr);
+				if (result == null) result = caseBinaryInstruction(instruction_lshr);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_lshr);
 				if (result == null) result = caseNamedInstruction(instruction_lshr);
 				if (result == null) result = caseMiddleInstruction(instruction_lshr);
@@ -864,6 +867,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_ashr instruction_ashr = (Instruction_ashr)theEObject;
 				T result = caseInstruction_ashr(instruction_ashr);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_ashr);
+				if (result == null) result = caseBinaryInstruction(instruction_ashr);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_ashr);
 				if (result == null) result = caseNamedInstruction(instruction_ashr);
 				if (result == null) result = caseMiddleInstruction(instruction_ashr);
@@ -877,6 +881,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_and instruction_and = (Instruction_and)theEObject;
 				T result = caseInstruction_and(instruction_and);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_and);
+				if (result == null) result = caseBinaryInstruction(instruction_and);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_and);
 				if (result == null) result = caseNamedInstruction(instruction_and);
 				if (result == null) result = caseMiddleInstruction(instruction_and);
@@ -890,6 +895,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_or instruction_or = (Instruction_or)theEObject;
 				T result = caseInstruction_or(instruction_or);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_or);
+				if (result == null) result = caseBinaryInstruction(instruction_or);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_or);
 				if (result == null) result = caseNamedInstruction(instruction_or);
 				if (result == null) result = caseMiddleInstruction(instruction_or);
@@ -903,6 +909,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_xor instruction_xor = (Instruction_xor)theEObject;
 				T result = caseInstruction_xor(instruction_xor);
 				if (result == null) result = caseBitwiseBinaryInstruction(instruction_xor);
+				if (result == null) result = caseBinaryInstruction(instruction_xor);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_xor);
 				if (result == null) result = caseNamedInstruction(instruction_xor);
 				if (result == null) result = caseMiddleInstruction(instruction_xor);
@@ -911,15 +918,15 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LLVM_IRPackage.VECTOR_INSTRUCTIONS:
+			case LLVM_IRPackage.VECTOR_INSTRUCTION:
 			{
-				VectorInstructions vectorInstructions = (VectorInstructions)theEObject;
-				T result = caseVectorInstructions(vectorInstructions);
-				if (result == null) result = caseNamedMiddleInstruction(vectorInstructions);
-				if (result == null) result = caseNamedInstruction(vectorInstructions);
-				if (result == null) result = caseMiddleInstruction(vectorInstructions);
-				if (result == null) result = caseLocalValue(vectorInstructions);
-				if (result == null) result = caseInstruction(vectorInstructions);
+				VectorInstruction vectorInstruction = (VectorInstruction)theEObject;
+				T result = caseVectorInstruction(vectorInstruction);
+				if (result == null) result = caseNamedMiddleInstruction(vectorInstruction);
+				if (result == null) result = caseNamedInstruction(vectorInstruction);
+				if (result == null) result = caseMiddleInstruction(vectorInstruction);
+				if (result == null) result = caseLocalValue(vectorInstruction);
+				if (result == null) result = caseInstruction(vectorInstruction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -927,7 +934,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 			{
 				Instruction_extractelement instruction_extractelement = (Instruction_extractelement)theEObject;
 				T result = caseInstruction_extractelement(instruction_extractelement);
-				if (result == null) result = caseVectorInstructions(instruction_extractelement);
+				if (result == null) result = caseVectorInstruction(instruction_extractelement);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_extractelement);
 				if (result == null) result = caseNamedInstruction(instruction_extractelement);
 				if (result == null) result = caseMiddleInstruction(instruction_extractelement);
@@ -940,7 +947,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 			{
 				Instruction_insertelement instruction_insertelement = (Instruction_insertelement)theEObject;
 				T result = caseInstruction_insertelement(instruction_insertelement);
-				if (result == null) result = caseVectorInstructions(instruction_insertelement);
+				if (result == null) result = caseVectorInstruction(instruction_insertelement);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_insertelement);
 				if (result == null) result = caseNamedInstruction(instruction_insertelement);
 				if (result == null) result = caseMiddleInstruction(instruction_insertelement);
@@ -953,7 +960,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 			{
 				Instruction_shufflevector instruction_shufflevector = (Instruction_shufflevector)theEObject;
 				T result = caseInstruction_shufflevector(instruction_shufflevector);
-				if (result == null) result = caseVectorInstructions(instruction_shufflevector);
+				if (result == null) result = caseVectorInstruction(instruction_shufflevector);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_shufflevector);
 				if (result == null) result = caseNamedInstruction(instruction_shufflevector);
 				if (result == null) result = caseMiddleInstruction(instruction_shufflevector);
@@ -2849,17 +2856,17 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vector Instructions</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Vector Instruction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vector Instructions</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Vector Instruction</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVectorInstructions(VectorInstructions object)
+	public T caseVectorInstruction(VectorInstruction object)
 	{
 		return null;
 	}

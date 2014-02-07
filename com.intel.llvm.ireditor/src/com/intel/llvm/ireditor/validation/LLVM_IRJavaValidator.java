@@ -332,7 +332,7 @@ public class LLVM_IRJavaValidator extends AbstractLLVM_IRJavaValidator {
 	@Check
 	public void checkBitwiseBinary(BitwiseBinaryInstruction inst) {
 		ResolvedType t = resolveType(inst.getType());
-		checkRequired(t, LLVM_IRPackage.eINSTANCE.getBitwiseBinaryInstruction_Type(), 0, TYPE_ANY_INTEGER, TYPE_INTEGER_VECTOR);
+		checkRequired(t, LLVM_IRPackage.eINSTANCE.getBinaryInstruction_Type(), 0, TYPE_ANY_INTEGER, TYPE_INTEGER_VECTOR);
 		checkExpected(t, inst.getOp1());
 		checkExpected(t, inst.getOp2());
 	}

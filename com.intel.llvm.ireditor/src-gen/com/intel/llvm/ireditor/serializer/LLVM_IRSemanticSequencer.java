@@ -548,7 +548,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				   context == grammarAccess.getLocalValueRule() ||
 				   context == grammarAccess.getNamedInstructionRule() ||
 				   context == grammarAccess.getNamedMiddleInstructionRule() ||
-				   context == grammarAccess.getVectorInstructionsRule()) {
+				   context == grammarAccess.getVectorInstructionRule()) {
 					sequence_Instruction_extractelement(context, (Instruction_extractelement) semanticObject); 
 					return; 
 				}
@@ -719,7 +719,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				   context == grammarAccess.getLocalValueRule() ||
 				   context == grammarAccess.getNamedInstructionRule() ||
 				   context == grammarAccess.getNamedMiddleInstructionRule() ||
-				   context == grammarAccess.getVectorInstructionsRule()) {
+				   context == grammarAccess.getVectorInstructionRule()) {
 					sequence_Instruction_insertelement(context, (Instruction_insertelement) semanticObject); 
 					return; 
 				}
@@ -928,7 +928,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				   context == grammarAccess.getLocalValueRule() ||
 				   context == grammarAccess.getNamedInstructionRule() ||
 				   context == grammarAccess.getNamedMiddleInstructionRule() ||
-				   context == grammarAccess.getVectorInstructionsRule()) {
+				   context == grammarAccess.getVectorInstructionRule()) {
 					sequence_Instruction_shufflevector(context, (Instruction_shufflevector) semanticObject); 
 					return; 
 				}

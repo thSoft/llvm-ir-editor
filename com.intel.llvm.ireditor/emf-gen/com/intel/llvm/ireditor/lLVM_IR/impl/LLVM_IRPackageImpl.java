@@ -674,7 +674,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vectorInstructionsEClass = null;
+	private EClass vectorInstructionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3605,36 +3605,6 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBitwiseBinaryInstruction_Type()
-	{
-        return (EReference)getBitwiseBinaryInstruction().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBitwiseBinaryInstruction_Op1()
-	{
-        return (EReference)getBitwiseBinaryInstruction().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBitwiseBinaryInstruction_Op2()
-	{
-        return (EReference)getBitwiseBinaryInstruction().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getInstruction_shl()
 	{
 		if (instruction_shlEClass == null)
@@ -3719,13 +3689,13 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVectorInstructions()
+	public EClass getVectorInstruction()
 	{
-		if (vectorInstructionsEClass == null)
+		if (vectorInstructionEClass == null)
 		{
-			vectorInstructionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(90);
+			vectorInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(90);
 		}
-		return vectorInstructionsEClass;
+		return vectorInstructionEClass;
 	}
 
 	/**

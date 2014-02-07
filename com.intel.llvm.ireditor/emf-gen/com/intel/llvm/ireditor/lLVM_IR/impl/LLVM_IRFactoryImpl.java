@@ -154,7 +154,7 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
 			case LLVM_IRPackage.INSTRUCTION_AND: return createInstruction_and();
 			case LLVM_IRPackage.INSTRUCTION_OR: return createInstruction_or();
 			case LLVM_IRPackage.INSTRUCTION_XOR: return createInstruction_xor();
-			case LLVM_IRPackage.VECTOR_INSTRUCTIONS: return createVectorInstructions();
+			case LLVM_IRPackage.VECTOR_INSTRUCTION: return createVectorInstruction();
 			case LLVM_IRPackage.INSTRUCTION_EXTRACTELEMENT: return createInstruction_extractelement();
 			case LLVM_IRPackage.INSTRUCTION_INSERTELEMENT: return createInstruction_insertelement();
 			case LLVM_IRPackage.INSTRUCTION_SHUFFLEVECTOR: return createInstruction_shufflevector();
@@ -1206,10 +1206,10 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VectorInstructions createVectorInstructions()
+	public VectorInstruction createVectorInstruction()
 	{
-		VectorInstructionsImpl vectorInstructions = new VectorInstructionsImpl();
-		return vectorInstructions;
+		VectorInstructionImpl vectorInstruction = new VectorInstructionImpl();
+		return vectorInstruction;
 	}
 
 	/**

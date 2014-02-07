@@ -20,7 +20,7 @@ package com.intel.llvm.ireditor.lLVM_IR;
  * @model
  * @generated
  */
-public interface Instruction_extractelement extends VectorInstructions
+public interface Instruction_extractelement extends VectorInstruction
 {
 	/**
 	 * Returns the value of the '<em><b>Vector</b></em>' containment reference.

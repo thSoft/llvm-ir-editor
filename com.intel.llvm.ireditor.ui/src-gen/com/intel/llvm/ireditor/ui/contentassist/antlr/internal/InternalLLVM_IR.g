@@ -2786,25 +2786,25 @@ finally {
 
 
 
-// Entry rule entryRuleVectorInstructions
-entryRuleVectorInstructions 
+// Entry rule entryRuleVectorInstruction
+entryRuleVectorInstruction 
 :
-{ before(grammarAccess.getVectorInstructionsRule()); }
-	 ruleVectorInstructions
-{ after(grammarAccess.getVectorInstructionsRule()); } 
+{ before(grammarAccess.getVectorInstructionRule()); }
+	 ruleVectorInstruction
+{ after(grammarAccess.getVectorInstructionRule()); } 
 	 EOF 
 ;
 
-// Rule VectorInstructions
-ruleVectorInstructions
+// Rule VectorInstruction
+ruleVectorInstruction
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getVectorInstructionsAccess().getAlternatives()); }
-(rule__VectorInstructions__Alternatives)
-{ after(grammarAccess.getVectorInstructionsAccess().getAlternatives()); }
+{ before(grammarAccess.getVectorInstructionAccess().getAlternatives()); }
+(rule__VectorInstruction__Alternatives)
+{ after(grammarAccess.getVectorInstructionAccess().getAlternatives()); }
 )
 
 ;
@@ -5571,9 +5571,9 @@ rule__NamedMiddleInstruction__Alternatives
 )
 
     |(
-{ before(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionsParserRuleCall_2()); }
-	ruleVectorInstructions
-{ after(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionsParserRuleCall_2()); }
+{ before(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionParserRuleCall_2()); }
+	ruleVectorInstruction
+{ after(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionParserRuleCall_2()); }
 )
 
     |(
@@ -5917,27 +5917,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VectorInstructions__Alternatives
+rule__VectorInstruction__Alternatives
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getVectorInstructionsAccess().getInstruction_extractelementParserRuleCall_0()); }
+{ before(grammarAccess.getVectorInstructionAccess().getInstruction_extractelementParserRuleCall_0()); }
 	ruleInstruction_extractelement
-{ after(grammarAccess.getVectorInstructionsAccess().getInstruction_extractelementParserRuleCall_0()); }
+{ after(grammarAccess.getVectorInstructionAccess().getInstruction_extractelementParserRuleCall_0()); }
 )
 
     |(
-{ before(grammarAccess.getVectorInstructionsAccess().getInstruction_insertelementParserRuleCall_1()); }
+{ before(grammarAccess.getVectorInstructionAccess().getInstruction_insertelementParserRuleCall_1()); }
 	ruleInstruction_insertelement
-{ after(grammarAccess.getVectorInstructionsAccess().getInstruction_insertelementParserRuleCall_1()); }
+{ after(grammarAccess.getVectorInstructionAccess().getInstruction_insertelementParserRuleCall_1()); }
 )
 
     |(
-{ before(grammarAccess.getVectorInstructionsAccess().getInstruction_shufflevectorParserRuleCall_2()); }
+{ before(grammarAccess.getVectorInstructionAccess().getInstruction_shufflevectorParserRuleCall_2()); }
 	ruleInstruction_shufflevector
-{ after(grammarAccess.getVectorInstructionsAccess().getInstruction_shufflevectorParserRuleCall_2()); }
+{ after(grammarAccess.getVectorInstructionAccess().getInstruction_shufflevectorParserRuleCall_2()); }
 )
 
 ;

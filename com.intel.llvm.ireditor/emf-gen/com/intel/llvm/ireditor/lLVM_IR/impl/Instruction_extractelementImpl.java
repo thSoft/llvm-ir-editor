@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Instruction_extractelementImpl extends VectorInstructionsImpl implements Instruction_extractelement
+public class Instruction_extractelementImpl extends VectorInstructionImpl implements Instruction_extractelement
 {
 	/**
 	 * The cached value of the '{@link #getVector() <em>Vector</em>}' containment reference.

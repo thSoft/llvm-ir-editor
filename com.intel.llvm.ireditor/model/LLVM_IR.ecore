@@ -364,27 +364,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_urem" eSuperTypes="#//BinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_srem" eSuperTypes="#//BinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_frem" eSuperTypes="#//BinaryInstruction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BitwiseBinaryInstruction" eSuperTypes="#//NamedMiddleInstruction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="op1" eType="#//ValueRef"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="op2" eType="#//ValueRef"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BitwiseBinaryInstruction" eSuperTypes="#//BinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_shl" eSuperTypes="#//BitwiseBinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_lshr" eSuperTypes="#//BitwiseBinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_ashr" eSuperTypes="#//BitwiseBinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_and" eSuperTypes="#//BitwiseBinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_or" eSuperTypes="#//BitwiseBinaryInstruction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction_xor" eSuperTypes="#//BitwiseBinaryInstruction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VectorInstructions" eSuperTypes="#//NamedMiddleInstruction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Instruction_extractelement" eSuperTypes="#//VectorInstructions">
+  <eClassifiers xsi:type="ecore:EClass" name="VectorInstruction" eSuperTypes="#//NamedMiddleInstruction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction_extractelement" eSuperTypes="#//VectorInstruction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="vector" eType="#//TypedValue"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="index" eType="#//TypedValue"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Instruction_insertelement" eSuperTypes="#//VectorInstructions">
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction_insertelement" eSuperTypes="#//VectorInstruction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="vector" eType="#//TypedValue"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//TypedValue"
@@ -392,7 +386,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="index" eType="#//TypedValue"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Instruction_shufflevector" eSuperTypes="#//VectorInstructions">
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction_shufflevector" eSuperTypes="#//VectorInstruction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="vector1" eType="#//TypedValue"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vector2" eType="#//TypedValue"

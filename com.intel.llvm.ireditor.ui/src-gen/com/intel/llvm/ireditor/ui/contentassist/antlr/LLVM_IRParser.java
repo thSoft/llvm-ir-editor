@@ -74,7 +74,7 @@ public class LLVM_IRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBinaryInstructionAccess().getAlternatives(), "rule__BinaryInstruction__Alternatives");
 					put(grammarAccess.getFastMathFlagAccess().getKindAlternatives_1_0(), "rule__FastMathFlag__KindAlternatives_1_0");
 					put(grammarAccess.getBitwiseBinaryInstructionAccess().getAlternatives(), "rule__BitwiseBinaryInstruction__Alternatives");
-					put(grammarAccess.getVectorInstructionsAccess().getAlternatives(), "rule__VectorInstructions__Alternatives");
+					put(grammarAccess.getVectorInstructionAccess().getAlternatives(), "rule__VectorInstruction__Alternatives");
 					put(grammarAccess.getAggregateInstructionAccess().getAlternatives(), "rule__AggregateInstruction__Alternatives");
 					put(grammarAccess.getInstruction_loadAccess().getAlternatives_2(), "rule__Instruction_load__Alternatives_2");
 					put(grammarAccess.getInstruction_storeAccess().getAlternatives_1(), "rule__Instruction_store__Alternatives_1");

@@ -14484,7 +14484,7 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNamedMiddleInstruction"
-    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5251:1: ruleNamedMiddleInstruction returns [EObject current=null] : (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstructions_2= ruleVectorInstructions | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid ) ;
+    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5251:1: ruleNamedMiddleInstruction returns [EObject current=null] : (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstruction_2= ruleVectorInstruction | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid ) ;
     public final EObject ruleNamedMiddleInstruction() throws RecognitionException {
         EObject current = null;
 
@@ -14492,7 +14492,7 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
 
         EObject this_BitwiseBinaryInstruction_1 = null;
 
-        EObject this_VectorInstructions_2 = null;
+        EObject this_VectorInstruction_2 = null;
 
         EObject this_AggregateInstruction_3 = null;
 
@@ -14516,10 +14516,10 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5254:28: ( (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstructions_2= ruleVectorInstructions | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid ) )
-            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5255:1: (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstructions_2= ruleVectorInstructions | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid )
+            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5254:28: ( (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstruction_2= ruleVectorInstruction | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid ) )
+            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5255:1: (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstruction_2= ruleVectorInstruction | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid )
             {
-            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5255:1: (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstructions_2= ruleVectorInstructions | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid )
+            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5255:1: (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstruction_2= ruleVectorInstruction | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid )
             int alt71=12;
             alt71 = dfa71.predict(input);
             switch (alt71) {
@@ -14568,21 +14568,21 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5276:5: this_VectorInstructions_2= ruleVectorInstructions
+                    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:5276:5: this_VectorInstruction_2= ruleVectorInstruction
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionsParserRuleCall_2()); 
+                              newCompositeNode(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleVectorInstructions_in_ruleNamedMiddleInstruction11772);
-                    this_VectorInstructions_2=ruleVectorInstructions();
+                    pushFollow(FollowSets000.FOLLOW_ruleVectorInstruction_in_ruleNamedMiddleInstruction11772);
+                    this_VectorInstruction_2=ruleVectorInstruction();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                              current = this_VectorInstructions_2; 
+                              current = this_VectorInstruction_2; 
                               afterParserOrEnumRuleCall();
                           
                     }
@@ -24654,30 +24654,30 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleInstruction_xor"
 
 
-    // $ANTLR start "entryRuleVectorInstructions"
-    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9309:1: entryRuleVectorInstructions returns [EObject current=null] : iv_ruleVectorInstructions= ruleVectorInstructions EOF ;
-    public final EObject entryRuleVectorInstructions() throws RecognitionException {
+    // $ANTLR start "entryRuleVectorInstruction"
+    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9309:1: entryRuleVectorInstruction returns [EObject current=null] : iv_ruleVectorInstruction= ruleVectorInstruction EOF ;
+    public final EObject entryRuleVectorInstruction() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleVectorInstructions = null;
+        EObject iv_ruleVectorInstruction = null;
 
 
         try {
-            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9310:2: (iv_ruleVectorInstructions= ruleVectorInstructions EOF )
-            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9311:2: iv_ruleVectorInstructions= ruleVectorInstructions EOF
+            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9310:2: (iv_ruleVectorInstruction= ruleVectorInstruction EOF )
+            // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9311:2: iv_ruleVectorInstruction= ruleVectorInstruction EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getVectorInstructionsRule()); 
+               newCompositeNode(grammarAccess.getVectorInstructionRule()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleVectorInstructions_in_entryRuleVectorInstructions20345);
-            iv_ruleVectorInstructions=ruleVectorInstructions();
+            pushFollow(FollowSets001.FOLLOW_ruleVectorInstruction_in_entryRuleVectorInstruction20345);
+            iv_ruleVectorInstruction=ruleVectorInstruction();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleVectorInstructions; 
+               current =iv_ruleVectorInstruction; 
             }
-            match(input,EOF,FollowSets001.FOLLOW_EOF_in_entryRuleVectorInstructions20355); if (state.failed) return current;
+            match(input,EOF,FollowSets001.FOLLOW_EOF_in_entryRuleVectorInstruction20355); if (state.failed) return current;
 
             }
 
@@ -24691,12 +24691,12 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleVectorInstructions"
+    // $ANTLR end "entryRuleVectorInstruction"
 
 
-    // $ANTLR start "ruleVectorInstructions"
-    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9318:1: ruleVectorInstructions returns [EObject current=null] : (this_Instruction_extractelement_0= ruleInstruction_extractelement | this_Instruction_insertelement_1= ruleInstruction_insertelement | this_Instruction_shufflevector_2= ruleInstruction_shufflevector ) ;
-    public final EObject ruleVectorInstructions() throws RecognitionException {
+    // $ANTLR start "ruleVectorInstruction"
+    // ../com.intel.llvm.ireditor/src-gen/com/intel/llvm/ireditor/parser/antlr/internal/InternalLLVM_IR.g:9318:1: ruleVectorInstruction returns [EObject current=null] : (this_Instruction_extractelement_0= ruleInstruction_extractelement | this_Instruction_insertelement_1= ruleInstruction_insertelement | this_Instruction_shufflevector_2= ruleInstruction_shufflevector ) ;
+    public final EObject ruleVectorInstruction() throws RecognitionException {
         EObject current = null;
 
         EObject this_Instruction_extractelement_0 = null;
@@ -24721,10 +24721,10 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getVectorInstructionsAccess().getInstruction_extractelementParserRuleCall_0()); 
+                              newCompositeNode(grammarAccess.getVectorInstructionAccess().getInstruction_extractelementParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FollowSets001.FOLLOW_ruleInstruction_extractelement_in_ruleVectorInstructions20402);
+                    pushFollow(FollowSets001.FOLLOW_ruleInstruction_extractelement_in_ruleVectorInstruction20402);
                     this_Instruction_extractelement_0=ruleInstruction_extractelement();
 
                     state._fsp--;
@@ -24743,10 +24743,10 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getVectorInstructionsAccess().getInstruction_insertelementParserRuleCall_1()); 
+                              newCompositeNode(grammarAccess.getVectorInstructionAccess().getInstruction_insertelementParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets001.FOLLOW_ruleInstruction_insertelement_in_ruleVectorInstructions20429);
+                    pushFollow(FollowSets001.FOLLOW_ruleInstruction_insertelement_in_ruleVectorInstruction20429);
                     this_Instruction_insertelement_1=ruleInstruction_insertelement();
 
                     state._fsp--;
@@ -24765,10 +24765,10 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getVectorInstructionsAccess().getInstruction_shufflevectorParserRuleCall_2()); 
+                              newCompositeNode(grammarAccess.getVectorInstructionAccess().getInstruction_shufflevectorParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FollowSets001.FOLLOW_ruleInstruction_shufflevector_in_ruleVectorInstructions20456);
+                    pushFollow(FollowSets001.FOLLOW_ruleInstruction_shufflevector_in_ruleVectorInstruction20456);
                     this_Instruction_shufflevector_2=ruleInstruction_shufflevector();
 
                     state._fsp--;
@@ -24801,7 +24801,7 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleVectorInstructions"
+    // $ANTLR end "ruleVectorInstruction"
 
 
     // $ANTLR start "entryRuleInstruction_extractelement"
@@ -41004,7 +41004,7 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
             this.transition = DFA71_transition;
         }
         public String getDescription() {
-            return "5255:1: (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstructions_2= ruleVectorInstructions | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid )";
+            return "5255:1: (this_BinaryInstruction_0= ruleBinaryInstruction | this_BitwiseBinaryInstruction_1= ruleBitwiseBinaryInstruction | this_VectorInstruction_2= ruleVectorInstruction | this_AggregateInstruction_3= ruleAggregateInstruction | this_Instruction_alloca_4= ruleInstruction_alloca | this_Instruction_load_5= ruleInstruction_load | this_Instruction_getelementptr_6= ruleInstruction_getelementptr | this_Instruction_cmpxchg_7= ruleInstruction_cmpxchg | this_Instruction_atomicrmw_8= ruleInstruction_atomicrmw | this_ConversionInstruction_9= ruleConversionInstruction | this_OtherInstruction_10= ruleOtherInstruction | this_Instruction_call_nonVoid_11= ruleInstruction_call_nonVoid )";
         }
     }
     static final String DFA77_eotS =
@@ -42315,7 +42315,7 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_EOF_in_entryRuleNamedMiddleInstruction11671 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleBinaryInstruction_in_ruleNamedMiddleInstruction11718 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleBitwiseBinaryInstruction_in_ruleNamedMiddleInstruction11745 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVectorInstructions_in_ruleNamedMiddleInstruction11772 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVectorInstruction_in_ruleNamedMiddleInstruction11772 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAggregateInstruction_in_ruleNamedMiddleInstruction11799 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleInstruction_alloca_in_ruleNamedMiddleInstruction11826 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleInstruction_load_in_ruleNamedMiddleInstruction11853 = new BitSet(new long[]{0x0000000000000002L});
@@ -42631,11 +42631,11 @@ public class InternalLLVM_IRParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleValueRef_in_ruleInstruction_xor20276 = new BitSet(new long[]{0x0000004000000000L});
         public static final BitSet FOLLOW_38_in_ruleInstruction_xor20288 = new BitSet(new long[]{0xBCFFF4000401FFA0L,0x0000000000015FFFL,0x000003FFE0000000L});
         public static final BitSet FOLLOW_ruleValueRef_in_ruleInstruction_xor20309 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVectorInstructions_in_entryRuleVectorInstructions20345 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleVectorInstructions20355 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInstruction_extractelement_in_ruleVectorInstructions20402 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInstruction_insertelement_in_ruleVectorInstructions20429 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInstruction_shufflevector_in_ruleVectorInstructions20456 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVectorInstruction_in_entryRuleVectorInstruction20345 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleVectorInstruction20355 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInstruction_extractelement_in_ruleVectorInstruction20402 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInstruction_insertelement_in_ruleVectorInstruction20429 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInstruction_shufflevector_in_ruleVectorInstruction20456 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleInstruction_extractelement_in_entryRuleInstruction_extractelement20491 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleInstruction_extractelement20501 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocalName_in_ruleInstruction_extractelement20547 = new BitSet(new long[]{0x0000800000000000L});

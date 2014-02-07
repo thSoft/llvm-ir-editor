@@ -5274,11 +5274,11 @@ ruleNamedMiddleInstruction returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionsParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getNamedMiddleInstructionAccess().getVectorInstructionParserRuleCall_2()); 
     }
-    this_VectorInstructions_2=ruleVectorInstructions
+    this_VectorInstruction_2=ruleVectorInstruction
     { 
-        $current = $this_VectorInstructions_2.current; 
+        $current = $this_VectorInstruction_2.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -9305,23 +9305,23 @@ ruleInstruction_xor returns [EObject current=null]
 
 
 
-// Entry rule entryRuleVectorInstructions
-entryRuleVectorInstructions returns [EObject current=null] 
+// Entry rule entryRuleVectorInstruction
+entryRuleVectorInstruction returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getVectorInstructionsRule()); }
-	 iv_ruleVectorInstructions=ruleVectorInstructions 
-	 { $current=$iv_ruleVectorInstructions.current; } 
+	{ newCompositeNode(grammarAccess.getVectorInstructionRule()); }
+	 iv_ruleVectorInstruction=ruleVectorInstruction 
+	 { $current=$iv_ruleVectorInstruction.current; } 
 	 EOF 
 ;
 
-// Rule VectorInstructions
-ruleVectorInstructions returns [EObject current=null] 
+// Rule VectorInstruction
+ruleVectorInstruction returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (
     { 
-        newCompositeNode(grammarAccess.getVectorInstructionsAccess().getInstruction_extractelementParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getVectorInstructionAccess().getInstruction_extractelementParserRuleCall_0()); 
     }
     this_Instruction_extractelement_0=ruleInstruction_extractelement
     { 
@@ -9331,7 +9331,7 @@ ruleVectorInstructions returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getVectorInstructionsAccess().getInstruction_insertelementParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getVectorInstructionAccess().getInstruction_insertelementParserRuleCall_1()); 
     }
     this_Instruction_insertelement_1=ruleInstruction_insertelement
     { 
@@ -9341,7 +9341,7 @@ ruleVectorInstructions returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getVectorInstructionsAccess().getInstruction_shufflevectorParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getVectorInstructionAccess().getInstruction_shufflevectorParserRuleCall_2()); 
     }
     this_Instruction_shufflevector_2=ruleInstruction_shufflevector
     { 

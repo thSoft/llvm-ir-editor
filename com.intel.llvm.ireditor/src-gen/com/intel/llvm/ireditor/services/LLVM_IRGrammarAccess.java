@@ -2881,7 +2881,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBinaryInstructionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cBitwiseBinaryInstructionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cVectorInstructionsParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cVectorInstructionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cAggregateInstructionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cInstruction_allocaParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cInstruction_loadParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
@@ -2893,12 +2893,12 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInstruction_call_nonVoidParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
 		
 		//NamedMiddleInstruction:
-		//	BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction | Instruction_alloca |
+		//	BinaryInstruction | BitwiseBinaryInstruction | VectorInstruction | AggregateInstruction | Instruction_alloca |
 		//	Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw | ConversionInstruction |
 		//	OtherInstruction | Instruction_call_nonVoid;
 		public ParserRule getRule() { return rule; }
 
-		//BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction | Instruction_alloca |
+		//BinaryInstruction | BitwiseBinaryInstruction | VectorInstruction | AggregateInstruction | Instruction_alloca |
 		//Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw | ConversionInstruction |
 		//OtherInstruction | Instruction_call_nonVoid
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -2909,8 +2909,8 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		//BitwiseBinaryInstruction
 		public RuleCall getBitwiseBinaryInstructionParserRuleCall_1() { return cBitwiseBinaryInstructionParserRuleCall_1; }
 
-		//VectorInstructions
-		public RuleCall getVectorInstructionsParserRuleCall_2() { return cVectorInstructionsParserRuleCall_2; }
+		//VectorInstruction
+		public RuleCall getVectorInstructionParserRuleCall_2() { return cVectorInstructionParserRuleCall_2; }
 
 		//AggregateInstruction
 		public RuleCall getAggregateInstructionParserRuleCall_3() { return cAggregateInstructionParserRuleCall_3; }
@@ -4951,14 +4951,14 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getOp2ValueRefParserRuleCall_5_0() { return cOp2ValueRefParserRuleCall_5_0; }
 	}
 
-	public class VectorInstructionsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VectorInstructions");
+	public class VectorInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VectorInstruction");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cInstruction_extractelementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cInstruction_insertelementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cInstruction_shufflevectorParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//VectorInstructions:
+		//VectorInstruction:
 		//	Instruction_extractelement | Instruction_insertelement | Instruction_shufflevector;
 		public ParserRule getRule() { return rule; }
 
@@ -8355,7 +8355,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	private Instruction_andElements pInstruction_and;
 	private Instruction_orElements pInstruction_or;
 	private Instruction_xorElements pInstruction_xor;
-	private VectorInstructionsElements pVectorInstructions;
+	private VectorInstructionElements pVectorInstruction;
 	private Instruction_extractelementElements pInstruction_extractelement;
 	private Instruction_insertelementElements pInstruction_insertelement;
 	private Instruction_shufflevectorElements pInstruction_shufflevector;
@@ -9126,7 +9126,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NamedMiddleInstruction:
-	//	BinaryInstruction | BitwiseBinaryInstruction | VectorInstructions | AggregateInstruction | Instruction_alloca |
+	//	BinaryInstruction | BitwiseBinaryInstruction | VectorInstruction | AggregateInstruction | Instruction_alloca |
 	//	Instruction_load | Instruction_getelementptr | Instruction_cmpxchg | Instruction_atomicrmw | ConversionInstruction |
 	//	OtherInstruction | Instruction_call_nonVoid;
 	public NamedMiddleInstructionElements getNamedMiddleInstructionAccess() {
@@ -9550,14 +9550,14 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstruction_xorAccess().getRule();
 	}
 
-	//VectorInstructions:
+	//VectorInstruction:
 	//	Instruction_extractelement | Instruction_insertelement | Instruction_shufflevector;
-	public VectorInstructionsElements getVectorInstructionsAccess() {
-		return (pVectorInstructions != null) ? pVectorInstructions : (pVectorInstructions = new VectorInstructionsElements());
+	public VectorInstructionElements getVectorInstructionAccess() {
+		return (pVectorInstruction != null) ? pVectorInstruction : (pVectorInstruction = new VectorInstructionElements());
 	}
 	
-	public ParserRule getVectorInstructionsRule() {
-		return getVectorInstructionsAccess().getRule();
+	public ParserRule getVectorInstructionRule() {
+		return getVectorInstructionAccess().getRule();
 	}
 
 	//// <result> = extractelement <n x <ty>> <val>, i32 <idx>    ; yields <ty>

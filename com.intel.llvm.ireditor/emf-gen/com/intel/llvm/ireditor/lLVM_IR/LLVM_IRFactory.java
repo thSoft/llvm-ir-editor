@@ -833,13 +833,13 @@ public interface LLVM_IRFactory extends EFactory
 	Instruction_xor createInstruction_xor();
 
 	/**
-	 * Returns a new object of class '<em>Vector Instructions</em>'.
+	 * Returns a new object of class '<em>Vector Instruction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vector Instructions</em>'.
+	 * @return a new object of class '<em>Vector Instruction</em>'.
 	 * @generated
 	 */
-	VectorInstructions createVectorInstructions();
+	VectorInstruction createVectorInstruction();
 
 	/**
 	 * Returns a new object of class '<em>Instruction extractelement</em>'.

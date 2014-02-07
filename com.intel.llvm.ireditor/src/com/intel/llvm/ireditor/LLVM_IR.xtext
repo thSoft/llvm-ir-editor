@@ -425,7 +425,7 @@ MiddleInstruction:
 NamedMiddleInstruction:
 	BinaryInstruction |
 	BitwiseBinaryInstruction |
-	VectorInstructions |
+	VectorInstruction |
 	AggregateInstruction |
 	Instruction_alloca |
 	Instruction_load |
@@ -701,7 +701,7 @@ Instruction_xor:
 	opcode='xor' type=Type op1=ValueRef ',' op2=ValueRef
 ;
 
-VectorInstructions:
+VectorInstruction:
 	Instruction_extractelement |
 	Instruction_insertelement |
 	Instruction_shufflevector
