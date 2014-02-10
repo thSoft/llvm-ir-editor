@@ -1992,7 +1992,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         type=NonVoidType 
 	 *         callee=Callee 
 	 *         args=ArgList 
-	 *         functionAttributes=FunctionAttributes?
+	 *         attributes=FunctionAttributes?
 	 *     )
 	 */
 	protected void sequence_Instruction_call_nonVoid(EObject context, Instruction_call_nonVoid semanticObject) {
@@ -2011,7 +2011,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         type=NonVoidType 
 	 *         callee=Callee 
 	 *         args=ArgList 
-	 *         functionAttributes=FunctionAttributes? 
+	 *         attributes=FunctionAttributes? 
 	 *         metadata+=MetadataSuffix*
 	 *     )
 	 */
@@ -2030,7 +2030,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         type=VoidType 
 	 *         callee=Callee 
 	 *         args=ArgList 
-	 *         functionAttributes=FunctionAttributes?
+	 *         attributes=FunctionAttributes?
 	 *     )
 	 */
 	protected void sequence_Instruction_call_void(EObject context, Instruction_call_void semanticObject) {
@@ -2048,7 +2048,7 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         type=VoidType 
 	 *         callee=Callee 
 	 *         args=ArgList 
-	 *         functionAttributes=FunctionAttributes? 
+	 *         attributes=FunctionAttributes? 
 	 *         metadata+=MetadataSuffix*
 	 *     )
 	 */

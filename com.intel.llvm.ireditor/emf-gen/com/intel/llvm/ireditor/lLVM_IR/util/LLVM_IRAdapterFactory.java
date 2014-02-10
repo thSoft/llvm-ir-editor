@@ -785,6 +785,11 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl
 				return createInstruction_invokeAdapter();
 			}
 			@Override
+			public Adapter caseCallingInstruction(CallingInstruction object)
+			{
+				return createCallingInstructionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object)
 			{
 				return createEObjectAdapter();
@@ -2932,6 +2937,21 @@ public class LLVM_IRAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createInstruction_invokeAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.intel.llvm.ireditor.lLVM_IR.CallingInstruction <em>Calling Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.CallingInstruction
+	 * @generated
+	 */
+	public Adapter createCallingInstructionAdapter()
 	{
 		return null;
 	}

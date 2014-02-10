@@ -603,6 +603,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_invoke_void instruction_invoke_void = (Instruction_invoke_void)theEObject;
 				T result = caseInstruction_invoke_void(instruction_invoke_void);
 				if (result == null) result = caseInstruction_invoke(instruction_invoke_void);
+				if (result == null) result = caseCallingInstruction(instruction_invoke_void);
 				if (result == null) result = caseTerminatorInstruction(instruction_invoke_void);
 				if (result == null) result = caseInstruction(instruction_invoke_void);
 				if (result == null) result = defaultCase(theEObject);
@@ -614,6 +615,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				T result = caseInstruction_invoke_nonVoid(instruction_invoke_nonVoid);
 				if (result == null) result = caseInstruction_invoke(instruction_invoke_nonVoid);
 				if (result == null) result = caseNamedTerminatorInstruction(instruction_invoke_nonVoid);
+				if (result == null) result = caseCallingInstruction(instruction_invoke_nonVoid);
 				if (result == null) result = caseTerminatorInstruction(instruction_invoke_nonVoid);
 				if (result == null) result = caseNamedInstruction(instruction_invoke_nonVoid);
 				if (result == null) result = caseInstruction(instruction_invoke_nonVoid);
@@ -1164,6 +1166,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				Instruction_call instruction_call = (Instruction_call)theEObject;
 				T result = caseInstruction_call(instruction_call);
 				if (result == null) result = caseMiddleInstruction(instruction_call);
+				if (result == null) result = caseCallingInstruction(instruction_call);
 				if (result == null) result = caseInstruction(instruction_call);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1175,6 +1178,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				if (result == null) result = caseInstruction_call(instruction_call_nonVoid);
 				if (result == null) result = caseNamedMiddleInstruction(instruction_call_nonVoid);
 				if (result == null) result = caseMiddleInstruction(instruction_call_nonVoid);
+				if (result == null) result = caseCallingInstruction(instruction_call_nonVoid);
 				if (result == null) result = caseNamedInstruction(instruction_call_nonVoid);
 				if (result == null) result = caseInstruction(instruction_call_nonVoid);
 				if (result == null) result = caseLocalValue(instruction_call_nonVoid);
@@ -1187,6 +1191,7 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 				T result = caseInstruction_call_void(instruction_call_void);
 				if (result == null) result = caseInstruction_call(instruction_call_void);
 				if (result == null) result = caseMiddleInstruction(instruction_call_void);
+				if (result == null) result = caseCallingInstruction(instruction_call_void);
 				if (result == null) result = caseInstruction(instruction_call_void);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1406,8 +1411,17 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 			{
 				Instruction_invoke instruction_invoke = (Instruction_invoke)theEObject;
 				T result = caseInstruction_invoke(instruction_invoke);
+				if (result == null) result = caseCallingInstruction(instruction_invoke);
 				if (result == null) result = caseTerminatorInstruction(instruction_invoke);
 				if (result == null) result = caseInstruction(instruction_invoke);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LLVM_IRPackage.CALLING_INSTRUCTION:
+			{
+				CallingInstruction callingInstruction = (CallingInstruction)theEObject;
+				T result = caseCallingInstruction(callingInstruction);
+				if (result == null) result = caseInstruction(callingInstruction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -3683,6 +3697,22 @@ public class LLVM_IRSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseInstruction_invoke(Instruction_invoke object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Calling Instruction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Calling Instruction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCallingInstruction(CallingInstruction object)
 	{
 		return null;
 	}

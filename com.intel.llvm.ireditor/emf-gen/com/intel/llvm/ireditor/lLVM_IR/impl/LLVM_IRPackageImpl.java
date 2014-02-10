@@ -1034,6 +1034,13 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	private EClass instruction_invokeEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass callingInstructionEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -4513,49 +4520,9 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_call_Cconv()
-	{
-        return (EReference)getInstruction_call().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getInstruction_call_ReturnAttributes()
 	{
-        return (EReference)getInstruction_call().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_call_Callee()
-	{
-        return (EReference)getInstruction_call().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_call_Args()
-	{
-        return (EReference)getInstruction_call().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInstruction_call_FunctionAttributes()
-	{
-        return (EReference)getInstruction_call().getEStructuralFeatures().get(5);
+        return (EReference)getInstruction_call().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5457,7 +5424,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_Cconv()
+	public EReference getInstruction_invoke_ToLabel()
 	{
         return (EReference)getInstruction_invoke().getEStructuralFeatures().get(0);
 	}
@@ -5467,7 +5434,7 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_Callee()
+	public EReference getInstruction_invoke_ExceptionLabel()
 	{
         return (EReference)getInstruction_invoke().getEStructuralFeatures().get(1);
 	}
@@ -5477,9 +5444,13 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_Args()
+	public EClass getCallingInstruction()
 	{
-        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(2);
+		if (callingInstructionEClass == null)
+		{
+			callingInstructionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(142);
+		}
+		return callingInstructionEClass;
 	}
 
 	/**
@@ -5487,9 +5458,9 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_Attributes()
+	public EReference getCallingInstruction_Cconv()
 	{
-        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(3);
+        return (EReference)getCallingInstruction().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5497,9 +5468,9 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_ToLabel()
+	public EReference getCallingInstruction_Callee()
 	{
-        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(4);
+        return (EReference)getCallingInstruction().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5507,9 +5478,19 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstruction_invoke_ExceptionLabel()
+	public EReference getCallingInstruction_Args()
 	{
-        return (EReference)getInstruction_invoke().getEStructuralFeatures().get(5);
+        return (EReference)getCallingInstruction().getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCallingInstruction_Attributes()
+	{
+        return (EReference)getCallingInstruction().getEStructuralFeatures().get(3);
 	}
 
 	/**

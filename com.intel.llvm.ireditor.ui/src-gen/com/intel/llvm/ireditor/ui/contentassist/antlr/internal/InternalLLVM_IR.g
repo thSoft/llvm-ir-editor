@@ -26216,9 +26216,9 @@ rule__Instruction_call_nonVoid__Group__8__Impl
     }
 :
 (
-{ before(grammarAccess.getInstruction_call_nonVoidAccess().getFunctionAttributesAssignment_8()); }
-(rule__Instruction_call_nonVoid__FunctionAttributesAssignment_8)?
-{ after(grammarAccess.getInstruction_call_nonVoidAccess().getFunctionAttributesAssignment_8()); }
+{ before(grammarAccess.getInstruction_call_nonVoidAccess().getAttributesAssignment_8()); }
+(rule__Instruction_call_nonVoid__AttributesAssignment_8)?
+{ after(grammarAccess.getInstruction_call_nonVoidAccess().getAttributesAssignment_8()); }
 )
 
 ;
@@ -26465,9 +26465,9 @@ rule__Instruction_call_void__Group__7__Impl
     }
 :
 (
-{ before(grammarAccess.getInstruction_call_voidAccess().getFunctionAttributesAssignment_7()); }
-(rule__Instruction_call_void__FunctionAttributesAssignment_7)?
-{ after(grammarAccess.getInstruction_call_voidAccess().getFunctionAttributesAssignment_7()); }
+{ before(grammarAccess.getInstruction_call_voidAccess().getAttributesAssignment_7()); }
+(rule__Instruction_call_void__AttributesAssignment_7)?
+{ after(grammarAccess.getInstruction_call_voidAccess().getAttributesAssignment_7()); }
 )
 
 ;
@@ -36776,14 +36776,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Instruction_call_nonVoid__FunctionAttributesAssignment_8
+rule__Instruction_call_nonVoid__AttributesAssignment_8
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getInstruction_call_nonVoidAccess().getFunctionAttributesFunctionAttributesParserRuleCall_8_0()); }
-	ruleFunctionAttributes{ after(grammarAccess.getInstruction_call_nonVoidAccess().getFunctionAttributesFunctionAttributesParserRuleCall_8_0()); }
+{ before(grammarAccess.getInstruction_call_nonVoidAccess().getAttributesFunctionAttributesParserRuleCall_8_0()); }
+	ruleFunctionAttributes{ after(grammarAccess.getInstruction_call_nonVoidAccess().getAttributesFunctionAttributesParserRuleCall_8_0()); }
 )
 
 ;
@@ -36912,14 +36912,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Instruction_call_void__FunctionAttributesAssignment_7
+rule__Instruction_call_void__AttributesAssignment_7
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getInstruction_call_voidAccess().getFunctionAttributesFunctionAttributesParserRuleCall_7_0()); }
-	ruleFunctionAttributes{ after(grammarAccess.getInstruction_call_voidAccess().getFunctionAttributesFunctionAttributesParserRuleCall_7_0()); }
+{ before(grammarAccess.getInstruction_call_voidAccess().getAttributesFunctionAttributesParserRuleCall_7_0()); }
+	ruleFunctionAttributes{ after(grammarAccess.getInstruction_call_voidAccess().getAttributesFunctionAttributesParserRuleCall_7_0()); }
 )
 
 ;

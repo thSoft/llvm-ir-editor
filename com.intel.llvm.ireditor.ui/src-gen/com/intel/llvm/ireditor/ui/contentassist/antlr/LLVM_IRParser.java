@@ -637,7 +637,7 @@ public class LLVM_IRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInstruction_call_nonVoidAccess().getTypeAssignment_5(), "rule__Instruction_call_nonVoid__TypeAssignment_5");
 					put(grammarAccess.getInstruction_call_nonVoidAccess().getCalleeAssignment_6(), "rule__Instruction_call_nonVoid__CalleeAssignment_6");
 					put(grammarAccess.getInstruction_call_nonVoidAccess().getArgsAssignment_7(), "rule__Instruction_call_nonVoid__ArgsAssignment_7");
-					put(grammarAccess.getInstruction_call_nonVoidAccess().getFunctionAttributesAssignment_8(), "rule__Instruction_call_nonVoid__FunctionAttributesAssignment_8");
+					put(grammarAccess.getInstruction_call_nonVoidAccess().getAttributesAssignment_8(), "rule__Instruction_call_nonVoid__AttributesAssignment_8");
 					put(grammarAccess.getInstruction_call_voidAccess().getIsTailAssignment_0(), "rule__Instruction_call_void__IsTailAssignment_0");
 					put(grammarAccess.getInstruction_call_voidAccess().getOpcodeAssignment_1(), "rule__Instruction_call_void__OpcodeAssignment_1");
 					put(grammarAccess.getInstruction_call_voidAccess().getCconvAssignment_2(), "rule__Instruction_call_void__CconvAssignment_2");
@@ -645,7 +645,7 @@ public class LLVM_IRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInstruction_call_voidAccess().getTypeAssignment_4(), "rule__Instruction_call_void__TypeAssignment_4");
 					put(grammarAccess.getInstruction_call_voidAccess().getCalleeAssignment_5(), "rule__Instruction_call_void__CalleeAssignment_5");
 					put(grammarAccess.getInstruction_call_voidAccess().getArgsAssignment_6(), "rule__Instruction_call_void__ArgsAssignment_6");
-					put(grammarAccess.getInstruction_call_voidAccess().getFunctionAttributesAssignment_7(), "rule__Instruction_call_void__FunctionAttributesAssignment_7");
+					put(grammarAccess.getInstruction_call_voidAccess().getAttributesAssignment_7(), "rule__Instruction_call_void__AttributesAssignment_7");
 					put(grammarAccess.getArgListAccess().getArgumentsAssignment_2_0(), "rule__ArgList__ArgumentsAssignment_2_0");
 					put(grammarAccess.getArgListAccess().getArgumentsAssignment_2_1_1(), "rule__ArgList__ArgumentsAssignment_2_1_1");
 					put(grammarAccess.getInlineAssemblerAccess().getAssemblerAssignment_4(), "rule__InlineAssembler__AssemblerAssignment_4");

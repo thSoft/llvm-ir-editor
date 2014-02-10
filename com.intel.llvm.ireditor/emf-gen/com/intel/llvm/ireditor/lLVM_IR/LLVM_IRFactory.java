@@ -1301,6 +1301,15 @@ public interface LLVM_IRFactory extends EFactory
 	Instruction_invoke createInstruction_invoke();
 
 	/**
+	 * Returns a new object of class '<em>Calling Instruction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Calling Instruction</em>'.
+	 * @generated
+	 */
+	CallingInstruction createCallingInstruction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

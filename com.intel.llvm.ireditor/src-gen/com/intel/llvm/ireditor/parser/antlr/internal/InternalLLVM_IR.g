@@ -12225,16 +12225,16 @@ ruleInstruction_call_nonVoid returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getInstruction_call_nonVoidAccess().getFunctionAttributesFunctionAttributesParserRuleCall_8_0()); 
+	        newCompositeNode(grammarAccess.getInstruction_call_nonVoidAccess().getAttributesFunctionAttributesParserRuleCall_8_0()); 
 	    }
-		lv_functionAttributes_8_0=ruleFunctionAttributes		{
+		lv_attributes_8_0=ruleFunctionAttributes		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInstruction_call_nonVoidRule());
 	        }
        		set(
        			$current, 
-       			"functionAttributes",
-        		lv_functionAttributes_8_0, 
+       			"attributes",
+        		lv_attributes_8_0, 
         		"FunctionAttributes");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -12384,16 +12384,16 @@ ruleInstruction_call_void returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getInstruction_call_voidAccess().getFunctionAttributesFunctionAttributesParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getInstruction_call_voidAccess().getAttributesFunctionAttributesParserRuleCall_7_0()); 
 	    }
-		lv_functionAttributes_7_0=ruleFunctionAttributes		{
+		lv_attributes_7_0=ruleFunctionAttributes		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getInstruction_call_voidRule());
 	        }
        		set(
        			$current, 
-       			"functionAttributes",
-        		lv_functionAttributes_7_0, 
+       			"attributes",
+        		lv_attributes_7_0, 
         		"FunctionAttributes");
 	        afterParserOrEnumRuleCall();
 	    }

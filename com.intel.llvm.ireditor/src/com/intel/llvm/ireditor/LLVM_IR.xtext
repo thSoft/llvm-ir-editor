@@ -913,7 +913,7 @@ Instruction_call_nonVoid:
 	type=NonVoidType
 	callee=Callee
 	args=ArgList
-	functionAttributes=FunctionAttributes?
+	attributes=FunctionAttributes?
 ;
 
 // [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
@@ -925,7 +925,7 @@ Instruction_call_void:
 	type=VoidType
 	callee=Callee
 	args=ArgList
-	functionAttributes=FunctionAttributes?
+	attributes=FunctionAttributes?
 ;
 
 ArgList:

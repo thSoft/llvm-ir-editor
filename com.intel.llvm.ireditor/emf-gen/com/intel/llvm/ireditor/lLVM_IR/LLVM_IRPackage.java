@@ -2885,6 +2885,79 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_INDIRECTBR_FEATURE_COUNT = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.CallingInstructionImpl <em>Calling Instruction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.CallingInstructionImpl
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.LLVM_IRPackageImpl#getCallingInstruction()
+	 * @generated
+	 */
+	int CALLING_INSTRUCTION = 142;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION__METADATA = INSTRUCTION__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION__OPCODE = INSTRUCTION__OPCODE;
+
+	/**
+	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION__CCONV = INSTRUCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION__CALLEE = INSTRUCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Args</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION__ARGS = INSTRUCTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION__ATTRIBUTES = INSTRUCTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Calling Instruction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALLING_INSTRUCTION_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 4;
+
+	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_invokeImpl <em>Instruction invoke</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2901,7 +2974,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__METADATA = TERMINATOR_INSTRUCTION__METADATA;
+	int INSTRUCTION_INVOKE__METADATA = CALLING_INSTRUCTION__METADATA;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -2910,7 +2983,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__OPCODE = TERMINATOR_INSTRUCTION__OPCODE;
+	int INSTRUCTION_INVOKE__OPCODE = CALLING_INSTRUCTION__OPCODE;
 
 	/**
 	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
@@ -2919,7 +2992,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__CCONV = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 0;
+	int INSTRUCTION_INVOKE__CCONV = CALLING_INSTRUCTION__CCONV;
 
 	/**
 	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
@@ -2928,7 +3001,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__CALLEE = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 1;
+	int INSTRUCTION_INVOKE__CALLEE = CALLING_INSTRUCTION__CALLEE;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference.
@@ -2937,7 +3010,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__ARGS = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 2;
+	int INSTRUCTION_INVOKE__ARGS = CALLING_INSTRUCTION__ARGS;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
@@ -2946,7 +3019,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__ATTRIBUTES = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 3;
+	int INSTRUCTION_INVOKE__ATTRIBUTES = CALLING_INSTRUCTION__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>To Label</b></em>' containment reference.
@@ -2955,7 +3028,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__TO_LABEL = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 4;
+	int INSTRUCTION_INVOKE__TO_LABEL = CALLING_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Exception Label</b></em>' containment reference.
@@ -2964,7 +3037,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE__EXCEPTION_LABEL = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 5;
+	int INSTRUCTION_INVOKE__EXCEPTION_LABEL = CALLING_INSTRUCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Instruction invoke</em>' class.
@@ -2973,7 +3046,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_INVOKE_FEATURE_COUNT = TERMINATOR_INSTRUCTION_FEATURE_COUNT + 6;
+	int INSTRUCTION_INVOKE_FEATURE_COUNT = CALLING_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.Instruction_invoke_voidImpl <em>Instruction invoke void</em>}' class.
@@ -6254,31 +6327,13 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_CALL__OPCODE = MIDDLE_INSTRUCTION__OPCODE;
 
 	/**
-	 * The feature id for the '<em><b>Is Tail</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_CALL__IS_TAIL = MIDDLE_INSTRUCTION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_CALL__CCONV = MIDDLE_INSTRUCTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Return Attributes</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_CALL__RETURN_ATTRIBUTES = MIDDLE_INSTRUCTION_FEATURE_COUNT + 2;
+	int INSTRUCTION_CALL__CCONV = MIDDLE_INSTRUCTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
@@ -6287,7 +6342,7 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_CALL__CALLEE = MIDDLE_INSTRUCTION_FEATURE_COUNT + 3;
+	int INSTRUCTION_CALL__CALLEE = MIDDLE_INSTRUCTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Args</b></em>' containment reference.
@@ -6296,16 +6351,34 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_CALL__ARGS = MIDDLE_INSTRUCTION_FEATURE_COUNT + 4;
+	int INSTRUCTION_CALL__ARGS = MIDDLE_INSTRUCTION_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Function Attributes</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_CALL__FUNCTION_ATTRIBUTES = MIDDLE_INSTRUCTION_FEATURE_COUNT + 5;
+	int INSTRUCTION_CALL__ATTRIBUTES = MIDDLE_INSTRUCTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Is Tail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_CALL__IS_TAIL = MIDDLE_INSTRUCTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Return Attributes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_CALL__RETURN_ATTRIBUTES = MIDDLE_INSTRUCTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Instruction call</em>' class.
@@ -6345,15 +6418,6 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_CALL_NON_VOID__OPCODE = INSTRUCTION_CALL__OPCODE;
 
 	/**
-	 * The feature id for the '<em><b>Is Tail</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_CALL_NON_VOID__IS_TAIL = INSTRUCTION_CALL__IS_TAIL;
-
-	/**
 	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6361,15 +6425,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @ordered
 	 */
 	int INSTRUCTION_CALL_NON_VOID__CCONV = INSTRUCTION_CALL__CCONV;
-
-	/**
-	 * The feature id for the '<em><b>Return Attributes</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_CALL_NON_VOID__RETURN_ATTRIBUTES = INSTRUCTION_CALL__RETURN_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
@@ -6390,13 +6445,31 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_CALL_NON_VOID__ARGS = INSTRUCTION_CALL__ARGS;
 
 	/**
-	 * The feature id for the '<em><b>Function Attributes</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_CALL_NON_VOID__FUNCTION_ATTRIBUTES = INSTRUCTION_CALL__FUNCTION_ATTRIBUTES;
+	int INSTRUCTION_CALL_NON_VOID__ATTRIBUTES = INSTRUCTION_CALL__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Is Tail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_CALL_NON_VOID__IS_TAIL = INSTRUCTION_CALL__IS_TAIL;
+
+	/**
+	 * The feature id for the '<em><b>Return Attributes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_CALL_NON_VOID__RETURN_ATTRIBUTES = INSTRUCTION_CALL__RETURN_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6454,15 +6527,6 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_CALL_VOID__OPCODE = INSTRUCTION_CALL__OPCODE;
 
 	/**
-	 * The feature id for the '<em><b>Is Tail</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_CALL_VOID__IS_TAIL = INSTRUCTION_CALL__IS_TAIL;
-
-	/**
 	 * The feature id for the '<em><b>Cconv</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6470,15 +6534,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @ordered
 	 */
 	int INSTRUCTION_CALL_VOID__CCONV = INSTRUCTION_CALL__CCONV;
-
-	/**
-	 * The feature id for the '<em><b>Return Attributes</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTRUCTION_CALL_VOID__RETURN_ATTRIBUTES = INSTRUCTION_CALL__RETURN_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Callee</b></em>' containment reference.
@@ -6499,13 +6554,31 @@ public interface LLVM_IRPackage extends EPackage
 	int INSTRUCTION_CALL_VOID__ARGS = INSTRUCTION_CALL__ARGS;
 
 	/**
-	 * The feature id for the '<em><b>Function Attributes</b></em>' containment reference.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTION_CALL_VOID__FUNCTION_ATTRIBUTES = INSTRUCTION_CALL__FUNCTION_ATTRIBUTES;
+	int INSTRUCTION_CALL_VOID__ATTRIBUTES = INSTRUCTION_CALL__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Is Tail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_CALL_VOID__IS_TAIL = INSTRUCTION_CALL__IS_TAIL;
+
+	/**
+	 * The feature id for the '<em><b>Return Attributes</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_CALL_VOID__RETURN_ATTRIBUTES = INSTRUCTION_CALL__RETURN_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -10655,17 +10728,6 @@ public interface LLVM_IRPackage extends EPackage
 	EAttribute getInstruction_call_IsTail();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getCconv <em>Cconv</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cconv</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getCconv()
-	 * @see #getInstruction_call()
-	 * @generated
-	 */
-	EReference getInstruction_call_Cconv();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getReturnAttributes <em>Return Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10675,39 +10737,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	EReference getInstruction_call_ReturnAttributes();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getCallee <em>Callee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Callee</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getCallee()
-	 * @see #getInstruction_call()
-	 * @generated
-	 */
-	EReference getInstruction_call_Callee();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getArgs <em>Args</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Args</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getArgs()
-	 * @see #getInstruction_call()
-	 * @generated
-	 */
-	EReference getInstruction_call_Args();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getFunctionAttributes <em>Function Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Function Attributes</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_call#getFunctionAttributes()
-	 * @see #getInstruction_call()
-	 * @generated
-	 */
-	EReference getInstruction_call_FunctionAttributes();
 
 	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_call_nonVoid <em>Instruction call non Void</em>}'.
@@ -11526,50 +11555,6 @@ public interface LLVM_IRPackage extends EPackage
 	EClass getInstruction_invoke();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCconv <em>Cconv</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cconv</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCconv()
-	 * @see #getInstruction_invoke()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_Cconv();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCallee <em>Callee</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Callee</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getCallee()
-	 * @see #getInstruction_invoke()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_Callee();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getArgs <em>Args</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Args</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getArgs()
-	 * @see #getInstruction_invoke()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_Args();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Attributes</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getAttributes()
-	 * @see #getInstruction_invoke()
-	 * @generated
-	 */
-	EReference getInstruction_invoke_Attributes();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.Instruction_invoke#getToLabel <em>To Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11590,6 +11575,60 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	EReference getInstruction_invoke_ExceptionLabel();
+
+	/**
+	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.CallingInstruction <em>Calling Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calling Instruction</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.CallingInstruction
+	 * @generated
+	 */
+	EClass getCallingInstruction();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getCconv <em>Cconv</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cconv</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getCconv()
+	 * @see #getCallingInstruction()
+	 * @generated
+	 */
+	EReference getCallingInstruction_Cconv();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getCallee <em>Callee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Callee</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getCallee()
+	 * @see #getCallingInstruction()
+	 * @generated
+	 */
+	EReference getCallingInstruction_Callee();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getArgs <em>Args</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Args</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getArgs()
+	 * @see #getCallingInstruction()
+	 * @generated
+	 */
+	EReference getCallingInstruction_Args();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Attributes</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.CallingInstruction#getAttributes()
+	 * @see #getCallingInstruction()
+	 * @generated
+	 */
+	EReference getCallingInstruction_Attributes();
 
 	/**
 	 * Returns the factory that creates the instances of the model.

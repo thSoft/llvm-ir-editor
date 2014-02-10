@@ -206,6 +206,7 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
 			case LLVM_IRPackage.FLOATING_TYPE: return createFloatingType();
 			case LLVM_IRPackage.CCONV: return createCConv();
 			case LLVM_IRPackage.INSTRUCTION_INVOKE: return createInstruction_invoke();
+			case LLVM_IRPackage.CALLING_INSTRUCTION: return createCallingInstruction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1771,6 +1772,17 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
 	{
 		Instruction_invokeImpl instruction_invoke = new Instruction_invokeImpl();
 		return instruction_invoke;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CallingInstruction createCallingInstruction()
+	{
+		CallingInstructionImpl callingInstruction = new CallingInstructionImpl();
+		return callingInstruction;
 	}
 
 	/**

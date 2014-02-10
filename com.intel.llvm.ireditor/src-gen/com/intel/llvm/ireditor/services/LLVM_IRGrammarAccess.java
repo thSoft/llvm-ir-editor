@@ -6554,17 +6554,17 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCalleeCalleeParserRuleCall_6_0 = (RuleCall)cCalleeAssignment_6.eContents().get(0);
 		private final Assignment cArgsAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cArgsArgListParserRuleCall_7_0 = (RuleCall)cArgsAssignment_7.eContents().get(0);
-		private final Assignment cFunctionAttributesAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cFunctionAttributesFunctionAttributesParserRuleCall_8_0 = (RuleCall)cFunctionAttributesAssignment_8.eContents().get(0);
+		private final Assignment cAttributesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cAttributesFunctionAttributesParserRuleCall_8_0 = (RuleCall)cAttributesAssignment_8.eContents().get(0);
 		
 		//// <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 		//Instruction_call_nonVoid:
 		//	name=LocalName isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType
-		//	callee=Callee args=ArgList functionAttributes=FunctionAttributes?;
+		//	callee=Callee args=ArgList attributes=FunctionAttributes?;
 		public ParserRule getRule() { return rule; }
 
 		//name=LocalName isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType
-		//callee=Callee args=ArgList functionAttributes=FunctionAttributes?
+		//callee=Callee args=ArgList attributes=FunctionAttributes?
 		public Group getGroup() { return cGroup; }
 
 		//name=LocalName
@@ -6615,11 +6615,11 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		//ArgList
 		public RuleCall getArgsArgListParserRuleCall_7_0() { return cArgsArgListParserRuleCall_7_0; }
 
-		//functionAttributes=FunctionAttributes?
-		public Assignment getFunctionAttributesAssignment_8() { return cFunctionAttributesAssignment_8; }
+		//attributes=FunctionAttributes?
+		public Assignment getAttributesAssignment_8() { return cAttributesAssignment_8; }
 
 		//FunctionAttributes
-		public RuleCall getFunctionAttributesFunctionAttributesParserRuleCall_8_0() { return cFunctionAttributesFunctionAttributesParserRuleCall_8_0; }
+		public RuleCall getAttributesFunctionAttributesParserRuleCall_8_0() { return cAttributesFunctionAttributesParserRuleCall_8_0; }
 	}
 
 	public class Instruction_call_voidElements extends AbstractParserRuleElementFinder {
@@ -6639,17 +6639,17 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCalleeCalleeParserRuleCall_5_0 = (RuleCall)cCalleeAssignment_5.eContents().get(0);
 		private final Assignment cArgsAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cArgsArgListParserRuleCall_6_0 = (RuleCall)cArgsAssignment_6.eContents().get(0);
-		private final Assignment cFunctionAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFunctionAttributesFunctionAttributesParserRuleCall_7_0 = (RuleCall)cFunctionAttributesAssignment_7.eContents().get(0);
+		private final Assignment cAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cAttributesFunctionAttributesParserRuleCall_7_0 = (RuleCall)cAttributesAssignment_7.eContents().get(0);
 		
 		//// [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 		//Instruction_call_void:
 		//	isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=VoidType callee=Callee
-		//	args=ArgList functionAttributes=FunctionAttributes?;
+		//	args=ArgList attributes=FunctionAttributes?;
 		public ParserRule getRule() { return rule; }
 
 		//isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=VoidType callee=Callee
-		//args=ArgList functionAttributes=FunctionAttributes?
+		//args=ArgList attributes=FunctionAttributes?
 		public Group getGroup() { return cGroup; }
 
 		//isTail?="tail"?
@@ -6694,11 +6694,11 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		//ArgList
 		public RuleCall getArgsArgListParserRuleCall_6_0() { return cArgsArgListParserRuleCall_6_0; }
 
-		//functionAttributes=FunctionAttributes?
-		public Assignment getFunctionAttributesAssignment_7() { return cFunctionAttributesAssignment_7; }
+		//attributes=FunctionAttributes?
+		public Assignment getAttributesAssignment_7() { return cAttributesAssignment_7; }
 
 		//FunctionAttributes
-		public RuleCall getFunctionAttributesFunctionAttributesParserRuleCall_7_0() { return cFunctionAttributesFunctionAttributesParserRuleCall_7_0; }
+		public RuleCall getAttributesFunctionAttributesParserRuleCall_7_0() { return cAttributesFunctionAttributesParserRuleCall_7_0; }
 	}
 
 	public class ArgListElements extends AbstractParserRuleElementFinder {
@@ -9825,7 +9825,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 	//Instruction_call_nonVoid:
 	//	name=LocalName isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=NonVoidType
-	//	callee=Callee args=ArgList functionAttributes=FunctionAttributes?;
+	//	callee=Callee args=ArgList attributes=FunctionAttributes?;
 	public Instruction_call_nonVoidElements getInstruction_call_nonVoidAccess() {
 		return (pInstruction_call_nonVoid != null) ? pInstruction_call_nonVoid : (pInstruction_call_nonVoid = new Instruction_call_nonVoidElements());
 	}
@@ -9837,7 +9837,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//// [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
 	//Instruction_call_void:
 	//	isTail?="tail"? opcode="call" cconv=CConv? returnAttributes=ParameterAttributes? type=VoidType callee=Callee
-	//	args=ArgList functionAttributes=FunctionAttributes?;
+	//	args=ArgList attributes=FunctionAttributes?;
 	public Instruction_call_voidElements getInstruction_call_voidAccess() {
 		return (pInstruction_call_void != null) ? pInstruction_call_void : (pInstruction_call_void = new Instruction_call_voidElements());
 	}
