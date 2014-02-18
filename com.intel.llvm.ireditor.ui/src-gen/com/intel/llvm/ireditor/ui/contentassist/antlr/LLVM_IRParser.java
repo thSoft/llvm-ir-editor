@@ -307,7 +307,7 @@ public class LLVM_IRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGlobalVariableAccess().getInitialValueAssignment_7(), "rule__GlobalVariable__InitialValueAssignment_7");
 					put(grammarAccess.getGlobalVariableAccess().getSectionAssignment_8_1(), "rule__GlobalVariable__SectionAssignment_8_1");
 					put(grammarAccess.getGlobalVariableAccess().getAlignAssignment_9_1(), "rule__GlobalVariable__AlignAssignment_9_1");
-					put(grammarAccess.getConstantAccess().getRefAssignment_10(), "rule__Constant__RefAssignment_10");
+					put(grammarAccess.getGlobalValueRefConstantAccess().getRefAssignment(), "rule__GlobalValueRefConstant__RefAssignment");
 					put(grammarAccess.getConstantExpression_convertAccess().getOpcodeAssignment_0(), "rule__ConstantExpression_convert__OpcodeAssignment_0");
 					put(grammarAccess.getConstantExpression_convertAccess().getFromTypeAssignment_2(), "rule__ConstantExpression_convert__FromTypeAssignment_2");
 					put(grammarAccess.getConstantExpression_convertAccess().getConstantAssignment_3(), "rule__ConstantExpression_convert__ConstantAssignment_3");

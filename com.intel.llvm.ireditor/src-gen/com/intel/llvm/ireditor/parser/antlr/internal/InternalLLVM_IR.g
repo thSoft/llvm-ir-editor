@@ -1406,20 +1406,50 @@ ruleConstant returns [EObject current=null]
         afterParserOrEnumRuleCall();
     }
 
-    |(
+    |
+    { 
+        newCompositeNode(grammarAccess.getConstantAccess().getGlobalValueRefConstantParserRuleCall_10()); 
+    }
+    this_GlobalValueRefConstant_10=ruleGlobalValueRefConstant
+    { 
+        $current = $this_GlobalValueRefConstant_10.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleGlobalValueRefConstant
+entryRuleGlobalValueRefConstant returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getGlobalValueRefConstantRule()); }
+	 iv_ruleGlobalValueRefConstant=ruleGlobalValueRefConstant 
+	 { $current=$iv_ruleGlobalValueRefConstant.current; } 
+	 EOF 
+;
+
+// Rule GlobalValueRefConstant
+ruleGlobalValueRefConstant returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
 (
 		{
 			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getConstantRule());
+	            $current = createModelElement(grammarAccess.getGlobalValueRefConstantRule());
 	        }
         }
-	otherlv_10=RULE_GLOBAL_ID
+	otherlv_0=RULE_GLOBAL_ID
 	{
-		newLeafNode(otherlv_10, grammarAccess.getConstantAccess().getRefGlobalValueDefCrossReference_10_0()); 
+		newLeafNode(otherlv_0, grammarAccess.getGlobalValueRefConstantAccess().getRefGlobalValueDefCrossReference_0()); 
 	}
 
 )
-))
+)
 ;
 
 

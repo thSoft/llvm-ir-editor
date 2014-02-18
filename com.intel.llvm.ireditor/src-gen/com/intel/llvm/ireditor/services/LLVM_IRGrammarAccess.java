@@ -767,19 +767,17 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBlockAddressParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cUndefParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cConstantExpressionParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final Assignment cRefAssignment_10 = (Assignment)cAlternatives.eContents().get(10);
-		private final CrossReference cRefGlobalValueDefCrossReference_10_0 = (CrossReference)cRefAssignment_10.eContents().get(0);
-		private final RuleCall cRefGlobalValueDefGLOBAL_IDTerminalRuleCall_10_0_1 = (RuleCall)cRefGlobalValueDefCrossReference_10_0.eContents().get(1);
+		private final RuleCall cGlobalValueRefConstantParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
 		//Constant:
 		//	SimpleConstant // predicate because a vector constant and a structure constant can start with '<'
 		//	| => StructureConstant | ArrayConstant | VectorConstant | ZeroInitializer | MetadataNode | MetadataString |
-		//	BlockAddress | Undef | ConstantExpression | ref=[GlobalValueDef|GLOBAL_ID];
+		//	BlockAddress | Undef | ConstantExpression | GlobalValueRefConstant;
 		public ParserRule getRule() { return rule; }
 
 		//SimpleConstant // predicate because a vector constant and a structure constant can start with '<'
 		//| => StructureConstant | ArrayConstant | VectorConstant | ZeroInitializer | MetadataNode | MetadataString | BlockAddress
-		//| Undef | ConstantExpression | ref=[GlobalValueDef|GLOBAL_ID]
+		//| Undef | ConstantExpression | GlobalValueRefConstant
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//SimpleConstant
@@ -812,14 +810,28 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 		//ConstantExpression
 		public RuleCall getConstantExpressionParserRuleCall_9() { return cConstantExpressionParserRuleCall_9; }
 
+		//GlobalValueRefConstant
+		public RuleCall getGlobalValueRefConstantParserRuleCall_10() { return cGlobalValueRefConstantParserRuleCall_10; }
+	}
+
+	public class GlobalValueRefConstantElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GlobalValueRefConstant");
+		private final Assignment cRefAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cRefGlobalValueDefCrossReference_0 = (CrossReference)cRefAssignment.eContents().get(0);
+		private final RuleCall cRefGlobalValueDefGLOBAL_IDTerminalRuleCall_0_1 = (RuleCall)cRefGlobalValueDefCrossReference_0.eContents().get(1);
+		
+		//GlobalValueRefConstant:
+		//	ref=[GlobalValueDef|GLOBAL_ID];
+		public ParserRule getRule() { return rule; }
+
 		//ref=[GlobalValueDef|GLOBAL_ID]
-		public Assignment getRefAssignment_10() { return cRefAssignment_10; }
+		public Assignment getRefAssignment() { return cRefAssignment; }
 
 		//[GlobalValueDef|GLOBAL_ID]
-		public CrossReference getRefGlobalValueDefCrossReference_10_0() { return cRefGlobalValueDefCrossReference_10_0; }
+		public CrossReference getRefGlobalValueDefCrossReference_0() { return cRefGlobalValueDefCrossReference_0; }
 
 		//GLOBAL_ID
-		public RuleCall getRefGlobalValueDefGLOBAL_IDTerminalRuleCall_10_0_1() { return cRefGlobalValueDefGLOBAL_IDTerminalRuleCall_10_0_1; }
+		public RuleCall getRefGlobalValueDefGLOBAL_IDTerminalRuleCall_0_1() { return cRefGlobalValueDefGLOBAL_IDTerminalRuleCall_0_1; }
 	}
 
 	public class ConstantExpressionElements extends AbstractParserRuleElementFinder {
@@ -8276,6 +8288,7 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	private InlineAsmElements pInlineAsm;
 	private GlobalVariableElements pGlobalVariable;
 	private ConstantElements pConstant;
+	private GlobalValueRefConstantElements pGlobalValueRefConstant;
 	private ConstantExpressionElements pConstantExpression;
 	private ConstantExpression_convertElements pConstantExpression_convert;
 	private ConstantExpression_getelementptrElements pConstantExpression_getelementptr;
@@ -8670,13 +8683,23 @@ public class LLVM_IRGrammarAccess extends AbstractGrammarElementFinder {
 	//Constant:
 	//	SimpleConstant // predicate because a vector constant and a structure constant can start with '<'
 	//	| => StructureConstant | ArrayConstant | VectorConstant | ZeroInitializer | MetadataNode | MetadataString |
-	//	BlockAddress | Undef | ConstantExpression | ref=[GlobalValueDef|GLOBAL_ID];
+	//	BlockAddress | Undef | ConstantExpression | GlobalValueRefConstant;
 	public ConstantElements getConstantAccess() {
 		return (pConstant != null) ? pConstant : (pConstant = new ConstantElements());
 	}
 	
 	public ParserRule getConstantRule() {
 		return getConstantAccess().getRule();
+	}
+
+	//GlobalValueRefConstant:
+	//	ref=[GlobalValueDef|GLOBAL_ID];
+	public GlobalValueRefConstantElements getGlobalValueRefConstantAccess() {
+		return (pGlobalValueRefConstant != null) ? pGlobalValueRefConstant : (pGlobalValueRefConstant = new GlobalValueRefConstantElements());
+	}
+	
+	public ParserRule getGlobalValueRefConstantRule() {
+		return getGlobalValueRefConstantAccess().getRule();
 	}
 
 	//ConstantExpression:

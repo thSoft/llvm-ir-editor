@@ -807,22 +807,13 @@ public interface LLVM_IRPackage extends EPackage
 	int CONSTANT = 19;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT__REF = 0;
-
-	/**
 	 * The number of structural features of the '<em>Constant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTANT_FEATURE_COUNT = 1;
+	int CONSTANT_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.ConstantExpressionImpl <em>Constant Expression</em>}' class.
@@ -833,15 +824,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int CONSTANT_EXPRESSION = 20;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION__REF = CONSTANT__REF;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -870,15 +852,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int CONSTANT_EXPRESSION_CONVERT = 21;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_CONVERT__REF = CONSTANT_EXPRESSION__REF;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -934,15 +907,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int CONSTANT_EXPRESSION_GETELEMENTPTR = 22;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_GETELEMENTPTR__REF = CONSTANT_EXPRESSION__REF;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -1009,15 +973,6 @@ public interface LLVM_IRPackage extends EPackage
 	int CONSTANT_EXPRESSION_SELECT = 23;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_SELECT__REF = CONSTANT_EXPRESSION__REF;
-
-	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1071,15 +1026,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int CONSTANT_EXPRESSION_COMPARE = 24;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_COMPARE__REF = CONSTANT_EXPRESSION__REF;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -1137,15 +1083,6 @@ public interface LLVM_IRPackage extends EPackage
 	int CONSTANT_EXPRESSION_EXTRACTELEMENT = 25;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_EXTRACTELEMENT__REF = CONSTANT_EXPRESSION__REF;
-
-	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1190,15 +1127,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int CONSTANT_EXPRESSION_INSERTELEMENT = 26;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_INSERTELEMENT__REF = CONSTANT_EXPRESSION__REF;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -1265,15 +1193,6 @@ public interface LLVM_IRPackage extends EPackage
 	int CONSTANT_EXPRESSION_SHUFFLEVECTOR = 27;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_SHUFFLEVECTOR__REF = CONSTANT_EXPRESSION__REF;
-
-	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1329,15 +1248,6 @@ public interface LLVM_IRPackage extends EPackage
 	int CONSTANT_EXPRESSION_EXTRACTVALUE = 28;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_EXTRACTVALUE__REF = CONSTANT_EXPRESSION__REF;
-
-	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1382,15 +1292,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int CONSTANT_EXPRESSION_INSERTVALUE = 29;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_INSERTVALUE__REF = CONSTANT_EXPRESSION__REF;
 
 	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
@@ -1448,15 +1349,6 @@ public interface LLVM_IRPackage extends EPackage
 	int CONSTANT_EXPRESSION_BINARY = 30;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTANT_EXPRESSION_BINARY__REF = CONSTANT_EXPRESSION__REF;
-
-	/**
 	 * The feature id for the '<em><b>Opcode</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1503,15 +1395,6 @@ public interface LLVM_IRPackage extends EPackage
 	int UNDEF = 31;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNDEF__REF = CONSTANT__REF;
-
-	/**
 	 * The number of structural features of the '<em>Undef</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1529,15 +1412,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int BLOCK_ADDRESS = 32;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCK_ADDRESS__REF = CONSTANT__REF;
 
 	/**
 	 * The feature id for the '<em><b>Function</b></em>' containment reference.
@@ -1577,15 +1451,6 @@ public interface LLVM_IRPackage extends EPackage
 	int ZERO_INITIALIZER = 33;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ZERO_INITIALIZER__REF = CONSTANT__REF;
-
-	/**
 	 * The number of structural features of the '<em>Zero Initializer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1603,15 +1468,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int STRUCTURE_CONSTANT = 34;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE_CONSTANT__REF = CONSTANT__REF;
 
 	/**
 	 * The feature id for the '<em><b>List</b></em>' containment reference.
@@ -1651,15 +1507,6 @@ public interface LLVM_IRPackage extends EPackage
 	int ARRAY_CONSTANT = 35;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_CONSTANT__REF = CONSTANT__REF;
-
-	/**
 	 * The feature id for the '<em><b>List</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1686,15 +1533,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int VECTOR_CONSTANT = 36;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECTOR_CONSTANT__REF = CONSTANT__REF;
 
 	/**
 	 * The feature id for the '<em><b>List</b></em>' containment reference.
@@ -1790,15 +1628,6 @@ public interface LLVM_IRPackage extends EPackage
 	int SIMPLE_CONSTANT = 39;
 
 	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_CONSTANT__REF = CONSTANT__REF;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1825,15 +1654,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int METADATA_NODE = 40;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_NODE__REF = CONSTANT__REF;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -1908,15 +1728,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	int METADATA_STRING = 42;
-
-	/**
-	 * The feature id for the '<em><b>Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_STRING__REF = CONSTANT__REF;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7570,6 +7381,34 @@ public interface LLVM_IRPackage extends EPackage
 	 */
 	int CCONV_FEATURE_COUNT = 2;
 
+	/**
+	 * The meta object id for the '{@link com.intel.llvm.ireditor.lLVM_IR.impl.GlobalValueRefConstantImpl <em>Global Value Ref Constant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.GlobalValueRefConstantImpl
+	 * @see com.intel.llvm.ireditor.lLVM_IR.impl.LLVM_IRPackageImpl#getGlobalValueRefConstant()
+	 * @generated
+	 */
+	int GLOBAL_VALUE_REF_CONSTANT = 143;
+
+	/**
+	 * The feature id for the '<em><b>Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_VALUE_REF_CONSTANT__REF = CONSTANT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Global Value Ref Constant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_VALUE_REF_CONSTANT_FEATURE_COUNT = CONSTANT_FEATURE_COUNT + 1;
+
 
 	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.Model <em>Model</em>}'.
@@ -8177,17 +8016,6 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	EClass getConstant();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.intel.llvm.ireditor.lLVM_IR.Constant#getRef <em>Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ref</em>'.
-	 * @see com.intel.llvm.ireditor.lLVM_IR.Constant#getRef()
-	 * @see #getConstant()
-	 * @generated
-	 */
-	EReference getConstant_Ref();
 
 	/**
 	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.ConstantExpression <em>Constant Expression</em>}'.
@@ -11629,6 +11457,27 @@ public interface LLVM_IRPackage extends EPackage
 	 * @generated
 	 */
 	EReference getCallingInstruction_Attributes();
+
+	/**
+	 * Returns the meta object for class '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant <em>Global Value Ref Constant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Global Value Ref Constant</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant
+	 * @generated
+	 */
+	EClass getGlobalValueRefConstant();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant#getRef <em>Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref</em>'.
+	 * @see com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant#getRef()
+	 * @see #getGlobalValueRefConstant()
+	 * @generated
+	 */
+	EReference getGlobalValueRefConstant_Ref();
 
 	/**
 	 * Returns the factory that creates the instances of the model.

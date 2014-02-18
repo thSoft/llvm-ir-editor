@@ -151,6 +151,10 @@ Constant:
 	BlockAddress |
 	Undef |
 	ConstantExpression |
+	GlobalValueRefConstant
+;
+
+GlobalValueRefConstant:
 	ref=[GlobalValueDef|GLOBAL_ID]
 ;
 

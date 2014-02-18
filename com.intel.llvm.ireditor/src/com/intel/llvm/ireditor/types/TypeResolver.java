@@ -58,6 +58,7 @@ import com.intel.llvm.ireditor.lLVM_IR.ConversionInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.FloatingType;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionHeader;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRef;
+import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalVariable;
 import com.intel.llvm.ireditor.lLVM_IR.Instruction_alloca;
 import com.intel.llvm.ireditor.lLVM_IR.Instruction_atomicrmw;
@@ -587,7 +588,7 @@ public class TypeResolver extends LLVM_IRSwitch<ResolvedType> {
 	}
 
 	@Override
-	public ResolvedType caseConstant(Constant object) {
+	public ResolvedType caseGlobalValueRefConstant(GlobalValueRefConstant object) {
 		return resolve(object.getRef());
 	}
 

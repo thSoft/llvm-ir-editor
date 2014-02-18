@@ -207,6 +207,7 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
 			case LLVM_IRPackage.CCONV: return createCConv();
 			case LLVM_IRPackage.INSTRUCTION_INVOKE: return createInstruction_invoke();
 			case LLVM_IRPackage.CALLING_INSTRUCTION: return createCallingInstruction();
+			case LLVM_IRPackage.GLOBAL_VALUE_REF_CONSTANT: return createGlobalValueRefConstant();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1783,6 +1784,17 @@ public class LLVM_IRFactoryImpl extends EFactoryImpl implements LLVM_IRFactory
 	{
 		CallingInstructionImpl callingInstruction = new CallingInstructionImpl();
 		return callingInstruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GlobalValueRefConstant createGlobalValueRefConstant()
+	{
+		GlobalValueRefConstantImpl globalValueRefConstant = new GlobalValueRefConstantImpl();
+		return globalValueRefConstant;
 	}
 
 	/**

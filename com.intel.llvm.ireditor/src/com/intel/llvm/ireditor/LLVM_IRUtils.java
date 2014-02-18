@@ -29,6 +29,7 @@ package com.intel.llvm.ireditor;
 
 import java.util.Collection;
 import java.util.Collections;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
@@ -41,6 +42,7 @@ import com.intel.llvm.ireditor.lLVM_IR.BasicBlock;
 import com.intel.llvm.ireditor.lLVM_IR.BasicBlockRef;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalValue;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRef;
+import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValue;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValueRef;
 
@@ -61,9 +63,9 @@ public class LLVM_IRUtils {
 			this.id = id;
 		}
 	}
-	
+
 	private static OnChangeEvictingCache xrefCache = new OnChangeEvictingCache();
-	
+
 	public static Collection<? extends EObject> xrefs(EObject object) {
 		final EObject root = EcoreUtil2.getRootContainer(object);
 
@@ -101,8 +103,9 @@ public class LLVM_IRUtils {
 							return Multimaps.index(EcoreUtil2.getAllContentsOfType(root, GlobalValueRef.class),
 									new Function<GlobalValueRef, EObject>() {
 								public EObject apply(GlobalValueRef ref) {
-									if (ref.getConstant() != null && ref.getConstant().getRef() != null) {
-										return ref.getConstant().getRef();
+									if (ref.getConstant() != null && ref.getConstant() instanceof GlobalValueRefConstant) {
+										GlobalValueRefConstant globalValueRefConstant = (GlobalValueRefConstant)ref.getConstant();
+										return globalValueRefConstant.getRef();
 									} else {
 										return ref;
 									}
@@ -112,17 +115,17 @@ public class LLVM_IRUtils {
 					});
 			return map.get(object);
 		}
-		
+
 		return Collections.emptyList();
 	}
-	
+
 	public static String encodeTextForHtml(String s) {
 		return s
 				.replaceAll("<", "&lt;")
 				.replaceAll(">", "&gt;")
 				.replaceAll("\\r?\\n", "<br />");
 	}
-	
+
 	public static String encodeCodeForHtml(String s) {
 		return "<pre>" + s
 				.replaceAll("<", "&lt;")

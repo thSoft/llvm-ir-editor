@@ -1041,6 +1041,13 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	private EClass callingInstructionEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass globalValueRefConstantEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -1749,16 +1756,6 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 			constantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(19);
 		}
 		return constantEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstant_Ref()
-	{
-        return (EReference)getConstant().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5491,6 +5488,30 @@ public class LLVM_IRPackageImpl extends EPackageImpl implements LLVM_IRPackage
 	public EReference getCallingInstruction_Attributes()
 	{
         return (EReference)getCallingInstruction().getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGlobalValueRefConstant()
+	{
+		if (globalValueRefConstantEClass == null)
+		{
+			globalValueRefConstantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(LLVM_IRPackage.eNS_URI).getEClassifiers().get(143);
+		}
+		return globalValueRefConstantEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGlobalValueRefConstant_Ref()
+	{
+        return (EReference)getGlobalValueRefConstant().getEStructuralFeatures().get(0);
 	}
 
 	/**

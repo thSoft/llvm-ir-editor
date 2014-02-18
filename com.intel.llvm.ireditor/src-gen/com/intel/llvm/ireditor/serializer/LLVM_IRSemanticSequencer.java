@@ -15,7 +15,6 @@ import com.intel.llvm.ireditor.lLVM_IR.BasicBlock;
 import com.intel.llvm.ireditor.lLVM_IR.BasicBlockRef;
 import com.intel.llvm.ireditor.lLVM_IR.BlockAddress;
 import com.intel.llvm.ireditor.lLVM_IR.CConv;
-import com.intel.llvm.ireditor.lLVM_IR.Constant;
 import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_binary;
 import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_compare;
 import com.intel.llvm.ireditor.lLVM_IR.ConstantExpression_convert;
@@ -37,6 +36,7 @@ import com.intel.llvm.ireditor.lLVM_IR.FunctionDef;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionHeader;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionPrefix;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRef;
+import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalVariable;
 import com.intel.llvm.ireditor.lLVM_IR.InlineAsm;
 import com.intel.llvm.ireditor.lLVM_IR.InlineAssembler;
@@ -228,12 +228,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 					return; 
 				}
 				else break;
-			case LLVM_IRPackage.CONSTANT:
-				if(context == grammarAccess.getConstantRule()) {
-					sequence_Constant(context, (Constant) semanticObject); 
-					return; 
-				}
-				else break;
 			case LLVM_IRPackage.CONSTANT_EXPRESSION_BINARY:
 				if(context == grammarAccess.getConstantRule() ||
 				   context == grammarAccess.getConstantExpressionRule() ||
@@ -394,6 +388,13 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 				   context == grammarAccess.getGlobalValueRefRule() ||
 				   context == grammarAccess.getValueRefRule()) {
 					sequence_GlobalValueRef(context, (GlobalValueRef) semanticObject); 
+					return; 
+				}
+				else break;
+			case LLVM_IRPackage.GLOBAL_VALUE_REF_CONSTANT:
+				if(context == grammarAccess.getConstantRule() ||
+				   context == grammarAccess.getGlobalValueRefConstantRule()) {
+					sequence_GlobalValueRefConstant(context, (GlobalValueRefConstant) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1435,7 +1436,17 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (function=GlobalValueRef basicBlock=BasicBlockRef)
 	 */
 	protected void sequence_BlockAddress(EObject context, BlockAddress semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBlockAddress_Function()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBlockAddress_Function()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getBlockAddress_BasicBlock()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getBlockAddress_BasicBlock()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBlockAddressAccess().getFunctionGlobalValueRefParserRuleCall_2_0(), semanticObject.getFunction());
+		feeder.accept(grammarAccess.getBlockAddressAccess().getBasicBlockBasicBlockRefParserRuleCall_4_0(), semanticObject.getBasicBlock());
+		feeder.finish();
 	}
 	
 	
@@ -1517,7 +1528,23 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode=ConvertionOpcode fromType=Type constant=GlobalValueRef targetType=Type)
 	 */
 	protected void sequence_ConstantExpression_convert(EObject context, ConstantExpression_convert semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_convert_FromType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_convert_FromType()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_convert_Constant()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_convert_Constant()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_convert_TargetType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_convert_TargetType()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConstantExpression_convertAccess().getOpcodeConvertionOpcodeParserRuleCall_0_0(), semanticObject.getOpcode());
+		feeder.accept(grammarAccess.getConstantExpression_convertAccess().getFromTypeTypeParserRuleCall_2_0(), semanticObject.getFromType());
+		feeder.accept(grammarAccess.getConstantExpression_convertAccess().getConstantGlobalValueRefParserRuleCall_3_0(), semanticObject.getConstant());
+		feeder.accept(grammarAccess.getConstantExpression_convertAccess().getTargetTypeTypeParserRuleCall_5_0(), semanticObject.getTargetType());
+		feeder.finish();
 	}
 	
 	
@@ -1526,7 +1553,20 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode='extractelement' vector=TypedValue index=TypedValue)
 	 */
 	protected void sequence_ConstantExpression_extractelement(EObject context, ConstantExpression_extractelement semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_extractelement_Vector()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_extractelement_Vector()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_extractelement_Index()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_extractelement_Index()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConstantExpression_extractelementAccess().getOpcodeExtractelementKeyword_0_0(), semanticObject.getOpcode());
+		feeder.accept(grammarAccess.getConstantExpression_extractelementAccess().getVectorTypedValueParserRuleCall_2_0(), semanticObject.getVector());
+		feeder.accept(grammarAccess.getConstantExpression_extractelementAccess().getIndexTypedValueParserRuleCall_4_0(), semanticObject.getIndex());
+		feeder.finish();
 	}
 	
 	
@@ -1553,7 +1593,26 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode='insertelement' vectorType=VectorType vector=ValueRef element=TypedValue index=TypedValue)
 	 */
 	protected void sequence_ConstantExpression_insertelement(EObject context, ConstantExpression_insertelement semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_VectorType()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_VectorType()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_Vector()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_Vector()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_Element()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_Element()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_Index()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_insertelement_Index()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConstantExpression_insertelementAccess().getOpcodeInsertelementKeyword_0_0(), semanticObject.getOpcode());
+		feeder.accept(grammarAccess.getConstantExpression_insertelementAccess().getVectorTypeVectorTypeParserRuleCall_2_0(), semanticObject.getVectorType());
+		feeder.accept(grammarAccess.getConstantExpression_insertelementAccess().getVectorValueRefParserRuleCall_3_0(), semanticObject.getVector());
+		feeder.accept(grammarAccess.getConstantExpression_insertelementAccess().getElementTypedValueParserRuleCall_5_0(), semanticObject.getElement());
+		feeder.accept(grammarAccess.getConstantExpression_insertelementAccess().getIndexTypedValueParserRuleCall_7_0(), semanticObject.getIndex());
+		feeder.finish();
 	}
 	
 	
@@ -1571,7 +1630,23 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode='select' condition=TypedValue op1=TypedValue op2=TypedValue)
 	 */
 	protected void sequence_ConstantExpression_select(EObject context, ConstantExpression_select semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_select_Condition()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_select_Condition()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_select_Op1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_select_Op1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_select_Op2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_select_Op2()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConstantExpression_selectAccess().getOpcodeSelectKeyword_0_0(), semanticObject.getOpcode());
+		feeder.accept(grammarAccess.getConstantExpression_selectAccess().getConditionTypedValueParserRuleCall_2_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getConstantExpression_selectAccess().getOp1TypedValueParserRuleCall_4_0(), semanticObject.getOp1());
+		feeder.accept(grammarAccess.getConstantExpression_selectAccess().getOp2TypedValueParserRuleCall_6_0(), semanticObject.getOp2());
+		feeder.finish();
 	}
 	
 	
@@ -1580,7 +1655,23 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (opcode='shufflevector' vector1=TypedValue vector2=TypedValue mask=TypedValue)
 	 */
 	protected void sequence_ConstantExpression_shufflevector(EObject context, ConstantExpression_shufflevector semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_Opcode()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector_Vector1()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector_Vector1()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector_Vector2()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector_Vector2()));
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector_Mask()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstantExpression_shufflevector_Mask()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getConstantExpression_shufflevectorAccess().getOpcodeShufflevectorKeyword_0_0(), semanticObject.getOpcode());
+		feeder.accept(grammarAccess.getConstantExpression_shufflevectorAccess().getVector1TypedValueParserRuleCall_2_0(), semanticObject.getVector1());
+		feeder.accept(grammarAccess.getConstantExpression_shufflevectorAccess().getVector2TypedValueParserRuleCall_4_0(), semanticObject.getVector2());
+		feeder.accept(grammarAccess.getConstantExpression_shufflevectorAccess().getMaskTypedValueParserRuleCall_6_0(), semanticObject.getMask());
+		feeder.finish();
 	}
 	
 	
@@ -1590,22 +1681,6 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_ConstantList(EObject context, ConstantList semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ref=[GlobalValueDef|GLOBAL_ID]
-	 */
-	protected void sequence_Constant(EObject context, Constant semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getConstant_Ref()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getConstant_Ref()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getConstantAccess().getRefGlobalValueDefGLOBAL_IDTerminalRuleCall_10_0_1(), semanticObject.getRef());
-		feeder.finish();
 	}
 	
 	
@@ -1762,6 +1837,22 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getFunctionPrefixAccess().getValueTypedConstantParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ref=[GlobalValueDef|GLOBAL_ID]
+	 */
+	protected void sequence_GlobalValueRefConstant(EObject context, GlobalValueRefConstant semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getGlobalValueRefConstant_Ref()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getGlobalValueRefConstant_Ref()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getGlobalValueRefConstantAccess().getRefGlobalValueDefGLOBAL_IDTerminalRuleCall_0_1(), semanticObject.getRef());
 		feeder.finish();
 	}
 	
@@ -3128,7 +3219,14 @@ public class LLVM_IRSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     name=METADATA_STRING
 	 */
 	protected void sequence_MetadataString(EObject context, MetadataString semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataString_Name()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LLVM_IRPackage.eINSTANCE.getMetadataString_Name()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMetadataStringAccess().getNameMETADATA_STRINGTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	

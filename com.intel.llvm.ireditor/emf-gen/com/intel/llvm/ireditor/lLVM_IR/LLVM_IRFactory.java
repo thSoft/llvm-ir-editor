@@ -1310,6 +1310,15 @@ public interface LLVM_IRFactory extends EFactory
 	CallingInstruction createCallingInstruction();
 
 	/**
+	 * Returns a new object of class '<em>Global Value Ref Constant</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Global Value Ref Constant</em>'.
+	 * @generated
+	 */
+	GlobalValueRefConstant createGlobalValueRefConstant();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

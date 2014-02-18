@@ -40,6 +40,7 @@ import com.intel.llvm.ireditor.lLVM_IR.BasicBlock;
 import com.intel.llvm.ireditor.lLVM_IR.BasicBlockRef;
 import com.intel.llvm.ireditor.lLVM_IR.Constant;
 import com.intel.llvm.ireditor.lLVM_IR.FunctionHeader;
+import com.intel.llvm.ireditor.lLVM_IR.GlobalValueRefConstant;
 import com.intel.llvm.ireditor.lLVM_IR.GlobalVariable;
 import com.intel.llvm.ireditor.lLVM_IR.LLVM_IRPackage;
 import com.intel.llvm.ireditor.lLVM_IR.LocalValue;
@@ -131,7 +132,7 @@ public class LlvmSemanticHighlighter extends LLVM_IRSwitch<LLVM_IRUtils.Position
 	}
 
 	@Override
-	public LLVM_IRUtils.Position caseConstant(Constant object) {
+	public LLVM_IRUtils.Position caseGlobalValueRefConstant(GlobalValueRefConstant object) {
 		if (object.getRef() != null) {
 			return new LLVM_IRUtils.Position(node.getOffset(), node.getLength(), LlvmHighlighter.GLOBALVALUE_ID);
 		}
