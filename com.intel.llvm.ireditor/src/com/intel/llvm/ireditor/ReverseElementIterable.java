@@ -49,6 +49,8 @@ import com.intel.llvm.ireditor.lLVM_IR.StartingInstruction;
 import com.intel.llvm.ireditor.lLVM_IR.TerminatorInstruction;
 
 public class ReverseElementIterable implements Iterable<EObject> {
+	private static final String BAD_INITIAL_NODE = "Can only reverse iterate from a basic block, a parameter, a global or an instruction";
+
 	public enum Mode {
 		STARTING_INST(StartingInstruction.class),
 		MIDDLE_INST(MiddleInstruction.class),
@@ -93,8 +95,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			}
 		}
 
-		throw new IllegalArgumentException(
-				"Can only reverse iterate from a basic block, a paremeter, a global or an instruction");
+		throw new IllegalArgumentException(BAD_INITIAL_NODE);
 	}
 
 	public ReverseElementIterable(INode node) {
@@ -114,8 +115,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			node = node.getParent();
 		}
 
-		throw new IllegalArgumentException(
-				"Can only reverse iterate from a basic block, a paremeter, a global or an instruction");
+		throw new IllegalArgumentException(BAD_INITIAL_NODE);
 	}
 
 	public Iterator<EObject> iterator() {
@@ -169,10 +169,24 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			}
 		}
 
+		private INode getNodeWithSemanticObject(INode node) {
+			if (node.hasDirectSemanticElement()) {
+				return node;
+			}
+			if (node instanceof ICompositeNode) {
+				ICompositeNode compositeNode = (ICompositeNode) node;
+				return compositeNode.hasChildren() ? compositeNode.getFirstChild() : compositeNode;
+			} else {
+				return node;
+			}
+		}
+
 		public EObject next() {
 			currMode = nextMode;
 			currNode = nextNode;
-			return NodeModelUtils.findActualSemanticObjectFor(currNode);
+			INode nodeWithSemanticObject = getNodeWithSemanticObject(currNode); // XXX workaround for nodes without semantic object
+			EObject semanticObject = NodeModelUtils.findActualSemanticObjectFor(nodeWithSemanticObject);
+			return semanticObject;
 		}
 
 		public void remove() {
@@ -199,14 +213,14 @@ public class ReverseElementIterable implements Iterable<EObject> {
 
 		private INode bb2inst(INode node) {
 			INode prev = node.getPreviousSibling();
-			if (prev instanceof ICompositeNode == false) return null;
+			if (!(prev instanceof ICompositeNode)) return null;
 			return ((ICompositeNode)prev).getLastChild();
 		}
 
 		private INode global2global(INode node) {
 			INode toplevel = node.getParent();
 			INode prev = toplevel.getPreviousSibling();
-			if (prev instanceof ICompositeNode == false) return null;
+			if (!(prev instanceof ICompositeNode)) return null;
 			return ((ICompositeNode)prev).getFirstChild();
 		}
 
@@ -223,7 +237,7 @@ public class ReverseElementIterable implements Iterable<EObject> {
 			if (functionDefNode.hasDirectSemanticElement() == false) return null;
 			FunctionDef functionDef = (FunctionDef) functionDefNode.getSemanticElement();
 			List<INode> headerNodes = NodeModelUtils.findNodesForFeature(
-					functionDef, LLVM_IRPackage.eINSTANCE.getFunctionDef().getEStructuralFeature("header"));
+					functionDef, LLVM_IRPackage.eINSTANCE.getFunction_Header());
 			if (headerNodes.isEmpty()) return null;
 			INode headerNode = headerNodes.get(0);
 
